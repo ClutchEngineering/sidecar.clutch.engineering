@@ -10,7 +10,7 @@ extension Home {
 
     let text: String
     var body: some View {
-      Paragraph(text)
+      Text(text)
         .fontSize(.large, condition: .desktop)
     }
   }

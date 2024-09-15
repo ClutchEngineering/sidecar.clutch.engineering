@@ -49,7 +49,7 @@ struct FeatureCardBody<Content: View>: View {
   }
 
   var body: some View {
-    Paragraph(content: content)
+    Text(content: content)
       .textColor(.gray, darkness: 600)
       .textColor(.gray, darkness: 200, condition: .dark)
   }

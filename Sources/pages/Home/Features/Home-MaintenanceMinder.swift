@@ -32,8 +32,8 @@ extension Home {
         }
 
         Div {
-          Paragraph("Recall notices are currently only supported in the USA")
-          Paragraph("Maintenance schedules require Connected Accounts (Beta)")
+          Text("Recall notices are currently only supported in the USA")
+          Text("Maintenance schedules require Connected Accounts (Beta)")
         }
         .fontSize(.extraSmall)
         .textAlignment(.center)

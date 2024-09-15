@@ -21,7 +21,7 @@ extension Home {
           .colorInvert(condition: .dark)
           .frame(height: 32)
           .margin(.bottom, 8)
-        Paragraph(text)
+        Text(text)
           .fontSize(.base, condition: .desktop)
           .fontSize(.small)
           .fontLeading(.tight)

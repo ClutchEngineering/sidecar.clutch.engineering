@@ -15,7 +15,7 @@ extension Home {
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")
-              Paragraph("Take it for a spin with a 2 week free trial")
+              Text("Take it for a spin with a 2 week free trial")
                 .fontSize(.extraLarge)
                 .fontSize(.extraExtraLarge, condition: .desktop)
             }

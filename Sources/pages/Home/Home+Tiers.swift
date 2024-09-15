@@ -22,7 +22,7 @@ extension Home {
                 H3("Free")
                   .bold()
                   .fontSize(.extraLarge)
-                Paragraph("Basic features")
+                Text("Basic features")
               }
               .textAlignment(.center)
               .margin(.bottom, 16)
@@ -59,7 +59,7 @@ extension Home {
                   H3("ScanPass")
                     .bold()
                     .fontSize(.extraLarge)
-                  Paragraph("On demand OBD")
+                  Text("On demand OBD")
                 }
                 .textAlignment(.center)
                 .margin(.bottom, 16)
@@ -86,8 +86,8 @@ extension Home {
                 .margin(.bottom, 16)
 
                 Div {
-                  Paragraph("24 hours: $0.99 USD")
-                  Paragraph("1 week: $4.99 USD")
+                  Text("24 hours: $0.99 USD")
+                  Text("1 week: $4.99 USD")
                 }
                 .bold()
                 .textAlignment(.center)
@@ -107,7 +107,7 @@ extension Home {
                   H3("Subscription")
                     .bold()
                     .fontSize(.extraLarge)
-                  Paragraph("Unlock all features")
+                  Text("Unlock all features")
                 }
                 .textAlignment(.center)
                 .margin(.bottom, 16)
@@ -156,8 +156,8 @@ extension Home {
                 .margin(.bottom, 16)
 
                 Div {
-                  Paragraph("$6.99 USD/month")
-                  Paragraph("2-week free trial")
+                  Text("$6.99 USD/month")
+                  Text("2-week free trial")
                 }
                 .bold()
                 .textAlignment(.center)

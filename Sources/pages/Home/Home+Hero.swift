@@ -16,7 +16,7 @@ extension Home {
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")
-              Paragraph("Your personal automotive assistant")
+              Text("Your personal automotive assistant")
                 .fontSize(.extraLarge)
                 .fontSize(.extraExtraLarge, condition: .desktop)
             }

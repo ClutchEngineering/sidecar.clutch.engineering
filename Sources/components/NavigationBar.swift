@@ -16,7 +16,7 @@ struct NavigationBar: View {
               .frame(height: 32, condition: .desktop)
               .margin(.right, 4)
               .margin(.right, 8, condition: .desktop)
-            Paragraph("Sidecar")
+            Text("Sidecar")
               .fontDesign("rounded")
               .fontSize(.small)
               .fontSize(.base, condition: .desktop)

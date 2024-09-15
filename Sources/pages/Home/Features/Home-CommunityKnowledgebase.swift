@@ -40,7 +40,7 @@ extension Home {
         }
 
         Div {
-          Paragraph("Community features require a GitHub account")
+          Text("Community features require a GitHub account")
           Link(URL(string: "https://github.com/ElectricSidecar")!, openInNewTab: true) {
             Text("github.com/ElectricSidecar")
           }
