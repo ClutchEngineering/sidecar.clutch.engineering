@@ -12,6 +12,7 @@ let sitemap: Sitemap = [
   "shortcuts/index.html": Shortcuts(),
   "scanning/index.html": Scanning(),
   "scanning/extended-pids/index.html": ExtendedParameters(),
+  "scanning/vehicle-support/index.html": VehicleSupport(),
 ]
 
 // Assumes this file is located in a Sources/ sub-directory of a Swift package.

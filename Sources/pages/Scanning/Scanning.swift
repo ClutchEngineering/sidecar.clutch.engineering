@@ -16,14 +16,7 @@ struct Scanning: View {
         "vehicle connectivity",
       ]
     ) {
-      Container {
-        HStack(spacing: 16) {
-          NavigationLink(URL(string: "/scanning/extended-pids"), text: "Extended PIDs")
-          NavigationLink(URL(string: "/scanning/repo-status"), text: "Vehicle support")
-        }
-        .justifyContent(.end)
-        .padding(.vertical, 8)
-      }
+      ScanningNavigation()
 
       Container {
         Section {
