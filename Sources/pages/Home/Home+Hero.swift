@@ -35,8 +35,9 @@ extension Home {
               .hidden(condition: .desktop)
 
             Link(URL(string: "https://discord.gg/9QhpesqTSM")!) {
-              Image(URL(string: "https://dcbadge.limes.pink/api/server/https://discord.gg/9QhpesqTSM?style=plastic")!)
+              Image(URL(string: "https://dcbadge.limes.pink/api/server/https://discord.gg/9QhpesqTSM?style=flat-square")!)
                 .accessibilityLabel("Join the Sidecar Discord server")
+                .cornerRadius(.base)
             }
           }
           .margin(.bottom, 16)
