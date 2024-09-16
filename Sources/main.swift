@@ -9,6 +9,7 @@ extension Condition {
 let sitemap: Sitemap = [
   "index.html": Home(),
   "privacy-policy/index.html": PrivacyPolicy(),
+  "shortcuts/index.html": Shortcuts(),
 ]
 
 // Assumes this file is located in a Sources/ sub-directory of a Swift package.

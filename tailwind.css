@@ -1,4 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+  .shortcuts-icon:before {
+    border-radius: 4px;
+    background-size: 18px;
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 1px;
+    vertical-align: -3px;
+  }
+}
 
+@media (max-width: 1500px) and (min-width: 900px) {
+  div.toc-hide {
+    display: none;
+  }
+}

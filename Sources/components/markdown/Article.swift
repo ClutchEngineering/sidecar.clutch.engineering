@@ -61,6 +61,17 @@ private struct ContextAwareParagraph<Content: View>: View {
   }
 }
 
+extension Markdown.Heading {
+  var headerID: String {
+    // From https://docs.gitlab.com/ee/user/markdown.html#header-ids-and-links
+    return plainText
+      .lowercased()
+      .replacingOccurrences(of: " ", with: "-")
+      .filter { $0.isLetter || $0.isNumber || $0 == "-" }
+      .replacingOccurrences(of: "--", with: "-")
+  }
+}
+
 struct Article: View {
   init(_ text: String) {
     self.document = Document(parsing: text)
@@ -77,6 +88,7 @@ struct Article: View {
         Slipstream.DOMString(text.string)
 
       case let heading as Markdown.Heading:
+        let id = heading.headerID
         switch heading.level {
         case 1:
           Slipstream.Heading(level: heading.level) {
@@ -90,37 +102,63 @@ struct Article: View {
           .fontDesign("rounded")
         case 2:
           Slipstream.Heading(level: heading.level) {
-            context.recurse()
+            Slipstream.Link(URL(string: "#\(id)")) {
+              Slipstream.Text("#")
+            }
+            .hidden()
+            .className("group-hover:flex")
+            .position(.absolute)
+            .className("-left-4")
+            .frame(width: 16, height: 16)
+            let parts = heading.plainText.split(separator: "—")
+            DOMString(parts.prefix(1).joined())
+            if parts.count > 1 {
+              Span("—" + parts.dropFirst().joined())
+                .fontWeight(.light)
+            }
           }
           .className("group")
           .position(.relative)
-          .fontSize(.large, condition: .desktop)
+          .fontSize(.extraExtraLarge, condition: .desktop)
           .bold()
+          .margin(.bottom, 4)
+          .id(id)
         case 3:
           Slipstream.Heading(level: heading.level) {
+            Slipstream.Link(URL(string: "#\(id)")) {
+              Slipstream.Text("#")
+            }
+            .hidden()
+            .className("group-hover:flex")
+            .position(.absolute)
+            .className("-left-4")
+            .frame(width: 16, height: 16)
             context.recurse()
           }
           .className("group")
           .position(.relative)
+          .margin(.bottom, 4)
           .bold()
-          .italic()
+          .id(id)
         default:
           Slipstream.Heading(level: heading.level) {
             context.recurse()
           }
+          .italic()
           .className("group")
           .position(.relative)
+          .margin(.bottom, 4)
         }
 
       case let paragraph as Markdown.Paragraph:
-        if paragraph.plainText.hasPrefix("Note:") {
+        if paragraph.plainText.hasPrefix("Note:") || paragraph.plainText.hasPrefix("Tip:") {
           Div {
             ContextAwareParagraph {
               context.recurse()
             }
             .padding(8)
-            .background(.orange, darkness: 200)
-            .background(.orange, darkness: 950, condition: .dark)
+            .background(.fuchsia, darkness: 200)
+            .background(.fuchsia, darkness: 950, condition: .dark)
             .fontWeight(500)
             .cornerRadius(.medium)
             .italic()
@@ -167,11 +205,52 @@ struct Article: View {
           context.recurse()
         }
 
-      case is Markdown.Strong:
-        Span {
-          context.recurse()
+      case let strong as Markdown.Strong:
+        if strong.plainText.hasPrefix("parameter:") {
+          Span(String(strong.plainText.dropFirst("parameter:".count)))
+            .fontWeight(.semibold)
+            .background(.blue, darkness: 100)
+            .background(.blue, darkness: 950, condition: .dark)
+            .textColor(.blue, darkness: 600)
+            .textColor(.blue, darkness: 400, condition: .dark)
+            .cornerRadius(.base)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 4)
+            .margin(.vertical, 2)
+            .display(.inlineBlock)
+        } else if strong.plainText.hasPrefix("icon:") {
+          let parts = strong.plainText.split(separator: "/")
+          let icon = parts.prefix(1).joined().split(separator: ":").dropFirst().joined()
+          let textParts = parts.dropFirst().joined().split(separator: "|")
+          let textPart = textParts.prefix(1).joined()
+          Span {
+            Image(URL(string: "/gfx/parameters/\(icon).png"))
+              .colorInvert(condition: .dark)
+              .display(.inlineBlock)
+              .frame(width: 20)
+              .margin(.right, 8)
+              .offset(y: -1)
+            DOMString(textPart)
+            if textParts.count > 1 {
+              Span("|" + textParts.dropFirst().joined())
+                .fontWeight(.light)
+                .opacity(0.75)
+            }
+          }
+          .fontWeight(.semibold)
+          .background(.blue, darkness: 100)
+          .background(.blue, darkness: 950, condition: .dark)
+          .cornerRadius(.base)
+          .padding(.horizontal, 8)
+          .padding(.vertical, 4)
+          .margin(.vertical, 2)
+          .display(.inlineBlock)
+        } else {
+          Span {
+            context.recurse()
+          }
+          .bold()
         }
-        .bold()
 
       case is Markdown.Emphasis:
         Span {
@@ -207,10 +286,6 @@ struct Article: View {
           Div {
             Slipstream.Image(URL(string: destination))
               .accessibilityLabel(image.plainText)
-              .border(.white, width: 4)
-              .border(.init(.zinc, darkness: 700), width: 4, condition: .dark)
-              .cornerRadius(.extraExtraLarge)
-              .modifier(ClassModifier(add: "shadow-puck"))
               .margin(.horizontal, .auto)
               .frame(maxHeight: 400)
           }
@@ -239,6 +314,9 @@ struct Article: View {
         } else {
           context.recurse()
         }
+
+      case is Markdown.ThematicBreak:
+        HorizontalRule()
 
       case is Markdown.LineBreak:
         Linebreak()

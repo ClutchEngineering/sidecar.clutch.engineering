@@ -7,7 +7,7 @@ struct PrivacyPolicy: View {
     Page(
       "Privacy Policy",
       path: "/privacy-policy/",
-      description: "Electric Sidecar minimizes data collection and keeps your private data, private.",
+      description: "Sidecar minimizes data collection and keeps your private data, private.",
       keywords: [
         "privacy policy",
         "OBD-II",
@@ -20,7 +20,7 @@ struct PrivacyPolicy: View {
       Container {
         VStack(alignment: .center) {
           HeroIconPuck(url: URL(string: "/gfx/privacy.png")!)
-          
+
           Div {
             H1("Privacy Policy")
               .fontSize(.fourXLarge)
@@ -31,19 +31,19 @@ struct PrivacyPolicy: View {
           .textAlignment(.center)
         }
         .padding(.vertical, 16)
-        
+
         Article("""
-Electric Sidecar is delighted to be our users' choice for understanding the state of their garage.
+Sidecar is delighted to be our users' choice for understanding the state of their garage.
 
 Overview
 --------
 
-This Privacy Notice is meant to help you understand how Fearless Design, LLC, a California limited liability company (**“Fearless”**, **“we”**, **“our”** or **“us”**) collects, uses, stores and shares personal information it collects about you (**“User”“you”** or **“your”**) in connection with your use of Electric Sidecar, our mobile application (hereinafter referred to as **“Mobile App”** or **“Sidecar”**), and how to exercise the choices and rights you have in your information.
+This Privacy Notice is meant to help you understand how Fearless Design, LLC, a California limited liability company (**“Fearless”**, **“we”**, **“our”** or **“us”**) collects, uses, stores and shares personal information it collects about you (**“User”“you”** or **“your”**) in connection with your use of Sidecar, our mobile application (hereinafter referred to as **“Mobile App”** or **“Sidecar”**), and how to exercise the choices and rights you have in your information.
 
 1\\. The Scope Of This Policy
 ----------------------------
 
-This policy applies only to personal information, not to aggregate information or information that does not identify you. Please remember that your use of the Mobile App is also subject to our Terms of Service and certain terms not defined within this Privacy Notice shall have the meanings set forth within the Electric Sidecar Terms of Services.
+This policy applies only to personal information, not to aggregate information or information that does not identify you. Please remember that your use of the Mobile App is also subject to our Terms of Service and certain terms not defined within this Privacy Notice shall have the meanings set forth within the Sidecar Terms of Services.
 
 2\\. The Information We Collect
 ------------------------------
