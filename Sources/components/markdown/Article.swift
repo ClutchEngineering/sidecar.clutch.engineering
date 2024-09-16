@@ -87,6 +87,37 @@ struct Article: View {
       case let text as Markdown.Text:
         Slipstream.DOMString(text.string)
 
+      case let codeBlock as Markdown.CodeBlock:
+        Slipstream.Preformatted {
+          DOMString(codeBlock.code)
+        }
+        .textColor(.zinc, darkness: 950)
+        .textColor(.zinc, darkness: 50, condition: .dark)
+        .fontWeight(500)
+        .padding(16)
+        .border(.init(.zinc, darkness: 300))
+        .border(.init(.zinc, darkness: 700), condition: .dark)
+        .cornerRadius(.medium)
+        .margin(.bottom, 16)
+        .fontDesign(.monospaced)
+        .background(.zinc, darkness: 200)
+        .background(.black, condition: .dark)
+        .fontSize(.extraSmall)
+        .fontSize(.small, condition: .desktop)
+        .modifier(ClassModifier(add: "overflow-scroll"))
+
+      case let inlineCode as Markdown.InlineCode:
+        Slipstream.Code {
+          DOMString(inlineCode.code)
+        }
+        .padding(.horizontal, 6)
+        .padding(.vertical, 4)
+        .fontLeading(.loose)
+        .background(.zinc, darkness: 200)
+        .background(.zinc, darkness: 800, condition: .dark)
+        .fontWeight(500)
+        .cornerRadius(.medium)
+
       case let heading as Markdown.Heading:
         let id = heading.headerID
         switch heading.level {

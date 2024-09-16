@@ -11,6 +11,7 @@ let sitemap: Sitemap = [
   "privacy-policy/index.html": PrivacyPolicy(),
   "shortcuts/index.html": Shortcuts(),
   "scanning/index.html": Scanning(),
+  "scanning/extended-pids/index.html": ExtendedParameters(),
 ]
 
 // Assumes this file is located in a Sources/ sub-directory of a Swift package.

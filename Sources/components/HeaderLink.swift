@@ -17,7 +17,8 @@ struct NavigationLink: View {
     let link = Link(text, destination: url)
       .fontSize(.small, condition: .mobileOnly)
       .fontWeight(.medium)
-    if url?.absoluteString == path {
+    if let url,
+       path.hasPrefix(url.absoluteString) {
       link
     } else {
       link

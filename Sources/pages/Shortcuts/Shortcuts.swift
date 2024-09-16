@@ -25,11 +25,11 @@ private struct Entity: View {
   }
 }
 
-private struct Parameter: View {
+struct Parameter: View {
   let name: String
-  let icon: String
+  let icon: String?
   let type: String?
-  init(_ name: String, icon: String, type: String? = nil) {
+  init(_ name: String, icon: String? = nil, type: String? = nil) {
     self.name = name
     self.icon = icon
     self.type = type
@@ -37,12 +37,14 @@ private struct Parameter: View {
 
   var body: some View {
     Span {
-      Image(URL(string: "/gfx/parameters/\(icon).png"))
-        .colorInvert(condition: .dark)
-        .display(.inlineBlock)
-        .frame(width: 20)
-        .margin(.right, 8)
-        .offset(y: -1)
+      if let icon {
+        Image(URL(string: "/gfx/parameters/\(icon).png"))
+          .colorInvert(condition: .dark)
+          .display(.inlineBlock)
+          .frame(width: 20)
+          .margin(.right, 8)
+          .offset(y: -1)
+      }
       DOMString(name)
       if let type {
         Span(" | \(type)")
