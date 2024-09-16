@@ -4,7 +4,7 @@ import Slipstream
 
 import SwiftSoup
 
-private struct Parameter: View {
+private struct Entity: View {
   let name: String
   init(_ name: String) {
     self.name = name
@@ -22,6 +22,42 @@ private struct Parameter: View {
       .padding(.vertical, 4)
       .margin(.vertical, 2)
       .display(.inlineBlock)
+  }
+}
+
+private struct Parameter: View {
+  let name: String
+  let icon: String
+  let type: String?
+  init(_ name: String, icon: String, type: String? = nil) {
+    self.name = name
+    self.icon = icon
+    self.type = type
+  }
+
+  var body: some View {
+    Span {
+      Image(URL(string: "/gfx/parameters/\(icon).png"))
+        .colorInvert(condition: .dark)
+        .display(.inlineBlock)
+        .frame(width: 20)
+        .margin(.right, 8)
+        .offset(y: -1)
+      DOMString(name)
+      if let type {
+        Span(" | \(type)")
+          .fontWeight(.light)
+          .opacity(0.75)
+      }
+    }
+    .fontWeight(.semibold)
+    .background(.blue, darkness: 100)
+    .background(.blue, darkness: 950, condition: .dark)
+    .cornerRadius(.base)
+    .padding(.horizontal, 8)
+    .padding(.vertical, 4)
+    .margin(.vertical, 2)
+    .display(.inlineBlock)
   }
 }
 
@@ -141,7 +177,7 @@ Running this command will disable climatization if it is currently active.
 
 ### Parameters
 
-\(inlineHTML { Parameter("Vehicle") }) The vehicle this command should be performed on.
+\(inlineHTML { Entity("Vehicle") }) The vehicle this command should be performed on.
 
 ---
 
@@ -160,7 +196,7 @@ Running this command will enable climatization if it is not currently active.
 
 ### Parameters
 
-\(inlineHTML { Parameter("Vehicle") }) The vehicle this command should be performed on.
+\(inlineHTML { Entity("Vehicle") }) The vehicle this command should be performed on.
 
 ---
 
@@ -179,8 +215,8 @@ Running this command will send the given destination to your vehicle's primary n
 
 ### Parameters
 
-\(inlineHTML { Parameter("Vehicle") }) The vehicle this command should be performed on.    
-\(inlineHTML { Parameter("Destination") }) An address that is already saved on the given vehicle.
+\(inlineHTML { Entity("Vehicle") }) The vehicle this command should be performed on.    
+\(inlineHTML { Entity("Destination") }) An address that is already saved on the given vehicle.
 
 ---
 
@@ -199,7 +235,7 @@ Running this command will lock your vehicle if it is not currently locked. This 
 
 ### Parameters
 
-\(inlineHTML { Parameter("Vehicle") }) The vehicle this command should be performed on.
+\(inlineHTML { Entity("Vehicle") }) The vehicle this command should be performed on.
 
 ---
 
@@ -224,7 +260,7 @@ Running this action will return a Vehicle instance that can be used as a variabl
 
 ### Parameters
 
-\(inlineHTML { Parameter("Vehicle") }) The vehicle to return.
+\(inlineHTML { Entity("Vehicle") }) The vehicle to return.
 
 ---
 
@@ -250,49 +286,49 @@ Running this action will return the value of true or false for a given vehicle's
 
 ### Parameters
 
-\(inlineHTML { Parameter("Vehicle") }) The vehicle from which the parameter should be retrieved.    
-[\(inlineHTML { Parameter("Bool") }) ](#available-boolean-parameters) The boolean parameter to be retrieved from the vehicle.
+\(inlineHTML { Entity("Vehicle") }) The vehicle from which the parameter should be retrieved.    
+[\(inlineHTML { Entity("Bool") }) ](#available-boolean-parameters) The boolean parameter to be retrieved from the vehicle.
 
 ### Available Boolean Parameters
 
 #### Charging
 
-**icon:bolt/Charging** Is the vehicle currently charging?    
-**icon:plug/Plugged in** Is the vehicle currently charging?
+\(inlineHTML { Parameter("Charging", icon: "bolt") }) Is the vehicle currently charging?    
+\(inlineHTML { Parameter("Plugged in", icon: "plug") }) Is the vehicle currently charging?
 
 #### Climate Control
 
-**icon:climatization/Climatization on** Is climatization currently running in the vehicle?    
-**icon:climatization/Climatization possible** Is the vehicle able to turn climatization on?
+\(inlineHTML { Parameter("Climatization on", icon: "climatization") }) Is climatization currently running in the vehicle?    
+\(inlineHTML { Parameter("Climatization possible", icon: "climatization") }) Is the vehicle able to turn climatization on?
 
 #### Locked
 
-**icon:lock/Front trunk locked** Is the vehicle's rear trunk locked?    
-**icon:lock/Locked** Is the vehicle locked?    
-**icon:lock/Rear trunk locked** Is the vehicle's rear trunk locked?
+\(inlineHTML { Parameter("Front trunk locked", icon: "lock") }) Is the vehicle's rear trunk locked?    
+\(inlineHTML { Parameter("Locked", icon: "lock") }) Is the vehicle locked?    
+\(inlineHTML { Parameter("Rear trunk locked", icon: "lock") }) Is the vehicle's rear trunk locked?
 
 #### Open
 
-**icon:front.left.open/Front left door open** Is the vehicle's front left door open?    
-**icon:front.right.open/Front right door open** Is the vehicle's front right door open?    
-**icon:front.trunk.open/Front trunk open** Is the vehicle's front trunk open?    
-**icon:rear.left.open/Rear left door open** Is the vehicle's rear left door open?    
-**icon:rear.right.open/Rear right door open** Is the vehicle's rear right door open?    
-**icon:rear.trunk.open/Rear trunk open** Is the vehicle's rear trunk open?    
-**icon:sunroof/Sunroof open** Is the vehicle's sun roof open?    
-**icon:window.left/Front left window open** Is the vehicle's front left window open?    
-**icon:window.right/Front right window open** Is the vehicle's front right window open?    
-**icon:window.left/Rear left window open** Is the vehicle's rear left window open?    
-**icon:window.right/Rear right window open** Is the vehicle's rear right window open?
+\(inlineHTML { Parameter("Front left door open", icon: "front.left.open") }) Is the vehicle's front left door open?    
+\(inlineHTML { Parameter("Front right door open", icon: "front.right.open") }) Is the vehicle's front right door open?    
+\(inlineHTML { Parameter("Front trunk open", icon: "front.trunk.open") }) Is the vehicle's front trunk open?    
+\(inlineHTML { Parameter("Rear left door open", icon: "rear.left.open") }) Is the vehicle's rear left door open?    
+\(inlineHTML { Parameter("Rear right door open", icon: "rear.right.open") }) Is the vehicle's rear right door open?    
+\(inlineHTML { Parameter("Rear trunk open", icon: "rear.trunk.open") }) Is the vehicle's rear trunk open?    
+\(inlineHTML { Parameter("Sunroof open", icon: "sunroof") }) Is the vehicle's sun roof open?    
+\(inlineHTML { Parameter("Front left window open", icon: "window.left") }) Is the vehicle's front left window open?    
+\(inlineHTML { Parameter("Front right window open", icon: "window.right") }) Is the vehicle's front right window open?    
+\(inlineHTML { Parameter("Rear left window open", icon: "window.left") }) Is the vehicle's rear left window open?    
+\(inlineHTML { Parameter("Rear right window open", icon: "window.right") }) Is the vehicle's rear right window open?
 
 #### Parking
 
-**icon:parking.brake/Parking brake enabled** Is the vehicle's parking brake enabled?
+\(inlineHTML { Parameter("Parking brake enabled", icon: "parking.brake") }) Is the vehicle's parking brake enabled?
 
 #### State
 
-**icon:inservice/In service** Is the vehicle currently in service?    
-**icon:sleeping/Sleeping** Is the vehicle currently sleeping or in a low power state?
+\(inlineHTML { Parameter("In service", icon: "inservice") }) Is the vehicle currently in service?    
+\(inlineHTML { Parameter("Sleeping", icon: "sleeping") }) Is the vehicle currently sleeping or in a low power state?
 
 ---
 
@@ -318,18 +354,18 @@ Running this action will return a date value for a given vehicle's parameter.
 
 ### Parameters
 
-\(inlineHTML { Parameter("Vehicle") }) The vehicle from which the parameter should be retrieved.    
-[\(inlineHTML { Parameter("Date") }) ](#available-date-parameters) The date parameter to be retrieved from the vehicle.
+\(inlineHTML { Entity("Vehicle") }) The vehicle from which the parameter should be retrieved.    
+[\(inlineHTML { Entity("Date") }) ](#available-date-parameters) The date parameter to be retrieved from the vehicle.
     
 ### Available Date Parameters
 
 #### Climate Control
 
-**icon:climatization/Climatization end** If climatization is active, when will it end?
+\(inlineHTML { Parameter("Climatization end", icon: "climatization") }) If climatization is active, when will it end?
 
 #### Parking
 
-**icon:parking.brake/Park** When was the vehicle last parked?
+\(inlineHTML { Parameter("Park", icon: "parking.brake") }) When was the vehicle last parked?
 
 ---
 
@@ -357,44 +393,44 @@ Measures must be converted to the same unit type. For example, Vehicle speed can
 
 ### Parameters
 
-\(inlineHTML { Parameter("Vehicle") }) The vehicle from which the parameter should be retrieved.    
-[\(inlineHTML { Parameter("Measure") }) ](#available-measure-parameters) The measured parameter to be retrieved from the vehicle.
+\(inlineHTML { Entity("Vehicle") }) The vehicle from which the parameter should be retrieved.    
+[\(inlineHTML { Entity("Measure") }) ](#available-measure-parameters) The measured parameter to be retrieved from the vehicle.
 
 ### Available Measure Parameters
 
 #### Charging
 
-**icon:length/Charging rate, as distance | Length** How much range is being added per minute.    
-**icon:bolt/Charging rate, as power | Power** How much energy is being added per minute.    
-**icon:target/Charging target | Normal** The target charge percent.
+\(inlineHTML { Parameter("Charging rate, as distance", icon: "length", type: "Length") }) How much range is being added per minute.    
+\(inlineHTML { Parameter("Charging rate, as power", icon: "bolt", type: "Power") }) How much energy is being added per minute.    
+\(inlineHTML { Parameter("Charging target", icon: "target", type: "Normal") }) The target charge percent.
     
 #### Health
 
-**icon:health/Battery health | Normal** The health of the vehicle's high voltage battery pack.
+\(inlineHTML { Parameter("Battery health", icon: "health", type: "Normal") }) The health of the vehicle's high voltage battery pack.
 
 #### Navigation
 
-**icon:heading/Vehicle heading | Angle** The direction the vehicle is facing.        
-**icon:speed/Vehicle speed | Speed** How fast the vehicle is moving.
+\(inlineHTML { Parameter("Vehicle heading", icon: "heading", type: "Angle") }) The direction the vehicle is facing.        
+\(inlineHTML { Parameter("Vehicle speed", icon: "speed", type: "Speed") }) How fast the vehicle is moving.
 
 #### Range
 
-**icon:battery/Battery level | Normal** How full the vehicle's battery is.    
-**icon:length/Battery range | Length** The distance the vehicle can travel using electric power alone.    
-**icon:fuel/Fuel level | Normal** How full the vehicle's gas tank is.    
-**icon:length/Fuel range | Length** The distance the vehicle can travel using fuel alone.
+\(inlineHTML { Parameter("Battery level", icon: "battery", type: "Normal") }) How full the vehicle's battery is.    
+\(inlineHTML { Parameter("Battery range", icon: "length", type: "Length") }) The distance the vehicle can travel using electric power alone.    
+\(inlineHTML { Parameter("Fuel level", icon: "fuel", type: "Normal") }) How full the vehicle's gas tank is.    
+\(inlineHTML { Parameter("Fuel range", icon: "length", type: "Length") }) The distance the vehicle can travel using fuel alone.
 
 #### Tire Pressure
 
-**icon:tirepressure/Front left tire pressure | Pressure** The front left tire pressure.    
-**icon:tirepressure/Front right tire pressure | Pressure** The front right tire pressure.    
-**icon:tirepressure/Rear left tire pressure | Pressure** The rear left tire pressure.    
-**icon:tirepressure/Rear right tire pressure | Pressure** The rear right tire pressure.    
-**icon:tirepressure/Spare tire pressure | Pressure** The spare tire pressure.
+\(inlineHTML { Parameter("Front left tire pressure", icon: "tirepressure", type: "Pressure") }) The front left tire pressure.    
+\(inlineHTML { Parameter("Front right tire pressure", icon: "tirepressure", type: "Pressure") }) The front right tire pressure.    
+\(inlineHTML { Parameter("Rear left tire pressure", icon: "tirepressure", type: "Pressure") }) The rear left tire pressure.    
+\(inlineHTML { Parameter("Rear right tire pressure", icon: "tirepressure", type: "Pressure") }) The rear right tire pressure.    
+\(inlineHTML { Parameter("Spare tire pressure", icon: "tirepressure", type: "Pressure") }) The spare tire pressure.
 
 #### Trips
 
-**icon:length/Odometer | Length** The total distance the vehicle has traveled.
+\(inlineHTML { Parameter("Odometer", icon: "length", type: "Length") }) The total distance the vehicle has traveled.
 
 ---
 
@@ -420,14 +456,14 @@ Running this action will return a position value for a given vehicle's parameter
 
 ### Parameters
 
-\(inlineHTML { Parameter("Vehicle") }) The vehicle from which the parameter should be retrieved.    
-[\(inlineHTML { Parameter("Position") }) ](#available-position-parameters) The position parameter to be retrieved from the vehicle.
+\(inlineHTML { Entity("Vehicle") }) The vehicle from which the parameter should be retrieved.    
+[\(inlineHTML { Entity("Position") }) ](#available-position-parameters) The position parameter to be retrieved from the vehicle.
 
 ### Available Position Parameters
 
 #### Navigation
 
-**icon:pin/Location** The last known location of the vehicle.
+\(inlineHTML { Parameter("Location", icon: "pin") }) The last known location of the vehicle.
 """)
     }
   }
