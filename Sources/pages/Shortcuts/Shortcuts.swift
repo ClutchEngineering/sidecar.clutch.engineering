@@ -2,6 +2,29 @@ import Foundation
 
 import Slipstream
 
+import SwiftSoup
+
+private struct Parameter: View {
+  let name: String
+  init(_ name: String) {
+    self.name = name
+  }
+
+  var body: some View {
+    Span(name)
+      .fontWeight(.semibold)
+      .background(.blue, darkness: 100)
+      .background(.blue, darkness: 950, condition: .dark)
+      .textColor(.blue, darkness: 600)
+      .textColor(.blue, darkness: 400, condition: .dark)
+      .cornerRadius(.base)
+      .padding(.horizontal, 8)
+      .padding(.vertical, 4)
+      .margin(.vertical, 2)
+      .display(.inlineBlock)
+  }
+}
+
 struct Shortcuts: View {
   var body: some View {
     Page(
@@ -56,11 +79,16 @@ Vehicles
 
 Every action provided by Sidecar requires a Vehicle. This custom type represents one of the vehicles in your garage.
 
-<picture>
-  <source srcset="/gfx/vehicle-type-intent.dark.png" media="(prefers-color-scheme: dark)">
-  <source srcset="/gfx/vehicle-type-intent.png" media="(prefers-color-scheme: light)">
-  <img src="/gfx/vehicle-type-intent.png" class="mx-auto w-4/5 md:w-2/5">
-</picture>
+\(inlineHTML {
+  Picture {
+    Source(URL(string: "/gfx/vehicle-type-intent.dark.png"), colorScheme: .dark)
+    Source(URL(string: "/gfx/vehicle-type-intent.png"), colorScheme: .light)
+    Image(URL(string: "/gfx/vehicle-type-intent.png"))
+      .margin(.horizontal, .auto)
+      .frame(width: 0.8)
+      .frame(width: 0.4, condition: .desktop)
+  }
+})
 
 Tip: it's common to need to refer to the same Vehicle several times in a workflow. The [Get Vehicle](#get-vehicle-parameter) action lets you do this once and then reuse the same vehicle variable throughout your workflow.
 
@@ -113,7 +141,7 @@ Running this command will disable climatization if it is currently active.
 
 ### Parameters
 
-**parameter:Vehicle** The vehicle this command should be performed on.
+\(inlineHTML { Parameter("Vehicle") }) The vehicle this command should be performed on.
 
 ---
 
@@ -132,7 +160,7 @@ Running this command will enable climatization if it is not currently active.
 
 ### Parameters
 
-**parameter:Vehicle** The vehicle this command should be performed on.
+\(inlineHTML { Parameter("Vehicle") }) The vehicle this command should be performed on.
 
 ---
 
@@ -151,8 +179,8 @@ Running this command will send the given destination to your vehicle's primary n
 
 ### Parameters
 
-**parameter:Vehicle** The vehicle this command should be performed on.    
-**parameter:Destination** An address that is already saved on the given vehicle.
+\(inlineHTML { Parameter("Vehicle") }) The vehicle this command should be performed on.    
+\(inlineHTML { Parameter("Destination") }) An address that is already saved on the given vehicle.
 
 ---
 
@@ -171,7 +199,7 @@ Running this command will lock your vehicle if it is not currently locked. This 
 
 ### Parameters
 
-**parameter:Vehicle** The vehicle this command should be performed on.
+\(inlineHTML { Parameter("Vehicle") }) The vehicle this command should be performed on.
 
 ---
 
@@ -179,11 +207,16 @@ Running this command will lock your vehicle if it is not currently locked. This 
 
 Works with all vehicles.
 
-<picture>
-  <source srcset="/gfx/vehicle-action.dark.png" media="(prefers-color-scheme: dark)">
-  <source srcset="/gfx/vehicle-action.png" media="(prefers-color-scheme: light)">
-  <img src="/gfx/vehicle-action.png" alt="An example of a vehicle action" class="mx-auto w-4/5 md:w-2/5">
-</picture>
+\(inlineHTML {
+  Picture {
+    Source(URL(string: "/gfx/vehicle-action.dark.png"), colorScheme: .dark)
+    Source(URL(string: "/gfx/vehicle-action.png"), colorScheme: .light)
+    Image(URL(string: "/gfx/vehicle-action.png"))
+      .margin(.horizontal, .auto)
+      .frame(width: 0.8)
+      .frame(width: 0.4, condition: .desktop)
+  }
+})
 
 ### Description
 
@@ -191,7 +224,7 @@ Running this action will return a Vehicle instance that can be used as a variabl
 
 ### Parameters
 
-**parameter:Vehicle** The vehicle to return.
+\(inlineHTML { Parameter("Vehicle") }) The vehicle to return.
 
 ---
 
@@ -200,11 +233,16 @@ Get Vehicle Bool — Parameter
 
 Some parameters require a Connected Account (Beta) or OBD-II scanner. Parameter support varies by vehicle.
 
-<picture>
-  <source srcset="/gfx/bool-action.dark.png" media="(prefers-color-scheme: dark)">
-  <source srcset="/gfx/bool-action.png" media="(prefers-color-scheme: light)">
-  <img src="/gfx/bool-action.png" alt="An example of a bool action" class="mx-auto w-4/5 md:w-2/5">
-</picture>
+\(inlineHTML {
+  Picture {
+    Source(URL(string: "/gfx/bool-action.dark.png"), colorScheme: .dark)
+    Source(URL(string: "/gfx/bool-action.png"), colorScheme: .light)
+    Image(URL(string: "/gfx/bool-action.png"))
+      .margin(.horizontal, .auto)
+      .frame(width: 0.8)
+      .frame(width: 0.4, condition: .desktop)
+  }
+})
 
 ### Description
 
@@ -212,8 +250,8 @@ Running this action will return the value of true or false for a given vehicle's
 
 ### Parameters
 
-**parameter:Vehicle** The vehicle from which the parameter should be retrieved.    
-[**parameter:Bool**](#available-boolean-parameters) The boolean parameter to be retrieved from the vehicle.
+\(inlineHTML { Parameter("Vehicle") }) The vehicle from which the parameter should be retrieved.    
+[\(inlineHTML { Parameter("Bool") }) ](#available-boolean-parameters) The boolean parameter to be retrieved from the vehicle.
 
 ### Available Boolean Parameters
 
@@ -263,11 +301,16 @@ Get Vehicle Date — Parameter
 
 Some parameters require a Connected Account (Beta) or OBD-II scanner. Parameter support varies by vehicle.
 
-<picture>
-  <source srcset="/gfx/date-action.dark.png" media="(prefers-color-scheme: dark)">
-  <source srcset="/gfx/date-action.png" media="(prefers-color-scheme: light)">
-  <img src="/gfx/date-action.png" alt="An example of a date action" class="mx-auto w-4/5 md:w-2/5">
-</picture>
+\(inlineHTML {
+  Picture {
+    Source(URL(string: "/gfx/date-action.dark.png"), colorScheme: .dark)
+    Source(URL(string: "/gfx/date-action.png"), colorScheme: .light)
+    Image(URL(string: "/gfx/date-action.png"))
+      .margin(.horizontal, .auto)
+      .frame(width: 0.8)
+      .frame(width: 0.4, condition: .desktop)
+  }
+})
 
 ### Description
 
@@ -275,8 +318,8 @@ Running this action will return a date value for a given vehicle's parameter.
 
 ### Parameters
 
-**parameter:Vehicle** The vehicle from which the parameter should be retrieved.    
-[**parameter:Date**](#available-date-parameters) The date parameter to be retrieved from the vehicle.
+\(inlineHTML { Parameter("Vehicle") }) The vehicle from which the parameter should be retrieved.    
+[\(inlineHTML { Parameter("Date") }) ](#available-date-parameters) The date parameter to be retrieved from the vehicle.
     
 ### Available Date Parameters
 
@@ -295,11 +338,16 @@ Get Vehicle Measure — Parameter
 
 Some parameters require a Connected Account (Beta) or OBD-II scanner. Parameter support varies by vehicle.
 
-<picture>
-  <source srcset="/gfx/measure-action.dark.png" media="(prefers-color-scheme: dark)">
-  <source srcset="/gfx/measure-action.png" media="(prefers-color-scheme: light)">
-  <img src="/gfx/measure-action.png" alt="An example of a measure action" class="mx-auto w-4/5 md:w-2/5">
-</picture>
+\(inlineHTML {
+  Picture {
+    Source(URL(string: "/gfx/measure-action.dark.png"), colorScheme: .dark)
+    Source(URL(string: "/gfx/measure-action.png"), colorScheme: .light)
+    Image(URL(string: "/gfx/measure-action.png"))
+      .margin(.horizontal, .auto)
+      .frame(width: 0.8)
+      .frame(width: 0.4, condition: .desktop)
+  }
+})
 
 ### Description
 
@@ -309,8 +357,8 @@ Measures must be converted to the same unit type. For example, Vehicle speed can
 
 ### Parameters
 
-**parameter:Vehicle** The vehicle from which the parameter should be retrieved.    
-[**parameter:Measure**](#available-measure-parameters) The measured parameter to be retrieved from the vehicle.
+\(inlineHTML { Parameter("Vehicle") }) The vehicle from which the parameter should be retrieved.    
+[\(inlineHTML { Parameter("Measure") }) ](#available-measure-parameters) The measured parameter to be retrieved from the vehicle.
 
 ### Available Measure Parameters
 
@@ -355,11 +403,16 @@ Get Vehicle Position — Parameter
 
 Some parameters require a Connected Account (Beta) or OBD-II scanner. Parameter support varies by vehicle.
 
-<picture>
-  <source srcset="/gfx/position-action.dark.png" media="(prefers-color-scheme: dark)">
-  <source srcset="/gfx/position-action.png" media="(prefers-color-scheme: light)">
-  <img src="/gfx/position-action.png" alt="An example of a position action" class="mx-auto w-4/5 md:w-2/5">
-</picture>
+\(inlineHTML {
+  Picture {
+    Source(URL(string: "/gfx/position-action.dark.png"), colorScheme: .dark)
+    Source(URL(string: "/gfx/position-action.png"), colorScheme: .light)
+    Image(URL(string: "/gfx/position-action.png"))
+      .margin(.horizontal, .auto)
+      .frame(width: 0.8)
+      .frame(width: 0.4, condition: .desktop)
+  }
+})
 
 ### Description
 
@@ -367,8 +420,8 @@ Running this action will return a position value for a given vehicle's parameter
 
 ### Parameters
 
-**parameter:Vehicle** The vehicle from which the parameter should be retrieved.    
-[**parameter:Position**](#available-position-parameters) The position parameter to be retrieved from the vehicle.
+\(inlineHTML { Parameter("Vehicle") }) The vehicle from which the parameter should be retrieved.    
+[\(inlineHTML { Parameter("Position") }) ](#available-position-parameters) The position parameter to be retrieved from the vehicle.
 
 ### Available Position Parameters
 

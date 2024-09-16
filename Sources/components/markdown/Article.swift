@@ -108,8 +108,8 @@ struct Article: View {
             .hidden()
             .className("group-hover:flex")
             .position(.absolute)
-            .className("-left-4")
-            .frame(width: 16, height: 16)
+            .className("-left-5")
+            .frame(width: 20, height: 20)
             let parts = heading.plainText.split(separator: "—")
             DOMString(parts.prefix(1).joined())
             if parts.count > 1 {
@@ -206,19 +206,7 @@ struct Article: View {
         }
 
       case let strong as Markdown.Strong:
-        if strong.plainText.hasPrefix("parameter:") {
-          Span(String(strong.plainText.dropFirst("parameter:".count)))
-            .fontWeight(.semibold)
-            .background(.blue, darkness: 100)
-            .background(.blue, darkness: 950, condition: .dark)
-            .textColor(.blue, darkness: 600)
-            .textColor(.blue, darkness: 400, condition: .dark)
-            .cornerRadius(.base)
-            .padding(.horizontal, 8)
-            .padding(.vertical, 4)
-            .margin(.vertical, 2)
-            .display(.inlineBlock)
-        } else if strong.plainText.hasPrefix("icon:") {
+        if strong.plainText.hasPrefix("icon:") {
           let parts = strong.plainText.split(separator: "/")
           let icon = parts.prefix(1).joined().split(separator: ":").dropFirst().joined()
           let textParts = parts.dropFirst().joined().split(separator: "|")
@@ -294,7 +282,7 @@ struct Article: View {
         }
 
       case let html as Markdown.InlineHTML:
-        Slipstream.DOMString(html.plainText)
+        Slipstream.RawHTML(html.plainText)
 
       case let html as Markdown.HTMLBlock:
         Div {
