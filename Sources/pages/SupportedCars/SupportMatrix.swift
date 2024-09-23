@@ -3,6 +3,13 @@ import Foundation
 typealias Make = String
 typealias Model = String
 let makes: [Make: [Model: [VehicleSupportStatus]]] = [
+  "Ford": [
+    "Mustang": [
+      .testerNeeded(years: 1996...2022),
+      .init(years: 2023...2023, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .obd, odometer: .obd, tirePressure: .unk),
+      .testerNeeded(years: 2024...2025)
+    ]
+  ],
   "Nissan": [
     "Juke": [
       .testerNeeded(years: 1996...2011),
