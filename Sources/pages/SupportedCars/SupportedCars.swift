@@ -266,9 +266,16 @@ struct TestingStatusCell: View {
     case .partiallyOnboarded:
       Bordered {
         TableCell {
-          Text("Partial")
+          Link("Tester needed", destination: becomeBetaURL)
+            .textColor(.link, darkness: 700)
+            .textColor(.link, darkness: 400, condition: .dark)
+            .fontWeight(600)
+            .underline(condition: .hover)
+            .textAlignment(.leading)
         }
       }
+      .padding(.horizontal, 8)
+      .padding(.vertical, 12)
     case .onboarded:
       Bordered {
         TableCell {
