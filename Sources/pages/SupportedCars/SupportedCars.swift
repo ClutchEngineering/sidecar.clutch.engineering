@@ -454,34 +454,43 @@ struct SupportedCars: View {
 
       Section {
         ContentContainer {
-          Link(becomeBetaURL) {
-            VStack(alignment: .center, spacing: 4) {
-              H1("Don't see your car?")
-                .fontSize(.extraLarge)
-                .fontSize(.fourXLarge, condition: .desktop)
-                .bold()
-                .fontDesign("rounded")
-              Text("Become a Sidecar beta tester, get \(betaSubscriptionLength) months free")
-                .fontSize(.large, condition: .desktop)
-                .fontSize(.extraLarge, condition: .desktop)
-                .fontWeight(.medium)
-                .fontDesign("rounded")
+          VStack(alignment: .center, spacing: 8) {
+            Link(becomeBetaURL) {
+              VStack(alignment: .center, spacing: 4) {
+                H1("Don't see your car?")
+                  .fontSize(.extraLarge)
+                  .fontSize(.fourXLarge, condition: .desktop)
+                  .bold()
+                  .fontDesign("rounded")
+                Text("Become a Sidecar beta tester, get \(betaSubscriptionLength) months free")
+                  .fontSize(.large, condition: .desktop)
+                  .fontSize(.extraLarge, condition: .desktop)
+                  .fontWeight(.medium)
+                  .fontDesign("rounded")
+              }
+              .textAlignment(.center)
+              .classNames(["bg-gradient-to-tl", "from-cyan-500", "to-blue-600"])
+              .transition(.all)
+              .textColor(.white)
+              .padding(32)
+              .background(.zinc, darkness: 100)
+              .background(.zinc, darkness: 900, condition: .dark)
+              .cornerRadius(.extraExtraLarge)
+            }
+            Link(becomeBetaURL) {
               Text("Learn more")
                 .fontWeight(.bold)
                 .fontDesign("rounded")
+                .fontSize(.large)
             }
-            .textAlignment(.center)
-            .classNames(["bg-gradient-to-tl", "from-cyan-500", "to-blue-600"])
-            .transition(.all)
-            .textColor(.white)
-            .padding(32)
-            .background(.zinc, darkness: 100)
-            .background(.zinc, darkness: 900, condition: .dark)
-            .cornerRadius(.extraExtraLarge)
-            .margin(.horizontal, .auto)
-            .frame(width: 0.8)
-            .frame(width: 0.6, condition: .desktop)
+            .textColor(.link, darkness: 700)
+            .textColor(.link, darkness: 400, condition: .dark)
+            .fontWeight(600)
+            .underline(condition: .hover)
           }
+          .frame(width: 0.8)
+          .frame(width: 0.6, condition: .desktop)
+          .margin(.horizontal, .auto)
         }
         .padding(.vertical, 8)
         .padding(.vertical, 16, condition: .desktop)
@@ -506,7 +515,7 @@ struct SupportedCars: View {
             Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Sidecar for free.")
           }
           .padding([.top, .horizontal], 16)
-          .background(.zinc, darkness: 100)
+          .background(.zinc, darkness: 0)
           .background(.zinc, darkness: 900, condition: .dark)
           .cornerRadius(.extraExtraLarge)
           .margin(.horizontal, .auto, condition: .desktop)
