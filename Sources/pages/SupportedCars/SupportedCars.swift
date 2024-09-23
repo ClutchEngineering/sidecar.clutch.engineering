@@ -445,7 +445,7 @@ struct SupportedCars: View {
               .fontSize(.fourXLarge, condition: .desktop)
               .bold()
               .fontDesign("rounded")
-            Text("Find out which Sidecar features work with your car")
+            Text("Check which Sidecar features work with your car")
           }
           .textAlignment(.center)
         }
