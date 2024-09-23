@@ -53,11 +53,11 @@ Beta Tester Requirements
 To become a Sidecar beta tester, you’ll need:
 
 1.  **Access to a car**: Ideally, you’ll test with your daily driver, but infrequent drivers (even [garage queens](https://en.wiktionary.org/wiki/garage_queen)) are welcome.
-    
-2.  **iOS 17+ Device+**: Testing should ideally be done on your primary iPhone. Android support isn’t available yet, but if you’re interested, email Jeff at support@clutch.engineering to express interest.
-    
+
+2.  **iOS 17+ Device**: Testing should ideally be done on your primary iPhone. Android support isn’t available yet, but if you’re interested, email Jeff at support@clutch.engineering to express interest.
+
 3.  **Willingness to Share Feedback**: You'll be asked to provide feedback regularly via Sidecar's companion forum, [cars.forum](https://meta.cars.forum/viewforum.php?f=12).
-    
+
 4.  **OBD Data Sharing (Optional)**: If you're testing OBD support, you should be comfortable sharing scan logs and screenshots to help with data accuracy.
 
 Beta Tester Benefits
