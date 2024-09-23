@@ -6,9 +6,9 @@ struct NavigationBar: View {
   var body: some View {
     Comment("Navigation bar")
     ContentContainer {
-      HStack {
+      ResponsiveStack(.y) {
         Link(URL(string: "/")!) {
-          HStack(alignment: .center) {
+          HStack {
             Image(URL(string: "/gfx/site-logo.png")!)
               .colorInvert(condition: .dark)
               .accessibilityLabel("Sidecar logo")
@@ -21,30 +21,37 @@ struct NavigationBar: View {
               .fontSize(.small)
               .fontSize(.base, condition: .desktop)
               .bold()
-              .frame(width: 96)
               .fontLeading(.none)
               .fontLeading(.tight, condition: .desktop)
           }
+          .alignItems(.center, condition: .desktop)
+          .justifyContent(.center)
         }
         .opacity(0.70)
         .opacity(1.0, condition: .hover)
         .transition(.opacity)
 
         Navigation {
-          HStack(alignment: .center, spacing: 16) {
+          HStack {
             NavigationLink(URL(string: "/shortcuts"), text: "Shortcuts")
             NavigationLink(URL(string: "/scanning"), text: "Scanning")
-            NavigationLink(URL(string: "/privacy-policy/"), text: "Privacy")
-            NavigationLink(URL(string: "https://electricsidecar.substack.com/"), text: "News")
+            NavigationLink(URL(string: "/privacy-policy"), text: "Privacy")
+            NavigationLink(URL(string: "/supported-cars"), text: "Supported Cars")
             AppStoreLink()
               .hidden()
               .display(.block, condition: .desktop)
           }
+          .alignItems(.center)
+          .justifyContent(.between)
+          .flexGap(.x, width: 16, condition: .desktop)
         }
       }
       .padding(.vertical, 8)
       .border(.init(.gray, darkness: 300), edges: .bottom)
       .border(.init(.gray, darkness: 500), edges: .bottom, condition: .dark)
+      .alignItems(.stretch)
+      .alignItems(.center, condition: .desktop)
+      .flexGap(.y, width: 4, condition: .mobileOnly)
       .justifyContent(.between)
       .textColor("sidecar-gray")
       .textColor(.white, condition: .dark)

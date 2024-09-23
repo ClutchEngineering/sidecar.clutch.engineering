@@ -7,7 +7,7 @@
       "location" : "https://github.com/jverkoey/slipstream.git",
       "state" : {
         "branch" : "main",
-        "revision" : "ac6e3835150fdc4075d74df7b450d848cbc2de36"
+        "revision" : "9ce48ca56a5d87187e5ee68be72091819b35899c"
       }
     },
     {
@@ -25,7 +25,7 @@
       "location" : "https://github.com/apple/swift-markdown.git",
       "state" : {
         "branch" : "main",
-        "revision" : "8986fc2a2af4bc686476e8e07ae6dd9d22ae00e2"
+        "revision" : "2829eefc2e4f8ee7270b8e8d3e5757b98fe06b6c"
       }
     },
     {
