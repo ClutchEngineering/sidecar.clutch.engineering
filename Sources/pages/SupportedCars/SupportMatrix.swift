@@ -25,5 +25,12 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .init(years: 2019...2024, testingStatus: .onboarded, stateOfCharge: .all, stateOfHealth: .obd, charging: .ota, cells: .obd, fuelLevel: .na, speed: .obd, range: .all, odometer: .all, tirePressure: .all),
       .testerNeeded(years: 2025...2025)
     ]
-  ]
+  ],
+  "Toyota": [
+    "4Runner": [
+      .testerNeeded(years: 1996...2019),
+      .init(years: 2020...2020, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .ota, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
+      .testerNeeded(years: 2021...2025)
+    ]
+  ],
 ]
