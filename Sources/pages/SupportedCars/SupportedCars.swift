@@ -94,7 +94,7 @@ struct SupportStatus: View {
     case .unk:
       Bordered(showTrailingBorder: !isLast) {
         TableCell {
-          Text("No PID")
+          Text("PID?")
         }
       }
       .padding(.horizontal, 8)
@@ -311,7 +311,7 @@ struct ModelSupportSection: View {
     Div {
       HStack(alignment: .center, spacing: 16) {
         if !model.hasPrefix(" ") {
-          Image(URL(string: "/gfx/model/\(model.lowercased()).svg"))
+          Image(URL(string: "/gfx/model/\(model.lowercased().replacingOccurrences(of: " ", with: "")).svg"))
             .colorInvert(condition: .dark)
             .display(.inlineBlock)
             .frame(width: 48)
@@ -433,10 +433,35 @@ struct SupportedCars: View {
             .background(.zinc, darkness: 100)
             .background(.zinc, darkness: 900, condition: .dark)
             .cornerRadius(.extraExtraLarge)
-            .margin(.horizontal, .auto)
+            .margin(.horizontal, .auto, condition: .desktop)
+            .frame(width: 0.75, condition: .desktop)
           }
         }
         .padding(.vertical, 16)
+      }
+      .margin(.bottom, 32)
+
+      ContentContainer {
+        VStack(alignment: .leading, spacing: 8) {
+          HStack(spacing: 8) {
+            Image(URL(string: "/gfx/symbols/checkmark.seal.png"))
+              .colorInvert(condition: .dark)
+              .display(.inlineBlock)
+              .frame(width: 36)
+
+            H1("General support")
+              .fontSize(.fourXLarge)
+              .bold()
+              .fontDesign("rounded")
+          }
+          Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Sidecar for free.")
+        }
+        .padding([.top, .horizontal], 16)
+        .background(.zinc, darkness: 100)
+        .background(.zinc, darkness: 900, condition: .dark)
+        .cornerRadius(.extraExtraLarge)
+        .margin(.horizontal, .auto, condition: .desktop)
+        .frame(width: 0.5, condition: .desktop)
       }
       .margin(.bottom, 32)
 
@@ -469,6 +494,13 @@ struct SupportedCars: View {
           HStack(spacing: 16) {
             NotApplicableStamp()
             Text("Not applicable to this vehicle.")
+          }
+          HStack(spacing: 16) {
+            Text {
+              Span("PID?")
+                .bold()
+              DOMString(" The OBD parameter identifier (PID) is unknown.")
+            }
           }
         }
         .textAlignment(.center)

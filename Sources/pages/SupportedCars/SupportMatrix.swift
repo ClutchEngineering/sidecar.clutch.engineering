@@ -10,6 +10,13 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2024...2025)
     ]
   ],
+  "Hyundai": [
+    "IONIQ 5": [
+      .testerNeeded(years: 2021...2022),
+      .init(years: 2023...2023, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+      .testerNeeded(years: 2024...2025)
+    ]
+  ],
   "Nissan": [
     "Juke": [
       .testerNeeded(years: 1996...2011),
