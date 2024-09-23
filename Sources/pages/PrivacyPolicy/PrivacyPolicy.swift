@@ -26,7 +26,7 @@ struct PrivacyPolicy: View {
               .fontSize(.fourXLarge)
               .bold()
               .fontDesign("rounded")
-            Text("Last updated July 4, 2024")
+            Text("Last updated September 22, 2024")
           }
           .textAlignment(.center)
         }
