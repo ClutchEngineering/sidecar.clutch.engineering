@@ -4,6 +4,10 @@ import Slipstream
 
 let becomeBetaURL = URL(string: "/beta")
 
+func modelNameForSorting(_ string: Model) -> Model {
+  string.replacingOccurrences(of: " ", with: "")
+}
+
 struct ParameterHeader: View {
   let icon: String
   let name: String
@@ -12,7 +16,8 @@ struct ParameterHeader: View {
       Image(URL(string: "/gfx/parameters/\(icon).png"))
         .colorInvert(condition: .dark)
         .display(.inlineBlock)
-        .frame(width: 24)
+        .frame(width: 18)
+        .frame(width: 24, condition: .desktop)
       Text(name)
     }
     .justifyContent(.center)
@@ -24,7 +29,8 @@ struct SupportedSeal: View {
     Image(URL(string: "/gfx/symbols/checkmark.seal.png"))
       .colorInvert(condition: .dark)
       .display(.inlineBlock)
-      .frame(width: 24)
+      .frame(width: 18)
+      .frame(width: 24, condition: .desktop)
   }
 }
 
@@ -33,7 +39,8 @@ struct OBDStamp: View {
     Image(URL(string: "/gfx/symbols/obdii.png"))
       .colorInvert(condition: .dark)
       .display(.inlineBlock)
-      .frame(width: 24)
+      .frame(width: 18)
+      .frame(width: 24, condition: .desktop)
   }
 }
 
@@ -42,7 +49,8 @@ struct OTAStamp: View {
     Image(URL(string: "/gfx/symbols/ota.png"))
       .colorInvert(condition: .dark)
       .display(.inlineBlock)
-      .frame(width: 24)
+      .frame(width: 18)
+      .frame(width: 24, condition: .desktop)
   }
 }
 
@@ -175,7 +183,7 @@ struct VehicleSupportStatus {
     case onboarded
     case partiallyOnboarded
     case testerNeeded
-    case activeTester(String)
+    case activeTester(String, id: Int)
   }
   let testingStatus: TestingStatus
 
@@ -212,7 +220,8 @@ struct MakeCard: View {
       Text(make)
         .bold()
         .fontDesign("rounded")
-        .fontSize(.fourXLarge)
+        .fontSize(.extraLarge)
+        .fontSize(.fourXLarge, condition: .desktop)
     }
     .justifyContent(.center)
   }
@@ -229,7 +238,7 @@ struct MakeSupportSection: View {
           .margin(.bottom, 16)
 
         VStack(alignment: .center, spacing: 16) {
-          for (model, statuses) in models.sorted(by: { $0.key < $1.key }) {
+          for (model, statuses) in models.sorted(by: { modelNameForSorting($0.key) < modelNameForSorting($1.key) }) {
             ModelSupportSection(model: model, statuses: statuses)
           }
         }
@@ -274,7 +283,8 @@ struct TestingStatusCell: View {
             .textAlignment(.leading)
         }
       }
-      .padding(.horizontal, 8)
+      .padding(.horizontal, 4)
+      .padding(.horizontal, 8, condition: .desktop)
       .padding(.vertical, 12)
     case .onboarded:
       Bordered {
@@ -282,12 +292,26 @@ struct TestingStatusCell: View {
           SupportedSeal()
         }
       }
-    case .activeTester(let username):
+    case .activeTester(let username, let id):
       Bordered {
-        TableCell(colSpan: numberOfFeatures) {
-          Text(username)
+        TableCell {
+          VStack(alignment: .center) {
+            Text("Tester")
+              .fontSize(.small)
+              .textColor(.text, darkness: 500)
+              .fontWeight(.medium)
+            Link(username, destination: URL(string: "https://meta.cars.forum/memberlist.php?mode=viewprofile&u=\(id)"))
+              .textColor(.link, darkness: 700)
+              .textColor(.link, darkness: 400, condition: .dark)
+              .fontWeight(600)
+              .underline(condition: .hover)
+              .textAlignment(.leading)
+          }
         }
       }
+      .padding(.horizontal, 4)
+      .padding(.horizontal, 8, condition: .desktop)
+      .padding(.vertical, 12)
     case .testerNeeded:
       Bordered(showTrailingBorder: false) {
         TableCell(colSpan: numberOfFeatures) {
@@ -299,7 +323,8 @@ struct TestingStatusCell: View {
             .textAlignment(.leading)
         }
       }
-      .padding(.horizontal, 8)
+      .padding(.horizontal, 4)
+      .padding(.horizontal, 8, condition: .desktop)
       .padding(.vertical, 12)
     }
   }
@@ -334,7 +359,8 @@ struct ModelSupportSection: View {
         Text(model.trimmingCharacters(in: .whitespaces))
           .bold()
           .fontDesign("rounded")
-          .fontSize(.extraExtraExtraLarge)
+          .fontSize(.large, condition: .desktop)
+          .fontSize(.extraExtraExtraLarge, condition: .desktop)
       }
       .justifyContent(.center)
       .margin(.bottom, 16)
@@ -345,7 +371,7 @@ struct ModelSupportSection: View {
             HeaderCell { Text("Overall") }
             HeaderCell { ParameterHeader(icon: "bolt", name: "SoC") }
             HeaderCell { ParameterHeader(icon: "health", name: "SoH") }
-            HeaderCell { ParameterHeader(icon: "plug", name: "Charging") }
+            HeaderCell { ParameterHeader(icon: "plug", name: "State") }
             HeaderCell { ParameterHeader(icon: "battery", name: "Cells") }
             HeaderCell { ParameterHeader(icon: "fuel", name: "Fuel") }
             HeaderCell { ParameterHeader(icon: "speed", name: "Speed") }
@@ -387,7 +413,8 @@ struct ModelSupportSection: View {
       .border(.init(.zinc, darkness: 600), width: 1)
       .cornerRadius(.large)
     }
-    .padding(32)
+    .padding(.vertical, 16)
+    .padding(32, condition: .desktop)
     .cornerRadius(.extraExtraLarge)
     .background(.zinc, darkness: 200)
     .background(.zinc, darkness: 800, condition: .dark)
@@ -414,7 +441,8 @@ struct SupportedCars: View {
 
           Div {
             H1("Supported Cars")
-              .fontSize(.fourXLarge)
+              .fontSize(.extraLarge)
+              .fontSize(.fourXLarge, condition: .desktop)
               .bold()
               .fontDesign("rounded")
             Text("Find out which Sidecar features work with your car")
@@ -429,11 +457,13 @@ struct SupportedCars: View {
           Link(becomeBetaURL) {
             VStack(alignment: .center, spacing: 4) {
               H1("Don't see your car?")
-                .fontSize(.fourXLarge)
+                .fontSize(.extraLarge)
+                .fontSize(.fourXLarge, condition: .desktop)
                 .bold()
                 .fontDesign("rounded")
               Text("Become a Sidecar beta tester, get \(betaSubscriptionLength) months free")
-                .fontSize(.extraLarge)
+                .fontSize(.large, condition: .desktop)
+                .fontSize(.extraLarge, condition: .desktop)
                 .fontWeight(.medium)
                 .fontDesign("rounded")
               Text("Learn more")
@@ -466,7 +496,8 @@ struct SupportedCars: View {
                 .frame(width: 36)
 
               H1("General support")
-                .fontSize(.fourXLarge)
+                .fontSize(.extraLarge)
+                .fontSize(.fourXLarge, condition: .desktop)
                 .bold()
                 .fontDesign("rounded")
             }
@@ -484,9 +515,10 @@ struct SupportedCars: View {
 
       Section {
         ContentContainer {
-          VStack(alignment: .center, spacing: 16) {
+          VStack(alignment: .leading, spacing: 16) {
             H1("Legend")
-              .fontSize(.fourXLarge)
+              .fontSize(.extraLarge)
+              .fontSize(.fourXLarge, condition: .desktop)
               .bold()
               .fontDesign("rounded")
 
@@ -521,7 +553,8 @@ struct SupportedCars: View {
               }
             }
           }
-          .textAlignment(.center)
+          .alignItems(.center, condition: .desktop)
+          .textAlignment(.center, condition: .desktop)
           .padding(.vertical, 16)
         }
       }
