@@ -237,11 +237,12 @@ struct MakeSupportSection: View {
         MakeCard(make: make)
           .margin(.bottom, 16)
 
-        VStack(alignment: .center, spacing: 16) {
+        VStack(alignment: .leading, spacing: 16) {
           for (model, statuses) in models.sorted(by: { modelNameForSorting($0.key) < modelNameForSorting($1.key) }) {
             ModelSupportSection(model: model, statuses: statuses)
           }
         }
+        .alignItems(.center, condition: .desktop)
       }
     }
     .id(make)
@@ -381,7 +382,6 @@ struct ModelSupportSection: View {
           }
           .background(.gray, darkness: 100)
           .background(.zinc, darkness: 950, condition: .dark)
-          .placement(top: 0)
           TableBody {
             for (statusIndex, status) in statuses.sorted(by: { $0.years.lowerBound < $1.years.lowerBound }).enumerated() {
               EnvironmentAwareRow(isLastRow: statusIndex == statuses.count - 1) {
@@ -404,16 +404,15 @@ struct ModelSupportSection: View {
             }
           }
         }
-        .frame(width: .full)
+        .frame(width: .full, condition: .desktop)
       }
       .fontSize(.extraSmall, condition: .mobileOnly)
       .textAlignment(.center)
-      .margin(.horizontal, .auto)
+      .margin(.horizontal, .auto, condition: .desktop)
       .border(.init(.zinc, darkness: 400), width: 1)
       .border(.init(.zinc, darkness: 600), width: 1)
       .cornerRadius(.large)
     }
-    .overflow(.scroll)
     .padding(.vertical, 16)
     .padding(32, condition: .desktop)
     .cornerRadius(.extraExtraLarge)
