@@ -51,7 +51,7 @@ struct NotApplicableStamp: View {
     Image(URL(string: "/gfx/symbols/slash.circle.png"))
       .colorInvert(condition: .dark)
       .display(.inlineBlock)
-      .frame(width: 24)
+      .frame(width: 18)
   }
 }
 
@@ -92,7 +92,12 @@ struct SupportStatus: View {
       }
       .padding(.horizontal, 8)
     case .unk:
-      EmptyView()
+      Bordered(showTrailingBorder: !isLast) {
+        TableCell {
+          Text("No PID")
+        }
+      }
+      .padding(.horizontal, 8)
     case .na:
       Bordered(showTrailingBorder: !isLast) {
         TableCell {
@@ -195,20 +200,6 @@ struct VehicleSupportStatus {
   }
 }
 
-typealias Make = String
-typealias Model = String
-let makes: [Make: [Model: [VehicleSupportStatus]]] = [
-  "Porsche": [
-    " 911":     [ .testerNeeded(years: 1996...2025) ],
-    "Cayenne":  [ .testerNeeded(years: 2002...2025) ],
-    "Macan":    [ .testerNeeded(years: 2014...2025) ],
-    "Taycan": [
-      .init(years: 2019...2024, testingStatus: .onboarded, stateOfCharge: .all, stateOfHealth: .obd, charging: .ota, cells: .obd, fuelLevel: .na, speed: .obd, range: .all, odometer: .all, tirePressure: .all),
-      .testerNeeded(years: 2025...2025)
-    ]
-  ]
-]
-
 struct MakeSupportSection: View {
   let make: Make
   let models: [Make: [Model: [VehicleSupportStatus]]].Value
@@ -283,6 +274,7 @@ struct TestingStatusCell: View {
             .textColor(.link, darkness: 400, condition: .dark)
             .fontWeight(600)
             .underline(condition: .hover)
+            .textAlignment(.leading)
         }
       }
       .padding(.horizontal, 8)
@@ -347,15 +339,19 @@ struct ModelSupportSection: View {
               EnvironmentAwareRow(isLastRow: statusIndex == statuses.count - 1) {
                 YearsCell(years: status.years)
                 TestingStatusCell(status: status)
-                SupportStatus(supported: status.stateOfCharge)
-                SupportStatus(supported: status.stateOfHealth)
-                SupportStatus(supported: status.charging)
-                SupportStatus(supported: status.cells)
-                SupportStatus(supported: status.fuelLevel)
-                SupportStatus(supported: status.speed)
-                SupportStatus(supported: status.range)
-                SupportStatus(supported: status.odometer)
-                SupportStatus(supported: status.tirePressure, isLast: true)
+                if case .testerNeeded = status.testingStatus {
+                  // Do nothing.
+                } else {
+                  SupportStatus(supported: status.stateOfCharge)
+                  SupportStatus(supported: status.stateOfHealth)
+                  SupportStatus(supported: status.charging)
+                  SupportStatus(supported: status.cells)
+                  SupportStatus(supported: status.fuelLevel)
+                  SupportStatus(supported: status.speed)
+                  SupportStatus(supported: status.range)
+                  SupportStatus(supported: status.odometer)
+                  SupportStatus(supported: status.tirePressure, isLast: true)
+                }
               }
             }
           }
@@ -437,7 +433,43 @@ struct SupportedCars: View {
       }
       .margin(.bottom, 32)
 
-      VStack(alignment: .center) {
+      ContentContainer {
+        VStack(alignment: .center, spacing: 16) {
+          H1("Legend")
+            .fontSize(.fourXLarge)
+            .bold()
+            .fontDesign("rounded")
+
+          HStack(spacing: 16) {
+            SupportedSeal()
+            Text("Vehicle is fully onboarded and does not currently need new beta testers.")
+          }
+          HStack(spacing: 16) {
+            OBDStamp()
+            Text {
+              DOMString("Feature is supported via OBD. ")
+              Link("Requires a connected OBD-II scanner.", destination: URL(string: "/scanning/"))
+                .textColor(.link, darkness: 700)
+                .textColor(.link, darkness: 400, condition: .dark)
+                .fontWeight(600)
+                .underline(condition: .hover)
+            }
+          }
+          HStack(spacing: 16) {
+            OTAStamp()
+            Text("Feature is supported via Connected Accounts.")
+          }
+          HStack(spacing: 16) {
+            NotApplicableStamp()
+            Text("Not applicable to this vehicle.")
+          }
+        }
+        .textAlignment(.center)
+        .padding(.vertical, 16)
+      }
+      .margin(.bottom, 32)
+
+      VStack(alignment: .center, spacing: 64) {
         for (make, models) in makes.sorted(by: { $0.key < $1.key }) {
           MakeSupportSection(make: make, models: models)
         }
