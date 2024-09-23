@@ -43,9 +43,7 @@ struct BetaTesterHandbook: View {
 About the Beta Tester Program
 -----------------------------
 
-Sidecar is a product of [Clutch Engineering](https://clutch.engineering/), an indie startup founded by [Jeff Verkoeyen](http://jeffverkoeyen.com/) and committed to building best-in-class solutions for niche product categories. With a sustainable business model, Sidecar focuses on enhancing the way people interact with their cars.
-
-As a beta tester, your feedback will be critical in improving the Sidecar experience. This guide explains the expectations of the role, the benefits of participating, and how to get started.
+As a beta tester, your feedback is critical to improving the Sidecar experience. This guide explains the requirements to become a beta tester, the benefits of participating, and how to get started.
 
 Beta Tester Requirements
 ------------------------
@@ -68,14 +66,14 @@ As a thank you for your participation, approved beta testers will receive a free
 Conditions
 ----------
 
-*   Only one beta tester is allowed per vehicle make, model, and year, and only [when a tester is needed](/supported-cars/).
+*   A finite number of beta testers are allowed per vehicle make, model, and year, and only [when a tester is needed](/supported-cars/). If your car is not listed in the supported cars list at all, it probably needs a tester :)
 
 *   Registration operates on a first-come, first-served basis.
 
 How to Register
 ---------------
 
-To become a beta tester, you must first create an account on [cars.forum](https://cars.forum), the community forum for Sidecar and other Clutch Engineering products. If you don’t have an account yet, you can [register here](https://meta.cars.forum/ucp.php?mode=register).
+To become a beta tester, you must first create an account on [cars.forum](https://cars.forum), the community forum for Sidecar and other Clutch Engineering products. If you don’t have an account yet, you can [register here](https://meta.cars.forum/ucp.php?mode=register). It's free.
 
 Once logged in, [search the Beta Testing Registration forum](https://meta.cars.forum/search.php?fid[]=17) for your car’s make and model. If no thread exists for your vehicle, create one using this template:
 
@@ -101,9 +99,11 @@ If a thread already exists, simply reply using the same template.
 
 If a beta tester is needed for your vehicle, Jeff will reach out to onboard you with the next steps.
 
-You will receive your subscription promo code after you have been approved as a beta tester,
-installed the app, and initiated a discussion about your make/model on the
-[Sidecar forum](https://meta.cars.forum/viewforum.php?f=12).
+You will receive your subscription promo code after you have been:
+
+1. approved as a beta tester,
+2. installed Sidecar, and
+3. initiated/participated in a discussion about your make/model on the [Sidecar forum](https://meta.cars.forum/viewforum.php?f=12).
 """)
       .padding(.bottom, 16)
     }
