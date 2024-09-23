@@ -66,7 +66,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   ],
   "Tesla": [
     " Model S": [
-      .testerNeeded(years: 2012...2025),
+      .testerNeeded(years: 2012...2015),
+      .init(years: 2016...2016, testingStatus: .activeTester("shaver", id: 65), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
+      .testerNeeded(years: 2017...2025),
     ],
     "Model 3": [
       .init(years: 2017...2025, testingStatus: .partiallyOnboarded, stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
@@ -95,6 +97,13 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2015...2018),
       .init(years: 2019...2019, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .obd, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2020...2025)
+    ]
+  ],
+  "Volvo": [
+    " XC60 PHEV": [
+      .testerNeeded(years: 2018...2019),
+      .init(years: 2020...2020, testingStatus: .activeTester("shaver", id: 65), stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+      .testerNeeded(years: 2021...2025)
     ]
   ],
 ]
