@@ -413,6 +413,7 @@ struct ModelSupportSection: View {
       .border(.init(.zinc, darkness: 600), width: 1)
       .cornerRadius(.large)
     }
+    .overflow(.scroll)
     .padding(.vertical, 16)
     .padding(32, condition: .desktop)
     .cornerRadius(.extraExtraLarge)
