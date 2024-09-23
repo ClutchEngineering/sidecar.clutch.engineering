@@ -173,6 +173,7 @@ struct VehicleSupportStatus {
 
   enum TestingStatus {
     case onboarded
+    case partiallyOnboarded
     case testerNeeded
     case activeTester(String)
   }
@@ -254,6 +255,12 @@ struct TestingStatusCell: View {
   var body: some View {
     let numberOfFeatures = 10
     switch status.testingStatus {
+    case .partiallyOnboarded:
+      Bordered {
+        TableCell {
+          Text("Partial")
+        }
+      }
     case .onboarded:
       Bordered {
         TableCell {

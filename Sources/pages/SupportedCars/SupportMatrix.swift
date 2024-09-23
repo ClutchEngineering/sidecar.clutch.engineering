@@ -6,14 +6,14 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Ford": [
     "Mustang": [
       .testerNeeded(years: 1996...2022),
-      .init(years: 2023...2023, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .obd, odometer: .obd, tirePressure: .unk),
+      .init(years: 2023...2023, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .obd, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2024...2025)
     ]
   ],
   "Nissan": [
     "Juke": [
       .testerNeeded(years: 1996...2011),
-      .init(years: 2012...2012, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .obd, odometer: .obd, tirePressure: .unk),
+      .init(years: 2012...2012, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .obd, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2013...2025)
     ]
   ],
@@ -29,8 +29,15 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Toyota": [
     "4Runner": [
       .testerNeeded(years: 1996...2019),
-      .init(years: 2020...2020, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .ota, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
+      .init(years: 2020...2020, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .ota, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
       .testerNeeded(years: 2021...2025)
+    ]
+  ],
+  "Volkswagen": [
+    "e-Golf": [
+      .testerNeeded(years: 2015...2018),
+      .init(years: 2019...2019, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .obd, odometer: .obd, tirePressure: .unk),
+      .testerNeeded(years: 2020...2025)
     ]
   ],
 ]
