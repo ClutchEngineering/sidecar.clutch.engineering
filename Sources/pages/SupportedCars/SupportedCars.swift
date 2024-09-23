@@ -478,11 +478,13 @@ struct SupportedCars: View {
             .background(.zinc, darkness: 100)
             .background(.zinc, darkness: 900, condition: .dark)
             .cornerRadius(.extraExtraLarge)
-            .margin(.horizontal, .auto, condition: .desktop)
-            .frame(width: 0.75, condition: .desktop)
+            .margin(.horizontal, .auto)
+            .frame(width: 0.8)
+            .frame(width: 0.6, condition: .desktop)
           }
         }
-        .padding(.vertical, 16)
+        .padding(.vertical, 8)
+        .padding(.vertical, 16, condition: .desktop)
       }
       .margin(.bottom, 32)
 
