@@ -201,6 +201,23 @@ struct VehicleSupportStatus {
   }
 }
 
+struct MakeCard: View {
+  let make: Make
+  var body: some View {
+    VStack(alignment: .center) {
+      Image(URL(string: "/gfx/make/\(make.lowercased()).svg"))
+        .colorInvert(condition: .dark)
+        .display(.inlineBlock)
+        .frame(width: 96)
+      Text(make)
+        .bold()
+        .fontDesign("rounded")
+        .fontSize(.fourXLarge)
+    }
+    .justifyContent(.center)
+  }
+}
+
 struct MakeSupportSection: View {
   let make: Make
   let models: [Make: [Model: [VehicleSupportStatus]]].Value
@@ -208,18 +225,8 @@ struct MakeSupportSection: View {
   var body: some View {
     Section {
       ContentContainer {
-        VStack(alignment: .center) {
-          Image(URL(string: "/gfx/make/\(make.lowercased()).svg"))
-            .colorInvert(condition: .dark)
-            .display(.inlineBlock)
-            .frame(width: 96)
-          Text(make)
-            .bold()
-            .fontDesign("rounded")
-            .fontSize(.fourXLarge)
-        }
-        .justifyContent(.center)
-        .margin(.bottom, 16)
+        MakeCard(make: make)
+          .margin(.bottom, 16)
 
         VStack(alignment: .center, spacing: 16) {
           for (model, statuses) in models.sorted(by: { $0.key < $1.key }) {
@@ -228,6 +235,7 @@ struct MakeSupportSection: View {
         }
       }
     }
+    .id(make)
   }
 }
 
@@ -441,70 +449,87 @@ struct SupportedCars: View {
       }
       .margin(.bottom, 32)
 
-      ContentContainer {
-        VStack(alignment: .leading, spacing: 8) {
-          HStack(spacing: 8) {
-            Image(URL(string: "/gfx/symbols/checkmark.seal.png"))
-              .colorInvert(condition: .dark)
-              .display(.inlineBlock)
-              .frame(width: 36)
+      Section {
+        ContentContainer {
+          VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 8) {
+              Image(URL(string: "/gfx/symbols/checkmark.seal.png"))
+                .colorInvert(condition: .dark)
+                .display(.inlineBlock)
+                .frame(width: 36)
 
-            H1("General support")
-              .fontSize(.fourXLarge)
-              .bold()
-              .fontDesign("rounded")
+              H1("General support")
+                .fontSize(.fourXLarge)
+                .bold()
+                .fontDesign("rounded")
+            }
+            Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Sidecar for free.")
           }
-          Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Sidecar for free.")
+          .padding([.top, .horizontal], 16)
+          .background(.zinc, darkness: 100)
+          .background(.zinc, darkness: 900, condition: .dark)
+          .cornerRadius(.extraExtraLarge)
+          .margin(.horizontal, .auto, condition: .desktop)
+          .frame(width: 0.5, condition: .desktop)
         }
-        .padding([.top, .horizontal], 16)
-        .background(.zinc, darkness: 100)
-        .background(.zinc, darkness: 900, condition: .dark)
-        .cornerRadius(.extraExtraLarge)
-        .margin(.horizontal, .auto, condition: .desktop)
-        .frame(width: 0.5, condition: .desktop)
       }
       .margin(.bottom, 32)
 
-      ContentContainer {
-        VStack(alignment: .center, spacing: 16) {
-          H1("Legend")
-            .fontSize(.fourXLarge)
-            .bold()
-            .fontDesign("rounded")
+      Section {
+        ContentContainer {
+          VStack(alignment: .center, spacing: 16) {
+            H1("Legend")
+              .fontSize(.fourXLarge)
+              .bold()
+              .fontDesign("rounded")
 
-          HStack(spacing: 16) {
-            SupportedSeal()
-            Text("Vehicle is fully onboarded and does not currently need new beta testers.")
-          }
-          HStack(spacing: 16) {
-            OBDStamp()
-            Text {
-              DOMString("Feature is supported via OBD. ")
-              Link("Requires a connected OBD-II scanner.", destination: URL(string: "/scanning/"))
-                .textColor(.link, darkness: 700)
-                .textColor(.link, darkness: 400, condition: .dark)
-                .fontWeight(600)
-                .underline(condition: .hover)
+            HStack(spacing: 16) {
+              SupportedSeal()
+              Text("Vehicle is fully onboarded and does not currently need new beta testers.")
+            }
+            HStack(spacing: 16) {
+              OBDStamp()
+              Text {
+                DOMString("Feature is supported via OBD. ")
+                Link("Requires a connected OBD-II scanner.", destination: URL(string: "/scanning/"))
+                  .textColor(.link, darkness: 700)
+                  .textColor(.link, darkness: 400, condition: .dark)
+                  .fontWeight(600)
+                  .underline(condition: .hover)
+              }
+            }
+            HStack(spacing: 16) {
+              OTAStamp()
+              Text("Feature is supported via Connected Accounts.")
+            }
+            HStack(spacing: 16) {
+              NotApplicableStamp()
+              Text("Not applicable to this vehicle.")
+            }
+            HStack(spacing: 16) {
+              Text {
+                Span("PID?")
+                  .bold()
+                DOMString(" The OBD parameter identifier (PID) is unknown.")
+              }
             }
           }
-          HStack(spacing: 16) {
-            OTAStamp()
-            Text("Feature is supported via Connected Accounts.")
-          }
-          HStack(spacing: 16) {
-            NotApplicableStamp()
-            Text("Not applicable to this vehicle.")
-          }
-          HStack(spacing: 16) {
-            Text {
-              Span("PID?")
-                .bold()
-              DOMString(" The OBD parameter identifier (PID) is unknown.")
-            }
-          }
+          .textAlignment(.center)
+          .padding(.vertical, 16)
         }
-        .textAlignment(.center)
-        .padding(.vertical, 16)
+      }
+      .margin(.bottom, 32)
+
+      Section {
+        ContentContainer {
+          Div {
+            for make in makes.keys.sorted() {
+              MakeLink(make: make)
+            }
+          }
+          .display(.grid)
+          .classNames(["grid-cols-4", "gap-x-4", "gap-y-8"])
+        }
       }
       .margin(.bottom, 32)
 
@@ -515,6 +540,16 @@ struct SupportedCars: View {
       }
       .margin(.bottom, 32)
     }
+  }
+}
+
+struct MakeLink: View {
+  let make: Make
+  var body: some View {
+    Link(URL(string: "#\(make)")) {
+      MakeCard(make: make)
+    }
+    .underline(condition: .hover)
   }
 }
 

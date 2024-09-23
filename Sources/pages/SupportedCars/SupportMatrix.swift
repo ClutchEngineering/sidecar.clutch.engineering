@@ -22,6 +22,11 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 1996...2011),
       .init(years: 2012...2012, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .obd, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2013...2025)
+    ],
+    "Leaf": [
+      .testerNeeded(years: 2010...2017),
+      .init(years: 2018...2018, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .obd, charging: .obd, cells: .unk, fuelLevel: .na, speed: .obd, range: .obd, odometer: .obd, tirePressure: .obd),
+      .testerNeeded(years: 2019...2025)
     ]
   ],
   "Porsche": [
