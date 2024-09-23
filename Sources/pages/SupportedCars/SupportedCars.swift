@@ -376,7 +376,7 @@ struct ModelSupportSection: View {
             HeaderCell { ParameterHeader(icon: "fuel", name: "Fuel") }
             HeaderCell { ParameterHeader(icon: "speed", name: "Speed") }
             HeaderCell { ParameterHeader(icon: "length", name: "Range") }
-            HeaderCell { ParameterHeader(icon: "length", name: "Odometer") }
+            HeaderCell { ParameterHeader(icon: "length", name: "Odom") }
             HeaderCell(isLast: true) { ParameterHeader(icon: "tirepressure", name: "Tires") }
           }
           .background(.gray, darkness: 100)
@@ -564,6 +564,14 @@ struct SupportedCars: View {
 
       Section {
         ContentContainer {
+          H1("Jump to your make")
+            .fontSize(.extraLarge)
+            .fontSize(.fourXLarge, condition: .desktop)
+            .bold()
+            .fontDesign("rounded")
+            .textAlignment(.center)
+            .margin(.bottom, 8)
+
           Div {
             for make in makes.keys.sorted() {
               MakeLink(make: make)
