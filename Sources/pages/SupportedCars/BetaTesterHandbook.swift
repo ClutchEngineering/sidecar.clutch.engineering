@@ -100,6 +100,10 @@ Additional Notes: [e.g., Has aftermarket parts, modifications, etc.]
 If a thread already exists, simply reply using the same template.
 
 If a beta tester is needed for your vehicle, Jeff will reach out to onboard you with the next steps.
+
+You will receive your subscription promo code after you have been approved as a beta tester,
+installed the app, and initiated a discussion about your make/model on the
+[Sidecar forum](https://meta.cars.forum/viewforum.php?f=12).
 """)
       .padding(.bottom, 16)
     }
