@@ -16,6 +16,7 @@ let sitemap: Sitemap = [
   "bug/index.html": Bug(),
   "supported-cars/index.html": SupportedCars(),
   "beta/index.html": BetaTesterHandbook(),
+  "help/index.html": Help(),
 ]
 
 // Assumes this file is located in a Sources/ sub-directory of a Swift package.

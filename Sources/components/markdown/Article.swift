@@ -237,39 +237,10 @@ struct Article: View {
         }
 
       case let strong as Markdown.Strong:
-        if strong.plainText.hasPrefix("icon:") {
-          let parts = strong.plainText.split(separator: "/")
-          let icon = parts.prefix(1).joined().split(separator: ":").dropFirst().joined()
-          let textParts = parts.dropFirst().joined().split(separator: "|")
-          let textPart = textParts.prefix(1).joined()
-          Span {
-            Image(URL(string: "/gfx/parameters/\(icon).png"))
-              .colorInvert(condition: .dark)
-              .display(.inlineBlock)
-              .frame(width: 20)
-              .margin(.right, 8)
-              .offset(y: -1)
-            DOMString(textPart)
-            if textParts.count > 1 {
-              Span("|" + textParts.dropFirst().joined())
-                .fontWeight(.light)
-                .opacity(0.75)
-            }
-          }
-          .fontWeight(.semibold)
-          .background(.blue, darkness: 100)
-          .background(.blue, darkness: 950, condition: .dark)
-          .cornerRadius(.base)
-          .padding(.horizontal, 8)
-          .padding(.vertical, 4)
-          .margin(.vertical, 2)
-          .display(.inlineBlock)
-        } else {
-          Span {
-            context.recurse()
-          }
-          .bold()
+        Span {
+          context.recurse()
         }
+        .bold()
 
       case is Markdown.Emphasis:
         Span {
@@ -303,10 +274,20 @@ struct Article: View {
       case let image as Markdown.Image:
         if let destination = image.source {
           Div {
-            Slipstream.Image(URL(string: destination))
-              .accessibilityLabel(image.plainText)
-              .margin(.horizontal, .auto)
-              .frame(maxHeight: 400)
+            if image.plainText.contains("100%") {
+              Slipstream.Image(URL(string: destination))
+                .accessibilityLabel(image.plainText.replacingOccurrences(of: "100%", with: "").trimmingCharacters(in: .whitespaces))
+                .border(.white, width: 4)
+                .border(.init(.zinc, darkness: 700), width: 4, condition: .dark)
+                .cornerRadius(.extraExtraLarge)
+                .modifier(ClassModifier(add: "shadow-puck"))
+                .margin(.horizontal, .auto)
+            } else {
+              Slipstream.Image(URL(string: destination))
+                .accessibilityLabel(image.plainText)
+                .margin(.horizontal, .auto)
+                .frame(maxHeight: 400)
+            }
           }
           .padding(.horizontal, 16)
           .margin(.bottom, 16)

@@ -9,7 +9,7 @@ struct BetaTesterHandbook: View {
     Page(
       "Beta tester handbook",
       path: "/beta/",
-      description: "How to become a Sidecar beta tester .",
+      description: "How to become a Sidecar beta tester.",
       keywords: [
         "OBD-II",
         "beta testing",
