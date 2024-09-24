@@ -2,30 +2,34 @@ import Foundation
 
 import Slipstream
 
-extension Home {
-  struct TakeItForASpin: View {
-    var body: some View {
-      Container {
-        VStack(alignment: .center) {
-          HeroIconPuck(url: URL(string: "/gfx/appicon.gif")!)
+struct TakeItForASpin: View {
+  let subtitle: String
 
-          VStack(alignment: .center, spacing: 16) {
-            Div {
-              H2("Sidecar")
-                .fontSize(.fourXLarge)
-                .bold()
-                .fontDesign("rounded")
-              Text("Take it for a spin with a 2 week free trial")
-                .fontSize(.extraLarge)
-                .fontSize(.extraExtraLarge, condition: .desktop)
-            }
-            .textAlignment(.center)
+  init(subtitle: String = "Take it for a spin with a 2 week free trial") {
+    self.subtitle = subtitle
+  }
 
-            AppStoreLink()
+  var body: some View {
+    Container {
+      VStack(alignment: .center) {
+        HeroIconPuck(url: URL(string: "/gfx/appicon.gif")!)
+
+        VStack(alignment: .center, spacing: 16) {
+          Div {
+            H2("Sidecar")
+              .fontSize(.fourXLarge)
+              .bold()
+              .fontDesign("rounded")
+            Text(subtitle)
+              .fontSize(.extraLarge)
+              .fontSize(.extraExtraLarge, condition: .desktop)
           }
+          .textAlignment(.center)
+
+          AppStoreLink()
         }
-        .margin(.bottom, 64)
       }
+      .margin(.bottom, 64)
     }
   }
 }

@@ -109,6 +109,8 @@ You will receive your subscription promo code after you have been:
 3. initiated/participated in a discussion about your make/model on the [Sidecar forum](https://meta.cars.forum/viewforum.php?f=12).
 """)
       .padding(.bottom, 16)
+
+      TakeItForASpin(subtitle: "Start your test drive")
     }
   }
 }
