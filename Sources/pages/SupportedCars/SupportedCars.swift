@@ -471,26 +471,21 @@ struct SupportedCars: View {
                   .fontSize(.extraLarge, condition: .desktop)
                   .fontWeight(.medium)
                   .fontDesign("rounded")
+                Text("Learn more")
+                  .fontWeight(.bold)
+                  .fontDesign("rounded")
+                  .fontSize(.large)
               }
               .textAlignment(.center)
               .classNames(["bg-gradient-to-tl", "from-cyan-500", "to-blue-600"])
               .transition(.all)
               .textColor(.white)
-              .padding(32)
+              .padding(.horizontal, 32)
+              .padding(.vertical, 24)
               .background(.zinc, darkness: 100)
               .background(.zinc, darkness: 900, condition: .dark)
               .cornerRadius(.extraExtraLarge)
             }
-            Link(becomeBetaURL) {
-              Text("Learn more")
-                .fontWeight(.bold)
-                .fontDesign("rounded")
-                .fontSize(.large)
-            }
-            .textColor(.link, darkness: 700)
-            .textColor(.link, darkness: 400, condition: .dark)
-            .fontWeight(600)
-            .underline(condition: .hover)
           }
           .frame(width: 0.8)
           .frame(width: 0.6, condition: .desktop)
