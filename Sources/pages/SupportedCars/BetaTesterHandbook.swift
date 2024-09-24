@@ -58,7 +58,7 @@ To become a Sidecar beta tester, you’ll need:
 
 4.  **OBD Data Sharing (Optional)**: If you're testing OBD support, you should be comfortable sharing scan logs and screenshots to help with data accuracy.
 
-If you do not have an OBD scanner yet but would like to purchase one, a set of recommended scanners
+Note: if you do not have an OBD scanner yet but would like to purchase one, a set of recommended scanners
 is available in the [OBD-II Scanning guide](/scanning/).
 
 Beta Tester Benefits
