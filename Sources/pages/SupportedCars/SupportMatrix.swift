@@ -101,7 +101,12 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 1996...2019),
       .init(years: 2020...2020, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .ota, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
       .testerNeeded(years: 2021...2025)
-    ]
+    ],
+    " Sequoia": [
+      .testerNeeded(years: 2001...2002),
+      .newTester(years: 2003...2003, username: "tgerring", id: 75),
+      .testerNeeded(years: 2004...2025)
+    ],
   ],
   "Volkswagen": [
     "e-Golf": [

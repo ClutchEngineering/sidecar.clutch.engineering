@@ -207,6 +207,10 @@ struct VehicleSupportStatus {
   static func testerNeeded(years: ClosedRange<Int>) -> Self {
     .init(years: years, testingStatus: .testerNeeded, stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk)
   }
+
+  static func newTester(years: ClosedRange<Int>, username: String, id: Int) -> Self {
+    .init(years: years, testingStatus: .activeTester(username, id: id), stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk)
+  }
 }
 
 struct MakeCard: View {
