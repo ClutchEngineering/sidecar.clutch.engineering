@@ -81,6 +81,9 @@ Note: OBD-II scanning in Sidecar for longer than 30 seconds requires a subscrip
     .frame(width: 96)
     .frame(width: 0.08, condition: .desktop)
     .margin(.horizontal, .auto)
+    .cornerRadius(.extraExtraExtraLarge)
+    .border(.white, width: 4)
+    .border(.init(.zinc, darkness: 700), condition: .dark)
 })
 
 ### Step 1: Find your OBD-II port
