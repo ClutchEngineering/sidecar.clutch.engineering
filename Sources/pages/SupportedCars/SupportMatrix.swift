@@ -107,6 +107,11 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .init(years: 2020...2020, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .ota, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
       .testerNeeded(years: 2021...2025)
     ],
+    " Camry": [
+      .testerNeeded(years: 1996...2013),
+      .newTester(years: 2014...2014, username: "eliasmalek24", id: 84),
+      .testerNeeded(years: 2015...2025)
+    ],
     " Sequoia": [
       .testerNeeded(years: 2001...2002),
       .newTester(years: 2003...2003, username: "tgerring", id: 75),
@@ -121,10 +126,15 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ]
   ],
   "Volvo": [
+    " XC40 Recharge": [
+      .testerNeeded(years: 2018...2020),
+      .newTester(years: 2021...2021, username: "zandr", id: 85),
+      .testerNeeded(years: 2022...2025)
+    ],
     " XC60 PHEV": [
       .testerNeeded(years: 2018...2019),
       .init(years: 2020...2020, testingStatus: .activeTester("shaver", id: 65), stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
       .testerNeeded(years: 2021...2025)
-    ]
+    ],
   ],
 ]
