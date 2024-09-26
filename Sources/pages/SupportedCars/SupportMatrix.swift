@@ -23,6 +23,13 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2024...2025)
     ],
   ],
+  "Chrysler": [
+    " Pacifica Hybrid": [
+      .testerNeeded(years: 2017...2020),
+      .newTester(years: 2021...2021, username: "joshuahinckley", id: 103),
+      .testerNeeded(years: 2023...2025)
+    ],
+  ],
   "Fiat": [
     " Grande Punto": [
       .testerNeeded(years: 2005...2007),
