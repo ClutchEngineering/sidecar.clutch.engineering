@@ -55,7 +55,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     "Leaf": [
       .testerNeeded(years: 2010...2017),
-      .init(years: 2018...2018, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .obd, charging: .obd, cells: .unk, fuelLevel: .na, speed: .obd, range: .obd, odometer: .obd, tirePressure: .obd),
+      .init(years: 2018...2018, testingStatus: .activeTester("tsprenk", id: 97), stateOfCharge: .obd, stateOfHealth: .obd, charging: .obd, cells: .unk, fuelLevel: .na, speed: .obd, range: .obd, odometer: .obd, tirePressure: .obd),
       .testerNeeded(years: 2019...2025)
     ]
   ],
