@@ -591,7 +591,7 @@ struct SupportedCars: View {
           .classNames(["grid-cols-4", "gap-x-4", "gap-y-8"])
         }
       }
-      .margin(.bottom, 32)
+      .margin(.vertical, 32)
 
       HorizontalRule()
 
@@ -600,7 +600,7 @@ struct SupportedCars: View {
           MakeSupportSection(make: make, models: models)
         }
       }
-      .margin(.bottom, 32)
+      .margin(.vertical, 32)
     }
   }
 }
