@@ -53,9 +53,12 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   ],
   "Polestar": [
     " 2":     [
-      .testerNeeded(years: 2019...2021),
-      .init(years: 2021...2021, testingStatus: .activeTester("jpalensk", id: 63), stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
-      .testerNeeded(years: 2022...2025),
+      .testerNeeded(years: 2019...2020),
+      .newTester(years: 2021...2021, username: "jpalensk", id: 63),
+      .newTester(years: 2022...2022, username: "alexr", id: 77),
+      .testerNeeded(years: 2023...2023),
+      .newTester(years: 2024...2024, username: "vmax77", id: 89),
+      .testerNeeded(years: 2025...2025),
     ]
   ],
   "Porsche": [
