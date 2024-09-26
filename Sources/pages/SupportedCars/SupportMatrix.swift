@@ -34,7 +34,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ]
   ],
   "Lexus": [
-    "GX 460": [
+    " GX 460": [
       .testerNeeded(years: 2003...2014),
       .newTester(years: 2015...2015, username: "Thunderbirdhotel", id: 91),
       .testerNeeded(years: 2016...2025)
