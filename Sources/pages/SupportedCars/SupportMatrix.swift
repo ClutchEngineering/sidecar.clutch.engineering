@@ -17,6 +17,11 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
   ],
   "Chevrolet": [
+    " Bolt EV": [
+      .testerNeeded(years: 2017...2021),
+      .init(years: 2022...2022, testingStatus: .activeTester("wrd", id: 104), stateOfCharge: .obd, stateOfHealth: .unk, charging: .obd, cells: .obd, fuelLevel: .na, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .testerNeeded(years: 2023...2025)
+    ],
     "Bolt EUV": [
       .testerNeeded(years: 2017...2022),
       .init(years: 2023...2023, testingStatus: .activeTester("pianoman96", id: 62), stateOfCharge: .obd, stateOfHealth: .unk, charging: .obd, cells: .obd, fuelLevel: .na, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
