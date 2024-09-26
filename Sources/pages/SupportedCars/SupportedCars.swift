@@ -570,6 +570,8 @@ struct SupportedCars: View {
       }
       .margin(.bottom, 32)
 
+      HorizontalRule()
+
       Section {
         ContentContainer {
           H1("Jump to your make")
@@ -578,7 +580,7 @@ struct SupportedCars: View {
             .bold()
             .fontDesign("rounded")
             .textAlignment(.center)
-            .margin(.bottom, 8)
+            .margin(.bottom, 16)
 
           Div {
             for make in makes.keys.sorted() {
@@ -590,6 +592,8 @@ struct SupportedCars: View {
         }
       }
       .margin(.bottom, 32)
+
+      HorizontalRule()
 
       VStack(alignment: .center, spacing: 64) {
         for (make, models) in makes.sorted(by: { $0.key < $1.key }) {
