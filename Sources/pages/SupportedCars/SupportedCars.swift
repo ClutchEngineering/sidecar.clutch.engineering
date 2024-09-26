@@ -580,7 +580,7 @@ struct SupportedCars: View {
             .bold()
             .fontDesign("rounded")
             .textAlignment(.center)
-            .margin(.bottom, 16)
+            .margin(.bottom, 32)
 
           Div {
             for make in makes.keys.sorted() {
