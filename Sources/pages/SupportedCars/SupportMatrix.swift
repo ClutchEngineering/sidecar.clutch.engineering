@@ -27,7 +27,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Hyundai": [
     "IONIQ 5": [
       .testerNeeded(years: 2021...2022),
-      .init(years: 2023...2023, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2023...2023, testingStatus: .activeTester("spenumatsa", id: 82), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
       .init(years: 2024...2024, testingStatus: .activeTester("zachmiles", id: 76), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
       .testerNeeded(years: 2025...2025)
 
