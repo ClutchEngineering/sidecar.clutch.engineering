@@ -75,9 +75,7 @@ To export your vehicle data, follow these steps from within the Sidecar app:
 How to refresh your vehicle parameters
 --------------------------------------
 
-Connected Account (Beta) vehicle data can be exported from Sidecar, which can be a helpful way to fix bugs and identify new data that can be incorporated into the Sidecar user interface.
-
-To export your vehicle data, follow these steps from within the Sidecar app:
+Sidecar hosts its OBD parameters at [github.com/electricsidecar](https://github.com/electricsidecar/) under a Creative Commons license. Sidecar automatically checks for any changes to these parameters once a day, but if you need to refresh your parameters sooner (e.g. if you know some changes have been recently made), you can force a refresh by following these steps from within the Sidecar app:
 
 1. Tap your vehicle tab. If you have more than one vehicle, tap the Garage tab and then tap your vehicle.
 2. Scroll down to and tap the "Vehicle parameters" button.
@@ -87,7 +85,6 @@ To export your vehicle data, follow these steps from within the Sidecar app:
 6. Confirm the value by tapping the three dot menu button again.
 
 ![100%](/gfx/help/refresh-vehicle-parameters.png)
-
 """)
       .padding(.bottom, 16)
     }
