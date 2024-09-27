@@ -202,10 +202,10 @@ Connectables are elements of the Electric Sidecar user interface that can be pow
 \(inlineHTML { Parameter("pluggedIn", icon: "plug", type: "Enum") }) Is the vehicle plugged in? Must be an enumeration mapped to a value of "PLUGGED".
 \(inlineHTML { Parameter("speed", icon: "speed", type: "Speed") }) How fast the vehicle is moving.    
 \(inlineHTML { Parameter("stateOfCharge", icon: "battery", type: "Normal") }) How full the vehicle's battery is.    
-\(inlineHTML { Parameter("stateOfHealth", icon: "health", type: "Normal") }) The health of the vehicle's high voltage battery pack.
-\(inlineHTML { Parameter("frontLeftTirePressure", icon: "tirepressure", type: "Pressure") }) The front left tire pressure.
-\(inlineHTML { Parameter("frontRightTirePressure", icon: "tirepressure", type: "Pressure") }) The front right tire pressure.
-\(inlineHTML { Parameter("rearLeftTirePressure", icon: "tirepressure", type: "Pressure") }) The rear left tire pressure.
+\(inlineHTML { Parameter("stateOfHealth", icon: "health", type: "Normal") }) The health of the vehicle's high voltage battery pack.    
+\(inlineHTML { Parameter("frontLeftTirePressure", icon: "tirepressure", type: "Pressure") }) The front left tire pressure.    
+\(inlineHTML { Parameter("frontRightTirePressure", icon: "tirepressure", type: "Pressure") }) The front right tire pressure.    
+\(inlineHTML { Parameter("rearLeftTirePressure", icon: "tirepressure", type: "Pressure") }) The rear left tire pressure.    
 \(inlineHTML { Parameter("rearRightTirePressure", icon: "tirepressure", type: "Pressure") }) The rear right tire pressure.
 
 ---
