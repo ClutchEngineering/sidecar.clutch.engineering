@@ -49,6 +49,13 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2024...2025)
     ],
   ],
+  "Honda": [
+    " CR-V": [
+      .testerNeeded(years: 1997...2018),
+      .newTester(years: 2019...2019, username: "bravoinc", id: 125),
+      .testerNeeded(years: 2020...2025)
+    ],
+  ],
   "Hyundai": [
     "IONIQ 5": [
       .testerNeeded(years: 2021...2021),
