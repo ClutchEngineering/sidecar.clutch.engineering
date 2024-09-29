@@ -1,0 +1,12 @@
+#us-products,
+#ca-products {
+  display: none;
+}
+
+#us:checked ~ #us-products {
+  display: block;
+}
+
+#canada:checked ~ #ca-products {
+  display: block;
+}
