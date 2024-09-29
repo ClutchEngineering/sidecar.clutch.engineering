@@ -65,6 +65,26 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2025...2025)
     ],
   ],
+  "Kia": [
+    " EV 6": [
+      .testerNeeded(years: 2022...2025),
+    ],
+    " EV 9": [
+      .testerNeeded(years: 2024...2025),
+    ],
+    " Niro EV": [
+      .testerNeeded(years: 2019...2023),
+    ],
+    " Optima": [
+      .testerNeeded(years: 2001...2025),
+    ],
+    " Rio": [
+      .testerNeeded(years: 2001...2023),
+    ],
+    " Sportage": [
+      .testerNeeded(years: 1995...2025),
+    ],
+  ],
   "Lexus": [
     " GX 460": [
       .testerNeeded(years: 2003...2014),
