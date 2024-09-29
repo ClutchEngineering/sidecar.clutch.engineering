@@ -92,6 +92,10 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .newTester(years: 2024...2024, username: "vmax77", id: 89),
       .testerNeeded(years: 2025...2025),
     ],
+    " 3":     [
+      .newTester(years: 2024...2024, username: "david.rothera", id: 117),
+      .testerNeeded(years: 2025...2025),
+    ],
   ],
   "Porsche": [
     " 911":     [ .testerNeeded(years: 1996...2025) ],
