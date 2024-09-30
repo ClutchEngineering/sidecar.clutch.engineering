@@ -184,7 +184,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2021...2025)
     ],
     " Camry": [
-      .testerNeeded(years: 1996...2013),
+      .testerNeeded(years: 1996...2002),
+      .newTester(years: 2003...2003, username: "lambhofreak", id: 132),
+      .testerNeeded(years: 2004...2013),
       .newTester(years: 2014...2014, username: "eliasmalek24", id: 84),
       .testerNeeded(years: 2015...2025)
     ],
