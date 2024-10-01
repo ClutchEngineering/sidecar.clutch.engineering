@@ -33,7 +33,7 @@ struct Page<Content: View>: View {
         Title("\(title) - Sidecar")
         Charset(.utf8)
         Icon(URL(string: "/favicon.png"))
-        Canonical(URL(string: path, relativeTo: URL(string: "https://electricsidecar.app/")!))
+        Canonical(URL(string: path, relativeTo: URL(string: "https://sidecar.clutch.engineering/")!))
         Viewport(width: .deviceWidth, height: .deviceHeight, initialScale: 1.0)
         Meta("apple-itunes-app", content: "app-id=1663683832")
         Meta("description", content: description)
