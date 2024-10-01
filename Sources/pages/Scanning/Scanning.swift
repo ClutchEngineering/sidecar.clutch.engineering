@@ -244,6 +244,17 @@ There are countless variations of OBD-II scanners on the market. A table of opti
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  Vgate vLinker BM+<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com/dp/B08BR4KY1G?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
+ <td class="pl-2 md:pl-4 py-2">$43.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   Carista<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.com/dp/B0BBS73F6J?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
@@ -440,6 +451,17 @@ There are countless variations of OBD-II scanners on the market. A table of opti
  <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$51.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Vgate vLinker BM+<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.ca/dp/B08BR4KY1G?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
+ <td class="pl-2 md:pl-4 py-2">$53.99</td>
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
