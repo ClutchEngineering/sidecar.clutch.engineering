@@ -5,7 +5,7 @@ typealias Model = String
 let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Acura": [
     " TLX": [
-      .newTester(years: 2015...2015, username: "sidbmw", id: 100),
+      .init(years: 2015...2015, testingStatus: .activeTester("sidbmw", id: 100), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .obd),
       .testerNeeded(years: 2016...2025)
     ],
   ],
