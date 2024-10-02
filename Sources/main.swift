@@ -8,7 +8,16 @@ extension Condition {
 
 let sitemap: Sitemap = [
   "index.html": Home(),
-  "privacy-policy/index.html": PrivacyPolicy(),
+  "privacy-policy/index.html": PrivacyPolicy(
+    appName: "Sidecar",
+    introText: "Sidecar is delighted to be our users' choice for understanding the state of their garage.",
+    publicationDate: "October 2, 2024"
+  ),
+  "privacy-policy/elmcheck/index.html": PrivacyPolicy(
+    appName: "ELMCheck",
+    introText: "ELMCheck is the easiest way to check the authenticity of your OBD scanner.",
+    publicationDate: "October 2, 2024"
+  ),
   "shortcuts/index.html": Shortcuts(),
   "scanning/index.html": Scanning(),
   "scanning/extended-pids/index.html": ExtendedParameters(),

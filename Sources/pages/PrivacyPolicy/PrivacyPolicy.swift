@@ -3,11 +3,15 @@ import Foundation
 import Slipstream
 
 struct PrivacyPolicy: View {
+  let appName: String
+  let introText: String
+  let publicationDate: String
+
   var body: some View {
     Page(
       "Privacy Policy",
       path: "/privacy-policy/",
-      description: "Sidecar minimizes data collection and keeps your private data, private.",
+      description: "\(appName) minimizes data collection and keeps your private data, private.",
       keywords: [
         "privacy policy",
         "OBD-II",
@@ -26,24 +30,24 @@ struct PrivacyPolicy: View {
               .fontSize(.fourXLarge)
               .bold()
               .fontDesign("rounded")
-            Text("Last updated September 22, 2024")
+            Text("Last updated \(publicationDate)")
           }
           .textAlignment(.center)
         }
         .padding(.vertical, 16)
 
         Article("""
-Sidecar is delighted to be our users' choice for understanding the state of their garage.
+\(introText)
 
 Overview
 --------
 
-This Privacy Notice is meant to help you understand how Fearless Design, LLC, a California limited liability company (**“Fearless”**, **“we”**, **“our”** or **“us”**) collects, uses, stores and shares personal information it collects about you (**“User”“you”** or **“your”**) in connection with your use of Sidecar, our mobile application (hereinafter referred to as **“Mobile App”** or **“Sidecar”**), and how to exercise the choices and rights you have in your information.
+This Privacy Notice is meant to help you understand how Fearless Design, LLC, a California limited liability company (**“Fearless”**, **“we”**, **“our”** or **“us”**) collects, uses, stores and shares personal information it collects about you (**“User”“you”** or **“your”**) in connection with your use of \(appName), our mobile application (hereinafter referred to as **“Mobile App”** or **“\(appName)”**), and how to exercise the choices and rights you have in your information.
 
 1\\. The Scope Of This Policy
 ----------------------------
 
-This policy applies only to personal information, not to aggregate information or information that does not identify you. Please remember that your use of the Mobile App is also subject to our Terms of Service and certain terms not defined within this Privacy Notice shall have the meanings set forth within the Sidecar Terms of Services.
+This policy applies only to personal information, not to aggregate information or information that does not identify you. Please remember that your use of the Mobile App is also subject to our Terms of Service and certain terms not defined within this Privacy Notice shall have the meanings set forth within the \(appName) Terms of Services.
 
 2\\. The Information We Collect
 ------------------------------
@@ -78,19 +82,19 @@ Sometimes the law, government entities, or other regulatory bodies impose demand
 4\\. How We Store Your Information
 ---------------------------------
 
-We do not sell your personal information to third parties for money -- no one can buy the personal information we collect from and about you and we do not act as a data broker. All personal information collected by Fearless is stored by Fearless with PostHog, an event-based analytics provider, indefinitely. The personal information stored by Fearless with PostHog is not utilized to provide you with targeted advertisements. PostHog uses the personal information collected by Fearless only to provide Fearless with event-based analytics information that is then used to improve your user experience. PostHog's privacy policy is available [here](https://posthog.com/privacy). You can turn off data being sent to PostHog from the Settings page of the Sidecar app.
+We do not sell your personal information to third parties for money -- no one can buy the personal information we collect from and about you and we do not act as a data broker. All personal information collected by Fearless is stored by Fearless with PostHog, an event-based analytics provider, indefinitely. The personal information stored by Fearless with PostHog is not utilized to provide you with targeted advertisements. PostHog uses the personal information collected by Fearless only to provide Fearless with event-based analytics information that is then used to improve your user experience. PostHog's privacy policy is available [here](https://posthog.com/privacy). You can turn off data being sent to PostHog from the Settings page of the \(appName) app.
 
 We may also share your personal information while negotiating or in relation to a change of corporate control such as a restructuring, merger, or sale of our assets, or where you direct us to.
 
 5\\. Accessing Your Data
 -----------------------
 
-If you would like to access your personal information, please email [privacy@electricsidecar.app](mailto:privacy@electricsidecar.app).
+If you would like to access your personal information, please email [privacy@clutch.engineering](mailto:privacy@clutch.engineering.app).
 
 6\\. Children's Data
 -------------------
 
-Sidecar is not directed to children, and we don't knowingly collect personal information from children under the age of 13. If we find out that a child under 13 has given us personal information, we will take steps to delete that information. If you believe that a child under the age of 13 has given us personal information, please contact us at [privacy@electricsidecar.app](mailto:privacy@electricsidecar.app).
+\(appName) is not directed to children, and we don't knowingly collect personal information from children under the age of 13. If we find out that a child under 13 has given us personal information, we will take steps to delete that information. If you believe that a child under the age of 13 has given us personal information, please contact us at [privacy@clutch.engineering](mailto:privacy@clutch.engineering).
 
 7\\. Links To Third-Party Websites
 ---------------------------------
@@ -100,12 +104,12 @@ The Mobile App may contain links or references to third- party websites, product
 8\\. Changes To This Privacy Policy
 ----------------------------------
 
-We may update this policy from time to time as the Mobile App changes and privacy law evolves. If we update it, we will do so online, and if we make material changes, we will let you know through the Mobile App. When you use Sidecar, you are agreeing to the most recent terms of this policy.
+We may update this policy from time to time as the Mobile App changes and privacy law evolves. If we update it, we will do so online, and if we make material changes, we will let you know through the Mobile App. When you use \(appName), you are agreeing to the most recent terms of this policy.
 
 9\\. Contact Us
 --------------
 
-If you have any questions or concerns about your privacy or anything in this policy, including if you need to access this policy in an alternative format, we encourage you to contact [privacy@electricsidecar.app](mailto:privacy@electricsidecar.app).
+If you have any questions or concerns about your privacy or anything in this policy, including if you need to access this policy in an alternative format, we encourage you to contact [privacy@clutch.engineering](mailto:privacy@clutch.engineering).
 """
         )
       }
