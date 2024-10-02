@@ -10,6 +10,15 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
   ],
   "BMW": [
+    " i3": [
+      .testerNeeded(years: 2014...2021),
+    ],
+    " i4": [
+      .testerNeeded(years: 2022...2025),
+    ],
+    " iX3": [
+      .testerNeeded(years: 2020...2025),
+    ],
     " X3 M40i": [
       .testerNeeded(years: 2018...2020),
       .newTester(years: 2021...2021, username: "sidbmw", id: 100),
