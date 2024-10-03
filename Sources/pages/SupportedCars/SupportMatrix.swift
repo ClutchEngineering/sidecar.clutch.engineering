@@ -121,7 +121,8 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     "Leaf": [
       .testerNeeded(years: 2010...2017),
       .init(years: 2018...2018, testingStatus: .activeTester("tsprenk", id: 97), stateOfCharge: .obd, stateOfHealth: .obd, charging: .obd, cells: .unk, fuelLevel: .na, speed: .obd, range: .obd, odometer: .obd, tirePressure: .obd),
-      .testerNeeded(years: 2019...2025)
+      .newTester(years: 2019...2019, username: "vvdt", id: 124),
+      .testerNeeded(years: 2020...2025)
     ],
   ],
   "Polestar": [
