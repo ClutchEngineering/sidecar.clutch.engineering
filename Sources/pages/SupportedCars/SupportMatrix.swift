@@ -52,7 +52,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
   ],
   "Ford": [
-    " Escape": [
+    "Escape": [
       .testerNeeded(years: 2001...2022),
       .init(years: 2008...2008, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .obd, odometer: .obd, tirePressure: .obd),
       .testerNeeded(years: 2024...2025)
