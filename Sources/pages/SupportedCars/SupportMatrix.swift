@@ -118,7 +118,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   ],
   "MG": [
     "MG4": [
-      .init(years: 2022...2022, testingStatus: .partiallyOnboarded, stateOfCharge: .all, stateOfHealth: .obd, charging: .ota, cells: .obd, fuelLevel: .na, speed: .obd, range: .all, odometer: .all, tirePressure: .ota),
+      .init(years: 2022...2022, testingStatus: .onboarded, stateOfCharge: .all, stateOfHealth: .obd, charging: .ota, cells: .obd, fuelLevel: .na, speed: .obd, range: .all, odometer: .all, tirePressure: .ota),
       .testerNeeded(years: 2023...2025)
     ],
   ],
