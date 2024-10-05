@@ -33,7 +33,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     "Bolt EUV": [
       .testerNeeded(years: 2017...2022),
-      .init(years: 2023...2023, testingStatus: .activeTester("pianoman96", id: 62), stateOfCharge: .obd, stateOfHealth: .unk, charging: .obd, cells: .obd, fuelLevel: .na, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2023...2023, testingStatus: .onboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .obd, cells: .obd, fuelLevel: .na, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2024...2025)
     ],
   ],
