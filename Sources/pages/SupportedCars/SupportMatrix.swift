@@ -125,7 +125,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Nissan": [
     "Juke": [
       .testerNeeded(years: 1996...2011),
-      .init(years: 2012...2012, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .obd, odometer: .obd, tirePressure: .unk),
+      .init(years: 2012...2012, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .obd, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2013...2025)
     ],
     "Leaf": [
