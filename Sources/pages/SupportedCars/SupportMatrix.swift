@@ -66,7 +66,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Honda": [
     " CR-V": [
       .testerNeeded(years: 1997...2018),
-      .newTester(years: 2019...2019, username: "bravoinc", id: 125),
+      .init(years: 2019...2019, testingStatus: .activeTester("bravoinc", id: 125), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2020...2025)
     ],
   ],
