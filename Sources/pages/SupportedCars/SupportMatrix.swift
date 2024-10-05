@@ -136,7 +136,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
   ],
   "Polestar": [
-    " 2":     [
+    "Polestar 2":     [
       .testerNeeded(years: 2019...2020),
       .newTester(years: 2021...2021, username: "jpalensk", id: 63),
       .newTester(years: 2022...2022, username: "alexr", id: 77),
