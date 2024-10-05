@@ -141,7 +141,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .newTester(years: 2021...2021, username: "jpalensk", id: 63),
       .newTester(years: 2022...2022, username: "alexr", id: 77),
       .testerNeeded(years: 2023...2023),
-      .newTester(years: 2024...2024, username: "vmax77", id: 89),
+      .init(years: 2024...2024, testingStatus: .activeTester("jbritton", id: 95), stateOfCharge: .ota, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .unk),
       .testerNeeded(years: 2025...2025),
     ],
     " 3":     [
