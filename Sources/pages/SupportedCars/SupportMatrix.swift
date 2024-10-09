@@ -85,7 +85,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     " IONIQ PHEV": [
       .testerNeeded(years: 2017...2017),
-      .init(years: 2018...2018, testingStatus: .activeTester("zaaaacch", id: 99), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2018...2018, testingStatus: .activeTester("zaaaacch", id: 99), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .obd),
       .testerNeeded(years: 2019...2022)
     ],
   ],
