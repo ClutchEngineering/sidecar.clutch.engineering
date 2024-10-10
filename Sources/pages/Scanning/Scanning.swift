@@ -103,6 +103,16 @@ Sidecar supports Bluetooth Low Energy (BTLE), Wi-Fi, and classic Bluetooth scann
 
 There are countless variations of OBD-II scanners on the market. A table of options is provided below. Select the country you're ordering from within to get directed to the right Amazon store.
 
+Discouraged Scanners
+--------------------
+
+The following scanner hardware is known to use non-standard protocols. These scanners should generally be avoided.
+
+-  Any BLCKTEC model (the 410 and 430 models, specifically).
+
+Tested Scanners
+---------------
+
 <div>
 <input type="radio" name="country" id="us" class="mr-2" checked>
 <label class="mr-4" for="us">United States 🇺🇸</label>
@@ -113,7 +123,7 @@ There are countless variations of OBD-II scanners on the market. A table of opti
  <thead>
   <tr class="bg-gray-800 text-xs md:text-base text-white text-left">
    <th class="pl-2 md:pl-4 py-2">Product</th>
-   <th class="pl-2 md:pl-4 py-2">iOS support</th>
+   <th class="pl-2 md:pl-4 py-2">Supported</th>
    <th class="pl-2 md:pl-4 py-2">Type</th>
    <th class="pl-2 md:pl-4 py-2">PIDs / second</th>
    <th class="px-2 md:px-4 py-2">Price (USD)</th>
@@ -233,7 +243,7 @@ There are countless variations of OBD-II scanners on the market. A table of opti
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
-  BLCKTEC Telematics Lite<br />
+  BLCKTEC 410 Telematics Lite<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.com/dp/B0BTZRXX2G?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
@@ -323,6 +333,17 @@ There are countless variations of OBD-II scanners on the market. A table of opti
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  BLCKTEC 430<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com/dp/B0C2JQH5NY?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">$89.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   DND ECHO<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.com/dp/B0CZ8X334R?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
@@ -330,7 +351,7 @@ There are countless variations of OBD-II scanners on the market. A table of opti
   <a class="text-blue-500 underline"
    href="https://obd.ai/products/dnd-echo-professional-obdil-diagnostic-tool">obd.ai</a>
  </td>
- <td class="px-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
  <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
  <td class="pl-2 md:pl-4 py-2">Unknown</td>
  <td class="pl-2 md:pl-4 py-2">$119.99</td>
@@ -356,7 +377,7 @@ There are countless variations of OBD-II scanners on the market. A table of opti
  <thead>
   <tr class="bg-gray-800 text-xs md:text-base text-white text-left">
    <th class="pl-2 md:pl-4 py-2">Product</th>
-   <th class="pl-2 md:pl-4 py-2">iOS support</th>
+   <th class="pl-2 md:pl-4 py-2">Supported</th>
    <th class="pl-2 md:pl-4 py-2">Type</th>
    <th class="pl-2 md:pl-4 py-2">PIDs / second</th>
    <th class="px-2 md:px-4 py-2">Price (CAD)</th>
