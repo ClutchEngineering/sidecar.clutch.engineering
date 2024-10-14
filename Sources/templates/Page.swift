@@ -9,6 +9,7 @@ struct Page<Content: View>: View {
     description: String,
     keywords: Set<String>,
     additionalStylesheets: Set<URL?> = Set(),
+    socialBannerPath: String? = nil,
     @ViewBuilder content: @escaping () -> Content
   ) {
     self.title = title
@@ -16,6 +17,7 @@ struct Page<Content: View>: View {
     self.description = description
     self.keywords = keywords
     self.additionalStylesheets = additionalStylesheets
+    self.socialBannerPath = socialBannerPath
     self.content = content
   }
 
@@ -24,20 +26,37 @@ struct Page<Content: View>: View {
   let description: String
   let keywords: Set<String>
   let additionalStylesheets: Set<URL?>
+  let socialBannerPath: String?
   @ViewBuilder
   let content: () -> Content
 
   var body: some View {
     HTML {
       Head {
-        Title("\(title) - Sidecar")
+        let title = "\(title) - Sidecar"
+        let rootURL = URL(string: "https://sidecar.clutch.engineering/")!
+        let canonicalURL = URL(string: path, relativeTo: rootURL)
+        Title(title)
         Charset(.utf8)
         Icon(URL(string: "/favicon.png"))
-        Canonical(URL(string: path, relativeTo: URL(string: "https://sidecar.clutch.engineering/")!))
+        Canonical(canonicalURL)
         Viewport(width: .deviceWidth, height: .deviceHeight, initialScale: 1.0)
         Meta("apple-itunes-app", content: "app-id=1663683832")
         Meta("description", content: description)
         Meta("keywords", content: keywords.sorted().joined(separator: ", "))
+
+        Meta("og:title", content: title)
+        Meta("og:description", content: description)
+        if let socialBannerPath,
+           let socialBannerURL = URL(string: socialBannerPath, relativeTo: rootURL) {
+          Meta("og:image", content: socialBannerURL.absoluteString)
+        }
+        if let canonicalURL {
+          Meta("og:url", content: canonicalURL.absoluteString)
+        }
+        Meta("og:type", content: "website")
+        Meta("og:site_name", content: "Sidecar — Your personal automotive assistant")
+
         Meta("og:image", content: "/gfx/appicon.png")
         Stylesheet(URL(string: "/css/main.css"))
         for stylesheet in additionalStylesheets.compactMap({ $0 }).sorted(by: { $0.absoluteString < $1.absoluteString }) {

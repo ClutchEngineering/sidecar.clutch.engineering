@@ -17,7 +17,8 @@ struct Scanning: View {
       ],
       additionalStylesheets: [
         URL(string: "/css/scanners.css")
-      ]
+      ],
+      socialBannerPath: "/gfx/social/obdii.png"
     ) {
       ScanningNavigation()
 
