@@ -80,7 +80,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     "IONIQ 6": [
       .testerNeeded(years: 2023...2023),
-      .init(years: 2024...2024, testingStatus: .activeTester("Danmartyn", id: 98), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2024...2024, testingStatus: .activeTester("Danmartyn", id: 98), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .obd),
       .testerNeeded(years: 2025...2025)
     ],
     " IONIQ PHEV": [
