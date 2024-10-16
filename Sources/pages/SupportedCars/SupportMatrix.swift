@@ -152,7 +152,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Porsche": [
     " 911":     [ .testerNeeded(years: 1996...2025) ],
     "Cayenne":  [
-      .testerNeeded(years: 2002...2023),
+      .testerNeeded(years: 2002...2014),
+      .newTester(years: 2015...2015, username: "b2pointoh", id: 203),
+      .testerNeeded(years: 2016...2023),
       .init(years: 2024...2024, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2025...2025)
     ],
