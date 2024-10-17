@@ -632,7 +632,7 @@ struct SupportedCars: View {
       HorizontalRule()
 
       VStack(alignment: .center, spacing: 64) {
-        for (make, models) in makes.sorted(by: { $0.key < $1.key }) {
+        for (make, models) in makes.sorted(by: { $0.key.lowercased() < $1.key.lowercased() }) {
           MakeSupportSection(make: make, models: models)
         }
       }
