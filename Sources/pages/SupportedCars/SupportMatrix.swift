@@ -175,6 +175,13 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .init(years: 2025...2025, testingStatus: .activeTester("Alex"), stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
   ],
+  "Seat": [
+    " Leon": [
+      .testerNeeded(years: 1999...2016),
+      .newTester(years: 2017...2017, username: "Pa0x43"),
+      .testerNeeded(years: 2018...2025),
+    ],
+  ],
   "Tesla": [
     " Model S": [
       .testerNeeded(years: 2012...2015),
@@ -209,6 +216,11 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 1996...2019),
       .init(years: 2020...2020, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .ota, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
       .testerNeeded(years: 2021...2025)
+    ],
+    "bZ4X": [
+      .testerNeeded(years: 2023...2023),
+      .init(years: 2024...2024, testingStatus: .activeTester("Jefbos90"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+      .testerNeeded(years: 2025...2025)
     ],
     " Camry": [
       .testerNeeded(years: 1996...2002),
