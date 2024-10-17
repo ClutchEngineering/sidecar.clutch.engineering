@@ -38,6 +38,17 @@ struct Help: View {
       }
 
       PostView("""
+I don't see my scanner in Sidecar
+---------------------------------
+
+This could be happening for two reasons.
+
+The most common reason is that you have another OBD scanner app running on your phone that is connected to your scanner. iOS only allows one app to be connected to a scanner at a time, so if another app is connected other than Sidecar, Sidecar won't see your scanner at all.
+
+The fix in this case is to first make sure that no other app is connected to your scanner, either by manually disconnecting from those apps or force closing them. You can then try refreshing the list of scanners in Sidecar.
+
+Another reason your scanner might not be appearing is if it's using non-standard communication protocols. If you've tried the above and are otherwise able to connect to your scanner with other apps, then it's likely that Sidecar doesn't support your scanner yet. In this case, send an email with your scanner and a link to where you bought it from to support@clutch.engineering.
+
 How to export OBD scan logs
 ---------------------------
 
