@@ -197,9 +197,9 @@ Connectables are elements of the Electric Sidecar user interface that can be pow
 #### Available Connectables
 
 \(inlineHTML { Parameter("fuelTankLevel", icon: "fuel", type: "Normal") }) How full the vehicle's gas tank is.    
-\(inlineHTML { Parameter("isCharging", icon: "bolt", type: "Enum") }) Is the vehicle charging? Must be an enumeration mapped to a value of "CHARGING".    
+\(inlineHTML { Parameter("isCharging", icon: "bolt", type: "Enum") }) Is the vehicle charging? Must either be an enumeration mapped to a value with a prefix of "CHARGING", or a scalar unit where a non-zero value means the vehicle is charging.    
 \(inlineHTML { Parameter("odometer", icon: "length", type: "Length") }) The total distance the vehicle has traveled.    
-\(inlineHTML { Parameter("pluggedIn", icon: "plug", type: "Enum") }) Is the vehicle plugged in? Must be an enumeration mapped to a value of "PLUGGED".
+\(inlineHTML { Parameter("pluggedIn", icon: "plug", type: "Enum") }) Is the vehicle plugged in? Must either be an enumeration mapped to a value with a prefix of "PLUGGED",  or a scalar unit where a non-zero value means the vehicle is plugged in.
 \(inlineHTML { Parameter("speed", icon: "speed", type: "Speed") }) How fast the vehicle is moving.    
 \(inlineHTML { Parameter("stateOfCharge", icon: "battery", type: "Normal") }) How full the vehicle's battery is.    
 \(inlineHTML { Parameter("stateOfHealth", icon: "health", type: "Normal") }) The health of the vehicle's high voltage battery pack.    
