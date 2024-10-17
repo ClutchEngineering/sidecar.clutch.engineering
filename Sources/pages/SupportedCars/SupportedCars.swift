@@ -183,7 +183,7 @@ struct VehicleSupportStatus {
     case onboarded
     case partiallyOnboarded
     case testerNeeded
-    case activeTester(String, id: Int)
+    case activeTester(String)
   }
   let testingStatus: TestingStatus
 
@@ -208,8 +208,8 @@ struct VehicleSupportStatus {
     .init(years: years, testingStatus: .testerNeeded, stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk)
   }
 
-  static func newTester(years: ClosedRange<Int>, username: String, id: Int) -> Self {
-    .init(years: years, testingStatus: .activeTester(username, id: id), stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk)
+  static func newTester(years: ClosedRange<Int>, username: String) -> Self {
+    .init(years: years, testingStatus: .activeTester(username), stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk)
   }
 }
 
@@ -297,7 +297,7 @@ struct TestingStatusCell: View {
           SupportedSeal()
         }
       }
-    case .activeTester(let username, let id):
+    case .activeTester(let username):
       Bordered {
         TableCell {
           VStack(alignment: .center) {
@@ -305,7 +305,7 @@ struct TestingStatusCell: View {
               .fontSize(.small)
               .textColor(.text, darkness: 500)
               .fontWeight(.medium)
-            Link(username, destination: URL(string: "https://meta.cars.forum/memberlist.php?mode=viewprofile&u=\(id)"))
+            Link(username, destination: URL(string: "https://meta.cars.forum/memberlist.php?mode=viewprofile&un=\(username)"))
               .textColor(.link, darkness: 700)
               .textColor(.link, darkness: 400, condition: .dark)
               .fontWeight(600)

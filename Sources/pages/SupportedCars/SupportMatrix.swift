@@ -21,14 +21,14 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     " X3": [
       .testerNeeded(years: 2018...2020),
-      .init(years: 2021...2021, testingStatus: .activeTester("sidbmw", id: 100), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2021...2021, testingStatus: .activeTester("sidbmw"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
       .testerNeeded(years: 2022...2025)
     ],
   ],
   "Chevrolet": [
     " Bolt EV": [
       .testerNeeded(years: 2017...2021),
-      .init(years: 2022...2022, testingStatus: .activeTester("wrd", id: 104), stateOfCharge: .obd, stateOfHealth: .unk, charging: .obd, cells: .obd, fuelLevel: .na, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2022...2022, testingStatus: .activeTester("wrd"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .obd, cells: .obd, fuelLevel: .na, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
       .testerNeeded(years: 2023...2025)
     ],
     "Bolt EUV": [
@@ -40,14 +40,14 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Chrysler": [
     " Pacifica Hybrid": [
       .testerNeeded(years: 2017...2020),
-      .newTester(years: 2021...2021, username: "joshuahinckley", id: 103),
+      .newTester(years: 2021...2021, username: "joshuahinckley"),
       .testerNeeded(years: 2023...2025)
     ],
   ],
   "Fiat": [
     " Grande Punto": [
       .testerNeeded(years: 2005...2007),
-      .init(years: 2008...2008, testingStatus: .activeTester("afonsosriv", id: 66), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2008...2008, testingStatus: .activeTester("afonsosriv"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
       .testerNeeded(years: 2009...2009)
     ],
   ],
@@ -73,20 +73,25 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Hyundai": [
     "IONIQ 5": [
       .testerNeeded(years: 2021...2021),
-      .init(years: 2022...2022, testingStatus: .activeTester("spider", id: 114), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
-      .init(years: 2023...2023, testingStatus: .activeTester("spenumatsa", id: 82), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
-      .init(years: 2024...2024, testingStatus: .activeTester("zachmiles", id: 76), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2022...2022, testingStatus: .activeTester("spider"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2023...2023, testingStatus: .activeTester("spenumatsa"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2024...2024, testingStatus: .activeTester("zachmiles"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
       .testerNeeded(years: 2025...2025)
     ],
     "IONIQ 6": [
       .testerNeeded(years: 2023...2023),
-      .init(years: 2024...2024, testingStatus: .activeTester("Danmartyn", id: 98), stateOfCharge: .obd, stateOfHealth: .obd, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .obd),
+      .init(years: 2024...2024, testingStatus: .activeTester("Danmartyn"), stateOfCharge: .obd, stateOfHealth: .obd, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .obd),
       .testerNeeded(years: 2025...2025)
     ],
     " IONIQ PHEV": [
       .testerNeeded(years: 2017...2017),
-      .init(years: 2018...2018, testingStatus: .activeTester("zaaaacch", id: 99), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .obd),
+      .init(years: 2018...2018, testingStatus: .activeTester("zaaaacch"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .obd),
       .testerNeeded(years: 2019...2022)
+    ],
+    " Sante Fe Hybrid": [
+      .testerNeeded(years: 2021...2021),
+      .init(years: 2022...2022, testingStatus: .activeTester("funtaine"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+      .testerNeeded(years: 2023...2025)
     ],
   ],
   "Kia": [
@@ -112,7 +117,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Lexus": [
     " GX 460": [
       .testerNeeded(years: 2003...2014),
-      .newTester(years: 2015...2015, username: "Thunderbirdhotel", id: 91),
+      .newTester(years: 2015...2015, username: "Thunderbirdhotel"),
       .testerNeeded(years: 2016...2025)
     ],
   ],
@@ -138,14 +143,14 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Polestar": [
     "Polestar 2":     [
       .testerNeeded(years: 2019...2020),
-      .newTester(years: 2021...2021, username: "jpalensk", id: 63),
-      .newTester(years: 2022...2022, username: "alexr", id: 77),
+      .newTester(years: 2021...2021, username: "jpalensk"),
+      .newTester(years: 2022...2022, username: "alexr"),
       .testerNeeded(years: 2023...2023),
-      .init(years: 2024...2024, testingStatus: .activeTester("jbritton", id: 95), stateOfCharge: .ota, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .unk),
+      .init(years: 2024...2024, testingStatus: .activeTester("jbritton"), stateOfCharge: .ota, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .unk),
       .testerNeeded(years: 2025...2025),
     ],
     " 3":     [
-      .newTester(years: 2024...2024, username: "david.rothera", id: 117),
+      .newTester(years: 2024...2024, username: "david.rothera"),
       .testerNeeded(years: 2025...2025),
     ],
   ],
@@ -153,7 +158,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " 911":     [ .testerNeeded(years: 1996...2025) ],
     "Cayenne":  [
       .testerNeeded(years: 2002...2014),
-      .newTester(years: 2015...2015, username: "b2pointoh", id: 203),
+      .newTester(years: 2015...2015, username: "b2pointoh"),
       .testerNeeded(years: 2016...2023),
       .init(years: 2024...2024, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2025...2025)
@@ -167,23 +172,23 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Rivian": [
     " R1S": [
       .testerNeeded(years: 2022...2024),
-      .init(years: 2025...2025, testingStatus: .activeTester("Alex", id: 61), stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2025...2025, testingStatus: .activeTester("Alex"), stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
   ],
   "Tesla": [
     " Model S": [
       .testerNeeded(years: 2012...2015),
-      .init(years: 2016...2016, testingStatus: .activeTester("shaver", id: 65), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
+      .init(years: 2016...2016, testingStatus: .activeTester("shaver"), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
       .testerNeeded(years: 2017...2025),
     ],
     "Model 3": [
       .init(years: 2017...2023, testingStatus: .partiallyOnboarded, stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
-      .init(years: 2019...2019, testingStatus: .activeTester("justinscheetz", id: 69), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
+      .init(years: 2019...2019, testingStatus: .activeTester("justinscheetz"), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
       .init(years: 2020...2020, testingStatus: .partiallyOnboarded, stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
-      .init(years: 2021...2021, testingStatus: .activeTester("Atreideez", id: 78), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
+      .init(years: 2021...2021, testingStatus: .activeTester("Atreideez"), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
       .init(years: 2022...2022, testingStatus: .partiallyOnboarded, stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
-      .init(years: 2023...2023, testingStatus: .activeTester("leoprose", id: 74), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
-      .init(years: 2024...2024, testingStatus: .activeTester("Olitoady", id: 68), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
+      .init(years: 2023...2023, testingStatus: .activeTester("leoprose"), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
+      .init(years: 2024...2024, testingStatus: .activeTester("Olitoady"), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
       .init(years: 2025...2025, testingStatus: .partiallyOnboarded, stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
     ],
     " Model X": [
@@ -191,8 +196,8 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     "Model Y": [
       .init(years: 2020...2022, testingStatus: .partiallyOnboarded, stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
-      .init(years: 2023...2023, testingStatus: .activeTester("sylvainramousse", id: 64), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
-      .init(years: 2024...2024, testingStatus: .activeTester("amitchell516", id: 80), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
+      .init(years: 2023...2023, testingStatus: .activeTester("sylvainramousse"), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
+      .init(years: 2024...2024, testingStatus: .activeTester("amitchell516"), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
       .init(years: 2025...2025, testingStatus: .partiallyOnboarded, stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
     ],
     " Semi": [
@@ -207,29 +212,29 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     " Camry": [
       .testerNeeded(years: 1996...2002),
-      .newTester(years: 2003...2003, username: "lambhofreak", id: 132),
+      .newTester(years: 2003...2003, username: "lambhofreak"),
       .testerNeeded(years: 2004...2013),
-      .newTester(years: 2014...2014, username: "eliasmalek24", id: 84),
+      .newTester(years: 2014...2014, username: "eliasmalek24"),
       .testerNeeded(years: 2015...2025)
     ],
     " RAV4 Hybrid": [
       .testerNeeded(years: 2016...2019),
-      .newTester(years: 2020...2020, username: "ktaletsk", id: 122),
+      .newTester(years: 2020...2020, username: "ktaletsk"),
       .testerNeeded(years: 2021...2024)
     ],
     " Sequoia": [
       .testerNeeded(years: 2001...2002),
-      .newTester(years: 2003...2003, username: "tgerring", id: 75),
+      .newTester(years: 2003...2003, username: "tgerring"),
       .testerNeeded(years: 2004...2025)
     ],
     " Tacoma": [
       .testerNeeded(years: 1996...2022),
-      .newTester(years: 2023...2023, username: "jasonmc99", id: 166),
+      .newTester(years: 2023...2023, username: "jasonmc99"),
       .testerNeeded(years: 2024...2025)
     ],
     " Yaris Cross": [
       .testerNeeded(years: 2020...2020),
-      .newTester(years: 2021...2021, username: "molgar", id: 119),
+      .newTester(years: 2021...2021, username: "molgar"),
       .testerNeeded(years: 2022...2025)
     ],
   ],
@@ -243,12 +248,12 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Volvo": [
     " XC40 Recharge": [
       .testerNeeded(years: 2018...2020),
-      .newTester(years: 2021...2021, username: "zandr", id: 85),
+      .newTester(years: 2021...2021, username: "zandr"),
       .testerNeeded(years: 2022...2025)
     ],
     " XC60 PHEV": [
       .testerNeeded(years: 2018...2019),
-      .init(years: 2020...2020, testingStatus: .activeTester("shaver", id: 65), stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2020...2020, testingStatus: .activeTester("shaver"), stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
       .testerNeeded(years: 2021...2025)
     ],
   ],
