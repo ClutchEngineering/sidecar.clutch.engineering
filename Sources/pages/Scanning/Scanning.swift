@@ -107,9 +107,10 @@ There are countless variations of OBD-II scanners on the market. A table of opti
 Discouraged Scanners
 --------------------
 
-The following scanner hardware is known to use non-standard protocols. These scanners should generally be avoided.
+The following scanner hardware is known to use proprietary protocols that will not work with any general purpose scanning software, including Sidecar.
 
--  Any BLCKTEC model (the 410 and 430 models, specifically).
+- Any BLCKTEC model (the 410 and 430 models, specifically).
+- Any OBDEleven model.
 
 Tested Scanners
 ---------------
@@ -345,6 +346,17 @@ Tested Scanners
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  OBDeleven<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com/dp/B08K94L4JS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">$103.80</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   DND ECHO<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.com/dp/B0CZ8X334R?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
@@ -541,6 +553,17 @@ Tested Scanners
  <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$114.95</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  OBDeleven<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.ca/dp/B08K94L4JS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">$122.26</td>
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
