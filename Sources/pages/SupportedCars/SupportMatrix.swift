@@ -181,9 +181,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
   ],
   "Seat": [
-    " Leon": [
+    "Leon": [
       .testerNeeded(years: 1999...2016),
-      .init(years: 2017...2017, testingStatus: .activeTester("Pa0x43"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+      .init(years: 2017...2017, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2018...2025),
     ],
   ],
