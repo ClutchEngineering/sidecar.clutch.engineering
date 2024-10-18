@@ -183,7 +183,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Seat": [
     " Leon": [
       .testerNeeded(years: 1999...2016),
-      .newTester(years: 2017...2017, username: "Pa0x43"),
+      .init(years: 2017...2017, testingStatus: .activeTester("Pa0x43"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2018...2025),
     ],
   ],
