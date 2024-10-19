@@ -224,7 +224,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     "bZ4X": [
       .testerNeeded(years: 2023...2023),
-      .init(years: 2024...2024, testingStatus: .activeTester("Jefbos90"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2024...2024, testingStatus: .activeTester("Jefbos90"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2025...2025)
     ],
     " Camry": [
