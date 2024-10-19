@@ -81,7 +81,7 @@ To become a beta tester, you must first create an account on [cars.forum](https:
 Once logged in, [search the Beta Testing Registration forum](https://meta.cars.forum/search.php?fid[]=17) for your car’s make and model. If no thread exists for your vehicle, create one using this template:
 
 ```
-Subject: [Make] [Model] [Year]
+Subject: [Make] / [Model] / [Year]
 Body:
 I am interested in becoming a Sidecar beta tester for this make/model/year.
 
