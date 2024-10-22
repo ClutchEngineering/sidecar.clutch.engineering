@@ -443,6 +443,12 @@ If a unit includes a version (e.g. **v1.13+**), that means the unit was introdu
 \(inlineHTML { Parameter("minutes", icon: "time") }) Time, measured in minutes.    
 \(inlineHTML { Parameter("hours", icon: "time") }) Time, measured in hours.
 
+#### Torque units
+
+\(inlineHTML { Parameter("newtonMeters", icon: "wrench") }) Newton-meters.    
+\(inlineHTML { Parameter("poundFoot", icon: "wrench") }) Pound-foot.    
+\(inlineHTML { Parameter("inchPound", icon: "wrench") }) Inch-pound.
+
 #### Volume units
 
 \(inlineHTML { Parameter("liters", icon: "volume") }) Volume in liters.    
