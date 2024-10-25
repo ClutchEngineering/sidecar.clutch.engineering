@@ -94,7 +94,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2024...2025)
     ],
     "Santa Fe Hybrid": [
-      .testerNeeded(years: 2021...2021),
+      .newTester(years: 2021...2021, username: "jubnub"),
       .init(years: 2022...2022, testingStatus: .activeTester("funtaine"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .obd, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2023...2025)
     ],
