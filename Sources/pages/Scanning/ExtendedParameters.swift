@@ -156,6 +156,7 @@ Commands represent a single OBD-II message that can be sent to the vehicle. The 
 #### Optional properties
 
 \(inlineHTML { Parameter("rax", type: "String | ATCRAhhh") }) The command's 11-bit receive address, expressed as 3 hexadecimal characters. If not provided, then the command will attempt to guess the receive address based on the response.        
+\(inlineHTML { Parameter("eax", type: "String | ATCEAhh") }) An extended address byte to be prefixed to the command's CAN messages, expressed as 2 hexadecimal characters. Some vehicle protocols (e.g. BMW) require this.        
 \(inlineHTML { Parameter("fcm1", type: "Boolean") }) Some parameters only respond with the first frame when using the default flow control mode, 0. Setting this property to true enables flow control mode 1, requesting that all frames be returned together. If not provided, false is assumed and flow control mode 0 will be used. When enabled, the following configuration will be set prior to invoking the command:
 ```
 ATFCSH7E0
