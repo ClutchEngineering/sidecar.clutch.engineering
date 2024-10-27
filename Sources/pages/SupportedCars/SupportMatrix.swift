@@ -10,8 +10,11 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
   ],
   "BMW": [
-    " i3": [
-      .testerNeeded(years: 2014...2021),
+    "i3": [
+      .testerNeeded(years: 2014...2017),
+      .newTester(years: 2018...2018, username: "bereneb"),
+      .init(years: 2019...2019, testingStatus: .onboarded, stateOfCharge: .obd, stateOfHealth: .obd, charging: .unk, cells: .unk, fuelLevel: .na, speed: .obd, range: .obd, odometer: .obd, tirePressure: .unk),
+      .testerNeeded(years: 2020...2021),
     ],
     " i4": [
       .testerNeeded(years: 2022...2025),
