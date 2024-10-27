@@ -391,7 +391,7 @@ struct ModelSupportSection: View {
     Div {
       HStack(alignment: .center, spacing: 16) {
         if !model.hasPrefix(" ") {
-          Image(URL(string: "/gfx/model/\(model.lowercased().replacingOccurrences(of: " ", with: "")).svg"))
+          Image(URL(string: "/gfx/model/\(model.lowercased().replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "")).svg"))
             .colorInvert(condition: .dark)
             .display(.inlineBlock)
             .frame(width: 48)
