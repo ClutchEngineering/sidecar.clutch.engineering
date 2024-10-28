@@ -107,7 +107,8 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2022...2025),
     ],
     " EV 9": [
-      .testerNeeded(years: 2024...2025),
+      .init(years: 2024...2024, testingStatus: .activeTester("kanithus"), stateOfCharge: .obd, stateOfHealth: .obd, charging: .unk, cells: .unk, fuelLevel: .na, speed: .obd, range: .unk, odometer: .unk, tirePressure: .obd),
+      .testerNeeded(years: 2025...2025),
     ],
     " Niro EV": [
       .testerNeeded(years: 2019...2023),
