@@ -97,8 +97,8 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2024...2025)
     ],
     "Santa Fe Hybrid": [
-      .init(years: 2021...2021, testingStatus: .activeTester("jubnub"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .obd, cells: .obd, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .obd),
-      .init(years: 2022...2022, testingStatus: .activeTester("funtaine"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .obd, cells: .obd, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .obd),
+      .init(years: 2021...2021, testingStatus: .onboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .obd, cells: .obd, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .obd),
+      .init(years: 2022...2022, testingStatus: .onboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .obd, cells: .obd, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .obd),
       .testerNeeded(years: 2023...2025)
     ],
   ],
