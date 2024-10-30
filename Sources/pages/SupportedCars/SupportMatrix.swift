@@ -22,7 +22,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " iX3": [
       .testerNeeded(years: 2020...2025),
     ],
-    " X3": [
+    "X3": [
       .testerNeeded(years: 2018...2020),
       .init(years: 2021...2021, testingStatus: .activeTester("sidbmw"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2022...2025)
