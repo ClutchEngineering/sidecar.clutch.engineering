@@ -106,7 +106,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " EV 6": [
       .testerNeeded(years: 2022...2025),
     ],
-    " EV 9": [
+    "EV 9": [
       .init(years: 2024...2024, testingStatus: .activeTester("kanithus"), stateOfCharge: .obd, stateOfHealth: .obd, charging: .unk, cells: .unk, fuelLevel: .na, speed: .obd, range: .unk, odometer: .obd, tirePressure: .obd),
       .testerNeeded(years: 2025...2025),
     ],
