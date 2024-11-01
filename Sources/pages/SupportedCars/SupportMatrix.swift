@@ -253,6 +253,11 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .init(years: 2023...2023, testingStatus: .activeTester("jasonmc99"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2024...2025)
     ],
+    " Tundra": [
+      .testerNeeded(years: 2000...2019),
+      .newTester(years: 2020...2020, username: "danomeyer"),
+      .testerNeeded(years: 2021...2025)
+    ],
     " Yaris Cross": [
       .testerNeeded(years: 2020...2020),
       .newTester(years: 2021...2021, username: "molgar"),
