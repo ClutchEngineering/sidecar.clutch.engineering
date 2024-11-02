@@ -335,6 +335,17 @@ Tested Scanners
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  UniCarScan<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com/dp/B09WVJPF2F?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
+ <td class="pl-2 md:pl-4 py-2">$82.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   BLCKTEC 430<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.com/dp/B0C2JQH5NY?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
