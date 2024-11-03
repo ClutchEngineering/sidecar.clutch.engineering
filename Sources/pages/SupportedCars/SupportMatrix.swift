@@ -550,7 +550,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2022...2025),
     ],
     "EV 9": [
-      .init(years: 2024...2024, testingStatus: .onboarded, stateOfCharge: .obd, stateOfHealth: .obd, charging: .unk, cells: .unk, fuelLevel: .na, speed: .obd, range: .unk, odometer: .obd, tirePressure: .obd),
+      .init(years: 2024...2024, testingStatus: .onboarded, stateOfCharge: .obd, stateOfHealth: .obd, charging: .obd, cells: .obd, fuelLevel: .na, speed: .obd, range: .unk, odometer: .obd, tirePressure: .obd),
       .testerNeeded(years: 2025...2025),
     ],
     " K5": [
