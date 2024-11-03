@@ -220,7 +220,8 @@ struct MakeCard: View {
       Image(URL(string: "/gfx/make/\(make.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-s", with: "").applyingTransform(.stripDiacritics, reverse: false)!.lowercased()).svg"))
         .colorInvert(condition: .dark)
         .display(.inlineBlock)
-        .frame(width: 76)
+        .frame(width: 48)
+        .frame(width: 76, condition: .desktop)
       Text(make)
         .bold()
         .fontDesign("rounded")
@@ -629,7 +630,7 @@ struct SupportedCars: View {
             }
           }
           .display(.grid)
-          .classNames(["grid-cols-6", "gap-x-4", "gap-y-8"])
+          .classNames(["grid-cols-3", "md:grid-cols-6", "gap-x-4", "gap-y-8"])
         }
       }
       .margin(.vertical, 32)
