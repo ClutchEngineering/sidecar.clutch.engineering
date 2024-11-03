@@ -347,6 +347,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " Bronco": [
       .testerNeeded(years: 2021...2025),
     ],
+    " Bronco Raptor": [
+      .testerNeeded(years: 2022...2025),
+    ],
     "Escape": [
       .testerNeeded(years: 2001...2022),
       .init(years: 2023...2023, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .obd),
