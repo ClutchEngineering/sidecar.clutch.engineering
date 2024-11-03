@@ -1147,7 +1147,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     "Tacoma": [
       .testerNeeded(years: 1996...2022),
-      .init(years: 2023...2023, testingStatus: .activeTester("jasonmc99"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+      .init(years: 2023...2023, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2024...2025)
     ],
     " Tundra": [
