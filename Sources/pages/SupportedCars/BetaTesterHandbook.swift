@@ -104,9 +104,12 @@ If a beta tester is needed for your vehicle, Jeff will reach out to onboard you 
 
 You will receive your subscription promo code after you have:
 
-1. been approved as a beta tester,
-2. installed Sidecar and connected it to your car (you can do this without a subscription), and
-3. initiated/participated in a discussion about your make/model on the [Sidecar forum](https://meta.cars.forum/viewforum.php?f=12).
+1. been added to the beta tester group on cars.forum,
+2. [installed Sidecar](https://apps.apple.com/us/app/electric-sidecar/id1663683832) and connected
+it to your car either with a Connected Account or via [OBD-II](https://sidecar.clutch.engineering/scanning/)
+(you can connect your car without a subscription),
+3. you have started or contributed to a thread in the [vehicle onboarding forum](https://meta.cars.forum/viewforum.php?f=12), and
+3. if you are testing OBD logs, you've emailed an [export of your OBD logs](https://sidecar.clutch.engineering/help/#how-to-export-obd-scan-logs) to support@clutch.engineering [Sidecar forum](https://meta.cars.forum/viewforum.php?f=12).
 """)
       .padding(.bottom, 16)
 
