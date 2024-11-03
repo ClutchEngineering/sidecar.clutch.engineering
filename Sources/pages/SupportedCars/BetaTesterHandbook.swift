@@ -108,7 +108,7 @@ You will receive your subscription promo code after you have:
 2. [installed Sidecar](https://apps.apple.com/us/app/electric-sidecar/id1663683832) and connected
 it to your car either with a Connected Account or via [OBD-II](https://sidecar.clutch.engineering/scanning/)
 (you can connect your car without a subscription),
-3. you have started or contributed to a thread in the [vehicle onboarding forum](https://meta.cars.forum/viewforum.php?f=12), and
+3. started or contributed to a thread in the [vehicle onboarding forum](https://meta.cars.forum/viewforum.php?f=12), and
 3. if you are testing OBD logs, you've emailed an [export of your OBD logs](https://sidecar.clutch.engineering/help/#how-to-export-obd-scan-logs) to support@clutch.engineering.
 """)
       .padding(.bottom, 16)
