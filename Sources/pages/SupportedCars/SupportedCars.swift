@@ -630,7 +630,7 @@ struct SupportedCars: View {
             }
           }
           .display(.grid)
-          .classNames(["grid-cols-3", "md:grid-cols-6", "gap-x-4", "gap-y-8"])
+          .classNames(["grid-cols-3", "md:grid-cols-5", "gap-x-4", "gap-y-8"])
         }
       }
       .margin(.vertical, 32)
