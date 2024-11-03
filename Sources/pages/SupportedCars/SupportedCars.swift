@@ -5,7 +5,7 @@ import Slipstream
 let becomeBetaURL = URL(string: "/beta")
 
 func modelNameForSorting(_ string: Model) -> Model {
-  string.replacingOccurrences(of: " ", with: "")
+  string.replacingOccurrences(of: " ", with: "").applyingTransform(.stripDiacritics, reverse: false)!
 }
 
 struct ParameterHeader: View {
@@ -220,12 +220,12 @@ struct MakeCard: View {
       Image(URL(string: "/gfx/make/\(make.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-s", with: "").applyingTransform(.stripDiacritics, reverse: false)!.lowercased()).svg"))
         .colorInvert(condition: .dark)
         .display(.inlineBlock)
-        .frame(width: 96)
+        .frame(width: 76)
       Text(make)
         .bold()
         .fontDesign("rounded")
-        .fontSize(.extraLarge)
-        .fontSize(.fourXLarge, condition: .desktop)
+        .fontSize(.large)
+        .fontSize(.extraExtraExtraLarge, condition: .desktop)
     }
     .justifyContent(.center)
   }
@@ -619,12 +619,12 @@ struct SupportedCars: View {
             .margin(.bottom, 32)
 
           Div {
-            for make in makes.keys.sorted() {
+            for make in makes.keys.sorted(by: { modelNameForSorting($0) < modelNameForSorting($1) }) {
               MakeLink(make: make)
             }
           }
           .display(.grid)
-          .classNames(["grid-cols-4", "gap-x-4", "gap-y-8"])
+          .classNames(["grid-cols-6", "gap-x-4", "gap-y-8"])
         }
       }
       .margin(.vertical, 32)

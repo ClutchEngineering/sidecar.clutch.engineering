@@ -593,7 +593,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " LR4": [
       .init(years: 2010...2016, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
-    " Range Rover Sport": [
+    " Range Rover": [
       .init(years: 2005...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
   ],
@@ -601,10 +601,16 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " CT 200h": [
       .init(years: 2011...2017, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
+    " ES 300h": [
+      .testerNeeded(years: 2013...2025)
+    ],
     " GX 460": [
       .testerNeeded(years: 2003...2014),
       .newTester(years: 2015...2015, username: "Thunderbirdhotel"),
       .testerNeeded(years: 2016...2025)
+    ],
+    " GX 470": [
+      .testerNeeded(years: 2003...2009)
     ],
     " IS 300": [
       .init(years: 2001...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
@@ -612,13 +618,35 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " IS 350": [
       .init(years: 2006...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
     ],
+    " LC 500": [
+      .testerNeeded(years: 2017...2025)
+    ],
+    " LS": [
+      .testerNeeded(years: 1996...2025)
+    ],
+    " NX 350h": [
+      .testerNeeded(years: 2022...2025)
+    ],
     " RX 450h": [
       .init(years: 2010...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+    ],
+    " UX": [
+      .testerNeeded(years: 2019...2025)
     ],
   ],
   "Lincoln": [
     " Corsair": [
       .init(years: 2020...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+    ],
+  ],
+  "Maruti": [
+    " Celerio": [
+      .testerNeeded(years: 2014...2025)
+    ],
+  ],
+  "Maxus": [
+    " eDeliver 3": [
+      .testerNeeded(years: 2020...2025)
     ],
   ],
   "Mazda": [
@@ -631,22 +659,70 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " 6": [
       .init(years: 2003...2021, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
-    " CX-30": [
-      .init(years: 2020...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+    " BT50": [
+      .testerNeeded(years: 2006...2025)
+    ],
+    " CX-3": [
+      .testerNeeded(years: 2016...2025)
     ],
     " CX-5": [
       .init(years: 2013...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
     ],
-    " CX-50": [
-      .init(years: 2023...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
-    ],
     " CX-9": [
       .init(years: 2007...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
     ],
+    " CX-30": [
+      .init(years: 2020...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+    ],
+    " CX-50": [
+      .init(years: 2023...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+    ],
+    " CX-60": [
+      .testerNeeded(years: 2022...2025)
+    ],
+    " CX-90": [
+      .testerNeeded(years: 2024...2025)
+    ],
+    " MX 30": [
+      .testerNeeded(years: 2020...2025)
+    ],
+    " MX 5": [
+      .testerNeeded(years: 1996...2025)
+    ],
+    " RX 7": [
+      .testerNeeded(years: 1996...2002)
+    ],
   ],
   "Mercedes": [
+    " C200d": [
+      .testerNeeded(years: 1996...2025)
+    ],
+    " CLA-Class": [
+      .testerNeeded(years: 2013...2025)
+    ],
     " C-Class": [
       .init(years: 1996...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+    ],
+    " E-Class": [
+      .testerNeeded(years: 1996...2025)
+    ],
+    " E180": [
+      .testerNeeded(years: 1996...2025)
+    ],
+    " EQS-Class": [
+      .testerNeeded(years: 2021...2025)
+    ],
+    " G-Class": [
+      .testerNeeded(years: 1996...2025)
+    ],
+    " GLA250": [
+      .testerNeeded(years: 2014...2025)
+    ],
+    " GLB 250": [
+      .testerNeeded(years: 2020...2025)
+    ],
+    " S-Class": [
+      .testerNeeded(years: 1996...2025)
     ],
   ],
   "MG": [
@@ -658,9 +734,35 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2023...2025)
     ],
   ],
+  "MINI": [
+    " Clubman F54": [
+      .testerNeeded(years: 2015...2025)
+    ],
+    " Cooper S": [
+      .testerNeeded(years: 2002...2025)
+    ],
+    " Cooper SE": [
+      .testerNeeded(years: 2020...2025)
+    ],
+    " Hardtop": [
+      .testerNeeded(years: 2002...2025)
+    ],
+    " JCW": [
+      .testerNeeded(years: 2008...2025)
+    ],
+  ],
   "Mitsubishi": [
+    " Challenger": [
+      .testerNeeded(years: 1996...2016)
+    ],
     " Eclipse Cross": [
       .init(years: 2018...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+    ],
+    " Eclipse Cross PHEV": [
+      .testerNeeded(years: 2021...2025)
+    ],
+    " Lancer": [
+      .testerNeeded(years: 1996...2017)
     ],
     " Outlander": [
       .init(years: 2003...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
@@ -673,6 +775,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
   ],
   "Nissan": [
+    " Altima": [
+      .testerNeeded(years: 1996...2025)
+    ],
     " ARIYA": [
       .init(years: 2023...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
@@ -696,13 +801,50 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " Qashqai": [
       .init(years: 2006...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
-    " Rogue Sport": [
+    " Rogue": [
       .init(years: 2017...2022, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+    ],
+    " Sentra": [
+      .testerNeeded(years: 1996...2025)
+    ],
+    " X Trail": [
+      .testerNeeded(years: 2001...2025)
+    ],
+  ],
+  "Omoda": [
+    " Omoda 5 EV": [
+      .testerNeeded(years: 2023...2025)
+    ],
+  ],
+  "Opel": [
+    " Corsa": [
+      .testerNeeded(years: 1996...2025)
     ],
   ],
   "Peugeot": [
+    " 2008": [
+      .testerNeeded(years: 2013...2025)
+    ],
+    " 208": [
+      .testerNeeded(years: 2012...2025)
+    ],
+    " 308": [
+      .testerNeeded(years: 2007...2025)
+    ],
     " 308 Hybrid": [
       .init(years: 2021...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+    ],
+    " 505": [
+      .testerNeeded(years: 1996...2025)
+    ],
+    " 508": [
+      .testerNeeded(years: 2011...2025)
+    ],
+    " Expert": [
+      .testerNeeded(years: 1996...2025)
+    ],
+    " e 208": [
+      .testerNeeded(years: 2019...2025)
     ],
   ],
   "Polestar": [
@@ -718,9 +860,17 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .newTester(years: 2024...2024, username: "david.rothera"),
       .testerNeeded(years: 2025...2025),
     ],
+    " Polestar 4": [
+      .testerNeeded(years: 2024...2025)
+    ],
   ],
   "Porsche": [
-    " 911":     [ .testerNeeded(years: 1996...2025) ],
+    " 718": [
+      .testerNeeded(years: 2016...2025)
+    ],
+    " 911":     [
+      .testerNeeded(years: 1996...2025)
+    ],
     "Cayenne":  [
       .testerNeeded(years: 2002...2014),
       .newTester(years: 2015...2015, username: "b2pointoh"),
@@ -733,6 +883,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .init(years: 2024...2024, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2025...2025),
     ],
+    " Panamera": [
+      .testerNeeded(years: 2010...2025)
+    ],
     "Taycan": [
       .init(years: 2019...2024, testingStatus: .onboarded, stateOfCharge: .all, stateOfHealth: .obd, charging: .ota, cells: .obd, fuelLevel: .na, speed: .obd, range: .all, odometer: .all, tirePressure: .all),
       .testerNeeded(years: 2025...2025)
@@ -744,11 +897,35 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
   ],
   "Renault": [
+    " Clio": [
+      .testerNeeded(years: 1996...2025)
+    ],
+    " Clio 5": [
+      .testerNeeded(years: 2019...2025)
+    ],
+    " Clio V": [
+      .testerNeeded(years: 2019...2025)
+    ],
+    " Duster": [
+      .testerNeeded(years: 2010...2025)
+    ],
     " Kadjar": [
       .init(years: 2015...2022, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
     ],
-    " SCENIC E-TECH ELECTRIC": [
+    " Kwid": [
+      .testerNeeded(years: 2015...2025)
+    ],
+    " Megane": [
+      .testerNeeded(years: 1996...2025)
+    ],
+    " Megane E-Tech": [
+      .testerNeeded(years: 2022...2025)
+    ],
+    " Scenic E-Tech": [
       .init(years: 2024...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+    ],
+    " Symbol": [
+      .testerNeeded(years: 1999...2025)
     ],
     " Zoe": [
       .init(years: 2012...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
@@ -758,6 +935,19 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " R1S": [
       .testerNeeded(years: 2022...2024),
       .init(years: 2025...2025, testingStatus: .activeTester("Alex"), stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+    ],
+    " R1T": [
+      .testerNeeded(years: 2022...2025)
+    ],
+  ],
+  "Saab": [
+    " 9-3": [
+      .testerNeeded(years: 1998...2014)
+    ],
+  ],
+  "Scion": [
+    " FR S": [
+      .testerNeeded(years: 2013...2016)
     ],
   ],
   "Seat": [
@@ -769,13 +959,33 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .init(years: 2017...2017, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2018...2025),
     ],
+    " Mii Electric": [
+      .testerNeeded(years: 2020...2023)
+    ],
   ],
   "Škoda": [
+    " Fabia": [
+      .testerNeeded(years: 1999...2025)
+    ],
+    " Kamiq": [
+      .testerNeeded(years: 2019...2025)
+    ],
     " Octavia": [
       .init(years: 1996...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
   ],
+  "Smart": [
+    " Smart 1": [
+      .testerNeeded(years: 2022...2025)
+    ],
+  ],
   "Subaru": [
+    " Ascent": [
+      .testerNeeded(years: 2019...2025)
+    ],
+    " BRZ": [
+      .testerNeeded(years: 2013...2025)
+    ],
     " Crosstrek": [
       .init(years: 2013...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
     ],
@@ -784,6 +994,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     " Impreza": [
       .init(years: 1996...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+    ],
+    " Legacy": [
+      .testerNeeded(years: 1996...2025)
     ],
     " Outback": [
       .init(years: 1996...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
@@ -795,7 +1008,20 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .init(years: 2002...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
   ],
+  "Suzuki": [
+    " Swift": [
+      .testerNeeded(years: 1996...2025)
+    ],
+  ],
+  "Tata": [
+    " Harrier": [
+      .testerNeeded(years: 2019...2025)
+    ],
+  ],
   "Tesla": [
+    " Cybertruck": [
+      .testerNeeded(years: 2024...2025)
+    ],
     " Model S": [
       .testerNeeded(years: 2012...2015),
       .init(years: 2016...2016, testingStatus: .activeTester("shaver"), stateOfCharge: .ota, stateOfHealth: .unk, charging: .ota, cells: .unk, fuelLevel: .na, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
@@ -830,8 +1056,14 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .init(years: 2020...2020, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .ota, speed: .unk, range: .ota, odometer: .ota, tirePressure: .ota),
       .testerNeeded(years: 2021...2025)
     ],
+    " Auris": [
+      .testerNeeded(years: 2006...2018)
+    ],
     " Avalon": [
       .init(years: 1996...2022, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+    ],
+    " C HR": [
+      .testerNeeded(years: 2016...2025)
     ],
     " Camry": [
       .testerNeeded(years: 1996...2002),
@@ -840,17 +1072,53 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .newTester(years: 2014...2014, username: "eliasmalek24"),
       .testerNeeded(years: 2015...2025)
     ],
+    " Camry Hybrid": [
+      .testerNeeded(years: 2007...2025)
+    ],
     " Corolla": [
       .init(years: 1996...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+    ],
+    " Corolla Cross": [
+      .testerNeeded(years: 2020...2025)
     ],
     " Corolla Hybrid": [
       .init(years: 2020...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
     ],
+    " Corolla iM": [
+      .testerNeeded(years: 2016...2018)
+    ],
+    " Crown Signia": [
+      .testerNeeded(years: 2024...2025)
+    ],
+    " Fortuner": [
+      .testerNeeded(years: 2005...2025)
+    ],
+    " GR Corolla": [
+      .testerNeeded(years: 2023...2025)
+    ],
+    " GR86": [
+      .testerNeeded(years: 2022...2025)
+    ],
+    " Grand Highlander": [
+      .testerNeeded(years: 2024...2025)
+    ],
     " Highlander": [
       .init(years: 2001...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
     ],
+    " Innova": [
+      .testerNeeded(years: 2004...2025)
+    ],
+    " Ist": [
+      .testerNeeded(years: 2002...2016)
+    ],
     " Land Cruiser": [
       .init(years: 1996...2021, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+    ],
+    " MR2": [
+      .testerNeeded(years: 1996...2007)
+    ],
+    " Prius": [
+      .testerNeeded(years: 1997...2025)
     ],
     " Prius Prime": [
       .init(years: 2017...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
@@ -865,6 +1133,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2016...2019),
       .newTester(years: 2020...2020, username: "ktaletsk"),
       .testerNeeded(years: 2021...2024)
+    ],
+    " RAV4 Prime": [
+      .testerNeeded(years: 2021...2025)
     ],
     " Sequoia": [
       .testerNeeded(years: 2001...2002),
@@ -895,6 +1166,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .newTester(years: 2021...2021, username: "molgar"),
       .testerNeeded(years: 2022...2025)
     ],
+    " Yaris iA": [
+      .testerNeeded(years: 2016...2018)
+    ],
     "bZ4X": [
       .testerNeeded(years: 2023...2023),
       .init(years: 2024...2024, testingStatus: .activeTester("Jefbos90"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
@@ -905,11 +1179,29 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " Ampera": [
       .init(years: 2011...2015, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
+    " Astra": [
+      .testerNeeded(years: 1996...2025)
+    ],
     " Corsa": [
       .init(years: 1996...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
+    " Mokka": [
+      .testerNeeded(years: 2012...2025)
+    ],
+    " Mokka e": [
+      .testerNeeded(years: 2020...2025)
+    ],
   ],
   "Volkswagen": [
+    " Atlas": [
+      .testerNeeded(years: 2018...2025)
+    ],
+    " CC": [
+      .testerNeeded(years: 2009...2017)
+    ],
+    " Crafter": [
+      .testerNeeded(years: 2006...2025)
+    ],
     "e-Golf": [
       .testerNeeded(years: 2015...2018),
       .init(years: 2019...2019, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .obd, odometer: .obd, tirePressure: .unk),
@@ -921,11 +1213,26 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " Golf R": [
       .init(years: 2012...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
+    " GTE": [
+      .testerNeeded(years: 2015...2025)
+    ],
+    " Golf City": [
+      .testerNeeded(years: 2007...2010)
+    ],
+    " Golf GTI": [
+      .testerNeeded(years: 1996...2025)
+    ],
+    " Golf Variant": [
+      .testerNeeded(years: 1996...2025)
+    ],
     " ID.3": [
       .init(years: 2020...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
     " ID.4": [
       .init(years: 2021...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+    ],
+    " ID.5": [
+      .testerNeeded(years: 2022...2025)
     ],
     " ID7 Tourer": [
       .init(years: 2024...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
@@ -933,14 +1240,26 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " Jetta": [
       .init(years: 1996...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
     ],
+    " Jetta GLI": [
+      .testerNeeded(years: 2002...2025)
+    ],
     " Passat": [
       .init(years: 1996...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
     ],
     " Polo": [
       .init(years: 1996...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
+    " Rabbit": [
+      .testerNeeded(years: 2006...2009)
+    ],
     " Scirocco": [
       .init(years: 2008...2017, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+    ],
+    " Taigo": [
+      .testerNeeded(years: 2021...2025)
+    ],
+    " Taos": [
+      .testerNeeded(years: 2022...2025)
     ],
     " Tiguan": [
       .init(years: 2007...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
@@ -948,13 +1267,31 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " Touran": [
       .init(years: 2003...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
+    " T Cross": [
+      .testerNeeded(years: 2019...2025)
+    ],
+    " T Roc": [
+      .testerNeeded(years: 2017...2025)
+    ],
     " Up": [
       .init(years: 2011...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
   ],
   "Volvo": [
+    " C30": [
+      .testerNeeded(years: 2006...2013)
+    ],
+    " EX30": [
+      .testerNeeded(years: 2024...2025)
+    ],
+    " S60": [
+      .testerNeeded(years: 2000...2025)
+    ],
     " S90": [
       .init(years: 2016...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+    ],
+    " V50": [
+      .testerNeeded(years: 2004...2012)
     ],
     " V60": [
       .init(years: 2011...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
@@ -962,10 +1299,16 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " V70": [
       .init(years: 1996...2016, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
+    " V90 Cross Country": [
+      .testerNeeded(years: 2017...2025)
+    ],
     " XC40 Recharge": [
       .testerNeeded(years: 2018...2020),
       .newTester(years: 2021...2021, username: "zandr"),
       .testerNeeded(years: 2022...2025)
+    ],
+    " XC60": [
+      .testerNeeded(years: 2009...2025)
     ],
     " XC60 PHEV": [
       .testerNeeded(years: 2018...2019),
@@ -974,6 +1317,11 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     " XC90": [
       .init(years: 2003...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+    ],
+  ],
+  "Voyah": [
+    " Free": [
+      .testerNeeded(years: 2021...2025)
     ],
   ],
 ]
