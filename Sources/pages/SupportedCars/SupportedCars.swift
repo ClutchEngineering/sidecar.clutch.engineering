@@ -278,7 +278,7 @@ struct MakeSupportSection: View {
 
         VStack(alignment: .leading, spacing: 16) {
           for (model, statuses) in models.sorted(by: { modelNameForSorting($0.key) < modelNameForSorting($1.key) }) {
-            ModelSupportSection(model: model, statuses: statuses)
+            ModelSupportSection(make: make, model: model, statuses: statuses)
           }
         }
         .alignItems(.center, condition: .desktop)
@@ -384,10 +384,12 @@ struct EnvironmentAwareRow<Content: View>: View {
 }
 
 struct ModelSupportSection: View {
+  let make: Make
   let model: Model
   let statuses: [VehicleSupportStatus]
 
   var body: some View {
+    let id = "\(make)-\(model)"
     Div {
       HStack(alignment: .center, spacing: 16) {
         if !model.hasPrefix(" ") {
@@ -396,11 +398,13 @@ struct ModelSupportSection: View {
             .display(.inlineBlock)
             .frame(width: 48)
         }
-        Text(model.trimmingCharacters(in: .whitespaces))
-          .bold()
-          .fontDesign("rounded")
-          .fontSize(.large, condition: .desktop)
-          .fontSize(.extraExtraExtraLarge, condition: .desktop)
+        Link(URL(string: "#" + id)) {
+          Text(model.trimmingCharacters(in: .whitespaces))
+            .bold()
+            .fontDesign("rounded")
+            .fontSize(.large, condition: .desktop)
+            .fontSize(.extraExtraExtraLarge, condition: .desktop)
+        }
       }
       .justifyContent(.center)
       .margin(.bottom, 16)
@@ -457,6 +461,7 @@ struct ModelSupportSection: View {
     .cornerRadius(.extraExtraLarge)
     .background(.zinc, darkness: 200)
     .background(.zinc, darkness: 800, condition: .dark)
+    .id(id)
   }
 }
 
