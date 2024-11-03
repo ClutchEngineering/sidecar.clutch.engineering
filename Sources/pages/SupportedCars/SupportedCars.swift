@@ -217,7 +217,7 @@ struct MakeCard: View {
   let make: Make
   var body: some View {
     VStack(alignment: .center) {
-      Image(URL(string: "/gfx/make/\(make.lowercased()).svg"))
+      Image(URL(string: "/gfx/make/\(make.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-s", with: "").applyingTransform(.stripDiacritics, reverse: false)!.lowercased()).svg"))
         .colorInvert(condition: .dark)
         .display(.inlineBlock)
         .frame(width: 96)
