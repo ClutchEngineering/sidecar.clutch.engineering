@@ -351,7 +351,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2022...2025),
     ],
     "Escape": [
-      .testerNeeded(years: 2001...2022),
+      .testerNeeded(years: 2001...2020),
+      .init(years: 2021...2021, testingStatus: .onboarded, stateOfCharge: .obd, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .obd),
+      .testerNeeded(years: 2022...2022),
       .init(years: 2023...2023, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .obd),
       .testerNeeded(years: 2024...2025)
     ],
@@ -521,7 +523,8 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2019...2022)
     ],
     " Kona Electric": [
-      .testerNeeded(years: 2018...2022),
+      .testerNeeded(years: 2018...2021),
+      .init(years: 2022...2022, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .obd, charging: .obd, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
       .init(years: 2023...2023, testingStatus: .activeTester("Briantran33"), stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
       .testerNeeded(years: 2024...2025)
     ],
@@ -554,7 +557,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   ],
   "Jeep": [
     " Grand Cherokee": [
-      .init(years: 1996...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+      .testerNeeded(years: 1996...2017),
+      .init(years: 2018...2018, testingStatus: .partiallyOnboarded, stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .testerNeeded(years: 2019...2023),
     ],
     " Wrangler": [
       .init(years: 1996...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
@@ -565,7 +570,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   ],
   "Kia": [
     " EV 6": [
-      .testerNeeded(years: 2022...2025),
+      .testerNeeded(years: 2022...2023),
+      .init(years: 2024...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .na, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
+      .testerNeeded(years: 2025...2025),
     ],
     "EV 9": [
       .init(years: 2024...2024, testingStatus: .onboarded, stateOfCharge: .obd, stateOfHealth: .obd, charging: .obd, cells: .obd, fuelLevel: .na, speed: .obd, range: .unk, odometer: .obd, tirePressure: .obd),
