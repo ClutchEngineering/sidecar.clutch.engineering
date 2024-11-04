@@ -826,7 +826,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     " Qashqai": [
       .init(years: 2006...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
-    " Rogue": [
+    "Rogue": [
+      .init(years: 2014...2014, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .testerNeeded(years: 2015...2016),
       .init(years: 2017...2017, testingStatus: .activeTester("arronsparrow"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk),
       .testerNeeded(years: 2018...2025)
     ],
