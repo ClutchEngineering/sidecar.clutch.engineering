@@ -901,7 +901,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2025...2025),
     ],
     " Panamera": [
-      .testerNeeded(years: 2010...2025)
+      .testerNeeded(years: 2010...2025),
     ],
     "Taycan": [
       .init(years: 2019...2024, testingStatus: .onboarded, stateOfCharge: .all, stateOfHealth: .obd, charging: .ota, cells: .obd, fuelLevel: .na, speed: .obd, range: .all, odometer: .all, tirePressure: .all),
@@ -910,7 +910,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   ],
   "Ram": [
     " 1500": [
-      .init(years: 2011...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+      .testerNeeded(years: 2010...2025),
+      .init(years: 2019...2019, testingStatus: .activeTester("mattbires"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .testerNeeded(years: 2010...2025),
     ],
   ],
   "Renault": [
