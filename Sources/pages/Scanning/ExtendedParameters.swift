@@ -84,6 +84,7 @@ Extended PIDs are stored in a [JSON file format](https://developer.mozilla.org/
 
 ```
 {
+  "diagnosticLevel": String?,
   "commands": [Command]
   "signalGroups": [SignalGroup]?
 }
@@ -115,7 +116,8 @@ Extended PIDs are stored in a [JSON file format](https://developer.mozilla.org/
 
 ### Properties
 
-\(inlineHTML { Parameter("commands", type: "[Command] | Required") }) Array of OBD-II commands that can be sent to this vehicle.   
+\(inlineHTML { Parameter("commands", type: "[Command] | Required") }) Array of OBD-II commands that can be sent to this vehicle.    
+\(inlineHTML { Parameter("diagnosticLevel", type: "String | Optional") }) The one-byte diagnostic level to use for this vehicle. Written in hex.    
 \(inlineHTML { Parameter("signalGroups", type: "[SignalGroup] | Optional") }) Array of signal groups that can aggregate various signals together.
 
 ### Command
