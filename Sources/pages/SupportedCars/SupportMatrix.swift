@@ -125,22 +125,24 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .init(years: 2005...2012, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
     " G20": [
-      .testerNeeded(years: 2018...2025)
+      .testerNeeded(years: 2018...2025),
     ],
     " I3s": [
-      .testerNeeded(years: 2018...2021)
+      .testerNeeded(years: 2018...2021),
     ],
     " M235i": [
-      .testerNeeded(years: 2014...2016)
+      .testerNeeded(years: 2014...2016),
     ],
     " M240i": [
-      .testerNeeded(years: 2016...2025)
+      .testerNeeded(years: 2016...2025),
     ],
     " M4": [
-      .testerNeeded(years: 2014...2025)
+      .testerNeeded(years: 2014...2025),
     ],
     " X1": [
-      .init(years: 2009...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+      .testerNeeded(years: 2009...2020),
+      .init(years: 2021...2021, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+      .testerNeeded(years: 2022...2025),
     ],
     "X3": [
       .testerNeeded(years: 2018...2020),
@@ -366,7 +368,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .init(years: 1996...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
     ],
     " F-150": [
-      .init(years: 1996...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+      .testerNeeded(years: 1996...2021),
+        .init(years: 2022...2022, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
+      .testerNeeded(years: 2023...2025),
     ],
     " F-150 Lightning": [
       .testerNeeded(years: 2022...2022),
