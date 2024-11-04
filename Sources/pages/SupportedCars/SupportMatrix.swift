@@ -442,7 +442,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   "Honda": [
     "Accord": [
       .testerNeeded(years: 1996...2012),
-      .init(years: 2013...2013, testingStatus: .activeTester("elijah"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2013...2013, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
       .testerNeeded(years: 2014...2024),
     ],
     " Accord Hybrid": [
