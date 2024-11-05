@@ -615,7 +615,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
   ],
   "KTM": [
     "RC 390": [
-      .init(years: 2014...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .testerNeeded(years: 2013...2022),
+      .init(years: 2023...2023, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .testerNeeded(years: 2024...2025),
     ],
   ],
   "Land Rover": [
