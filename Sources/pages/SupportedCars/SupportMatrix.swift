@@ -614,7 +614,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
   ],
   "KTM": [
-    " RC": [
+    "RC 390": [
       .init(years: 2014...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .unk, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
   ],
