@@ -393,7 +393,9 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .init(years: 1998...2018, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
     " Fusion": [
-      .init(years: 2006...2020, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .testerNeeded(years: 2006...2016),
+      .init(years: 2017...2017, testingStatus: .activeTester("kanithus"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .obd),
+      .testerNeeded(years: 2006...2016),
     ],
     " Fusion Energi": [
       .init(years: 2013...2020, testingStatus: .partiallyOnboarded, stateOfCharge: .obd, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
