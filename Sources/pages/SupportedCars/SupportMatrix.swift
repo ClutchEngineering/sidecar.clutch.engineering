@@ -849,8 +849,8 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     " Pathfinder": [
       .testerNeeded(years: 1996...2023),
-      .init(years: 2024...2024, testingStatus: .activeTester("KingSpud"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
-      .testerNeeded(years: 2025...2025),
+      .init(years: 2024, testingStatus: .onboarded, fuelLevel: .obd, speed: .obd, odometer: .obd),
+      .testerNeeded(years: 2025),
     ],
     " Qashqai": [
       .init(years: 2006...2024, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
