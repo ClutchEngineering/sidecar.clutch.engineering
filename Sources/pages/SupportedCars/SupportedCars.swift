@@ -218,7 +218,7 @@ struct VehicleSupportStatus {
     self.tirePressure = tirePressure
   }
 
-  init(years: Int, testingStatus: TestingStatus, stateOfCharge: SupportState, stateOfHealth: SupportState, charging: SupportState, cells: SupportState, fuelLevel: SupportState, speed: SupportState, range: SupportState, odometer: SupportState, tirePressure: SupportState) {
+  init(years: Int, testingStatus: TestingStatus, stateOfCharge: SupportState = .na, stateOfHealth: SupportState = .na, charging: SupportState = .na, cells: SupportState = .na, fuelLevel: SupportState = .na, speed: SupportState = .unk, range: SupportState = .unk, odometer: SupportState = .unk, tirePressure: SupportState = .unk) {
     self.init(years: years...years, testingStatus: testingStatus, stateOfCharge: stateOfCharge, stateOfHealth: stateOfHealth, charging: charging, cells: cells, fuelLevel: fuelLevel, speed: speed, range: range, odometer: odometer, tirePressure: tirePressure)
   }
 

@@ -145,7 +145,8 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .testerNeeded(years: 2022...2025),
     ],
     "X3": [
-      .testerNeeded(years: 2018...2020),
+      .init(years: 2018, testingStatus: .partiallyOnboarded, fuelLevel: .obd, speed: .obd),
+      .testerNeeded(years: 2019...2020),
       .init(years: 2021, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .init(years: 2022, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
       .init(years: 2023, testingStatus: .activeTester("chihengyang"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
