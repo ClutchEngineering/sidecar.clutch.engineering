@@ -560,6 +560,13 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
       .newTester(years: 2022, username: "salvadordali256"),
       .testerNeeded(years: 2023...2025),
     ],
+    " Tucson Hybrid": [
+      .testerNeeded(years: 2004...2018),
+      .init(years: 2019, testingStatus: .activeTester("BradP1011"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .testerNeeded(years: 2020...2021),
+      .newTester(years: 2022, username: "salvadordali256"),
+      .testerNeeded(years: 2023...2025),
+    ],
     " Veloster": [
       .init(years: 2011...2022, testingStatus: .partiallyOnboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
     ],
