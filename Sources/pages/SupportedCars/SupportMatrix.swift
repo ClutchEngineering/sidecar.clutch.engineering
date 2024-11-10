@@ -930,7 +930,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     "Cayenne":  [
       .testerNeeded(years: 2002...2014),
-      .newTester(years: 2015...2015, username: "b2pointoh"),
+      .init(years: 2015, testingStatus: .activeTester("b2pointoh"), speed: .obd),
       .testerNeeded(years: 2016...2023),
       .init(years: 2024...2024, testingStatus: .onboarded, stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .obd, tirePressure: .unk),
       .testerNeeded(years: 2025...2025)
