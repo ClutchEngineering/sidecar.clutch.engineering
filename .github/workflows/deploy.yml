@@ -30,10 +30,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set up Xcode
-        run: |
-          sudo xcode-select -s "/Applications/Xcode_16.app"
-          xcodebuild -version
       - name: Install Tailwind CSS
         run: npm install -D tailwindcss@latest
       - name: Generate site
