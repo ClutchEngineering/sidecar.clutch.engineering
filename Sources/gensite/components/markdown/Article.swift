@@ -236,7 +236,7 @@ struct Article: View {
           context.recurse()
         }
 
-      case let strong as Markdown.Strong:
+      case is Markdown.Strong:
         Span {
           context.recurse()
         }

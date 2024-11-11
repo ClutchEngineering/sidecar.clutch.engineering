@@ -28,8 +28,9 @@ let sitemap: Sitemap = [
   "help/index.html": Help(),
 ]
 
-// Assumes this file is located in a Sources/ sub-directory of a Swift package.
+// Assumes this file is located in a Sources/gensite sub-directory of a Swift package.
 guard let projectURL = URL(filePath: #filePath)?
+  .deletingLastPathComponent()
   .deletingLastPathComponent()
   .deletingLastPathComponent() else {
   print("Unable to create URL for \(#filePath)")

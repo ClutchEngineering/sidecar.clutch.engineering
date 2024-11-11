@@ -1,6 +1,7 @@
 import Foundation
 
 import Slipstream
+import VehicleSupport
 
 let becomeBetaURL = URL(string: "/beta")
 
@@ -441,9 +442,7 @@ struct SupportedCars: View {
   let makes: [Make: [Model: [VehicleSupportStatus]]]
 
   init() {
-    let makesUrl = Bundle.module.url(forResource: "supportmatrix", withExtension: "json")!
-    let makesData = try! Data(contentsOf: makesUrl)
-    makes = try! JSONDecoder().decode([Make: [Model: [VehicleSupportStatus]]].self, from: makesData)
+    makes = try! VehicleSupportStatus.loadAll()
   }
 
   var body: some View {

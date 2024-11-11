@@ -1,12 +1,12 @@
 import Foundation
 
-typealias Make = String
+package typealias Make = String
 
-struct Model: Codable, Hashable, ExpressibleByStringLiteral {
-  let model: String
-  let symbolName: String?
+package struct Model: Codable, Hashable, ExpressibleByStringLiteral {
+  package let model: String
+  package let symbolName: String?
 
-  init(stringLiteral value: StringLiteralType) {
+  package init(stringLiteral value: StringLiteralType) {
     self.model = value.trimmingCharacters(in: .whitespacesAndNewlines)
     if !value.hasPrefix(" ") {
       symbolName = value.lowercased().replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "")
@@ -16,10 +16,16 @@ struct Model: Codable, Hashable, ExpressibleByStringLiteral {
   }
 }
 
-struct VehicleSupportStatus: Codable {
-  let years: ClosedRange<Int>
+package struct VehicleSupportStatus: Codable {
+  package static func loadAll() throws -> [Make: [Model: [VehicleSupportStatus]]] {
+    let makesUrl = Bundle.module.url(forResource: "supportmatrix", withExtension: "json")!
+    let makesData = try Data(contentsOf: makesUrl)
+    return try JSONDecoder().decode([Make: [Model: [VehicleSupportStatus]]].self, from: makesData)
+  }
 
-  enum TestingStatus: Codable {
+  package let years: ClosedRange<Int>
+
+  package enum TestingStatus: Codable {
     case onboarded
     case partiallyOnboarded
     case testerNeeded
@@ -29,7 +35,7 @@ struct VehicleSupportStatus: Codable {
       case activeTester
     }
 
-    func encode(to encoder: any Encoder) throws {
+    package func encode(to encoder: any Encoder) throws {
       switch self {
       case .onboarded:
         var container = encoder.singleValueContainer()
@@ -46,7 +52,7 @@ struct VehicleSupportStatus: Codable {
       }
     }
 
-    init(from decoder: any Decoder) throws {
+    package init(from decoder: any Decoder) throws {
       // First try to decode as a single string value
       if let container = try? decoder.singleValueContainer(),
          let value = try? container.decode(String.self) {
@@ -79,23 +85,23 @@ struct VehicleSupportStatus: Codable {
       )
     }
   }
-  let testingStatus: TestingStatus
+  package let testingStatus: TestingStatus
 
-  enum SupportState: String, Codable {
+  package enum SupportState: String, Codable {
     case all
     case obd
     case ota
     case na
   }
-  let stateOfCharge: SupportState?
-  let stateOfHealth: SupportState?
-  let charging: SupportState?
-  let cells: SupportState?
-  let fuelLevel: SupportState?
-  let speed: SupportState?
-  let range: SupportState?
-  let odometer: SupportState?
-  let tirePressure: SupportState?
+  package let stateOfCharge: SupportState?
+  package let stateOfHealth: SupportState?
+  package let charging: SupportState?
+  package let cells: SupportState?
+  package let fuelLevel: SupportState?
+  package let speed: SupportState?
+  package let range: SupportState?
+  package let odometer: SupportState?
+  package let tirePressure: SupportState?
 
   init(years: ClosedRange<Int>, testingStatus: TestingStatus, stateOfCharge: SupportState?, stateOfHealth: SupportState?, charging: SupportState?, cells: SupportState?, fuelLevel: SupportState?, speed: SupportState?, range: SupportState?, odometer: SupportState?, tirePressure: SupportState?) {
     self.years = years

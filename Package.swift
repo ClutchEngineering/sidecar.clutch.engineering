@@ -12,10 +12,13 @@ let package = Package(
     .package(url: "https://github.com/jverkoey/slipstream.git", branch: "main"),
   ],
   targets: [
-    .executableTarget(name: "sidecar.clutch.engineering", dependencies: [
+    .executableTarget(name: "gensite", dependencies: [
       .product(name: "Slipstream", package: "slipstream"),
-    ], resources: [
-      .process("supportmatrix.json")
+      "VehicleSupport",
     ]),
+
+    .target(name: "VehicleSupport", resources: [
+      .process("supportmatrix.json")
+    ])
   ]
 )
