@@ -1,0 +1,6869 @@
+{
+  "Abarth" : [
+    {
+      "model" : "595"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2007,
+          2024
+        ]
+      }
+    ]
+  ],
+  "Acura" : [
+    {
+      "model" : "TSX"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2004,
+          2014
+        ]
+      }
+    ],
+    {
+      "model" : "TLX",
+      "symbolName" : "tlx"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "tirePressure" : "obd",
+        "years" : [
+          2015,
+          2015
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2016,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Integra"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2001
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "MDX"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2001,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "RDX"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2007,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Alfa Romeo" : [
+    {
+      "model" : "Giulietta"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2010,
+          2020
+        ]
+      }
+    ]
+  ],
+  "Audi" : [
+    {
+      "model" : "A7"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2010,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Q7"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2005,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "RS 3"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2011,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "A5 Sportback"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2007,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "SQ5"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2013,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "e-tron"
+    },
+    [
+      {
+        "fuelLevel" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2019,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "TT"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1998,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "A4"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "S4"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ]
+  ],
+  "BMW" : [
+    {
+      "model" : "i3",
+      "symbolName" : "i3"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2014,
+          2017
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "bereneb"
+        },
+        "years" : [
+          2018,
+          2018
+        ]
+      },
+      {
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "range" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "obd",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2019,
+          2019
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2021
+        ]
+      }
+    ],
+    {
+      "model" : "i4"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "E91"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2005,
+          2012
+        ]
+      }
+    ],
+    {
+      "model" : "530i"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Z4 30si"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2006,
+          2008
+        ]
+      }
+    ],
+    {
+      "model" : "320d"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1998,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "iX3"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "4 Series Gran Coupe"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2014,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "5 Series"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "X5"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1999,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "640i f13"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2011,
+          2018
+        ]
+      }
+    ],
+    {
+      "model" : "520 D"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2000,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "M4"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2014,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "328i"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "340i"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2015,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "325i"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "840i"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "M235i"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2014,
+          2016
+        ]
+      }
+    ],
+    {
+      "model" : "318d"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1998,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "2 Series"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2014,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "I3s"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2018,
+          2021
+        ]
+      }
+    ],
+    {
+      "model" : "M240i"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2016,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Z3"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2002
+        ]
+      }
+    ],
+    {
+      "model" : "525xi"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2004,
+          2010
+        ]
+      }
+    ],
+    {
+      "model" : "3 Series"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1998,
+          2012
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2013,
+          2013
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2014,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "323i"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "X3",
+      "symbolName" : "x3"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2018,
+          2018
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2020
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : {
+          "activeTester" : "chihengyang"
+        },
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "iX"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "X1"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2009,
+          2020
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "1 Series"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2004,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "330e"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2016,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "118D f20"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2011,
+          2019
+        ]
+      }
+    ],
+    {
+      "model" : "G20"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2018,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "4 Series"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2014,
+          2024
+        ]
+      }
+    ]
+  ],
+  "BYD" : [
+    {
+      "model" : "Atto 3"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2022,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Dolphin Mini"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Buick" : [
+    {
+      "model" : "Encore GX"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Cadillac" : [
+    {
+      "model" : "ELR"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2014,
+          2016
+        ]
+      }
+    ],
+    {
+      "model" : "XT5"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "CTS"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2003,
+          2019
+        ]
+      }
+    ]
+  ],
+  "Chevrolet" : [
+    {
+      "model" : "Trailblazer"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Spark"
+    },
+    [
+      {
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2013,
+          2022
+        ]
+      }
+    ],
+    {
+      "model" : "Malibu"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1997,
+          2023
+        ]
+      }
+    ],
+    {
+      "model" : "Camaro"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Bolt EUV",
+      "symbolName" : "bolteuv"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2022
+        ]
+      },
+      {
+        "cells" : "obd",
+        "charging" : "obd",
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Cruze"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2008,
+          2019
+        ]
+      }
+    ],
+    {
+      "model" : "Impala"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2000,
+          2020
+        ]
+      }
+    ],
+    {
+      "model" : "Silverado 2500"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1999,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Silverado 1500"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1999,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Colorado"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2004,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Volt"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2011,
+          2019
+        ]
+      }
+    ],
+    {
+      "model" : "Lacrosse"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2005,
+          2019
+        ]
+      }
+    ],
+    {
+      "model" : "Bolt EV"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2018
+        ]
+      },
+      {
+        "charging" : "obd",
+        "fuelLevel" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2019,
+          2019
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2021
+        ]
+      },
+      {
+        "cells" : "obd",
+        "charging" : "obd",
+        "fuelLevel" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : {
+          "activeTester" : "wrd"
+        },
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Trax"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2013,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Blazer EV"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Traverse"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2009,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "S 10"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2004
+        ]
+      }
+    ],
+    {
+      "model" : "Express"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Silverado EV"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Equinox"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2005,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Chrysler" : [
+    {
+      "model" : "200"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2011,
+          2017
+        ]
+      }
+    ],
+    {
+      "model" : "Pacifica Hybrid"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2020
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "joshuahinckley"
+        },
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Sebring"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2010
+        ]
+      }
+    ],
+    {
+      "model" : "300"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2005,
+          2023
+        ]
+      }
+    ]
+  ],
+  "Citroen" : [
+    {
+      "model" : "eC4 X"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "E C4"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "CZero"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2010,
+          2020
+        ]
+      }
+    ]
+  ],
+  "Cupra" : [
+    {
+      "model" : "Born"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Formentor"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2020,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Leon"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2025
+        ]
+      }
+    ]
+  ],
+  "DS" : [
+    {
+      "model" : "7"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2018,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Dacia" : [
+    {
+      "model" : "Sandero"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2007,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Spring"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Dodge" : [
+    {
+      "model" : "Challenger"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2008,
+          2023
+        ]
+      }
+    ],
+    {
+      "model" : "Journey"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2009,
+          2020
+        ]
+      }
+    ],
+    {
+      "model" : "Charger"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2006,
+          2023
+        ]
+      }
+    ]
+  ],
+  "DongFeng" : [
+    {
+      "model" : "Seres 3"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Fiat" : [
+    {
+      "model" : "Grande Punto"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2005,
+          2007
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : {
+          "activeTester" : "afonsosriv"
+        },
+        "years" : [
+          2008,
+          2008
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2009,
+          2009
+        ]
+      }
+    ]
+  ],
+  "Fisker" : [
+    {
+      "model" : "Ocean"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Ford" : [
+    {
+      "model" : "Bronco Raptor"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Bronco"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Expedition"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1997,
+          2025
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "F-350"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Five Hundred"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2005,
+          2007
+        ]
+      }
+    ],
+    {
+      "model" : "Fusion Energi"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2013,
+          2020
+        ]
+      }
+    ],
+    {
+      "model" : "Kuga"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2008,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "F-150 Lightning"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Fiesta"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2019
+        ]
+      }
+    ],
+    {
+      "model" : "Explorer"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Fusion Hybrid"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2010,
+          2020
+        ]
+      }
+    ],
+    {
+      "model" : "Ranger"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Escape",
+      "symbolName" : "escape"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2001,
+          2020
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "tirePressure" : "obd",
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "tirePressure" : "obd",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "F-250"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "F-150"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2021
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Focus"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1998,
+          2018
+        ]
+      }
+    ],
+    {
+      "model" : "Fusion"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2006,
+          2016
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : {
+          "activeTester" : "kanithus"
+        },
+        "tirePressure" : "obd",
+        "years" : [
+          2017,
+          2017
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2006,
+          2016
+        ]
+      }
+    ],
+    {
+      "model" : "Mustang Mach-E"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Sierra"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Maverick"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2022,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Transit"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2015,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Mustang",
+      "symbolName" : "mustang"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2022
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "range" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ]
+  ],
+  "GMC" : [
+    {
+      "model" : "Acadia"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2007,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Sierra 1500"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1999,
+          2024
+        ]
+      }
+    ]
+  ],
+  "Genesis" : [
+    {
+      "model" : "G80"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Haval" : [
+    {
+      "model" : "H6 HEV"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Honda" : [
+    {
+      "model" : "CR-V",
+      "symbolName" : "crv"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1997,
+          2018
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2019,
+          2019
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "City"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Jazz"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2001,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "M NV"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Clarity"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2022
+        ]
+      }
+    ],
+    {
+      "model" : "Fit"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2001,
+          2020
+        ]
+      }
+    ],
+    {
+      "model" : "Accord",
+      "symbolName" : "accord"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2012
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2013,
+          2013
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2014,
+          2017
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : {
+          "activeTester" : "cortiz47"
+        },
+        "years" : [
+          2018,
+          2018
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Prologue"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Civic"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2023
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Accord Hybrid"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2005,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Pilot"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2003,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Odyssey"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "HR V"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2016,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "WRV"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "CR-V Hybrid"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Hyundai" : [
+    {
+      "model" : "Genesis"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2009,
+          2016
+        ]
+      }
+    ],
+    {
+      "model" : "Santa Fe Hybrid",
+      "symbolName" : "santafehybrid"
+    },
+    [
+      {
+        "cells" : "obd",
+        "charging" : "obd",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "onboarded",
+        "tirePressure" : "obd",
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "cells" : "obd",
+        "charging" : "obd",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "onboarded",
+        "tirePressure" : "obd",
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Veloster"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2011,
+          2022
+        ]
+      }
+    ],
+    {
+      "model" : "IONIQ 6",
+      "symbolName" : "ioniq6"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "fuelLevel" : "na",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "obd",
+        "testingStatus" : {
+          "activeTester" : "Danmartyn"
+        },
+        "tirePressure" : "obd",
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "i10"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2007,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "i20"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2008,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Santa Cruz"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2022,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Sonata"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "i30 Sedan"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2007,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Kona"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2018,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "IONIQ 5",
+      "symbolName" : "ioniq5"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "fuelLevel" : "na",
+        "stateOfCharge" : "obd",
+        "testingStatus" : {
+          "activeTester" : "spider"
+        },
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "charging" : "obd",
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "obd",
+        "testingStatus" : {
+          "activeTester" : "spenumatsa"
+        },
+        "tirePressure" : "obd",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "charging" : "obd",
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "obd",
+        "testingStatus" : {
+          "activeTester" : "zachmiles"
+        },
+        "tirePressure" : "obd",
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Tucson",
+      "symbolName" : "tucson"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2004,
+          2018
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : {
+          "activeTester" : "BradP1011"
+        },
+        "tirePressure" : "obd",
+        "years" : [
+          2019,
+          2019
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "salvadordali256"
+        },
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Elantra"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "IONIQ PHEV"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2017
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : {
+          "activeTester" : "zaaaacch"
+        },
+        "tirePressure" : "obd",
+        "years" : [
+          2018,
+          2018
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2022
+        ]
+      }
+    ],
+    {
+      "model" : "Palisade"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2020,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Tucson Hybrid"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2004,
+          2018
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : {
+          "activeTester" : "BradP1011"
+        },
+        "years" : [
+          2019,
+          2019
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2021
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "salvadordali256"
+        },
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Kona Electric"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2018,
+          2021
+        ]
+      },
+      {
+        "charging" : "obd",
+        "fuelLevel" : "na",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "fuelLevel" : "na",
+        "stateOfCharge" : "obd",
+        "testingStatus" : {
+          "activeTester" : "Briantran33"
+        },
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Jeep" : [
+    {
+      "model" : "Wrangler 4xe"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Wrangler"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Grand Cherokee"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2017
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2018,
+          2018
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2023
+        ]
+      }
+    ]
+  ],
+  "KTM" : [
+    {
+      "model" : "RC 390",
+      "symbolName" : "rc390"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2013,
+          2022
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Kia" : [
+    {
+      "model" : "Soul"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2010,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Stinger"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2018,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Seltos"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Niro EV"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2023
+        ]
+      }
+    ],
+    {
+      "model" : "Rio"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2001,
+          2023
+        ]
+      }
+    ],
+    {
+      "model" : "Rondo"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2007,
+          2017
+        ]
+      }
+    ],
+    {
+      "model" : "Optima"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2001,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "K5"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Telluride"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2020,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Sportage"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1995,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "EV 6"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2023
+        ]
+      },
+      {
+        "fuelLevel" : "na",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "EV 9",
+      "symbolName" : "ev9"
+    },
+    [
+      {
+        "cells" : "obd",
+        "charging" : "obd",
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "obd",
+        "testingStatus" : "onboarded",
+        "tirePressure" : "obd",
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Land Rover" : [
+    {
+      "model" : "LR4"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2010,
+          2016
+        ]
+      }
+    ],
+    {
+      "model" : "Range Rover"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2005,
+          2024
+        ]
+      }
+    ]
+  ],
+  "Lexus" : [
+    {
+      "model" : "RX 450h"
+    },
+    [
+      {
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2010,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "LC 500"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "IS 300"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2001,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "LS"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "GX 470"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2003,
+          2009
+        ]
+      }
+    ],
+    {
+      "model" : "IS 350"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2006,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "NX 350h"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "CT 200h"
+    },
+    [
+      {
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2011,
+          2017
+        ]
+      }
+    ],
+    {
+      "model" : "GX 460"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2003,
+          2014
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "Thunderbirdhotel"
+        },
+        "years" : [
+          2015,
+          2015
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2016,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "ES 300h"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2013,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "UX"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Lincoln" : [
+    {
+      "model" : "Corsair"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2020,
+          2024
+        ]
+      }
+    ]
+  ],
+  "MG" : [
+    {
+      "model" : "MG4",
+      "symbolName" : "mg4"
+    },
+    [
+      {
+        "cells" : "obd",
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "all",
+        "range" : "all",
+        "speed" : "obd",
+        "stateOfCharge" : "all",
+        "stateOfHealth" : "obd",
+        "testingStatus" : "onboarded",
+        "tirePressure" : "ota",
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Comet"
+    },
+    [
+      {
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
+          2024
+        ]
+      }
+    ]
+  ],
+  "MINI" : [
+    {
+      "model" : "Clubman F54"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2015,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Cooper SE"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Hardtop"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2002,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "JCW"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2008,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Cooper S"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2002,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Maruti" : [
+    {
+      "model" : "Celerio"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2014,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Maxus" : [
+    {
+      "model" : "eDeliver 3"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Mazda" : [
+    {
+      "model" : "3"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2004,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "CX-50"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "RX 7"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2002
+        ]
+      }
+    ],
+    {
+      "model" : "MX 5"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "MX 30"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "BT50"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2006,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "6"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2003,
+          2021
+        ]
+      }
+    ],
+    {
+      "model" : "CX-90"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "2"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2007,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "CX-5"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2013,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "CX-9"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2007,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "CX-3"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2016,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "CX-30"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2020,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "CX-60"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Mercedes" : [
+    {
+      "model" : "E-Class"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "CLA-Class"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2013,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "C-Class"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "E180"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "GLB 250"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "C200d"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "S-Class"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "G-Class"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "GLA250"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2014,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "EQS-Class"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Mitsubishi" : [
+    {
+      "model" : "Outlander PHEV"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2018,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Eclipse Cross PHEV"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Lancer"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2017
+        ]
+      }
+    ],
+    {
+      "model" : "Outlander"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2003,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "RVR"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2011,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Eclipse Cross"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2018,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Challenger"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2016
+        ]
+      }
+    ]
+  ],
+  "Nissan" : [
+    {
+      "model" : "Altima"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Kicks"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2018,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Juke",
+      "symbolName" : "juke"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2011
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "range" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2012,
+          2012
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2013,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Rogue",
+      "symbolName" : "rogue"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2014,
+          2014
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2015,
+          2016
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : {
+          "activeTester" : "arronsparrow"
+        },
+        "years" : [
+          2017,
+          2017
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2018,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "X Trail"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2001,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Pathfinder"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2023
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Leaf",
+      "symbolName" : "leaf"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2010,
+          2017
+        ]
+      },
+      {
+        "charging" : "obd",
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "range" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "obd",
+        "testingStatus" : "onboarded",
+        "tirePressure" : "obd",
+        "years" : [
+          2018,
+          2018
+        ]
+      },
+      {
+        "charging" : "obd",
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "range" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "obd",
+        "testingStatus" : "onboarded",
+        "tirePressure" : "obd",
+        "years" : [
+          2019,
+          2019
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "ARIYA"
+    },
+    [
+      {
+        "fuelLevel" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Sentra"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Qashqai"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2006,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Murano"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2003,
+          2024
+        ]
+      }
+    ]
+  ],
+  "Omoda" : [
+    {
+      "model" : "Omoda 5 EV"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Opel" : [
+    {
+      "model" : "Corsa"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Peugeot" : [
+    {
+      "model" : "208"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2012,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "2008"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2013,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "e 208"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "308"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2007,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "508"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2011,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "308 Hybrid"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "505"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Expert"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Polestar" : [
+    {
+      "model" : "Polestar 2",
+      "symbolName" : "polestar2"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2020
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "jpalensk"
+        },
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "alexr"
+        },
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : {
+          "activeTester" : "jbritton"
+        },
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Polestar 3"
+    },
+    [
+      {
+        "testingStatus" : {
+          "activeTester" : "david.rothera"
+        },
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Polestar 4"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Porsche" : [
+    {
+      "model" : "Macan",
+      "symbolName" : "macan"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2014,
+          2023
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "911"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Cayenne",
+      "symbolName" : "cayenne"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2002,
+          2014
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : {
+          "activeTester" : "b2pointoh"
+        },
+        "years" : [
+          2015,
+          2015
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2016,
+          2023
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Panamera"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2010,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Taycan",
+      "symbolName" : "taycan"
+    },
+    [
+      {
+        "cells" : "obd",
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "all",
+        "range" : "all",
+        "speed" : "obd",
+        "stateOfCharge" : "all",
+        "stateOfHealth" : "obd",
+        "testingStatus" : "onboarded",
+        "tirePressure" : "all",
+        "years" : [
+          2019,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "718"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2016,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Ram" : [
+    {
+      "model" : "1500"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2010,
+          2025
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : {
+          "activeTester" : "mattbires"
+        },
+        "years" : [
+          2019,
+          2019
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2010,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Renault" : [
+    {
+      "model" : "Megane E-Tech"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Kwid"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2015,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Clio"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Clio 5"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Kadjar"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2015,
+          2022
+        ]
+      }
+    ],
+    {
+      "model" : "Zoe"
+    },
+    [
+      {
+        "fuelLevel" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2012,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Scenic E-Tech"
+    },
+    [
+      {
+        "fuelLevel" : "na",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Duster"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2010,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Clio V"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Symbol"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1999,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Megane"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Rivian" : [
+    {
+      "model" : "R1S"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "Alex"
+        },
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "R1T"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Saab" : [
+    {
+      "model" : "9-3"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1998,
+          2014
+        ]
+      }
+    ]
+  ],
+  "Scion" : [
+    {
+      "model" : "FR S"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2013,
+          2016
+        ]
+      }
+    ]
+  ],
+  "Seat" : [
+    {
+      "model" : "Ibiza"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Leon",
+      "symbolName" : "leon"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1999,
+          2016
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2017,
+          2017
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2018,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Mii Electric"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2023
+        ]
+      }
+    ]
+  ],
+  "Smart" : [
+    {
+      "model" : "Smart 1"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Subaru" : [
+    {
+      "model" : "Crosstrek"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2013,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "WRX"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2002,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Solterra"
+    },
+    [
+      {
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Legacy"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Forester"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1997,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Ascent"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "BRZ"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2013,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Impreza"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Outback"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ]
+  ],
+  "Suzuki" : [
+    {
+      "model" : "Swift"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Tata" : [
+    {
+      "model" : "Harrier"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Tesla" : [
+    {
+      "model" : "Semi"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Model X"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2016,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Model Y",
+      "symbolName" : "modely"
+    },
+    [
+      {
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : "partiallyOnboarded",
+        "tirePressure" : "ota",
+        "years" : [
+          2020,
+          2022
+        ]
+      },
+      {
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : {
+          "activeTester" : "sylvainramousse"
+        },
+        "tirePressure" : "ota",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : {
+          "activeTester" : "amitchell516"
+        },
+        "tirePressure" : "ota",
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : "partiallyOnboarded",
+        "tirePressure" : "ota",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Model S"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2012,
+          2015
+        ]
+      },
+      {
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : {
+          "activeTester" : "shaver"
+        },
+        "tirePressure" : "ota",
+        "years" : [
+          2016,
+          2016
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Model 3",
+      "symbolName" : "model3"
+    },
+    [
+      {
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : "partiallyOnboarded",
+        "tirePressure" : "ota",
+        "years" : [
+          2017,
+          2023
+        ]
+      },
+      {
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : {
+          "activeTester" : "justinscheetz"
+        },
+        "tirePressure" : "ota",
+        "years" : [
+          2019,
+          2019
+        ]
+      },
+      {
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : "partiallyOnboarded",
+        "tirePressure" : "ota",
+        "years" : [
+          2020,
+          2020
+        ]
+      },
+      {
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : {
+          "activeTester" : "Atreideez"
+        },
+        "tirePressure" : "ota",
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : "partiallyOnboarded",
+        "tirePressure" : "ota",
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : {
+          "activeTester" : "leoprose"
+        },
+        "tirePressure" : "ota",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : {
+          "activeTester" : "Olitoady"
+        },
+        "tirePressure" : "ota",
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "charging" : "ota",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : "partiallyOnboarded",
+        "tirePressure" : "ota",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Cybertruck"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Toyota" : [
+    {
+      "model" : "Auris"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2006,
+          2018
+        ]
+      }
+    ],
+    {
+      "model" : "Corolla Hybrid"
+    },
+    [
+      {
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2020,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "4Runner",
+      "symbolName" : "4runner"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2019
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "ota",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "tirePressure" : "ota",
+        "years" : [
+          2020,
+          2020
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Corolla iM"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2016,
+          2018
+        ]
+      }
+    ],
+    {
+      "model" : "RAV4 Hybrid"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2016,
+          2019
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "ktaletsk"
+        },
+        "years" : [
+          2020,
+          2020
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "RAV4"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Yaris Cross"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2020
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "molgar"
+        },
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Fortuner"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2005,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Sienna"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1998,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Tundra"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2000,
+          2019
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "danomeyer"
+        },
+        "years" : [
+          2020,
+          2020
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Camry Hybrid"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2007,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Corolla Cross"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Crown Signia"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Grand Highlander"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Tacoma",
+      "symbolName" : "tacoma"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2022
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Land Cruiser"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2021
+        ]
+      }
+    ],
+    {
+      "model" : "Prius Prime"
+    },
+    [
+      {
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2017,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Yaris iA"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2016,
+          2018
+        ]
+      }
+    ],
+    {
+      "model" : "Sequoia"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2001,
+          2002
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "tgerring"
+        },
+        "years" : [
+          2003,
+          2003
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2004,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Ist"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2002,
+          2016
+        ]
+      }
+    ],
+    {
+      "model" : "Prius v"
+    },
+    [
+      {
+        "fuelLevel" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2012,
+          2017
+        ]
+      }
+    ],
+    {
+      "model" : "MR2"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2007
+        ]
+      }
+    ],
+    {
+      "model" : "Corolla"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Avalon"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2022
+        ]
+      }
+    ],
+    {
+      "model" : "GR Corolla"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Prius"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1997,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "C HR"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2016,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "GR86"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Innova"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2004,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "RAV4 Prime"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Venza"
+    },
+    [
+      {
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2009,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Highlander"
+    },
+    [
+      {
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2001,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "bZ4X",
+      "symbolName" : "bz4x"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "onboarded",
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Yaris"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1999,
+          2020
+        ]
+      }
+    ],
+    {
+      "model" : "Camry"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2002
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "lambhofreak"
+        },
+        "years" : [
+          2003,
+          2003
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2004,
+          2013
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "eliasmalek24"
+        },
+        "years" : [
+          2014,
+          2014
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2015,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Vauxhall" : [
+    {
+      "model" : "Mokka"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2012,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Ampera"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2011,
+          2015
+        ]
+      }
+    ],
+    {
+      "model" : "Corsa"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Astra"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Mokka e"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Volkswagen" : [
+    {
+      "model" : "Up"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2011,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "e-Golf",
+      "symbolName" : "egolf"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2015,
+          2018
+        ]
+      },
+      {
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "range" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2019,
+          2019
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Polo"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Taos"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Touran"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2003,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Tiguan"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2007,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Crafter"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2006,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "CC"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2009,
+          2017
+        ]
+      }
+    ],
+    {
+      "model" : "Golf City"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2007,
+          2010
+        ]
+      }
+    ],
+    {
+      "model" : "ID.4"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Golf Variant"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Jetta GLI"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2002,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Rabbit"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2006,
+          2009
+        ]
+      }
+    ],
+    {
+      "model" : "Taigo"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "T Roc"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "ID.3"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2020,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Golf"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Passat"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2002,
+          2015
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2016,
+          2016
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "ID.5"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "ID7 Tourer"
+    },
+    [
+      {
+        "fuelLevel" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "GTE"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2015,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Golf GTI"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Jetta"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Atlas"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2018,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "T Cross"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Golf R"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2012,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Scirocco"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2008,
+          2017
+        ]
+      }
+    ]
+  ],
+  "Volvo" : [
+    {
+      "model" : "XC60 PHEV"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2018,
+          2019
+        ]
+      },
+      {
+        "fuelLevel" : "na",
+        "testingStatus" : {
+          "activeTester" : "shaver"
+        },
+        "years" : [
+          2020,
+          2020
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "XC90"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2003,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "S60"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2000,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "V60"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2011,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "V90 Cross Country"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "XC60"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2009,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "C30"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2006,
+          2013
+        ]
+      }
+    ],
+    {
+      "model" : "S90"
+    },
+    [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2016,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "V50"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2004,
+          2012
+        ]
+      }
+    ],
+    {
+      "model" : "V70"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2016
+        ]
+      }
+    ],
+    {
+      "model" : "EX30"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "XC40 Recharge"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2018,
+          2020
+        ]
+      },
+      {
+        "testingStatus" : {
+          "activeTester" : "zandr"
+        },
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Voyah" : [
+    {
+      "model" : "Free"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
+          2025
+        ]
+      }
+    ]
+  ],
+  "Škoda" : [
+    {
+      "model" : "Octavia"
+    },
+    [
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          1996,
+          2024
+        ]
+      }
+    ],
+    {
+      "model" : "Fabia"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1999,
+          2025
+        ]
+      }
+    ],
+    {
+      "model" : "Kamiq"
+    },
+    [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
+          2025
+        ]
+      }
+    ]
+  ]
+}

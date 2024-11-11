@@ -14,6 +14,8 @@ let package = Package(
   targets: [
     .executableTarget(name: "sidecar.clutch.engineering", dependencies: [
       .product(name: "Slipstream", package: "slipstream"),
+    ], resources: [
+      .process("supportmatrix.json")
     ]),
   ]
 )

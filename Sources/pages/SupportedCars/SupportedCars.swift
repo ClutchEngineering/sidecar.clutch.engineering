@@ -4,8 +4,16 @@ import Slipstream
 
 let becomeBetaURL = URL(string: "/beta")
 
-func modelNameForSorting(_ string: Model) -> Model {
-  string.replacingOccurrences(of: " ", with: "").applyingTransform(.stripDiacritics, reverse: false)!
+func makeNameForSorting(_ string: Make) -> String {
+  string
+    .replacingOccurrences(of: " ", with: "")
+    .applyingTransform(.stripDiacritics, reverse: false)!
+}
+
+func modelNameForSorting(_ model: Model) -> String {
+  model.model
+    .replacingOccurrences(of: " ", with: "")
+    .applyingTransform(.stripDiacritics, reverse: false)!
 }
 
 struct ParameterHeader: View {
@@ -64,10 +72,10 @@ struct NotApplicableStamp: View {
 }
 
 struct SupportStatus: View {
-  let supported: VehicleSupportStatus.SupportState
+  let supported: VehicleSupportStatus.SupportState?
   let isLast: Bool
 
-  init(supported: VehicleSupportStatus.SupportState, isLast: Bool = false) {
+  init(supported: VehicleSupportStatus.SupportState?, isLast: Bool = false) {
     self.supported = supported
     self.isLast = isLast
   }
@@ -99,7 +107,7 @@ struct SupportStatus: View {
         }
       }
       .padding(.horizontal, 8)
-    case .unk:
+    case .none:
       Bordered(showTrailingBorder: !isLast) {
         TableCell {
           Text("PID?")
@@ -173,69 +181,6 @@ struct HeaderCell<Content: View>: View {
         .className("first:rounded-tl-lg")
         .className("last:rounded-tr-lg")
     }
-  }
-}
-
-struct VehicleSupportStatus {
-  let years: ClosedRange<Int>
-
-  enum TestingStatus {
-    case onboarded
-    case partiallyOnboarded
-    case testerNeeded
-    case activeTester(String)
-  }
-  let testingStatus: TestingStatus
-
-  enum SupportState {
-    case all
-    case obd
-    case ota
-    case unk
-    case na
-  }
-  let stateOfCharge: SupportState
-  let stateOfHealth: SupportState
-  let charging: SupportState
-  let cells: SupportState
-  let fuelLevel: SupportState
-  let speed: SupportState
-  let range: SupportState
-  let odometer: SupportState
-  let tirePressure: SupportState
-
-  init(years: ClosedRange<Int>, testingStatus: TestingStatus, stateOfCharge: SupportState, stateOfHealth: SupportState, charging: SupportState, cells: SupportState, fuelLevel: SupportState, speed: SupportState, range: SupportState, odometer: SupportState, tirePressure: SupportState) {
-    self.years = years
-    self.testingStatus = testingStatus
-    self.stateOfCharge = stateOfCharge
-    self.stateOfHealth = stateOfHealth
-    self.charging = charging
-    self.cells = cells
-    self.fuelLevel = fuelLevel
-    self.speed = speed
-    self.range = range
-    self.odometer = odometer
-    self.tirePressure = tirePressure
-  }
-
-  init(years: Int, testingStatus: TestingStatus, stateOfCharge: SupportState = .na, stateOfHealth: SupportState = .na, charging: SupportState = .na, cells: SupportState = .na, fuelLevel: SupportState = .na, speed: SupportState = .unk, range: SupportState = .unk, odometer: SupportState = .unk, tirePressure: SupportState = .unk) {
-    self.init(years: years...years, testingStatus: testingStatus, stateOfCharge: stateOfCharge, stateOfHealth: stateOfHealth, charging: charging, cells: cells, fuelLevel: fuelLevel, speed: speed, range: range, odometer: odometer, tirePressure: tirePressure)
-  }
-
-  static func testerNeeded(years: ClosedRange<Int>) -> Self {
-    .init(years: years, testingStatus: .testerNeeded, stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk)
-  }
-
-  static func testerNeeded(years: Int) -> Self {
-    .testerNeeded(years: years...years)
-  }
-
-  static func newTester(years: ClosedRange<Int>, username: String) -> Self {
-    .init(years: years, testingStatus: .activeTester(username), stateOfCharge: .unk, stateOfHealth: .unk, charging: .unk, cells: .unk, fuelLevel: .unk, speed: .unk, range: .unk, odometer: .unk, tirePressure: .unk)
-  }
-
-  static func newTester(years: Int, username: String) -> Self {
-    .newTester(years: years...years, username: username)
   }
 }
 
@@ -419,14 +364,14 @@ struct ModelSupportSection: View {
     let id = "\(make)-\(model)"
     Div {
       HStack(alignment: .center, spacing: 16) {
-        if !model.hasPrefix(" ") {
-          Image(URL(string: "/gfx/model/\(model.lowercased().replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "")).svg"))
+        if let symbolName = model.symbolName {
+          Image(URL(string: "/gfx/model/\(symbolName).svg"))
             .colorInvert(condition: .dark)
             .display(.inlineBlock)
             .frame(width: 48)
         }
         Link(URL(string: "#" + id)) {
-          Text(model.trimmingCharacters(in: .whitespaces))
+          Text(model.model)
             .bold()
             .fontDesign("rounded")
             .fontSize(.large, condition: .desktop)
@@ -493,6 +438,14 @@ struct ModelSupportSection: View {
 }
 
 struct SupportedCars: View {
+  let makes: [Make: [Model: [VehicleSupportStatus]]]
+
+  init() {
+    let makesUrl = Bundle.module.url(forResource: "supportmatrix", withExtension: "json")!
+    let makesData = try! Data(contentsOf: makesUrl)
+    makes = try! JSONDecoder().decode([Make: [Model: [VehicleSupportStatus]]].self, from: makesData)
+  }
+
   var body: some View {
     Page(
       "Supported Cars",
@@ -651,7 +604,7 @@ struct SupportedCars: View {
             .margin(.bottom, 32)
 
           Div {
-            for make in makes.keys.sorted(by: { modelNameForSorting($0) < modelNameForSorting($1) }) {
+            for make in makes.keys.sorted(by: { makeNameForSorting($0) < makeNameForSorting($1) }) {
               MakeLink(make: make)
             }
           }
