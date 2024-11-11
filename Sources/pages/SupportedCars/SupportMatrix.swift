@@ -558,7 +558,7 @@ let makes: [Make: [Model: [VehicleSupportStatus]]] = [
     ],
     "Tucson": [
       .testerNeeded(years: 2004...2018),
-      .init(years: 2019, testingStatus: .activeTester("BradP1011"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .unk),
+      .init(years: 2019, testingStatus: .activeTester("BradP1011"), stateOfCharge: .na, stateOfHealth: .na, charging: .na, cells: .na, fuelLevel: .obd, speed: .obd, range: .unk, odometer: .unk, tirePressure: .obd),
       .testerNeeded(years: 2021),
       .newTester(years: 2022, username: "salvadordali256"),
       .testerNeeded(years: 2023...2025),
