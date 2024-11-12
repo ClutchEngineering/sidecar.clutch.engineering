@@ -20,16 +20,27 @@ class CSVParser {
       .dropFirst() // Skip header
 
     return rows.compactMap { row -> CSVVehicle? in
-      let columns = row.components(separatedBy: ",")
-      guard columns.count >= 3 else { return nil }
+      // Split the row, handling quoted fields
+      let components = row.split(
+        separator: ",",
+        maxSplits: 2, // We only need 3 fields
+        omittingEmptySubsequences: false
+      )
 
-      let makeModel = columns[0].split(separator: "/")
+      guard components.count >= 3 else { return nil }
+
+      let makeModel = components[0].split(separator: "/")
       guard makeModel.count == 2 else { return nil }
 
       let make = String(makeModel[0])
       let model = String(makeModel[1])
-      let year = Double(columns[1]).map { Int($0) }
-      let signals = Set(columns[2].trimmingCharacters(in: CharacterSet(charactersIn: "\"")).split(separator: ",").map(String.init))
+      let year = Double(components[1]).map { Int($0) }
+
+      // Handle the quoted signals field
+      let signalsStr = String(components[2])
+        .trimmingCharacters(in: CharacterSet(charactersIn: "\"\\")) // Remove quotes and escapes
+
+      let signals = Set(signalsStr.split(separator: ",").map(String.init))
 
       return CSVVehicle(make: make, model: model, year: year, signals: signals)
     }
@@ -40,7 +51,12 @@ class CSVParser {
 // MARK: - Support Matrix Generator
 
 class SupportMatrixGenerator {
-  static func generateSupportStatus(from signals: Set<String>, year: Int) -> VehicleSupportStatus {
+  static func generateSupportStatus(
+    from signals: Set<String>,
+    year: Int,
+    existingStatuses: [VehicleSupportStatus]
+  ) -> VehicleSupportStatus {
+    // First determine the current signals' states
     let stateOfCharge: VehicleSupportStatus.SupportState? = signals.contains("stateOfCharge") ? .obd : nil
     let stateOfHealth: VehicleSupportStatus.SupportState? = signals.contains("stateOfHealth") ? .obd : nil
     let charging: VehicleSupportStatus.SupportState? = signals.contains("isCharging") ? .obd : nil
@@ -53,18 +69,28 @@ class SupportMatrixGenerator {
     || signals.contains("rearLeftTirePressure")
     || signals.contains("rearRightTirePressure") ? .obd : nil
 
+    // Check if any existing status has .na for these fields
+    let shouldInheritStateOfCharge = existingStatuses.contains { $0.stateOfCharge == .na }
+    let shouldInheritStateOfHealth = existingStatuses.contains { $0.stateOfHealth == .na }
+    let shouldInheritCharging = existingStatuses.contains { $0.charging == .na }
+    let shouldInheritFuelLevel = existingStatuses.contains { $0.fuelLevel == .na }
+    let shouldInheritSpeed = existingStatuses.contains { $0.speed == .na }
+    let shouldInheritRange = existingStatuses.contains { $0.range == .na }
+    let shouldInheritOdometer = existingStatuses.contains { $0.odometer == .na }
+    let shouldInheritTirePressure = existingStatuses.contains { $0.tirePressure == .na }
+
     return VehicleSupportStatus(
       years: year...year,
       testingStatus: .partiallyOnboarded,
-      stateOfCharge: stateOfCharge,
-      stateOfHealth: stateOfHealth,
-      charging: charging,
-      cells: nil,
-      fuelLevel: fuelLevel,
-      speed: speed,
-      range: range,
-      odometer: odometer,
-      tirePressure: tirePressure
+      stateOfCharge: shouldInheritStateOfCharge ? .na : stateOfCharge,
+      stateOfHealth: shouldInheritStateOfHealth ? .na : stateOfHealth,
+      charging: shouldInheritCharging ? .na : charging,
+      cells: .na,
+      fuelLevel: shouldInheritFuelLevel ? .na : fuelLevel,
+      speed: shouldInheritSpeed ? .na : speed,
+      range: shouldInheritRange ? .na : range,
+      odometer: shouldInheritOdometer ? .na : odometer,
+      tirePressure: shouldInheritTirePressure ? .na : tirePressure
     )
   }
 }
@@ -83,7 +109,12 @@ class MatrixMerger {
   }
 
   // Helper to split a status if the year falls within its range
-  static func splitStatus(_ status: VehicleSupportStatus, atYear year: Int) -> (before: VehicleSupportStatus?, current: VehicleSupportStatus, after: VehicleSupportStatus?) {
+  static func splitStatus(
+    _ status: VehicleSupportStatus,
+    atYear year: Int,
+    signals: Set<String>,
+    existingStatuses: [VehicleSupportStatus]
+  ) -> (before: VehicleSupportStatus?, current: VehicleSupportStatus, after: VehicleSupportStatus?) {
     let range = status.years
 
     // If year is not in range, return nil for splits
@@ -129,19 +160,11 @@ class MatrixMerger {
       )
     }
 
-    // Create the current year status
-    let currentStatus = VehicleSupportStatus(
-      years: year...year,
-      testingStatus: status.testingStatus,
-      stateOfCharge: status.stateOfCharge,
-      stateOfHealth: status.stateOfHealth,
-      charging: status.charging,
-      cells: status.cells,
-      fuelLevel: status.fuelLevel,
-      speed: status.speed,
-      range: status.range,
-      odometer: status.odometer,
-      tirePressure: status.tirePressure
+    // Generate new status with CSV data, considering existing NA states
+    let currentStatus = SupportMatrixGenerator.generateSupportStatus(
+      from: signals,
+      year: year,
+      existingStatuses: existingStatuses
     )
 
     return (beforeStatus, currentStatus, afterStatus)
@@ -165,10 +188,12 @@ class MatrixMerger {
           let existingStatus = entry.supportStatuses[statusIndex]
 
           // Split the existing status
-          let (beforeStatus, _, afterStatus) = splitStatus(existingStatus, atYear: year)
-
-          // Generate the new status with CSV data
-          let newStatus = SupportMatrixGenerator.generateSupportStatus(from: vehicle.signals, year: year)
+          let (beforeStatus, newStatus, afterStatus) = splitStatus(
+            existingStatus,
+            atYear: year,
+            signals: vehicle.signals,
+            existingStatuses: entry.supportStatuses
+          )
 
           // Remove the old status
           entry.supportStatuses.remove(at: statusIndex)
@@ -185,13 +210,17 @@ class MatrixMerger {
           // Update the entry
           result[vehicle.make]![entryIndex] = entry
         } else {
-          // No existing status for this year, just add the new one
-          let status = SupportMatrixGenerator.generateSupportStatus(from: vehicle.signals, year: year)
+          // No existing status for this year, generate new one considering existing NA states
+          let status = SupportMatrixGenerator.generateSupportStatus(
+            from: vehicle.signals,
+            year: year,
+            existingStatuses: entry.supportStatuses
+          )
           result[vehicle.make]![entryIndex].supportStatuses.append(status)
         }
       } else {
-        // Create new entry
-        let status = SupportMatrixGenerator.generateSupportStatus(from: vehicle.signals, year: year)
+        // Create new entry - no existing statuses to consider for NA inheritance
+        let status = SupportMatrixGenerator.generateSupportStatus(from: vehicle.signals, year: year, existingStatuses: [])
         let entry = VehicleSupportEntry(make: vehicle.make, model: model, supportStatuses: [status])
         result[vehicle.make, default: []].append(entry)
       }
