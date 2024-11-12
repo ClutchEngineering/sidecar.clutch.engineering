@@ -5822,6 +5822,23 @@
   {
     "make" : "Mercedes",
     "model" : {
+      "name" : "C 350"
+    },
+    "supportStatuses" : [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2016,
+          2016
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Mercedes",
+    "model" : {
       "name" : "C-Class"
     },
     "supportStatuses" : [
@@ -5977,40 +5994,6 @@
   },
   {
     "make" : "Mercedes",
-    "model" : {
-      "name" : "W207"
-    },
-    "supportStatuses" : [
-      {
-        "fuelLevel" : "obd",
-        "speed" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2014,
-          2014
-        ]
-      }
-    ]
-  },
-  {
-    "make" : "Mercedes-Benz",
-    "model" : {
-      "name" : "C 350"
-    },
-    "supportStatuses" : [
-      {
-        "fuelLevel" : "obd",
-        "speed" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2016,
-          2016
-        ]
-      }
-    ]
-  },
-  {
-    "make" : "Mercedes-Benz",
     "model" : {
       "name" : "W207"
     },

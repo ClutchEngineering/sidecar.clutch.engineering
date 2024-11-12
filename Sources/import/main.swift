@@ -32,7 +32,7 @@ class CSVParser {
       let makeModel = components[0].split(separator: "/")
       guard makeModel.count == 2 else { return nil }
 
-      let make = String(makeModel[0])
+      let make = String(makeModel[0]).replacingOccurrences(of: "Mercedes-Benz", with: "Mercedes")
       let model = String(makeModel[1])
       let year = Double(components[1]).map { Int($0) }
 
