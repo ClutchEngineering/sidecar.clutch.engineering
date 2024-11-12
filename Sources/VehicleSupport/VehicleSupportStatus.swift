@@ -108,7 +108,7 @@ package struct VehicleSupportStatus: Codable, Equatable {
     self.init(years: years...years, testingStatus: testingStatus, stateOfCharge: stateOfCharge, stateOfHealth: stateOfHealth, charging: charging, cells: cells, fuelLevel: fuelLevel, speed: speed, range: range, odometer: odometer, tirePressure: tirePressure)
   }
 
-  static func testerNeeded(years: ClosedRange<Int>) -> Self {
+  package static func testerNeeded(years: ClosedRange<Int>) -> Self {
     .init(years: years, testingStatus: .testerNeeded, stateOfCharge: nil, stateOfHealth: nil, charging: nil, cells: nil, fuelLevel: nil, speed: nil, range: nil, odometer: nil, tirePressure: nil)
   }
 

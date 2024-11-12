@@ -112,6 +112,8 @@ struct SupportStatus: View {
       Bordered(showTrailingBorder: !isLast) {
         TableCell {
           Text("PID?")
+            .textColor(.text, darkness: 600)
+            .textColor(.text, darkness: 400, condition: .dark)
         }
       }
       .padding(.horizontal, 8)

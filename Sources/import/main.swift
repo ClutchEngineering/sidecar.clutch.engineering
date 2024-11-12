@@ -62,6 +62,7 @@ class SupportMatrixGenerator {
     let charging: VehicleSupportStatus.SupportState? = signals.contains("isCharging") ? .obd : nil
     let fuelLevel: VehicleSupportStatus.SupportState? = signals.contains("fuelTankLevel") ? .obd : nil
     let speed: VehicleSupportStatus.SupportState? = signals.contains("speed") ? .obd : nil
+    let cells: VehicleSupportStatus.SupportState? = signals.contains("cells") ? .obd : nil
     let range: VehicleSupportStatus.SupportState? = signals.contains("electricRange") ? .obd : nil
     let odometer: VehicleSupportStatus.SupportState? = signals.contains("odometer") ? .obd : nil
     let tirePressure: VehicleSupportStatus.SupportState? = signals.contains("frontLeftTirePressure")
@@ -70,14 +71,15 @@ class SupportMatrixGenerator {
     || signals.contains("rearRightTirePressure") ? .obd : nil
 
     // Check if any existing status has .na for these fields
-    let shouldInheritStateOfCharge = existingStatuses.contains { $0.stateOfCharge == .na }
-    let shouldInheritStateOfHealth = existingStatuses.contains { $0.stateOfHealth == .na }
-    let shouldInheritCharging = existingStatuses.contains { $0.charging == .na }
-    let shouldInheritFuelLevel = existingStatuses.contains { $0.fuelLevel == .na }
-    let shouldInheritSpeed = existingStatuses.contains { $0.speed == .na }
-    let shouldInheritRange = existingStatuses.contains { $0.range == .na }
-    let shouldInheritOdometer = existingStatuses.contains { $0.odometer == .na }
-    let shouldInheritTirePressure = existingStatuses.contains { $0.tirePressure == .na }
+    let shouldInheritStateOfCharge = existingStatuses.contains { $0.stateOfCharge == .na } && stateOfCharge == nil
+    let shouldInheritStateOfHealth = existingStatuses.contains { $0.stateOfHealth == .na } && stateOfHealth == nil
+    let shouldInheritCharging = existingStatuses.contains { $0.charging == .na } && charging == nil
+    let shouldInheritFuelLevel = existingStatuses.contains { $0.fuelLevel == .na } && fuelLevel == nil
+    let shouldInheritSpeed = existingStatuses.contains { $0.speed == .na } && speed == nil
+    let shouldInheritCells = existingStatuses.contains { $0.cells == .na } && cells == nil
+    let shouldInheritRange = existingStatuses.contains { $0.range == .na } && range == nil
+    let shouldInheritOdometer = existingStatuses.contains { $0.odometer == .na } && odometer == nil
+    let shouldInheritTirePressure = existingStatuses.contains { $0.tirePressure == .na } && tirePressure == nil
 
     return VehicleSupportStatus(
       years: year...year,
@@ -85,7 +87,7 @@ class SupportMatrixGenerator {
       stateOfCharge: shouldInheritStateOfCharge ? .na : stateOfCharge,
       stateOfHealth: shouldInheritStateOfHealth ? .na : stateOfHealth,
       charging: shouldInheritCharging ? .na : charging,
-      cells: .na,
+      cells: shouldInheritCells ? .na : cells,
       fuelLevel: shouldInheritFuelLevel ? .na : fuelLevel,
       speed: shouldInheritSpeed ? .na : speed,
       range: shouldInheritRange ? .na : range,
@@ -98,6 +100,23 @@ class SupportMatrixGenerator {
 // MARK: - Matrix Merger
 
 class MatrixMerger {
+  // Helper to downgrade a status to testerNeeded
+  static func downgradeToTesterNeeded(_ status: VehicleSupportStatus) -> VehicleSupportStatus {
+    return VehicleSupportStatus(
+      years: status.years,
+      testingStatus: .testerNeeded,
+      stateOfCharge: nil,
+      stateOfHealth: nil,
+      charging: nil,
+      cells: nil,
+      fuelLevel: nil,
+      speed: nil,
+      range: nil,
+      odometer: nil,
+      tirePressure: nil
+    )
+  }
+
   // Helper to find the first model that matches the name, preserving symbols if they exist
   static func findOrCreateModel(name: String, in entries: [VehicleSupportEntry]) -> Model {
     // Try to find an existing model with the same name
@@ -126,38 +145,48 @@ class MatrixMerger {
     var beforeStatus: VehicleSupportStatus?
     var afterStatus: VehicleSupportStatus?
 
-    // If there are years before our target year
+    // If there are years before our target year and it was partially onboarded,
+    // downgrade those years to testerNeeded
     if range.lowerBound < year {
-      beforeStatus = VehicleSupportStatus(
-        years: range.lowerBound...(year - 1),
-        testingStatus: status.testingStatus,
-        stateOfCharge: status.stateOfCharge,
-        stateOfHealth: status.stateOfHealth,
-        charging: status.charging,
-        cells: status.cells,
-        fuelLevel: status.fuelLevel,
-        speed: status.speed,
-        range: status.range,
-        odometer: status.odometer,
-        tirePressure: status.tirePressure
-      )
+      if status.testingStatus == .partiallyOnboarded {
+        beforeStatus = VehicleSupportStatus.testerNeeded(years: range.lowerBound...(year - 1))
+      } else {
+        beforeStatus = VehicleSupportStatus(
+          years: range.lowerBound...(year - 1),
+          testingStatus: status.testingStatus,
+          stateOfCharge: status.stateOfCharge,
+          stateOfHealth: status.stateOfHealth,
+          charging: status.charging,
+          cells: status.cells,
+          fuelLevel: status.fuelLevel,
+          speed: status.speed,
+          range: status.range,
+          odometer: status.odometer,
+          tirePressure: status.tirePressure
+        )
+      }
     }
 
-    // If there are years after our target year
+    // If there are years after our target year and it was partially onboarded,
+    // downgrade those years to testerNeeded
     if range.upperBound > year {
-      afterStatus = VehicleSupportStatus(
-        years: (year + 1)...range.upperBound,
-        testingStatus: status.testingStatus,
-        stateOfCharge: status.stateOfCharge,
-        stateOfHealth: status.stateOfHealth,
-        charging: status.charging,
-        cells: status.cells,
-        fuelLevel: status.fuelLevel,
-        speed: status.speed,
-        range: status.range,
-        odometer: status.odometer,
-        tirePressure: status.tirePressure
-      )
+      if status.testingStatus == .partiallyOnboarded {
+        afterStatus = VehicleSupportStatus.testerNeeded(years: (year + 1)...range.upperBound)
+      } else {
+        afterStatus = VehicleSupportStatus(
+          years: (year + 1)...range.upperBound,
+          testingStatus: status.testingStatus,
+          stateOfCharge: status.stateOfCharge,
+          stateOfHealth: status.stateOfHealth,
+          charging: status.charging,
+          cells: status.cells,
+          fuelLevel: status.fuelLevel,
+          speed: status.speed,
+          range: status.range,
+          odometer: status.odometer,
+          tirePressure: status.tirePressure
+        )
+      }
     }
 
     // Generate new status with CSV data, considering existing NA states
@@ -187,7 +216,7 @@ class MatrixMerger {
         if let statusIndex = entry.supportStatuses.firstIndex(where: { $0.years.contains(year) }) {
           let existingStatus = entry.supportStatuses[statusIndex]
 
-          // Split the existing status
+          // Split the existing status - this will handle downgrading adjacent years if needed
           let (beforeStatus, newStatus, afterStatus) = splitStatus(
             existingStatus,
             atYear: year,
@@ -210,16 +239,17 @@ class MatrixMerger {
           // Update the entry
           result[vehicle.make]![entryIndex] = entry
         } else {
-          // No existing status for this year, generate new one considering existing NA states
+          // No existing status for this year, just add the new one with the known signals
           let status = SupportMatrixGenerator.generateSupportStatus(
             from: vehicle.signals,
             year: year,
             existingStatuses: entry.supportStatuses
           )
-          result[vehicle.make]![entryIndex].supportStatuses.append(status)
+          entry.supportStatuses.append(status)
+          result[vehicle.make]![entryIndex] = entry
         }
       } else {
-        // Create new entry - no existing statuses to consider for NA inheritance
+        // Create new entry - no existing statuses to consider
         let status = SupportMatrixGenerator.generateSupportStatus(from: vehicle.signals, year: year, existingStatuses: [])
         let entry = VehicleSupportEntry(make: vehicle.make, model: model, supportStatuses: [status])
         result[vehicle.make, default: []].append(entry)
