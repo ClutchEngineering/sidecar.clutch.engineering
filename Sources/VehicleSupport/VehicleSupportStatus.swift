@@ -21,7 +21,7 @@ package struct Model: Codable, Hashable, ExpressibleByStringLiteral {
   }
 }
 
-package struct VehicleSupportStatus: Codable {
+package struct VehicleSupportStatus: Codable, Equatable {
   package static func loadAll() throws -> [Make: [Model: [VehicleSupportStatus]]] {
     let makesUrl = Bundle.module.url(forResource: "supportmatrix", withExtension: "json")!
     let makesData = try Data(contentsOf: makesUrl)
@@ -30,7 +30,7 @@ package struct VehicleSupportStatus: Codable {
 
   package let years: ClosedRange<Int>
 
-  package enum TestingStatus: Codable {
+  package enum TestingStatus: Codable, Equatable {
     case onboarded
     case partiallyOnboarded
     case testerNeeded

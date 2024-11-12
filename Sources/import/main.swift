@@ -240,4 +240,6 @@ func main() {
   }
 }
 
+try migrateSupportMatrix()
+
 main()
