@@ -1,9 +1,15 @@
 import Foundation
 
 package struct VehicleSupportEntry: Codable, Comparable, Equatable {
-  let make: String
-  let model: Model
-  let supportStatuses: [VehicleSupportStatus]
+  package let make: String
+  package let model: Model
+  package var supportStatuses: [VehicleSupportStatus]
+
+  package init(make: String, model: Model, supportStatuses: [VehicleSupportStatus]) {
+    self.make = make
+    self.model = model
+    self.supportStatuses = supportStatuses
+  }
 
   // Implement Equatable
   package static func == (lhs: VehicleSupportEntry, rhs: VehicleSupportEntry) -> Bool {
