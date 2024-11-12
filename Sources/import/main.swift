@@ -100,6 +100,16 @@ class SupportMatrixGenerator {
 // MARK: - Matrix Merger
 
 class MatrixMerger {
+  // Helper to check if a status should be preserved (not modified)
+  static func shouldPreserveStatus(_ status: VehicleSupportStatus) -> Bool {
+    switch status.testingStatus {
+    case .onboarded, .activeTester:
+      return true
+    case .partiallyOnboarded, .testerNeeded:
+      return false
+    }
+  }
+
   // Helper to downgrade a status to testerNeeded
   static func downgradeToTesterNeeded(_ status: VehicleSupportStatus) -> VehicleSupportStatus {
     return VehicleSupportStatus(
@@ -138,6 +148,11 @@ class MatrixMerger {
 
     // If year is not in range, return nil for splits
     guard range.contains(year) else {
+      return (nil, status, nil)
+    }
+
+    // If this is a verified status, don't modify it
+    if shouldPreserveStatus(status) {
       return (nil, status, nil)
     }
 
@@ -212,34 +227,39 @@ class MatrixMerger {
       if let entryIndex = result[vehicle.make]?.firstIndex(where: { $0.model.name == vehicle.model }) {
         var entry = result[vehicle.make]![entryIndex]
 
-        // Find if there's an existing status that contains this year
-        if let statusIndex = entry.supportStatuses.firstIndex(where: { $0.years.contains(year) }) {
-          let existingStatus = entry.supportStatuses[statusIndex]
-
-          // Split the existing status - this will handle downgrading adjacent years if needed
-          let (beforeStatus, newStatus, afterStatus) = splitStatus(
-            existingStatus,
-            atYear: year,
-            signals: vehicle.signals,
-            existingStatuses: entry.supportStatuses
-          )
-
-          // Remove the old status
-          entry.supportStatuses.remove(at: statusIndex)
-
-          // Add the split statuses in chronological order
-          if let before = beforeStatus {
-            entry.supportStatuses.append(before)
-          }
-          entry.supportStatuses.append(newStatus)
-          if let after = afterStatus {
-            entry.supportStatuses.append(after)
+        // Check if there's an existing status that contains this year
+        if let existingStatus = entry.supportStatuses.first(where: { $0.years.contains(year) }) {
+          // If the existing status is verified, skip this vehicle
+          if shouldPreserveStatus(existingStatus) {
+            continue
           }
 
-          // Update the entry
-          result[vehicle.make]![entryIndex] = entry
+          // Otherwise, proceed with the split/update
+          if let statusIndex = entry.supportStatuses.firstIndex(where: { $0.years.contains(year) }) {
+            let (beforeStatus, newStatus, afterStatus) = splitStatus(
+              existingStatus,
+              atYear: year,
+              signals: vehicle.signals,
+              existingStatuses: entry.supportStatuses
+            )
+
+            // Remove the old status
+            entry.supportStatuses.remove(at: statusIndex)
+
+            // Add the split statuses in chronological order
+            if let before = beforeStatus {
+              entry.supportStatuses.append(before)
+            }
+            entry.supportStatuses.append(newStatus)
+            if let after = afterStatus {
+              entry.supportStatuses.append(after)
+            }
+
+            // Update the entry
+            result[vehicle.make]![entryIndex] = entry
+          }
         } else {
-          // No existing status for this year, just add the new one with the known signals
+          // No existing status for this year, add the new one
           let status = SupportMatrixGenerator.generateSupportStatus(
             from: vehicle.signals,
             year: year,
