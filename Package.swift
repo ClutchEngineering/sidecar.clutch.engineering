@@ -17,6 +17,10 @@ let package = Package(
       "VehicleSupport",
     ]),
 
+    .executableTarget(name: "import", dependencies: [
+      "VehicleSupport",
+    ]),
+
     .target(name: "VehicleSupport", resources: [
       .process("supportmatrix.json")
     ])

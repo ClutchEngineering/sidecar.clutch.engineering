@@ -2,6 +2,7 @@
 site/**/*.html
 site/css/main.css
 
+.swiftpm/
 .DS_Store
 /.build
 /Packages

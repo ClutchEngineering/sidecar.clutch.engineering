@@ -103,7 +103,7 @@ package struct VehicleSupportStatus: Codable {
   package let odometer: SupportState?
   package let tirePressure: SupportState?
 
-  init(years: ClosedRange<Int>, testingStatus: TestingStatus, stateOfCharge: SupportState?, stateOfHealth: SupportState?, charging: SupportState?, cells: SupportState?, fuelLevel: SupportState?, speed: SupportState?, range: SupportState?, odometer: SupportState?, tirePressure: SupportState?) {
+  package init(years: ClosedRange<Int>, testingStatus: TestingStatus, stateOfCharge: SupportState?, stateOfHealth: SupportState?, charging: SupportState?, cells: SupportState?, fuelLevel: SupportState?, speed: SupportState?, range: SupportState?, odometer: SupportState?, tirePressure: SupportState?) {
     self.years = years
     self.testingStatus = testingStatus
     self.stateOfCharge = stateOfCharge
@@ -117,7 +117,7 @@ package struct VehicleSupportStatus: Codable {
     self.tirePressure = tirePressure
   }
 
-  init(years: Int, testingStatus: TestingStatus, stateOfCharge: SupportState? = .na, stateOfHealth: SupportState? = .na, charging: SupportState? = .na, cells: SupportState? = .na, fuelLevel: SupportState? = .na, speed: SupportState? = nil, range: SupportState? = nil, odometer: SupportState? = nil, tirePressure: SupportState? = nil) {
+  package init(years: Int, testingStatus: TestingStatus, stateOfCharge: SupportState? = .na, stateOfHealth: SupportState? = .na, charging: SupportState? = .na, cells: SupportState? = .na, fuelLevel: SupportState? = .na, speed: SupportState? = nil, range: SupportState? = nil, odometer: SupportState? = nil, tirePressure: SupportState? = nil) {
     self.init(years: years...years, testingStatus: testingStatus, stateOfCharge: stateOfCharge, stateOfHealth: stateOfHealth, charging: charging, cells: cells, fuelLevel: fuelLevel, speed: speed, range: range, odometer: odometer, tirePressure: tirePressure)
   }
 
