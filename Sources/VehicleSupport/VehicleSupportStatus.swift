@@ -2,7 +2,7 @@ import Foundation
 
 package typealias Make = String
 
-package struct VehicleSupportStatus: Codable, Equatable {
+package struct VehicleSupportStatus: Codable, Equatable, Comparable {
   package static func loadAll() throws -> [Make: [Model: [VehicleSupportStatus]]] {
     let url = Bundle.module.url(forResource: "supportmatrix", withExtension: "json")!
     let data = try Data(contentsOf: url)
@@ -122,5 +122,9 @@ package struct VehicleSupportStatus: Codable, Equatable {
 
   static func newTester(years: Int, username: String) -> Self {
     .newTester(years: years...years, username: username)
+  }
+
+  package static func < (lhs: VehicleSupportStatus, rhs: VehicleSupportStatus) -> Bool {
+    return lhs.years.lowerBound < rhs.years.lowerBound
   }
 }

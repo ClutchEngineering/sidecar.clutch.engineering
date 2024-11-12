@@ -11,14 +11,12 @@ package struct VehicleSupportEntry: Codable, Comparable, Equatable {
     self.supportStatuses = supportStatuses
   }
 
-  // Implement Equatable
   package static func == (lhs: VehicleSupportEntry, rhs: VehicleSupportEntry) -> Bool {
     lhs.make == rhs.make &&
     lhs.model == rhs.model &&
     lhs.supportStatuses == rhs.supportStatuses
   }
 
-  // Implement Comparable
   package static func < (lhs: VehicleSupportEntry, rhs: VehicleSupportEntry) -> Bool {
     if lhs.make != rhs.make {
       return lhs.make < rhs.make

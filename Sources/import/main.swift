@@ -235,28 +235,26 @@ class MatrixMerger {
           }
 
           // Otherwise, proceed with the split/update
-          if let statusIndex = entry.supportStatuses.firstIndex(where: { $0.years.contains(year) }) {
-            let (beforeStatus, newStatus, afterStatus) = splitStatus(
-              existingStatus,
-              atYear: year,
-              signals: vehicle.signals,
-              existingStatuses: entry.supportStatuses
-            )
+          guard let statusIndex = entry.supportStatuses.firstIndex(where: { $0.years.contains(year) }) else {
+            continue
+          }
+          let (beforeStatus, newStatus, afterStatus) = splitStatus(
+            existingStatus,
+            atYear: year,
+            signals: vehicle.signals,
+            existingStatuses: entry.supportStatuses
+          )
 
-            // Remove the old status
-            entry.supportStatuses.remove(at: statusIndex)
+          // Remove the old status
+          entry.supportStatuses.remove(at: statusIndex)
 
-            // Add the split statuses in chronological order
-            if let before = beforeStatus {
-              entry.supportStatuses.append(before)
-            }
-            entry.supportStatuses.append(newStatus)
-            if let after = afterStatus {
-              entry.supportStatuses.append(after)
-            }
-
-            // Update the entry
-            result[vehicle.make]![entryIndex] = entry
+          // Add the split statuses in chronological order
+          if let before = beforeStatus {
+            entry.supportStatuses.append(before)
+          }
+          entry.supportStatuses.append(newStatus)
+          if let after = afterStatus {
+            entry.supportStatuses.append(after)
           }
         } else {
           // No existing status for this year, add the new one
@@ -266,8 +264,9 @@ class MatrixMerger {
             existingStatuses: entry.supportStatuses
           )
           entry.supportStatuses.append(status)
-          result[vehicle.make]![entryIndex] = entry
         }
+        entry.supportStatuses.sort()
+        result[vehicle.make]![entryIndex] = entry
       } else {
         // Create new entry - no existing statuses to consider
         let status = SupportMatrixGenerator.generateSupportStatus(from: vehicle.signals, year: year, existingStatuses: [])
@@ -306,7 +305,6 @@ func main() {
     }
   }.flatMap { $0 }
 
-  // Merge data
   let mergedEntries = MatrixMerger.merge(existing: existingEntries, csvVehicles: csvVehicles)
 
   // Output merged data
