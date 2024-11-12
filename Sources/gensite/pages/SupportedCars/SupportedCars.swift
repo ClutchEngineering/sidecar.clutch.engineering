@@ -12,7 +12,7 @@ func makeNameForSorting(_ string: Make) -> String {
 }
 
 func modelNameForSorting(_ model: Model) -> String {
-  model.model
+  model.name
     .replacingOccurrences(of: " ", with: "")
     .applyingTransform(.stripDiacritics, reverse: false)!
 }
@@ -372,7 +372,7 @@ struct ModelSupportSection: View {
             .frame(width: 48)
         }
         Link(URL(string: "#" + id)) {
-          Text(model.model)
+          Text(model.name)
             .bold()
             .fontDesign("rounded")
             .fontSize(.large, condition: .desktop)

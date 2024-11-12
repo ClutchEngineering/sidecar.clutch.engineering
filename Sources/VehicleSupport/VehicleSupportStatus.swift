@@ -2,30 +2,12 @@ import Foundation
 
 package typealias Make = String
 
-package struct Model: Codable, Hashable, ExpressibleByStringLiteral {
-  package let model: String
-  package let symbolName: String?
-
-  package init(model: String) {
-    self.model = model
-    self.symbolName = nil
-  }
-
-  package init(stringLiteral value: StringLiteralType) {
-    self.model = value.trimmingCharacters(in: .whitespacesAndNewlines)
-    if !value.hasPrefix(" ") {
-      symbolName = value.lowercased().replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "")
-    } else {
-      symbolName = nil
-    }
-  }
-}
-
 package struct VehicleSupportStatus: Codable, Equatable {
   package static func loadAll() throws -> [Make: [Model: [VehicleSupportStatus]]] {
-    let makesUrl = Bundle.module.url(forResource: "supportmatrix", withExtension: "json")!
-    let makesData = try Data(contentsOf: makesUrl)
-    return try JSONDecoder().decode([Make: [Model: [VehicleSupportStatus]]].self, from: makesData)
+    let url = Bundle.module.url(forResource: "supportmatrix", withExtension: "json")!
+    let data = try Data(contentsOf: url)
+    let entries = try JSONDecoder().decode([VehicleSupportEntry].self, from: data)
+    return entries.toGroupedDictionary()
   }
 
   package let years: ClosedRange<Int>

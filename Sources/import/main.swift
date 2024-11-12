@@ -76,7 +76,7 @@ class MatrixMerger {
   static func findOrCreateModel(name: String, in existingModels: [Model: [VehicleSupportStatus]]?) -> Model {
     // If we have existing models, try to find one with the same name
     if let existingModels = existingModels {
-      if let existingModel = existingModels.keys.first(where: { $0.model == name }) {
+      if let existingModel = existingModels.keys.first(where: { $0.name == name }) {
         return existingModel // Preserve the existing model with its symbol
       }
     }
@@ -239,7 +239,5 @@ func main() {
     exit(1)
   }
 }
-
-try migrateSupportMatrix()
 
 main()
