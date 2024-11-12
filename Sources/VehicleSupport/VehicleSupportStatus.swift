@@ -6,6 +6,11 @@ package struct Model: Codable, Hashable, ExpressibleByStringLiteral {
   package let model: String
   package let symbolName: String?
 
+  package init(model: String) {
+    self.model = model
+    self.symbolName = nil
+  }
+
   package init(stringLiteral value: StringLiteralType) {
     self.model = value.trimmingCharacters(in: .whitespacesAndNewlines)
     if !value.hasPrefix(" ") {
