@@ -1178,9 +1178,7 @@
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
-        "testingStatus" : {
-          "activeTester" : "onboarded"
-        },
+        "testingStatus" : "onboarded",
         "years" : [
           2023,
           2023
