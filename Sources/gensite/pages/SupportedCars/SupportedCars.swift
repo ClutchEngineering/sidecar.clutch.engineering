@@ -252,7 +252,7 @@ struct MakeSupportSection: View {
         .margin(.bottom, 16)
 
         VStack(alignment: .leading, spacing: 16) {
-          for (model, statuses) in models.sorted(by: { modelNameForSorting($0.key) < modelNameForSorting($1.key) }) {
+          for (model, statuses) in models.sortedByLocalizedStandard() {
             ModelSupportSection(make: make, model: model, statuses: statuses)
           }
         }
@@ -260,6 +260,22 @@ struct MakeSupportSection: View {
       }
     }
     .id(make)
+  }
+}
+
+struct CustomStringComparator {
+  static func compare(_ lhs: Model, _ rhs: Model) -> Bool {
+    let normalizedLhs = modelNameForSorting(lhs)
+    let normalizedRhs = modelNameForSorting(rhs)
+    return normalizedLhs.localizedStandardCompare(normalizedRhs) == .orderedAscending
+  }
+}
+
+extension Dictionary where Key == Model {
+  func sortedByLocalizedStandard() -> [(key: Key, value: Value)] {
+    sorted { lhs, rhs in
+      CustomStringComparator.compare(lhs.key, rhs.key)
+    }
   }
 }
 

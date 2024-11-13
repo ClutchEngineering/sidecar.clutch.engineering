@@ -3334,7 +3334,7 @@
   {
     "make" : "Honda",
     "model" : {
-      "name" : "Accord",
+      "name" : "Accord (5th-9th generation)",
       "symbolName" : "accord"
     },
     "supportStatuses" : [
@@ -3364,7 +3364,16 @@
           2014,
           2017
         ]
-      },
+      }
+    ]
+  },
+  {
+    "make" : "Honda",
+    "model" : {
+      "name" : "Accord (10th generation+)",
+      "symbolName" : "accord10thgen"
+    },
+    "supportStatuses" : [
       {
         "cells" : "na",
         "charging" : "na",
