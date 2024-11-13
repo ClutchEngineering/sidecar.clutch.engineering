@@ -380,7 +380,7 @@ struct ModelSupportSection: View {
   let statuses: [VehicleSupportStatus]
 
   var body: some View {
-    let id = "\(make)-\(model)"
+    let id = "\(make)-\(model.name)"
     Div {
       HStack(alignment: .center, spacing: 16) {
         if let symbolName = model.symbolName {
