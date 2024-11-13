@@ -3369,6 +3369,7 @@
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
