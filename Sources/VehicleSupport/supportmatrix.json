@@ -1369,7 +1369,9 @@
       {
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
-        "testingStatus" : "partiallyOnboarded",
+        "testingStatus" : {
+          "activeTester" : "Clarkyncl"
+        },
         "years" : [
           2022,
           2022
