@@ -4317,29 +4317,6 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2004,
-          2018
-        ]
-      },
-      {
-        "cells" : "na",
-        "charging" : "na",
-        "fuelLevel" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "na",
-        "stateOfHealth" : "na",
-        "tirePressure" : "obd",
-        "testingStatus" : {
-          "activeTester" : "BradP1011"
-        },
-        "years" : [
-          2019,
-          2019
-        ]
-      },
-      {
-        "testingStatus" : "testerNeeded",
-        "years" : [
-          2020,
           2021
         ]
       },
