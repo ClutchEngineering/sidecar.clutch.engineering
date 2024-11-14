@@ -7032,34 +7032,6 @@
           2020,
           2025
         ]
-      },
-      {
-        "testingStatus" : "testerNeeded",
-        "years" : [
-          2010,
-          2023
-        ]
-      },
-      {
-        "cells" : "na",
-        "charging" : "na",
-        "fuelLevel" : "obd",
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "stateOfHealth" : "na",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2024,
-          2024
-        ]
-      },
-      {
-        "testingStatus" : "testerNeeded",
-        "years" : [
-          2025,
-          2025
-        ]
       }
     ]
   },
