@@ -4287,6 +4287,7 @@
         ]
       },
       {
+        "stateOfCharge" : "obd",
         "testingStatus" : {
           "activeTester" : "salvadordali256"
         },
