@@ -4037,9 +4037,18 @@
         ]
       },
       {
-        "testingStatus" : "testerNeeded",
+        "testingStatus" : {
+          "activeTester" : "I00u"
+        },
         "years" : [
           2020,
+          2020
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
           2021
         ]
       },
