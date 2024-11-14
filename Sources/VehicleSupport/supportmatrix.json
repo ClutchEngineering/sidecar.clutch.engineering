@@ -6985,7 +6985,8 @@
   {
     "make" : "Ram",
     "model" : {
-      "name" : "1500"
+      "name" : "1500",
+      "symbolname": "ram15005thgen"
     },
     "supportStatuses" : [
       {
