@@ -6718,13 +6718,21 @@
     },
     "supportStatuses" : [
       {
-        "testingStatus" : "testerNeeded",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2019,
           2020
         ]
       },
       {
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
         "testingStatus" : {
           "activeTester" : "jpalensk"
         },
@@ -6734,6 +6742,10 @@
         ]
       },
       {
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
         "testingStatus" : {
           "activeTester" : "alexr"
         },
@@ -6743,7 +6755,12 @@
         ]
       },
       {
-        "testingStatus" : "testerNeeded",
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "speed" : "obd",
+        "stateOfCharge" : "all",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2023,
           2023
@@ -6763,6 +6780,10 @@
         ]
       },
       {
+        "fuelLevel" : "na",
+        "odometer" : "ota",
+        "range" : "ota",
+        "stateOfCharge" : "ota",
         "testingStatus" : "testerNeeded",
         "years" : [
           2025,
