@@ -4327,6 +4327,7 @@
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
+        "tirePressure" : "obd",
         "testingStatus" : {
           "activeTester" : "BradP1011"
         },
