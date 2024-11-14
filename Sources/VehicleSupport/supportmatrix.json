@@ -4019,6 +4019,7 @@
     },
     "supportStatuses" : [
       {
+        "fuelLevel" : "na",
         "testingStatus" : "testerNeeded",
         "years" : [
           2018,
@@ -4030,13 +4031,16 @@
         "fuelLevel" : "na",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
-        "testingStatus" : "partiallyOnboarded",
+        "testingStatus" : {
+          "activeTester" : "patmondal"
+        },
         "years" : [
           2019,
           2019
         ]
       },
       {
+        "fuelLevel" : "na",
         "testingStatus" : {
           "activeTester" : "I00u"
         },
@@ -4046,7 +4050,10 @@
         ]
       },
       {
-        "testingStatus" : "testerNeeded",
+        "fuelLevel" : "na",
+        "testingStatus" : {
+          "activeTester" : "Zachy73"
+        },
         "years" : [
           2021,
           2021
@@ -4057,7 +4064,9 @@
         "fuelLevel" : "na",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
-        "testingStatus" : "partiallyOnboarded",
+        "testingStatus" : {
+          "activeTester" : "UnnDunn"
+        },
         "years" : [
           2022,
           2022
