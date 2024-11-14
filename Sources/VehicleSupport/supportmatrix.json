@@ -4268,40 +4268,6 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2021,
-          2021
-        ]
-      },
-      {
-        "testingStatus" : {
-          "activeTester" : "salvadordali256"
-        },
-        "years" : [
-          2022,
-          2022
-        ]
-      },
-      {
-        "testingStatus" : "testerNeeded",
-        "years" : [
-          2023,
-          2023
-        ]
-      },
-      {
-        "cells" : "na",
-        "charging" : "na",
-        "stateOfCharge" : "obd",
-        "stateOfHealth" : "na",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2024,
-          2024
-        ]
-      },
-      {
-        "testingStatus" : "testerNeeded",
-        "years" : [
-          2025,
           2025
         ]
       }
