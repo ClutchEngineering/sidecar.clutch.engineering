@@ -383,6 +383,9 @@ struct ModelSupportSection: View {
     let id = "\(make)-\(model.name)"
     Div {
       HStack(alignment: .center, spacing: 16) {
+        if model.name == "1500" {
+          let _ = print("foo")
+        }
         if let symbolName = model.symbolName {
           Image(URL(string: "/gfx/model/\(symbolName).svg"))
             .colorInvert(condition: .dark)
