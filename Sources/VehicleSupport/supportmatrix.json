@@ -6696,23 +6696,6 @@
   {
     "make" : "Polestar",
     "model" : {
-      "name" : "2"
-    },
-    "supportStatuses" : [
-      {
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2023,
-          2023
-        ]
-      }
-    ]
-  },
-  {
-    "make" : "Polestar",
-    "model" : {
       "name" : "Polestar 2",
       "symbolName" : "polestar2"
     },
