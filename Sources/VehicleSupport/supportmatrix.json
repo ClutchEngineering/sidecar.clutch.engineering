@@ -6743,7 +6743,9 @@
         "range" : "ota",
         "speed" : "obd",
         "stateOfCharge" : "all",
-        "testingStatus" : "partiallyOnboarded",
+        "testingStatus" : {
+          "activeTester" : "dev30mb"
+        },
         "years" : [
           2023,
           2023
