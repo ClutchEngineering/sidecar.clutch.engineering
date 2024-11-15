@@ -155,7 +155,8 @@
   {
     "make" : "Audi",
     "model" : {
-      "name" : "A4"
+      "name" : "A4",
+      "symbolName": "a45thgen"
     },
     "supportStatuses" : [
       {
