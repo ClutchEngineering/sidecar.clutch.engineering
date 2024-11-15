@@ -5096,7 +5096,8 @@
   {
     "make" : "Lexus",
     "model" : {
-      "name" : "IS 300"
+      "name" : "IS 300",
+      "symbolName": "is3004thgen"
     },
     "supportStatuses" : [
       {
