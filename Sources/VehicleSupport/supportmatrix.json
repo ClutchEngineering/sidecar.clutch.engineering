@@ -1735,7 +1735,8 @@
   {
     "make" : "Chevrolet",
     "model" : {
-      "name" : "Cruze"
+      "name" : "Cruze",
+      "symbolName": "cruze2ndgen"
     },
     "supportStatuses" : [
       {
