@@ -4531,7 +4531,8 @@
   {
     "make" : "Jeep",
     "model" : {
-      "name" : "Wrangler 4xe"
+      "name" : "Wrangler 4xe",
+      "symbolName": "wrangler4xe1stgen"
     },
     "supportStatuses" : [
       {
