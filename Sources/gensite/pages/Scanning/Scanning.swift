@@ -120,6 +120,8 @@ Tested Scanners
 <label class="mr-4" for="us">United States 🇺🇸</label>
 <input type="radio" name="country" id="canada" class="mr-2">
 <label class="mr-4" for="canada">Canada 🇨🇦</label>
+<input type="radio" name="country" id="india" class="mr-2">
+<label class="mr-4" for="india">India 🇮🇳</label>
 <div id="us-products">
 <table class="table-auto border-collapse border border-gray-800 mt-4">
  <thead>
@@ -603,6 +605,157 @@ Tested Scanners
 </tbody>
 </table>
 </div>
+<div id="in-products">
+<table class="table-auto border-collapse border border-gray-800 mt-4">
+ <thead>
+  <tr class="bg-gray-800 text-xs md:text-base text-white text-left">
+   <th class="pl-2 md:pl-4 py-2">Product</th>
+   <th class="pl-2 md:pl-4 py-2">Supported</th>
+   <th class="pl-2 md:pl-4 py-2">Type</th>
+   <th class="pl-2 md:pl-4 py-2">PIDs / second</th>
+   <th class="px-2 md:px-4 py-2">Price (USD)</th>
+  </tr>
+ </thead>
+<tbody class="text-xs md:text-base">
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Carista<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B0BBS73F6J?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
+ <td class="pl-2 md:pl-4 py-2">₹4,999</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Veepeak Mini WiFi<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B00WPW6BAE?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">Wi-Fi</td>
+ <td class="pl-2 md:pl-4 py-2">up to 28/s</td>
+ <td class="pl-2 md:pl-4 py-2">₹5,275.20</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Micro Mechanic<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B07FKDFYZ3?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 11/s</td>
+ <td class="pl-2 md:pl-4 py-2">₹7,530.78</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Vgate iCar Pro Bluetooth 3.0<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B06XGBKG8X?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">₹8,792.47</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Vgate iCar Pro 2S<br />
+
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B0CYZRMCK9?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
+ <td class="pl-2 md:pl-4 py-2">₹9,715</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Konnwei<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B0C53GMRXL?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
+ <td class="pl-2 md:pl-4 py-2">₹10,999</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Vgate iCar Pro Wi-Fi<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B06XGB4QL7?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">Wi-Fi</td>
+ <td class="pl-2 md:pl-4 py-2">up to 29/s</td>
+ <td class="pl-2 md:pl-4 py-2">₹13,699</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Vgate iCar Pro Bluetooth 4.0<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B06XGB4873?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
+ <td class="pl-2 md:pl-4 py-2">₹15,999</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Veepeak OBDCheck BLE<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B073XKQQQW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
+ <td class="pl-2 md:pl-4 py-2">₹16,999</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Vgate vLinker MC+<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B088LW211V?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
+ <td class="pl-2 md:pl-4 py-2">₹25,599</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Veepeak OBDCheck BLE+<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B076XVQMVS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
+ <td class="pl-2 md:pl-4 py-2">₹29,699</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  OBDLink MX+<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B07JFRFJG6?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+  &middot;
+  <a class="text-blue-500 underline" href="https://www.obdlink.com/products/obdlink-mxp/">obdlink.com</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 27/s</td>
+ <td class="pl-2 md:pl-4 py-2">₹32,999</td>
+</tr>
+</tbody>
+</table>
+</div>
+
 </div>
 
 Performance tests to determine commands/second were ran by [ELMCheck](https://apps.apple.com/us/app/elmcheck/id6479630442), a companion app to Sidecar.
