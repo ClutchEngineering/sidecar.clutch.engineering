@@ -1,6 +1,7 @@
 #us-products,
 #ca-products,
-#in-products {
+#in-products,
+#uk-products {
   display: none;
 }
 
@@ -13,5 +14,9 @@
 }
 
 #india:checked ~ #in-products {
+  display: block;
+}
+
+#uk:checked ~ #uk-products {
   display: block;
 }
