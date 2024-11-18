@@ -4017,7 +4017,8 @@
   {
     "make" : "Hyundai",
     "model" : {
-      "name" : "Kona Electric"
+      "name" : "Kona Electric",
+      "symbolName": "konaev1stgen"
     },
     "supportStatuses" : [
       {
