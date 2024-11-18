@@ -615,7 +615,7 @@ Tested Scanners
    <th class="pl-2 md:pl-4 py-2">Supported</th>
    <th class="pl-2 md:pl-4 py-2">Type</th>
    <th class="pl-2 md:pl-4 py-2">PIDs / second</th>
-   <th class="px-2 md:px-4 py-2">Price (USD)</th>
+   <th class="px-2 md:px-4 py-2">Price (INR)</th>
   </tr>
  </thead>
 <tbody class="text-xs md:text-base">
@@ -765,7 +765,7 @@ Tested Scanners
    <th class="pl-2 md:pl-4 py-2">Supported</th>
    <th class="pl-2 md:pl-4 py-2">Type</th>
    <th class="pl-2 md:pl-4 py-2">PIDs / second</th>
-   <th class="px-2 md:px-4 py-2">Price (USD)</th>
+   <th class="px-2 md:px-4 py-2">Price (EUR)</th>
   </tr>
  </thead>
 <tbody class="text-xs md:text-base">
