@@ -945,6 +945,7 @@ Tested Scanners
 </table>
 </div>
 </div>
+
 Performance tests to determine commands/second were ran by [ELMCheck](https://apps.apple.com/us/app/elmcheck/id6479630442), a companion app to Sidecar.
 
 \(inlineHTML {
