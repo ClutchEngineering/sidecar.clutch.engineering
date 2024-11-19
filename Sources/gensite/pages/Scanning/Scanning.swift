@@ -216,7 +216,6 @@ Tested Scanners
 <tr>
  <td class="pl-2 md:pl-4 py-2">
   Vgate iCar Pro 2S<br />
-
   <a class="text-blue-500 underline"
    href="https://www.amazon.com/dp/B0CYZRMCK9?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
@@ -235,6 +234,17 @@ Tested Scanners
  <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$34.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Infocar<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com/dp/B089NFZ81P?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
+ <td class="pl-2 md:pl-4 py-2">$39.00</td>
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
@@ -315,6 +325,28 @@ Tested Scanners
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  nonda<br />
+  <a class="text-blue-500 underline"
+   href="https://www.nonda.co/products/smart-vehicle-health-monitor-mini">nonda.co</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 6.7/s</td>
+ <td class="pl-2 md:pl-4 py-2">$59.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  vLinker FS<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com/dp/B0BZTXV6MZ?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 58/s</td>
+ <td class="pl-2 md:pl-4 py-2">$59.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   Vgate vLinker MC+<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.com/dp/B088LW211V?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
@@ -326,11 +358,20 @@ Tested Scanners
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  vLinker MS<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com/dp/B0D6YQX4R8?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 62/s</td>
+ <td class="pl-2 md:pl-4 py-2">$69.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   OBDLink CX<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.com/dp/B08NFLL3NT?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
-  &middot;
-  <a class="text-blue-500 underline" href="https://www.obdlink.com/products/obdlink-cx/">obdlink.com</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
@@ -356,6 +397,28 @@ Tested Scanners
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
  <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">$89.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  TopScan<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com/dp/B0C3QQYQ1B?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">$79.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Bouncie<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com/dp/B07H8NS5MS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
  <td class="pl-2 md:pl-4 py-2">Unknown</td>
  <td class="pl-2 md:pl-4 py-2">$89.99</td>
 </tr>
@@ -389,8 +452,6 @@ Tested Scanners
   OBDLink MX+<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.com/dp/B07JFRFJG6?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
-  &middot;
-  <a class="text-blue-500 underline" href="https://www.obdlink.com/products/obdlink-mxp/">obdlink.com</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
  <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
@@ -481,7 +542,6 @@ Tested Scanners
 <tr>
  <td class="pl-2 md:pl-4 py-2">
   Vgate iCar Pro 2S<br />
-
   <a class="text-blue-500 underline"
    href="https://www.amazon.ca/dp/B0CYZRMCK9?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
@@ -558,16 +618,58 @@ Tested Scanners
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  vLinker FS<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.ca/dp/B0BZTXV6MZ?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 58/s</td>
+ <td class="pl-2 md:pl-4 py-2">$85.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  vLinker MS<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.ca/dp/B0D6YQX4R8?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 62/s</td>
+ <td class="pl-2 md:pl-4 py-2">$95.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  TopScan<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.ca/dp/B0C3QQYQ1B?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">$99.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   OBDLink CX<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.ca/dp/B08NFLL3NT?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
-  &middot;
-  <a class="text-blue-500 underline" href="https://www.obdlink.com/products/obdlink-cx/">obdlink.com</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$114.95</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Bouncie<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.ca/dp/B07H8NS5MS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">$119.99</td>
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
@@ -596,8 +698,6 @@ Tested Scanners
   OBDLink MX+<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.ca/dp/B07JFRFJG6?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
-  &middot;
-  <a class="text-blue-500 underline" href="https://www.obdlink.com/products/obdlink-mxp/">obdlink.com</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
  <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
@@ -666,7 +766,6 @@ Tested Scanners
 <tr>
  <td class="pl-2 md:pl-4 py-2">
   Vgate iCar Pro 2S<br />
-
   <a class="text-blue-500 underline"
    href="https://www.amazon.in/dp/B0CYZRMCK9?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
@@ -696,6 +795,17 @@ Tested Scanners
  <td class="pl-2 md:pl-4 py-2">Wi-Fi</td>
  <td class="pl-2 md:pl-4 py-2">up to 29/s</td>
  <td class="pl-2 md:pl-4 py-2">₹13,699</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  vLinker FS<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B0BZTXV6MZ?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 58/s</td>
+ <td class="pl-2 md:pl-4 py-2">₹15,992</td>
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
@@ -746,8 +856,6 @@ Tested Scanners
   OBDLink MX+<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.in/dp/B07JFRFJG6?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
-  &middot;
-  <a class="text-blue-500 underline" href="https://www.obdlink.com/products/obdlink-mxp/">obdlink.com</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
  <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
@@ -892,6 +1000,17 @@ Tested Scanners
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  TopScan<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.co.uk/dp/B0C3QQYQ1B?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">£69.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   OBDeleven<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.co.uk/dp/B08K94L4JS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
@@ -906,8 +1025,6 @@ Tested Scanners
   OBDLink CX<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.co.uk/dp/B08NFLL3NT?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
-  &middot;
-  <a class="text-blue-500 underline" href="https://www.obdlink.com/products/obdlink-cx/">obdlink.com</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
@@ -919,8 +1036,6 @@ Tested Scanners
   OBDLink MX+<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.co.uk/dp/B07JFRFJG6?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
-  &middot;
-  <a class="text-blue-500 underline" href="https://www.obdlink.com/products/obdlink-mxp/">obdlink.com</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
  <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
