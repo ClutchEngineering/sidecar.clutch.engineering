@@ -391,6 +391,17 @@ Tested Scanners
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  OBDLink LX<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com/dp/B00H9S71LW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">$89.95</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   BLCKTEC 430<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.com/dp/B0C2JQH5NY?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
@@ -681,6 +692,17 @@ Tested Scanners
  <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">Unknown</td>
  <td class="pl-2 md:pl-4 py-2">$122.26</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  OBDLink LX<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.ca/dp/B00H9S71LW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">$129.95</td>
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
