@@ -1055,6 +1055,17 @@ Tested Scanners
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  OBDLink LX<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.co.uk/dp/B00H9S71LW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">£95.50</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   OBDLink MX+<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.co.uk/dp/B07JFRFJG6?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
