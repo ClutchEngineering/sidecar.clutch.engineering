@@ -4065,8 +4065,10 @@
       {
         "charging" : "obd",
         "fuelLevel" : "na",
+        "odometer" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
+        "tirePressure" : "obd",
         "testingStatus" : {
           "activeTester" : "UnnDunn"
         },
