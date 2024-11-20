@@ -393,8 +393,21 @@ struct ModelSupportSection: View {
           Text(model.name)
             .bold()
             .fontDesign("rounded")
-            .fontSize(.large, condition: .desktop)
-            .fontSize(.extraExtraExtraLarge, condition: .desktop)
+            .fontSize(.large)
+            .fontSize(.extraLarge, condition: .desktop)
+            .underline(condition: .hover)
+        }
+      }
+      .justifyContent(.center)
+      HStack(spacing: 16) {
+        Link(URL(string: "https://github.com/OBDb/\(make)-\(model.name)")) {
+          Text("OBDb")
+            .bold()
+            .fontDesign("rounded")
+            .fontSize(.small)
+            .textColor(.link, darkness: 700)
+            .textColor(.link, darkness: 400, condition: .dark)
+            .underline(condition: .hover)
         }
       }
       .justifyContent(.center)
