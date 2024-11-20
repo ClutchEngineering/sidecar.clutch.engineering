@@ -57,18 +57,19 @@ class SupportMatrixGenerator {
     existingStatuses: [VehicleSupportStatus]
   ) -> VehicleSupportStatus {
     // First determine the current signals' states
-    let stateOfCharge: VehicleSupportStatus.SupportState? = signals.contains("stateOfCharge") ? .obd : nil
-    let stateOfHealth: VehicleSupportStatus.SupportState? = signals.contains("stateOfHealth") ? .obd : nil
-    let charging: VehicleSupportStatus.SupportState? = signals.contains("isCharging") ? .obd : nil
-    let fuelLevel: VehicleSupportStatus.SupportState? = signals.contains("fuelTankLevel") ? .obd : nil
-    let speed: VehicleSupportStatus.SupportState? = signals.contains("speed") ? .obd : nil
-    let cells: VehicleSupportStatus.SupportState? = signals.contains("cells") ? .obd : nil
-    let range: VehicleSupportStatus.SupportState? = signals.contains("electricRange") ? .obd : nil
-    let odometer: VehicleSupportStatus.SupportState? = signals.contains("odometer") ? .obd : nil
-    let tirePressure: VehicleSupportStatus.SupportState? = signals.contains("frontLeftTirePressure")
-    || signals.contains("frontRightTirePressure")
-    || signals.contains("rearLeftTirePressure")
-    || signals.contains("rearRightTirePressure") ? .obd : nil
+    let stateOfCharge: VehicleSupportStatus.SupportState? = (signals.contains("stateOfCharge") || existingStatuses.contains { $0.stateOfCharge == .obd }) ? .obd : nil
+    let stateOfHealth: VehicleSupportStatus.SupportState? = (signals.contains("stateOfHealth") || existingStatuses.contains { $0.stateOfHealth == .obd }) ? .obd : nil
+    let charging: VehicleSupportStatus.SupportState? = (signals.contains("isCharging") || existingStatuses.contains { $0.charging == .obd }) ? .obd : nil
+    let fuelLevel: VehicleSupportStatus.SupportState? = (signals.contains("fuelTankLevel") || existingStatuses.contains { $0.fuelLevel == .obd }) ? .obd : nil
+    let speed: VehicleSupportStatus.SupportState? = (signals.contains("speed") || existingStatuses.contains { $0.speed == .obd }) ? .obd : nil
+    let cells: VehicleSupportStatus.SupportState? = (signals.contains("cells") || existingStatuses.contains { $0.cells == .obd }) ? .obd : nil
+    let range: VehicleSupportStatus.SupportState? = (signals.contains("electricRange") || existingStatuses.contains { $0.range == .obd }) ? .obd : nil
+    let odometer: VehicleSupportStatus.SupportState? = (signals.contains("odometer") || existingStatuses.contains { $0.odometer == .obd }) ? .obd : nil
+    let tirePressure: VehicleSupportStatus.SupportState? = (signals.contains("frontLeftTirePressure")
+                                                            || signals.contains("frontRightTirePressure")
+                                                            || signals.contains("rearLeftTirePressure")
+                                                            || signals.contains("rearRightTirePressure")
+                                                            || existingStatuses.contains { $0.tirePressure == .obd }) ? .obd : nil
 
     // Check if any existing status has .na for these fields
     let shouldInheritStateOfCharge = existingStatuses.contains { $0.stateOfCharge == .na } && stateOfCharge == nil
