@@ -3336,6 +3336,21 @@
     ]
   },
   {
+    "make" : "Holden",
+    "model" : {
+      "name" : "Commodore"
+    },
+    "supportStatuses" : [
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1978,
+          2020
+        ]
+      }
+    ]
+  },
+  {
     "make" : "Honda",
     "model" : {
       "name" : "Accord (5th-9th generation)",
