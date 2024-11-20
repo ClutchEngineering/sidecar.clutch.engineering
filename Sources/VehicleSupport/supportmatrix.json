@@ -12628,56 +12628,6 @@
     ]
   },
   {
-    "make" : "Unknown",
-    "model" : {
-      "name" : "Unknown"
-    },
-    "supportStatuses" : [
-      {
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2020,
-          2020
-        ]
-      },
-      {
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2022,
-          2022
-        ]
-      },
-      {
-        "fuelLevel" : "obd",
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2023,
-          2023
-        ]
-      },
-      {
-        "fuelLevel" : "obd",
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2024,
-          2024
-        ]
-      }
-    ]
-  },
-  {
     "make" : "Vauxhall",
     "model" : {
       "name" : "Ampera"
