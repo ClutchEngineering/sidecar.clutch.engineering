@@ -400,7 +400,7 @@ struct ModelSupportSection: View {
       }
       .justifyContent(.center)
       HStack(spacing: 16) {
-        Link(URL(string: "https://github.com/OBDb/\(make)-\(model.name)")) {
+        Link(URL(string: "https://github.com/OBDb/\(make)-\(model.name.replacingOccurrences(of: " ", with: "-"))")) {
           Text("OBDb")
             .bold()
             .fontDesign("rounded")
