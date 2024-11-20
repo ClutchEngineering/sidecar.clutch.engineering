@@ -3868,6 +3868,7 @@
       {
         "charging" : "obd",
         "fuelLevel" : "na",
+        "speed" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
         "testingStatus" : {
