@@ -265,7 +265,8 @@ return Measurement(value: value, unit: unit)
 #### Optional properties
 
 \(inlineHTML { Parameter("bix", type: "Int") }) The bit offset to start reading the value from. Defaults to 0.    
-\(inlineHTML { Parameter("sign", type: "Boolean") }) Whether or not to treat the bit values as a signed, twos-complement integer. Defaults to false.    
+\(inlineHTML { Parameter("blsb", type: "Boolean") }) Whether to swap the byte order prior to reading bits. E.g. a 16 bit value read from offset 8 of `0x012345` in blsb format would be passed to the bit decoder as `0x4523`.  Defaults to false.    
+\(inlineHTML { Parameter("sign", type: "Boolean") }) Whether to treat the bit values as a signed, twos-complement integer. Defaults to false.    
 \(inlineHTML { Parameter("min", type: "Double") }) The minimum value this signal can have. Defaults to 0.    
 \(inlineHTML { Parameter("add", type: "Double") }) Added to the extracted numerical value. Defaults to 0.    
 \(inlineHTML { Parameter("mul", type: "Double") }) The extracted numerical value is multiplied by this value. Defaults to 1.    
