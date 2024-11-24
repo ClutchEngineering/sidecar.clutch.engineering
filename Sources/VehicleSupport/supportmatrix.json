@@ -5849,6 +5849,7 @@
         "charging" : "obd",
         "fuelLevel" : "na",
         "odometer" : "obd",
+        "speed": "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
         "testingStatus" : {
