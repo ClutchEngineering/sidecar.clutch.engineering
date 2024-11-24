@@ -5815,11 +5815,13 @@
       {
         "charging" : "obd",
         "fuelLevel" : "na",
+        "speed" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
         "testingStatus" : {
           "activeTester" : "patmondal"
         },
+        "tirePressure" : "obd",
         "years" : [
           2019,
           2019
