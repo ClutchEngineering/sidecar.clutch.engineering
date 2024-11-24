@@ -5857,6 +5857,7 @@
         ]
       },
       {
+        "cells" : "na",
         "charging" : "obd",
         "fuelLevel" : "na",
         "odometer" : "obd",
