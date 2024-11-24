@@ -5836,7 +5836,16 @@
           2020,
           2020
         ]
-      },
+      }
+    ]
+  },
+  {
+    "make" : "Hyundai",
+    "model" : {
+      "name" : "Kona Electric",
+      "symbolName" : "konaev2ndgen"
+    },
+    "supportStatuses" : [
       {
         "fuelLevel" : "na",
         "testingStatus" : {
