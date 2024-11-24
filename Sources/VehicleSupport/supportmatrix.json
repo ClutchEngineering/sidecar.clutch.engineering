@@ -5800,7 +5800,7 @@
   {
     "make" : "Hyundai",
     "model" : {
-      "name" : "Kona Electric",
+      "name" : "Kona Electric (1st gen)",
       "symbolName" : "konaev1stgen"
     },
     "supportStatuses" : [
@@ -5842,7 +5842,7 @@
   {
     "make" : "Hyundai",
     "model" : {
-      "name" : "Kona Electric",
+      "name" : "Kona Electric (2nd gen)",
       "symbolName" : "konaev2ndgen"
     },
     "supportStatuses" : [
