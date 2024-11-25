@@ -387,13 +387,7 @@ struct ModelSupportSection: View {
   var body: some View {
     let id = "\(make)-\(model.name)"
     Div {
-      HStack(alignment: .center, spacing: 16) {
-        if let symbolName = model.symbolName {
-          Image(URL(string: "/gfx/model/\(symbolName).svg"))
-            .colorInvert(condition: .dark)
-            .display(.inlineBlock)
-            .frame(width: 48)
-        }
+      VStack(alignment: .center, spacing: 4) {
         Link(URL(string: "#" + id)) {
           Text(model.name)
             .bold()
@@ -402,9 +396,6 @@ struct ModelSupportSection: View {
             .fontSize(.extraLarge, condition: .desktop)
             .underline(condition: .hover)
         }
-      }
-      .justifyContent(.center)
-      HStack(spacing: 16) {
         Link(URL(string: "https://github.com/OBDb/\(make)-\(model.name.replacingOccurrences(of: " ", with: "-"))")) {
           Text("OBDb")
             .bold()
@@ -413,6 +404,12 @@ struct ModelSupportSection: View {
             .textColor(.link, darkness: 700)
             .textColor(.link, darkness: 400, condition: .dark)
             .underline(condition: .hover)
+        }
+        if let symbolName = model.symbolName {
+          Image(URL(string: "/gfx/model/\(symbolName).svg"))
+            .colorInvert(condition: .dark)
+            .display(.inlineBlock)
+            .frame(width: 128)
         }
       }
       .justifyContent(.center)
