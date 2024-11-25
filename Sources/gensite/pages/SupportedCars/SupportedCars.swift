@@ -274,7 +274,7 @@ struct CustomStringComparator {
 extension Dictionary where Key == Model, Value == [VehicleSupportStatus] {
   func sortedByLocalizedStandard() -> [(key: Key, value: Value)] {
     sorted { lhs, rhs in
-      if lhs.key == rhs.key,
+      if lhs.key.name == rhs.key.name,
          let yearA = lhs.value.first?.years.lowerBound,
          let yearB = rhs.value.first?.years.lowerBound {
         return yearA < yearB
