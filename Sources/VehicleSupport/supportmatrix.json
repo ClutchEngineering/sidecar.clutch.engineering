@@ -145,6 +145,7 @@
     },
     "supportStatuses" : [
       {
+        "fuelLevel" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "obd",
         "testingStatus" : "partiallyOnboarded",
@@ -196,6 +197,41 @@
   {
     "make" : "Audi",
     "model" : {
+      "name" : "A1"
+    },
+    "supportStatuses" : [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2019,
+          2019
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Audi",
+    "model" : {
+      "name" : "A3"
+    },
+    "supportStatuses" : [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
+          2024
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Audi",
+    "model" : {
       "name" : "A4",
       "symbolName" : "a45thgen"
     },
@@ -231,6 +267,7 @@
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
@@ -244,6 +281,7 @@
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
@@ -289,9 +327,23 @@
         ]
       },
       {
-        "testingStatus" : "testerNeeded",
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2022,
+          2022
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
           2024
         ]
       }
@@ -396,6 +448,13 @@
     },
     "supportStatuses" : [
       {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2005,
+          2016
+        ]
+      },
+      {
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
@@ -404,7 +463,14 @@
         "stateOfHealth" : "na",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
-          2005,
+          2017,
+          2017
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2018,
           2024
         ]
       }
@@ -615,9 +681,22 @@
         ]
       },
       {
-        "testingStatus" : "testerNeeded",
+        "fuelLevel" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2023,
+          2023
+        ]
+      },
+      {
+        "fuelLevel" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
           2024
         ]
       }
@@ -998,6 +1077,7 @@
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
@@ -1209,6 +1289,27 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2009,
+          2022
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
           2024
         ]
       }
@@ -1292,6 +1393,22 @@
         "years" : [
           2008,
           2008
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "BMW",
+    "model" : {
+      "name" : "530d"
+    },
+    "supportStatuses" : [
+      {
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2014,
+          2014
         ]
       }
     ]
@@ -1594,6 +1711,27 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2017,
+          2017
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2018,
+          2018
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
           2020
         ]
       },
@@ -1616,6 +1754,34 @@
         "years" : [
           2022,
           2025
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "BMW",
+    "model" : {
+      "name" : "X2"
+    },
+    "supportStatuses" : [
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2018,
+          2018
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
+          2021
         ]
       }
     ]
@@ -1734,6 +1900,7 @@
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
@@ -1754,6 +1921,7 @@
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
@@ -1767,6 +1935,20 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2016,
+          2023
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
           2024
         ]
       },
@@ -2085,6 +2267,23 @@
         "years" : [
           2019,
           2019
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Buick",
+    "model" : {
+      "name" : "Lucerne"
+    },
+    "supportStatuses" : [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2009,
+          2009
         ]
       }
     ]
@@ -2475,6 +2674,23 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2020,
+          2023
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
           2025
         ]
       }
@@ -3087,6 +3303,22 @@
   {
     "make" : "Citroën",
     "model" : {
+      "name" : "C3"
+    },
+    "supportStatuses" : [
+      {
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2017,
+          2017
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Citroën",
+    "model" : {
       "name" : "CZero"
     },
     "supportStatuses" : [
@@ -3125,22 +3357,6 @@
         "years" : [
           2022,
           2025
-        ]
-      }
-    ]
-  },
-  {
-    "make" : "Citroën",
-    "model" : {
-      "name" : "C3"
-    },
-    "supportStatuses" : [
-      {
-        "speed" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2017,
-          2017
         ]
       }
     ]
@@ -3315,6 +3531,13 @@
     },
     "supportStatuses" : [
       {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2009,
+          2016
+        ]
+      },
+      {
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
@@ -3323,7 +3546,14 @@
         "stateOfHealth" : "na",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
-          2009,
+          2017,
+          2017
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2018,
           2020
         ]
       }
@@ -3531,6 +3761,28 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2001,
+          2017
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "tirePressure" : "obd",
+        "years" : [
+          2018,
+          2018
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
           2019
         ]
       },
@@ -4102,6 +4354,20 @@
           2022,
           2022
         ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
+          2023
+        ]
       }
     ]
   },
@@ -4389,7 +4655,11 @@
         ]
       },
       {
-        "testingStatus" : "testerNeeded",
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2022,
           2022
@@ -4407,7 +4677,11 @@
         ]
       },
       {
-        "testingStatus" : "testerNeeded",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2024,
           2024
@@ -4425,6 +4699,27 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           1996,
+          2008
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2009,
+          2009
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2010,
           2017
         ]
       },
@@ -4588,6 +4883,7 @@
     "supportStatuses" : [
       {
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
@@ -4631,6 +4927,23 @@
   {
     "make" : "GMC",
     "model" : {
+      "name" : "Canyon"
+    },
+    "supportStatuses" : [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2010,
+          2010
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "GMC",
+    "model" : {
       "name" : "Sierra"
     },
     "supportStatuses" : [
@@ -4656,6 +4969,20 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           1999,
+          2019
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2020,
           2020
         ]
       },
@@ -4708,6 +5035,7 @@
     "supportStatuses" : [
       {
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
@@ -4807,6 +5135,7 @@
         "fuelLevel" : "obd",
         "odometer" : "obd",
         "speed" : "obd",
+        "stateOfCharge" : "obd",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
           2018,
@@ -4827,6 +5156,18 @@
         "fuelLevel" : "obd",
         "odometer" : "obd",
         "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2020,
+          2020
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
           2021,
@@ -4842,6 +5183,17 @@
         "years" : [
           2024,
           2024
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2025,
+          2025
         ]
       }
     ]
@@ -5191,6 +5543,20 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2022,
+          2022
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
           2023
         ]
       },
@@ -5540,9 +5906,20 @@
         ]
       },
       {
-        "testingStatus" : "testerNeeded",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2023,
+          2023
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
           2024
         ]
       }
@@ -5861,7 +6238,7 @@
         "charging" : "obd",
         "fuelLevel" : "na",
         "odometer" : "obd",
-        "speed": "obd",
+        "speed" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
         "testingStatus" : {
@@ -5877,7 +6254,7 @@
         "charging" : "obd",
         "fuelLevel" : "na",
         "odometer" : "obd",
-        "speed": "obd",
+        "speed" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
         "testingStatus" : {
@@ -6163,7 +6540,7 @@
         "fuelLevel" : "obd",
         "odometer" : "obd",
         "speed" : "obd",
-        "stateOfCharge" : "na",
+        "stateOfCharge" : "obd",
         "stateOfHealth" : "na",
         "testingStatus" : "partiallyOnboarded",
         "tirePressure" : "obd",
@@ -6235,9 +6612,11 @@
       },
       {
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "obd",
         "testingStatus" : "partiallyOnboarded",
+        "tirePressure" : "obd",
         "years" : [
           2024,
           2024
@@ -6487,6 +6866,7 @@
       },
       {
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
@@ -7133,6 +7513,7 @@
         "fuelLevel" : "obd",
         "odometer" : "obd",
         "speed" : "obd",
+        "stateOfCharge" : "obd",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
           2023,
@@ -7140,7 +7521,11 @@
         ]
       },
       {
-        "testingStatus" : "testerNeeded",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2024,
           2024
@@ -7169,6 +7554,7 @@
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
@@ -7182,6 +7568,27 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2019,
+          2019
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2020,
+          2020
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
           2021
         ]
       },
@@ -7618,6 +8025,23 @@
   {
     "make" : "Lincoln",
     "model" : {
+      "name" : "Continental"
+    },
+    "supportStatuses" : [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2018,
+          2018
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Lincoln",
+    "model" : {
       "name" : "Corsair"
     },
     "supportStatuses" : [
@@ -7774,9 +8198,20 @@
     },
     "supportStatuses" : [
       {
-        "testingStatus" : "testerNeeded",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "obd",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2020,
+          2020
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
           2025
         ]
       }
@@ -7810,6 +8245,23 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2002,
+          2022
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
           2025
         ]
       }
@@ -7968,6 +8420,7 @@
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
@@ -7988,6 +8441,7 @@
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
@@ -8121,6 +8575,22 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2016,
+          2020
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
           2025
         ]
       }
@@ -8204,9 +8674,23 @@
         ]
       },
       {
-        "testingStatus" : "testerNeeded",
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2018,
+          2018
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2019,
           2020
         ]
       },
@@ -8312,6 +8796,13 @@
     },
     "supportStatuses" : [
       {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2007,
+          2018
+        ]
+      },
+      {
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
@@ -8321,7 +8812,14 @@
         "stateOfHealth" : "na",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
-          2007,
+          2019,
+          2019
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
           2024
         ]
       }
@@ -8433,6 +8931,22 @@
   {
     "make" : "Mercedes",
     "model" : {
+      "name" : "B-Class"
+    },
+    "supportStatuses" : [
+      {
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2013,
+          2013
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Mercedes",
+    "model" : {
       "name" : "C 350"
     },
     "supportStatuses" : [
@@ -8501,6 +9015,22 @@
   {
     "make" : "Mercedes",
     "model" : {
+      "name" : "Clase A"
+    },
+    "supportStatuses" : [
+      {
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2018,
+          2018
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Mercedes",
+    "model" : {
       "name" : "E-Class"
     },
     "supportStatuses" : [
@@ -8553,6 +9083,17 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           1996,
+          2024
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2025,
           2025
         ]
       }
@@ -8601,6 +9142,23 @@
         "years" : [
           2020,
           2025
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Mercedes",
+    "model" : {
+      "name" : "GLS-Class"
+    },
+    "supportStatuses" : [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2017,
+          2017
         ]
       }
     ]
@@ -8905,6 +9463,22 @@
   {
     "make" : "Nissan",
     "model" : {
+      "name" : "All New Livina"
+    },
+    "supportStatuses" : [
+      {
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2022,
+          2022
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Nissan",
+    "model" : {
       "name" : "Altima"
     },
     "supportStatuses" : [
@@ -8928,6 +9502,23 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2009,
+          2018
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2019,
+          2019
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
           2025
         ]
       }
@@ -9020,10 +9611,13 @@
     "supportStatuses" : [
       {
         "charging" : "obd",
+        "odometer" : "obd",
+        "range" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
         "testingStatus" : "partiallyOnboarded",
+        "tirePressure" : "obd",
         "years" : [
           2012,
           2012
@@ -9031,10 +9625,13 @@
       },
       {
         "charging" : "obd",
+        "odometer" : "obd",
+        "range" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
         "testingStatus" : "partiallyOnboarded",
+        "tirePressure" : "obd",
         "years" : [
           2013,
           2013
@@ -9042,10 +9639,13 @@
       },
       {
         "charging" : "obd",
+        "odometer" : "obd",
+        "range" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
         "testingStatus" : "partiallyOnboarded",
+        "tirePressure" : "obd",
         "years" : [
           2015,
           2015
@@ -9053,10 +9653,13 @@
       },
       {
         "charging" : "obd",
+        "odometer" : "obd",
+        "range" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
         "testingStatus" : "partiallyOnboarded",
+        "tirePressure" : "obd",
         "years" : [
           2016,
           2016
@@ -9346,6 +9949,27 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2020,
+          2023
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
+          2024
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2025,
           2025
         ]
       }
@@ -9393,6 +10017,23 @@
         "years" : [
           2001,
           2025
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Nissan",
+    "model" : {
+      "name" : "X-Trail"
+    },
+    "supportStatuses" : [
+      {
+        "odometer" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
+          2023
         ]
       }
     ]
@@ -10008,7 +10649,14 @@
         ]
       },
       {
-        "testingStatus" : "testerNeeded",
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2022,
           2022
@@ -10299,12 +10947,26 @@
     },
     "supportStatuses" : [
       {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2012,
+          2019
+        ]
+      },
+      {
         "fuelLevel" : "na",
         "speed" : "obd",
         "stateOfCharge" : "obd",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
-          2012,
+          2020,
+          2020
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2021,
           2024
         ]
       }
@@ -10589,6 +11251,27 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2013,
+          2015
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2016,
+          2016
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2017,
           2020
         ]
       },
@@ -10861,7 +11544,11 @@
         ]
       },
       {
-        "testingStatus" : "testerNeeded",
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2024,
           2024
@@ -11298,6 +11985,15 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2006,
+          2017
+        ]
+      },
+      {
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2018,
           2018
         ]
       }
@@ -11468,6 +12164,7 @@
         "fuelLevel" : "obd",
         "odometer" : "obd",
         "speed" : "obd",
+        "stateOfCharge" : "obd",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
           2009,
@@ -11485,6 +12182,7 @@
         "fuelLevel" : "obd",
         "odometer" : "obd",
         "speed" : "obd",
+        "stateOfCharge" : "obd",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
           2016,
@@ -11848,6 +12546,19 @@
           2007,
           2021
         ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
+          2024
+        ]
       }
     ]
   },
@@ -11881,6 +12592,7 @@
       },
       {
         "speed" : "obd",
+        "stateOfCharge" : "obd",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
           2009,
@@ -11937,9 +12649,20 @@
         ]
       },
       {
-        "testingStatus" : "testerNeeded",
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2023,
+          2023
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
           2024
         ]
       }
@@ -11980,6 +12703,7 @@
         "fuelLevel" : "obd",
         "odometer" : "obd",
         "speed" : "obd",
+        "stateOfCharge" : "obd",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
           2011,
@@ -12135,6 +12859,21 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2004,
+          2010
+        ]
+      },
+      {
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2011,
+          2011
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2012,
           2025
         ]
       }
@@ -12197,6 +12936,27 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           1996,
+          2011
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2012,
+          2012
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2013,
           2015
         ]
       },
@@ -12414,11 +13174,50 @@
       {
         "cells" : "na",
         "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
         "testingStatus" : "testerNeeded",
         "years" : [
-          2021,
+          2022,
+          2022
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2024,
           2025
         ]
       }
@@ -12554,6 +13353,22 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2016,
+          2016
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2017,
+          2017
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2018,
           2018
         ]
       }
@@ -12591,6 +13406,68 @@
         "years" : [
           2025,
           2025
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Unknown",
+    "model" : {
+      "name" : "Unknown"
+    },
+    "supportStatuses" : [
+      {
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2020,
+          2020
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2022,
+          2022
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2023,
+          2023
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
+          2024
         ]
       }
     ]
@@ -12720,6 +13597,23 @@
         "years" : [
           2018,
           2025
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Volkswagen",
+    "model" : {
+      "name" : "Beetle"
+    },
+    "supportStatuses" : [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2014,
+          2014
         ]
       }
     ]
@@ -13133,6 +14027,23 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2002,
+          2018
+        ]
+      },
+      {
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2019,
+          2019
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2020,
           2025
         ]
       }
@@ -13268,6 +14179,13 @@
     },
     "supportStatuses" : [
       {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          1996,
+          2020
+        ]
+      },
+      {
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
@@ -13276,7 +14194,14 @@
         "stateOfHealth" : "na",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
-          1996,
+          2021,
+          2021
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
           2024
         ]
       }
@@ -13369,9 +14294,19 @@
     },
     "supportStatuses" : [
       {
-        "testingStatus" : "testerNeeded",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
         "years" : [
           2022,
+          2022
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2023,
           2025
         ]
       }
@@ -13518,6 +14453,13 @@
     },
     "supportStatuses" : [
       {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2011,
+          2011
+        ]
+      },
+      {
         "cells" : "na",
         "charging" : "na",
         "fuelLevel" : "obd",
@@ -13526,7 +14468,14 @@
         "stateOfHealth" : "na",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
-          2011,
+          2012,
+          2012
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2013,
           2024
         ]
       }
@@ -13543,6 +14492,17 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2015,
+          2017
+        ]
+      },
+      {
+        "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2018,
           2018
         ]
       },
@@ -13855,6 +14815,27 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2010,
+          2020
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
+          2021
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2022,
           2024
         ]
       }
