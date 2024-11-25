@@ -5874,11 +5874,16 @@
         ]
       },
       {
+        "charging" : "obd",
         "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed": "obd",
         "stateOfCharge" : "obd",
+        "stateOfHealth" : "obd",
         "testingStatus" : {
           "activeTester" : "Briantran33"
         },
+        "tirePressure" : "obd",
         "years" : [
           2023,
           2023
