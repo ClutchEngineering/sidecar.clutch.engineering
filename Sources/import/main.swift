@@ -321,6 +321,9 @@ extension String {
       name = name.replacingOccurrences(of: term, with: "")
     }
 
+    name = name
+      .replacingOccurrences(of: "Ionoq5", with: "IONIQ 5")
+
     // Clean up any remaining whitespace
     return name.trimmingCharacters(in: .whitespaces)
   }
