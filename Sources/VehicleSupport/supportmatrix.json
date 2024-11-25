@@ -6550,7 +6550,8 @@
   {
     "make" : "Hyundai",
     "model" : {
-      "name" : "Tucson Hybrid"
+      "name" : "Tucson Hybrid",
+      "symbolName": "tucsonhybrid4thgen"
     },
     "supportStatuses" : [
       {
