@@ -10518,56 +10518,6 @@
     ]
   },
   {
-    "make" : "Skoda",
-    "model" : {
-      "name" : "ENYAQ 85"
-    },
-    "supportStatuses" : [
-      {
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2024,
-          2024
-        ]
-      }
-    ]
-  },
-  {
-    "make" : "Skoda",
-    "model" : {
-      "name" : "Enyaq 85"
-    },
-    "supportStatuses" : [
-      {
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2024,
-          2024
-        ]
-      }
-    ]
-  },
-  {
-    "make" : "Skoda",
-    "model" : {
-      "name" : "Enyaq Coupe"
-    },
-    "supportStatuses" : [
-      {
-        "speed" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2023,
-          2023
-        ]
-      }
-    ]
-  },
-  {
     "make" : "Smart",
     "model" : {
       "name" : "Smart 1"
@@ -13936,7 +13886,7 @@
         "testingStatus" : "partiallyOnboarded",
         "years" : [
           2022,
-          2022
+          2024
         ]
       }
     ]
