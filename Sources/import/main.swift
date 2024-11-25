@@ -157,6 +157,18 @@ class MatrixMerger {
       return (nil, status, nil)
     }
 
+    // Generate new status with CSV data
+    let newStatus = SupportMatrixGenerator.generateSupportStatus(
+      from: signals,
+      year: year,
+      existingStatuses: existingStatuses
+    )
+
+    // Check for compatibility - if incompatible, return the original status unchanged
+    if !status.isCompatibleWith(incomingStatus: newStatus) {
+      return (nil, status, nil)
+    }
+
     // Create the three parts
     var beforeStatus: VehicleSupportStatus?
     var afterStatus: VehicleSupportStatus?
@@ -205,14 +217,7 @@ class MatrixMerger {
       }
     }
 
-    // Generate new status with CSV data, considering existing NA states
-    let currentStatus = SupportMatrixGenerator.generateSupportStatus(
-      from: signals,
-      year: year,
-      existingStatuses: existingStatuses
-    )
-
-    return (beforeStatus, currentStatus, afterStatus)
+    return (beforeStatus, newStatus, afterStatus)
   }
 
   static func merge(existing entries: [VehicleSupportEntry], csvVehicles: [CSVVehicle]) -> [VehicleSupportEntry] {
@@ -223,7 +228,7 @@ class MatrixMerger {
 
       // Find entries that match the make and model name
       let matchingEntries = result[vehicle.make]?.filter { entry in
-        entry.model.name == vehicle.model &&
+        entry.model.name == vehicle.model.cleanedModelName() &&
         // Check if any of this entry's status ranges cover our target year
         entry.supportStatuses.contains { status in
           status.years.contains(year)
@@ -273,7 +278,7 @@ class MatrixMerger {
       } else {
         // No matching entry found - create a new one
         // For new entries, we create a simple Model without a symbolName
-        let model = Model(model: vehicle.model)
+        let model = Model(model: vehicle.model.cleanedModelName())
         let status = SupportMatrixGenerator.generateSupportStatus(
           from: vehicle.signals,
           year: year,
@@ -286,6 +291,38 @@ class MatrixMerger {
 
     // Convert back to sorted array
     return result.values.flatMap { $0 }.sorted()
+  }
+}
+
+extension String {
+  /// Cleans a vehicle model name by removing known trim/variant designations
+  func cleanedModelName() -> String {
+    var name = self
+
+    // Simple blacklist of terms to remove, with spaces to avoid partial matches
+    let blacklist = [
+      " N Performance",
+      " Performance",
+      " Premium",
+      " Limited",
+      " Sport",
+      " AWD",
+      " 4MATIC",
+      " xDrive",
+      " Competition",
+      " GT",
+      " RS",
+      " Pro",
+      " F39",
+    ]
+
+    // Remove blacklisted terms
+    for term in blacklist {
+      name = name.replacingOccurrences(of: term, with: "")
+    }
+
+    // Clean up any remaining whitespace
+    return name.trimmingCharacters(in: .whitespaces)
   }
 }
 

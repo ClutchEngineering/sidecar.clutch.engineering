@@ -3,6 +3,31 @@ import Foundation
 package typealias Make = String
 
 package struct VehicleSupportStatus: Codable, Equatable, Comparable {
+  /// Returns true if this status represents an EV/Hybrid vehicle based on its signals
+  var isElectrified: Bool {
+    stateOfCharge != nil || stateOfHealth != nil || charging != nil || cells != nil
+  }
+
+  /// Returns true if this status has explicitly marked EV signals as not applicable
+  var hasExplicitEVSignalsNA: Bool {
+    stateOfCharge == .na ||
+    stateOfHealth == .na ||
+    charging == .na ||
+    cells == .na
+  }
+
+  /// Returns true if the incoming status is compatible with this one
+  package func isCompatibleWith(incomingStatus: VehicleSupportStatus) -> Bool {
+    // If this status has explicit NA markers for EV signals and the incoming status
+    // reports EV capabilities, they're incompatible
+    if hasExplicitEVSignalsNA && incomingStatus.isElectrified {
+      return false
+    }
+
+    // All other cases are considered compatible
+    return true
+  }
+
   package static func loadAll() throws -> [Make: [Model: [VehicleSupportStatus]]] {
     let url = Bundle.module.url(forResource: "supportmatrix", withExtension: "json")!
     let data = try Data(contentsOf: url)

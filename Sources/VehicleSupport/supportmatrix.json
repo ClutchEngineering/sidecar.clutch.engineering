@@ -2380,7 +2380,7 @@
   {
     "make" : "Chery",
     "model" : {
-      "name" : "Tiggo 7 Pro"
+      "name" : "Tiggo 7"
     },
     "supportStatuses" : [
       {
@@ -6270,6 +6270,7 @@
         "charging" : "obd",
         "fuelLevel" : "na",
         "odometer" : "obd",
+        "speed" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
         "testingStatus" : "partiallyOnboarded",
@@ -6704,22 +6705,6 @@
     },
     "supportStatuses" : [
       {
-        "speed" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2024,
-          2024
-        ]
-      }
-    ]
-  },
-  {
-    "make" : "Hyundai",
-    "model" : {
-      "name" : "i30 Sedan"
-    },
-    "supportStatuses" : [
-      {
         "testingStatus" : "testerNeeded",
         "years" : [
           2007,
@@ -6743,6 +6728,14 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2023,
+          2023
+        ]
+      },
+      {
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2024,
           2024
         ]
       }
@@ -9166,6 +9159,23 @@
   {
     "make" : "Mercedes",
     "model" : {
+      "name" : "Ml63"
+    },
+    "supportStatuses" : [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2007,
+          2007
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Mercedes",
+    "model" : {
       "name" : "Ml63 "
     },
     "supportStatuses" : [
@@ -9329,6 +9339,20 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2003,
+          2020
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "fuelLevel" : "obd",
+        "odometer" : "obd",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2021,
           2021
         ]
       },
@@ -9491,6 +9515,7 @@
       },
       {
         "fuelLevel" : "obd",
+        "odometer" : "obd",
         "speed" : "obd",
         "testingStatus" : "partiallyOnboarded",
         "years" : [
@@ -13406,68 +13431,6 @@
         "years" : [
           2025,
           2025
-        ]
-      }
-    ]
-  },
-  {
-    "make" : "Unknown",
-    "model" : {
-      "name" : "Unknown"
-    },
-    "supportStatuses" : [
-      {
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2020,
-          2020
-        ]
-      },
-      {
-        "fuelLevel" : "obd",
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2021,
-          2021
-        ]
-      },
-      {
-        "fuelLevel" : "obd",
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2022,
-          2022
-        ]
-      },
-      {
-        "fuelLevel" : "obd",
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2023,
-          2023
-        ]
-      },
-      {
-        "fuelLevel" : "obd",
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2024,
-          2024
         ]
       }
     ]
