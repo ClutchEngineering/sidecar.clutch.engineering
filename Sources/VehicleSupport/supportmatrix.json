@@ -6117,22 +6117,6 @@
   {
     "make" : "Hyundai",
     "model" : {
-      "name" : "Ionoq5"
-    },
-    "supportStatuses" : [
-      {
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2022,
-          2022
-        ]
-      }
-    ]
-  },
-  {
-    "make" : "Hyundai",
-    "model" : {
       "name" : "Kona"
     },
     "supportStatuses" : [
