@@ -6582,7 +6582,7 @@
         "odometer" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
+        "testingStatus" : "onboarded",
         "tirePressure" : "obd",
         "years" : [
           2024,
