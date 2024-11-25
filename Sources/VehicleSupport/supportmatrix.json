@@ -6234,35 +6234,17 @@
         ]
       },
       {
-        "cells" : "na",
+        "cells" : "obd",
         "charging" : "obd",
         "fuelLevel" : "na",
         "odometer" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
-        "testingStatus" : {
-          "activeTester" : "UnnDunn"
-        },
+        "testingStatus" : "onboarded",
         "tirePressure" : "obd",
         "years" : [
           2022,
-          2022
-        ]
-      },
-      {
-        "charging" : "obd",
-        "fuelLevel" : "na",
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "stateOfHealth" : "obd",
-        "testingStatus" : {
-          "activeTester" : "Briantran33"
-        },
-        "tirePressure" : "obd",
-        "years" : [
-          2023,
           2023
         ]
       },
