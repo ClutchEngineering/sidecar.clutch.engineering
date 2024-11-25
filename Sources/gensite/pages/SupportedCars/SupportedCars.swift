@@ -208,7 +208,7 @@ struct MakeCard: View {
 
 struct MakeSupportSection: View {
   let make: Make
-  let models: [Make: [Model: [VehicleSupportStatus]]].Value
+  let models: [Model: [VehicleSupportStatus]]
 
   var body: some View {
     Section {
@@ -271,10 +271,15 @@ struct CustomStringComparator {
   }
 }
 
-extension Dictionary where Key == Model {
+extension Dictionary where Key == Model, Value == [VehicleSupportStatus] {
   func sortedByLocalizedStandard() -> [(key: Key, value: Value)] {
     sorted { lhs, rhs in
-      CustomStringComparator.compare(lhs.key, rhs.key)
+      if lhs.key == rhs.key,
+         let yearA = lhs.value.first?.years.lowerBound,
+         let yearB = rhs.value.first?.years.lowerBound {
+        return yearA < yearB
+      }
+      return CustomStringComparator.compare(lhs.key, rhs.key)
     }
   }
 }
