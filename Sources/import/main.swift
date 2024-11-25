@@ -221,24 +221,29 @@ class MatrixMerger {
     for vehicle in csvVehicles {
       let year = vehicle.year! // Safe as we filtered nil years
 
-      // Find or create the appropriate model, preserving symbols if they exist
-      let model = findOrCreateModel(name: vehicle.model, in: result[vehicle.make] ?? [])
+      // Find entries that match the make and model name
+      let matchingEntries = result[vehicle.make]?.filter { entry in
+        entry.model.name == vehicle.model &&
+        // Check if any of this entry's status ranges cover our target year
+        entry.supportStatuses.contains { status in
+          status.years.contains(year)
+        }
+      } ?? []
 
-      // Find the entry for this make/model if it exists
-      if let entryIndex = result[vehicle.make]?.firstIndex(where: { $0.model.name == vehicle.model }) {
-        var entry = result[vehicle.make]![entryIndex]
+      if let matchingEntry = matchingEntries.first {
+        // Found a matching entry with a status covering this year
+        var entry = matchingEntry
 
-        // Check if there's an existing status that contains this year
-        if let existingStatus = entry.supportStatuses.first(where: { $0.years.contains(year) }) {
+        // Find the specific status that contains this year
+        if let statusIndex = entry.supportStatuses.firstIndex(where: { $0.years.contains(year) }) {
+          let existingStatus = entry.supportStatuses[statusIndex]
+
           // If the existing status is verified, skip this vehicle
           if shouldPreserveStatus(existingStatus) {
             continue
           }
 
-          // Otherwise, proceed with the split/update
-          guard let statusIndex = entry.supportStatuses.firstIndex(where: { $0.years.contains(year) }) else {
-            continue
-          }
+          // Split/update the status
           let (beforeStatus, newStatus, afterStatus) = splitStatus(
             existingStatus,
             atYear: year,
@@ -257,20 +262,23 @@ class MatrixMerger {
           if let after = afterStatus {
             entry.supportStatuses.append(after)
           }
-        } else {
-          // No existing status for this year, add the new one
-          let status = SupportMatrixGenerator.generateSupportStatus(
-            from: vehicle.signals,
-            year: year,
-            existingStatuses: entry.supportStatuses
-          )
-          entry.supportStatuses.append(status)
         }
+
         entry.supportStatuses.sort()
-        result[vehicle.make]![entryIndex] = entry
+
+        // Update the entry in the result dictionary
+        if let entryIndex = result[vehicle.make]?.firstIndex(where: { $0.model == matchingEntry.model }) {
+          result[vehicle.make]![entryIndex] = entry
+        }
       } else {
-        // Create new entry - no existing statuses to consider
-        let status = SupportMatrixGenerator.generateSupportStatus(from: vehicle.signals, year: year, existingStatuses: [])
+        // No matching entry found - create a new one
+        // For new entries, we create a simple Model without a symbolName
+        let model = Model(model: vehicle.model)
+        let status = SupportMatrixGenerator.generateSupportStatus(
+          from: vehicle.signals,
+          year: year,
+          existingStatuses: []
+        )
         let entry = VehicleSupportEntry(make: vehicle.make, model: model, supportStatuses: [status])
         result[vehicle.make, default: []].append(entry)
       }
