@@ -5955,11 +5955,16 @@
         ]
       },
       {
+        "charging" : "obd",
         "fuelLevel" : "na",
+        "odometer" : "obd",
+        "speed" : "obd",
         "stateOfCharge" : "obd",
+        "stateOfHealth" : "obd",
         "testingStatus" : {
           "activeTester" : "spider"
         },
+        "tirePressure" : "obd",
         "years" : [
           2022,
           2022
@@ -5968,6 +5973,7 @@
       {
         "charging" : "obd",
         "fuelLevel" : "na",
+        "odometer" : "obd",
         "speed" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
