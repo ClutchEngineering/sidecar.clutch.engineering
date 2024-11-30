@@ -2150,6 +2150,7 @@
         ]
       },
       {
+        "odometer" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
         "testingStatus" : {
