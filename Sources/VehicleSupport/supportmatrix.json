@@ -6483,9 +6483,11 @@
         "fuelLevel" : "obd",
         "odometer" : "obd",
         "speed" : "obd",
-        "stateOfCharge" : "obd",
+        "stateOfCharge" : "na",
         "stateOfHealth" : "na",
-        "testingStatus" : "partiallyOnboarded",
+        "testingStatus" : {
+          "activeTester" : "breakfast4suppr"
+        },
         "tirePressure" : "obd",
         "years" : [
           2022,
@@ -6505,7 +6507,7 @@
         "fuelLevel" : "obd",
         "odometer" : "obd",
         "speed" : "obd",
-        "stateOfCharge" : "obd",
+        "stateOfCharge" : "na",
         "stateOfHealth" : "na",
         "testingStatus" : "partiallyOnboarded",
         "tirePressure" : "obd",
