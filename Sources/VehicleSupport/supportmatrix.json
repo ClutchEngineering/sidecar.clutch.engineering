@@ -7798,6 +7798,27 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2001,
+          2016
+        ]
+      },
+      {
+        "cells" : "na",
+        "charging" : "na",
+        "speed" : "obd",
+        "stateOfCharge" : "na",
+        "stateOfHealth" : "na",
+        "testingStatus" : {
+          "activeTester" : "YamR1"
+        },
+        "years" : [
+          2017,
+          2017
+        ]
+      },
+      {
+        "testingStatus" : "testerNeeded",
+        "years" : [
+          2018,
           2020
         ]
       },
