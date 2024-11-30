@@ -7808,7 +7808,9 @@
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
-        "testingStatus" : "partiallyOnboarded",
+        "testingStatus" : {
+          "activeTester" : "anaqi"
+        },
         "years" : [
           2021,
           2021
