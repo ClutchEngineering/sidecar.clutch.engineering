@@ -2074,7 +2074,6 @@
       },
       {
         "speed" : "obd",
-        "stateOfCharge" : "obd",
         "testingStatus" : "partiallyOnboarded",
         "testingStatus" : {
           "activeTester" : "scallaghan"
