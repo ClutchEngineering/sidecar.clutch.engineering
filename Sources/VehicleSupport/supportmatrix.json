@@ -6485,9 +6485,7 @@
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
-        "testingStatus" : {
-          "activeTester" : "breakfast4suppr"
-        },
+        "testingStatus" : "onboarded",
         "tirePressure" : "obd",
         "years" : [
           2022,
