@@ -2138,7 +2138,8 @@
   {
     "make" : "BMW",
     "model" : {
-      "name" : "iX3"
+      "name" : "iX3",
+      "symbolName": "ix31stgenfacelift"
     },
     "supportStatuses" : [
       {
