@@ -6058,7 +6058,8 @@
   {
     "make" : "Hyundai",
     "model" : {
-      "name" : "IONIQ PHEV"
+      "name" : "IONIQ Plug-In Hybrid",
+      "symbolName": "ioniq-phev"
     },
     "supportStatuses" : [
       {
