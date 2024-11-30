@@ -5963,44 +5963,10 @@
         "speed" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
-        "testingStatus" : {
-          "activeTester" : "spider"
-        },
+        "testingStatus" : "onboarded",
         "tirePressure" : "obd",
         "years" : [
           2022,
-          2022
-        ]
-      },
-      {
-        "charging" : "obd",
-        "fuelLevel" : "na",
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "stateOfHealth" : "obd",
-        "testingStatus" : {
-          "activeTester" : "spenumatsa"
-        },
-        "tirePressure" : "obd",
-        "years" : [
-          2023,
-          2023
-        ]
-      },
-      {
-        "charging" : "obd",
-        "fuelLevel" : "na",
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "stateOfHealth" : "obd",
-        "testingStatus" : {
-          "activeTester" : "zachmiles"
-        },
-        "tirePressure" : "obd",
-        "years" : [
-          2024,
           2024
         ]
       },
