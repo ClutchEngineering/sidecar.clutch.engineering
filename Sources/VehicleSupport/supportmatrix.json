@@ -2151,11 +2151,10 @@
       },
       {
         "odometer" : "obd",
+        "speed" : "obd",
         "stateOfCharge" : "obd",
         "stateOfHealth" : "obd",
-        "testingStatus" : {
-          "activeTester" : "Clarkyncl"
-        },
+        "testingStatus" : "onboarded",
         "years" : [
           2022,
           2022
