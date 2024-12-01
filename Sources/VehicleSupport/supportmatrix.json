@@ -10663,7 +10663,9 @@
         "speed" : "obd",
         "stateOfCharge" : "na",
         "stateOfHealth" : "na",
-        "testingStatus" : "partiallyOnboarded",
+        "testingStatus" : {
+          "activeTester" : "MinimeJer05"
+        },
         "years" : [
           2023,
           2023
