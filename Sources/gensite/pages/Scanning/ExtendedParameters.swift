@@ -46,9 +46,9 @@ For newer vehicles, especially electric vehicles, extended PIDs are often the on
 
 ### Extended PIDs in Electric Sidecar
 
-In addition to supporting many of the industry standard OBD-II PIDs specified in [SAE J1979](https://www.sae.org/standards/content/j1979da_202404/), Electric Sidecar supports extended PIDs through its community GitHub organization, [github.com/electricsidecar](https://github.com/electricsidecar).
+In addition to supporting many of the industry standard OBD-II PIDs specified in [SAE J1979](https://www.sae.org/standards/content/j1979da_202404/), Sidecar pulls extended PIDs from the OBDb, [github.com/OBDb](https://github.com/OBDb).
 
-Every vehicle make and model has its own GitHub repository in the Electric Sidecar organization. If a make and model you're interested in is not yet available, send an email with your requested make and model to [support@electricsidecar.app](mailto:support@electricsidecar.app) or [open an issue](https://github.com/ElectricSidecar/ElectricSidecar/issues/new).
+Every vehicle make and model has its own GitHub repository in the Electric Sidecar organization. If a make and model you're interested in is not yet available, send an email with your requested make and model to [support@clutch.engineering](mailto:support@clutch.engineering) or [open an issue](https://github.com/ClutchEngineering/Sidecar/issues/new).
 
 When you connect a scanner to your car, Electric Sidecar will ask for the car's VIN in order to determine its make and model. The make and model will then be used to enable the relevant extended PIDs within the app.
 
@@ -61,7 +61,7 @@ Contributing extended PIDs
 
 Contributions from the automotive community help expand the library of extended PIDs available in Electric Sidecar. By sharing extended PIDs, we all contribute to the ability for car owners to access more of their vehicle data.
 
-To contribute an extended PID you must first fork the GitHub repository for the relevant make and model on [github.com/electricsidecar](https://github.com/electricsidecar).
+To contribute an extended PID you must first fork the GitHub repository for the relevant make and model on [github.com/OBDb](https://github.com/OBDb).
 
 Extended PIDs are stored at the following path in each repository:
 
@@ -71,9 +71,9 @@ signalsets/v3/default.json
 
 ### Examples
 
-*   [Ford Mustang](https://github.com/ElectricSidecar/Ford-Mustang/blob/main/signalsets/v3/default.json)
-*   [MG MG4](https://github.com/ElectricSidecar/MG-MG4/blob/main/signalsets/v3/default.json)
-*   [Porsche Taycan](https://github.com/ElectricSidecar/Porsche-Taycan/blob/main/signalsets/v3/default.json)
+*   [Ford Mustang](https://github.com/OBDb/Ford-Mustang/blob/main/signalsets/v3/default.json)
+*   [MG MG4](https://github.com/OBDb/MG-MG4/blob/main/signalsets/v3/default.json)
+*   [Porsche Taycan](https://github.com/OBDb/Porsche-Taycan/blob/main/signalsets/v3/default.json)
 
 ---
 
@@ -170,7 +170,7 @@ ATFCSM1
 
 ### Connectable
 
-Connectables are elements of the Electric Sidecar user interface that can be powered by values returned from an OBD-II scanner. Connectables expect their values to be provided in a certain [Unit](https://electricsidecar.app/scanning/extended-pids/#unit).
+Connectables are elements of the Electric Sidecar user interface that can be powered by values returned from an OBD-II scanner. Connectables expect their values to be provided in a certain [Unit](#unit).
 
 #### Example
 
@@ -312,7 +312,7 @@ Two services are currently supported: 01 and 22.
 
 ### Signal
 
-Signals are individual values contained within the response of a [Command](https://electricsidecar.app/scanning/extended-pids/#command) sent to a vehicle. Most Commands only have one Signal, but Commands can pack any number of signals into a single response.
+Signals are individual values contained within the response of a [Command](#command) sent to a vehicle. Most Commands only have one Signal, but Commands can pack any number of signals into a single response.
 
 #### Example
 
