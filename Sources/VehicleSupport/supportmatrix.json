@@ -10032,23 +10032,6 @@
     ]
   },
   {
-    "make" : "OPEL",
-    "model" : {
-      "name" : "Insignia"
-    },
-    "supportStatuses" : [
-      {
-        "fuelLevel" : "obd",
-        "speed" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2015,
-          2015
-        ]
-      }
-    ]
-  },
-  {
     "make" : "Omoda",
     "model" : {
       "name" : "Omoda 5 EV"
@@ -10058,21 +10041,6 @@
         "testingStatus" : "testerNeeded",
         "years" : [
           2023,
-          2025
-        ]
-      }
-    ]
-  },
-  {
-    "make" : "Opel",
-    "model" : {
-      "name" : "Corsa"
-    },
-    "supportStatuses" : [
-      {
-        "testingStatus" : "testerNeeded",
-        "years" : [
-          1996,
           2025
         ]
       }
@@ -13406,7 +13374,7 @@
     ]
   },
   {
-    "make" : "Vauxhall",
+    "make" : "Vauxhall/Opel",
     "model" : {
       "name" : "Ampera"
     },
@@ -13424,7 +13392,7 @@
     ]
   },
   {
-    "make" : "Vauxhall",
+    "make" : "Vauxhall/Opel",
     "model" : {
       "name" : "Astra"
     },
@@ -13439,7 +13407,7 @@
     ]
   },
   {
-    "make" : "Vauxhall",
+    "make" : "Vauxhall/Opel",
     "model" : {
       "name" : "Corsa"
     },
@@ -13457,7 +13425,24 @@
     ]
   },
   {
-    "make" : "Vauxhall",
+    "make" : "Vauxhall/Opel",
+    "model" : {
+      "name" : "Insignia"
+    },
+    "supportStatuses" : [
+      {
+        "fuelLevel" : "obd",
+        "speed" : "obd",
+        "testingStatus" : "partiallyOnboarded",
+        "years" : [
+          2015,
+          2015
+        ]
+      }
+    ]
+  },
+  {
+    "make" : "Vauxhall/Opel",
     "model" : {
       "name" : "Mokka"
     },
@@ -13472,7 +13457,7 @@
     ]
   },
   {
-    "make" : "Vauxhall",
+    "make" : "Vauxhall/Opel",
     "model" : {
       "name" : "Mokka e"
     },
@@ -13487,7 +13472,7 @@
     ]
   },
   {
-    "make" : "Vauxhall",
+    "make" : "Vauxhall/Opel",
     "model" : {
       "name" : "Zafira ‘B’"
     },

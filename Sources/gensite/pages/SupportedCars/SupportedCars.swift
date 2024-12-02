@@ -189,9 +189,19 @@ struct HeaderCell<Content: View>: View {
 
 struct MakeCard: View {
   let make: Make
+  
+  var formattedMake: String {
+    make
+      .replacingOccurrences(of: " ", with: "")
+      .replacingOccurrences(of: "-s", with: "")
+      .replacingOccurrences(of: "/", with: "-")
+      .applyingTransform(.stripDiacritics, reverse: false)!
+      .lowercased()
+  }
+
   var body: some View {
     VStack(alignment: .center) {
-      Image(URL(string: "/gfx/make/\(make.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-s", with: "").applyingTransform(.stripDiacritics, reverse: false)!.lowercased()).svg"))
+      Image(URL(string: "/gfx/make/\(formattedMake).svg"))
         .colorInvert(condition: .dark)
         .display(.inlineBlock)
         .frame(width: 48)
@@ -200,7 +210,7 @@ struct MakeCard: View {
         .bold()
         .fontDesign("rounded")
         .fontSize(.large)
-        .fontSize(.extraExtraExtraLarge, condition: .desktop)
+        .fontSize(.extraExtraLarge, condition: .desktop)
     }
     .justifyContent(.center)
   }
