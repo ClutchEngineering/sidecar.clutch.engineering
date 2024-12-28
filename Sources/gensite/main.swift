@@ -25,6 +25,7 @@ let sitemap: Sitemap = [
   "bug/index.html": Bug(),
   "supported-cars/index.html": SupportedCars(),
   "beta/index.html": BetaTesterHandbook(),
+  "beta/leaderboard/index.html": LeaderboardPage(),
   "help/index.html": Help(),
 ]
 

@@ -15,6 +15,8 @@ let package = Package(
     .executableTarget(name: "gensite", dependencies: [
       .product(name: "Slipstream", package: "slipstream"),
       "VehicleSupport",
+    ], resources: [
+      .process("export-carplay-distance-traveled-by-model.csv")
     ]),
 
     .executableTarget(name: "import", dependencies: [
