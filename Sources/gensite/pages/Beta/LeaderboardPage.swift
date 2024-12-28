@@ -139,7 +139,7 @@ struct LeaderboardPage: View {
         Section {
           ContentContainer {
             VStack(alignment: .center, spacing: 8) {
-              Link(URL(string: "mailto:jeff@featherless.design")) {
+              Link(URL(string: "mailto:jeff@featherless.design?subject=CarPlay navigation TestFlight&body=I'd like to help beta test Sidecar turn-by-turn navigation in CarPlay. My vehicle is a...")) {
                 VStack(alignment: .center, spacing: 4) {
                   H1("Want to join the beta?")
                     .fontSize(.extraLarge)
@@ -147,7 +147,7 @@ struct LeaderboardPage: View {
                     .bold()
                     .fontDesign("rounded")
                   Text("Email jeff@featherless.design to join")
-                    .fontSize(.large)
+                    .fontSize(.small)
                     .fontSize(.extraLarge, condition: .desktop)
                     .fontWeight(.medium)
                     .fontDesign("rounded")
@@ -155,7 +155,7 @@ struct LeaderboardPage: View {
                   Text("Include your vehicle make/model/year with the subject \"CarPlay navigation TestFlight\"")
                     .fontWeight(.bold)
                     .fontDesign("rounded")
-                    .fontSize(.large)
+                    .fontSize(.small)
                 }
                 .textAlignment(.center)
                 .classNames(["bg-gradient-to-tl", "from-cyan-500", "to-blue-600"])
