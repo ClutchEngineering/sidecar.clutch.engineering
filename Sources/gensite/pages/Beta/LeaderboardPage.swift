@@ -131,6 +131,52 @@ struct LeaderboardPage: View {
         }
         .margin(.bottom, 16)
 
+        Image(URL(string: "/gfx/carplay.png"))
+          .frame(width: 0.75)
+          .margin(.horizontal, .auto)
+          .margin(.bottom, 16)
+
+        Section {
+          ContentContainer {
+            VStack(alignment: .center, spacing: 8) {
+              Link(URL(string: "mailto:jeff@featherless.design")) {
+                VStack(alignment: .center, spacing: 4) {
+                  H1("Want to join the beta?")
+                    .fontSize(.extraLarge)
+                    .fontSize(.fourXLarge, condition: .desktop)
+                    .bold()
+                    .fontDesign("rounded")
+                  Text("Email jeff@featherless.design to join")
+                    .fontSize(.large)
+                    .fontSize(.extraLarge, condition: .desktop)
+                    .fontWeight(.medium)
+                    .fontDesign("rounded")
+                    .underline(condition: .hover)
+                  Text("Include your vehicle make/model/year with the subject \"CarPlay navigation TestFlight\"")
+                    .fontWeight(.bold)
+                    .fontDesign("rounded")
+                    .fontSize(.large)
+                }
+                .textAlignment(.center)
+                .classNames(["bg-gradient-to-tl", "from-cyan-500", "to-blue-600"])
+                .transition(.all)
+                .textColor(.white)
+                .padding(.horizontal, 32)
+                .padding(.vertical, 24)
+                .background(.zinc, darkness: 100)
+                .background(.zinc, darkness: 900, condition: .dark)
+                .cornerRadius(.extraExtraLarge)
+              }
+            }
+            .frame(width: 0.8)
+            .frame(width: 0.6, condition: .desktop)
+            .margin(.horizontal, .auto)
+          }
+          .padding(.vertical, 8)
+          .padding(.vertical, 16, condition: .desktop)
+        }
+        .margin(.bottom, 32)
+
         // Table showing the leaderboard
         Table {
           TableHeader {
