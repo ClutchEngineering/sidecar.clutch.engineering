@@ -63,35 +63,70 @@ struct LeaderboardPage: View {
   private let makes: [Make: [Model: [VehicleSupportStatus]]]
 
   init() {
+    // Load vehicle support data first
+    self.makes = try! VehicleSupportStatus.loadAll()
+
     // Load and process CSV data
     let csvContent = try! String(contentsOf: Bundle.module.url(forResource: "export-carplay-distance-traveled-by-model", withExtension: "csv")!)
 
-    var entries: [LeaderboardEntry] = []
+    // Process entries and combine duplicates
+    var vehicleEntries: [String: (LeaderboardEntry, String)] = [:] // [normalizedName: (entry, displayName)]
+
     let rows = csvContent.components(separatedBy: .newlines)
     for row in rows.dropFirst() { // Skip header
       let columns = row.components(separatedBy: ",")
       if columns.count == 3,
          let count = Float(columns[2]) {
-        entries.append(LeaderboardEntry(
+        let entry = LeaderboardEntry(
           series: columns[0],
           customName: columns[1],
           count: count
-        ))
+        )
+
+        // Find the vehicle info and use it as the key for grouping
+        let vehicleInfo = Self.findVehicleInfo(series: entry.series, in: makes)
+        if vehicleInfo.vehicleName != "/" {
+          let normalizedName = vehicleInfo.vehicleName.lowercased()
+
+          if let existingEntry = vehicleEntries[normalizedName] {
+            // Add the count to the existing entry
+            let updatedEntry = LeaderboardEntry(
+              series: existingEntry.0.series,
+              customName: existingEntry.0.customName,
+              count: existingEntry.0.count + entry.count
+            )
+            vehicleEntries[normalizedName] = (updatedEntry, existingEntry.1)
+          } else {
+            // Create new entry
+            vehicleEntries[normalizedName] = (entry, vehicleInfo.vehicleName)
+          }
+        }
       }
     }
 
-    // Sort by count descending
-    self.leaderboardData = entries.sorted { $0.count > $1.count }
-
-    // Load vehicle support data
-    self.makes = try! VehicleSupportStatus.loadAll()
+    // Convert back to array and sort by count
+    self.leaderboardData = vehicleEntries.values.map { $0.0 }
+      .sorted { $0.count > $1.count }
   }
 
-  private func findVehicleInfo(series: String, in makes: [Make: [Model: [VehicleSupportStatus]]]) -> (symbolName: String?, vehicleName: String) {
+  private static func findVehicleInfo(series: String, in makes: [Make: [Model: [VehicleSupportStatus]]]) -> (symbolName: String?, vehicleName: String) {
+    // Normalize the input series to lowercase and split into components
+    let components = series.components(separatedBy: "/")
+    guard components.count >= 2 else { return (nil, series) }
+
+    let seriesMake = components[0].lowercased()
+    let seriesModel = components[1].lowercased()
+
     for (make, models) in makes {
-      for (model, _) in models {
-        if series.contains(make) && series.contains(model.name) {
-          return (model.symbolName, "\(make) \(model.name)")
+      // Normalize the make to lowercase for comparison
+      let normalizedMake = make.lowercased()
+      if normalizedMake == seriesMake {
+        for (model, _) in models {
+          // Normalize the model name to lowercase for comparison
+          let normalizedModel = model.name.lowercased()
+          if normalizedModel == seriesModel {
+            return (model.symbolName, "\(make) \(model.name)")
+          }
         }
       }
     }
@@ -190,7 +225,7 @@ struct LeaderboardPage: View {
 
           TableBody {
             for (index, entry) in leaderboardData.enumerated() {
-              let vehicleInfo = findVehicleInfo(series: entry.series, in: makes)
+              let vehicleInfo = Self.findVehicleInfo(series: entry.series, in: makes)
               if vehicleInfo.vehicleName != "/" {
                 LeaderboardRow(
                   rank: index + 1,
