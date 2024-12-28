@@ -144,12 +144,14 @@ struct LeaderboardPage: View {
           TableBody {
             for (index, entry) in leaderboardData.enumerated() {
               let vehicleInfo = findVehicleInfo(series: entry.series, in: makes)
-              LeaderboardRow(
-                rank: index + 1,
-                symbolName: vehicleInfo.symbolName,
-                vehicleName: vehicleInfo.vehicleName,
-                count: entry.count
-              )
+              if vehicleInfo.vehicleName != "/" {
+                LeaderboardRow(
+                  rank: index + 1,
+                  symbolName: vehicleInfo.symbolName,
+                  vehicleName: vehicleInfo.vehicleName,
+                  count: entry.count
+                )
+              }
             }
           }
         }
