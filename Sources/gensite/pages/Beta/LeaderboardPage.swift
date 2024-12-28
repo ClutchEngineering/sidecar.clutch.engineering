@@ -156,6 +156,7 @@ struct LeaderboardPage: View {
                     .fontWeight(.bold)
                     .fontDesign("rounded")
                     .fontSize(.small)
+                    .fontSize(.large, condition: .desktop)
                 }
                 .textAlignment(.center)
                 .classNames(["bg-gradient-to-tl", "from-cyan-500", "to-blue-600"])
