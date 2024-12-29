@@ -7,6 +7,8 @@ struct LeaderboardPage: View {
     let series: String
     let customName: String
     let count: Float
+    var rankChange: Int?  // Change in rank since yesterday
+    var mileageChange: Float?  // Change in miles since yesterday
   }
 
   private struct LeaderboardRow: View {
@@ -14,15 +16,29 @@ struct LeaderboardPage: View {
     let symbolName: String?
     let vehicleName: String
     let count: Float
+    let rankChange: Int?
+    let mileageChange: Float?
+
+    private func formatRankChange(_ change: Int) -> String? {
+      if change == 0 { return nil }
+      return change > 0 ? "▼\(abs(change))" : "▲\(abs(change))"
+    }
 
     var body: some View {
       TableRow {
-        // Rank column
+        // Rank column with change indicator
         Bordered {
           TableCell {
-            Text("\(rank)")
+            HStack(spacing: 8) {
+              Text("\(rank)")
+              if let rankChange = rankChange {
+                if let formattedChange = formatRankChange(-rankChange) {  // Negative because moving up means lower rank number
+                  Text(formattedChange)
+                }
+              }
+            }
           }
-          .textAlignment(.trailing)
+          .textAlignment(.center)
         }
         .padding(.horizontal, 8)
         .padding(.vertical, 12)
@@ -46,11 +62,20 @@ struct LeaderboardPage: View {
         .padding(.horizontal, 8)
         .padding(.vertical, 6)
 
-        // Score column
+        // Score column with change
         Bordered(showTrailingBorder: false) {
           TableCell {
-            Text(String(format: "%.0f", count))
-              .textAlignment(.leading)
+            HStack(alignment: .baseline) {
+              Text(String(format: "%.0f", count))
+              if let mileageChange = mileageChange,
+                 String(format: "%+.0f", mileageChange) != "+0" {
+                Text(String(format: "%+.0f", mileageChange))
+                  .fontSize(.small)
+                  .bold()
+              }
+            }
+            .justifyContent(.between)
+            .textAlignment(.center)
           }
         }
         .padding(.horizontal, 8)
@@ -66,24 +91,48 @@ struct LeaderboardPage: View {
     // Load vehicle support data first
     self.makes = try! VehicleSupportStatus.loadAll()
 
-    // Load and process CSV data
+    // Load and process current CSV data
     let csvContent = try! String(contentsOf: Bundle.module.url(forResource: "export-carplay-distance-traveled-by-model", withExtension: "csv")!)
+    let yesterdayContent = try! String(contentsOf: Bundle.module.url(forResource: "export-carplay-distance-traveled-by-model-yesterday", withExtension: "csv")!)
 
-    // Process entries and combine duplicates
-    var vehicleEntries: [String: (LeaderboardEntry, String)] = [:] // [normalizedName: (entry, displayName)]
+    // Process entries and combine duplicates for today
+    var vehicleEntries: [String: (LeaderboardEntry, String)] = [:]
+    var yesterdayEntries: [String: Float] = [:]
+    var yesterdayRanks: [String: Int] = [:]
 
+    // Process yesterday's data first
+    let yesterdayRows = yesterdayContent.components(separatedBy: .newlines)
+    var rank = 1
+    for row in yesterdayRows.dropFirst() {
+      let columns = row.components(separatedBy: ",")
+      if columns.count == 3,
+         let count = Float(columns[2]) {
+        let vehicleInfo = Self.findVehicleInfo(series: columns[0], in: makes)
+        if vehicleInfo.vehicleName != "/" {
+          let normalizedName = vehicleInfo.vehicleName.lowercased()
+          yesterdayEntries[normalizedName] = (yesterdayEntries[normalizedName] ?? 0) + count
+          if yesterdayRanks[normalizedName] == nil {
+            yesterdayRanks[normalizedName] = rank
+            rank += 1
+          }
+        }
+      }
+    }
+
+    // Process today's data
     let rows = csvContent.components(separatedBy: .newlines)
-    for row in rows.dropFirst() { // Skip header
+    for row in rows.dropFirst() {
       let columns = row.components(separatedBy: ",")
       if columns.count == 3,
          let count = Float(columns[2]) {
         let entry = LeaderboardEntry(
           series: columns[0],
           customName: columns[1],
-          count: count
+          count: count,
+          rankChange: nil,
+          mileageChange: nil
         )
 
-        // Find the vehicle info and use it as the key for grouping
         let vehicleInfo = Self.findVehicleInfo(series: entry.series, in: makes)
         if vehicleInfo.vehicleName != "/" {
           let normalizedName = vehicleInfo.vehicleName.lowercased()
@@ -93,7 +142,9 @@ struct LeaderboardPage: View {
             let updatedEntry = LeaderboardEntry(
               series: existingEntry.0.series,
               customName: existingEntry.0.customName,
-              count: existingEntry.0.count + entry.count
+              count: existingEntry.0.count + entry.count,
+              rankChange: nil,
+              mileageChange: nil
             )
             vehicleEntries[normalizedName] = (updatedEntry, existingEntry.1)
           } else {
@@ -104,13 +155,32 @@ struct LeaderboardPage: View {
       }
     }
 
-    // Convert back to array and sort by count
-    self.leaderboardData = vehicleEntries.values.map { $0.0 }
-      .sorted { $0.count > $1.count }
+    // Convert to array and sort by count
+    var sortedEntries = vehicleEntries.values.map { entry -> (LeaderboardEntry, String) in
+      let normalizedName = entry.1.lowercased()
+      let yesterdayCount = yesterdayEntries[normalizedName] ?? 0
+      let yesterdayRank = yesterdayRanks[normalizedName]
+
+      var updatedEntry = entry.0
+      updatedEntry.mileageChange = entry.0.count - yesterdayCount
+      updatedEntry.rankChange = yesterdayRank
+
+      return (updatedEntry, entry.1)
+    }.sorted { $0.0.count > $1.0.count }
+
+    // Update rank changes based on current position
+    for (currentRank, entry) in sortedEntries.enumerated() {
+      let normalizedName = entry.1.lowercased()
+      if let yesterdayRank = yesterdayRanks[normalizedName] {
+        sortedEntries[currentRank].0.rankChange = yesterdayRank - (currentRank + 1)
+      }
+    }
+
+    // Final assignment
+    self.leaderboardData = sortedEntries.map { $0.0 }
   }
 
   private static func findVehicleInfo(series: String, in makes: [Make: [Model: [VehicleSupportStatus]]]) -> (symbolName: String?, vehicleName: String) {
-    // Normalize the input series to lowercase and split into components
     let components = series.components(separatedBy: "/")
     guard components.count >= 2 else { return (nil, series) }
 
@@ -118,11 +188,9 @@ struct LeaderboardPage: View {
     let seriesModel = components[1].lowercased()
 
     for (make, models) in makes {
-      // Normalize the make to lowercase for comparison
       let normalizedMake = make.lowercased()
       if normalizedMake == seriesMake {
         for (model, _) in models {
-          // Normalize the model name to lowercase for comparison
           let normalizedModel = model.name.lowercased()
           if normalizedModel == seriesModel {
             return (model.symbolName, "\(make) \(model.name)")
@@ -231,7 +299,9 @@ struct LeaderboardPage: View {
                   rank: index + 1,
                   symbolName: vehicleInfo.symbolName,
                   vehicleName: vehicleInfo.vehicleName,
-                  count: entry.count
+                  count: entry.count,
+                  rankChange: entry.rankChange,
+                  mileageChange: entry.mileageChange
                 )
               }
             }
