@@ -3,6 +3,13 @@ import Slipstream
 import VehicleSupport
 
 struct LeaderboardPage: View {
+  private static func formatNumber(_ value: Float) -> String {
+    let formatter = NumberFormatter()
+    formatter.numberStyle = .decimal
+    formatter.maximumFractionDigits = 0
+    return formatter.string(from: NSNumber(value: value)) ?? "0"
+  }
+
   private struct LeaderboardEntry {
     let series: String
     let customName: String
@@ -66,10 +73,10 @@ struct LeaderboardPage: View {
         Bordered(showTrailingBorder: false) {
           TableCell {
             HStack(alignment: .baseline) {
-              Text(String(format: "%.0f", count))
+              Text(LeaderboardPage.formatNumber(count))
               if let mileageChange = mileageChange,
-                 String(format: "%+.0f", mileageChange) != "+0" {
-                Text(String(format: "%+.0f", mileageChange))
+                 abs(mileageChange) > 0 {
+                Text((mileageChange > 0 ? "+" : "") + LeaderboardPage.formatNumber(mileageChange))
                   .fontSize(.small)
                   .bold()
               }
@@ -280,6 +287,19 @@ struct LeaderboardPage: View {
           .padding(.vertical, 16, condition: .desktop)
         }
         .margin(.bottom, 32)
+
+        // Total mileage display
+        VStack(alignment: .center) {
+          Text("Total Miles Driven")
+            .bold()
+            .fontSize(.large)
+          Text(Self.formatNumber(leaderboardData.reduce(0) { $0 + $1.count }))
+            .fontSize(.extraExtraLarge)
+            .bold()
+            .fontDesign("rounded")
+        }
+        .margin(.bottom, 32)
+        .textAlignment(.center)
 
         // Table showing the leaderboard
         Table {
