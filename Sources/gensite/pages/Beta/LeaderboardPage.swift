@@ -77,6 +77,7 @@ struct LeaderboardPage: View {
               if let mileageChange = mileageChange,
                  abs(mileageChange) > 0 {
                 Text((mileageChange > 0 ? "+" : "") + LeaderboardPage.formatNumber(mileageChange))
+                  .fontSize(.extraSmall, condition: .mobileOnly)
                   .fontSize(.small)
                   .bold()
               }
