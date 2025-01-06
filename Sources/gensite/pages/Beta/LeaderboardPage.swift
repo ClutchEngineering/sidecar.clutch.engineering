@@ -14,6 +14,7 @@ struct LeaderboardPage: View {
     let series: String
     let customName: String
     let count: Float
+    let driverCount: Int
     var rankChange: Int?  // Change in rank since yesterday
     var mileageChange: Float?  // Change in miles since yesterday
   }
@@ -23,6 +24,7 @@ struct LeaderboardPage: View {
     let symbolName: String?
     let vehicleName: String
     let count: Float
+    let driverCount: Int
     let rankChange: Int?
     let mileageChange: Float?
 
@@ -69,6 +71,16 @@ struct LeaderboardPage: View {
         .padding(.horizontal, 8)
         .padding(.vertical, 6)
 
+        // Driver count column
+        Bordered {
+          TableCell {
+            Text("\(driverCount)")
+              .textAlignment(.center)
+          }
+        }
+        .padding(.horizontal, 8)
+        .padding(.vertical, 12)
+
         // Score column with change
         Bordered(showTrailingBorder: false) {
           TableCell {
@@ -102,13 +114,29 @@ struct LeaderboardPage: View {
     // Load and process current CSV data
     let csvContent = try! String(contentsOf: Bundle.module.url(forResource: "export-carplay-distance-traveled-by-model", withExtension: "csv")!)
     let yesterdayContent = try! String(contentsOf: Bundle.module.url(forResource: "export-carplay-distance-traveled-by-model-yesterday", withExtension: "csv")!)
+    let driversContent = try! String(contentsOf: Bundle.module.url(forResource: "export-carplay-drivers-by-model", withExtension: "csv")!)
 
     // Process entries and combine duplicates for today
     var vehicleEntries: [String: (LeaderboardEntry, String)] = [:]
     var yesterdayEntries: [String: Float] = [:]
     var yesterdayRanks: [String: Int] = [:]
+    var driverCounts: [String: Int] = [:]
 
-    // Process yesterday's data first
+    // Process drivers data first
+    let driverRows = driversContent.components(separatedBy: .newlines)
+    for row in driverRows.dropFirst() {
+      let columns = row.components(separatedBy: ",")
+      if columns.count == 3,
+         let driverCount = Int(columns[2]) {
+        let vehicleInfo = Self.findVehicleInfo(series: columns[0], in: makes)
+        if vehicleInfo.vehicleName != "/" {
+          let normalizedName = vehicleInfo.vehicleName.lowercased()
+          driverCounts[normalizedName] = (driverCounts[normalizedName] ?? 0) + driverCount
+        }
+      }
+    }
+
+    // Process yesterday's data
     let yesterdayRows = yesterdayContent.components(separatedBy: .newlines)
     var rank = 1
     for row in yesterdayRows.dropFirst() {
@@ -133,17 +161,17 @@ struct LeaderboardPage: View {
       let columns = row.components(separatedBy: ",")
       if columns.count == 3,
          let count = Float(columns[2]) {
-        let entry = LeaderboardEntry(
-          series: columns[0],
-          customName: columns[1],
-          count: count,
-          rankChange: nil,
-          mileageChange: nil
-        )
-
-        let vehicleInfo = Self.findVehicleInfo(series: entry.series, in: makes)
+        let vehicleInfo = Self.findVehicleInfo(series: columns[0], in: makes)
         if vehicleInfo.vehicleName != "/" {
           let normalizedName = vehicleInfo.vehicleName.lowercased()
+          let entry = LeaderboardEntry(
+            series: columns[0],
+            customName: columns[1],
+            count: count,
+            driverCount: driverCounts[normalizedName] ?? 0,
+            rankChange: nil,
+            mileageChange: nil
+          )
 
           if let existingEntry = vehicleEntries[normalizedName] {
             // Add the count to the existing entry
@@ -151,6 +179,7 @@ struct LeaderboardPage: View {
               series: existingEntry.0.series,
               customName: existingEntry.0.customName,
               count: existingEntry.0.count + entry.count,
+              driverCount: existingEntry.0.driverCount,  // Keep existing driver count
               rankChange: nil,
               mileageChange: nil
             )
@@ -289,15 +318,26 @@ struct LeaderboardPage: View {
         }
         .margin(.bottom, 32)
 
-        // Total mileage display
-        VStack(alignment: .center) {
-          Text("Total Miles Driven")
-            .bold()
-            .fontSize(.large)
-          Text(Self.formatNumber(leaderboardData.reduce(0) { $0 + $1.count }))
-            .fontSize(.extraExtraLarge)
-            .bold()
-            .fontDesign("rounded")
+        // Total mileage and driver display
+        VStack(alignment: .center, spacing: 16) {
+          VStack(alignment: .center) {
+            Text("Total Miles Driven")
+              .bold()
+              .fontSize(.large)
+            Text(Self.formatNumber(leaderboardData.reduce(0) { $0 + $1.count }))
+              .fontSize(.extraExtraLarge)
+              .bold()
+              .fontDesign("rounded")
+          }
+          VStack(alignment: .center) {
+            Text("# of Stigs")
+              .bold()
+              .fontSize(.large)
+            Text("\(leaderboardData.reduce(0) { $0 + $1.driverCount })")
+              .fontSize(.extraExtraLarge)
+              .bold()
+              .fontDesign("rounded")
+          }
         }
         .margin(.bottom, 32)
         .textAlignment(.center)
@@ -307,6 +347,7 @@ struct LeaderboardPage: View {
           TableHeader {
             HeaderCell { Text("Rank") }
             HeaderCell { Text("Vehicle") }
+            HeaderCell { Text("Stigs") }
             HeaderCell { Text("Miles driven") }
           }
           .background(.gray, darkness: 100)
@@ -321,6 +362,7 @@ struct LeaderboardPage: View {
                   symbolName: vehicleInfo.symbolName,
                   vehicleName: vehicleInfo.vehicleName,
                   count: entry.count,
+                  driverCount: entry.driverCount,
                   rankChange: entry.rankChange,
                   mileageChange: entry.mileageChange
                 )

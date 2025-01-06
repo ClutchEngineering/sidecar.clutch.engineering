@@ -18,6 +18,7 @@ let package = Package(
     ], resources: [
       .process("export-carplay-distance-traveled-by-model-yesterday.csv"),
       .process("export-carplay-distance-traveled-by-model.csv"),
+      .process("export-carplay-drivers-by-model.csv"),
     ]),
 
     .executableTarget(name: "import", dependencies: [
