@@ -8,6 +8,7 @@ struct Page<Content: View>: View {
     path: String,
     description: String,
     keywords: Set<String>,
+    scripts: Set<URL?> = Set(),
     additionalStylesheets: Set<URL?> = Set(),
     socialBannerPath: String? = nil,
     @ViewBuilder content: @escaping () -> Content
@@ -16,6 +17,7 @@ struct Page<Content: View>: View {
     self.path = path
     self.description = description
     self.keywords = keywords
+    self.scripts = scripts
     self.additionalStylesheets = additionalStylesheets
     self.socialBannerPath = socialBannerPath
     self.content = content
@@ -25,6 +27,7 @@ struct Page<Content: View>: View {
   let path: String
   let description: String
   let keywords: Set<String>
+  let scripts: Set<URL?>
   let additionalStylesheets: Set<URL?>
   let socialBannerPath: String?
   @ViewBuilder
@@ -61,6 +64,9 @@ struct Page<Content: View>: View {
         Stylesheet(URL(string: "/css/main.css"))
         for stylesheet in additionalStylesheets.compactMap({ $0 }).sorted(by: { $0.absoluteString < $1.absoluteString }) {
           Stylesheet(stylesheet)
+        }
+        for script in scripts.compactMap({ $0 }).sorted(by: { $0.absoluteString < $1.absoluteString }) {
+          Script(script)
         }
 
         Script("""

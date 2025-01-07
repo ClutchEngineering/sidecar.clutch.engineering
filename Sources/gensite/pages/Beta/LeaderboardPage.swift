@@ -2,6 +2,30 @@ import Foundation
 import Slipstream
 import VehicleSupport
 
+private func getCSVModificationDate() -> String {
+  let fileManager = FileManager.default
+  let bundle = Bundle.module
+
+  guard let csvPath = bundle.path(forResource: "export-carplay-distance-traveled-by-model", ofType: "csv") else {
+    print("CSV file not found")
+    return "2024-01-07T00:00:00Z" // Fallback date
+  }
+
+  do {
+    let attributes = try fileManager.attributesOfItem(atPath: csvPath)
+    if let modificationDate = attributes[.modificationDate] as? Date {
+      // Format the date in ISO 8601 format which JavaScript can parse
+      let formatter = ISO8601DateFormatter()
+      formatter.formatOptions = [.withInternetDateTime]
+      return formatter.string(from: modificationDate)
+    }
+  } catch {
+    print("Error getting file attributes: \(error)")
+  }
+
+  return "2025-01-06T00:00:00Z" // Fallback date
+}
+
 struct LeaderboardPage: View {
   private static func formatNumber(_ value: Float) -> String {
     let formatter = NumberFormatter()
@@ -250,6 +274,9 @@ struct LeaderboardPage: View {
         "trip logger",
         "vehicle diagnostics",
         "vehicle connectivity",
+      ],
+      scripts: [
+        URL(string: "/scripts/miles-counter.js")
       ]
     ) {
       ContentContainer {
@@ -328,6 +355,11 @@ struct LeaderboardPage: View {
               .fontSize(.extraExtraLarge)
               .bold()
               .fontDesign("rounded")
+              .id("total-miles-counter")
+              .data([
+                "base-value": String(leaderboardData.reduce(0) { $0 + $1.count }),
+                "snapshot-date": getCSVModificationDate()
+              ])
           }
           VStack(alignment: .center) {
             Text("# of Stigs")
