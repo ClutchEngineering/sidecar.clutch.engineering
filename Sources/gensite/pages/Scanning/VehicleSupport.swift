@@ -26,7 +26,7 @@ struct VehicleSupport: View {
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")
-              Text("Electric Sidecar's vehicle support matrix")
+              Text("Sidecar's vehicle support matrix")
             }
             .textAlignment(.center)
           }

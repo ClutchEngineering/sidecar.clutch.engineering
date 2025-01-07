@@ -7,7 +7,7 @@ struct ExtendedParameters: View {
     Page(
       "Extended OBD-II Parameters",
       path: "/scanning/extended-pids",
-      description: "Extending Electric Sidecar with custom parameters.",
+      description: "Extending Sidecar with custom parameters.",
       keywords: [
         "OBD-II",
         "car scanner",
@@ -28,7 +28,7 @@ struct ExtendedParameters: View {
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")
-              Text("How to extend Electric Sidecar's functionality with custom parameters")
+              Text("How to extend Sidecar's functionality with custom parameters")
             }
             .textAlignment(.center)
           }
@@ -44,13 +44,13 @@ Extended Parameter IDs, or **PIDs**, are special codes used in the OBD-II (On-B
 
 For newer vehicles, especially electric vehicles, extended PIDs are often the only way to get information about the vehicle over OBD-II.
 
-### Extended PIDs in Electric Sidecar
+### Extended PIDs in Sidecar
 
 In addition to supporting many of the industry standard OBD-II PIDs specified in [SAE J1979](https://www.sae.org/standards/content/j1979da_202404/), Sidecar pulls extended PIDs from the OBDb, [github.com/OBDb](https://github.com/OBDb).
 
-Every vehicle make and model has its own GitHub repository in the Electric Sidecar organization. If a make and model you're interested in is not yet available, send an email with your requested make and model to [support@clutch.engineering](mailto:support@clutch.engineering) or [open an issue](https://github.com/ClutchEngineering/Sidecar/issues/new).
+Every vehicle make and model has its own GitHub repository in the OBDb GitHub organization. If a make and model you're interested in is not yet available, send an email with your requested make and model to [support@clutch.engineering](mailto:support@clutch.engineering) or [open an issue](https://github.com/ClutchEngineering/Sidecar/issues/new).
 
-When you connect a scanner to your car, Electric Sidecar will ask for the car's VIN in order to determine its make and model. The make and model will then be used to enable the relevant extended PIDs within the app.
+When you connect a scanner to your car, Sidecar will ask for the car's VIN in order to determine its make and model. The make and model will then be used to enable the relevant extended PIDs within the app.
 
 All extended PIDs are licensed under a [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license.
 
@@ -59,7 +59,7 @@ All extended PIDs are licensed under a [CC BY-SA 4.0](https://creativecommons.o
 Contributing extended PIDs
 --------------------------
 
-Contributions from the automotive community help expand the library of extended PIDs available in Electric Sidecar. By sharing extended PIDs, we all contribute to the ability for car owners to access more of their vehicle data.
+Contributions from the automotive community help expand the library of extended PIDs available in Sidecar. By sharing extended PIDs, we all contribute to the ability for car owners to access more of their vehicle data.
 
 To contribute an extended PID you must first fork the GitHub repository for the relevant make and model on [github.com/OBDb](https://github.com/OBDb).
 
@@ -170,7 +170,7 @@ ATFCSM1
 
 ### Connectable
 
-Connectables are elements of the Electric Sidecar user interface that can be powered by values returned from an OBD-II scanner. Connectables expect their values to be provided in a certain [Unit](#unit).
+Connectables are elements of the Sidecar user interface that can be powered by values returned from an OBD-II scanner. Connectables expect their values to be provided in a certain [Unit](#unit).
 
 #### Example
 
@@ -346,7 +346,7 @@ Signals are individual values contained within the response of a [Command](#com
 
 #### Optional properties
 
-\(inlineHTML { Parameter("path", type: "String") }) The navigation path for the signal in Electric Sidecar's parameters page. If not provided, the signal's id property will be used as the navigation path instead.    
+\(inlineHTML { Parameter("path", type: "String") }) The navigation path for the signal in Sidecar's parameters page. If not provided, the signal's id property will be used as the navigation path instead.    
 \(inlineHTML { Parameter("description", type: "String") }) A long form description of the signal's purpose and how it should be interpreted.    
 \(inlineHTML { Parameter("hidden", type: "Boolean") }) If true, hides the signal from the user interface. Default value is false if not provided.    
 \(inlineHTML { Parameter("suggestedMetric", type: "Connectable") }) The user interface value that this signal should update.
@@ -355,7 +355,7 @@ Signals are individual values contained within the response of a [Command](#com
 
 Units define how a signal's value should be interpreted and represented to the user. Units are categorized, and values of the same unit category can be translated to one another. For example, miles and kilometers both belong to the same unit type Length.
 
-If a unit includes a version (e.g. **v1.13+**), that means the unit was introduced in that version of the Electric Sidecar application. Older app versions will fall back to treating unknown units as a scalar.
+If a unit includes a version (e.g. **v1.13+**), that means the unit was introduced in that version of the Sidecar application. Older app versions will fall back to treating unknown units as a scalar.
 
 #### Accleration units
 
