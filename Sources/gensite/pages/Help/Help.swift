@@ -96,6 +96,18 @@ Sidecar hosts its OBD parameters at [github.com/electricsidecar](https://github.
 6. Confirm the value by tapping the three dot menu button again.
 
 ![100%](/gfx/help/refresh-vehicle-parameters.png)
+
+How to email crash logs
+-----------------------
+
+If Sidecar crashed recently then it's possible that your phone captured a crash log that could help identify the cause of the crash. To email a crash log, please follow these steps from within the iOS Settings app:
+
+1. Tap Privacy & Security > Analytics & Improvements > Analytics Data.
+2. Scroll down to the last "ElectricSidecar" file you see. The crashes are in chronological order for a given app, getting newer as you scroll further down.
+3. Note that the file should look like `ElectricSidecar-2025-01-09-175552.ips`. Some files here have other text in the name like `cpu_resource`; these are not crash logs.
+4. Tap the file to open it.
+5. Tap the Share button.
+6. Email the file to support@clutch.engineering. If you remember how you were using Sidecar at the time, please include that information in the email.
 """)
       .padding(.bottom, 16)
     }
