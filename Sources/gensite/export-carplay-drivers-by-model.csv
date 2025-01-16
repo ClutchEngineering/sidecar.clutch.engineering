@@ -13,11 +13,11 @@ Honda/Accord,Miles traveled,6
 Kia/EV6,Miles traveled,6
 Mazda/3,Miles traveled,6
 Subaru/Crosstrek,Miles traveled,6
+Subaru/Outback,Miles traveled,6
 Volkswagen/Polo,Miles traveled,6
 Audi/A4,Miles traveled,5
 Chevrolet/Silverado 1500,Miles traveled,5
 Honda/CR-V,Miles traveled,5
-Subaru/Outback,Miles traveled,5
 Tesla/Model 3,Miles traveled,5
 BMW/X3,Miles traveled,4
 Ford/Maverick,Miles traveled,4
@@ -42,7 +42,9 @@ Jeep/Grand Cherokee,Miles traveled,3
 Mercedes-Benz/G-Class,Miles traveled,3
 Nissan/LEAF,Miles traveled,3
 Porsche/Cayenne,Miles traveled,3
+Ram/1500,Miles traveled,3
 Toyota/Tacoma,Miles traveled,3
+Volkswagen/Passat,Miles traveled,3
 Audi/A3,Miles traveled,2
 Audi/Q7,Miles traveled,2
 BMW/i3,Miles traveled,2
@@ -69,10 +71,10 @@ Kia/Telluride,Miles traveled,2
 Lucid/Air,Miles traveled,2
 MINI/Cooper,Miles traveled,2
 Mazda/CX-9,Miles traveled,2
+Mazda/CX-90,Miles traveled,2
 Mercedes-Benz/C-Class,Miles traveled,2
 Polestar/2,Miles traveled,2
 Porsche/Taycan,Miles traveled,2
-Ram/1500,Miles traveled,2
 Subaru/Forester,Miles traveled,2
 Subaru/WRX,Miles traveled,2
 Suzuki/Swift,Miles traveled,2
@@ -84,7 +86,6 @@ Toyota/Yaris,Miles traveled,2
 Unknown/Unknown,Miles traveled,2
 Volkswagen/GTI,Miles traveled,2
 Volkswagen/Jetta,Miles traveled,2
-Volkswagen/Passat,Miles traveled,2
 Volvo/S60,Miles traveled,2
 Volvo/XC40 Recharge,Miles traveled,2
 AUDIdi/Q3,Miles traveled,1
@@ -183,7 +184,6 @@ MG/ZS,Miles traveled,1
 MG/ZS EV,Miles traveled,1
 MINI/Cooper SE,Miles traveled,1
 Mazda/CX-30,Miles traveled,1
-Mazda/CX-90,Miles traveled,1
 Mazda/Mazdaspeed 3,Miles traveled,1
 Mercedes-Benz/A 180,Miles traveled,1
 Mercedes-Benz/EQB,Miles traveled,1
@@ -233,4 +233,5 @@ Volkswagen/Tiguan,Miles traveled,1
 Volkswagen/e-Golf,Miles traveled,1
 Volvo/C30,Miles traveled,1
 Volvo/V50,Miles traveled,1
+Škoda/Enyaq,Miles traveled,1
 Škoda/Octavia,Miles traveled,1
