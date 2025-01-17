@@ -194,7 +194,7 @@ struct LeaderboardPage: View {
         if vehicleInfo.vehicleName != "/" {
           let normalizedName = vehicleInfo.vehicleName.lowercased()
           let entry = LeaderboardEntry(
-            series: columns[0],
+            series: normalizedSeries,
             customName: columns[1],
             count: count,
             driverCount: driverCounts[normalizedName] ?? 0,
