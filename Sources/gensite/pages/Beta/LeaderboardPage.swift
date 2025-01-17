@@ -2,6 +2,10 @@ import Foundation
 import Slipstream
 import VehicleSupport
 
+private let modelNormalizations: [String: String] = [
+  "BMW/335d Xdrive": "BMW/3 Series",
+]
+
 private func getCSVModificationDate() -> String {
   let fileManager = FileManager.default
   let bundle = Bundle.module
@@ -185,7 +189,8 @@ struct LeaderboardPage: View {
       let columns = row.components(separatedBy: ",")
       if columns.count == 3,
          let count = Float(columns[2]) {
-        let vehicleInfo = Self.findVehicleInfo(series: columns[0], in: makes)
+        let normalizedSeries = modelNormalizations[columns[0]] ?? columns[0]
+        let vehicleInfo = Self.findVehicleInfo(series: normalizedSeries, in: makes)
         if vehicleInfo.vehicleName != "/" {
           let normalizedName = vehicleInfo.vehicleName.lowercased()
           let entry = LeaderboardEntry(
