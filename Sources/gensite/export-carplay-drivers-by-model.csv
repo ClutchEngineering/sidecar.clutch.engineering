@@ -19,6 +19,7 @@ Audi/A4,Miles traveled,5
 Chevrolet/Silverado 1500,Miles traveled,5
 Honda/CR-V,Miles traveled,5
 Tesla/Model 3,Miles traveled,5
+Toyota/Highlander,Miles traveled,5
 BMW/X3,Miles traveled,4
 Ford/Maverick,Miles traveled,4
 Ford/Mustang,Miles traveled,4
@@ -28,7 +29,6 @@ Hyundai/Tucson,Miles traveled,4
 MG/MG4,Miles traveled,4
 Mazda/CX-5,Miles traveled,4
 Toyota/Camry,Miles traveled,4
-Toyota/Highlander,Miles traveled,4
 Volkswagen/ID.4,Miles traveled,4
 Volkswagen/T-Roc,Miles traveled,4
 BMW/3 Series,Miles traveled,3
@@ -81,6 +81,7 @@ Mercedes-Benz/C-Class,Miles traveled,2
 Polestar/2,Miles traveled,2
 Porsche/Taycan,Miles traveled,2
 Subaru/Forester,Miles traveled,2
+Subaru/Impreza,Miles traveled,2
 Subaru/WRX,Miles traveled,2
 Suzuki/Swift,Miles traveled,2
 Toyota/Corolla Hybrid,Miles traveled,2
@@ -147,6 +148,7 @@ Ford/Focus,Miles traveled,1
 Ford/Fusion,Miles traveled,1
 Ford/Kuga,Miles traveled,1
 Ford/Puma,Miles traveled,1
+Ford/Ranger,Miles traveled,1
 Ford/S-Max,Miles traveled,1
 Ford/Taurus,Miles traveled,1
 Ford/Transit Connect,Miles traveled,1
@@ -208,7 +210,6 @@ Seat/Leon,Miles traveled,1
 Seat/Leon 5F,Miles traveled,1
 Seat/Leon SC,Miles traveled,1
 Subaru/Ascent,Miles traveled,1
-Subaru/Impreza,Miles traveled,1
 Subaru/Legacy,Miles traveled,1
 Suzuki/Jimny,Miles traveled,1
 Toyota/Camry Hybrid,Miles traveled,1
