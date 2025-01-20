@@ -18,12 +18,12 @@ Volkswagen/Polo,Miles traveled,6
 Audi/A4,Miles traveled,5
 Chevrolet/Silverado 1500,Miles traveled,5
 Honda/CR-V,Miles traveled,5
+Hyundai/IONIQ 6,Miles traveled,5
 Tesla/Model 3,Miles traveled,5
 Toyota/Highlander,Miles traveled,5
 BMW/X3,Miles traveled,4
 Ford/Maverick,Miles traveled,4
 Ford/Mustang,Miles traveled,4
-Hyundai/IONIQ 6,Miles traveled,4
 Hyundai/Sonata,Miles traveled,4
 Hyundai/Tucson,Miles traveled,4
 MG/MG4,Miles traveled,4
@@ -54,6 +54,7 @@ BYD/Atto 3,Miles traveled,2
 Chevrolet/Bolt EV,Miles traveled,2
 Chevrolet/Equinox,Miles traveled,2
 Cupra/Formentor,Miles traveled,2
+Ford/Edge,Miles traveled,2
 Ford/F-250,Miles traveled,2
 Ford/Fusion Hybrid,Miles traveled,2
 GMC/Canyon,Miles traveled,2
@@ -63,6 +64,7 @@ Honda/Fit,Miles traveled,2
 Honda/HR-V,Miles traveled,2
 Honda/Pilot,Miles traveled,2
 Hyundai/Santa Fe,Miles traveled,2
+Hyundai/Tucson Hybrid,Miles traveled,2
 Hyundai/i30,Miles traveled,2
 Jeep/Compass,Miles traveled,2
 Jeep/Gladiator,Miles traveled,2
@@ -141,7 +143,6 @@ FIAT/Fastback ,Miles traveled,1
 FIAT/Pulse,Miles traveled,1
 Ford/Bronco,Miles traveled,1
 Ford/Crown Victoria,Miles traveled,1
-Ford/Edge,Miles traveled,1
 Ford/Everest,Miles traveled,1
 Ford/F-350,Miles traveled,1
 Ford/Focus,Miles traveled,1
@@ -165,7 +166,6 @@ Honda/Ridgeline,Miles traveled,1
 Hyundai/Ioniq Electric,Miles traveled,1
 Hyundai/Kona,Miles traveled,1
 Hyundai/Santa Cruz,Miles traveled,1
-Hyundai/Tucson Hybrid,Miles traveled,1
 Hyundai/Venue,Miles traveled,1
 Jaguar/F-TYPE,Miles traveled,1
 Jaguar/I-PACE,Miles traveled,1
