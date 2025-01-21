@@ -7,7 +7,7 @@ on:
 
 jobs:
   export-data:
-    runs-on: macos-latest  # Using macOS runner for Swift
+    runs-on: macos-15
     
     env:
       POSTHOG_API_KEY: ${{ secrets.POSTHOG_API_KEY }}
