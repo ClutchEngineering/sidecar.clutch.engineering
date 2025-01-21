@@ -38,3 +38,6 @@ jobs:
           git commit -m "Update PostHog export data" || echo "No changes to commit"
           git push origin main
 
+  call-deploy:
+    needs: export-data
+    uses: ./.github/workflows/deploy.yml
