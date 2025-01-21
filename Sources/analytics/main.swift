@@ -11,6 +11,8 @@ let exportsURL = URL(filePath: #filePath)
   .deletingLastPathComponent()
   .appending(path: "gensite")
 
+print("Fetching # of stigs...")
+
 // # of stigs
 do {
   let client = PostHogExportClient(apiKey: apikey, projectID: projectID)
@@ -18,7 +20,7 @@ do {
   try csvData.write(to: exportsURL.appending(path: "export-carplay-drivers-by-model.csv"))
 }
 
-// Copy today's stats to yesterday.
+print("Copying today's stats to yesterday...")
 
 let yesterdayURL = exportsURL.appending(path: "export-carplay-distance-traveled-by-model-yesterday.csv")
 let todayURL = exportsURL.appending(path: "export-carplay-distance-traveled-by-model.csv")
@@ -28,8 +30,12 @@ do {
   try FileManager.default.copyItem(at: todayURL, to: yesterdayURL)
 }
 
+print("Fetching today's stats...")
+
 do {
   let client = PostHogExportClient(apiKey: apikey, projectID: projectID)
   let csvData = try await client.fetchExportedCSV(query: milesTraveledQuery())
   try csvData.write(to: todayURL)
 }
+
+print("Done.")
