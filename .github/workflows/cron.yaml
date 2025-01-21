@@ -32,6 +32,6 @@ jobs:
       - name: Commit and push changes
         run: |
           git add Sources/gensite/
-          git commit -m "Update PostHog export data [skip ci]" || echo "No changes to commit"
+          git commit -m "Update PostHog export data" || echo "No changes to commit"
           git push origin main
 
