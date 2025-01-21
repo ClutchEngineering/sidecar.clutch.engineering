@@ -62,3 +62,11 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Send Discord notification
+        if: always()
+        uses: Ilshidur/action-discord@master
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_LEADERBOARD_WEBHOOK_URL }}
+        with:
+          args: 'Leaderboard has been updated: http://sidecar.clutch.engineering/beta/leaderboard/. Workflow status: ${{ job.status }}'
