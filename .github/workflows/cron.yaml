@@ -48,8 +48,6 @@ jobs:
           echo "commit_sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
 
       # Deploy to Jekyll
-      - name: Checkout
-        uses: actions/checkout@v4
       - name: Install Tailwind CSS
         run: npm install -D tailwindcss@latest
       - name: Generate site
