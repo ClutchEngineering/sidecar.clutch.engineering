@@ -10,6 +10,12 @@ permissions:
   pages: write
   id-token: write
 
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   export-data:
     runs-on: macos-15
@@ -41,8 +47,20 @@ jobs:
           git push origin main
           echo "commit_sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
 
-  call-deploy:
-    needs: export-data
-    uses: ./.github/workflows/deploy.yml
-    with:
-      ref: ${{ needs.export-data.outputs.commit_sha }}
+      # Deploy to Jekyll
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Tailwind CSS
+        run: npm install -D tailwindcss@latest
+      - name: Generate site
+        run: swift run gensite && npx tailwindcss -i tailwind.css -o ./site/css/main.css --minify
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: './site'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
