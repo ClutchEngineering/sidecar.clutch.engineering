@@ -12,6 +12,8 @@ let package = Package(
     .package(url: "https://github.com/jverkoey/slipstream.git", branch: "main"),
   ],
   targets: [
+    .executableTarget(name: "analytics"),
+
     .executableTarget(name: "gensite", dependencies: [
       .product(name: "Slipstream", package: "slipstream"),
       "VehicleSupport",
