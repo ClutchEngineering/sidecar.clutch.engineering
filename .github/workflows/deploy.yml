@@ -10,6 +10,12 @@ on:
 
   # Add this to allow other workflows to call this one
   workflow_call:
+    inputs:
+      ref:
+        description: 'The Git ref to checkout'
+        required: false
+        type: string
+        default: 'main'
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
