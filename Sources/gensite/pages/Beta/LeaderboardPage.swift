@@ -159,7 +159,8 @@ struct LeaderboardPage: View {
       let columns = row.components(separatedBy: ",")
       if columns.count == 3,
          let driverCount = Int(columns[2]) {
-        let vehicleInfo = Self.findVehicleInfo(series: columns[0], in: makes)
+        let normalizedSeries = modelNormalizations[columns[0]] ?? columns[0]
+        let vehicleInfo = Self.findVehicleInfo(series: normalizedSeries, in: makes)
         if vehicleInfo.vehicleName != "/" {
           let normalizedName = vehicleInfo.vehicleName.lowercased()
           driverCounts[normalizedName] = (driverCounts[normalizedName] ?? 0) + driverCount
