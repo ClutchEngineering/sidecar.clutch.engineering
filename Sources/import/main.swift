@@ -32,9 +32,16 @@ class CSVParser {
       let makeModel = components[0].split(separator: "/")
       guard makeModel.count == 2 else { return nil }
 
-      let make = String(makeModel[0]).replacingOccurrences(of: "Mercedes-Benz", with: "Mercedes")
+      let make = String(makeModel[0])
+        .replacingOccurrences(of: "Mercedes-Benz", with: "Mercedes")
+        .replacingOccurrences(of: "OPEL", with: "Vauxhall/Opel")
       let model = String(makeModel[1])
       let year = Double(components[1]).map { Int($0) }
+
+      guard make != "Unknown",
+            model != "Unknown" else {
+        return nil
+      }
 
       // Handle the quoted signals field
       let signalsStr = String(components[2])
@@ -228,11 +235,7 @@ class MatrixMerger {
 
       // Find entries that match the make and model name
       let matchingEntries = result[vehicle.make]?.filter { entry in
-        entry.model.name == vehicle.model.cleanedModelName() &&
-        // Check if any of this entry's status ranges cover our target year
-        entry.supportStatuses.contains { status in
-          status.years.contains(year)
-        }
+        entry.model.name == vehicle.model.cleanedModelName()
       } ?? []
 
       if let matchingEntry = matchingEntries.first {
@@ -267,6 +270,14 @@ class MatrixMerger {
           if let after = afterStatus {
             entry.supportStatuses.append(after)
           }
+        } else {
+          // No year range contains this model; add it.
+          let status = SupportMatrixGenerator.generateSupportStatus(
+            from: vehicle.signals,
+            year: year,
+            existingStatuses: []
+          )
+          entry.supportStatuses.append(status)
         }
 
         entry.supportStatuses.sort()
@@ -301,28 +312,36 @@ extension String {
 
     // Simple blacklist of terms to remove, with spaces to avoid partial matches
     let blacklist = [
+      " 4MATIC",
+      " AWD",
+      " Avant",
+      " Competition",
+      " Coupe",
+      " F39",
+      " Gran Coupe",
+      " GT",
+      " Limited",
       " N Performance",
       " Performance",
       " Premium",
-      " Limited",
-      " Sport",
-      " AWD",
-      " 4MATIC",
-      " xDrive",
-      " Competition",
-      " GT",
-      " RS",
       " Pro",
-      " F39",
+      " RS",
+      " Saloon",
+      " Sport",
+      " Sportback",
+      " xDrive",
     ]
 
     // Remove blacklisted terms
-    for term in blacklist {
+    for term in blacklist.sorted(by: { $0.count > $1.count }) {
       name = name.replacingOccurrences(of: term, with: "")
     }
 
     name = name
       .replacingOccurrences(of: "Ionoq5", with: "IONIQ 5")
+      .replacingOccurrences(of: "Audi A5", with: "A5")
+      .replacingOccurrences(of: "335d Xdrive", with: "3 Series")
+
 
     // Clean up any remaining whitespace
     return name.trimmingCharacters(in: .whitespaces)
