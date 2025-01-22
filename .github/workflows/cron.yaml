@@ -2,7 +2,7 @@ name: Daily PostHog Export
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Runs at 00:00 UTC every day
+    - cron: '0 17 * * *'  # Runs at 9:00 PST every day
   workflow_dispatch:  # Allows manual triggering
 
 permissions:
