@@ -25,7 +25,8 @@ let sitemap: Sitemap = [
   "bug/index.html": Bug(),
   "supported-cars/index.html": SupportedCars(),
   "beta/index.html": BetaTesterHandbook(),
-  "beta/leaderboard/index.html": LeaderboardPage(),
+  "leaderboard/index.html": LeaderboardPage(),
+  "beta/leaderboard/index.html": Redirect(URL(string: "/leaderboard")),
   "help/index.html": Help(),
 ]
 

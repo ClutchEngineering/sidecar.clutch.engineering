@@ -269,9 +269,9 @@ struct LeaderboardPage: View {
 
   var body: some View {
     Page(
-      "Beta Tester Leaderboard",
+      "Navigation Leaderboard",
       path: "/beta/leaderboard/",
-      description: "See which vehicles are being tested the most in Sidecar.",
+      description: "See which vehicles are being driven the most in Sidecar.",
       keywords: [
         "OBD-II",
         "beta testing",
@@ -290,11 +290,11 @@ struct LeaderboardPage: View {
             HeroIconPuck(url: URL(string: "/gfx/leaderboard.png")!)
 
             Div {
-              H1("Beta Tester Leaderboard")
+              H1("Navigation Leaderboard")
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")
-              Text("Most-driven vehicles in the Turn-by-Turn Navigation beta")
+              Text("Most-driven Sidecar vehicles")
                 .fontSize(.large)
             }
             .textAlignment(.center)
