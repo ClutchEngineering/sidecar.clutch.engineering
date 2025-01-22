@@ -64,9 +64,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Send Discord notification
+        uses: sarisia/actions-status-discord@v1
         if: always()
-        uses: Ilshidur/action-discord@master
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_LEADERBOARD_WEBHOOK_URL }}
         with:
-          args: 'Leaderboard has been updated: http://sidecar.clutch.engineering/beta/leaderboard/. Workflow status: ${{ job.status }}'
+          webhook: ${{ secrets.DISCORD_LEADERBOARD_WEBHOOK_URL }}
