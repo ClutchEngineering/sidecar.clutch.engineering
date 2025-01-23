@@ -52,7 +52,7 @@ To become a Sidecar beta tester, you’ll need:
 
 1.  **Access to a car**: Ideally, you’ll test with your daily driver, but infrequent drivers (even [garage queens](https://en.wiktionary.org/wiki/garage_queen)) are welcome.
 
-2.  **iOS 17+ device**: Testing should ideally be done on your primary iPhone. Android support isn’t available yet, but if you’re interested, email Jeff at support@clutch.engineering to express interest.
+2.  **iOS 18+ device**: Testing should ideally be done on your primary iPhone. Android support isn’t available yet, but if you’re interested, email Jeff at support@clutch.engineering to express interest.
 
 3.  **Willingness to share feedback**: You'll be asked to provide feedback regularly via Sidecar's companion forum, [cars.forum](https://meta.cars.forum/viewforum.php?f=12).
 
@@ -87,7 +87,7 @@ I am interested in becoming a Sidecar beta tester for this make/model/year.
 
 My tester profile:
 
-iOS Version: [e.g., iOS 17.1]
+iOS Version: [e.g., iOS 18.2]
 Apple Watch Available: [Yes/No]
 watchOS Version (if you have a watch): [e.g., watch 11.1]
 Internet connected vehicle: [Yes/No]
