@@ -49,9 +49,9 @@ jobs:
 
       # Deploy to Jekyll
       - name: Install Tailwind CSS
-        run: npm install -D tailwindcss@latest postcss-cli
+        run: npm install -D tailwindcss@latest
       - name: Generate site
-        run: swift run gensite && npx tailwindcss -i tailwind.css -o ./site/css/main.css --minify
+        run: swift run gensite && npx @tailwindcss/cli -i tailwind.css -o ./site/css/main.css --minify
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
