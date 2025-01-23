@@ -49,7 +49,7 @@ jobs:
 
       # Deploy to Jekyll
       - name: Install Tailwind CSS
-        run: npm install -D tailwindcss@latest
+        run: npm install -D tailwindcss@latest postcss-cli
       - name: Generate site
         run: swift run gensite && npx tailwindcss -i tailwind.css -o ./site/css/main.css --minify
       - name: Setup Pages
