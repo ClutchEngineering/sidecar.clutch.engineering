@@ -17,6 +17,30 @@ func modelNameForSorting(_ model: Model) -> String {
     .applyingTransform(.stripDiacritics, reverse: false)!
 }
 
+struct BookAppointmentButton: View {
+  var body: some View {
+    RawHTML("""
+<!-- Google Calendar Appointment Scheduling begin -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  var target = document.currentScript;
+  window.addEventListener('load', function() {
+    calendar.schedulingButton.load({
+      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0w12pMsYhBkPLDmNgOctqntPVy1K-HNM9Mtxg1mTQzsRe74TVSbkzEDldGU0jDkamH6WGHoycf?gv=true',
+      color: '#039BE5',
+      label: 'Book an onboarding appointment',
+      target,
+    });
+  });
+})();
+</script>
+<!-- end Google Calendar Appointment Scheduling -->
+""")
+  }
+}
+
 struct ParameterHeader: View {
   let icon: String
   let name: String
@@ -239,7 +263,7 @@ struct MakeSupportSection: View {
                 .fontSize(.base, condition: .desktop)
                 .fontWeight(.medium)
                 .fontDesign("rounded")
-              Text("Learn more")
+              Text("Learn more or book an onboarding appointment")
                 .fontWeight(.bold)
                 .fontDesign("rounded")
                 .fontSize(.large)
@@ -255,6 +279,8 @@ struct MakeSupportSection: View {
             .background(.zinc, darkness: 900, condition: .dark)
             .cornerRadius(.extraExtraLarge)
           }
+
+          BookAppointmentButton()
         }
         .frame(width: 0.8)
         .frame(width: 0.6, condition: .desktop)
@@ -533,7 +559,7 @@ struct SupportedCars: View {
                   .fontSize(.extraLarge, condition: .desktop)
                   .fontWeight(.medium)
                   .fontDesign("rounded")
-                Text("Learn more")
+                Text("Learn more or book an onboarding appointment")
                   .fontWeight(.bold)
                   .fontDesign("rounded")
                   .fontSize(.large)
@@ -549,6 +575,7 @@ struct SupportedCars: View {
               .background(.zinc, darkness: 900, condition: .dark)
               .cornerRadius(.extraExtraLarge)
             }
+            BookAppointmentButton()
           }
           .frame(width: 0.8)
           .frame(width: 0.6, condition: .desktop)
