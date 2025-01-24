@@ -17033,7 +17033,9 @@
         "fuelLevel" : "obd",
         "odometer" : "obd",
         "speed" : "obd",
-        "testingStatus" : "partiallyOnboarded",
+        "testingStatus" : {
+          "activeTester" : "CURRy-BHAI"
+        },
         "years" : [
           2023,
           2023
