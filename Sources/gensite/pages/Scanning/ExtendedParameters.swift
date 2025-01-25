@@ -273,6 +273,8 @@ return Measurement(value: value, unit: unit)
 \(inlineHTML { Parameter("add", type: "Double") }) Added to the extracted numerical value. Defaults to 0.    
 \(inlineHTML { Parameter("mul", type: "Double") }) The extracted numerical value is multiplied by this value. Defaults to 1.    
 \(inlineHTML { Parameter("div", type: "Double") }) The extracted numerical value is divided by this value. Defaults to 1.    
+\(inlineHTML { Parameter("nullmin", type: "Double") }) An optional null value. Any response equal to or less than this value will be treated as a null value.    
+\(inlineHTML { Parameter("nullmax", type: "Double") }) An optional null value. Any response equal to or greater than this value will be treated as a null value.    
 \(inlineHTML { Parameter("omin", type: "Double") }) The optimal minimum value, expressed in the same unit as the value. If not provided, no optimal minimum value will be shown.    
 \(inlineHTML { Parameter("omax", type: "Double") }) The optimal maximum value, expressed in the same unit as the value. If not provided, no optimal maximum value will be shown.    
 \(inlineHTML { Parameter("oval", type: "Double") }) The optimal value, expressed in the same unit as the value. If not provided, no optimal value will be shown.
