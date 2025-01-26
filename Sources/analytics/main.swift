@@ -1,12 +1,24 @@
 import Foundation
 
-guard let apikey = ProcessInfo.processInfo.environment["POSTHOG_API_KEY"],
-      let projectIDString = ProcessInfo.processInfo.environment["POSTHOG_PROJECT_ID"],
-      let projectID = Int(projectIDString),
-      let airtableAPIKey = ProcessInfo.processInfo.environment["AIRTABLE_API_KEY"],
-      let airtableBaseID = ProcessInfo.processInfo.environment["AIRTABLE_BASE_ID"],
-      let modelsTableID = ProcessInfo.processInfo.environment["AIRTABLE_MODELS_TABLE_ID"] else {
-  fatalError("Missing required environment variables")
+guard let apikey = ProcessInfo.processInfo.environment["POSTHOG_API_KEY"] else {
+  fatalError("Missing POSTHOG_API_KEY")
+}
+
+guard let projectIDString = ProcessInfo.processInfo.environment["POSTHOG_PROJECT_ID"],
+      let projectID = Int(projectIDString) else {
+  fatalError("Missing POSTHOG_PROJECT_ID")
+}
+
+guard let airtableAPIKey = ProcessInfo.processInfo.environment["AIRTABLE_API_KEY"] else {
+  fatalError("Missing AIRTABLE_API_KEY")
+}
+
+guard let airtableBaseID = ProcessInfo.processInfo.environment["AIRTABLE_BASE_ID"] else {
+  fatalError("Missing AIRTABLE_BASE_ID")
+}
+
+guard let modelsTableID = ProcessInfo.processInfo.environment["AIRTABLE_MODELS_TABLE_ID"] else {
+  fatalError("Missing AIRTABLE_MODELS_TABLE_ID")
 }
 
 let exportsURL = URL(filePath: #filePath)

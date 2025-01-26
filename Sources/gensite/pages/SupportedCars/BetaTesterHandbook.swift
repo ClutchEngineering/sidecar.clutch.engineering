@@ -78,29 +78,9 @@ How to Register
 
 To become a beta tester, you must first create an account on [cars.forum](https://cars.forum), the community forum for Sidecar and other Clutch Engineering products. If you don’t have an account yet, you can [register here](https://meta.cars.forum/ucp.php?mode=register). It's free.
 
-Once logged in, [search the Beta Testing Registration forum](https://meta.cars.forum/search.php?fid[]=17) for your car’s make and model. If no thread exists for your vehicle, create one using this template:
+You must then register your interest by filling in the form below:
 
-```
-Subject: [Make] / [Model] / [Year]
-Body:
-I am interested in becoming a Sidecar beta tester for this make/model/year.
-
-My tester profile:
-
-iOS Version: [e.g., iOS 18.2]
-Apple Watch Available: [Yes/No]
-watchOS Version (if you have a watch): [e.g., watch 11.1]
-Internet connected vehicle: [Yes/No]
-OBD Device Available: [Yes/No]
-OBD Device model: [e.g. OBDLink CX]
-Testing Availability: [e.g., Daily, Weekly, Monthly]
-Time zone: [e.g. PST, UTC−08:00]
-Additional Notes: [e.g., Has aftermarket parts, modifications, etc.]
-```
-
-If a thread already exists, simply reply using the same template.
-
-If a beta tester is needed for your vehicle, Jeff will reach out to onboard you with the next steps.
+<iframe class="airtable-embed" src="https://airtable.com/embed/appqtcCtdikk37lX9/pagNEk4vaHhLGgfwl/form" frameborder="0" onmousewheel="" width="100%" height="700" style="background: transparent; border: 1px solid #ccc;"></iframe>
 
 You will receive your subscription promo code after you have:
 
