@@ -23,6 +23,10 @@ let package = Package(
       .process("export-carplay-drivers-by-model.csv"),
     ]),
 
+    .executableTarget(name: "export", dependencies: [
+      "VehicleSupport",
+    ]),
+
     .executableTarget(name: "import", dependencies: [
       "VehicleSupport",
     ]),
