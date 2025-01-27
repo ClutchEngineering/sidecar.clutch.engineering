@@ -6,6 +6,7 @@ private let modelNormalizations: [String: String] = [
   "BMW/335i": "BMW/3 Series",
   "BMW/335d Xdrive": "BMW/3 Series",
   "BMW/M440i": "BMW/4 Series",
+  "BMW/440i": "BMW/4 Series",
   "BMW/4 Series Gran Coupe": "BMW 4 Series",
 ]
 
