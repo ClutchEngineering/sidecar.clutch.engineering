@@ -17758,7 +17758,8 @@
   {
     "make" : "Toyota",
     "model" : {
-      "name" : "RAV4"
+      "name" : "RAV4",
+      "symbolName": "rav44thgen"
     },
     "supportStatuses" : [
       {
