@@ -41,8 +41,8 @@ extension Home {
 
         Div {
           Text("Community features require a GitHub account")
-          Link(URL(string: "https://github.com/ElectricSidecar")!, openInNewTab: true) {
-            Text("github.com/ElectricSidecar")
+          Link(URL(string: "https://github.com/OBDb")!, openInNewTab: true) {
+            Text("github.com/OBDb")
           }
         }
         .fontSize(.extraSmall)
