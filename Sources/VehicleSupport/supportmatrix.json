@@ -16953,7 +16953,8 @@
   {
     "make" : "Toyota",
     "model" : {
-      "name" : "Camry"
+      "name" : "Camry",
+      "symbolName": "camry8thgen"
     },
     "supportStatuses" : [
       {
