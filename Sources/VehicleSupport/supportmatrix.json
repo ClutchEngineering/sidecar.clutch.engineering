@@ -17852,7 +17852,8 @@
   {
     "make" : "Toyota",
     "model" : {
-      "name" : "RAV4 Hybrid"
+      "name" : "RAV4 Hybrid",
+      "symbolName": "rav4hybrid5thgen"
     },
     "supportStatuses" : [
       {
