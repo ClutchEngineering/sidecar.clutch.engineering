@@ -171,7 +171,8 @@ struct LeaderboardPage: View {
 
     // Process yesterday's data
     let yesterdayRows = yesterdayContent.components(separatedBy: .newlines)
-    var rank = 1
+
+    // First pass: Combine all entries
     for row in yesterdayRows.dropFirst() {
       let columns = row.components(separatedBy: ",")
       if columns.count == 3,
@@ -181,12 +182,14 @@ struct LeaderboardPage: View {
         if vehicleInfo.vehicleName != "/" {
           let normalizedName = vehicleInfo.vehicleName.lowercased()
           yesterdayEntries[normalizedName] = (yesterdayEntries[normalizedName] ?? 0) + count
-          if yesterdayRanks[normalizedName] == nil {
-            yesterdayRanks[normalizedName] = rank
-            rank += 1
-          }
         }
       }
+    }
+
+    // Second pass: Assign ranks based on sorted combined totals
+    let sortedYesterdayEntries = yesterdayEntries.sorted { $0.value > $1.value }
+    for (index, entry) in sortedYesterdayEntries.enumerated() {
+      yesterdayRanks[entry.key] = index + 1
     }
 
     // Process today's data
