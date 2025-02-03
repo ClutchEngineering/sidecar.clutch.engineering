@@ -1,53 +1,53 @@
 series,custom name,total count
-/,Miles traveled,51
+/,Miles traveled,52
 Porsche/Taycan,Miles traveled,46
-Honda/Civic,Miles traveled,42
-Toyota/4Runner,Miles traveled,39
-Ford/F-150,Miles traveled,36
+Honda/Civic,Miles traveled,43
+Toyota/4Runner,Miles traveled,40
+Ford/F-150,Miles traveled,37
 Honda/Accord,Miles traveled,35
 Toyota/Corolla,Miles traveled,34
 Volkswagen/Golf,Miles traveled,30
+Toyota/Camry,Miles traveled,28
 Hyundai/Elantra,Miles traveled,27
-Toyota/Camry,Miles traveled,27
 Hyundai/IONIQ 5,Miles traveled,26
-Toyota/RAV4,Miles traveled,25
-Mazda/3,Miles traveled,24
-Tesla/Model 3,Miles traveled,20
-Honda/CR-V,Miles traveled,19
-Toyota/Tacoma,Miles traveled,19
-Audi/A4,Miles traveled,17
+Toyota/RAV4,Miles traveled,26
+Mazda/3,Miles traveled,25
+Toyota/Tacoma,Miles traveled,22
+Tesla/Model 3,Miles traveled,21
+Honda/CR-V,Miles traveled,20
+Audi/A4,Miles traveled,18
+Kia/EV9,Miles traveled,18
 Porsche/Cayenne,Miles traveled,17
+Volkswagen/Polo,Miles traveled,17
 Polestar/2,Miles traveled,16
-Volkswagen/Polo,Miles traveled,16
+Subaru/Crosstrek,Miles traveled,16
+BMW/3 Series,Miles traveled,15
 Ford/Mustang,Miles traveled,15
-Kia/EV9,Miles traveled,15
 Mazda/CX-5,Miles traveled,15
-Subaru/Crosstrek,Miles traveled,15
-BMW/3 Series,Miles traveled,14
-Ford/Escape,Miles traveled,13
+Ford/Escape,Miles traveled,14
 Ram/1500,Miles traveled,13
+Volkswagen/Jetta,Miles traveled,13
 Volkswagen/Tiguan,Miles traveled,13
+Hyundai/Tucson,Miles traveled,12
 Kia/Forte,Miles traveled,12
-Volkswagen/Jetta,Miles traveled,12
 Chevrolet/Silverado 1500,Miles traveled,11
-Hyundai/Tucson,Miles traveled,11
 Kia/EV6,Miles traveled,11
 Nissan/Sentra,Miles traveled,11
+BMW/,Miles traveled,10
+Dodge/Charger,Miles traveled,10
 Ford/F-150 Lightning,Miles traveled,10
+Ford/Mustang Mach-E,Miles traveled,10
 Hyundai/Sonata,Miles traveled,10
+Porsche/Macan,Miles traveled,10
 Seat/Leon,Miles traveled,10
 Volkswagen/ID.4,Miles traveled,10
-BMW/,Miles traveled,9
 BMW/X3,Miles traveled,9
-Dodge/Charger,Miles traveled,9
-Ford/Mustang Mach-E,Miles traveled,9
-Porsche/Macan,Miles traveled,9
+MG/MG4,Miles traveled,9
 Subaru/Outback,Miles traveled,9
+Tesla/Model Y,Miles traveled,9
 BMW/5 Series,Miles traveled,8
 Ford/Ranger,Miles traveled,8
 Jeep/Wrangler,Miles traveled,8
-MG/MG4,Miles traveled,8
-Tesla/Model Y,Miles traveled,8
 Audi/,Miles traveled,7
 Ford/Fusion,Miles traveled,7
 GMC/Sierra 1500,Miles traveled,7
@@ -55,8 +55,13 @@ Hyundai/IONIQ 6,Miles traveled,7
 Nissan/LEAF,Miles traveled,7
 Nissan/Rogue,Miles traveled,7
 Subaru/Forester,Miles traveled,7
+Toyota/Corolla Hybrid,Miles traveled,7
 Toyota/Highlander,Miles traveled,7
+Toyota/Prius,Miles traveled,7
+Volkswagen/GTI,Miles traveled,7
+Audi/A3,Miles traveled,6
 BMW/2 Series,Miles traveled,6
+Chevrolet/Bolt EUV,Miles traveled,6
 Chevrolet/Malibu,Miles traveled,6
 Hyundai/Santa Fe,Miles traveled,6
 Hyundai/Tucson Hybrid,Miles traveled,6
@@ -65,15 +70,10 @@ Kia/Sorento,Miles traveled,6
 MINI/Cooper,Miles traveled,6
 Mazda/CX-30,Miles traveled,6
 Subaru/Impreza,Miles traveled,6
-Toyota/Corolla Hybrid,Miles traveled,6
-Toyota/Prius,Miles traveled,6
 Unknown/Unknown,Miles traveled,6
-Volkswagen/GTI,Miles traveled,6
 Volkswagen/T-Roc,Miles traveled,6
 Acura/TLX,Miles traveled,5
-Audi/A3,Miles traveled,5
 Audi/Q7,Miles traveled,5
-Chevrolet/Bolt EUV,Miles traveled,5
 Chevrolet/Bolt EV,Miles traveled,5
 Ford/Edge,Miles traveled,5
 Ford/Fiesta,Miles traveled,5
@@ -93,8 +93,10 @@ Subaru/WRX,Miles traveled,5
 Toyota/RAV4 Hybrid,Miles traveled,5
 Toyota/Tundra,Miles traveled,5
 Vauxhall/Opel/Corsa,Miles traveled,5
+Volkswagen/,Miles traveled,5
 Volkswagen/Passat,Miles traveled,5
 Škoda/Octavia,Miles traveled,5
+Acura/Integra,Miles traveled,4
 Audi/Q5,Miles traveled,4
 Audi/SQ5,Miles traveled,4
 BMW/X5,Miles traveled,4
@@ -115,8 +117,6 @@ Mercedes-Benz/G-Class,Miles traveled,4
 Peugeot/208,Miles traveled,4
 Peugeot/308,Miles traveled,4
 Toyota/Prius Prime,Miles traveled,4
-Volkswagen/,Miles traveled,4
-Acura/Integra,Miles traveled,3
 Acura/RDX,Miles traveled,3
 Audi/A6,Miles traveled,3
 Audi/S5,Miles traveled,3
@@ -126,10 +126,13 @@ BYD/Atto 3,Miles traveled,3
 Chevrolet/Cruze,Miles traveled,3
 Chevrolet/Traverse,Miles traveled,3
 Citroën/C3,Miles traveled,3
+Cupra/Born,Miles traveled,3
+Dodge/Challenger,Miles traveled,3
 Ford/Bronco,Miles traveled,3
 Ford/Focus,Miles traveled,3
 Ford/Kuga,Miles traveled,3
 Ford/Transit Connect,Miles traveled,3
+Hyundai/Ioniq Electric,Miles traveled,3
 Hyundai/Venue,Miles traveled,3
 Jeep/Cherokee,Miles traveled,3
 Jeep/Gladiator,Miles traveled,3
@@ -150,6 +153,7 @@ Subaru/BRZ,Miles traveled,3
 Toyota/Camry Hybrid,Miles traveled,3
 Toyota/Sienna,Miles traveled,3
 Toyota/Yaris,Miles traveled,3
+Toyota/Yaris Cross,Miles traveled,3
 Volkswagen/Jetta GLI,Miles traveled,3
 Volkswagen/T-Cross,Miles traveled,3
 Volkswagen/Taos,Miles traveled,3
@@ -157,14 +161,19 @@ Volkswagen/e-Golf,Miles traveled,3
 Volvo/S60,Miles traveled,3
 Volvo/XC90,Miles traveled,3
 Alfa Romeo/Giulietta,Miles traveled,2
+Audi/A1,Miles traveled,2
+Audi/A3 e-tron,Miles traveled,2
 Audi/A5,Miles traveled,2
 Audi/Q3,Miles traveled,2
+Audi/S3,Miles traveled,2
+Audi/S4,Miles traveled,2
 Audi/e-tron,Miles traveled,2
 BMW/3 Series eDrive,Miles traveled,2
 BMW/328i,Miles traveled,2
 BMW/330e,Miles traveled,2
 BMW/4 Series,Miles traveled,2
 BMW/4 Series Gran Coupe,Miles traveled,2
+BMW/M3,Miles traveled,2
 BMW/X1,Miles traveled,2
 BMW/X2,Miles traveled,2
 BMW/Z4,Miles traveled,2
@@ -172,12 +181,12 @@ Cadillac/Escalade,Miles traveled,2
 Chevrolet/Camaro,Miles traveled,2
 Chevrolet/Silverado,Miles traveled,2
 Chevrolet/Tahoe,Miles traveled,2
-Cupra/Born,Miles traveled,2
+Chevrolet/Trax,Miles traveled,2
 Cupra/Formentor,Miles traveled,2
 Cupra/Leon,Miles traveled,2
 Dacia/Sandero III,Miles traveled,2
-Dodge/Challenger,Miles traveled,2
 Dodge/Ram 1500,Miles traveled,2
+FIAT/500X,Miles traveled,2
 Ford/Bronco Sport,Miles traveled,2
 Ford/F-350,Miles traveled,2
 Ford/Focus ST,Miles traveled,2
@@ -191,7 +200,6 @@ Honda/Fit,Miles traveled,2
 Honda/Pliot,Miles traveled,2
 Honda/Ridgeline,Miles traveled,2
 Honda/ZR-V,Miles traveled,2
-Hyundai/Ioniq Electric,Miles traveled,2
 Hyundai/Santa Cruz,Miles traveled,2
 Hyundai/Veloster,Miles traveled,2
 Hyundai/i10,Miles traveled,2
@@ -217,21 +225,24 @@ Nissan/350Z,Miles traveled,2
 Nissan/X-Trail,Miles traveled,2
 OPEL/Insignia,Miles traveled,2
 Peugeot/2008,Miles traveled,2
+Peugeot/3008,Miles traveled,2
 Porsche/CAYMAN,Miles traveled,2
 Ram/2500,Miles traveled,2
 Seat/Ibiza,Miles traveled,2
 Subaru/Legacy,Miles traveled,2
+Suzuki/Jimny,Miles traveled,2
 Suzuki/Swift,Miles traveled,2
 Toyota/Aqua,Miles traveled,2
+Toyota/Auris,Miles traveled,2
 Toyota/C-HR,Miles traveled,2
 Toyota/Corolla Cross,Miles traveled,2
 Toyota/Corolla Hatchback,Miles traveled,2
 Toyota/Crown,Miles traveled,2
+Toyota/GR Supra,Miles traveled,2
 Toyota/Grand Highlander,Miles traveled,2
 Toyota/RAV4 Prime,Miles traveled,2
 Toyota/Sienna Hybrid,Miles traveled,2
 Toyota/Venza,Miles traveled,2
-Toyota/Yaris Cross,Miles traveled,2
 Toyota/bZ4X,Miles traveled,2
 Vauxhall/Opel/Astra,Miles traveled,2
 Volkswagen/CC,Miles traveled,2
@@ -239,20 +250,18 @@ Volkswagen/Caddy,Miles traveled,2
 Volkswagen/ID.3,Miles traveled,2
 Volvo/XC40 Recharge,Miles traveled,2
 Škoda/Enyaq,Miles traveled,2
+Škoda/Fabia,Miles traveled,2
 AUDIdi/Q3,Miles traveled,1
 Acura/CL,Miles traveled,1
 Acura/TSX,Miles traveled,1
 Alfa Romeo/Giulia,Miles traveled,1
 Alfa Romeo/Giulia (952),Miles traveled,1
 Alfa Romeo/Tonale,Miles traveled,1
-Audi/A1,Miles traveled,1
-Audi/A3 e-tron,Miles traveled,1
 Audi/Audi A5,Miles traveled,1
 Audi/Q4,Miles traveled,1
 Audi/RS 3,Miles traveled,1
 Audi/RS 5,Miles traveled,1
 Audi/RS e-tron,Miles traveled,1
-Audi/S3,Miles traveled,1
 Audi/S6,Miles traveled,1
 Audi/SQ2,Miles traveled,1
 Audi/SQ8,Miles traveled,1
@@ -261,7 +270,9 @@ Audi/allroad,Miles traveled,1
 BMW/1 Series M,Miles traveled,1
 BMW/118i,Miles traveled,1
 BMW/2 Series Gran Coupe,Miles traveled,1
+BMW/220i,Miles traveled,1
 BMW/318i,Miles traveled,1
+BMW/320d,Miles traveled,1
 BMW/335d Xdrive,Miles traveled,1
 BMW/335i,Miles traveled,1
 BMW/3er,Miles traveled,1
@@ -279,7 +290,6 @@ BMW/G31,Miles traveled,1
 BMW/M135,Miles traveled,1
 BMW/M135i xDrive,Miles traveled,1
 BMW/M240i,Miles traveled,1
-BMW/M3,Miles traveled,1
 BMW/M440i,Miles traveled,1
 BMW/Série 1,Miles traveled,1
 BMW/X3 M,Miles traveled,1
@@ -309,17 +319,19 @@ Chevrolet/Sonic,Miles traveled,1
 Chevrolet/Spark,Miles traveled,1
 Chevrolet/Suburban,Miles traveled,1
 Chevrolet/Tracker,Miles traveled,1
-Chevrolet/Trax,Miles traveled,1
+Chevrolet/Trailblazer,Miles traveled,1
+Chevrolet/Volt,Miles traveled,1
 Chrysler/200,Miles traveled,1
 Chrysler/Pacifica Hybrid,Miles traveled,1
 Citroën/C4,Miles traveled,1
 Dacia/Logan,Miles traveled,1
+Daewoo/Cruze,Miles traveled,1
 Dodge/Dakota,Miles traveled,1
 Dodge/Dart,Miles traveled,1
+Dodge/Durango,Miles traveled,1
 Dodge/Grand Caravan,Miles traveled,1
 Dodge/Hornet,Miles traveled,1
 FIAT/500,Miles traveled,1
-FIAT/500X,Miles traveled,1
 FIAT/500e,Miles traveled,1
 FIAT/Fastback ,Miles traveled,1
 FIAT/Panda,Miles traveled,1
@@ -339,10 +351,12 @@ GMC/Terrain,Miles traveled,1
 Genesis/Electrified GV70,Miles traveled,1
 Genesis/G70,Miles traveled,1
 Haval/Jolion,Miles traveled,1
+Haval/Jolion HEV,Miles traveled,1
 Holden/Calais V,Miles traveled,1
 Honda/Accord Hybrid,Miles traveled,1
 Honda/Brio,Miles traveled,1
 Honda/CITY HATCHBACK e:HEV,Miles traveled,1
+Honda/City,Miles traveled,1
 Honda/Civic Hatchback,Miles traveled,1
 Honda/Civic Type R,Miles traveled,1
 Honda/Element,Miles traveled,1
@@ -389,6 +403,7 @@ Mazda/B-Series Pickup,Miles traveled,1
 Mazda/MX-5 Miata,Miles traveled,1
 Mazda/Mazda3,Miles traveled,1
 Mazda/Mazdaspeed MX-5 Miata,Miles traveled,1
+Mercedes-Benz/,Miles traveled,1
 Mercedes-Benz/A 200,Miles traveled,1
 Mercedes-Benz/C,Miles traveled,1
 Mercedes-Benz/C 200,Miles traveled,1
@@ -418,11 +433,13 @@ Nissan/Versa,Miles traveled,1
 OPEL/,Miles traveled,1
 OPEL/Astra K,Miles traveled,1
 Opel/Astra,Miles traveled,1
+Opel/Mokka,Miles traveled,1
 Ora/Funky Cat,Miles traveled,1
 P/E,Miles traveled,1
+Perodua/Bezza,Miles traveled,1
 Perodua/Myvi,Miles traveled,1
 Peugeot/206,Miles traveled,1
-Peugeot/3008,Miles traveled,1
+Peugeot/207,Miles traveled,1
 Peugeot/308 Hybrid,Miles traveled,1
 Peugeot/408,Miles traveled,1
 Peugeot/505,Miles traveled,1
@@ -444,14 +461,11 @@ Seat/Leon SC,Miles traveled,1
 Skoda/Superb 3V,Miles traveled,1
 Subaru/Ascent,Miles traveled,1
 Subaru/XV Crosstrek,Miles traveled,1
-Suzuki/Jimny,Miles traveled,1
 Tata/Nexon,Miles traveled,1
 Tesla/Model S,Miles traveled,1
-Toyota/Auris,Miles traveled,1
 Toyota/Avalon,Miles traveled,1
 Toyota/FJ Cruiser,Miles traveled,1
 Toyota/GR Corolla,Miles traveled,1
-Toyota/GR Supra,Miles traveled,1
 Toyota/GR Yaris,Miles traveled,1
 Toyota/Grand Highlander Hybrid,Miles traveled,1
 Toyota/Land Cruiser,Miles traveled,1
@@ -491,6 +505,5 @@ Volvo/V60,Miles traveled,1
 Volvo/V90 Cross Country,Miles traveled,1
 Volvo/XC60,Miles traveled,1
 smart/fortwo,Miles traveled,1
-Škoda/Fabia,Miles traveled,1
 Škoda/Kodiaq,Miles traveled,1
 Škoda/Superb,Miles traveled,1
