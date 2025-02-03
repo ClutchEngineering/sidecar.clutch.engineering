@@ -139,7 +139,7 @@ struct LeaderboardPage: View {
               .fontSize(.large)
               .bold()
           }
-          Link(URL(string: "/leaderboard/24h/")) {
+          Link(URL(string: "/leaderboard/last24hours/")) {
             Text("Last 24 Hours →")
               .fontSize(.large)
               .bold()
