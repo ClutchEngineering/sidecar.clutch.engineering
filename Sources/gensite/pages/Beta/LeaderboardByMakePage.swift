@@ -192,7 +192,7 @@ struct LeaderboardByMakePage: View {
 
   var body: some View {
     Page(
-      "Navigation Leaderboard by Make",
+      "Leaderboard by Make",
       path: "/leaderboard/makes/",
       description: "See which vehicle manufacturers are being driven the most in Sidecar.",
       keywords: [
@@ -213,7 +213,7 @@ struct LeaderboardByMakePage: View {
             HeroIconPuck(url: URL(string: "/gfx/leaderboard.png")!)
 
             Div {
-              H1("Navigation Leaderboard by Make")
+              H1("Leaderboard by Make")
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")
