@@ -2,33 +2,46 @@ import Foundation
 import Slipstream
 import VehicleSupport
 
-struct LeaderboardPage: View {
+struct Leaderboard24HoursPage: View {
   private let leaderboardData: [LeaderboardEntry]
   private let makes: [Make: [Model: [VehicleSupportStatus]]]
+  private let totalMilesDriven: Float
 
   init() {
     // Load vehicle support data first
     self.makes = try! VehicleSupportStatus.loadAll()
 
-    // Load and process CSV data
+    // Load CSV data for today and yesterday
     let csvContent = try! String(contentsOf: Bundle.module.url(forResource: "export-carplay-distance-traveled-by-model", withExtension: "csv")!)
     let yesterdayContent = try! String(contentsOf: Bundle.module.url(forResource: "export-carplay-distance-traveled-by-model-yesterday", withExtension: "csv")!)
     let driversContent = try! String(contentsOf: Bundle.module.url(forResource: "export-carplay-drivers-by-model", withExtension: "csv")!)
 
     // Process the data using shared utility
-    self.leaderboardData = LeaderboardUtils.processLeaderboardData(
+    let entries = LeaderboardUtils.processLeaderboardData(
       currentCSV: csvContent,
       yesterdayCSV: yesterdayContent,
       driversCSV: driversContent,
       makes: makes
     )
+
+    // Sort by mileage change instead of total miles
+    self.leaderboardData = entries
+      .filter { $0.mileageChange != nil }  // Only include entries with changes
+      .sorted {
+        let change1 = $0.mileageChange ?? 0
+        let change2 = $1.mileageChange ?? 0
+        return change1 > change2  // Sort by delta
+      }
+
+    // Calculate total miles driven in last 24 hours
+    self.totalMilesDriven = entries.reduce(0) { $0 + ($1.mileageChange ?? 0) }
   }
 
   var body: some View {
     Page(
-      "Navigation Leaderboard",
-      path: "/leaderboard/",
-      description: "See which vehicles are being driven the most in Sidecar.",
+      "Last 24 Hours",
+      path: "/leaderboard/24h/",
+      description: "See which vehicles covered the most ground in Sidecar in the last 24 hours.",
       keywords: [
         "OBD-II",
         "beta testing",
@@ -47,11 +60,11 @@ struct LeaderboardPage: View {
             HeroIconPuck(url: URL(string: "/gfx/leaderboard.png")!)
 
             Div {
-              H1("Navigation Leaderboard")
+              H1("Last 24 Hours")
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")
-              Text("Most-driven Sidecar vehicles")
+              Text("Most miles covered in the last day")
                 .fontSize(.large)
             }
             .textAlignment(.center)
@@ -65,27 +78,13 @@ struct LeaderboardPage: View {
           .margin(.horizontal, .auto)
           .margin(.bottom, 16)
 
-        // Total mileage and driver display
+        // Total mileage display for last 24h
         VStack(alignment: .center, spacing: 16) {
           VStack(alignment: .center) {
-            Text("Total Miles Driven")
+            Text("Miles Driven (Last 24h)")
               .bold()
               .fontSize(.large)
-            Text(LeaderboardUtils.formatNumber(leaderboardData.reduce(0) { $0 + $1.count }))
-              .fontSize(.extraExtraLarge)
-              .bold()
-              .fontDesign("rounded")
-              .id("total-miles-counter")
-              .data([
-                "base-value": String(leaderboardData.reduce(0) { $0 + $1.count }),
-                "snapshot-date": LeaderboardUtils.getCSVModificationDate(resourceName: "export-carplay-distance-traveled-by-model")
-              ])
-          }
-          VStack(alignment: .center) {
-            Text("# of Stigs")
-              .bold()
-              .fontSize(.large)
-            Text("\(leaderboardData.reduce(0) { $0 + $1.driverCount })")
+            Text(LeaderboardUtils.formatNumber(totalMilesDriven))
               .fontSize(.extraExtraLarge)
               .bold()
               .fontDesign("rounded")
@@ -100,12 +99,13 @@ struct LeaderboardPage: View {
             HeaderCell { Text("Rank") }
             HeaderCell { Text("Vehicle") }
             HeaderCell { Text("Stigs") }
-            HeaderCell { Text("Miles driven") }
+            HeaderCell { Text("Miles in 24h") }
           }
           .background(.gray, darkness: 100)
           .background(.zinc, darkness: 950, condition: .dark)
 
           TableBody {
+            // Show all entries with non-zero changes
             for (index, entry) in leaderboardData.enumerated() {
               let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: makes)
               if vehicleInfo.vehicleName != "/" {
@@ -113,10 +113,8 @@ struct LeaderboardPage: View {
                   rank: index + 1,
                   symbolName: vehicleInfo.symbolName,
                   vehicleName: vehicleInfo.vehicleName,
-                  count: entry.count,
+                  count: entry.mileageChange ?? 0,  // Show the delta instead of total
                   driverCount: entry.driverCount,
-                  rankChange: entry.rankChange,
-                  mileageChange: entry.mileageChange,
                   showDriverCount: true
                 )
               }
@@ -132,11 +130,13 @@ struct LeaderboardPage: View {
         .frame(width: 0.8)
         .frame(width: 0.6, condition: .desktop)
 
-        // Add a link to the daily leaderboard
-        Link(URL(string: "/leaderboard/today/")) {
-          Text("View Today's Top Drivers →")
-            .fontSize(.large)
-            .bold()
+        // Add navigation links
+        HStack(spacing: 16) {
+          Link(URL(string: "/leaderboard/")) {
+            Text("← All-Time Leaderboard")
+              .fontSize(.large)
+              .bold()
+          }
         }
         .margin(.bottom, 32)
         .textAlignment(.center)
