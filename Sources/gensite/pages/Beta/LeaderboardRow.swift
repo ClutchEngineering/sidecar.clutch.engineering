@@ -89,7 +89,7 @@ struct LeaderboardRow: View {
       // Score column with change
       Bordered(showTrailingBorder: false) {
         TableCell {
-          HStack(alignment: .baseline) {
+          HStack(alignment: .baseline, spacing: 8) {
             Text(LeaderboardUtils.formatNumber(count))
             if let mileageChange = mileageChange,
                abs(mileageChange) > 0 {

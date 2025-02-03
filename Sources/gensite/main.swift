@@ -27,6 +27,7 @@ let sitemap: Sitemap = [
   "beta/index.html": BetaTesterHandbook(),
   "leaderboard/index.html": LeaderboardPage(),
   "leaderboard/last24hours/index.html": Leaderboard24HoursPage(),
+  "leaderboard/makes/index.html": LeaderboardByMakePage(),
   "beta/leaderboard/index.html": Redirect(URL(string: "/leaderboard")),
   "leave-a-review/index.html": Redirect(URL(string: "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1663683832&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software")),
   "help/index.html": Help(),

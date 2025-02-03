@@ -130,10 +130,15 @@ struct Leaderboard24HoursPage: View {
         .frame(width: 0.8)
         .frame(width: 0.6, condition: .desktop)
 
-        // Add navigation links
+        // Navigation links
         HStack(spacing: 16) {
           Link(URL(string: "/leaderboard/")) {
-            Text("← All-Time Leaderboard")
+            Text("← By Model")
+              .fontSize(.large)
+              .bold()
+          }
+          Link(URL(string: "/leaderboard/makes/")) {
+            Text("By Make")
               .fontSize(.large)
               .bold()
           }

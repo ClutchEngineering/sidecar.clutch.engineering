@@ -21,6 +21,8 @@ let modelNormalizations: [String: String] = [
   "BMW/M440i": "BMW/4 Series",
   "BMW/440i": "BMW/4 Series",
   "BMW/4 Series Gran Coupe": "BMW 4 Series",
+
+  "Hyundai/Ioniq": "Hyundai/IONIQ",
 ]
 
 // MARK: - Shared Utilities
@@ -37,8 +39,19 @@ struct LeaderboardUtils {
     let components = series.components(separatedBy: "/")
     guard components.count >= 2 else { return (nil, series) }
 
-    let seriesMake = components[0].lowercased()
-    let seriesModel = components[1].lowercased()
+    let seriesMake: String
+    let seriesModel: String
+
+    if series.lowercased().hasPrefix("vauxhall/opel") {
+      seriesMake = "vauxhall/opel"
+      seriesModel = String(components.dropFirst(2).joined(separator: "/")).lowercased()
+    } else {
+      seriesMake = components[0].lowercased()
+      seriesModel = components.dropFirst().joined(separator: "/").lowercased()
+    }
+    if seriesModel.isEmpty {
+      return (nil, "Unknown")
+    }
 
     for (make, models) in makes {
       let normalizedMake = make.lowercased()
@@ -51,7 +64,8 @@ struct LeaderboardUtils {
         }
       }
     }
-    return (nil, series)
+    let make = components[0]
+    return (nil, "\(make) \(String(components.dropFirst().joined(separator: "/")))")
   }
 
   static func getCSVModificationDate(resourceName: String) -> String {

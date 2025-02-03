@@ -26,7 +26,7 @@ struct LeaderboardPage: View {
 
   var body: some View {
     Page(
-      "Navigation Leaderboard",
+      "Leaderboard",
       path: "/leaderboard/",
       description: "See which vehicles are being driven the most in Sidecar.",
       keywords: [
@@ -47,7 +47,7 @@ struct LeaderboardPage: View {
             HeroIconPuck(url: URL(string: "/gfx/leaderboard.png")!)
 
             Div {
-              H1("Navigation Leaderboard")
+              H1("Leaderboard")
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")
@@ -132,11 +132,18 @@ struct LeaderboardPage: View {
         .frame(width: 0.8)
         .frame(width: 0.6, condition: .desktop)
 
-        // Add a link to the daily leaderboard
-        Link(URL(string: "/leaderboard/today/")) {
-          Text("View Today's Top Drivers →")
-            .fontSize(.large)
-            .bold()
+        // Navigation links
+        HStack(spacing: 16) {
+          Link(URL(string: "/leaderboard/makes/")) {
+            Text("By Make")
+              .fontSize(.large)
+              .bold()
+          }
+          Link(URL(string: "/leaderboard/24h/")) {
+            Text("Last 24 Hours →")
+              .fontSize(.large)
+              .bold()
+          }
         }
         .margin(.bottom, 32)
         .textAlignment(.center)

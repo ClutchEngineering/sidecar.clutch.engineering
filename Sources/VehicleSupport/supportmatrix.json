@@ -8496,22 +8496,6 @@
   {
     "make" : "Hyundai",
     "model" : {
-      "name" : "IONIQ"
-    },
-    "supportStatuses" : [
-      {
-        "speed" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2019,
-          2019
-        ]
-      }
-    ]
-  },
-  {
-    "make" : "Hyundai",
-    "model" : {
       "name" : "IONIQ 5",
       "symbolName" : "ioniq5"
     },
@@ -8629,7 +8613,7 @@
   {
     "make" : "Hyundai",
     "model" : {
-      "name" : "Ioniq"
+      "name" : "IONIQ"
     },
     "supportStatuses" : [
       {
