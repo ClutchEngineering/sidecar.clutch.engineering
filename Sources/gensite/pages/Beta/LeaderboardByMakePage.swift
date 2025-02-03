@@ -10,10 +10,28 @@ struct LeaderboardByMakePage: View {
     let modelCount: Int
     var rankChange: Int?
     var mileageChange: Float?
+    var logoURL: URL?
   }
 
   private let leaderboardData: [MakeEntry]
   private let makes: [Make: [Model: [VehicleSupportStatus]]]
+
+  private static func getLogoURL(for make: String) -> URL? {
+    let normalizedMake = make.lowercased()
+    let mapping: [String: String] = [
+      "alfa romeo": "alfaromeo",
+      "land rover": "landrover",
+      "mercedes-benz": "mercedes",
+      "mercedes benz": "mercedes",
+      "opel": "vauxhall-opel",
+      "citroën": "citroen",
+      "vauxhall": "vauxhall-opel",
+      "vauxhall/opel": "vauxhall-opel",
+    ]
+
+    let filename = mapping[normalizedMake] ?? normalizedMake
+    return URL(string: "/gfx/make/\(filename).svg")
+  }
 
   init() {
     // Load vehicle support data first
@@ -49,7 +67,8 @@ struct LeaderboardByMakePage: View {
           driverCount: existing.driverCount + entry.driverCount,
           modelCount: existing.modelCount + 1,
           rankChange: nil,
-          mileageChange: (existing.mileageChange ?? 0) + (entry.mileageChange ?? 0)
+          mileageChange: (existing.mileageChange ?? 0) + (entry.mileageChange ?? 0),
+          logoURL: Self.getLogoURL(for: makeName)
         )
       } else {
         makeEntries[makeName] = MakeEntry(
@@ -58,7 +77,8 @@ struct LeaderboardByMakePage: View {
           driverCount: entry.driverCount,
           modelCount: 1,
           rankChange: nil,
-          mileageChange: entry.mileageChange
+          mileageChange: entry.mileageChange,
+          logoURL: Self.getLogoURL(for: makeName)
         )
       }
     }
@@ -112,6 +132,7 @@ struct LeaderboardByMakePage: View {
     let modelCount: Int
     let rankChange: Int?
     let mileageChange: Float?
+    let logoURL: URL?
 
     private func formatRankChange(_ change: Int) -> String? {
       if change == 0 { return nil }
@@ -137,11 +158,19 @@ struct LeaderboardByMakePage: View {
         .padding(.horizontal, 8)
         .padding(.vertical, 12)
 
-        // Make column
+        // Make column with logo
         Bordered {
           TableCell {
-            Text(make)
-              .bold()
+            HStack(spacing: 16) {
+              if let logoURL = logoURL {
+                Image(logoURL)
+                  .colorInvert(condition: .dark)
+                  .display(.inlineBlock)
+                  .frame(width: 48, height: 48)
+              }
+              Text(make)
+                .bold()
+            }
           }
         }
         .padding(.horizontal, 8)
@@ -301,7 +330,8 @@ struct LeaderboardByMakePage: View {
                 driverCount: entry.driverCount,
                 modelCount: entry.modelCount,
                 rankChange: entry.rankChange,
-                mileageChange: entry.mileageChange
+                mileageChange: entry.mileageChange,
+                logoURL: entry.logoURL
               )
             }
           }
@@ -334,3 +364,4 @@ struct LeaderboardByMakePage: View {
     }
   }
 }
+
