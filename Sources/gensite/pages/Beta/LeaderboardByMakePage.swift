@@ -166,7 +166,8 @@ struct LeaderboardByMakePage: View {
                 Image(logoURL)
                   .colorInvert(condition: .dark)
                   .display(.inlineBlock)
-                  .frame(width: 48, height: 48)
+                  .frame(width: 16, height: 16)
+                  .frame(width: 48, height: 48, condition: .desktop)
               }
               Text(make)
                 .bold()
