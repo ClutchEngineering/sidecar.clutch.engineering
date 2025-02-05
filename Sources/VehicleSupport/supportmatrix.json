@@ -10510,7 +10510,8 @@
   {
     "make" : "Kia",
     "model" : {
-      "name" : "Optima"
+      "name" : "Optima",
+      "symbolName": "optima4thgen"
     },
     "supportStatuses" : [
       {
