@@ -7,7 +7,6 @@ struct ScanningNavigation: View {
     ContentContainer {
       HStack(spacing: 16) {
         NavigationLink(URL(string: "/scanning/extended-pids"), text: "Extended PIDs")
-        NavigationLink(URL(string: "/scanning/vehicle-support"), text: "Vehicle support")
       }
       .justifyContent(.end)
       .padding(.vertical, 8)

@@ -21,7 +21,6 @@ let sitemap: Sitemap = [
   "shortcuts/index.html": Shortcuts(),
   "scanning/index.html": Scanning(),
   "scanning/extended-pids/index.html": ExtendedParameters(),
-  "scanning/vehicle-support/index.html": VehicleSupport(),
   "bug/index.html": Bug(),
   "supported-cars/index.html": SupportedCars(),
   "beta/index.html": BetaTesterHandbook(),
