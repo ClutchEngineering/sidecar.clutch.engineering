@@ -1802,7 +1802,8 @@
   {
     "make" : "BMW",
     "model" : {
-      "name" : "5 Series"
+      "name" : "5 Series",
+      "symbolName": "5series7thgen"
     },
     "supportStatuses" : [
       {
@@ -6926,7 +6927,8 @@
   {
     "make" : "GMC",
     "model" : {
-      "name" : "Canyon"
+      "name" : "Canyon",
+      "symbolName": "canyon3rdgen"
     },
     "supportStatuses" : [
       {
