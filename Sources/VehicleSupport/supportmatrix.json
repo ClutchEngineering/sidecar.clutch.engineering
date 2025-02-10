@@ -5627,7 +5627,8 @@
   {
     "make" : "Ford",
     "model" : {
-      "name" : "F-150"
+      "name" : "F-150",
+      "symbolName": "f15012thgen"
     },
     "supportStatuses" : [
       {
