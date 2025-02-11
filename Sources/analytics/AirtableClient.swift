@@ -15,6 +15,30 @@ struct AirtableRecord: Decodable {
 
   struct Fields: Decodable {
     let ID: String
+    var make: String? {
+      guard let first = ID.split(separator: "/").first,
+            !first.isEmpty else {
+        return nil
+      }
+      return String(first)
+    }
+    let alternateModels: String?
+    var alternateModelIDs: [String] {
+      guard let alternateModels,
+            let make else {
+        return []
+      }
+      return alternateModels
+        .split(separator: ",")
+        .map { $0.trimmingCharacters(in: .whitespaces) }
+        .filter { !$0.isEmpty }
+        .map { make + "/" + $0.trimmingCharacters(in: .whitespaces) }
+    }
+
+    enum CodingKeys: String, CodingKey {
+      case ID
+      case alternateModels = "Alternate models"
+    }
   }
 }
 
@@ -55,8 +79,11 @@ actor AirtableClient {
       recordUpdates.append((id: airtableID, count: count.count))
     }
 
+    // Deduplicate records before updating
+    let deduplicatedUpdates = deduplicateRecordUpdates(recordUpdates)
+
     // Update records in batches of 10
-    for chunk in recordUpdates.chunked(into: 10) {
+    for chunk in deduplicatedUpdates.chunked(into: 10) {
       try await updateBatch(records: chunk, fieldName: "Number of drivers", in: tableID)
     }
   }
@@ -80,8 +107,11 @@ actor AirtableClient {
       recordUpdates.append((id: airtableID, count: miles.count))
     }
 
+    // Deduplicate records before updating
+    let deduplicatedUpdates = deduplicateRecordUpdates(recordUpdates)
+
     // Update records in batches of 10
-    for chunk in recordUpdates.chunked(into: 10) {
+    for chunk in deduplicatedUpdates.chunked(into: 10) {
       try await updateBatch(records: chunk, fieldName: "Number of miles driven", in: tableID)
     }
   }
@@ -97,9 +127,31 @@ actor AirtableClient {
     } while offset != nil
 
     // Create mapping from string ID to Airtable record ID
-    idMapping = Dictionary(uniqueKeysWithValues: allRecords.map {
-      ($0.fields.ID, $0.id)
-    })
+    var mapping: [String: String] = [:]
+
+    // Add primary IDs
+    for record in allRecords {
+      mapping[record.fields.ID] = record.id
+
+      // Add alternate model IDs
+      for alternateID in record.fields.alternateModelIDs {
+        mapping[alternateID] = record.id
+      }
+    }
+
+    idMapping = mapping
+  }
+
+  private func deduplicateRecordUpdates(_ updates: [(id: String, count: Int)]) -> [(id: String, count: Int)] {
+    // Group updates by ID and sum their counts
+    var groupedCounts: [String: Int] = [:]
+
+    for update in updates {
+      groupedCounts[update.id, default: 0] += update.count
+    }
+
+    // Convert back to array of tuples
+    return groupedCounts.map { (id: $0.key, count: $0.value) }
   }
 
   private func fetchRecordsPage(from tableID: String, offset: String? = nil) async throws -> AirtableResponse {

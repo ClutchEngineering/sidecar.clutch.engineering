@@ -36,6 +36,7 @@ do {
   let client = PostHogExportClient(apiKey: apikey, projectID: projectID)
   let csvData = try await client.fetchExportedCSV(query: stigsQuery())
   try csvData.write(to: exportsURL.appending(path: "export-carplay-drivers-by-model.csv"))
+//  let csvData = try Data(contentsOf: exportsURL.appending(path: "export-carplay-drivers-by-model.csv"))
 
   // Update Models table in Airtable
   print("Updating driver counts in Airtable Models table...")
