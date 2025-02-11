@@ -11,9 +11,9 @@ func stigsQuery() -> String {
       "breakdownFilter": {
         "breakdown": null,
         "breakdown_group_type_index": null,
-        "breakdown_hide_other_aggregation": null,
+        "breakdown_hide_other_aggregation": true,
         "breakdown_histogram_bin_count": null,
-        "breakdown_limit": null,
+        "breakdown_limit": 1000,
         "breakdown_normalize_url": null,
         "breakdown_type": "event",
         "breakdowns": [
@@ -46,7 +46,7 @@ func stigsQuery() -> String {
       "samplingFactor": null,
       "series": [
         {
-          "custom_name": "Miles traveled",
+          "custom_name": "# of stigs",
           "event": "carplay",
           "fixedProperties": null,
           "kind": "EventsNode",
@@ -100,6 +100,7 @@ func stigsQuery() -> String {
         "decimalPlaces": 0,
         "display": "ActionsTable",
         "formula": null,
+        "formulas": null,
         "goalLines": null,
         "hiddenLegendIndexes": null,
         "resultCustomizationBy": "value",
@@ -107,6 +108,7 @@ func stigsQuery() -> String {
         "showAlertThresholdLines": false,
         "showLabelsOnSeries": null,
         "showLegend": false,
+        "showMultipleYAxes": false,
         "showPercentStackView": false,
         "showValuesOnSeries": true,
         "smoothingIntervals": 1,

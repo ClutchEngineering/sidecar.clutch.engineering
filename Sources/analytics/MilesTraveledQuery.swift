@@ -11,9 +11,9 @@ func milesTraveledQuery() -> String {
       "breakdownFilter": {
         "breakdown": null,
         "breakdown_group_type_index": null,
-        "breakdown_hide_other_aggregation": null,
+        "breakdown_hide_other_aggregation": true,
         "breakdown_histogram_bin_count": null,
-        "breakdown_limit": null,
+        "breakdown_limit": 1000,
         "breakdown_normalize_url": null,
         "breakdown_type": "event",
         "breakdowns": [
@@ -100,6 +100,7 @@ func milesTraveledQuery() -> String {
         "decimalPlaces": 0,
         "display": "ActionsTable",
         "formula": null,
+        "formulas": null,
         "goalLines": null,
         "hiddenLegendIndexes": null,
         "resultCustomizationBy": "value",
@@ -107,6 +108,7 @@ func milesTraveledQuery() -> String {
         "showAlertThresholdLines": false,
         "showLabelsOnSeries": null,
         "showLegend": false,
+        "showMultipleYAxes": false,
         "showPercentStackView": false,
         "showValuesOnSeries": true,
         "smoothingIntervals": 1,
