@@ -49,24 +49,24 @@ jobs:
         run: npm install -D tailwindcss@3
       - name: Generate site
         run: swift run gensite && npx tailwindcss -i tailwind.css -o ./site/css/main.css --minify
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './site'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v5
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: './site'
+      # - name: Deploy to GitHub Pages
+      #   id: deployment
+      #   uses: actions/deploy-pages@v4
 
       - name: Read Discord message
         id: discord_message
         run: |
-          echo comment=$(cat discord_message.txt) >> $GITHUB_OUTPUT;
+          echo content=$(cat discord_message.txt) >> $GITHUB_OUTPUT;
 
       - name: Send Discord notification
         uses: sarisia/actions-status-discord@v1
-        # if: always()
+        if: always()
         with:
           webhook: ${{ secrets.DISCORD_LEADERBOARD_WEBHOOK_URL }}
           content: ${{ steps.discord_message.outputs.content }}
