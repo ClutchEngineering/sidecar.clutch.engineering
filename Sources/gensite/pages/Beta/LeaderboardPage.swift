@@ -22,6 +22,8 @@ struct LeaderboardPage: View {
       driversCSV: driversContent,
       makes: makes
     )
+
+    exportStatsForDiscord()
   }
 
   var body: some View {
@@ -148,6 +150,112 @@ struct LeaderboardPage: View {
         .margin(.bottom, 32)
         .textAlignment(.center)
       }
+    }
+  }
+}
+
+extension LeaderboardPage {
+  private func padString(_ str: String, toWidth width: Int, alignment: TextAlignment = .left) -> String {
+    if str.count >= width {
+      return str
+    }
+    let padding = String(repeating: " ", count: width - str.count)
+    switch alignment {
+    case .left:
+      return str + padding
+    case .right:
+      return padding + str
+    case .center:
+      let leftPad = String(repeating: " ", count: (width - str.count) / 2)
+      let rightPad = String(repeating: " ", count: width - str.count - leftPad.count)
+      return leftPad + str + rightPad
+    }
+  }
+
+  private enum TextAlignment {
+    case left, right, center
+  }
+
+  private func exportStatsForDiscord() {
+    // Build the message content
+    var message = "🏁 **Daily Leaderboard Update**\n\n"
+
+    // Overall stats section
+    let totalMiles = leaderboardData.reduce(0) { $0 + $1.count }
+    let totalStigs = leaderboardData.reduce(0) { $0 + $1.driverCount }
+
+    message += "📊 **Overall Stats**\n"
+    message += "• Total Miles: \(LeaderboardUtils.formatNumber(totalMiles))\n"
+    message += "• Total Stigs: \(totalStigs)\n\n"
+
+    // Top 10 vehicles section
+    message += "🏆 **Top 10 Vehicles**\n```"
+
+    // Define column widths
+    let rankWidth = 6
+    let vehicleWidth = 25
+    let milesWidth = 20
+    let stigsWidth = 8
+
+    // Create header
+    message += "\n"
+    message += padString("Rank", toWidth: rankWidth)
+    message += padString("Vehicle", toWidth: vehicleWidth)
+    message += padString("Miles", toWidth: milesWidth, alignment: .right)
+    message += padString("Stigs", toWidth: stigsWidth, alignment: .right)
+
+    // Add separator line
+    message += "\n"
+    message += String(repeating: "─", count: rankWidth + vehicleWidth + milesWidth + stigsWidth)
+
+    let top10 = leaderboardData.prefix(10).enumerated()
+    for (index, entry) in top10 {
+      let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: makes)
+      let rank = index + 1
+
+      // Format the rank change indicator if it exists
+      let rankText: String
+      if let rankChange = entry.rankChange {
+        if rankChange > 0 {
+          rankText = "\(rank) ↑\(rankChange)"
+        } else if rankChange < 0 {
+          rankText = "\(rank) ↓\(abs(rankChange))"
+        } else {
+          rankText = "\(rank)"
+        }
+      } else {
+        rankText = "\(rank)"
+      }
+
+      // Format the mileage with change if it exists
+      let milesText: String
+      let baseText = LeaderboardUtils.formatNumber(entry.count)
+      if let mileageChange = entry.mileageChange {
+        let sign = mileageChange > 0 ? "+" : ""
+        milesText = "\(baseText) (\(sign)\(LeaderboardUtils.formatNumber(mileageChange)))"
+      } else {
+        milesText = baseText
+      }
+
+      // Add table row
+      message += "\n"
+      message += padString(rankText, toWidth: rankWidth)
+      message += padString(vehicleInfo.vehicleName, toWidth: vehicleWidth)
+      message += padString(milesText, toWidth: milesWidth, alignment: .right)
+      message += padString("\(entry.driverCount)", toWidth: stigsWidth, alignment: .right)
+    }
+
+    message += "\n```"
+
+    // Write to file
+    do {
+      try message.write(
+        toFile: "discord_message.txt",
+        atomically: true,
+        encoding: .utf8
+      )
+    } catch {
+      print("Error writing discord message file: \(error)")
     }
   }
 }
