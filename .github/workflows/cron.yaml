@@ -74,6 +74,6 @@ jobs:
           DISCORD_CONTENT: ${{ steps.discord_message.outputs.DISCORD_CONTENT }}
         with:
           webhook: ${{ secrets.DISCORD_LEADERBOARD_WEBHOOK_URL }}
-          content: $DISCORD_CONTENT
+          content: ${{ env.DISCORD_CONTENT }}
           status: ${{ job.status }}
           title: "📊 Leaderboard Update"
