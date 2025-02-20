@@ -62,17 +62,13 @@ jobs:
       - name: Read Discord message
         id: discord_message
         run: |
-          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
-          echo "content<<$EOF" >> $GITHUB_OUTPUT
-          cat discord_message.txt >> $GITHUB_OUTPUT
-          echo "$EOF" >> $GITHUB_OUTPUT
+          echo comment=$(cat discord_message.txt) >> $GITHUB_OUTPUT;
 
       - name: Send Discord notification
         uses: sarisia/actions-status-discord@v1
-        if: always()
+        # if: always()
         with:
           webhook: ${{ secrets.DISCORD_LEADERBOARD_WEBHOOK_URL }}
           content: ${{ steps.discord_message.outputs.content }}
           status: ${{ job.status }}
           title: "📊 Leaderboard Update"
-          color: 0x00ff00
