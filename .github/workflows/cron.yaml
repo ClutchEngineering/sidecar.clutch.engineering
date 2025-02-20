@@ -62,7 +62,13 @@ jobs:
       - name: Read Discord message
         id: discord_message
         run: |
-          echo content=$(cat discord_message.txt) >> $GITHUB_OUTPUT;
+          content=$(cat discord_message.txt)
+          # Escape characters that are special in GitHub Actions
+          content="${content//'%'/'%25'}"
+          content="${content//$'\n'/'%0A'}"
+          content="${content//$'\r'/'%0D'}"
+          content="${content//'*'/'\\*'}"
+          echo "content=$content" >> $GITHUB_OUTPUT
 
       - name: Send Discord notification
         uses: sarisia/actions-status-discord@v1
