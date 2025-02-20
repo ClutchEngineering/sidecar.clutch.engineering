@@ -67,13 +67,34 @@ jobs:
           echo $(perl -pe 's/\n/\\n/' discord_message.txt) >> $GITHUB_OUTPUT
           echo "$EOF" >> $GITHUB_OUTPUT
 
-      - name: Send Discord notification
-        uses: sarisia/actions-status-discord@v1
+      - uses: sarisia/actions-status-discord@v1
         if: always()
+        id: webhook
         env:
           DISCORD_CONTENT: ${{ steps.discord_message.outputs.DISCORD_CONTENT }}
         with:
-          webhook: ${{ secrets.DISCORD_LEADERBOARD_WEBHOOK_URL }}
+          nofail: false
+          ack_no_webhook: true
           content: ${{ env.DISCORD_CONTENT }}
           status: ${{ job.status }}
           title: "📊 Leaderboard Update"
+
+      - run: npm install axios
+      - uses: actions/github-script@v7
+        env:
+          WEBHOOK_PAYLOAD: ${{ steps.webhook.outputs.payload }}
+          WEBHOOK_URL: ${{ secrets.DISCORD_LEADERBOARD_WEBHOOK_URL }}
+        with:
+          script: |
+            const axios = require("axios")
+
+            const { WEBHOOK_PAYLOAD, WEBHOOK_URL } = process.env
+
+            const payload = JSON.parse(WEBHOOK_PAYLOAD)
+
+            if (payload.content) {
+              payload.content = payload.content.replace(/\\n/g, '\n')
+            }
+
+            // send to Discord
+            axios.post(WEBHOOK_URL, payload)
