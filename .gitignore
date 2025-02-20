@@ -1,6 +1,7 @@
 # Slipstream site output
 site/**/*.html
 site/css/main.css
+discord_message.txt
 
 .swiftpm/
 .DS_Store
