@@ -446,6 +446,17 @@ Tested Scanners
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  BlueDriver<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com/dp/B00652G4TS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">$119.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   DND ECHO<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.com/dp/B0CZ8X334R?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
@@ -853,6 +864,17 @@ Tested Scanners
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  BlueDriver<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.in/dp/B00652G4TS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">₹20,700</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   Vgate vLinker MC+<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.in/dp/B088LW211V?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
@@ -1063,6 +1085,17 @@ Tested Scanners
  <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">Unknown</td>
  <td class="pl-2 md:pl-4 py-2">£95.50</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  BlueDriver<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.co.uk/dp/B00652G4TS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">£114.00</td>
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
