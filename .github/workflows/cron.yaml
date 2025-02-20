@@ -22,42 +22,42 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # - name: Build and run analytics package
-      #   run: |
-      #     swift run analytics
-      #   env:
-      #     POSTHOG_API_KEY: ${{ secrets.POSTHOG_API_KEY }}
-      #     POSTHOG_PROJECT_ID: ${{ secrets.POSTHOG_PROJECT_ID }}
-      #     AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
-      #     AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
-      #     AIRTABLE_MODELS_TABLE_ID: ${{ secrets.AIRTABLE_MODELS_TABLE_ID }}
+      - name: Build and run analytics package
+        run: |
+          swift run analytics
+        env:
+          POSTHOG_API_KEY: ${{ secrets.POSTHOG_API_KEY }}
+          POSTHOG_PROJECT_ID: ${{ secrets.POSTHOG_PROJECT_ID }}
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+          AIRTABLE_MODELS_TABLE_ID: ${{ secrets.AIRTABLE_MODELS_TABLE_ID }}
 
-      # - name: Configure Git
-      #   run: |
-      #     git config --local user.email "github-actions[bot]@users.noreply.github.com"
-      #     git config --local user.name "github-actions[bot]"
+      - name: Configure Git
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
 
-      # - name: Commit and push changes
-      #   run: |
-      #     git add Sources/gensite/
-      #     git commit -m "Update PostHog export data" || echo "No changes to commit"
-      #     git push origin main
-      #     echo "commit_sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+      - name: Commit and push changes
+        run: |
+          git add Sources/gensite/
+          git commit -m "Update PostHog export data" || echo "No changes to commit"
+          git push origin main
+          echo "commit_sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
 
       # Deploy to Jekyll
       - name: Install Tailwind CSS
         run: npm install -D tailwindcss@3
       - name: Generate site
         run: swift run gensite && npx tailwindcss -i tailwind.css -o ./site/css/main.css --minify
-      # - name: Setup Pages
-      #   uses: actions/configure-pages@v5
-      # - name: Upload artifact
-      #   uses: actions/upload-pages-artifact@v3
-      #   with:
-      #     path: './site'
-      # - name: Deploy to GitHub Pages
-      #   id: deployment
-      #   uses: actions/deploy-pages@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './site'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       - name: Read Discord message
         id: discord_message

@@ -232,7 +232,7 @@ extension LeaderboardPage {
       let baseText = LeaderboardUtils.formatNumber(entry.count)
       if let mileageChange = entry.mileageChange {
         let sign = mileageChange > 0 ? "+" : ""
-        milesText = "\(baseText) (\(sign)\(LeaderboardUtils.formatNumber(mileageChange)))"
+        milesText = "(\(sign)\(LeaderboardUtils.formatNumber(mileageChange))) \(baseText)"
       } else {
         milesText = baseText
       }
