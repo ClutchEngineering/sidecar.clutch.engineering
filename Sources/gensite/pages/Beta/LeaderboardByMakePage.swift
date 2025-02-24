@@ -30,7 +30,16 @@ struct LeaderboardByMakePage: View {
     ]
 
     let filename = mapping[normalizedMake] ?? normalizedMake
-    return URL(string: "/gfx/make/\(filename).svg")
+    return URL(string: "/gfx/make/\(formattedMake(filename)).svg")
+  }
+
+  static func formattedMake(_ make: String) -> String {
+    make
+      .replacingOccurrences(of: " ", with: "")
+      .replacingOccurrences(of: "-s", with: "")
+      .replacingOccurrences(of: "/", with: "-")
+      .applyingTransform(.stripDiacritics, reverse: false)!
+      .lowercased()
   }
 
   init() {
