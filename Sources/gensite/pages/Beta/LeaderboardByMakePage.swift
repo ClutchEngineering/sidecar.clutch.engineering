@@ -30,16 +30,7 @@ struct LeaderboardByMakePage: View {
     ]
 
     let filename = mapping[normalizedMake] ?? normalizedMake
-    return URL(string: "/gfx/make/\(formattedMake(filename)).svg")
-  }
-
-  static func formattedMake(_ make: String) -> String {
-    make
-      .replacingOccurrences(of: " ", with: "")
-      .replacingOccurrences(of: "-s", with: "")
-      .replacingOccurrences(of: "/", with: "-")
-      .applyingTransform(.stripDiacritics, reverse: false)!
-      .lowercased()
+    return URL(string: "/gfx/make/\(standardizedMake(filename)).svg")
   }
 
   init() {
@@ -65,8 +56,7 @@ struct LeaderboardByMakePage: View {
 
     // Process entries to aggregate by make
     for entry in rawEntries {
-      let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: makes)
-      let makeName = vehicleInfo.vehicleName.split(separator: " ").first?.description ?? "Unknown"
+      let makeName = standardizedMake(entry.series.split(separator: "/").first?.description ?? "Unknown")
 
       // Update or create make entry
       if let existing = makeEntries[makeName] {
@@ -178,7 +168,7 @@ struct LeaderboardByMakePage: View {
                   .frame(width: 16, height: 16)
                   .frame(width: 48, height: 48, condition: .desktop)
               }
-              Text(make)
+              Text(localizedNameForStandardizedMake(make))
                 .bold()
             }
           }

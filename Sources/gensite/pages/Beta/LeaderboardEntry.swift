@@ -18,6 +18,7 @@ struct LeaderboardEntry {
 let modelNormalizations: [String: String] = [
   "BMW/335i": "BMW/3 Series",
   "BMW/335d Xdrive": "BMW/3 Series",
+  "BMW/3er": "BMW/3 Series",
   "BMW/M440i": "BMW/4 Series",
   "BMW/440i": "BMW/4 Series",
   "BMW/4 Series Gran Coupe": "BMW 4 Series",
@@ -39,11 +40,11 @@ struct LeaderboardUtils {
     let components = series.components(separatedBy: "/")
     guard components.count >= 2 else { return (nil, series) }
 
-    let seriesMake: String
+    var seriesMake: String
     let seriesModel: String
 
     if series.lowercased().hasPrefix("vauxhall/opel") {
-      seriesMake = "vauxhall/opel"
+      seriesMake = "vauxhall-opel"
       seriesModel = String(components.dropFirst(2).joined(separator: "/")).lowercased()
     } else {
       seriesMake = components[0].lowercased()
@@ -52,20 +53,21 @@ struct LeaderboardUtils {
     if seriesModel.isEmpty {
       return (nil, "Unknown")
     }
+    seriesMake = standardizedMake(seriesMake)
 
     for (make, models) in makes {
-      let normalizedMake = make.lowercased()
+      let normalizedMake = standardizedMake(make)
       if normalizedMake == seriesMake {
         for (model, _) in models {
           let normalizedModel = model.name.lowercased()
           if normalizedModel == seriesModel {
-            return (model.symbolName, "\(make) \(model.name)")
+            return (model.symbolName, "\(localizedNameForStandardizedMake(normalizedMake)) \(model.name)")
           }
         }
       }
     }
     let make = components[0]
-    return (nil, "\(make) \(String(components.dropFirst().joined(separator: "/")))")
+    return (nil, "\(localizedNameForStandardizedMake(standardizedMake(make))) \(String(components.dropFirst().joined(separator: "/")))")
   }
 
   static func getCSVModificationDate(resourceName: String) -> String {
