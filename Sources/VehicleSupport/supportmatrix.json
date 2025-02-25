@@ -1631,7 +1631,8 @@
   {
     "make" : "BMW",
     "model" : {
-      "name" : "4 Series"
+      "name" : "4 Series",
+      "symbolName": "4series1stgenm430"
     },
     "supportStatuses" : [
       {
