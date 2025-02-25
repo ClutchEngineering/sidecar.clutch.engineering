@@ -4,7 +4,7 @@ import VehicleSupport
 
 struct LeaderboardByMakePage: View {
   private struct MakeEntry {
-    let make: String
+    let standardizedMake: String
     let count: Float
     let driverCount: Int
     let modelCount: Int
@@ -30,7 +30,7 @@ struct LeaderboardByMakePage: View {
     ]
 
     let filename = mapping[normalizedMake] ?? normalizedMake
-    return URL(string: "/gfx/make/\(standardizedMake(filename)).svg")
+    return URL(string: "/gfx/make/\(standardizeMake(filename)).svg")
   }
 
   init() {
@@ -56,28 +56,28 @@ struct LeaderboardByMakePage: View {
 
     // Process entries to aggregate by make
     for entry in rawEntries {
-      let makeName = standardizedMake(entry.series.split(separator: "/").first?.description ?? "Unknown")
+      let standardizedMake = standardizeMake(entry.series.split(separator: "/").first?.description ?? "Unknown")
 
       // Update or create make entry
-      if let existing = makeEntries[makeName] {
-        makeEntries[makeName] = MakeEntry(
-          make: makeName,
+      if let existing = makeEntries[standardizedMake] {
+        makeEntries[standardizedMake] = MakeEntry(
+          standardizedMake: standardizedMake,
           count: existing.count + entry.count,
           driverCount: existing.driverCount + entry.driverCount,
           modelCount: existing.modelCount + 1,
           rankChange: nil,
           mileageChange: (existing.mileageChange ?? 0) + (entry.mileageChange ?? 0),
-          logoURL: Self.getLogoURL(for: makeName)
+          logoURL: Self.getLogoURL(for: standardizedMake)
         )
       } else {
-        makeEntries[makeName] = MakeEntry(
-          make: makeName,
+        makeEntries[standardizedMake] = MakeEntry(
+          standardizedMake: standardizedMake,
           count: entry.count,
           driverCount: entry.driverCount,
           modelCount: 1,
           rankChange: nil,
           mileageChange: entry.mileageChange,
-          logoURL: Self.getLogoURL(for: makeName)
+          logoURL: Self.getLogoURL(for: standardizedMake)
         )
       }
     }
@@ -94,14 +94,14 @@ struct LeaderboardByMakePage: View {
     var yesterdayMakeEntries: [String: Float] = [:]
     for entry in yesterdayEntries {
       let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: makes)
-      let makeName = vehicleInfo.vehicleName.split(separator: " ").first?.description ?? "Unknown"
-      yesterdayMakeEntries[makeName] = (yesterdayMakeEntries[makeName] ?? 0) + entry.count
+      let standardizedMake = standardizeMake(vehicleInfo.vehicleName.split(separator: " ").first?.description ?? "Unknown")
+      yesterdayMakeEntries[standardizedMake] = (yesterdayMakeEntries[standardizedMake] ?? 0) + entry.count
     }
 
     // Calculate yesterday's rankings
     let sortedYesterdayMakes = yesterdayMakeEntries.sorted { $0.value > $1.value }
     for (index, entry) in sortedYesterdayMakes.enumerated() {
-      yesterdayRanks[entry.key] = index + 1
+      yesterdayRanks[standardizeMake(entry.key)] = index + 1
     }
 
     // Sort current makes by total miles
@@ -111,11 +111,11 @@ struct LeaderboardByMakePage: View {
     var finalEntries: [MakeEntry] = []
     for (currentRank, entry) in sortedMakes.enumerated() {
       var updatedEntry = entry
-      if let yesterdayRank = yesterdayRanks[entry.make] {
+      if let yesterdayRank = yesterdayRanks[entry.standardizedMake] {
         updatedEntry.rankChange = yesterdayRank - (currentRank + 1)
       }
       // Calculate mileage change
-      let yesterdayMiles = yesterdayMakeEntries[entry.make] ?? 0
+      let yesterdayMiles = yesterdayMakeEntries[entry.standardizedMake] ?? 0
       updatedEntry.mileageChange = entry.count - yesterdayMiles
       finalEntries.append(updatedEntry)
     }
@@ -325,7 +325,7 @@ struct LeaderboardByMakePage: View {
             for (index, entry) in leaderboardData.enumerated() {
               MakeRow(
                 rank: index + 1,
-                make: entry.make,
+                make: entry.standardizedMake,
                 count: entry.count,
                 driverCount: entry.driverCount,
                 modelCount: entry.modelCount,

@@ -53,10 +53,10 @@ struct LeaderboardUtils {
     if seriesModel.isEmpty {
       return (nil, "Unknown")
     }
-    seriesMake = standardizedMake(seriesMake)
+    seriesMake = standardizeMake(seriesMake)
 
     for (make, models) in makes {
-      let normalizedMake = standardizedMake(make)
+      let normalizedMake = standardizeMake(make)
       if normalizedMake == seriesMake {
         for (model, _) in models {
           let normalizedModel = model.name.lowercased()
@@ -67,7 +67,7 @@ struct LeaderboardUtils {
       }
     }
     let make = components[0]
-    return (nil, "\(localizedNameForStandardizedMake(standardizedMake(make))) \(String(components.dropFirst().joined(separator: "/")))")
+    return (nil, "\(localizedNameForStandardizedMake(standardizeMake(make))) \(String(components.dropFirst().joined(separator: "/")))")
   }
 
   static func getCSVModificationDate(resourceName: String) -> String {

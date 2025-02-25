@@ -40,7 +40,7 @@ package func localizedNameForStandardizedMake(_ make: String) -> String {
   }
 }
 
-package func standardizedMake(_ make: String) -> String {
+package func standardizeMake(_ make: String) -> String {
   let normalizedMake = make.lowercased()
   let mapping: [String: String] = [
     "audidi": "audi",
@@ -71,7 +71,7 @@ package func standardizedMake(_ make: String) -> String {
 
 extension Array where Element == VehicleSupportEntry {
   package func toGroupedDictionary() -> [Make: [Model: [VehicleSupportStatus]]] {
-    Dictionary(grouping: self) { standardizedMake($0.make) }
+    Dictionary(grouping: self) { standardizeMake($0.make) }
       .mapValues { (entries: [VehicleSupportEntry]) -> [Model: [VehicleSupportStatus]] in
         Dictionary(uniqueKeysWithValues: entries.map { ($0.model, $0.supportStatuses) })
       }
