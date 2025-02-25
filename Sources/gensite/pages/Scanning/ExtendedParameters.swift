@@ -201,8 +201,7 @@ Connectables are elements of the Sidecar user interface that can be powered by v
 
 #### Available Connectables
 
-\(inlineHTML { Parameter("fuelTankLevel", icon: "fuel", type: "Normal") }) How full the vehicle's gas tank is, as a percentage.
-\(inlineHTML { Parameter("fuelVolumeRemaining", icon: "fuel", type: "Volume") }) How much fuel is remaining in the tank, measured as a volume.    
+\(inlineHTML { Parameter("fuelTankLevel", icon: "fuel", type: "Normal") }) How full the vehicle's gas tank is, as a percentage.    
 \(inlineHTML { Parameter("isCharging", icon: "bolt", type: "Enum") }) Is the vehicle charging? Must either be an enumeration mapped to a value with a prefix of "CHARGING", or a scalar unit where a non-zero value means the vehicle is charging.    
 \(inlineHTML { Parameter("odometer", icon: "length", type: "Length") }) The total distance the vehicle has traveled.    
 \(inlineHTML { Parameter("electricRange", icon: "length", type: "Length") }) The distance the vehicle can travel on electricity alone.    
