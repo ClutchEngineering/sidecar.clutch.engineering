@@ -6406,7 +6406,8 @@
   {
     "make" : "Ford",
     "model" : {
-      "name" : "Mach-E"
+      "name" : "Mach-E",
+      "symbolName": "mustangmache1stgen"
     },
     "supportStatuses" : [
       {
