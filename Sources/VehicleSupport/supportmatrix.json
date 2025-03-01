@@ -6406,25 +6406,6 @@
   {
     "make" : "Ford",
     "model" : {
-      "name" : "Mach-E",
-      "symbolName": "mustangmache1stgen"
-    },
-    "supportStatuses" : [
-      {
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "years" : [
-          2022,
-          2022
-        ]
-      }
-    ]
-  },
-  {
-    "make" : "Ford",
-    "model" : {
       "name" : "Maverick"
     },
     "supportStatuses" : [
@@ -6618,7 +6599,8 @@
   {
     "make" : "Ford",
     "model" : {
-      "name" : "Mustang Mach-E"
+      "name" : "Mustang Mach-E",
+      "symbolName": "mustangmache1stgen"
     },
     "supportStatuses" : [
       {
