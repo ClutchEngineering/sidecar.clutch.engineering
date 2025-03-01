@@ -450,9 +450,6 @@ If a unit includes a version (e.g. **v1.13+**), that means the unit was introdu
 \(inlineHTML { Parameter("seconds", icon: "time") }) Time, measured in seconds.    
 \(inlineHTML { Parameter("minutes", icon: "time") }) Time, measured in minutes.    
 \(inlineHTML { Parameter("hours", icon: "time") }) Time, measured in hours.    
-\(inlineHTML { Parameter("days", icon: "time") }) Time, measured in days.    
-\(inlineHTML { Parameter("months", icon: "time") }) Time, measured in months.    
-\(inlineHTML { Parameter("years", icon: "time") }) Time, measured in years.    
 
 #### Torque units
 
