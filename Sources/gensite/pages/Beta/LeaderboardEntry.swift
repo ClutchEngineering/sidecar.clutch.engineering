@@ -115,6 +115,7 @@ struct LeaderboardUtils {
     for row in driverRows.dropFirst() {
       let columns = row.components(separatedBy: ",")
       if columns.count == 3,
+         !columns[0].hasSuffix("/"),
          let driverCount = Int(columns[2]) {
         let normalizedSeries = modelNormalizations[columns[0]] ?? columns[0]
         let vehicleInfo = findVehicleInfo(series: normalizedSeries, in: makes)
@@ -133,6 +134,7 @@ struct LeaderboardUtils {
       for row in yesterdayRows.dropFirst() {
         let columns = row.components(separatedBy: ",")
         if columns.count == 3,
+           !columns[0].hasSuffix("/"),
            let count = Float(columns[2]) {
           let normalizedSeries = modelNormalizations[columns[0]] ?? columns[0]
           let vehicleInfo = findVehicleInfo(series: normalizedSeries, in: makes)
@@ -155,6 +157,7 @@ struct LeaderboardUtils {
     for row in rows.dropFirst() {
       let columns = row.components(separatedBy: ",")
       if columns.count == 3,
+         !columns[0].hasSuffix("/"),
          let count = Float(columns[2]) {
         let normalizedSeries = modelNormalizations[columns[0]] ?? columns[0]
         let vehicleInfo = findVehicleInfo(series: normalizedSeries, in: makes)

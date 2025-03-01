@@ -73,7 +73,15 @@ extension Array where Element == VehicleSupportEntry {
   package func toGroupedDictionary() -> [Make: [Model: [VehicleSupportStatus]]] {
     Dictionary(grouping: self) { standardizeMake($0.make) }
       .mapValues { (entries: [VehicleSupportEntry]) -> [Model: [VehicleSupportStatus]] in
-        Dictionary(uniqueKeysWithValues: entries.map { ($0.model, $0.supportStatuses) })
+        Dictionary(uniqueKeysWithValues: entries.compactMap {
+          guard !$0.model.name.isEmpty,
+                $0.model.name != "Unknown",
+                $0.model.name != "/" else {
+            return nil
+          }
+          return ($0.model, $0.supportStatuses)
+        })
       }
+      .filter { !$0.key.isEmpty && $0.key != "Unknown" && $0.key != "/" }
   }
 }
