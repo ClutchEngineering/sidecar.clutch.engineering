@@ -37,8 +37,12 @@ struct LeaderboardUtils {
   }
 
   static func findVehicleInfo(series: String, in makes: [Make: [Model: [VehicleSupportStatus]]]) -> (symbolName: String?, vehicleName: String) {
-    let components = series.components(separatedBy: "/")
-    guard components.count >= 2 else { return (nil, series) }
+    let components = series
+      .replacingOccurrences(of: "BMW ", with: "BMW/")
+      .components(separatedBy: "/")
+    guard components.count >= 2 else {
+      return (nil, series)
+    }
 
     var seriesMake: String
     let seriesModel: String
@@ -61,13 +65,15 @@ struct LeaderboardUtils {
         for (model, _) in models {
           let normalizedModel = model.name.lowercased()
           if normalizedModel == seriesModel {
-            return (model.symbolName, "\(localizedNameForStandardizedMake(normalizedMake)) \(model.name)")
+            let vehicleName = "\(localizedNameForStandardizedMake(normalizedMake)) \(model.name)"
+            return (model.symbolName, vehicleName)
           }
         }
       }
     }
     let make = components[0]
-    return (nil, "\(localizedNameForStandardizedMake(standardizeMake(make))) \(String(components.dropFirst().joined(separator: "/")))")
+    let vehicleName = "\(localizedNameForStandardizedMake(standardizeMake(make))) \(String(components.dropFirst().joined(separator: "/")))"
+    return (nil, vehicleName)
   }
 
   static func getCSVModificationDate(resourceName: String) -> String {
