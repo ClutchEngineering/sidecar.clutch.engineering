@@ -402,6 +402,10 @@ If a unit includes a version (e.g. **v1.13+**), that means the unit was introdu
 \(inlineHTML { Parameter("gramsPerSecond", icon: "airflow") }) Mass flow rate in grams per second.    
 \(inlineHTML { Parameter("kilogramsPerHour", icon: "airflow") }) Mass flow rate in kilograms per hour.
 
+#### Mass per stroke units
+
+\(inlineHTML { Parameter("milligramsPerStroke", icon: "engine") }) Mass per engine stroke.
+
 #### Normal units
 
 \(inlineHTML { Parameter("percent", icon: "percent") }) A percentage, typically between 0-100%.    
