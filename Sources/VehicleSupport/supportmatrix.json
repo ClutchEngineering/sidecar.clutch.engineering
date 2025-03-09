@@ -17219,7 +17219,8 @@
   {
     "make" : "Toyota",
     "model" : {
-      "name" : "Corolla Hybrid"
+      "name" : "Corolla Hybrid",
+      "symbolName": "corollahybrid2ndgen"
     },
     "supportStatuses" : [
       {
