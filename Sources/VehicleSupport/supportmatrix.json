@@ -7247,7 +7247,8 @@
   {
     "make" : "Honda",
     "model" : {
-      "name" : "Accord"
+      "name" : "Accord",
+      "symbolName": "accord"
     },
     "supportStatuses" : [
       {
