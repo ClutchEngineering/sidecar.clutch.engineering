@@ -1,8 +1,8 @@
 series,custom name,total count
-Honda/Civic,# of stigs,80
-/,# of stigs,76
-Porsche/Taycan,# of stigs,69
-Toyota/4Runner,# of stigs,61
+Honda/Civic,# of stigs,81
+/,# of stigs,77
+Porsche/Taycan,# of stigs,70
+Toyota/4Runner,# of stigs,62
 Ford/F-150,# of stigs,58
 Toyota/Camry,# of stigs,51
 Honda/Accord,# of stigs,50
@@ -16,25 +16,25 @@ Hyundai/IONIQ 5,# of stigs,31
 Hyundai/Elantra,# of stigs,30
 Kia/EV9,# of stigs,30
 Tesla/Model 3,# of stigs,30
+Volkswagen/Polo,# of stigs,30
 Honda/CR-V,# of stigs,29
-Volkswagen/Polo,# of stigs,29
 Porsche/Cayenne,# of stigs,28
-BMW/3 Series,# of stigs,25
+BMW/3 Series,# of stigs,26
 Polestar/2,# of stigs,25
 Ford/Mustang,# of stigs,23
 Ford/Escape,# of stigs,21
-Ford/Mustang Mach-E,# of stigs,20
+Ford/Mustang Mach-E,# of stigs,21
 Subaru/Crosstrek,# of stigs,20
 Mazda/CX-5,# of stigs,19
 Ram/1500,# of stigs,18
+Volkswagen/Jetta,# of stigs,18
 Volkswagen/Tiguan,# of stigs,18
 Chevrolet/Silverado 1500,# of stigs,17
 Hyundai/Sonata,# of stigs,17
-Volkswagen/Jetta,# of stigs,17
+Ford/F-150 Lightning,# of stigs,16
 Kia/Forte,# of stigs,16
 Porsche/Macan,# of stigs,16
 Volkswagen/ID.4,# of stigs,16
-Ford/F-150 Lightning,# of stigs,15
 Hyundai/Tucson,# of stigs,15
 Seat/Leon,# of stigs,14
 BMW/,# of stigs,13
@@ -62,12 +62,14 @@ Toyota/Tundra,# of stigs,11
 BMW/X3,# of stigs,10
 BMW/X5,# of stigs,10
 Chevrolet/Malibu,# of stigs,10
+Ford/Edge,# of stigs,10
 Ford/Fusion,# of stigs,10
 Jeep/Compass,# of stigs,10
 Nissan/LEAF,# of stigs,10
 Peugeot/208,# of stigs,10
 Audi/A3,# of stigs,9
-Ford/Edge,# of stigs,9
+GMC/Sierra 1500,# of stigs,9
+Hyundai/Kona Electric,# of stigs,9
 MINI/Cooper,# of stigs,9
 Toyota/Highlander,# of stigs,9
 Volkswagen/GTI,# of stigs,9
@@ -77,12 +79,10 @@ Audi/,# of stigs,8
 BMW/1 Series,# of stigs,8
 BMW/2 Series,# of stigs,8
 Ford/Explorer,# of stigs,8
-GMC/Sierra 1500,# of stigs,8
 Honda/HR-V,# of stigs,8
 Honda/Pilot,# of stigs,8
 Hyundai/IONIQ 6,# of stigs,8
 Hyundai/Kona,# of stigs,8
-Hyundai/Kona Electric,# of stigs,8
 Hyundai/i20,# of stigs,8
 Kia/Niro,# of stigs,8
 Mazda/CX-30,# of stigs,8
@@ -120,6 +120,7 @@ Audi/Q7,# of stigs,5
 BMW/4 Series,# of stigs,5
 BMW/i3,# of stigs,5
 BMW/i4,# of stigs,5
+Chevrolet/Colorado,# of stigs,5
 Chevrolet/Cruze,# of stigs,5
 Chrysler/Pacifica,# of stigs,5
 Citroën/C3,# of stigs,5
@@ -142,7 +143,6 @@ Audi/SQ5,# of stigs,4
 BMW/3 Series eDrive,# of stigs,4
 BMW/330e,# of stigs,4
 BMW/X1,# of stigs,4
-Chevrolet/Colorado,# of stigs,4
 Chevrolet/Silverado,# of stigs,4
 Chevrolet/Tahoe,# of stigs,4
 Chevrolet/Trailblazer,# of stigs,4
@@ -220,6 +220,7 @@ Peugeot/3008,# of stigs,3
 Porsche/911,# of stigs,3
 Porsche/CAYMAN,# of stigs,3
 Subaru/BRZ,# of stigs,3
+Subaru/Solterra,# of stigs,3
 Toyota/C-HR,# of stigs,3
 Toyota/Camry Hybrid,# of stigs,3
 Toyota/GR Supra,# of stigs,3
@@ -257,6 +258,7 @@ Ford/EcoSport,# of stigs,2
 Ford/Focus ST,# of stigs,2
 GMC/Sierra 1500 Limited,# of stigs,2
 GMC/Terrain,# of stigs,2
+GMC/Yukon XL,# of stigs,2
 Genesis/GV70,# of stigs,2
 Genesis/GV80,# of stigs,2
 Haval/Jolion,# of stigs,2
@@ -269,6 +271,7 @@ Honda/ZR-V,# of stigs,2
 Hyundai/Accent,# of stigs,2
 Hyundai/Bayon,# of stigs,2
 Hyundai/Santa Cruz,# of stigs,2
+Jeep/Avenger,# of stigs,2
 Kia/Carnival,# of stigs,2
 Kia/Rio,# of stigs,2
 Kia/Sportage 3,# of stigs,2
@@ -307,7 +310,6 @@ Renault/Clio,# of stigs,2
 Renault/Zoe,# of stigs,2
 Saab/9-5,# of stigs,2
 Subaru/Legacy,# of stigs,2
-Subaru/Solterra,# of stigs,2
 Suzuki/Jimny,# of stigs,2
 Toyota/Aqua,# of stigs,2
 Toyota/Auris,# of stigs,2
@@ -442,7 +444,6 @@ Ford/Mach E,# of stigs,1
 Ford/S-Max,# of stigs,1
 GMC/Sierra,# of stigs,1
 GMC/Sierra 2500HD,# of stigs,1
-GMC/Yukon XL,# of stigs,1
 Genesis/Electrified GV70,# of stigs,1
 Great Wall/Ute,# of stigs,1
 HARLEY-DAVIDSON/Electra Glide Ultra Classic,# of stigs,1
@@ -466,7 +467,6 @@ Hyundai/Palisade,# of stigs,1
 Hyundai/Santa Fe Hybrid,# of stigs,1
 Hyundai/i30 Sedan,# of stigs,1
 Jaguar/F-TYPE,# of stigs,1
-Jeep/Avenger,# of stigs,1
 Jeep/Commander,# of stigs,1
 Jeep/Grand Cherokee L,# of stigs,1
 Jeep/Liberty,# of stigs,1
