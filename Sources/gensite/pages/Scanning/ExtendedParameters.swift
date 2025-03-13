@@ -376,6 +376,13 @@ If a unit includes a version (e.g. **v1.13+**), that means the unit was introdu
 \(inlineHTML { Parameter("amps", icon: "current") }) Current in amperes.    
 \(inlineHTML { Parameter("milliamps", icon: "current") }) Current in milliamps.
 
+#### Electric charge units
+
+\(inlineHTML { Parameter("coulombs", icon: "current") }) Electric charge in coulombs.    
+\(inlineHTML { Parameter("kiloampereHours", icon: "current") }) Electric charge in kiloampere-hours.    
+\(inlineHTML { Parameter("ampereHours", icon: "current") }) Electric charge in ampere-hours.    
+\(inlineHTML { Parameter("milliampereHours", icon: "current") }) Electric charge in milliampere-hours.
+
 #### Electric potential difference units
 
 \(inlineHTML { Parameter("kilovolts", icon: "volts") }) Voltage measured in kilovolts.    
