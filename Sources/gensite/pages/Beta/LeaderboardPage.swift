@@ -178,7 +178,7 @@ extension LeaderboardPage {
 
   private func exportStatsForDiscord() {
     // Build the message content
-    var message = "🏁 **Daily Leaderboard Update**\n\n"
+    var message = "🏁 **Daily Leaderboard Update**\n\n• Main leaderboard: https://sidecar.clutch.engineering/leaderboard/\n• Last 24 hours: https://sidecar.clutch.engineering/leaderboard/last24hours/\n• By make: https://sidecar.clutch.engineering/leaderboard/makes/\n\n"
 
     // Overall stats section
     let totalMiles = leaderboardData.reduce(0) { $0 + $1.count }
