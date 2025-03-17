@@ -19579,7 +19579,8 @@
   {
     "make" : "Volkswagen",
     "model" : {
-      "name" : "Polo"
+      "name" : "Polo",
+      "symbolName": "polomk5"
     },
     "supportStatuses" : [
       {
