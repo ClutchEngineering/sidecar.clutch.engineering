@@ -403,6 +403,24 @@ If a unit includes a version (e.g. **v1.13+**), that means the unit was introdu
 \(inlineHTML { Parameter("kiljoules", icon: "volts") }) Kilojoules.    
 \(inlineHTML { Parameter("joules", icon: "volts") }) Joules.
 
+#### Energy units
+
+\(inlineHTML { Parameter("kilowattHours", icon: "volts") }) Kilowatt-hours.    
+\(inlineHTML { Parameter("kiljoules", icon: "volts") }) Kilojoules.    
+\(inlineHTML { Parameter("joules", icon: "volts") }) Joules.
+
+#### Frequency units
+
+\(inlineHTML { Parameter("terahertz", icon: "frequency") }) Frequency measured in terahertz.     
+\(inlineHTML { Parameter("gigahertz", icon: "frequency") }) Frequency measured in gigahertz.     
+\(inlineHTML { Parameter("megahertz", icon: "frequency") }) Frequency measured in megahertz.     
+\(inlineHTML { Parameter("kilohertz", icon: "frequency") }) Frequency measured in kilohertz.     
+\(inlineHTML { Parameter("hertz", icon: "frequency") }) Frequency measured in hertz.     
+\(inlineHTML { Parameter("millihertz", icon: "frequency") }) Frequency measured in millihertz.     
+\(inlineHTML { Parameter("microhertz", icon: "frequency") }) Frequency measured in microhertz.     
+\(inlineHTML { Parameter("nanohertz", icon: "frequency") }) Frequency measured in nanohertz.     
+\(inlineHTML { Parameter("framesPerSecond", icon: "frequency") }) Frequency measured in frames per second.
+
 #### Length units
 
 \(inlineHTML { Parameter("centimeters", icon: "length") }) Distance in centimeters.    
