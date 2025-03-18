@@ -383,6 +383,14 @@ If a unit includes a version (e.g. **v1.13+**), that means the unit was introdu
 \(inlineHTML { Parameter("ampereHours", icon: "current") }) Electric charge in ampere-hours.    
 \(inlineHTML { Parameter("milliampereHours", icon: "current") }) Electric charge in milliampere-hours.
 
+#### Electric resistance units
+
+\(inlineHTML { Parameter("megaohms", icon: "current") }) Electric resistance in megaohms.    
+\(inlineHTML { Parameter("kiloohms", icon: "current") }) Electric resistance in kiloohms.    
+\(inlineHTML { Parameter("ohms", icon: "current") }) Electric resistance in ohms.    
+\(inlineHTML { Parameter("milliohms", icon: "current") }) Electric resistance in milliohms.    
+\(inlineHTML { Parameter("microohms", icon: "current") }) Electric resistance in microohms.
+
 #### Electric potential difference units
 
 \(inlineHTML { Parameter("kilovolts", icon: "volts") }) Voltage measured in kilovolts.    
