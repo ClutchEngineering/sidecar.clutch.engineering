@@ -10172,7 +10172,7 @@
   {
     "make" : "Kia",
     "model" : {
-      "name" : "EV 9",
+      "name" : "EV9",
       "symbolName" : "ev9"
     },
     "supportStatuses" : [
@@ -10257,26 +10257,6 @@
           2023
         ]
       },
-      {
-        "odometer" : "obd",
-        "speed" : "obd",
-        "stateOfCharge" : "obd",
-        "stateOfHealth" : "obd",
-        "testingStatus" : "partiallyOnboarded",
-        "tirePressure" : "obd",
-        "years" : [
-          2024,
-          2024
-        ]
-      }
-    ]
-  },
-  {
-    "make" : "Kia",
-    "model" : {
-      "name" : "EV9"
-    },
-    "supportStatuses" : [
       {
         "odometer" : "obd",
         "speed" : "obd",
