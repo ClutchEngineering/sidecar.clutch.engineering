@@ -1,7 +1,7 @@
 series,custom name,total count
-Honda/Civic,# of stigs,85
-/,# of stigs,79
-Porsche/Taycan,# of stigs,74
+Honda/Civic,# of stigs,88
+/,# of stigs,80
+Porsche/Taycan,# of stigs,75
 Toyota/4Runner,# of stigs,63
 Ford/F-150,# of stigs,59
 Honda/Accord,# of stigs,55
@@ -11,8 +11,8 @@ Toyota/Corolla,# of stigs,43
 Mazda/3,# of stigs,40
 Toyota/RAV4,# of stigs,40
 Audi/A4,# of stigs,32
+Hyundai/Elantra,# of stigs,32
 Toyota/Tacoma,# of stigs,32
-Hyundai/Elantra,# of stigs,31
 Hyundai/IONIQ 5,# of stigs,31
 Tesla/Model 3,# of stigs,31
 Volkswagen/Polo,# of stigs,31
@@ -68,6 +68,7 @@ Ford/Edge,# of stigs,10
 Ford/Fusion,# of stigs,10
 Jeep/Compass,# of stigs,10
 Nissan/LEAF,# of stigs,10
+Volkswagen/Passat,# of stigs,10
 Acura/Integra,# of stigs,9
 BMW/1 Series,# of stigs,9
 GMC/Sierra 1500,# of stigs,9
@@ -77,11 +78,11 @@ MINI/Cooper,# of stigs,9
 Toyota/Corolla Hybrid,# of stigs,9
 Toyota/Highlander,# of stigs,9
 Volkswagen/GTI,# of stigs,9
-Volkswagen/Passat,# of stigs,9
 Acura/TLX,# of stigs,8
 Audi/,# of stigs,8
 Audi/A6,# of stigs,8
 BMW/2 Series,# of stigs,8
+Chevrolet/Colorado,# of stigs,8
 Ford/Explorer,# of stigs,8
 Honda/HR-V,# of stigs,8
 Honda/Pilot,# of stigs,8
@@ -96,10 +97,10 @@ Subaru/Impreza,# of stigs,8
 Toyota/Prius,# of stigs,8
 Toyota/Yaris,# of stigs,8
 BYD/Atto 3,# of stigs,7
-Chevrolet/Colorado,# of stigs,7
 Ford/Fusion Hybrid,# of stigs,7
 GMC/Canyon,# of stigs,7
 Hyundai/i30,# of stigs,7
+Jeep/Wrangler 4xe,# of stigs,7
 Kia/Seltos,# of stigs,7
 Kia/Sorento,# of stigs,7
 Nissan/Qashqai,# of stigs,7
@@ -113,7 +114,6 @@ Chevrolet/Equinox,# of stigs,6
 Ford/Bronco,# of stigs,6
 Ford/Maverick,# of stigs,6
 Hyundai/Tucson Hybrid,# of stigs,6
-Jeep/Wrangler 4xe,# of stigs,6
 Ram/2500,# of stigs,6
 Seat/Ibiza,# of stigs,6
 Toyota/Prius Prime,# of stigs,6
@@ -174,6 +174,7 @@ Toyota/Grand Highlander,# of stigs,4
 Toyota/RAV4 Prime,# of stigs,4
 Toyota/Sienna,# of stigs,4
 Vauxhall/Opel/Astra,# of stigs,4
+Volvo/S60,# of stigs,4
 Volvo/XC90,# of stigs,4
 Acura/MDX,# of stigs,3
 Alfa Romeo/Giulia,# of stigs,3
@@ -216,6 +217,7 @@ Kia/Niro EV,# of stigs,3
 Lexus/ES 350,# of stigs,3
 Lexus/GX,# of stigs,3
 Lexus/GX 460,# of stigs,3
+Lexus/IS 250,# of stigs,3
 MG/ZS,# of stigs,3
 MG/ZS EV,# of stigs,3
 Mazda/6,# of stigs,3
@@ -243,7 +245,6 @@ Toyota/bZ4X,# of stigs,3
 Volkswagen/T-Cross,# of stigs,3
 Volkswagen/Taos,# of stigs,3
 Volkswagen/e-Golf,# of stigs,3
-Volvo/S60,# of stigs,3
 Volvo/V50,# of stigs,3
 Volvo/XC60,# of stigs,3
 Škoda/Enyaq,# of stigs,3
@@ -286,7 +287,6 @@ Kia/Carnival,# of stigs,2
 Kia/Rio,# of stigs,2
 Kia/Sportage 3,# of stigs,2
 Land Rover/Range Rover Evoque,# of stigs,2
-Lexus/IS 250,# of stigs,2
 Lexus/IS 300,# of stigs,2
 Lexus/IS 350,# of stigs,2
 Lexus/UX,# of stigs,2
@@ -552,6 +552,7 @@ Mitsubishi/Outlander PHEV,# of stigs,1
 Mitsubishi/Outlander Sport,# of stigs,1
 Nissan/300ZX,# of stigs,1
 Nissan/All New Livina,# of stigs,1
+Nissan/Juke,# of stigs,1
 Nissan/Navara,# of stigs,1
 Nissan/Pathfinder,# of stigs,1
 Nissan/Versa,# of stigs,1
@@ -577,6 +578,7 @@ Renault/Captur,# of stigs,1
 Renault/Duster,# of stigs,1
 Renault/Koleos,# of stigs,1
 Renault/Laguna III GT,# of stigs,1
+Renault/New Captur,# of stigs,1
 Renault/Sandero,# of stigs,1
 Renault/Scenic E-Tech,# of stigs,1
 Renault/Trafic,# of stigs,1
