@@ -22,8 +22,8 @@ BMW/3 Series,# of stigs,29
 Porsche/Cayenne,# of stigs,29
 Polestar/2,# of stigs,27
 Ford/Mustang,# of stigs,24
+Ford/Escape,# of stigs,23
 Ford/Mustang Mach-E,# of stigs,23
-Ford/Escape,# of stigs,22
 Subaru/Crosstrek,# of stigs,20
 Mazda/CX-5,# of stigs,19
 Volkswagen/Tiguan,# of stigs,19
@@ -33,8 +33,8 @@ Volkswagen/Jetta,# of stigs,18
 Chevrolet/Silverado 1500,# of stigs,17
 Hyundai/Sonata,# of stigs,17
 Kia/Forte,# of stigs,17
+Porsche/Macan,# of stigs,17
 Ford/F-150 Lightning,# of stigs,16
-Porsche/Macan,# of stigs,16
 Chevrolet/Bolt EV,# of stigs,15
 Hyundai/Tucson,# of stigs,15
 MG/MG4,# of stigs,15
@@ -46,6 +46,7 @@ Seat/Leon,# of stigs,14
 Vauxhall/Opel/Corsa,# of stigs,14
 BMW/5 Series,# of stigs,13
 Ford/Fiesta,# of stigs,13
+Hyundai/Santa Fe,# of stigs,13
 Jeep/Grand Cherokee,# of stigs,13
 Nissan/Sentra,# of stigs,13
 Tesla/Model Y,# of stigs,13
@@ -54,17 +55,16 @@ BMW/X5,# of stigs,12
 Dodge/Charger,# of stigs,12
 Ford/Focus,# of stigs,12
 Ford/Ranger,# of stigs,12
-Hyundai/Santa Fe,# of stigs,12
 Nissan/Rogue,# of stigs,12
 Subaru/Outback,# of stigs,12
 Toyota/Tundra,# of stigs,12
+BMW/X3,# of stigs,11
 Chevrolet/Malibu,# of stigs,11
+Ford/Edge,# of stigs,11
 Kia/K5,# of stigs,11
 Peugeot/208,# of stigs,11
 Subaru/Forester,# of stigs,11
 Audi/A3,# of stigs,10
-BMW/X3,# of stigs,10
-Ford/Edge,# of stigs,10
 Ford/Fusion,# of stigs,10
 Jeep/Compass,# of stigs,10
 Nissan/LEAF,# of stigs,10
@@ -423,6 +423,7 @@ Chevrolet/Tracker,# of stigs,1
 Chrysler/200,# of stigs,1
 Chrysler/Pacifica Hybrid,# of stigs,1
 Citroën/E-C4,# of stigs,1
+DR/5.0 S3,# of stigs,1
 Dacia/Duster,# of stigs,1
 Dacia/Duster II,# of stigs,1
 Dacia/Lodgy,# of stigs,1
@@ -621,6 +622,7 @@ Toyota/iQ,# of stigs,1
 VW/ID4,# of stigs,1
 VW/Passat,# of stigs,1
 Vauxhall/Opel/Crossland,# of stigs,1
+Volkswagen/Atlas,# of stigs,1
 Volkswagen/Eos,# of stigs,1
 Volkswagen/Fox,# of stigs,1
 Volkswagen/GLI,# of stigs,1
