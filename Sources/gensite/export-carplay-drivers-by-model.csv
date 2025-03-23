@@ -1,7 +1,7 @@
 series,custom name,total count
 Honda/Civic,# of stigs,88
 /,# of stigs,80
-Porsche/Taycan,# of stigs,75
+Porsche/Taycan,# of stigs,76
 Toyota/4Runner,# of stigs,63
 Ford/F-150,# of stigs,59
 Honda/Accord,# of stigs,55
@@ -12,8 +12,8 @@ Mazda/3,# of stigs,40
 Toyota/RAV4,# of stigs,40
 Audi/A4,# of stigs,32
 Hyundai/Elantra,# of stigs,32
+Hyundai/IONIQ 5,# of stigs,32
 Toyota/Tacoma,# of stigs,32
-Hyundai/IONIQ 5,# of stigs,31
 Tesla/Model 3,# of stigs,31
 Volkswagen/Polo,# of stigs,31
 Honda/CR-V,# of stigs,30
@@ -38,11 +38,11 @@ Ford/F-150 Lightning,# of stigs,16
 Chevrolet/Bolt EV,# of stigs,15
 Hyundai/Tucson,# of stigs,15
 MG/MG4,# of stigs,15
+Seat/Leon,# of stigs,15
 BMW/,# of stigs,14
 Chevrolet/Bolt EUV,# of stigs,14
 Jeep/Wrangler,# of stigs,14
 Kia/EV6,# of stigs,14
-Seat/Leon,# of stigs,14
 Vauxhall/Opel/Corsa,# of stigs,14
 BMW/5 Series,# of stigs,13
 Ford/Fiesta,# of stigs,13
@@ -72,6 +72,7 @@ Volkswagen/Passat,# of stigs,10
 Acura/Integra,# of stigs,9
 BMW/1 Series,# of stigs,9
 GMC/Sierra 1500,# of stigs,9
+Hyundai/IONIQ 6,# of stigs,9
 Hyundai/Kona,# of stigs,9
 Hyundai/Kona Electric,# of stigs,9
 MINI/Cooper,# of stigs,9
@@ -86,7 +87,6 @@ Chevrolet/Colorado,# of stigs,8
 Ford/Explorer,# of stigs,8
 Honda/HR-V,# of stigs,8
 Honda/Pilot,# of stigs,8
-Hyundai/IONIQ 6,# of stigs,8
 Hyundai/i20,# of stigs,8
 Kia/Niro,# of stigs,8
 Kia/Optima,# of stigs,8
@@ -98,6 +98,7 @@ Toyota/Prius,# of stigs,8
 Toyota/Yaris,# of stigs,8
 BYD/Atto 3,# of stigs,7
 Ford/Fusion Hybrid,# of stigs,7
+Ford/Maverick,# of stigs,7
 GMC/Canyon,# of stigs,7
 Hyundai/i30,# of stigs,7
 Jeep/Wrangler 4xe,# of stigs,7
@@ -110,9 +111,9 @@ Volkswagen/T-Roc,# of stigs,7
 Škoda/Octavia,# of stigs,7
 Audi/Q5,# of stigs,6
 BMW/i3,# of stigs,6
+Chevrolet/Cruze,# of stigs,6
 Chevrolet/Equinox,# of stigs,6
 Ford/Bronco,# of stigs,6
-Ford/Maverick,# of stigs,6
 Hyundai/Tucson Hybrid,# of stigs,6
 Ram/2500,# of stigs,6
 Seat/Ibiza,# of stigs,6
@@ -125,7 +126,6 @@ Audi/Q7,# of stigs,5
 BMW/4 Series,# of stigs,5
 BMW/X1,# of stigs,5
 BMW/i4,# of stigs,5
-Chevrolet/Cruze,# of stigs,5
 Chrysler/Pacifica,# of stigs,5
 Citroën/C3,# of stigs,5
 Cupra/Born,# of stigs,5
@@ -337,6 +337,7 @@ Volvo/V60,# of stigs,2
 Volvo/XC40 Recharge,# of stigs,2
 Škoda/Fabia,# of stigs,2
 Škoda/Superb,# of stigs,2
+/יונדאי i25,# of stigs,1
 AUDIdi/Q3,# of stigs,1
 Abarth/500,# of stigs,1
 Acura/CL,# of stigs,1
@@ -593,6 +594,7 @@ Skoda/Octavia Break iV,# of stigs,1
 Skoda/Slavia,# of stigs,1
 Skoda/Superb 3V,# of stigs,1
 Subaru/Ascent,# of stigs,1
+Subaru/Levorg,# of stigs,1
 Subaru/Tribeca,# of stigs,1
 Subaru/XV Crosstrek,# of stigs,1
 Suzuki/Alto,# of stigs,1
