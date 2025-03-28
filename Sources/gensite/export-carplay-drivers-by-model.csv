@@ -5,8 +5,8 @@ Porsche/Taycan,# of stigs,77
 Toyota/4Runner,# of stigs,64
 Ford/F-150,# of stigs,59
 Honda/Accord,# of stigs,57
-Toyota/Camry,# of stigs,55
-Volkswagen/Golf,# of stigs,48
+Toyota/Camry,# of stigs,56
+Volkswagen/Golf,# of stigs,50
 Toyota/Corolla,# of stigs,46
 Toyota/RAV4,# of stigs,41
 Mazda/3,# of stigs,40
@@ -43,27 +43,28 @@ MG/MG4,# of stigs,15
 Seat/Leon,# of stigs,15
 Chevrolet/Bolt EUV,# of stigs,14
 Hyundai/Santa Fe,# of stigs,14
+Jeep/Grand Cherokee,# of stigs,14
 Kia/EV6,# of stigs,14
 Vauxhall/Opel/Corsa,# of stigs,14
 BMW/5 Series,# of stigs,13
 BMW/X5,# of stigs,13
 Ford/Fiesta,# of stigs,13
-Jeep/Grand Cherokee,# of stigs,13
 Nissan/Sentra,# of stigs,13
 Subaru/Outback,# of stigs,13
 Tesla/Model Y,# of stigs,13
 Toyota/RAV4 Hybrid,# of stigs,13
+Toyota/Tundra,# of stigs,13
 BMW/X3,# of stigs,12
 Dodge/Charger,# of stigs,12
 Ford/Focus,# of stigs,12
 Ford/Ranger,# of stigs,12
 Kia/K5,# of stigs,12
 Nissan/Rogue,# of stigs,12
-Toyota/Tundra,# of stigs,12
 Chevrolet/Malibu,# of stigs,11
 Ford/Edge,# of stigs,11
 Peugeot/208,# of stigs,11
 Subaru/Forester,# of stigs,11
+Volkswagen/Passat,# of stigs,11
 Acura/Integra,# of stigs,10
 Audi/A3,# of stigs,10
 Ford/Fusion,# of stigs,10
@@ -72,7 +73,6 @@ Jeep/Compass,# of stigs,10
 Nissan/LEAF,# of stigs,10
 Toyota/Corolla Hybrid,# of stigs,10
 Toyota/Highlander,# of stigs,10
-Volkswagen/Passat,# of stigs,10
 Acura/TLX,# of stigs,9
 BMW/1 Series,# of stigs,9
 BMW/2 Series,# of stigs,9
@@ -119,6 +119,7 @@ Hyundai/Tucson Hybrid,# of stigs,6
 Ram/2500,# of stigs,6
 Renault/Megane,# of stigs,6
 Seat/Ibiza,# of stigs,6
+Suzuki/Swift,# of stigs,6
 Toyota/Prius Prime,# of stigs,6
 Unknown/Unknown,# of stigs,6
 Acura/RDX,# of stigs,5
@@ -133,6 +134,7 @@ Citroën/C3,# of stigs,5
 Cupra/Born,# of stigs,5
 Ford/F-250,# of stigs,5
 Genesis/G70,# of stigs,5
+Honda/Accord Hybrid,# of stigs,5
 Jeep/Cherokee,# of stigs,5
 Jeep/Patriot,# of stigs,5
 Kia/Soul,# of stigs,5
@@ -143,7 +145,6 @@ Mazda/CX-50,# of stigs,5
 Mazda/CX-9,# of stigs,5
 Mazda/Mazda3,# of stigs,5
 Nissan/Kicks,# of stigs,5
-Suzuki/Swift,# of stigs,5
 Volkswagen/Jetta GLI,# of stigs,5
 Audi/Q3,# of stigs,4
 Audi/S4,# of stigs,4
@@ -157,11 +158,11 @@ Chevrolet/Trailblazer,# of stigs,4
 Chrysler/300,# of stigs,4
 Cupra/Formentor,# of stigs,4
 Dodge/Challenger,# of stigs,4
+Ford/Bronco Sport,# of stigs,4
 Ford/Expedition,# of stigs,4
 Ford/F-350,# of stigs,4
 Ford/Kuga,# of stigs,4
 Genesis/G80,# of stigs,4
-Honda/Accord Hybrid,# of stigs,4
 Honda/Ridgeline,# of stigs,4
 Hyundai/Veloster,# of stigs,4
 Hyundai/Venue,# of stigs,4
@@ -200,12 +201,12 @@ Chevrolet/Trax,# of stigs,3
 Citroën/C4,# of stigs,3
 Cupra/Leon,# of stigs,3
 Ford/,# of stigs,3
-Ford/Bronco Sport,# of stigs,3
 Ford/Focus ST,# of stigs,3
 Ford/Fusion Energi,# of stigs,3
 Ford/Puma,# of stigs,3
 Ford/Taurus,# of stigs,3
 Ford/Transit Connect,# of stigs,3
+GMC/Sierra 1500 Limited,# of stigs,3
 GMC/Terrain,# of stigs,3
 GMC/Yukon,# of stigs,3
 Honda/,# of stigs,3
@@ -275,7 +276,6 @@ FIAT/500e,# of stigs,2
 FIAT/Punto,# of stigs,2
 Ford/C-Max,# of stigs,2
 Ford/EcoSport,# of stigs,2
-GMC/Sierra 1500 Limited,# of stigs,2
 GMC/Yukon XL,# of stigs,2
 Genesis/GV70,# of stigs,2
 Genesis/GV80,# of stigs,2
@@ -327,6 +327,8 @@ Toyota/Auris,# of stigs,2
 Toyota/Corolla Cross,# of stigs,2
 Toyota/Corolla Cross Hybrid,# of stigs,2
 Toyota/Crown,# of stigs,2
+Toyota/FJ Cruiser,# of stigs,2
+Toyota/GR Corolla,# of stigs,2
 Toyota/Sequoia,# of stigs,2
 Vauxhall/Opel/Mokka,# of stigs,2
 Volkswagen/Amarok,# of stigs,2
@@ -445,6 +447,7 @@ Dodge/Durango,# of stigs,1
 Dodge/Hornet,# of stigs,1
 Eagle/,# of stigs,1
 FIAT/500,# of stigs,1
+FIAT/Fastback,# of stigs,1
 FIAT/Fastback ,# of stigs,1
 FIAT/Panda,# of stigs,1
 FIAT/Pulse,# of stigs,1
@@ -453,6 +456,7 @@ Ford/Capri,# of stigs,1
 Ford/Crown Victoria,# of stigs,1
 Ford/E-Series Van,# of stigs,1
 Ford/Everest,# of stigs,1
+Ford/F-max,# of stigs,1
 Ford/Mach E,# of stigs,1
 Ford/S-Max,# of stigs,1
 GAC/GS3 Emzoom R-Style,# of stigs,1
@@ -610,9 +614,7 @@ Tata/Nexon,# of stigs,1
 Tesla/Model S,# of stigs,1
 Toyota/Avalon,# of stigs,1
 Toyota/Crown Hybrid,# of stigs,1
-Toyota/FJ Cruiser,# of stigs,1
 Toyota/Fortuner 2.4 4x2,# of stigs,1
-Toyota/GR Corolla,# of stigs,1
 Toyota/GR Yaris,# of stigs,1
 Toyota/GR86,# of stigs,1
 Toyota/GT86,# of stigs,1
@@ -631,6 +633,7 @@ Toyota/iQ,# of stigs,1
 VW/ID4,# of stigs,1
 VW/Passat,# of stigs,1
 Vauxhall/Opel/Crossland,# of stigs,1
+Vauxhall/Opel/Insignia,# of stigs,1
 Volkswagen/Atlas,# of stigs,1
 Volkswagen/Eos,# of stigs,1
 Volkswagen/Fox,# of stigs,1
