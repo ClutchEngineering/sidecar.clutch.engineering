@@ -5250,6 +5250,15 @@
   {
     "make" : "Ford",
     "model" : {
+      "name" : "Mondeo",
+      "symbolName" : "mondeo4thgen"
+    },
+    "supportStatuses" : [
+    ]
+  },
+  {
+    "make" : "Ford",
+    "model" : {
       "name" : "Bronco"
     },
     "supportStatuses" : [
