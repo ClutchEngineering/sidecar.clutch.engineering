@@ -1,8 +1,8 @@
 series,custom name,total count
 Honda/Civic,# of stigs,89
-/,# of stigs,81
-Porsche/Taycan,# of stigs,77
-Toyota/4Runner,# of stigs,64
+/,# of stigs,82
+Porsche/Taycan,# of stigs,78
+Toyota/4Runner,# of stigs,65
 Ford/F-150,# of stigs,59
 Honda/Accord,# of stigs,58
 Toyota/Camry,# of stigs,57
@@ -13,8 +13,8 @@ Mazda/3,# of stigs,40
 Hyundai/Elantra,# of stigs,33
 Hyundai/IONIQ 5,# of stigs,33
 Tesla/Model 3,# of stigs,33
+Toyota/Tacoma,# of stigs,33
 Audi/A4,# of stigs,32
-Toyota/Tacoma,# of stigs,32
 Kia/EV9,# of stigs,31
 Volkswagen/Polo,# of stigs,31
 BMW/3 Series,# of stigs,30
@@ -45,12 +45,12 @@ Chevrolet/Bolt EUV,# of stigs,14
 Hyundai/Santa Fe,# of stigs,14
 Jeep/Grand Cherokee,# of stigs,14
 Kia/EV6,# of stigs,14
+Subaru/Outback,# of stigs,14
 Vauxhall/Opel/Corsa,# of stigs,14
 BMW/5 Series,# of stigs,13
 BMW/X5,# of stigs,13
 Ford/Fiesta,# of stigs,13
 Nissan/Sentra,# of stigs,13
-Subaru/Outback,# of stigs,13
 Tesla/Model Y,# of stigs,13
 Toyota/RAV4 Hybrid,# of stigs,13
 Toyota/Tundra,# of stigs,13
@@ -75,6 +75,7 @@ Nissan/LEAF,# of stigs,10
 Toyota/Corolla Hybrid,# of stigs,10
 Toyota/Highlander,# of stigs,10
 Acura/TLX,# of stigs,9
+Audi/Q5,# of stigs,9
 BMW/1 Series,# of stigs,9
 BMW/2 Series,# of stigs,9
 Honda/Pilot,# of stigs,9
@@ -88,7 +89,6 @@ Volkswagen/GTI,# of stigs,9
 Škoda/Octavia,# of stigs,9
 Audi/,# of stigs,8
 Audi/A6,# of stigs,8
-Audi/Q5,# of stigs,8
 Chevrolet/Colorado,# of stigs,8
 Ford/Explorer,# of stigs,8
 Honda/HR-V,# of stigs,8
@@ -116,6 +116,7 @@ Chevrolet/Cruze,# of stigs,6
 Chevrolet/Equinox,# of stigs,6
 Ford/Bronco,# of stigs,6
 Hyundai/Tucson Hybrid,# of stigs,6
+Mazda/Mazda3,# of stigs,6
 Ram/2500,# of stigs,6
 Renault/Megane,# of stigs,6
 Seat/Ibiza,# of stigs,6
@@ -132,6 +133,7 @@ BMW/i4,# of stigs,5
 Chrysler/Pacifica,# of stigs,5
 Citroën/C3,# of stigs,5
 Cupra/Born,# of stigs,5
+Ford/Bronco Sport,# of stigs,5
 Ford/F-250,# of stigs,5
 Genesis/G70,# of stigs,5
 Honda/Accord Hybrid,# of stigs,5
@@ -143,8 +145,8 @@ Kia/Telluride,# of stigs,5
 Mazda/2,# of stigs,5
 Mazda/CX-50,# of stigs,5
 Mazda/CX-9,# of stigs,5
-Mazda/Mazda3,# of stigs,5
 Nissan/Kicks,# of stigs,5
+Vauxhall/Opel/Astra,# of stigs,5
 Volkswagen/Jetta GLI,# of stigs,5
 Volvo/XC90,# of stigs,5
 Audi/Q3,# of stigs,4
@@ -160,7 +162,6 @@ Chevrolet/Trailblazer,# of stigs,4
 Chrysler/300,# of stigs,4
 Cupra/Formentor,# of stigs,4
 Dodge/Challenger,# of stigs,4
-Ford/Bronco Sport,# of stigs,4
 Ford/Expedition,# of stigs,4
 Ford/F-350,# of stigs,4
 Ford/Kuga,# of stigs,4
@@ -179,7 +180,6 @@ Toyota/Corolla Hatchback,# of stigs,4
 Toyota/Grand Highlander,# of stigs,4
 Toyota/RAV4 Prime,# of stigs,4
 Toyota/Sienna,# of stigs,4
-Vauxhall/Opel/Astra,# of stigs,4
 Volvo/S60,# of stigs,4
 Acura/MDX,# of stigs,3
 Alfa Romeo/Giulia,# of stigs,3
@@ -478,6 +478,7 @@ Honda/NC700X,# of stigs,1
 Honda/Oddyssey,# of stigs,1
 Honda/Passport,# of stigs,1
 Honda/Vezel,# of stigs,1
+Hyundai/I30 sedan ,# of stigs,1
 Hyundai/Ioniq,# of stigs,1
 Hyundai/Ioniq Plug-In Hybrid,# of stigs,1
 Hyundai/Kauai,# of stigs,1
