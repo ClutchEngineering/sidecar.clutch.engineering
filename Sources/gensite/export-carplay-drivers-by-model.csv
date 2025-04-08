@@ -1,10 +1,10 @@
 series,custom name,total count
 Honda/Civic,# of stigs,92
+Porsche/Taycan,# of stigs,84
 /,# of stigs,83
-Porsche/Taycan,# of stigs,83
-Toyota/4Runner,# of stigs,68
+Toyota/4Runner,# of stigs,69
 Ford/F-150,# of stigs,61
-Toyota/Camry,# of stigs,60
+Toyota/Camry,# of stigs,61
 Honda/Accord,# of stigs,59
 Volkswagen/Golf,# of stigs,53
 Toyota/Corolla,# of stigs,47
@@ -16,10 +16,10 @@ Tesla/Model 3,# of stigs,35
 Toyota/Tacoma,# of stigs,35
 Audi/A4,# of stigs,33
 Volkswagen/Polo,# of stigs,33
+Porsche/Cayenne,# of stigs,32
 BMW/3 Series,# of stigs,31
 Honda/CR-V,# of stigs,31
 Kia/EV9,# of stigs,31
-Porsche/Cayenne,# of stigs,31
 Polestar/2,# of stigs,30
 Ford/Escape,# of stigs,29
 Ford/Mustang Mach-E,# of stigs,26
@@ -61,12 +61,12 @@ Nissan/Sentra,# of stigs,13
 BMW/X3,# of stigs,12
 Ford/Edge,# of stigs,12
 Kia/K5,# of stigs,12
+Nissan/LEAF,# of stigs,12
 Peugeot/208,# of stigs,12
 Volkswagen/Passat,# of stigs,12
 Chevrolet/Malibu,# of stigs,11
 Ford/Fusion,# of stigs,11
 GMC/Sierra 1500,# of stigs,11
-Nissan/LEAF,# of stigs,11
 Subaru/Forester,# of stigs,11
 Acura/Integra,# of stigs,10
 Audi/A3,# of stigs,10
@@ -74,6 +74,7 @@ Audi/Q5,# of stigs,10
 Hyundai/IONIQ 6,# of stigs,10
 Jeep/Compass,# of stigs,10
 Nissan/Altima,# of stigs,10
+Subaru/Impreza,# of stigs,10
 Toyota/Corolla Hybrid,# of stigs,10
 Toyota/Highlander,# of stigs,10
 Acura/TLX,# of stigs,9
@@ -86,7 +87,6 @@ Kia/Optima,# of stigs,9
 MINI/Cooper,# of stigs,9
 Mazda/CX-30,# of stigs,9
 Mercedes-Benz/C-Class,# of stigs,9
-Subaru/Impreza,# of stigs,9
 Toyota/Yaris,# of stigs,9
 Volkswagen/GTI,# of stigs,9
 Škoda/Octavia,# of stigs,9
@@ -109,6 +109,7 @@ BYD/Atto 3,# of stigs,7
 Chevrolet/Equinox,# of stigs,7
 Ford/Fusion Hybrid,# of stigs,7
 GMC/Canyon,# of stigs,7
+Honda/Accord Hybrid,# of stigs,7
 Hyundai/Tucson Hybrid,# of stigs,7
 Kia/Seltos,# of stigs,7
 Kia/Sportage,# of stigs,7
@@ -116,6 +117,7 @@ Ram/2500,# of stigs,7
 Subaru/WRX,# of stigs,7
 Volkswagen/,# of stigs,7
 Volkswagen/T-Roc,# of stigs,7
+BMW/4 Series,# of stigs,6
 BMW/i3,# of stigs,6
 BMW/i4,# of stigs,6
 Chevrolet/Cruze,# of stigs,6
@@ -123,7 +125,6 @@ Chrysler/Pacifica,# of stigs,6
 Cupra/Born,# of stigs,6
 Ford/Bronco,# of stigs,6
 Ford/Bronco Sport,# of stigs,6
-Honda/Accord Hybrid,# of stigs,6
 Kia/Stinger,# of stigs,6
 Kia/Telluride,# of stigs,6
 Mazda/2,# of stigs,6
@@ -140,7 +141,6 @@ Audi/A1,# of stigs,5
 Audi/A3 e-tron,# of stigs,5
 Audi/Q7,# of stigs,5
 BMW/3 Series eDrive,# of stigs,5
-BMW/4 Series,# of stigs,5
 BMW/X1,# of stigs,5
 Chevrolet/Trailblazer,# of stigs,5
 Citroën/C3,# of stigs,5
@@ -216,6 +216,7 @@ Ford/Transit Connect,# of stigs,3
 GMC/Sierra 1500 Limited,# of stigs,3
 GMC/Yukon,# of stigs,3
 Honda/,# of stigs,3
+Hyundai/Accent,# of stigs,3
 Hyundai/Ioniq Electric,# of stigs,3
 Hyundai/Santa Cruz,# of stigs,3
 Hyundai/i10,# of stigs,3
@@ -234,6 +235,7 @@ MG/ZS EV,# of stigs,3
 Mazda/CX-90,# of stigs,3
 Mazda/MX-5 Miata,# of stigs,3
 Mazda/Mazdaspeed 3,# of stigs,3
+Mercedes-Benz/E-Class,# of stigs,3
 Mitsubishi/Outlander,# of stigs,3
 Nissan/ARIYA,# of stigs,3
 Nissan/Frontier,# of stigs,3
@@ -286,6 +288,7 @@ Dodge/Grand Caravan,# of stigs,2
 Dodge/Ram 1500,# of stigs,2
 FIAT/500X,# of stigs,2
 FIAT/500e,# of stigs,2
+FIAT/Panda,# of stigs,2
 FIAT/Punto,# of stigs,2
 Ford/C-Max,# of stigs,2
 Ford/EcoSport,# of stigs,2
@@ -299,7 +302,6 @@ Honda/Insight,# of stigs,2
 Honda/Odyssey,# of stigs,2
 Honda/Pliot,# of stigs,2
 Honda/ZR-V,# of stigs,2
-Hyundai/Accent,# of stigs,2
 Hyundai/Bayon,# of stigs,2
 Hyundai/Ioniq,# of stigs,2
 Jeep/Avenger,# of stigs,2
@@ -322,7 +324,6 @@ Mercedes-Benz/A 180,# of stigs,2
 Mercedes-Benz/C 200,# of stigs,2
 Mercedes-Benz/CLA 200,# of stigs,2
 Mercedes-Benz/CLA-Class,# of stigs,2
-Mercedes-Benz/E-Class,# of stigs,2
 Mercedes-Benz/GLC-Class,# of stigs,2
 Mitsubishi/ASX,# of stigs,2
 Nissan/350Z,# of stigs,2
@@ -391,6 +392,7 @@ BMW/320d,# of stigs,1
 BMW/325xi,# of stigs,1
 BMW/335d Xdrive,# of stigs,1
 BMW/3er,# of stigs,1
+BMW/4 Series Plug-in Hybrid,# of stigs,1
 BMW/5,# of stigs,1
 BMW/520,# of stigs,1
 BMW/530,# of stigs,1
@@ -447,6 +449,7 @@ Chevrolet/Tracker,# of stigs,1
 Chrysler/200,# of stigs,1
 Chrysler/Pacifica Hybrid,# of stigs,1
 Citroën/E-C4,# of stigs,1
+Cupra/Forementor,# of stigs,1
 DR/5.0 S3,# of stigs,1
 Dacia/Duster,# of stigs,1
 Dacia/Duster II,# of stigs,1
@@ -467,7 +470,6 @@ FIAT/500,# of stigs,1
 FIAT/Bravo,# of stigs,1
 FIAT/Fastback,# of stigs,1
 FIAT/Fastback ,# of stigs,1
-FIAT/Panda,# of stigs,1
 FIAT/Pulse,# of stigs,1
 Ford/C-Max Hybrid,# of stigs,1
 Ford/Capri,# of stigs,1
@@ -477,9 +479,11 @@ Ford/Everest,# of stigs,1
 Ford/F-max,# of stigs,1
 Ford/Mach E,# of stigs,1
 Ford/S-Max,# of stigs,1
+Ford/Transit,# of stigs,1
 GAC/GS3 Emzoom R-Style,# of stigs,1
 GMC/Sierra,# of stigs,1
 GMC/Sierra 2500HD,# of stigs,1
+GWM/Cannon,# of stigs,1
 Genesis/Electrified GV70,# of stigs,1
 Great Wall/Ute,# of stigs,1
 HARLEY-DAVIDSON/Electra Glide Ultra Classic,# of stigs,1
@@ -523,6 +527,7 @@ Kia/Niro 2,# of stigs,1
 Kia/Niro 3,# of stigs,1
 Kia/Niro HEV,# of stigs,1
 Kia/Picanto 1.2,# of stigs,1
+Kia/Pro Ceed,# of stigs,1
 Kia/Rio 4,# of stigs,1
 Kia/Sedona,# of stigs,1
 Kia/Sonet,# of stigs,1
