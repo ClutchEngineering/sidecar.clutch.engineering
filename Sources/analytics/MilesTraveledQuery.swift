@@ -26,11 +26,10 @@ func milesTraveledQuery() -> String {
           }
         ]
       },
-      "compareFilter": null,
       "conversionGoal": null,
       "dataColorTheme": null,
       "dateRange": {
-        "date_from": "2024-12-03",
+        "date_from": "2024-12-03T00:00:00",
         "date_to": null,
         "explicitDate": false
       },
@@ -48,16 +47,13 @@ func milesTraveledQuery() -> String {
         {
           "custom_name": "Miles traveled",
           "event": "carplay",
-          "fixedProperties": null,
           "kind": "EventsNode",
-          "limit": null,
           "math": "hogql",
           "math_group_type_index": null,
           "math_hogql": "(sum(IF(toInt(properties.$app_build) <= 286, properties.metersTraveled, properties.metersTraveledWithCarPlayConnected)) / 1000) / 1.609344",
           "math_property": null,
           "math_property_type": null,
           "name": "carplay",
-          "orderBy": null,
           "properties": [
             {
               "key": "actionContext",
@@ -88,8 +84,7 @@ func milesTraveledQuery() -> String {
               "type": "hogql",
               "value": null
             }
-          ],
-          "response": null
+          ]
         }
       ],
       "trendsFilter": {
@@ -100,6 +95,7 @@ func milesTraveledQuery() -> String {
         "decimalPlaces": 0,
         "display": "ActionsTable",
         "formula": null,
+        "formulaNodes": null,
         "formulas": null,
         "goalLines": null,
         "hiddenLegendIndexes": null,
@@ -111,7 +107,6 @@ func milesTraveledQuery() -> String {
         "showMultipleYAxes": false,
         "showPercentStackView": false,
         "showValuesOnSeries": true,
-        "smoothingIntervals": 1,
         "yAxisScaleType": "linear"
       }
     },
