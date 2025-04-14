@@ -1,5 +1,5 @@
 // Configuration
-const MILES_PER_DAY = 10000; // Miles per day growth rate
+const MILES_PER_DAY = 14000; // Miles per day growth rate
 const MAX_ANIMATION_INTERVAL_MS = 100; // Maximum update interval
 
 // Calculate how many milliseconds it takes to accumulate 1 mile
