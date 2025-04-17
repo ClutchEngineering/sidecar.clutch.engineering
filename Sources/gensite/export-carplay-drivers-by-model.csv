@@ -1,23 +1,23 @@
 series,custom name,total count
 Honda/Civic,# of stigs,94
-Porsche/Taycan,# of stigs,87
-/,# of stigs,83
+Porsche/Taycan,# of stigs,88
+/,# of stigs,84
 Toyota/4Runner,# of stigs,70
 Toyota/Camry,# of stigs,65
 Honda/Accord,# of stigs,63
 Ford/F-150,# of stigs,61
 Volkswagen/Golf,# of stigs,54
-Toyota/Corolla,# of stigs,48
+Toyota/Corolla,# of stigs,50
 Toyota/RAV4,# of stigs,46
 Mazda/3,# of stigs,43
-Hyundai/IONIQ 5,# of stigs,40
+Hyundai/IONIQ 5,# of stigs,41
 Hyundai/Elantra,# of stigs,36
 Toyota/Tacoma,# of stigs,36
 Tesla/Model 3,# of stigs,35
 Volkswagen/Polo,# of stigs,35
 Audi/A4,# of stigs,34
+BMW/3 Series,# of stigs,34
 Porsche/Cayenne,# of stigs,34
-BMW/3 Series,# of stigs,33
 Honda/CR-V,# of stigs,32
 Kia/EV9,# of stigs,31
 Polestar/2,# of stigs,31
@@ -27,13 +27,13 @@ Ford/Mustang,# of stigs,26
 Mazda/CX-5,# of stigs,22
 Volkswagen/Jetta,# of stigs,22
 Hyundai/Sonata,# of stigs,21
+Ram/1500,# of stigs,21
 Subaru/Crosstrek,# of stigs,21
 Chevrolet/Silverado 1500,# of stigs,20
-Ram/1500,# of stigs,20
+Volkswagen/ID.4,# of stigs,20
 Volkswagen/Tiguan,# of stigs,20
 Ford/F-150 Lightning,# of stigs,19
 Kia/Forte,# of stigs,19
-Volkswagen/ID.4,# of stigs,19
 Chevrolet/Bolt EV,# of stigs,18
 Kia/EV6,# of stigs,18
 Porsche/Macan,# of stigs,18
@@ -41,13 +41,13 @@ Subaru/Outback,# of stigs,18
 Vauxhall/Opel/Corsa,# of stigs,18
 Chevrolet/Bolt EUV,# of stigs,17
 Hyundai/Tucson,# of stigs,17
+Seat/Leon,# of stigs,17
 Toyota/RAV4 Hybrid,# of stigs,17
 BMW/,# of stigs,16
 BMW/5 Series,# of stigs,16
 Jeep/Grand Cherokee,# of stigs,16
 Jeep/Wrangler,# of stigs,16
 MG/MG4,# of stigs,16
-Seat/Leon,# of stigs,16
 Ford/Focus,# of stigs,15
 Tesla/Model Y,# of stigs,15
 Ford/Fiesta,# of stigs,14
@@ -129,6 +129,7 @@ Chrysler/Pacifica,# of stigs,6
 Citroën/C3,# of stigs,6
 Cupra/Born,# of stigs,6
 Ford/Bronco Sport,# of stigs,6
+Ford/F-250,# of stigs,6
 Genesis/G70,# of stigs,6
 Kia/Niro EV,# of stigs,6
 Kia/Stinger,# of stigs,6
@@ -149,7 +150,6 @@ BMW/X1,# of stigs,5
 Chevrolet/Trailblazer,# of stigs,5
 Dodge/Challenger,# of stigs,5
 Ford/Expedition,# of stigs,5
-Ford/F-250,# of stigs,5
 Hyundai/Veloster,# of stigs,5
 Jeep/Cherokee,# of stigs,5
 Jeep/Patriot,# of stigs,5
@@ -575,6 +575,7 @@ MINI/One,# of stigs,1
 Ma/Outback,# of stigs,1
 Maruti /Baleno,# of stigs,1
 Mazda/B-Series Pickup,# of stigs,1
+Mazda/CX-70,# of stigs,1
 Mazda/MX-5 Miata RF,# of stigs,1
 Mazda/Mazda 2,# of stigs,1
 Mazda/Mazda2,# of stigs,1
