@@ -7702,7 +7702,8 @@
   {
     "make" : "Honda",
     "model" : {
-      "name" : "Civic"
+      "name" : "Civic",
+      "symbolName": "civic10thgen"
     },
     "supportStatuses" : [
       {
