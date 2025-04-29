@@ -17,6 +17,7 @@ public struct AirtableRecord: Decodable, Sendable {
     public let ID: String
     public var make: String?
     public var model: String?
+    public var obdbID: String?
     public let alternateModels: String?
     public var alternateModelIDs: [String] {
       guard let alternateModels,
@@ -37,6 +38,7 @@ public struct AirtableRecord: Decodable, Sendable {
       case make = "Make (string)"
       case model = "Model"
       case alternateModels = "Alternate models"
+      case obdbID = "OBDb ID"
     }
   }
 }
