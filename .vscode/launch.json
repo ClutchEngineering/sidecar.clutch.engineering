@@ -9,7 +9,8 @@
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/debug/import",
             "preLaunchTask": "swift: Build Debug import",
             "env": {
-                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env"
+                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
+                "CACHE_DIR": "${workspaceFolder:sidecar.clutch.engineering}/.cache",
             }
         },
         {
@@ -21,7 +22,8 @@
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/release/import",
             "preLaunchTask": "swift: Build Release import",
             "env": {
-                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env"
+                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
+                "CACHE_DIR": "${workspaceFolder:sidecar.clutch.engineering}/.cache",
             }
         },
         {
@@ -33,7 +35,8 @@
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/debug/gensite",
             "preLaunchTask": "swift: Build Debug gensite",
             "env": {
-                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env"
+                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
+                "CACHE_DIR": "${workspaceFolder:sidecar.clutch.engineering}/.cache",
             }
         },
         {
@@ -45,7 +48,8 @@
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/release/gensite",
             "preLaunchTask": "swift: Build Release gensite",
             "env": {
-                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env"
+                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
+                "CACHE_DIR": "${workspaceFolder:sidecar.clutch.engineering}/.cache",
             }
         },
         {
@@ -57,7 +61,8 @@
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/debug/export",
             "preLaunchTask": "swift: Build Debug export",
             "env": {
-                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env"
+                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
+                "CACHE_DIR": "${workspaceFolder:sidecar.clutch.engineering}/.cache",
             }
         },
         {
@@ -69,7 +74,8 @@
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/release/export",
             "preLaunchTask": "swift: Build Release export",
             "env": {
-                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env"
+                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
+                "CACHE_DIR": "${workspaceFolder:sidecar.clutch.engineering}/.cache",
             }
         },
         {
@@ -81,7 +87,8 @@
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/debug/analytics",
             "preLaunchTask": "swift: Build Debug analytics",
             "env": {
-                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env"
+                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
+                "CACHE_DIR": "${workspaceFolder:sidecar.clutch.engineering}/.cache",
             }
         },
         {
@@ -93,7 +100,8 @@
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/release/analytics",
             "preLaunchTask": "swift: Build Release analytics",
             "env": {
-                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env"
+                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
+                "CACHE_DIR": "${workspaceFolder:sidecar.clutch.engineering}/.cache",
             }
         },
         {
@@ -105,7 +113,8 @@
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/debug/supportmatrix-cli",
             "preLaunchTask": "swift: Build Debug supportmatrix-cli",
             "env": {
-                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env"
+                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
+                "CACHE_DIR": "${workspaceFolder:sidecar.clutch.engineering}/.cache",
             }
         },
         {
@@ -117,7 +126,8 @@
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/release/supportmatrix-cli",
             "preLaunchTask": "swift: Build Release supportmatrix-cli",
             "env": {
-                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env"
+                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
+                "CACHE_DIR": "${workspaceFolder:sidecar.clutch.engineering}/.cache",
             }
         },
         {
@@ -129,7 +139,8 @@
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/debug/modellist",
             "preLaunchTask": "swift: Build Debug modellist",
             "env": {
-                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env"
+                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
+                "CACHE_DIR": "${workspaceFolder:sidecar.clutch.engineering}/.cache",
             }
         },
         {
@@ -141,7 +152,8 @@
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/release/modellist",
             "preLaunchTask": "swift: Build Release modellist",
             "env": {
-                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env"
+                "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
+                "CACHE_DIR": "${workspaceFolder:sidecar.clutch.engineering}/.cache",
             }
         }
     ]

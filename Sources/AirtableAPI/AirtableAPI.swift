@@ -7,13 +7,14 @@ public enum AirtableError: Error {
   case csvParsingError
   case recordNotFound(String)
   case decodingError
+  case cachingError(Error)
 }
 
-public struct AirtableRecord: Decodable, Sendable {
+public struct AirtableRecord: Codable, Sendable {
   public let id: String
   public let fields: Fields
 
-  public struct Fields: Decodable, Sendable {
+  public struct Fields: Codable, Sendable {
     public let ID: String
     public var make: String?
     public var model: String?
@@ -58,12 +59,29 @@ public actor AirtableClient {
   private let apiKey: String
   private let session: URLSession
   private var idMapping: [String: String]?  // Maps string ID to Airtable record ID
+  private let cacheURL: URL?
 
   public init(baseID: String, apiKey: String) {
     self.baseID = baseID
     self.apiKey = apiKey
     let config = URLSessionConfiguration.default
     self.session = URLSession(configuration: config)
+
+    // Configure cache URL from environment if available
+    if let cacheDir = ProcessInfo.processInfo.environment["CACHE_DIR"] {
+      self.cacheURL = URL(fileURLWithPath: cacheDir)
+    } else {
+      self.cacheURL = nil
+    }
+  }
+
+  // Alternative initializer with explicit cache URL
+  public init(baseID: String, apiKey: String, cacheURL: URL?) {
+    self.baseID = baseID
+    self.apiKey = apiKey
+    let config = URLSessionConfiguration.default
+    self.session = URLSession(configuration: config)
+    self.cacheURL = cacheURL
   }
 
   public func updateDriverCounts(_ data: Data, in tableID: String) async throws {
@@ -124,6 +142,12 @@ public actor AirtableClient {
 
   // Fetch all models from the table and print them
   public func fetchModels(from tableID: String) async throws -> [AirtableRecord] {
+    // Check cache first if available
+    if let cachedRecords = try? await loadFromCache(for: tableID) {
+      print("Using cached models data...")
+      return cachedRecords
+    }
+
     print("Fetching models from Airtable...")
 
     // Fetch all records
@@ -137,7 +161,64 @@ public actor AirtableClient {
     } while offset != nil
 
     // Sort records by ID for consistent output
-    return  allRecords.sorted { $0.fields.ID < $1.fields.ID }
+    let sortedRecords = allRecords.sorted { $0.fields.ID < $1.fields.ID }
+
+    // Save to cache if caching is enabled
+    if let cacheURL = self.cacheURL {
+      try? await saveToCache(records: sortedRecords, for: tableID)
+      print("Models data cached successfully")
+    }
+
+    return sortedRecords
+  }
+
+  // Helper method to load records from cache
+  private func loadFromCache(for tableID: String) async throws -> [AirtableRecord]? {
+    guard let cacheURL = self.cacheURL else {
+      return nil
+    }
+
+    let cacheFileURL = cacheURL.appendingPathComponent("airtable_\(tableID)_cache.json")
+    let fileManager = FileManager.default
+
+    // Check if cache exists and is recent (less than 24 hours old)
+    guard fileManager.fileExists(atPath: cacheFileURL.path) else {
+      return nil
+    }
+
+    let attributes = try fileManager.attributesOfItem(atPath: cacheFileURL.path)
+    guard let modificationDate = attributes[.modificationDate] as? Date else {
+      return nil
+    }
+
+    // Check if cache is less than 24 hours old
+    let cacheAge = Date().timeIntervalSince(modificationDate)
+    if cacheAge > 86400 { // 24 hours in seconds
+      return nil
+    }
+
+    // Read and decode the cache
+    let data = try Data(contentsOf: cacheFileURL)
+    return try JSONDecoder().decode([AirtableRecord].self, from: data)
+  }
+
+  // Helper method to save records to cache
+  private func saveToCache(records: [AirtableRecord], for tableID: String) async throws {
+    guard let cacheURL = self.cacheURL else {
+      return
+    }
+
+    let fileManager = FileManager.default
+
+    // Create cache directory if it doesn't exist
+    if !fileManager.fileExists(atPath: cacheURL.path) {
+      try fileManager.createDirectory(at: cacheURL, withIntermediateDirectories: true)
+    }
+
+    let cacheFileURL = cacheURL.appendingPathComponent("airtable_\(tableID)_cache.json")
+    let encoder = JSONEncoder()
+    let data = try encoder.encode(records)
+    try data.write(to: cacheFileURL)
   }
 
   private func fetchIDMappings(from tableID: String) async throws {
