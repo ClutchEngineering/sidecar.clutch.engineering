@@ -5,6 +5,14 @@ import SupportMatrix
 
 @main
 struct SupportMatrixCLI {
+  struct ModelSupport {
+    let make: String
+    let model: String
+    var yearCommandSupport: [Int: CommandSupport]
+  }
+  typealias OBDbID = String
+  typealias OBDbVehicleSupportMatrix = [OBDbID: ModelSupport]
+
   static func main() async throws {
     // Load environment variables from .env file if it exists
     DotEnv.load()
@@ -47,6 +55,8 @@ struct SupportMatrixCLI {
     print("Loading vehicle metadata from: \(workspacePath)")
     print("")
 
+    var supportMatrix: OBDbVehicleSupportMatrix = [:]
+
     for record: AirtableRecord in sortedRecords {
       guard let make: String = record.fields.make,
         let model: String = record.fields.model,
@@ -56,9 +66,7 @@ struct SupportMatrixCLI {
       }
       print("- \(obdbID)")
 
-      // TODO: Build a dictionary of OBDb ids that are "official".
-      // TODO: Load vehicle metadata from the workspace directory and merge it into this dictionary.
-      // TODO: Use the resulting array to generate the vehicle support matrix.
+      supportMatrix[obdbID] = ModelSupport(make: make, model: model, yearCommandSupport: [:])
     }
 
     // Load vehicle metadata
@@ -70,10 +78,13 @@ struct SupportMatrixCLI {
         var totalVehicles = 0
         var totalYears = 0
 
-        for (_, models) in vehicleMetadata.vehicles {
+        for (make, models) in vehicleMetadata.vehicles {
           totalVehicles += models.count
-          for (_, years) in models {
+          for (model, years) in models {
             totalYears += years.count
+
+            let obdbID = make + "-" + model
+            supportMatrix[obdbID]?.yearCommandSupport = years
           }
         }
 

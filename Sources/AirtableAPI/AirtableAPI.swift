@@ -18,6 +18,8 @@ public struct AirtableRecord: Codable, Sendable {
     public let ID: String
     public var make: String?
     public var model: String?
+
+    /// The obdbID is used as the name of the GitHub repo and the corresponding workspace folder.
     public var obdbID: String?
     public let alternateModels: String?
     public let numberOfDrivers: Int?
