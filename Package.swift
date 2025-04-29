@@ -47,6 +47,8 @@ let package = Package(
     ]),
 
     .executableTarget(name: "supportmatrix-cli", dependencies: [
+      "AirtableAPI",
+      "DotEnvAPI",
       "SupportMatrix",
     ]),
 

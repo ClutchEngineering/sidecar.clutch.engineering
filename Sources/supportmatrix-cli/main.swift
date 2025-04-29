@@ -1,5 +1,22 @@
+import AirtableAPI
 import Foundation
+import DotEnvAPI
 import SupportMatrix
+
+// Load environment variables from .env file if it exists
+DotEnv.load()
+
+guard let airtableAPIKey = ProcessInfo.processInfo.environment["AIRTABLE_API_KEY"] else {
+  fatalError("Missing AIRTABLE_API_KEY")
+}
+
+guard let airtableBaseID = ProcessInfo.processInfo.environment["AIRTABLE_BASE_ID"] else {
+  fatalError("Missing AIRTABLE_BASE_ID")
+}
+
+guard let modelsTableID = ProcessInfo.processInfo.environment["AIRTABLE_MODELS_TABLE_ID"] else {
+  fatalError("Missing AIRTABLE_MODELS_TABLE_ID")
+}
 
 // Print program header
 print("Support Matrix CLI")
@@ -18,8 +35,34 @@ if args.count > 1 {
   workspacePath = workspaceURL.path
 }
 
+// Create Airtable client
+let airtableClient = AirtableClient(baseID: airtableBaseID, apiKey: airtableAPIKey)
+
+// Fetch and print all models
+let sortedRecords: [AirtableRecord] = try await airtableClient.fetchModels(from: modelsTableID)
+
 print("Loading vehicle metadata from: \(workspacePath)")
 print("")
+
+
+for record: AirtableRecord in sortedRecords {
+  print("- \(record.fields.make) \(record.fields.model)")
+
+  // Print alternate models if they exist
+  if let alternateModels = record.fields.alternateModels, !alternateModels.isEmpty {
+    let alternates = alternateModels.split(separator: ",")
+      .map { $0.trimmingCharacters(in: .whitespaces) }
+      .filter { !$0.isEmpty }
+
+    if !alternates.isEmpty {
+      print("  Alternate models:")
+      for alt in alternates {
+        print("  - \(alt)")
+      }
+    }
+  }
+}
+
 
 // Load vehicle metadata
 do {

@@ -9,20 +9,14 @@ public enum AirtableError: Error {
   case decodingError
 }
 
-public struct AirtableRecord: Decodable {
+public struct AirtableRecord: Decodable, Sendable {
   public let id: String
   public let fields: Fields
 
-  public struct Fields: Decodable {
+  public struct Fields: Decodable, Sendable {
     public let ID: String
-    public var make: String? {
-      guard let first = ID.split(separator: "/").first,
-        !first.isEmpty
-      else {
-        return nil
-      }
-      return String(first)
-    }
+    public var make: String?
+    public var model: String?
     public let alternateModels: String?
     public var alternateModelIDs: [String] {
       guard let alternateModels,
@@ -40,6 +34,8 @@ public struct AirtableRecord: Decodable {
 
     enum CodingKeys: String, CodingKey {
       case ID
+      case make = "Make (string)"
+      case model = "Model"
       case alternateModels = "Alternate models"
     }
   }
@@ -120,7 +116,7 @@ public actor AirtableClient {
   }
 
   // Fetch all models from the table and print them
-  public func fetchAndPrintModels(from tableID: String) async throws {
+  public func fetchModels(from tableID: String) async throws -> [AirtableRecord] {
     print("Fetching models from Airtable...")
 
     // Fetch all records
@@ -134,32 +130,7 @@ public actor AirtableClient {
     } while offset != nil
 
     // Sort records by ID for consistent output
-    let sortedRecords = allRecords.sorted { $0.fields.ID < $1.fields.ID }
-
-    // Print header
-    print("\n=== Models List ===")
-    print("Total models: \(sortedRecords.count)\n")
-
-    // Print each model
-    for record in sortedRecords {
-      print("- \(record.fields.ID)")
-
-      // Print alternate models if they exist
-      if let alternateModels = record.fields.alternateModels, !alternateModels.isEmpty {
-        let alternates = alternateModels.split(separator: ",")
-          .map { $0.trimmingCharacters(in: .whitespaces) }
-          .filter { !$0.isEmpty }
-
-        if !alternates.isEmpty {
-          print("  Alternate models:")
-          for alt in alternates {
-            print("  - \(alt)")
-          }
-        }
-      }
-    }
-
-    print("\nDone.")
+    return  allRecords.sorted { $0.fields.ID < $1.fields.ID }
   }
 
   private func fetchIDMappings(from tableID: String) async throws {

@@ -25,6 +25,17 @@ struct ModelsListApp {
     let airtableClient = AirtableClient(baseID: airtableBaseID, apiKey: airtableAPIKey)
 
     // Fetch and print all models
-    try await airtableClient.fetchAndPrintModels(from: modelsTableID)
+    let sortedRecords: [AirtableRecord] = try await airtableClient.fetchModels(from: modelsTableID)
+
+    // Print header
+    print("\n=== Models List ===")
+    print("Total models: \(sortedRecords.count)\n")
+
+    // Print each model
+    for record: AirtableRecord in sortedRecords {
+      print("- \(String(describing: record.fields.make)) \(String(describing: record.fields.model))")
+    }
+
+    print("\nDone.")
   }
 }
