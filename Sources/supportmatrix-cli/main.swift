@@ -2,17 +2,10 @@ import AirtableAPI
 import DotEnvAPI
 import Foundation
 import SupportMatrix
+import VehicleSupportMatrix
 
 @main
 struct SupportMatrixCLI {
-  struct ModelSupport {
-    let make: String
-    let model: String
-    var yearCommandSupport: [Int: CommandSupport]
-  }
-  typealias OBDbID = String
-  typealias OBDbVehicleSupportMatrix = [OBDbID: ModelSupport]
-
   static func main() async throws {
     // Load environment variables from .env file if it exists
     DotEnv.load()
@@ -49,158 +42,146 @@ struct SupportMatrixCLI {
     // Create Airtable client
     let airtableClient = AirtableClient(baseID: airtableBaseID, apiKey: airtableAPIKey)
 
-    // Fetch and print all models
-    let sortedRecords: [AirtableRecord] = try await airtableClient.fetchModels(from: modelsTableID)
-
+    // Load and merge vehicle data
     print("Loading vehicle metadata from: \(workspacePath)")
     print("")
 
-    var supportMatrix: OBDbVehicleSupportMatrix = [:]
+    // Use our new MergedSupportMatrix to load and merge the data
+    let merged = MergedSupportMatrix.shared
+    let success = await merged.loadAndMerge(
+      using: airtableClient,
+      modelsTableID: modelsTableID,
+      workspacePath: workspacePath
+    )
 
-    for record: AirtableRecord in sortedRecords {
-      guard let make: String = record.fields.make,
-        let model: String = record.fields.model,
-        let obdbID: String = record.fields.obdbID
-      else {
-        continue
-      }
-      print("- \(obdbID)")
-
-      supportMatrix[obdbID] = ModelSupport(make: make, model: model, yearCommandSupport: [:])
-    }
-
-    // Load vehicle metadata
-    do {
-      try SupportMatrix.shared.loadVehicleMetadata(from: workspacePath)
-
-      if let vehicleMetadata = SupportMatrix.shared.vehicleMetadata {
-        // Print summary statistics
-        var totalVehicles = 0
-        var totalYears = 0
-
-        for (make, models) in vehicleMetadata.vehicles {
-          totalVehicles += models.count
-          for (model, years) in models {
-            totalYears += years.count
-
-            let obdbID = make + "-" + model
-            supportMatrix[obdbID]?.yearCommandSupport = years
-          }
-        }
-
-        print("Summary:")
-        print("  • Makes: \(vehicleMetadata.vehicles.count)")
-        print("  • Models: \(totalVehicles)")
-        print("  • Model Years: \(totalYears)")
-        print("")
-
-        // Display makes and models
-        print("Vehicle Makes and Models:")
-        print("------------------------")
-
-        let makes = SupportMatrix.shared.getAllMakes()
-
-        for make in makes {
-          print("• \(make)")
-          let models = SupportMatrix.shared.getModels(for: make)
-
-          for model in models {
-            let years = SupportMatrix.shared.getYears(for: make, model: model)
-            print(
-              "  • \(model) (\(years.count) model years: \(years.sorted().map { String($0) }.joined(separator: ", ")))"
-            )
-          }
-
-          print("")
-        }
-
-        // Command statistics
-        print("Command Support Statistics:")
-        print("--------------------------")
-
-        // Common OBD-II PIDs to check for
-        let commonCommands = [
-          "0101": "Monitor status since DTCs cleared",
-          "0104": "Engine Load",
-          "010C": "Engine RPM",
-          "010D": "Vehicle Speed",
-          "0111": "Throttle Position",
-        ]
-
-        for (command, description) in commonCommands {
-          let supportingVehicles = SupportMatrix.shared.getVehiclesSupporting(command: command)
-          var vehicleCount = 0
-
-          for (_, models) in supportingVehicles {
-            for (_, _) in models {
-              vehicleCount += 1
-            }
-          }
-
-          print("• \(command): \(description)")
-          print("  • Supported by \(vehicleCount) vehicles")
-        }
-
-        // Allow for specific vehicle lookup
-        if args.count > 3 {
-          let specifiedMake = args[2]
-          let specifiedModel = args[3]
-          var specifiedYear: Year? = nil
-
-          if args.count > 4, let year = Int(args[4]) {
-            specifiedYear = year
-          }
-
-          print("")
-          print(
-            "Details for \(specifiedMake) \(specifiedModel)\(specifiedYear != nil ? " (\(specifiedYear!))" : ""):"
-          )
-          print("-------------------------------------------------------")
-
-          if let years = vehicleMetadata.vehicles[specifiedMake]?[specifiedModel] {
-            if let year = specifiedYear {
-              if let commandSupport = years[year] {
-                printCommandSupport(for: commandSupport)
-              } else {
-                print("No data available for year \(year)")
-              }
-            } else {
-              // Print data for all years
-              for (year, commandSupport) in years.sorted(by: { $0.key < $1.key }) {
-                print("• Year: \(year)")
-                printCommandSupport(for: commandSupport)
-                print("")
-              }
-            }
-          } else {
-            print("Vehicle not found: \(specifiedMake) \(specifiedModel)")
-          }
-        }
+    if !success {
+      if let error = merged.lastError {
+        print("Error loading support matrix: \(error)")
       } else {
-        print("No vehicle metadata loaded.")
+        print("Error loading support matrix")
       }
-    } catch {
-      print("Error loading vehicle metadata: \(error)")
       exit(1)
     }
 
-    /// Helper function to print command support details
-    func printCommandSupport(for commandSupport: CommandSupport) {
-      print("  • Model Year: \(commandSupport.modelYear)")
-      print("  • CAN ID Format: \(commandSupport.canIdFormat)")
-      print(
-        "  • Extended Addressing: \(commandSupport.extendedAddressingEnabled ? "Enabled" : "Disabled")"
-      )
+    // Display statistics
+    let stats = merged.getStatistics()
+    print("Summary:")
+    print("  • Makes: \(stats.makes)")
+    print("  • Models: \(stats.models)")
+    print("  • Model Years: \(stats.modelYears)")
+    print("")
 
-      print("  • ECUs:")
-      for (ecu, commands) in commandSupport.supportedCommandsByEcu {
-        print("    • \(ecu): \(commands.count) commands")
+    // Display makes and models
+    print("Vehicle Makes and Models:")
+    print("------------------------")
 
-        // Optionally print all commands (uncomment if needed)
-        // for command in commands {
-        //     print("      • \(command)")
-        // }
+    let makes = merged.getAllMakes()
+
+    for make in makes {
+      print("• \(make)")
+      let models = merged.getModels(for: make)
+
+      for model in models {
+        let years = merged.getYears(for: make, model: model)
+        print(
+          "  • \(model) (\(years.count) model years: \(years.sorted().map { String($0) }.joined(separator: ", ")))"
+        )
       }
+
+      print("")
+    }
+
+    // Command statistics
+    print("Command Support Statistics:")
+    print("--------------------------")
+
+    // Common OBD-II PIDs to check for
+    let commonCommands = [
+      "0101": "Monitor status since DTCs cleared",
+      "0104": "Engine Load",
+      "010C": "Engine RPM",
+      "010D": "Vehicle Speed",
+      "0111": "Throttle Position",
+    ]
+
+    for (command, description) in commonCommands {
+      let supportingVehicles = merged.getVehiclesSupporting(command: command)
+      var vehicleCount = 0
+
+      for (_, models) in supportingVehicles {
+        for (_, _) in models {
+          vehicleCount += 1
+        }
+      }
+
+      print("• \(command): \(description)")
+      print("  • Supported by \(vehicleCount) vehicles")
+    }
+
+    // Allow for specific vehicle lookup
+    if args.count > 3 {
+      let specifiedMake = args[2]
+      let specifiedModel = args[3]
+      var specifiedYear: Year? = nil
+
+      if args.count > 4, let year = Int(args[4]) {
+        specifiedYear = year
+      }
+
+      print("")
+      print(
+        "Details for \(specifiedMake) \(specifiedModel)\(specifiedYear != nil ? " (\(specifiedYear!))" : ""):"
+      )
+      print("-------------------------------------------------------")
+
+      let years = merged.getYears(for: specifiedMake, model: specifiedModel)
+      if !years.isEmpty {
+        if let year = specifiedYear {
+          if let commandSupport = merged.getCommandSupport(
+            for: specifiedMake,
+            model: specifiedModel,
+            year: year
+          ) {
+            printCommandSupport(for: commandSupport)
+          } else {
+            print("No data available for year \(year)")
+          }
+        } else {
+          // Print data for all years
+          for year in years.sorted() {
+            if let commandSupport = merged.getCommandSupport(
+              for: specifiedMake,
+              model: specifiedModel,
+              year: year
+            ) {
+              print("• Year: \(year)")
+              printCommandSupport(for: commandSupport)
+              print("")
+            }
+          }
+        }
+      } else {
+        print("Vehicle not found: \(specifiedMake) \(specifiedModel)")
+      }
+    }
+  }
+
+  /// Helper function to print command support details
+  static func printCommandSupport(for commandSupport: CommandSupport) {
+    print("  • Model Year: \(commandSupport.modelYear)")
+    print("  • CAN ID Format: \(commandSupport.canIdFormat)")
+    print(
+      "  • Extended Addressing: \(commandSupport.extendedAddressingEnabled ? "Enabled" : "Disabled")"
+    )
+
+    print("  • ECUs:")
+    for (ecu, commands) in commandSupport.supportedCommandsByEcu {
+      print("    • \(ecu): \(commands.count) commands")
+
+      // Optionally print all commands (uncomment if needed)
+      // for command in commands {
+      //     print("      • \(command)")
+      // }
     }
   }
 }

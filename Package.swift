@@ -50,10 +50,16 @@ let package = Package(
       "AirtableAPI",
       "DotEnvAPI",
       "SupportMatrix",
+      "VehicleSupportMatrix"
     ]),
 
     .target(name: "SupportMatrix", dependencies: [
       .product(name: "Yams", package: "Yams"),
+    ]),
+
+    .target(name: "VehicleSupportMatrix", dependencies: [
+      "AirtableAPI",
+      "SupportMatrix",
     ]),
 
     .target(name: "VehicleSupport", resources: [
