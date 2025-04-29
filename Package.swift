@@ -20,9 +20,12 @@ let package = Package(
 
     .executableTarget(name: "modellist", dependencies: [
       "AirtableAPI",
+      "DotEnvAPI",
     ]),
 
     .target(name: "AirtableAPI"),
+
+    .target(name: "DotEnvAPI"),
 
     .target(name: "PostHogAPI"),
 
