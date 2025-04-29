@@ -15,3 +15,5 @@ DerivedData/
 .meta
 node_modules/
 workspace/
+
+.env

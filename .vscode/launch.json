@@ -71,6 +71,24 @@
             "name": "Release analytics",
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/release/analytics",
             "preLaunchTask": "swift: Build Release analytics"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}",
+            "name": "Debug supportmatrix-cli",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/debug/supportmatrix-cli",
+            "preLaunchTask": "swift: Build Debug supportmatrix-cli"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}",
+            "name": "Release supportmatrix-cli",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/release/supportmatrix-cli",
+            "preLaunchTask": "swift: Build Release supportmatrix-cli"
         }
     ]
 }

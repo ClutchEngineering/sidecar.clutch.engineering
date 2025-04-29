@@ -10,6 +10,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/jverkoey/slipstream.git", branch: "main"),
+    .package(url: "https://github.com/jpsim/Yams.git", from: "5.1.3"),
   ],
   targets: [
     .executableTarget(name: "analytics"),
@@ -29,6 +30,14 @@ let package = Package(
 
     .executableTarget(name: "import", dependencies: [
       "VehicleSupport",
+    ]),
+
+    .executableTarget(name: "supportmatrix-cli", dependencies: [
+      "SupportMatrix",
+    ]),
+
+    .target(name: "SupportMatrix", dependencies: [
+      .product(name: "Yams", package: "Yams"),
     ]),
 
     .target(name: "VehicleSupport", resources: [
