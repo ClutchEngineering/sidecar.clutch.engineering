@@ -82,10 +82,65 @@ public final class SupportMatrix {
       }
     }
 
-    // Sort the years arrays
+    // Sort years within each model
     for (make, models) in result {
+      for (model, _) in models {
+        result[make]?[model]?.sort()
+      }
+    }
+
+    return result
+  }
+
+  /// Get confirmed signals for a specific make, model, and year
+  /// - Parameters:
+  ///   - make: The vehicle make
+  ///   - model: The vehicle model
+  ///   - year: The vehicle year
+  /// - Returns: A set of confirmed signal names, or an empty set if none are found
+  public func getConfirmedSignals(for make: Make, model: Model, year: Year) -> Set<String> {
+    return vehicleMetadata?.confirmedSignals[make]?[model]?[year] ?? []
+  }
+
+  /// Get all confirmed signals for a specific make and model across all years
+  /// - Parameters:
+  ///   - make: The vehicle make
+  ///   - model: The vehicle model
+  /// - Returns: A dictionary mapping years to sets of confirmed signals
+  public func getAllConfirmedSignals(for make: Make, model: Model) -> [Year: Set<String>] {
+    return vehicleMetadata?.confirmedSignals[make]?[model] ?? [:]
+  }
+
+  /// Get vehicles that support a specific signal
+  /// - Parameter signalName: The signal name to search for (e.g., "TAYCAN_VSS")
+  /// - Returns: A dictionary of makes, models, and years that support the signal
+  public func getVehiclesSupporting(signalName: String) -> [Make: [Model: [Year]]] {
+    var result = [Make: [Model: [Year]]]()
+
+    guard let metadata = vehicleMetadata else {
+      return result
+    }
+
+    for (make, models) in metadata.confirmedSignals {
       for (model, years) in models {
-        result[make]?[model] = years.sorted()
+        for (year, signals) in years {
+          if signals.contains(signalName) {
+            if result[make] == nil {
+              result[make] = [:]
+            }
+            if result[make]?[model] == nil {
+              result[make]?[model] = []
+            }
+            result[make]?[model]?.append(year)
+          }
+        }
+      }
+    }
+
+    // Sort years within each model
+    for (make, models) in result {
+      for (model, _) in models {
+        result[make]?[model]?.sort()
       }
     }
 

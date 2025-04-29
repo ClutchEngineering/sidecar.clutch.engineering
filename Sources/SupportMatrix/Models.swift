@@ -38,9 +38,11 @@ public struct Vehicle {
 /// Container for all vehicle metadata
 public struct VehicleMetadata {
   public var vehicles: [Make: [Model: [Year: CommandSupport]]]
+  public var confirmedSignals: [Make: [Model: [Year: Set<String>]]]
 
   public init() {
     self.vehicles = [:]
+    self.confirmedSignals = [:]
   }
 
   public mutating func addVehicle(
@@ -55,5 +57,23 @@ public struct VehicleMetadata {
     }
 
     vehicles[make]?[model]?[year] = commandSupport
+  }
+
+  public mutating func addConfirmedSignal(
+    make: Make, model: Model, year: Year, signal: String
+  ) {
+    if confirmedSignals[make] == nil {
+      confirmedSignals[make] = [:]
+    }
+
+    if confirmedSignals[make]?[model] == nil {
+      confirmedSignals[make]?[model] = [:]
+    }
+
+    if confirmedSignals[make]?[model]?[year] == nil {
+      confirmedSignals[make]?[model]?[year] = Set<String>()
+    }
+
+    confirmedSignals[make]?[model]?[year]?.insert(signal)
   }
 }
