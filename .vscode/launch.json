@@ -89,6 +89,24 @@
             "name": "Release supportmatrix-cli",
             "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/release/supportmatrix-cli",
             "preLaunchTask": "swift: Build Release supportmatrix-cli"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}",
+            "name": "Debug modellist",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/debug/modellist",
+            "preLaunchTask": "swift: Build Debug modellist"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}",
+            "name": "Release modellist",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/.build/release/modellist",
+            "preLaunchTask": "swift: Build Release modellist"
         }
     ]
 }

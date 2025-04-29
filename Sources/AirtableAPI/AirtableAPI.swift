@@ -1,6 +1,6 @@
 import Foundation
 
-enum AirtableError: Error {
+public enum AirtableError: Error {
   case invalidURL
   case networkError(Error)
   case invalidResponse
@@ -9,26 +9,29 @@ enum AirtableError: Error {
   case decodingError
 }
 
-struct AirtableRecord: Decodable {
-  let id: String
-  let fields: Fields
+public struct AirtableRecord: Decodable {
+  public let id: String
+  public let fields: Fields
 
-  struct Fields: Decodable {
-    let ID: String
-    var make: String? {
+  public struct Fields: Decodable {
+    public let ID: String
+    public var make: String? {
       guard let first = ID.split(separator: "/").first,
-            !first.isEmpty else {
+        !first.isEmpty
+      else {
         return nil
       }
       return String(first)
     }
-    let alternateModels: String?
-    var alternateModelIDs: [String] {
+    public let alternateModels: String?
+    public var alternateModelIDs: [String] {
       guard let alternateModels,
-            let make else {
+        let make
+      else {
         return []
       }
-      return alternateModels
+      return
+        alternateModels
         .split(separator: ",")
         .map { $0.trimmingCharacters(in: .whitespaces) }
         .filter { !$0.isEmpty }
@@ -47,20 +50,20 @@ struct AirtableResponse: Decodable {
   let offset: String?
 }
 
-actor AirtableClient {
+public actor AirtableClient {
   private let baseID: String
   private let apiKey: String
   private let session: URLSession
-  private var idMapping: [String: String]? // Maps string ID to Airtable record ID
+  private var idMapping: [String: String]?  // Maps string ID to Airtable record ID
 
-  init(baseID: String, apiKey: String) {
+  public init(baseID: String, apiKey: String) {
     self.baseID = baseID
     self.apiKey = apiKey
     let config = URLSessionConfiguration.default
     self.session = URLSession(configuration: config)
   }
 
-  func updateDriverCounts(_ data: Data, in tableID: String) async throws {
+  public func updateDriverCounts(_ data: Data, in tableID: String) async throws {
     // First, fetch and cache ID mappings if we haven't already
     if idMapping == nil {
       try await fetchIDMappings(from: tableID)
@@ -88,7 +91,7 @@ actor AirtableClient {
     }
   }
 
-  func updateMilesDriven(_ data: Data, in tableID: String) async throws {
+  public func updateMilesDriven(_ data: Data, in tableID: String) async throws {
     // First, fetch and cache ID mappings if we haven't already
     if idMapping == nil {
       try await fetchIDMappings(from: tableID)
@@ -114,6 +117,49 @@ actor AirtableClient {
     for chunk in deduplicatedUpdates.chunked(into: 10) {
       try await updateBatch(records: chunk, fieldName: "Number of miles driven", in: tableID)
     }
+  }
+
+  // Fetch all models from the table and print them
+  public func fetchAndPrintModels(from tableID: String) async throws {
+    print("Fetching models from Airtable...")
+
+    // Fetch all records
+    var allRecords: [AirtableRecord] = []
+    var offset: String?
+
+    repeat {
+      let response = try await fetchRecordsPage(from: tableID, offset: offset)
+      allRecords.append(contentsOf: response.records)
+      offset = response.offset
+    } while offset != nil
+
+    // Sort records by ID for consistent output
+    let sortedRecords = allRecords.sorted { $0.fields.ID < $1.fields.ID }
+
+    // Print header
+    print("\n=== Models List ===")
+    print("Total models: \(sortedRecords.count)\n")
+
+    // Print each model
+    for record in sortedRecords {
+      print("- \(record.fields.ID)")
+
+      // Print alternate models if they exist
+      if let alternateModels = record.fields.alternateModels, !alternateModels.isEmpty {
+        let alternates = alternateModels.split(separator: ",")
+          .map { $0.trimmingCharacters(in: .whitespaces) }
+          .filter { !$0.isEmpty }
+
+        if !alternates.isEmpty {
+          print("  Alternate models:")
+          for alt in alternates {
+            print("  - \(alt)")
+          }
+        }
+      }
+    }
+
+    print("\nDone.")
   }
 
   private func fetchIDMappings(from tableID: String) async throws {
@@ -142,7 +188,9 @@ actor AirtableClient {
     idMapping = mapping
   }
 
-  private func deduplicateRecordUpdates(_ updates: [(id: String, count: Int)]) -> [(id: String, count: Int)] {
+  private func deduplicateRecordUpdates(_ updates: [(id: String, count: Int)]) -> [(
+    id: String, count: Int
+  )] {
     // Group updates by ID and sum their counts
     var groupedCounts: [String: Int] = [:]
 
@@ -154,7 +202,9 @@ actor AirtableClient {
     return groupedCounts.map { (id: $0.key, count: $0.value) }
   }
 
-  private func fetchRecordsPage(from tableID: String, offset: String? = nil) async throws -> AirtableResponse {
+  private func fetchRecordsPage(from tableID: String, offset: String? = nil) async throws
+    -> AirtableResponse
+  {
     var urlComponents = URLComponents(string: "https://api.airtable.com/v0/\(baseID)/\(tableID)")
 
     // Add pagination parameters
@@ -177,7 +227,8 @@ actor AirtableClient {
     let (data, response) = try await session.data(for: request)
 
     guard let httpResponse = response as? HTTPURLResponse,
-          (200...299).contains(httpResponse.statusCode) else {
+      (200...299).contains(httpResponse.statusCode)
+    else {
       throw AirtableError.invalidResponse
     }
 
@@ -195,7 +246,8 @@ actor AirtableClient {
     // Find the vehicleMake and value columns
     let headers = lines[0].components(separatedBy: ",")
     guard let makeIndex = headers.firstIndex(of: "series"),
-          let countIndex = headers.firstIndex(of: "total count") else {
+      let countIndex = headers.firstIndex(of: "total count")
+    else {
       throw AirtableError.csvParsingError
     }
 
@@ -205,7 +257,8 @@ actor AirtableClient {
     for line in lines.dropFirst() where !line.isEmpty {
       let values = line.components(separatedBy: ",")
       guard makeIndex < values.count, countIndex < values.count,
-            let count = Int(values[countIndex]) else { continue }
+        let count = Int(values[countIndex])
+      else { continue }
 
       let id = values[makeIndex]
       counts.append((id: id, count: count))
@@ -225,7 +278,8 @@ actor AirtableClient {
     // Find the vehicleMake and miles columns
     let headers = lines[0].components(separatedBy: ",")
     guard let makeIndex = headers.firstIndex(of: "series"),
-          let milesIndex = headers.firstIndex(of: "total count") else {
+      let milesIndex = headers.firstIndex(of: "total count")
+    else {
       throw AirtableError.csvParsingError
     }
 
@@ -235,7 +289,8 @@ actor AirtableClient {
     for line in lines.dropFirst() where !line.isEmpty {
       let values = line.components(separatedBy: ",")
       guard makeIndex < values.count, milesIndex < values.count,
-            let milesValue = Double(values[milesIndex]) else { continue }
+        let milesValue = Double(values[milesIndex])
+      else { continue }
 
       let id = values[makeIndex]
       // Convert to integer for storage
@@ -246,7 +301,9 @@ actor AirtableClient {
     return miles
   }
 
-  private func updateBatch(records: [(id: String, count: Int)], fieldName: String, in tableID: String) async throws {
+  private func updateBatch(
+    records: [(id: String, count: Int)], fieldName: String, in tableID: String
+  ) async throws {
     guard let url = URL(string: "https://api.airtable.com/v0/\(baseID)/\(tableID)") else {
       throw AirtableError.invalidURL
     }
@@ -261,7 +318,7 @@ actor AirtableClient {
         "id": record.id,
         "fields": [
           fieldName: record.count
-        ]
+        ],
       ]
     }
 
@@ -270,16 +327,17 @@ actor AirtableClient {
 
     let (_, response) = try await session.data(for: request)
     guard let httpResponse = response as? HTTPURLResponse,
-          (200...299).contains(httpResponse.statusCode) else {
+      (200...299).contains(httpResponse.statusCode)
+    else {
       throw AirtableError.invalidResponse
     }
   }
 }
 
-private extension Array {
-  func chunked(into size: Int) -> [[Element]] {
+extension Array {
+  public func chunked(into size: Int) -> [[Element]] {
     stride(from: 0, to: count, by: size).map {
-      Array(self[$0 ..< Swift.min($0 + size, count)])
+      Array(self[$0..<Swift.min($0 + size, count)])
     }
   }
 }

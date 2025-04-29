@@ -13,7 +13,18 @@ let package = Package(
     .package(url: "https://github.com/jpsim/Yams.git", from: "5.1.3"),
   ],
   targets: [
-    .executableTarget(name: "analytics"),
+    .executableTarget(name: "analytics", dependencies: [
+      "AirtableAPI",
+      "PostHogAPI",
+    ]),
+
+    .executableTarget(name: "modellist", dependencies: [
+      "AirtableAPI",
+    ]),
+
+    .target(name: "AirtableAPI"),
+
+    .target(name: "PostHogAPI"),
 
     .executableTarget(name: "gensite", dependencies: [
       .product(name: "Slipstream", package: "slipstream"),
