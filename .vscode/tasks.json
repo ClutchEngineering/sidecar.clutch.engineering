@@ -57,6 +57,11 @@
                 "kind": "build",
                 "isDefault": true
             },
+            "options": {
+                "env": {
+                    "ENV_FILE": "${workspaceFolder}/.env"
+                }
+            },
             "problemMatcher": []
         },
         {
@@ -80,6 +85,11 @@
                 "group": "dev-server"
             },
             "isBackground": true,
+            "options": {
+                "env": {
+                    "ENV_FILE": "${workspaceFolder}/.env"
+                }
+            },
             "problemMatcher": [],
             "dependsOn": ["Build Site"]
         },
