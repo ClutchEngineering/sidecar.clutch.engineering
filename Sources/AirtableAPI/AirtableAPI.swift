@@ -19,6 +19,9 @@ public struct AirtableRecord: Decodable, Sendable {
     public var model: String?
     public var obdbID: String?
     public let alternateModels: String?
+    public let numberOfDrivers: Int?
+    public let numberOfMilesDriven: Int?
+
     public var alternateModelIDs: [String] {
       guard let alternateModels,
         let make
@@ -39,6 +42,8 @@ public struct AirtableRecord: Decodable, Sendable {
       case model = "Model"
       case alternateModels = "Alternate models"
       case obdbID = "OBDb ID"
+      case numberOfDrivers = "Number of drivers"
+      case numberOfMilesDriven = "Number of miles driven"
     }
   }
 }

@@ -55,6 +55,10 @@ struct SupportMatrixCLI {
         continue
       }
       print("- \(obdbID)")
+
+      // TODO: Build a dictionary of OBDb ids that are "official".
+      // TODO: Load vehicle metadata from the workspace directory and merge it into this dictionary.
+      // TODO: Use the resulting array to generate the vehicle support matrix.
     }
 
     // Load vehicle metadata
