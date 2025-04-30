@@ -213,7 +213,9 @@ Connectables are elements of the Sidecar user interface that can be powered by v
 \(inlineHTML { Parameter("frontLeftTirePressure", icon: "tirepressure", type: "Pressure") }) The front left tire pressure.    
 \(inlineHTML { Parameter("frontRightTirePressure", icon: "tirepressure", type: "Pressure") }) The front right tire pressure.    
 \(inlineHTML { Parameter("rearLeftTirePressure", icon: "tirepressure", type: "Pressure") }) The rear left tire pressure.    
-\(inlineHTML { Parameter("rearRightTirePressure", icon: "tirepressure", type: "Pressure") }) The rear right tire pressure.
+\(inlineHTML { Parameter("rearRightTirePressure", icon: "tirepressure", type: "Pressure") }) The rear right tire pressure.    
+\(inlineHTML { Parameter("starterBatteryVoltage", icon: "battery", type: "Volts") }) The starter battery's voltage.    
+\(inlineHTML { Parameter("distanceSinceDTCsCleared", icon: "length", type: "Length") }) How far you've traveled since resetting your diagnostic trouble codes.
 
 ---
 
