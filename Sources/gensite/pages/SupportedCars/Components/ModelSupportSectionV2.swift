@@ -43,80 +43,82 @@ struct ModelSupportSectionV2: View {
       .justifyContent(.center)
       .margin(.bottom, 16)
 
-      if let yearRange = modelSupport.modelYearRange {
-        let yearRangeConnectables = supportMatrix.connectables(for: obdbID)
-        Div {
-          Table {
-            TableHeader {
-              HeaderCell { Text("Year") }
-              HeaderCell { Text("Overall") }
-              HeaderCell { ParameterHeader(icon: "bolt", name: "SoC") }
-              HeaderCell { ParameterHeader(icon: "health", name: "SoH") }
-              HeaderCell { ParameterHeader(icon: "plug", name: "State") }
-              HeaderCell { ParameterHeader(icon: "battery", name: "Cells") }
-              HeaderCell { ParameterHeader(icon: "fuel", name: "Fuel") }
-              HeaderCell { ParameterHeader(icon: "speed", name: "Speed") }
-              HeaderCell { ParameterHeader(icon: "length", name: "Range") }
-              HeaderCell { ParameterHeader(icon: "length", name: "Odom") }
-              HeaderCell(isLast: true) { ParameterHeader(icon: "tirepressure", name: "Tires") }
-            }
-            .background(.gray, darkness: 100)
-            .background(.zinc, darkness: 950, condition: .dark)
+      let yearRangeConnectables = supportMatrix.connectables(for: obdbID)
+      Div {
+        Table {
+          TableHeader {
+            HeaderCell { Text("Year") }
+            HeaderCell { Text("Overall") }
+            HeaderCell { ParameterHeader(icon: "bolt", name: "SoC") }
+            HeaderCell { ParameterHeader(icon: "health", name: "SoH") }
+            HeaderCell { ParameterHeader(icon: "plug", name: "State") }
+            HeaderCell { ParameterHeader(icon: "battery", name: "Cells") }
+            HeaderCell { ParameterHeader(icon: "fuel", name: "Fuel") }
+            HeaderCell { ParameterHeader(icon: "speed", name: "Speed") }
+            HeaderCell { ParameterHeader(icon: "length", name: "Range") }
+            HeaderCell { ParameterHeader(icon: "length", name: "Odom") }
+            HeaderCell(isLast: true) { ParameterHeader(icon: "tirepressure", name: "Tires") }
+          }
+          .background(.gray, darkness: 100)
+          .background(.zinc, darkness: 950, condition: .dark)
 
-            TableBody {
-              // TODO: Migrate to connectableSupportGroupByModelYearRange, which returns the same basic data but keyed on ClosedRange<Int> model year ranges.
-              let supportByModelYear = modelSupport.connectableSupportByModelYear(
-                yearRangeSignalMap: yearRangeConnectables,
-                saeConnectables: supportMatrix.saeConnectables
-              )
+          TableBody {
+            // Use the grouped model year ranges instead of individual years
+            let supportByModelYearRange = modelSupport.connectableSupportGroupByModelYearRange(
+              yearRangeSignalMap: yearRangeConnectables,
+              saeConnectables: supportMatrix.saeConnectables
+            )
 
-              for (modelYearIndex, modelYear) in yearRange.enumerated() {  // This will enumerate over model year ranges, sortedy by the lowerBound of each range.
-                if let support = supportByModelYear[modelYear] {
-                  EnvironmentAwareRow(isLastRow: modelYearIndex == yearRange.count - 1) {
-                    YearsCell(years: modelYear...modelYear)  // TODO: This should be the enumerated model year range.
-                    TesterNeededStatusCell()
-                    if modelSupport.engineType.hasBattery {
-                      SupportStatusV2(supported: support[.stateOfCharge])
-                      SupportStatusV2(supported: support[.stateOfHealth])
-                      SupportStatusV2(supported: support[.isCharging])
-                      SupportStatusV2(supported: support[.batteryModulesStateOfCharge])
-                    } else {
-                      NotApplicableCell(isLast: false)
-                      NotApplicableCell(isLast: false)
-                      NotApplicableCell(isLast: false)
-                      NotApplicableCell(isLast: false)
-                    }
-                    if modelSupport.engineType.hasFuel {
-                      SupportStatusV2(supported: support[.fuelTankLevel])
-                    } else {
-                      NotApplicableCell(isLast: false)
-                    }
-                    SupportStatusV2(supported: support[.speed])
-                    SupportStatusV2(supported: max(support[.electricRange] ?? .unknown, support[.fuelRange] ?? .unknown))
-                    SupportStatusV2(supported: support[.odometer])
-                    SupportStatusV2(supported: max(
-                      max(support[.frontLeftTirePressure] ?? .unknown, support[.frontLeftTirePressure] ?? .unknown),
-                      max(support[.rearLeftTirePressure] ?? .unknown, support[.rearLeftTirePressure] ?? .unknown)
-                    ), isLast: true)
+            let modelYearRanges = Array(supportByModelYearRange.keys).sorted { $0.lowerBound < $1.lowerBound }
+
+            if modelYearRanges.isEmpty {
+              // No support for this model yet.
+              EnvironmentAwareRow(isLastRow: true) {
+                AllYearsCell()
+                TesterNeededStatusCell()
+              }
+            } else {
+              for (rangeIndex, yearRangeKey) in modelYearRanges.enumerated() {
+                let support = supportByModelYearRange[yearRangeKey]!
+                EnvironmentAwareRow(isLastRow: rangeIndex == modelYearRanges.count - 1) {
+                  YearsCell(years: yearRangeKey) // Using the actual year range instead of single year
+                  TesterNeededStatusCell()
+                  if modelSupport.engineType.hasBattery {
+                    SupportStatusV2(supported: support[.stateOfCharge])
+                    SupportStatusV2(supported: support[.stateOfHealth])
+                    SupportStatusV2(supported: support[.isCharging])
+                    SupportStatusV2(supported: support[.batteryModulesStateOfCharge])
+                  } else {
+                    NotApplicableCell(isLast: false)
+                    NotApplicableCell(isLast: false)
+                    NotApplicableCell(isLast: false)
+                    NotApplicableCell(isLast: false)
                   }
-                } else {
-                  EnvironmentAwareRow(isLastRow: modelYearIndex == yearRange.count - 1) {
-                    YearsCell(years: modelYear...modelYear)
-                    TesterNeededStatusCell()
+                  if modelSupport.engineType.hasFuel {
+                    SupportStatusV2(supported: support[.fuelTankLevel])
+                  } else {
+                    NotApplicableCell(isLast: false)
                   }
+                  SupportStatusV2(supported: support[.speed])
+                  SupportStatusV2(supported: max(support[.electricRange] ?? .unknown, support[.fuelRange] ?? .unknown))
+                  SupportStatusV2(supported: support[.odometer])
+                  SupportStatusV2(supported: max(
+                    max(support[.frontLeftTirePressure] ?? .unknown, support[.frontLeftTirePressure] ?? .unknown),
+                    max(support[.rearLeftTirePressure] ?? .unknown, support[.rearLeftTirePressure] ?? .unknown)
+                  ), isLast: true)
                 }
               }
             }
           }
-          .frame(width: .full, condition: .desktop)
         }
-        .fontSize(.extraSmall, condition: .mobileOnly)
-        .textAlignment(.center)
-        .margin(.horizontal, .auto, condition: .desktop)
-        .border(.init(.zinc, darkness: 400), width: 1)
-        .border(.init(.zinc, darkness: 600), width: 1)
-        .cornerRadius(.large)
+        .frame(width: .full, condition: .desktop)
       }
+      .fontSize(.extraSmall, condition: .mobileOnly)
+      .textAlignment(.center)
+      .margin(.horizontal, .auto, condition: .desktop)
+      .border(.init(.zinc, darkness: 400), width: 1)
+      .border(.init(.zinc, darkness: 600), width: 1)
+      .cornerRadius(.large)
     }
     .padding(.vertical, 16)
     .padding(32, condition: .desktop)

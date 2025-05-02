@@ -48,11 +48,37 @@ struct MakeCard: View {
   }
 }
 
+struct MakeGridCard: View {
+  let make: Make
+
+  var formattedMake: String {
+    makeNameForIcon(make)
+  }
+
+  var body: some View {
+    VStack(alignment: .center) {
+      Image(URL(string: "/gfx/make/\(formattedMake).svg"))
+        .colorInvert(condition: .dark)
+        .display(.inlineBlock)
+        .frame(width: 48)
+        .frame(width: 64, condition: .desktop)
+      Text(make)
+        .bold()
+        .fontDesign("rounded")
+        .fontSize(.large)
+        .fontSize(.large, condition: .desktop)
+    }
+    .justifyContent(.center)
+    .textAlignment(.center)
+    .frame(width: 76, condition: .desktop)
+  }
+}
+
 struct MakeLink: View {
   let make: Make
   var body: some View {
     Link(URL(string: "#\(make)")) {
-      MakeCard(make: make)
+      MakeGridCard(make: make)
     }
     .underline(condition: .hover)
   }

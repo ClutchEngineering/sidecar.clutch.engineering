@@ -92,6 +92,18 @@ struct YearsCell: View {
   }
 }
 
+struct AllYearsCell: View {
+  var body: some View {
+    Bordered {
+      TableCell {
+        Text("All model years")
+      }
+    }
+    .padding(.horizontal, 8)
+    .padding(.vertical, 12)
+  }
+}
+
 struct OnboardedStatusCell: View {
   var body: some View {
     Bordered {

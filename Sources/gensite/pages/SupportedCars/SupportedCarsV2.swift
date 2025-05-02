@@ -182,7 +182,7 @@ struct SupportedCarsV2: View {
           }
         }
         .display(.flex)
-        .padding(.horizontal, 32)
+        .padding(.horizontal, 64)
         .classNames([
           "flex-wrap",
           "justify-center",
