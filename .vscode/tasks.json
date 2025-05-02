@@ -70,7 +70,7 @@
             "command": "fswatch",
             "args": [
                 "-o",
-                "Sources/gensite",
+                "Sources",
                 "|",
                 "xargs",
                 "-n1",

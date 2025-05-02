@@ -24,6 +24,7 @@ public struct AirtableRecord: Codable, Sendable {
     public let alternateModels: String?
     public let numberOfDrivers: Int?
     public let numberOfMilesDriven: Int?
+    public let engineType: String?
 
     public var alternateModelIDs: [String] {
       guard let alternateModels,
@@ -45,6 +46,7 @@ public struct AirtableRecord: Codable, Sendable {
       case model = "Model"
       case alternateModels = "Alternate models"
       case obdbID = "OBDb ID"
+      case engineType = "Engine type"
       case numberOfDrivers = "Number of drivers"
       case numberOfMilesDriven = "Number of miles driven"
     }

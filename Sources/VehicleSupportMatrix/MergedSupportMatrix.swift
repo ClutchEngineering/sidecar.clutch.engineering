@@ -51,7 +51,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
       for modelYear in allModelYears {
         guard let connectedSignals = yearRangeSignalMap.connectedSignals(modelYear: modelYear) else {
-          fatalError("No connected signals found for model year 2\(modelYear)")
+          fatalError("No connected signals found for model year \(modelYear)")
           continue
         }
 
@@ -221,7 +221,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
     )
 
     // Save to cache if successful and caching is enabled
-    if success && useCache {
+    if success {
       await saveToCacheAsync(matrix: matrix)
     }
 
@@ -391,8 +391,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
       for record in sortedRecords {
         guard let make = record.fields.make,
           let model = record.fields.model,
-          let obdbID = record.fields.obdbID
-        else {
+          let obdbID = record.fields.obdbID else {
           continue
         }
 
