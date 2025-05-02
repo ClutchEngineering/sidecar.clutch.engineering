@@ -43,22 +43,18 @@ struct ModelSupportSectionV2: View {
       .justifyContent(.center)
       .margin(.bottom, 16)
 
-      if let yearRange = modelSupport.modelYearRange,
-         let yearRangeConnectables = supportMatrix.connectables[obdbID] {
+      if let yearRange = modelSupport.modelYearRange {
+        let yearRangeConnectables = supportMatrix.connectables(for: obdbID)
         Div {
           Table {
             TableHeader {
               HeaderCell { Text("Year") }
               HeaderCell { Text("Overall") }
-              if modelSupport.engineType.hasBattery {
-                HeaderCell { ParameterHeader(icon: "bolt", name: "SoC") }
-                HeaderCell { ParameterHeader(icon: "health", name: "SoH") }
-                HeaderCell { ParameterHeader(icon: "plug", name: "State") }
-                HeaderCell { ParameterHeader(icon: "battery", name: "Cells") }
-              }
-              if modelSupport.engineType.hasFuel {
-                HeaderCell { ParameterHeader(icon: "fuel", name: "Fuel") }
-              }
+              HeaderCell { ParameterHeader(icon: "bolt", name: "SoC") }
+              HeaderCell { ParameterHeader(icon: "health", name: "SoH") }
+              HeaderCell { ParameterHeader(icon: "plug", name: "State") }
+              HeaderCell { ParameterHeader(icon: "battery", name: "Cells") }
+              HeaderCell { ParameterHeader(icon: "fuel", name: "Fuel") }
               HeaderCell { ParameterHeader(icon: "speed", name: "Speed") }
               HeaderCell { ParameterHeader(icon: "length", name: "Range") }
               HeaderCell { ParameterHeader(icon: "length", name: "Odom") }
@@ -73,11 +69,9 @@ struct ModelSupportSectionV2: View {
                 saeConnectables: supportMatrix.saeConnectables
               )
 
-              let years = Array(modelSupport.yearCommandSupport.keys.sorted().enumerated())
               for (modelYearIndex, modelYear) in yearRange.enumerated() {
                 if let support = supportByModelYear[modelYear] {
-                  // Text(confirmedSignals.joined(separator: ", "))
-                  EnvironmentAwareRow(isLastRow: modelYearIndex == years.count - 1) {
+                  EnvironmentAwareRow(isLastRow: modelYearIndex == yearRange.count - 1) {
                     YearsCell(years: modelYear...modelYear)
                     TesterNeededStatusCell()
                     if modelSupport.engineType.hasBattery {
@@ -85,9 +79,16 @@ struct ModelSupportSectionV2: View {
                       SupportStatusV2(supported: support[.stateOfHealth])
                       SupportStatusV2(supported: support[.isCharging])
                       SupportStatusV2(supported: support[.batteryModulesStateOfCharge])
+                    } else {
+                      NotApplicableCell(isLast: false)
+                      NotApplicableCell(isLast: false)
+                      NotApplicableCell(isLast: false)
+                      NotApplicableCell(isLast: false)
                     }
                     if modelSupport.engineType.hasFuel {
                       SupportStatusV2(supported: support[.fuelTankLevel])
+                    } else {
+                      NotApplicableCell(isLast: false)
                     }
                     SupportStatusV2(supported: support[.speed])
                     SupportStatusV2(supported: max(support[.electricRange] ?? .unknown, support[.fuelRange] ?? .unknown))
@@ -96,6 +97,11 @@ struct ModelSupportSectionV2: View {
                       max(support[.frontLeftTirePressure] ?? .unknown, support[.frontLeftTirePressure] ?? .unknown),
                       max(support[.rearLeftTirePressure] ?? .unknown, support[.rearLeftTirePressure] ?? .unknown)
                     ), isLast: true)
+                  }
+                } else {
+                  EnvironmentAwareRow(isLastRow: modelYearIndex == yearRange.count - 1) {
+                    YearsCell(years: modelYear...modelYear)
+                    TesterNeededStatusCell()
                   }
                 }
               }

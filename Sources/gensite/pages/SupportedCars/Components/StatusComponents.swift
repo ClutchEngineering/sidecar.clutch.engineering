@@ -41,6 +41,18 @@ struct NotApplicableStamp: View {
   }
 }
 
+struct NotApplicableCell: View {
+  let isLast: Bool
+  var body: some View {
+    Bordered(showTrailingBorder: !isLast) {
+      TableCell {
+        NotApplicableStamp()
+      }
+    }
+    .padding(.horizontal, 8)
+  }
+}
+
 struct SupportStatus: View {
   let supported: VehicleSupportStatus.SupportState?
   let isLast: Bool
@@ -87,12 +99,7 @@ struct SupportStatus: View {
       }
       .padding(.horizontal, 8)
     case .na:
-      Bordered(showTrailingBorder: !isLast) {
-        TableCell {
-          NotApplicableStamp()
-        }
-      }
-      .padding(.horizontal, 8)
+      NotApplicableCell(isLast: isLast)
     }
   }
 }

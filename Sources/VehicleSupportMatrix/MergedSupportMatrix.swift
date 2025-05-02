@@ -196,7 +196,10 @@ public class MergedSupportMatrix: @unchecked Sendable {
   public private(set) var saeConnectables: [SignalID: Connectable] = [:]
 
   /// Processed mapping of vehicle models to their signals and standard names, organized by year ranges
-  public private(set) var connectables: [OBDbID: YearRangeSignalMap] = [:]
+  private var connectables: [OBDbID: YearRangeSignalMap] = [:]
+  public func connectables(for obdbID: OBDbID) -> YearRangeSignalMap {
+    return connectables[obdbID] ?? YearRangeSignalMap(yearRangeSignals: [nil: saeConnectables])
+  }
 
   /// Raw data mapping from signal path to signal mappings, loaded directly from connectables.json
   private var rawConnectables: [String: [String: String]] = [:]

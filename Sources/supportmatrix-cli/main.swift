@@ -70,12 +70,12 @@ struct SupportMatrixCLI {
       exit(1)
     }
 
-    let obdbID = "Acura-TLX"
-    guard let taycan = merged.getModel(id: obdbID),
-      let yearRangeSignalMap = merged.connectables[obdbID] else {
+    let obdbID = "Porsche-Macan"
+    guard let taycan = merged.getModel(id: obdbID) else {
       exit(1)
     }
 
+    let yearRangeSignalMap = merged.connectables(for: obdbID)
     let supportByModelYear = taycan.connectableSupportByModelYear(yearRangeSignalMap: yearRangeSignalMap, saeConnectables: merged.saeConnectables)
     print(supportByModelYear)
 
