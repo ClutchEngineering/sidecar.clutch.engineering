@@ -73,6 +73,7 @@ struct SupportMatrixCLI {
     guard let taycan = merged.getModel(id: "Porsche-Taycan") else {
       exit(1)
     }
+    
     print(taycan.modelYearRange)
 
     // Display statistics

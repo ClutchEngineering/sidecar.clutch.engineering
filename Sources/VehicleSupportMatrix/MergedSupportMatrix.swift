@@ -37,6 +37,47 @@ public class MergedSupportMatrix: @unchecked Sendable {
       return minYear...maxYear
     }
 
+    public enum Connectable: String {
+      case electricRange
+      case frontLeftTirePressure
+      case frontRightTirePressure
+      case fuelRange
+      case fuelTankLevel
+      case isCharging
+      case odometer
+      case pluggedIn
+      case rearLeftTirePressure
+      case rearRightTirePressure
+      case speed
+      case stateOfCharge
+      case stateOfHealth
+      case starterBatteryVoltage
+      case distanceSinceDTCsCleared
+    }
+    public enum ConnectableSupportLevel {
+      case confirmed
+      case shouldBeSupported
+    }
+    public func connectableSupportByModelYear(yearRangeSignalMap: YearRangeSignalMap) -> [Int: [Connectable: ConnectableSupportLevel]] {
+      var support: [Int: [Connectable: ConnectableSupportLevel]] = [:]
+      for modelYear in allModelYears {
+        guard let connectedSignals = yearRangeSignalMap.connectedSignals(modelYear: modelYear) else {
+          continue
+        }
+        // yearConfirmedSignals = signals with confirmed command responses.
+        if let confirmedSignals = yearConfirmedSignals[modelYear] {
+          // var connectableSupport: [Connectable: ConnectableSupportLevel] = [:]
+          // for signal in connectables {
+          //   if let connectable = Connectable(rawValue: signal) {
+          //     connectableSupport[connectable] = .confirmed
+          //   }
+          // }
+          // return [modelYear: connectableSupport]
+        }
+      }
+      return support
+    }
+
     // Add custom coding keys for potential future compatibility
     enum CodingKeys: String, CodingKey {
       case make, model, yearCommandSupport, yearConfirmedSignals
@@ -57,11 +98,52 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
   public typealias YearRange = ClosedRange<Int>
 
+  /// Structure to manage signal mappings with year range support
+  public struct YearRangeSignalMap {
+    private var yearRangeSignals: [YearRange?: [SignalID: Connectable]] = [:]
+
+    public init() {}
+
+    public init(yearRangeSignals: [YearRange?: [SignalID: Connectable]]) {
+      self.yearRangeSignals = yearRangeSignals
+    }
+
+    public subscript(yearRange: YearRange?) -> [SignalID: Connectable]? {
+      get { yearRangeSignals[yearRange] }
+      set { yearRangeSignals[yearRange] = newValue }
+    }
+
+    public subscript(yearRange: YearRange?, default defaultValue: [SignalID: Connectable]) -> [SignalID: Connectable] {
+      get { yearRangeSignals[yearRange, default: defaultValue] }
+      set { yearRangeSignals[yearRange] = newValue }
+    }
+
+    /// Returns the signal map for a given model year, falling back to default if no specific range matches
+    /// - Parameter modelYear: The model year to find signals for
+    /// - Returns: The signal map if found, nil otherwise
+    public func connectedSignals(modelYear: Int) -> [SignalID: Connectable]? {
+      // First check for specific year ranges that contain this model year
+      for (yearRange, signals) in yearRangeSignals where yearRange != nil {
+        if let range = yearRange, range.contains(modelYear) {
+          return signals
+        }
+      }
+
+      // Fall back to default signals (nil key) if no specific range matched
+      return yearRangeSignals[nil]
+    }
+
+    /// Get all year ranges defined in this map
+    public var allYearRanges: [YearRange?] {
+      return Array(yearRangeSignals.keys)
+    }
+  }
+
   /// The merged support matrix containing all vehicle information
   public private(set) var supportMatrix: OBDbVehicleSupportMatrix = [:]
 
   /// Processed mapping of vehicle models to their signals and standard names, organized by year ranges
-  public private(set) var connectables: [OBDbID: [YearRange?: [SignalID: Connectable]]] = [:]
+  public private(set) var connectables: [OBDbID: YearRangeSignalMap] = [:]
 
   /// Raw data mapping from signal path to signal mappings, loaded directly from connectables.json
   private var rawConnectables: [String: [String: String]] = [:]
@@ -193,6 +275,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
     // Reset the connectables dictionary
     connectables = [:]
 
+    let saeConnectables = rawConnectables["SAEJ1979/signalsets/v3/default.json"] ?? [:]
+
     for (path, signalMappings) in rawConnectables {
       // Extract OBDbID and potential year range from the path
       // Format examples:
@@ -226,18 +310,14 @@ public class MergedSupportMatrix: @unchecked Sendable {
         }
       }
 
-      // Initialize the nested dictionaries if needed
-      if connectables[obdbID] == nil {
-        connectables[obdbID] = [:]
-      }
-
-      if connectables[obdbID]?[yearRange] == nil {
-        connectables[obdbID]?[yearRange] = [:]
+      // Prime the years with the SAE connectables
+      for (signalID, connectable) in saeConnectables {
+        connectables[obdbID, default: YearRangeSignalMap()][yearRange, default: [:]][signalID] = connectable
       }
 
       // Add all signal mappings for this combination
       for (signalID, connectable) in signalMappings {
-        connectables[obdbID]?[yearRange]?[signalID] = connectable
+        connectables[obdbID, default: YearRangeSignalMap()][yearRange, default: [:]][signalID] = connectable
       }
     }
   }
