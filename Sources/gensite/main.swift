@@ -23,6 +23,7 @@ let sitemap: Sitemap = [
   "scanning/extended-pids/index.html": ExtendedParameters(),
   "bug/index.html": Bug(),
   "supported-cars/index.html": SupportedCars(),
+  "supported-cars-v2/index.html": SupportedCarsV2(),
   "beta/index.html": BetaTesterHandbook(),
   "leaderboard/index.html": LeaderboardPage(),
   "leaderboard/last24hours/index.html": Leaderboard24HoursPage(),

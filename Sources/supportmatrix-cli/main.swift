@@ -63,6 +63,8 @@ struct SupportMatrixCLI {
       exit(1)
     }
 
+    print(merged.getAllMakes())
+
     // Display statistics
     let stats = merged.getStatistics()
     print("Summary:")
