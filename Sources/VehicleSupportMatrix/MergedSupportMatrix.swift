@@ -49,8 +49,22 @@ public class MergedSupportMatrix: @unchecked Sendable {
   /// Type alias for the complete support matrix mapping OBDbID to ModelSupport
   public typealias OBDbVehicleSupportMatrix = [OBDbID: ModelSupport]
 
+  /// Type alias for signal identifier (e.g., "TAYCAN_VSS")
+  public typealias SignalID = String
+
+  /// Type alias for a standard signal name (e.g., "speed")
+  public typealias Connectable = String
+
+  public typealias YearRange = ClosedRange<Int>
+
   /// The merged support matrix containing all vehicle information
   public private(set) var supportMatrix: OBDbVehicleSupportMatrix = [:]
+
+  /// Processed mapping of vehicle models to their signals and standard names, organized by year ranges
+  public private(set) var connectables: [OBDbID: [YearRange?: [SignalID: Connectable]]] = [:]
+
+  /// Raw data mapping from signal path to signal mappings, loaded directly from connectables.json
+  private var rawConnectables: [String: [String: String]] = [:]
 
   /// Optional error that occurred during the last merge operation
   public private(set) var lastError: Error?
@@ -72,6 +86,16 @@ public class MergedSupportMatrix: @unchecked Sendable {
     useCache: Bool = false
   ) async -> (matrix: MergedSupportMatrix, success: Bool) {
     let matrix = MergedSupportMatrix.shared
+
+    // First, try to load the connectables data - this is required
+    do {
+      try matrix.loadConnectables()
+      print("Loaded connectables data successfully")
+    } catch {
+      print("Failed to load connectables data: \(error.localizedDescription)")
+      matrix.lastError = error
+      return (matrix, false)
+    }
 
     // Check for cached data if useCache is enabled
     if useCache {
@@ -141,6 +165,89 @@ public class MergedSupportMatrix: @unchecked Sendable {
     } catch {
       print("Cache write failed: \(error.localizedDescription)")
     }
+  }
+
+  /// Load connectables data from the .cache/connectables.json file
+  /// - Throws: Error if the file doesn't exist or can't be parsed
+  private func loadConnectables() throws {
+    let connectablesFilePath = Self.getConnectablesFilePath()
+
+    guard FileManager.default.fileExists(atPath: connectablesFilePath.path) else {
+      throw NSError(
+        domain: "MergedSupportMatrix",
+        code: 404,
+        userInfo: [NSLocalizedDescriptionKey: "Connectables file not found at \(connectablesFilePath.path)"]
+      )
+    }
+
+    let data = try Data(contentsOf: connectablesFilePath)
+    let decoder = JSONDecoder()
+    self.rawConnectables = try decoder.decode([String: [String: String]].self, from: data)
+
+    // Process the raw connectables into the structured format
+    processConnectables()
+  }
+
+  /// Process raw connectables data into structured format with OBDbIDs and year ranges
+  private func processConnectables() {
+    // Reset the connectables dictionary
+    connectables = [:]
+
+    for (path, signalMappings) in rawConnectables {
+      // Extract OBDbID and potential year range from the path
+      // Format examples:
+      // - "Audi-TT/signalsets/v3/default.json" -> OBDbID: "Audi-TT", YearRange: nil
+      // - "Ford-F-150/signalsets/v3/2015-2018.json" -> OBDbID: "Ford-F-150", YearRange: 2015...2018
+
+      let components = path.components(separatedBy: "/")
+      guard components.count >= 4 else { continue }
+
+      let obdbID = components[0]
+      let filename = components.last ?? ""
+
+      // Extract year range if present, otherwise use nil for default
+      var yearRange: YearRange? = nil
+
+      if filename != "default.json" {
+        let yearComponent = filename.replacingOccurrences(of: ".json", with: "")
+        let yearParts = yearComponent.components(separatedBy: "-")
+
+        if yearParts.count == 2,
+           let startYear = Int(yearParts[0]),
+           let endYear = Int(yearParts[1]) {
+          yearRange = startYear...endYear
+        } else if yearParts.count == 1 && yearParts[0] == "0000" {
+          // Special case for "0000-xxxx.json" format
+          if let endYearStr = yearParts.last,
+             let endYear = Int(endYearStr) {
+            // Use a very early year as the start for "0000" ranges
+            yearRange = 1900...endYear
+          }
+        }
+      }
+
+      // Initialize the nested dictionaries if needed
+      if connectables[obdbID] == nil {
+        connectables[obdbID] = [:]
+      }
+
+      if connectables[obdbID]?[yearRange] == nil {
+        connectables[obdbID]?[yearRange] = [:]
+      }
+
+      // Add all signal mappings for this combination
+      for (signalID, connectable) in signalMappings {
+        connectables[obdbID]?[yearRange]?[signalID] = connectable
+      }
+    }
+  }
+
+  /// Get the path to the connectables file
+  /// - Returns: URL to the connectables.json file
+  private static func getConnectablesFilePath() -> URL {
+    let fileManager = FileManager.default
+    let cacheDirectory = fileManager.currentDirectoryPath + "/.cache"
+    return URL(fileURLWithPath: cacheDirectory).appendingPathComponent("connectables.json")
   }
 
   /// Load and merge vehicle data from Airtable and local vehicle metadata
