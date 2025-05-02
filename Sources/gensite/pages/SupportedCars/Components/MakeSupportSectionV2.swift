@@ -7,7 +7,7 @@ import Slipstream
 
 struct MakeSupportSectionV2: View {
   let make: Make
-  let models: [String]
+  let modelIDs: [MergedSupportMatrix.OBDbID]
   let supportMatrix: MergedSupportMatrix
   let betaSubscriptionLength: String
   let becomeBetaURL: URL?
@@ -54,13 +54,16 @@ struct MakeSupportSectionV2: View {
         .margin(.bottom, 16)
 
         VStack(alignment: .leading, spacing: 16) {
-          for model in models {
-            ModelSupportSectionV2(
-              make: make,
-              model: model,
-              supportMatrix: supportMatrix,
-              becomeBetaURL: becomeBetaURL
-            )
+          for obdbID in modelIDs {
+            if let modelSupport = supportMatrix.getModel(id: obdbID) {
+              ModelSupportSectionV2(
+                make: make,
+                modelSupport: modelSupport,
+                obdbID: obdbID,
+                supportMatrix: supportMatrix,
+                becomeBetaURL: becomeBetaURL
+              )
+            }
           }
         }
         .alignItems(.center, condition: .desktop)

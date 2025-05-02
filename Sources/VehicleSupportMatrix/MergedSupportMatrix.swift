@@ -24,6 +24,19 @@ public class MergedSupportMatrix: @unchecked Sendable {
       self.yearConfirmedSignals = yearConfirmedSignals
     }
 
+    public var allModelYears: [Int] {
+      return Set(yearCommandSupport.keys).union(Set(yearConfirmedSignals.keys)).sorted()
+    }
+
+    public var modelYearRange: ClosedRange<Int>? {
+      let allModelYears = self.allModelYears
+      guard let minYear = allModelYears.min(),
+       let maxYear = allModelYears.max() else {
+        return nil
+      }
+      return minYear...maxYear
+    }
+
     // Add custom coding keys for potential future compatibility
     enum CodingKeys: String, CodingKey {
       case make, model, yearCommandSupport, yearConfirmedSignals
@@ -201,6 +214,23 @@ public class MergedSupportMatrix: @unchecked Sendable {
     return supportMatrix.values
       .filter { $0.make == make }
       .map { $0.model }
+      .sorted()
+  }
+
+  /// Get models for a specific make
+  /// - Parameter make: The vehicle make
+  /// - Returns: Array of model names for the given make
+  public func getModel(id: OBDbID) -> ModelSupport? {
+    return supportMatrix[id]
+  }
+
+  /// Get OBDbIDs for a specific make
+  /// - Parameter make: The vehicle make
+  /// - Returns: Array of OBDbID values for the given make
+  public func getOBDbIDs(for make: String) -> [OBDbID] {
+    return supportMatrix
+      .filter { $0.value.make == make }
+      .map { $0.key }
       .sorted()
   }
 

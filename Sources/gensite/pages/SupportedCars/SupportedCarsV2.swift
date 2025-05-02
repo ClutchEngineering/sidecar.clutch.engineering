@@ -198,7 +198,7 @@ struct SupportedCarsV2: View {
         for make in makes {
           MakeSupportSectionV2(
             make: make,
-            models: supportMatrix.getModels(for: make),
+            modelIDs: supportMatrix.getOBDbIDs(for: make),
             supportMatrix: supportMatrix,
             betaSubscriptionLength: betaSubscriptionLength,
             becomeBetaURL: becomeBetaURL
