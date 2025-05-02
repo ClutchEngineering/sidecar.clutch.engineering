@@ -104,9 +104,13 @@ public class VehicleMetadataParser {
           "command_support.yaml")
 
         if fileManager.fileExists(atPath: commandSupportPath) {
-          let yamlData = try String(contentsOfFile: commandSupportPath, encoding: .utf8)
-          let commandSupport = try YAMLDecoder().decode(CommandSupport.self, from: yamlData)
-          yearData[year] = commandSupport
+          do {
+            let yamlData = try String(contentsOfFile: commandSupportPath, encoding: .utf8)
+            let commandSupport = try YAMLDecoder().decode(CommandSupport.self, from: yamlData)
+            yearData[year] = commandSupport
+          } catch let error {
+            print("Failed to load vehicle data: \(error)")
+          }
         }
       }
     }

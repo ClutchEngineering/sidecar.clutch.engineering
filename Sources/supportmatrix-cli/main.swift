@@ -236,7 +236,7 @@ struct SupportMatrixCLI {
     )
 
     print("  • ECUs:")
-    for (ecu, commands) in commandSupport.supportedCommandsByEcu {
+    for (ecu, commands) in (commandSupport.supportedCommandsByEcu ?? [:]) {
       print("    • \(ecu): \(commands.count) commands")
 
       // Optionally print all commands (uncomment if needed)

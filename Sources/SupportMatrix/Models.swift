@@ -9,11 +9,11 @@ public struct CommandSupport: Codable {
   public var modelYear: Int
   public var canIdFormat: String
   public var extendedAddressingEnabled: Bool
-  public var supportedCommandsByEcu: [String: [String]]
+  public var supportedCommandsByEcu: [String: [String]]?
 
   public var allSupportedSignals: [String] {
     var allSignals = Set<String>()
-    for ecuCommands in supportedCommandsByEcu.values {
+    for ecuCommands in (supportedCommandsByEcu ?? [:]).values {
       for commandAndSignals in ecuCommands {
         // Split the command and signals
         let components = commandAndSignals.components(separatedBy: ":")

@@ -518,6 +518,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
           let model = record.fields.model,
           let obdbID = record.fields.obdbID,
           let engineType = record.fields.engineType else {
+          print("Unknown record: \(record)")
           continue
         }
 
@@ -531,7 +532,10 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
         if let symbolSVGs = record.fields.symbolSVG {
           for asset in symbolSVGs {
-            // TODO: Download (from asset.url) and cache the image asset in the .cache directory (using asset.filename) if it doesn't already exist
+            // Download and cache image assets
+            Task {
+              await downloadAndCacheAsset(url: URL(string: asset.url)!, filename: asset.filename)
+            }
           }
         }
       }
@@ -561,6 +565,50 @@ public class MergedSupportMatrix: @unchecked Sendable {
     } catch {
       lastError = error
       return false
+    }
+  }
+
+  /// Download and cache an asset from a URL if it doesn't already exist in the cache
+  /// - Parameters:
+  ///   - url: The URL of the asset to download
+  ///   - filename: The filename to use when saving the asset
+  private func downloadAndCacheAsset(url: URL, filename: String) async {
+    let fileManager = FileManager.default
+    let cacheDirectory = fileManager.currentDirectoryPath + "/.cache/images"
+    let filePath = URL(fileURLWithPath: cacheDirectory).appendingPathComponent(filename)
+
+    // Create cache/images directory if it doesn't exist
+    if !fileManager.fileExists(atPath: cacheDirectory) {
+      do {
+        try fileManager.createDirectory(atPath: cacheDirectory, withIntermediateDirectories: true)
+      } catch {
+        print("Error creating cache directory: \(error.localizedDescription)")
+        return
+      }
+    }
+
+    // Check if file already exists in cache
+    if fileManager.fileExists(atPath: filePath.path) {
+      // File already cached, no need to download
+      return
+    }
+
+    // Download the file
+    do {
+      let (data, response) = try await URLSession.shared.data(from: url)
+
+      // Verify we got a successful response
+      guard let httpResponse = response as? HTTPURLResponse,
+            (200...299).contains(httpResponse.statusCode) else {
+        print("Error downloading asset from \(url): Invalid response")
+        return
+      }
+
+      // Write file to cache
+      try data.write(to: filePath)
+      print("Successfully cached asset: \(filename)")
+    } catch {
+      print("Error downloading or caching asset \(filename): \(error.localizedDescription)")
     }
   }
 
@@ -626,7 +674,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
     for (obdbID, modelSupport) in supportMatrix {
       for (year, commandSupport) in modelSupport.yearCommandSupport {
-        let isSupported = commandSupport.supportedCommandsByEcu.values.contains { commands in
+        let isSupported = (commandSupport.supportedCommandsByEcu ?? [:]).values.contains { commands in
           commands.contains { $0.starts(with: command + ":") }
         }
 

@@ -63,7 +63,7 @@ public final class SupportMatrix: @unchecked Sendable {
     for (make, models) in metadata.vehicles {
       for (model, years) in models {
         for (year, support) in years {
-          for (_, commands) in support.supportedCommandsByEcu {
+          for (_, commands) in (support.supportedCommandsByEcu ?? [:]) {
             for cmdWithParams in commands {
               if cmdWithParams.starts(with: command + ":") {
                 if result[make] == nil {
