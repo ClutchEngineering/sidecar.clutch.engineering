@@ -199,6 +199,7 @@ struct SupportedCarsV2: View {
           MakeSupportSectionV2(
             make: make,
             models: supportMatrix.getModels(for: make),
+            supportMatrix: supportMatrix,
             betaSubscriptionLength: betaSubscriptionLength,
             becomeBetaURL: becomeBetaURL
           )

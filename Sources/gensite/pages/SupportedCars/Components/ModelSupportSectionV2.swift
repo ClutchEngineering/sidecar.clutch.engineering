@@ -1,17 +1,15 @@
 import Foundation
-import Slipstream
+
 import VehicleSupport
+import VehicleSupportMatrix
+
+import Slipstream
 
 struct ModelSupportSectionV2: View {
   let make: Make
   let model: String
+  let supportMatrix: MergedSupportMatrix
   let becomeBetaURL: URL?
-
-  init(make: Make, model: String, becomeBetaURL: URL? = URL(string: "/beta")) {
-    self.make = make
-    self.model = model
-    self.becomeBetaURL = becomeBetaURL
-  }
 
   var body: some View {
     let id = "\(make)-\(model)"
@@ -61,27 +59,31 @@ struct ModelSupportSectionV2: View {
           }
           .background(.gray, darkness: 100)
           .background(.zinc, darkness: 950, condition: .dark)
-          // TableBody {
-          //   for (statusIndex, status) in statuses.sorted(by: { $0.years.lowerBound < $1.years.lowerBound }).enumerated() {
-          //     EnvironmentAwareRow(isLastRow: statusIndex == statuses.count - 1) {
-          //       YearsCell(years: status.years)
-          //       TestingStatusCell(status: status, becomeBetaURL: becomeBetaURL)
-          //       if case .testerNeeded = status.testingStatus {
-          //         // Do nothing.
-          //       } else {
-          //         SupportStatus(supported: status.stateOfCharge)
-          //         SupportStatus(supported: status.stateOfHealth)
-          //         SupportStatus(supported: status.charging)
-          //         SupportStatus(supported: status.cells)
-          //         SupportStatus(supported: status.fuelLevel)
-          //         SupportStatus(supported: status.speed)
-          //         SupportStatus(supported: status.range)
-          //         SupportStatus(supported: status.odometer)
-          //         SupportStatus(supported: status.tirePressure, isLast: true)
-          //       }
-          //     }
-          //   }
-          // }
+
+          TableBody {
+            let years = Array(supportMatrix.getYears(for: make, model: model).enumerated())
+            for (modelYearIndex, modelYear) in years {
+              let confirmedSignals = supportMatrix.getConfirmedSignals(for: make, model: model, year: modelYear)
+              Text(confirmedSignals.joined(separator: ", "))
+              EnvironmentAwareRow(isLastRow: modelYearIndex == years.count - 1) {
+                YearsCell(years: modelYear...modelYear)
+                // TestingStatusCell(status: status, becomeBetaURL: becomeBetaURL)
+                // if case .testerNeeded = status.testingStatus {
+                //   // Do nothing.
+                // } else {
+                //   SupportStatus(supported: status.stateOfCharge)
+                //   SupportStatus(supported: status.stateOfHealth)
+                //   SupportStatus(supported: status.charging)
+                //   SupportStatus(supported: status.cells)
+                //   SupportStatus(supported: status.fuelLevel)
+                //   SupportStatus(supported: status.speed)
+                //   SupportStatus(supported: status.range)
+                //   SupportStatus(supported: status.odometer)
+                //   SupportStatus(supported: status.tirePressure, isLast: true)
+                // }
+              }
+            }
+          }
         }
         .frame(width: .full, condition: .desktop)
       }

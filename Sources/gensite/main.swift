@@ -102,3 +102,5 @@ let sitemap: Sitemap = [
 ]
 
 try renderSitemap(sitemap, to: outputURL)
+
+print("Done")

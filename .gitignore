@@ -18,3 +18,4 @@ workspace/
 
 .env
 .cache/
+.schemas/

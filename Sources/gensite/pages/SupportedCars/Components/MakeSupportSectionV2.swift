@@ -1,24 +1,16 @@
 import Foundation
-import Slipstream
+
 import VehicleSupport
+import VehicleSupportMatrix
+
+import Slipstream
 
 struct MakeSupportSectionV2: View {
   let make: Make
   let models: [String]
+  let supportMatrix: MergedSupportMatrix
   let betaSubscriptionLength: String
   let becomeBetaURL: URL?
-
-  init(
-    make: Make,
-    models: [String],
-    betaSubscriptionLength: String,
-    becomeBetaURL: URL?
-  ) {
-    self.make = make
-    self.models = models
-    self.betaSubscriptionLength = betaSubscriptionLength
-    self.becomeBetaURL = becomeBetaURL
-  }
 
   var body: some View {
     Section {
@@ -63,7 +55,12 @@ struct MakeSupportSectionV2: View {
 
         VStack(alignment: .leading, spacing: 16) {
           for model in models {
-            ModelSupportSectionV2(make: make, model: model, becomeBetaURL: becomeBetaURL)
+            ModelSupportSectionV2(
+              make: make,
+              model: model,
+              supportMatrix: supportMatrix,
+              becomeBetaURL: becomeBetaURL
+            )
           }
         }
         .alignItems(.center, condition: .desktop)
