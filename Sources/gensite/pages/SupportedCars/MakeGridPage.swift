@@ -2,7 +2,7 @@ import Foundation
 import Slipstream
 import VehicleSupportMatrix
 
-struct SupportedCarsV2: View {
+struct MakeGridPage: View {
   let supportMatrix: MergedSupportMatrix
   let makes: [String]
 
@@ -106,7 +106,7 @@ struct SupportedCarsV2: View {
                 .bold()
                 .fontDesign("rounded")
             }
-            Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Sidecar for free.")
+            Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996 and vehicles worldwide in the 2000's. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Sidecar for free.")
           }
           .padding([.top, .horizontal], 16)
           .background(.zinc, darkness: 0)
@@ -120,63 +120,6 @@ struct SupportedCarsV2: View {
 
       Section {
         ContentContainer {
-          VStack(alignment: .leading, spacing: 16) {
-            H1("Legend")
-              .fontSize(.extraLarge)
-              .fontSize(.fourXLarge, condition: .desktop)
-              .bold()
-              .fontDesign("rounded")
-
-            HStack(spacing: 16) {
-              SupportedSeal()
-              Text("Vehicle is fully onboarded and does not currently need new beta testers.")
-            }
-            HStack(spacing: 16) {
-              OBDStamp()
-              Text {
-                DOMString("Feature is supported via OBD. ")
-                Link("Requires a connected OBD-II scanner.", destination: URL(string: "/scanning/"))
-                  .textColor(.link, darkness: 700)
-                  .textColor(.link, darkness: 400, condition: .dark)
-                  .fontWeight(600)
-                  .underline(condition: .hover)
-              }
-            }
-            HStack(spacing: 16) {
-              OTAStamp()
-              Text("Feature is supported via Connected Accounts.")
-            }
-            HStack(spacing: 16) {
-              NotApplicableStamp()
-              Text("Not applicable to this vehicle.")
-            }
-            HStack(spacing: 16) {
-              Text {
-                Span("PID?")
-                  .bold()
-                DOMString(" The OBD parameter identifier (PID) is unknown.")
-              }
-            }
-          }
-          .alignItems(.center, condition: .desktop)
-          .textAlignment(.center, condition: .desktop)
-          .padding(.vertical, 16)
-        }
-      }
-      .margin(.bottom, 32)
-
-      HorizontalRule()
-
-      Section {
-        ContentContainer {
-          H1("Jump to your make")
-            .fontSize(.extraLarge)
-            .fontSize(.fourXLarge, condition: .desktop)
-            .bold()
-            .fontDesign("rounded")
-            .textAlignment(.center)
-            .margin(.bottom, 32)
-
           Div {
             for make in makes {
               MakeLink(make: make)
@@ -187,21 +130,6 @@ struct SupportedCarsV2: View {
         }
       }
       .margin(.vertical, 64)
-
-      HorizontalRule()
-
-      VStack(alignment: .center, spacing: 64) {
-        for make in makes {
-          MakeSupportSectionV2(
-            make: make,
-            modelIDs: supportMatrix.getOBDbIDs(for: make),
-            supportMatrix: supportMatrix,
-            betaSubscriptionLength: betaSubscriptionLength,
-            becomeBetaURL: becomeBetaURL
-          )
-        }
-      }
-      .margin(.vertical, 32)
     }
   }
 }

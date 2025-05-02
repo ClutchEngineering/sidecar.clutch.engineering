@@ -15,9 +15,6 @@ struct MakeSupportSectionV2: View {
   var body: some View {
     Section {
       ContentContainer {
-        MakeCard(make: make)
-          .margin(.bottom, 16)
-
         VStack(alignment: .center, spacing: 8) {
           Link(becomeBetaURL) {
             VStack(alignment: .center, spacing: 4) {

@@ -76,7 +76,7 @@ assert(success, "Failed to load vehicle metadata")
 
 print("Generating sitemap...")
 
-let sitemap: Sitemap = [
+var sitemap: Sitemap = [
   // "index.html": Home(),
   // "privacy-policy/index.html": PrivacyPolicy(
   //   appName: "Sidecar",
@@ -93,7 +93,7 @@ let sitemap: Sitemap = [
   // "scanning/extended-pids/index.html": ExtendedParameters(),
   // "bug/index.html": Bug(),
   // "supported-cars/index.html": SupportedCars(),
-  "supported-cars-v2/index.html": SupportedCarsV2(supportMatrix: supportMatrix),
+  "supported-cars/index.html": MakeGridPage(supportMatrix: supportMatrix),
   // "beta/index.html": BetaTesterHandbook(),
   // "leaderboard/index.html": LeaderboardPage(),
   // "leaderboard/last24hours/index.html": Leaderboard24HoursPage(),
@@ -103,6 +103,27 @@ let sitemap: Sitemap = [
   // "help/index.html": Help(),
 ]
 
-try renderSitemap(sitemap, to: outputURL)
+for make in supportMatrix.getAllMakes() {
+  guard let url = MakeLink.url(for: make) else {
+    continue
+  }
+  sitemap[url.appending(component: "index.html").path()] = MakePage(supportMatrix: supportMatrix, make: make)
+}
+
+func renderSitemapWithLogs(_ sitemap: Sitemap, to folder: URL, encoding: String.Encoding = .utf8) throws {
+  for (path, view) in sitemap.sorted(by: { $0.key < $1.key }) {
+    print("Rendering \(path)")
+
+    let output = try "<!DOCTYPE html>\n" + renderHTML(view)
+    let fileURL = folder.appending(path: path)
+    let folderURL = fileURL.deletingLastPathComponent()
+    if !FileManager.default.fileExists(atPath: folderURL.path(percentEncoded: false)) {
+      try FileManager.default.createDirectory(at: folderURL, withIntermediateDirectories: true)
+    }
+    try output.write(to: fileURL, atomically: true, encoding: encoding)
+  }
+}
+
+try renderSitemapWithLogs(sitemap, to: outputURL)
 
 print("Done")

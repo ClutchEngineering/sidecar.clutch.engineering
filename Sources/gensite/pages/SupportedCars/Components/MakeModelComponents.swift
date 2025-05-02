@@ -5,13 +5,13 @@ import VehicleSupport
 func makeNameForSorting(_ string: Make) -> String {
   string
     .lowercased()
-    .replacingOccurrences(of: " ", with: "")
+    .replacingOccurrences(of: " ", with: "-")
     .applyingTransform(.stripDiacritics, reverse: false)!
 }
 
 func modelNameForSorting(_ model: Model) -> String {
   model.name
-    .replacingOccurrences(of: " ", with: "")
+    .replacingOccurrences(of: " ", with: "-")
     .applyingTransform(.stripDiacritics, reverse: false)!
 }
 
@@ -75,10 +75,14 @@ struct MakeGridCard: View {
 struct MakeLink: View {
   let make: Make
   var body: some View {
-    Link(URL(string: "#\(make)")) {
+    Link(MakeLink.url(for: make)) {
       MakeGridCard(make: make)
     }
     .underline(condition: .hover)
+  }
+
+  static func url(for make: Make) -> URL? {
+    URL(string: "/supported-cars/\(makeNameForSorting(make))")
   }
 }
 

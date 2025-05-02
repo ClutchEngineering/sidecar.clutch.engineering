@@ -1,14 +1,25 @@
 import Foundation
 import Slipstream
-import VehicleSupport
+import VehicleSupportMatrix
 
 let becomeBetaURL = URL(string: "/beta")
 
 struct SupportedCars: View {
-  let makes: [Make: [Model: [VehicleSupportStatus]]]
+  let supportMatrix: MergedSupportMatrix
+  let makes: [String]
 
-  init() {
-    makes = try! VehicleSupportStatus.loadAll()
+  init(supportMatrix: MergedSupportMatrix) {
+    self.supportMatrix = supportMatrix
+    let gfxURL = outputURL.appending(path: "gfx/make")
+    let fm = FileManager.default
+
+    self.makes = supportMatrix.getAllMakes().filter {
+      if !fm.fileExists(atPath: gfxURL.appending(component: makeNameForIcon($0)).appendingPathExtension("svg").path()) {
+        print("Dropping make: \($0) because no SVG found")
+        return false
+      }
+      return true
+    }.sorted(by: { makeNameForSorting($0) < makeNameForSorting($1) })
   }
 
   var body: some View {
@@ -56,7 +67,7 @@ struct SupportedCars: View {
                   .fontSize(.extraLarge, condition: .desktop)
                   .fontWeight(.medium)
                   .fontDesign("rounded")
-                Text("Learn more or book an onboarding appointment")
+                Text("Learn more ")
                   .fontWeight(.bold)
                   .fontDesign("rounded")
                   .fontSize(.large)
@@ -97,7 +108,7 @@ struct SupportedCars: View {
                 .bold()
                 .fontDesign("rounded")
             }
-            Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Sidecar for free.")
+            Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996 and vehicles worldwide in the 2000's. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Sidecar for free.")
           }
           .padding([.top, .horizontal], 16)
           .background(.zinc, darkness: 0)
@@ -169,7 +180,7 @@ struct SupportedCars: View {
             .margin(.bottom, 32)
 
           Div {
-            for make in makes.keys.sorted(by: { makeNameForSorting($0) < makeNameForSorting($1) }) {
+            for make in makes {
               MakeLink(make: make)
             }
           }
@@ -177,15 +188,16 @@ struct SupportedCars: View {
           .classNames(["grid-cols-3", "md:grid-cols-5", "gap-x-4", "gap-y-8"])
         }
       }
-      .margin(.vertical, 32)
+      .margin(.vertical, 64)
 
       HorizontalRule()
 
       VStack(alignment: .center, spacing: 64) {
-        for (make, models) in makes.sorted(by: { $0.key.lowercased() < $1.key.lowercased() }) {
-          MakeSupportSection(
+        for make in makes {
+          MakeSupportSectionV2(
             make: make,
-            models: models,
+            modelIDs: supportMatrix.getOBDbIDs(for: make),
+            supportMatrix: supportMatrix,
             betaSubscriptionLength: betaSubscriptionLength,
             becomeBetaURL: becomeBetaURL
           )
