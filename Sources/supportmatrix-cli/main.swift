@@ -70,7 +70,7 @@ struct SupportMatrixCLI {
       exit(1)
     }
 
-    let obdbID = "Porsche-Taycan"
+    let obdbID = "Honda-Civic"
     guard let taycan = merged.getModel(id: obdbID) else {
       exit(1)
     }

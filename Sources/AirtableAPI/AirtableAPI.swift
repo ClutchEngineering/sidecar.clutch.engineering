@@ -25,6 +25,7 @@ public struct AirtableRecord: Codable, Sendable {
     public let numberOfDrivers: Int?
     public let numberOfMilesDriven: Int?
     public let engineType: String?
+    public let symbolSVG: [RecordAsset]?
 
     public var alternateModelIDs: [String] {
       guard let alternateModels,
@@ -40,6 +41,15 @@ public struct AirtableRecord: Codable, Sendable {
         .map { make + "/" + $0.trimmingCharacters(in: .whitespaces) }
     }
 
+    public struct RecordAsset: Codable, Sendable {
+      public let id: String
+      public let width: Int
+      public let height: Int
+      public let url: String
+      public let filename: String
+      public let type: String
+    }
+
     enum CodingKeys: String, CodingKey {
       case ID
       case make = "Make (string)"
@@ -47,6 +57,7 @@ public struct AirtableRecord: Codable, Sendable {
       case alternateModels = "Alternate models"
       case obdbID = "OBDb ID"
       case engineType = "Engine type"
+      case symbolSVG = "Symbol (from Vehicle symbols)"
       case numberOfDrivers = "Number of drivers"
       case numberOfMilesDriven = "Number of miles driven"
     }
