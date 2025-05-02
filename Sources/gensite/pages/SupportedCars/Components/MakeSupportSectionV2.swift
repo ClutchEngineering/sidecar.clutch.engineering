@@ -4,9 +4,21 @@ import VehicleSupport
 
 struct MakeSupportSectionV2: View {
   let make: Make
-  // let models: [Model: [VehicleSupportStatus]]
+  let models: [String]
   let betaSubscriptionLength: String
   let becomeBetaURL: URL?
+
+  init(
+    make: Make,
+    models: [String],
+    betaSubscriptionLength: String,
+    becomeBetaURL: URL?
+  ) {
+    self.make = make
+    self.models = models
+    self.betaSubscriptionLength = betaSubscriptionLength
+    self.becomeBetaURL = becomeBetaURL
+  }
 
   var body: some View {
     Section {
@@ -49,12 +61,12 @@ struct MakeSupportSectionV2: View {
         .margin(.horizontal, .auto)
         .margin(.bottom, 16)
 
-        // VStack(alignment: .leading, spacing: 16) {
-        //   for (model, statuses) in models.sortedByLocalizedStandard() {
-        //     ModelSupportSection(make: make, model: model, statuses: statuses, becomeBetaURL: becomeBetaURL)
-        //   }
-        // }
-        // .alignItems(.center, condition: .desktop)
+        VStack(alignment: .leading, spacing: 16) {
+          for model in models {
+            ModelSupportSectionV2(make: make, model: model, becomeBetaURL: becomeBetaURL)
+          }
+        }
+        .alignItems(.center, condition: .desktop)
       }
     }
     .id(make)

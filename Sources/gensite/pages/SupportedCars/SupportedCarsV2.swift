@@ -6,7 +6,6 @@ struct SupportedCarsV2: View {
   let supportMatrix: MergedSupportMatrix
   let makes: [String]
 
-  @MainActor
   init(supportMatrix: MergedSupportMatrix) {
     self.supportMatrix = supportMatrix
     let gfxURL = outputURL.appending(path: "gfx/make")
@@ -199,7 +198,7 @@ struct SupportedCarsV2: View {
         for make in makes {
           MakeSupportSectionV2(
             make: make,
-            // models: models,
+            models: supportMatrix.getModels(for: make),
             betaSubscriptionLength: betaSubscriptionLength,
             becomeBetaURL: becomeBetaURL
           )

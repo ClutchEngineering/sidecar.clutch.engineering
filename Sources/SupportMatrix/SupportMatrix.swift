@@ -1,8 +1,7 @@
 import Foundation
 
 /// SupportMatrix provides access to vehicle metadata parsed from the workspace directory
-@MainActor
-public final class SupportMatrix {
+public final class SupportMatrix: @unchecked Sendable {
   /// The shared instance for accessing vehicle metadata
   public static let shared = SupportMatrix()
 

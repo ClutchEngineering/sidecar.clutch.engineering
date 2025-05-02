@@ -3,8 +3,7 @@ import Foundation
 import SupportMatrix
 
 /// Provides a unified API to retrieve vehicle support information by merging Airtable data with local vehicle metadata
-@MainActor
-public class MergedSupportMatrix {
+public class MergedSupportMatrix: @unchecked Sendable {
   /// Shared singleton instance
   public static let shared = MergedSupportMatrix()
 
