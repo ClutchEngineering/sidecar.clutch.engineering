@@ -18,7 +18,7 @@ struct SupportedCarsV2: View {
         return false
       }
       return true
-    }
+    }.sorted(by: { makeNameForSorting($0) < makeNameForSorting($1) })
   }
 
   var body: some View {
@@ -178,7 +178,7 @@ struct SupportedCarsV2: View {
           .margin(.bottom, 32)
 
         Div {
-          for make in makes.sorted(by: { makeNameForSorting($0) < makeNameForSorting($1) }) {
+          for make in makes {
             MakeLink(make: make)
           }
         }
@@ -193,19 +193,19 @@ struct SupportedCarsV2: View {
       }
       .margin(.vertical, 64)
 
-      // HorizontalRule()
+      HorizontalRule()
 
-      // VStack(alignment: .center, spacing: 64) {
-      //   for (make, models) in makes.sorted(by: { $0.key.lowercased() < $1.key.lowercased() }) {
-      //     MakeSupportSection(
-      //       make: make,
-      //       models: models,
-      //       betaSubscriptionLength: betaSubscriptionLength,
-      //       becomeBetaURL: becomeBetaURL
-      //     )
-      //   }
-      // }
-      // .margin(.vertical, 32)
+      VStack(alignment: .center, spacing: 64) {
+        for make in makes {
+          MakeSupportSectionV2(
+            make: make,
+            // models: models,
+            betaSubscriptionLength: betaSubscriptionLength,
+            becomeBetaURL: becomeBetaURL
+          )
+        }
+      }
+      .margin(.vertical, 32)
     }
   }
 }

@@ -4,6 +4,7 @@ import VehicleSupport
 
 func makeNameForSorting(_ string: Make) -> String {
   string
+    .lowercased()
     .replacingOccurrences(of: " ", with: "")
     .applyingTransform(.stripDiacritics, reverse: false)!
 }
