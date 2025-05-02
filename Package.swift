@@ -30,8 +30,11 @@ let package = Package(
     .target(name: "PostHogAPI"),
 
     .executableTarget(name: "gensite", dependencies: [
+      "AirtableAPI",
+      "DotEnvAPI",
       .product(name: "Slipstream", package: "slipstream"),
       "VehicleSupport",
+      "VehicleSupportMatrix",
     ], resources: [
       .process("export-carplay-distance-traveled-by-model-yesterday.csv"),
       .process("export-carplay-distance-traveled-by-model.csv"),

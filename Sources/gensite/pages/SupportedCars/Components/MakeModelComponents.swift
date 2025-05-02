@@ -14,16 +14,20 @@ func modelNameForSorting(_ model: Model) -> String {
     .applyingTransform(.stripDiacritics, reverse: false)!
 }
 
+func makeNameForIcon(_ make: Make) -> String {
+  make
+    .replacingOccurrences(of: " ", with: "")
+    .replacingOccurrences(of: "-s", with: "")
+    .replacingOccurrences(of: "/", with: "-")
+    .applyingTransform(.stripDiacritics, reverse: false)!
+    .lowercased()
+}
+
 struct MakeCard: View {
   let make: Make
 
   var formattedMake: String {
-    make
-      .replacingOccurrences(of: " ", with: "")
-      .replacingOccurrences(of: "-s", with: "")
-      .replacingOccurrences(of: "/", with: "-")
-      .applyingTransform(.stripDiacritics, reverse: false)!
-      .lowercased()
+    makeNameForIcon(make)
   }
 
   var body: some View {

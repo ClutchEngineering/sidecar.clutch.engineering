@@ -9,7 +9,7 @@ public class MergedSupportMatrix {
   public static let shared = MergedSupportMatrix()
 
   /// Structure to hold combined model data with command support information
-  public struct ModelSupport {
+  public struct ModelSupport: Codable {
     public let make: String
     public let model: String
     public var yearCommandSupport: [Int: CommandSupport]
@@ -23,6 +23,11 @@ public class MergedSupportMatrix {
       self.model = model
       self.yearCommandSupport = yearCommandSupport
       self.yearConfirmedSignals = yearConfirmedSignals
+    }
+
+    // Add custom coding keys for potential future compatibility
+    enum CodingKeys: String, CodingKey {
+      case make, model, yearCommandSupport, yearConfirmedSignals
     }
   }
 
@@ -39,6 +44,92 @@ public class MergedSupportMatrix {
   public private(set) var lastError: Error?
 
   private init() {}
+
+  /// Static function to load the MergedSupportMatrix with optional caching
+  /// - Parameters:
+  ///   - airtableClient: The Airtable client to use for fetching models
+  ///   - modelsTableID: The ID of the models table in Airtable
+  ///   - workspacePath: Path to the local workspace containing vehicle metadata
+  ///   - useCache: Whether to use cached data if available (and cache new data)
+  /// - Returns: A tuple containing the loaded MergedSupportMatrix and a boolean indicating success
+  @discardableResult
+  public static func load(
+    using airtableClient: AirtableClient,
+    modelsTableID: String,
+    workspacePath: String,
+    useCache: Bool = false
+  ) async -> (matrix: MergedSupportMatrix, success: Bool) {
+    let matrix = MergedSupportMatrix.shared
+
+    // Check for cached data if useCache is enabled
+    if useCache {
+      if let cachedMatrix = await tryLoadFromCache() {
+        // We have a cached matrix - use it
+        matrix.supportMatrix = cachedMatrix.supportMatrix
+        print("Loaded vehicle support matrix from cache")
+        return (matrix, true)
+      }
+    }
+
+    // No cache available or caching disabled, perform full load
+    let success = await matrix.loadAndMerge(
+      using: airtableClient,
+      modelsTableID: modelsTableID,
+      workspacePath: workspacePath
+    )
+
+    // Save to cache if successful and caching is enabled
+    if success && useCache {
+      await saveToCacheAsync(matrix: matrix)
+    }
+
+    return (matrix, success)
+  }
+
+  // Helper function to construct the cache file path
+  private static func getCacheFilePath() -> URL {
+    let fileManager = FileManager.default
+    let cacheDirectory = fileManager.currentDirectoryPath + "/.cache"
+
+    // Create cache directory if it doesn't exist
+    if !fileManager.fileExists(atPath: cacheDirectory) {
+      try? fileManager.createDirectory(atPath: cacheDirectory, withIntermediateDirectories: true)
+    }
+
+    return URL(fileURLWithPath: cacheDirectory).appendingPathComponent("mergedSupportMatrix.cache")
+  }
+
+  // Try to load the matrix from cache
+  private static func tryLoadFromCache() async -> MergedSupportMatrix? {
+    let cacheFilePath = getCacheFilePath()
+
+    do {
+      let data = try Data(contentsOf: cacheFilePath)
+      let decoder = JSONDecoder()
+      let cachedMatrix = try decoder.decode(OBDbVehicleSupportMatrix.self, from: data)
+
+      let matrix = MergedSupportMatrix()
+      matrix.supportMatrix = cachedMatrix
+      return matrix
+    } catch {
+      print("Cache read failed: \(error.localizedDescription)")
+      return nil
+    }
+  }
+
+  // Save matrix to cache asynchronously
+  private static func saveToCacheAsync(matrix: MergedSupportMatrix) async {
+    let cacheFilePath = getCacheFilePath()
+
+    do {
+      let encoder = JSONEncoder()
+      let data = try encoder.encode(matrix.supportMatrix)
+      try data.write(to: cacheFilePath)
+      print("Saved vehicle support matrix to cache")
+    } catch {
+      print("Cache write failed: \(error.localizedDescription)")
+    }
+  }
 
   /// Load and merge vehicle data from Airtable and local vehicle metadata
   /// - Parameters:

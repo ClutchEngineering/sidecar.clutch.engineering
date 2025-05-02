@@ -30,7 +30,11 @@ struct SupportMatrixCLI {
     let workspacePath: String
     let args = CommandLine.arguments
 
-    if args.count > 1 {
+    // Check if cache should be used (default is false)
+    let useCache = args.contains("--use-cache")
+
+    // Extract workspace path from arguments
+    if args.count > 1 && !args[1].hasPrefix("--") {
       workspacePath = args[1]
     } else {
       // Default to the workspace directory in the current project
@@ -44,14 +48,17 @@ struct SupportMatrixCLI {
 
     // Load and merge vehicle data
     print("Loading vehicle metadata from: \(workspacePath)")
+    if useCache {
+      print("Using cached data if available")
+    }
     print("")
 
-    // Use our new MergedSupportMatrix to load and merge the data
-    let merged = MergedSupportMatrix.shared
-    let success = await merged.loadAndMerge(
+    // Use our new static function to load the MergedSupportMatrix
+    let (merged, success) = await MergedSupportMatrix.load(
       using: airtableClient,
       modelsTableID: modelsTableID,
-      workspacePath: workspacePath
+      workspacePath: workspacePath,
+      useCache: useCache
     )
 
     if !success {

@@ -1,12 +1,24 @@
 import Foundation
 import Slipstream
-import VehicleSupport
+import VehicleSupportMatrix
 
 struct SupportedCarsV2: View {
-  let makes: [Make: [Model: [VehicleSupportStatus]]]
+  let supportMatrix: MergedSupportMatrix
+  let makes: [String]
 
-  init() {
-    makes = try! VehicleSupportStatus.loadAll()
+  @MainActor
+  init(supportMatrix: MergedSupportMatrix) {
+    self.supportMatrix = supportMatrix
+    let gfxURL = outputURL.appending(path: "gfx/make")
+    let fm = FileManager.default
+
+    self.makes = supportMatrix.getAllMakes().filter {
+      if !fm.fileExists(atPath: gfxURL.appending(component: makeNameForIcon($0)).appendingPathExtension("svg").path()) {
+        print("Dropping make: \($0) because no SVG found")
+        return false
+      }
+      return true
+    }
   }
 
   var body: some View {
@@ -157,39 +169,43 @@ struct SupportedCarsV2: View {
       HorizontalRule()
 
       Section {
-        ContentContainer {
-          H1("Jump to your make")
-            .fontSize(.extraLarge)
-            .fontSize(.fourXLarge, condition: .desktop)
-            .bold()
-            .fontDesign("rounded")
-            .textAlignment(.center)
-            .margin(.bottom, 32)
+        H1("Jump to your make")
+          .fontSize(.extraLarge)
+          .fontSize(.fourXLarge, condition: .desktop)
+          .bold()
+          .fontDesign("rounded")
+          .textAlignment(.center)
+          .margin(.bottom, 32)
 
-          Div {
-            for make in makes.keys.sorted(by: { makeNameForSorting($0) < makeNameForSorting($1) }) {
-              MakeLink(make: make)
-            }
+        Div {
+          for make in makes.sorted(by: { makeNameForSorting($0) < makeNameForSorting($1) }) {
+            MakeLink(make: make)
           }
-          .display(.grid)
-          .classNames(["grid-cols-3", "md:grid-cols-5", "gap-x-4", "gap-y-8"])
         }
+        .display(.flex)
+        .padding(.horizontal, 32)
+        .classNames([
+          "flex-wrap",
+          "justify-center",
+          "gap-10",
+          "w-full"
+        ])
       }
-      .margin(.vertical, 32)
+      .margin(.vertical, 64)
 
-      HorizontalRule()
+      // HorizontalRule()
 
-      VStack(alignment: .center, spacing: 64) {
-        for (make, models) in makes.sorted(by: { $0.key.lowercased() < $1.key.lowercased() }) {
-          MakeSupportSection(
-            make: make,
-            models: models,
-            betaSubscriptionLength: betaSubscriptionLength,
-            becomeBetaURL: becomeBetaURL
-          )
-        }
-      }
-      .margin(.vertical, 32)
+      // VStack(alignment: .center, spacing: 64) {
+      //   for (make, models) in makes.sorted(by: { $0.key.lowercased() < $1.key.lowercased() }) {
+      //     MakeSupportSection(
+      //       make: make,
+      //       models: models,
+      //       betaSubscriptionLength: betaSubscriptionLength,
+      //       becomeBetaURL: becomeBetaURL
+      //     )
+      //   }
+      // }
+      // .margin(.vertical, 32)
     }
   }
 }
