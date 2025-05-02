@@ -19,3 +19,4 @@ workspace/
 .env
 .cache/
 .schemas/
+site/gfx/vehicle/

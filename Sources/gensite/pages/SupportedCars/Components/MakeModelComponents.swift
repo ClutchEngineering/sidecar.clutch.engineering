@@ -61,16 +61,14 @@ struct MakeGridCard: View {
         .colorInvert(condition: .dark)
         .display(.inlineBlock)
         .frame(width: 48)
-        .frame(width: 64, condition: .desktop)
+        .frame(width: 76, condition: .desktop)
       Text(make)
         .bold()
         .fontDesign("rounded")
         .fontSize(.large)
-        .fontSize(.large, condition: .desktop)
+        .fontSize(.extraExtraLarge, condition: .desktop)
     }
     .justifyContent(.center)
-    .textAlignment(.center)
-    .frame(width: 76, condition: .desktop)
   }
 }
 

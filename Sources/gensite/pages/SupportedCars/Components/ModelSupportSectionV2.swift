@@ -5,6 +5,17 @@ import VehicleSupportMatrix
 
 import Slipstream
 
+struct ModelVehicleImage: View {
+  let filename: String
+
+  var body: some View {
+    Image(URL(string: "/gfx/vehicle/\(filename)"))
+      .colorInvert(condition: .dark)
+      .display(.inlineBlock)
+      .frame(width: 128)
+  }
+}
+
 struct ModelSupportSectionV2: View {
   let make: Make
   let modelSupport: MergedSupportMatrix.ModelSupport
@@ -33,12 +44,13 @@ struct ModelSupportSectionV2: View {
             .textColor(.link, darkness: 400, condition: .dark)
             .underline(condition: .hover)
         }
-        // if let symbolName = model.symbolName {
-        //   Image(URL(string: "/gfx/model/\(symbolName).svg"))
-        //     .colorInvert(condition: .dark)
-        //     .display(.inlineBlock)
-        //     .frame(width: 128)
-        // }
+        if !modelSupport.modelSVGs.isEmpty {
+          HStack {
+            for modelSVGFilename in modelSupport.modelSVGs {
+              ModelVehicleImage(filename: modelSVGFilename)
+            }
+          }
+        }
       }
       .justifyContent(.center)
       .margin(.bottom, 16)

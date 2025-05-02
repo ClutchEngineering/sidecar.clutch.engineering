@@ -34,17 +34,20 @@ public class MergedSupportMatrix: @unchecked Sendable {
       }
     }
     public let engineType: EngineType
+    public let modelSVGs: [String]
     public var yearCommandSupport: [Int: CommandSupport]
     public var yearConfirmedSignals: [Int: Set<String>]
 
     public init(
       make: String,
       model: String,
-      engineType: EngineType
+      engineType: EngineType,
+      modelSVGs: [String]
     ) {
       self.make = make
       self.model = model
       self.engineType = engineType
+      self.modelSVGs = modelSVGs
       self.yearCommandSupport = [:]
       self.yearConfirmedSignals = [:]
     }
@@ -152,6 +155,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
       case make
       case model
       case engineType
+      case modelSVGs
       case yearCommandSupport
       case yearConfirmedSignals
     }
@@ -333,17 +337,44 @@ public class MergedSupportMatrix: @unchecked Sendable {
     return (matrix, success)
   }
 
-  // Helper function to construct the cache file path
-  private static func getCacheFilePath() -> URL {
+  private static func getCachePath() -> String {
     let fileManager = FileManager.default
-    let cacheDirectory = fileManager.currentDirectoryPath + "/.cache"
-
-    // Create cache directory if it doesn't exist
-    if !fileManager.fileExists(atPath: cacheDirectory) {
-      try? fileManager.createDirectory(atPath: cacheDirectory, withIntermediateDirectories: true)
+    let path: String
+    if let cachePath = ProcessInfo.processInfo.environment["CACHE_DIR"] {
+      path = fileManager.currentDirectoryPath + "/" + cachePath
+    } else {
+      path = fileManager.currentDirectoryPath + "/.cache"
     }
 
-    return URL(fileURLWithPath: cacheDirectory).appendingPathComponent("mergedSupportMatrix.cache")
+    // Create cache directory if it doesn't exist
+    if !fileManager.fileExists(atPath: path) {
+      try? fileManager.createDirectory(atPath: path, withIntermediateDirectories: true)
+    }
+
+    return path
+  }
+
+  private static func getVehicleImagesPath() -> String {
+    let fileManager = FileManager.default
+    let path: String
+    if let cachePath = ProcessInfo.processInfo.environment["VEHICLE_IMAGES_DIR"] {
+      path = fileManager.currentDirectoryPath + "/" + cachePath
+    } else {
+      path = fileManager.currentDirectoryPath + "/site/gfx/vehicle/"
+    }
+
+    // Create cache directory if it doesn't exist
+    if !fileManager.fileExists(atPath: path) {
+      try? fileManager.createDirectory(atPath: path, withIntermediateDirectories: true)
+    }
+
+    return path
+  }
+
+  // Helper function to construct the cache file path
+  private static func getCacheFilePath() -> URL {
+    let cacheDirectory: String = getCachePath()
+    return URL(fileURLWithPath: cacheDirectory).appendingPathComponent("mergedSupportMatrix.json")
   }
 
   // Try to load the matrix from cache
@@ -489,8 +520,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
   /// Get the path to the connectables file
   /// - Returns: URL to the connectables.json file
   private static func getConnectablesFilePath() -> URL {
-    let fileManager = FileManager.default
-    let cacheDirectory = fileManager.currentDirectoryPath + "/.cache"
+    let cacheDirectory: String = getCachePath()
     return URL(fileURLWithPath: cacheDirectory).appendingPathComponent("connectables.json")
   }
 
@@ -521,14 +551,19 @@ public class MergedSupportMatrix: @unchecked Sendable {
           print("Unknown record: \(record)")
           continue
         }
-
+        let modelSVGs = record.fields.symbolSVG?.map { $0.filename } ?? []
 
         guard let engineType = ModelSupport.EngineType(rawValue: engineType) else {
           fatalError("Unknown engine type: \(engineType)")
           continue
         }
 
-        supportMatrix[obdbID] = ModelSupport(make: make, model: model, engineType: engineType)
+        supportMatrix[obdbID] = ModelSupport(
+          make: make,
+          model: model,
+          engineType: engineType,
+          modelSVGs: modelSVGs
+        )
 
         if let symbolSVGs = record.fields.symbolSVG {
           for asset in symbolSVGs {
@@ -574,18 +609,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
   ///   - filename: The filename to use when saving the asset
   private func downloadAndCacheAsset(url: URL, filename: String) async {
     let fileManager = FileManager.default
-    let cacheDirectory = fileManager.currentDirectoryPath + "/.cache/images"
+    let cacheDirectory = Self.getVehicleImagesPath()
     let filePath = URL(fileURLWithPath: cacheDirectory).appendingPathComponent(filename)
-
-    // Create cache/images directory if it doesn't exist
-    if !fileManager.fileExists(atPath: cacheDirectory) {
-      do {
-        try fileManager.createDirectory(atPath: cacheDirectory, withIntermediateDirectories: true)
-      } catch {
-        print("Error creating cache directory: \(error.localizedDescription)")
-        return
-      }
-    }
 
     // Check if file already exists in cache
     if fileManager.fileExists(atPath: filePath.path) {

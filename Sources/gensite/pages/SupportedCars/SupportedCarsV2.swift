@@ -168,27 +168,23 @@ struct SupportedCarsV2: View {
       HorizontalRule()
 
       Section {
-        H1("Jump to your make")
-          .fontSize(.extraLarge)
-          .fontSize(.fourXLarge, condition: .desktop)
-          .bold()
-          .fontDesign("rounded")
-          .textAlignment(.center)
-          .margin(.bottom, 32)
+        ContentContainer {
+          H1("Jump to your make")
+            .fontSize(.extraLarge)
+            .fontSize(.fourXLarge, condition: .desktop)
+            .bold()
+            .fontDesign("rounded")
+            .textAlignment(.center)
+            .margin(.bottom, 32)
 
-        Div {
-          for make in makes {
-            MakeLink(make: make)
+          Div {
+            for make in makes {
+              MakeLink(make: make)
+            }
           }
+          .display(.grid)
+          .classNames(["grid-cols-3", "md:grid-cols-5", "gap-x-4", "gap-y-8"])
         }
-        .display(.flex)
-        .padding(.horizontal, 64)
-        .classNames([
-          "flex-wrap",
-          "justify-center",
-          "gap-10",
-          "w-full"
-        ])
       }
       .margin(.vertical, 64)
 
