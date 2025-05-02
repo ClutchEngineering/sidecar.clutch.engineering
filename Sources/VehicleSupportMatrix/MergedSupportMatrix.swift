@@ -46,16 +46,21 @@ public class MergedSupportMatrix: @unchecked Sendable {
         return lhs.rawValue < rhs.rawValue
       }
     }
-    public func connectableSupportByModelYear(yearRangeSignalMap: YearRangeSignalMap) -> [Int: [Connectable: ConnectableSupportLevel]] {
+    public func connectableSupportByModelYear(yearRangeSignalMap: YearRangeSignalMap, saeConnectables: [SignalID: Connectable]) -> [Int: [Connectable: ConnectableSupportLevel]] {
       var support: [Int: [Connectable: ConnectableSupportLevel]] = [:]
 
       for modelYear in allModelYears {
         guard let connectedSignals = yearRangeSignalMap.connectedSignals(modelYear: modelYear) else {
-          fatalError("No connected signals found for model year \(modelYear)")
+          fatalError("No connected signals found for model year 2\(modelYear)")
           continue
         }
 
-        // First track any connectables that *should* be supported
+        let nonSAEConnectedSignals = connectedSignals.filter { saeConnectables[$0.key] == nil }
+        for connectable in nonSAEConnectedSignals.values {
+          support[modelYear, default: [:]][connectable] = .shouldBeSupported
+        }
+
+        // Track any connectables that *should* be supported
         if let commandSupport = yearCommandSupport[modelYear] {
           let allSupportedSignals = Set(commandSupport.allSupportedSignals)
           let allSupportedConnectables = Set(allSupportedSignals.compactMap { connectedSignals[$0]})
@@ -157,6 +162,9 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
   /// The merged support matrix containing all vehicle information
   public private(set) var supportMatrix: OBDbVehicleSupportMatrix = [:]
+
+  /// Processed mapping of vehicle models to their signals and standard names, organized by year ranges
+  public private(set) var saeConnectables: [SignalID: Connectable] = [:]
 
   /// Processed mapping of vehicle models to their signals and standard names, organized by year ranges
   public private(set) var connectables: [OBDbID: YearRangeSignalMap] = [:]
@@ -290,8 +298,17 @@ public class MergedSupportMatrix: @unchecked Sendable {
   private func processConnectables() {
     // Reset the connectables dictionary
     connectables = [:]
+    self.saeConnectables = [:]
 
     let saeConnectables = rawConnectables["SAEJ1979/signalsets/v3/default.json"] ?? [:]
+
+    // Prime the years with the SAE connectables
+    for (signalID, connectable) in saeConnectables {
+      guard let connectable = Connectable(rawValue: connectable) else {
+        fatalError("Unknown connectable: \(connectable)")
+      }
+      self.saeConnectables[signalID] = connectable
+    }
 
     for (path, signalMappings) in rawConnectables {
       // Extract OBDbID and potential year range from the path

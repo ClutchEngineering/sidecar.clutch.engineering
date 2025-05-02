@@ -64,7 +64,10 @@ struct ModelSupportSectionV2: View {
             .background(.zinc, darkness: 950, condition: .dark)
 
             TableBody {
-              let supportByModelYear = modelSupport.connectableSupportByModelYear(yearRangeSignalMap: yearRangeConnectables)
+              let supportByModelYear = modelSupport.connectableSupportByModelYear(
+                yearRangeSignalMap: yearRangeConnectables,
+                saeConnectables: supportMatrix.saeConnectables
+              )
 
               let years = Array(modelSupport.yearCommandSupport.keys.sorted().enumerated())
               for (modelYearIndex, modelYear) in yearRange.enumerated() {
