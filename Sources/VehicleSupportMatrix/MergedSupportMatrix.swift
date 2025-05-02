@@ -521,12 +521,19 @@ public class MergedSupportMatrix: @unchecked Sendable {
           continue
         }
 
+
         guard let engineType = ModelSupport.EngineType(rawValue: engineType) else {
           fatalError("Unknown engine type: \(engineType)")
           continue
         }
 
         supportMatrix[obdbID] = ModelSupport(make: make, model: model, engineType: engineType)
+
+        if let symbolSVGs = record.fields.symbolSVG {
+          for asset in symbolSVGs {
+            // TODO: Download (from asset.url) and cache the image asset in the .cache directory (using asset.filename) if it doesn't already exist
+          }
+        }
       }
 
       // 3. Load local vehicle metadata
