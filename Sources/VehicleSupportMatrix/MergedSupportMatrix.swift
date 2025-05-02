@@ -105,6 +105,48 @@ public class MergedSupportMatrix: @unchecked Sendable {
       return support
     }
 
+    public func connectableSupportGroupByModelYearRange(yearRangeSignalMap: YearRangeSignalMap, saeConnectables: [SignalID: Connectable]) -> [ClosedRange<Int>: [Connectable: ConnectableSupportLevel]] {
+      // Get support by individual model years first
+      let supportByYear = connectableSupportByModelYear(yearRangeSignalMap: yearRangeSignalMap, saeConnectables: saeConnectables)
+
+      // Return empty dictionary if there's no support data
+      guard !supportByYear.isEmpty else {
+        return [:]
+      }
+
+      // Get all years sorted
+      let years = supportByYear.keys.sorted()
+
+      var result: [ClosedRange<Int>: [Connectable: ConnectableSupportLevel]] = [:]
+      var currentRange: (start: Int, end: Int)? = nil
+      var currentSupport: [Connectable: ConnectableSupportLevel]? = nil
+
+      for year in years {
+        let yearSupport = supportByYear[year]!
+
+        if currentRange == nil {
+          // First year in sequence
+          currentRange = (year, year)
+          currentSupport = yearSupport
+        } else if yearSupport == currentSupport {
+          // Same support as previous year, extend the range
+          currentRange!.end = year
+        } else {
+          // Different support, add the current range to result and start a new one
+          result[currentRange!.start...currentRange!.end] = currentSupport!
+          currentRange = (year, year)
+          currentSupport = yearSupport
+        }
+      }
+
+      // Add the last range
+      if let range = currentRange, let support = currentSupport {
+        result[range.start...range.end] = support
+      }
+
+      return result
+    }
+
     // Add custom coding keys for potential future compatibility
     enum CodingKeys: String, CodingKey {
       case make
@@ -144,6 +186,24 @@ public class MergedSupportMatrix: @unchecked Sendable {
     // Signal groups
     case batteryModulesStateOfCharge
     case batteryModulesVoltage
+
+    public var isBatteryRelated: Bool {
+      switch self {
+      case .stateOfCharge, .stateOfHealth, .isCharging, .batteryModulesStateOfCharge, .batteryModulesVoltage, .electricRange:
+        return true
+      default:
+        return false
+      }
+    }
+
+    public var isFuelRelated: Bool {
+      switch self {
+      case .fuelTankLevel, .fuelRange:
+        return true
+      default:
+        return false
+      }
+    }
   }
 
   public typealias YearRange = ClosedRange<Int>
@@ -198,6 +258,12 @@ public class MergedSupportMatrix: @unchecked Sendable {
   /// Processed mapping of vehicle models to their signals and standard names, organized by year ranges
   private var connectables: [OBDbID: YearRangeSignalMap] = [:]
   public func connectables(for obdbID: OBDbID) -> YearRangeSignalMap {
+    if let engineType = self.getModel(id: obdbID)?.engineType {
+      let filteredConnectables = saeConnectables.filter {
+        ($0.value.isBatteryRelated && engineType.hasBattery) || ($0.value.isFuelRelated && engineType.hasFuel) || (!$0.value.isBatteryRelated && !$0.value.isFuelRelated)
+      }
+      return YearRangeSignalMap(yearRangeSignals: [nil: filteredConnectables])
+    }
     return connectables[obdbID] ?? YearRangeSignalMap(yearRangeSignals: [nil: saeConnectables])
   }
 
@@ -223,34 +289,37 @@ public class MergedSupportMatrix: @unchecked Sendable {
     workspacePath: String,
     useCache: Bool = false
   ) async -> (matrix: MergedSupportMatrix, success: Bool) {
-    let matrix = MergedSupportMatrix.shared
-
-    // First, try to load the connectables data - this is required
-    do {
-      try matrix.loadConnectables()
-      print("Loaded connectables data successfully")
-    } catch {
-      print("Failed to load connectables data: \(error.localizedDescription)")
-      matrix.lastError = error
-      return (matrix, false)
-    }
+    let matrix: MergedSupportMatrix = MergedSupportMatrix.shared
+    var success: Bool = false
 
     // Check for cached data if useCache is enabled
     if useCache {
       if let cachedMatrix = await tryLoadFromCache() {
         // We have a cached matrix - use it
         matrix.supportMatrix = cachedMatrix.supportMatrix
+        success = true
         print("Loaded vehicle support matrix from cache")
-        return (matrix, true)
       }
     }
 
-    // No cache available or caching disabled, perform full load
-    let success = await matrix.loadAndMerge(
-      using: airtableClient,
-      modelsTableID: modelsTableID,
-      workspacePath: workspacePath
-    )
+    if matrix.supportMatrix.isEmpty {
+      // No cache available or caching disabled, perform full load
+      success = await matrix.loadAndMerge(
+        using: airtableClient,
+        modelsTableID: modelsTableID,
+        workspacePath: workspacePath
+      )
+    }
+
+    // Connectables require the vehicle matrix to be loaded first for engine type data.
+    do {
+      try matrix.loadConnectables()
+      print("Loaded connectables data successfully")
+    } catch {
+      print("Failed to load connectables data: \(error.localizedDescription)")
+      matrix.lastError = error
+      success = false
+    }
 
     // Save to cache if successful and caching is enabled
     if success {
@@ -354,6 +423,20 @@ public class MergedSupportMatrix: @unchecked Sendable {
       let obdbID = components[0]
       let filename = components.last ?? ""
 
+      guard obdbID.contains("-") else {
+        continue
+      }
+
+      let engineType: ModelSupport.EngineType
+      if let knownEngineType = self.getModel(id: obdbID)?.engineType {
+        engineType = knownEngineType
+      } else {
+        // If the engine type is not known, we can either skip or assign a default value
+        // Here we choose to skip for safety
+        print("Warning: Unknown engine type for OBDbID: \(obdbID)")
+        continue
+      }
+
       // Extract year range if present, otherwise use nil for default
       var yearRange: YearRange? = nil
 
@@ -380,6 +463,9 @@ public class MergedSupportMatrix: @unchecked Sendable {
         guard let connectable = Connectable(rawValue: connectable) else {
           fatalError("Unknown connectable: \(connectable)")
         }
+        guard (connectable.isBatteryRelated && engineType.hasBattery) || (connectable.isFuelRelated && engineType.hasFuel) || (!connectable.isBatteryRelated && !connectable.isFuelRelated) else {
+          continue
+        }
         connectables[obdbID, default: YearRangeSignalMap()][yearRange, default: [:]][signalID] = connectable
       }
 
@@ -387,6 +473,9 @@ public class MergedSupportMatrix: @unchecked Sendable {
       for (signalID, connectable) in signalMappings {
         guard let connectable = Connectable(rawValue: connectable) else {
           fatalError("Unknown connectable: \(connectable)")
+        }
+        guard (connectable.isBatteryRelated && engineType.hasBattery) || (connectable.isFuelRelated && engineType.hasFuel) || (!connectable.isBatteryRelated && !connectable.isFuelRelated) else {
+          continue
         }
         connectables[obdbID, default: YearRangeSignalMap()][yearRange, default: [:]][signalID] = connectable
       }
