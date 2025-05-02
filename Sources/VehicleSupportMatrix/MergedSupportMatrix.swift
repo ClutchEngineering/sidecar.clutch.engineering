@@ -11,17 +11,42 @@ public class MergedSupportMatrix: @unchecked Sendable {
   public struct ModelSupport: Codable {
     public let make: String
     public let model: String
+    public enum EngineType: String, Codable {
+      case combustion = "Combustion"
+      case hybrid = "Hybrid"
+      case electric = "Electric"
+
+      public var hasBattery: Bool {
+        switch self {
+        case .combustion:
+          return false
+        case .hybrid, .electric:
+          return true
+        }
+      }
+      public var hasFuel: Bool {
+        switch self {
+        case .combustion:
+          return true
+        case .hybrid, .electric:
+          return false
+        }
+      }
+    }
+    public let engineType: EngineType
     public var yearCommandSupport: [Int: CommandSupport]
     public var yearConfirmedSignals: [Int: Set<String>]
 
     public init(
-      make: String, model: String, yearCommandSupport: [Int: CommandSupport] = [:],
-      yearConfirmedSignals: [Int: Set<String>] = [:]
+      make: String,
+      model: String,
+      engineType: EngineType
     ) {
       self.make = make
       self.model = model
-      self.yearCommandSupport = yearCommandSupport
-      self.yearConfirmedSignals = yearConfirmedSignals
+      self.engineType = engineType
+      self.yearCommandSupport = [:]
+      self.yearConfirmedSignals = [:]
     }
 
     public var allModelYears: [Int] {
@@ -82,7 +107,11 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
     // Add custom coding keys for potential future compatibility
     enum CodingKeys: String, CodingKey {
-      case make, model, yearCommandSupport, yearConfirmedSignals
+      case make
+      case model
+      case engineType
+      case yearCommandSupport
+      case yearConfirmedSignals
     }
   }
 
@@ -385,17 +414,23 @@ public class MergedSupportMatrix: @unchecked Sendable {
       supportMatrix = [:]
 
       // 1. Fetch models from Airtable
-      let sortedRecords = try await airtableClient.fetchModels(from: modelsTableID)
+      let sortedRecords: [AirtableRecord] = try await airtableClient.fetchModels(from: modelsTableID)
 
       // 2. Create initial support matrix with Airtable data
-      for record in sortedRecords {
+      for record: AirtableRecord in sortedRecords {
         guard let make = record.fields.make,
           let model = record.fields.model,
-          let obdbID = record.fields.obdbID else {
+          let obdbID = record.fields.obdbID,
+          let engineType = record.fields.engineType else {
           continue
         }
 
-        supportMatrix[obdbID] = ModelSupport(make: make, model: model)
+        guard let engineType = ModelSupport.EngineType(rawValue: engineType) else {
+          fatalError("Unknown engine type: \(engineType)")
+          continue
+        }
+
+        supportMatrix[obdbID] = ModelSupport(make: make, model: model, engineType: engineType)
       }
 
       // 3. Load local vehicle metadata

@@ -50,11 +50,15 @@ struct ModelSupportSectionV2: View {
             TableHeader {
               HeaderCell { Text("Year") }
               HeaderCell { Text("Overall") }
-              HeaderCell { ParameterHeader(icon: "bolt", name: "SoC") }
-              HeaderCell { ParameterHeader(icon: "health", name: "SoH") }
-              HeaderCell { ParameterHeader(icon: "plug", name: "State") }
-              HeaderCell { ParameterHeader(icon: "battery", name: "Cells") }
-              HeaderCell { ParameterHeader(icon: "fuel", name: "Fuel") }
+              if modelSupport.engineType.hasBattery {
+                HeaderCell { ParameterHeader(icon: "bolt", name: "SoC") }
+                HeaderCell { ParameterHeader(icon: "health", name: "SoH") }
+                HeaderCell { ParameterHeader(icon: "plug", name: "State") }
+                HeaderCell { ParameterHeader(icon: "battery", name: "Cells") }
+              }
+              if modelSupport.engineType.hasFuel {
+                HeaderCell { ParameterHeader(icon: "fuel", name: "Fuel") }
+              }
               HeaderCell { ParameterHeader(icon: "speed", name: "Speed") }
               HeaderCell { ParameterHeader(icon: "length", name: "Range") }
               HeaderCell { ParameterHeader(icon: "length", name: "Odom") }
@@ -76,11 +80,15 @@ struct ModelSupportSectionV2: View {
                   EnvironmentAwareRow(isLastRow: modelYearIndex == years.count - 1) {
                     YearsCell(years: modelYear...modelYear)
                     TesterNeededStatusCell()
-                    SupportStatusV2(supported: support[.stateOfCharge])
-                    SupportStatusV2(supported: support[.stateOfHealth])
-                    SupportStatusV2(supported: support[.isCharging])
-                    SupportStatusV2(supported: support[.batteryModulesStateOfCharge])
-                    SupportStatusV2(supported: support[.fuelTankLevel])
+                    if modelSupport.engineType.hasBattery {
+                      SupportStatusV2(supported: support[.stateOfCharge])
+                      SupportStatusV2(supported: support[.stateOfHealth])
+                      SupportStatusV2(supported: support[.isCharging])
+                      SupportStatusV2(supported: support[.batteryModulesStateOfCharge])
+                    }
+                    if modelSupport.engineType.hasFuel {
+                      SupportStatusV2(supported: support[.fuelTankLevel])
+                    }
                     SupportStatusV2(supported: support[.speed])
                     SupportStatusV2(supported: max(support[.electricRange] ?? .unknown, support[.fuelRange] ?? .unknown))
                     SupportStatusV2(supported: support[.odometer])
