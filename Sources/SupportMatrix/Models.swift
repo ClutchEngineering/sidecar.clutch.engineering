@@ -9,7 +9,28 @@ public struct CommandSupport: Codable {
   public var modelYear: Int
   public var canIdFormat: String
   public var extendedAddressingEnabled: Bool
-  public var supportedCommandsByEcu: [String: [CommandWithParameters]]
+  public var supportedCommandsByEcu: [String: [String]]
+
+  public var allSupportedSignals: [String] {
+    var allSignals = Set<String>()
+    for ecuCommands in supportedCommandsByEcu.values {
+      for commandAndSignals in ecuCommands {
+        // Split the command and signals
+        let components = commandAndSignals.components(separatedBy: ":")
+        guard components.count > 1 else {
+          continue
+        }
+        // The signals are after the first colon
+        let signals = components[1]
+        // Split the signals by comma
+        let signalComponents = signals.components(separatedBy: ",")
+        for signal in signalComponents {
+          allSignals.insert(String(signal))
+        }
+      }
+    }
+    return Array(allSignals)
+  }
 
   enum CodingKeys: String, CodingKey {
     case modelYear = "model_year"
@@ -18,9 +39,6 @@ public struct CommandSupport: Codable {
     case supportedCommandsByEcu = "supported_commands_by_ecu"
   }
 }
-
-/// Represents a command with its associated parameters
-public typealias CommandWithParameters = String
 
 /// A vehicle represents a particular make and model
 public struct Vehicle {

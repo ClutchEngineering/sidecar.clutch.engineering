@@ -37,42 +37,39 @@ public class MergedSupportMatrix: @unchecked Sendable {
       return minYear...maxYear
     }
 
-    public enum Connectable: String {
-      case electricRange
-      case frontLeftTirePressure
-      case frontRightTirePressure
-      case fuelRange
-      case fuelTankLevel
-      case isCharging
-      case odometer
-      case pluggedIn
-      case rearLeftTirePressure
-      case rearRightTirePressure
-      case speed
-      case stateOfCharge
-      case stateOfHealth
-      case starterBatteryVoltage
-      case distanceSinceDTCsCleared
-    }
-    public enum ConnectableSupportLevel {
-      case confirmed
-      case shouldBeSupported
+    public enum ConnectableSupportLevel: Int, Comparable {
+      case unknown = 0
+      case shouldBeSupported = 1
+      case confirmed = 2
+
+      public static func < (lhs: MergedSupportMatrix.ModelSupport.ConnectableSupportLevel, rhs: MergedSupportMatrix.ModelSupport.ConnectableSupportLevel) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+      }
     }
     public func connectableSupportByModelYear(yearRangeSignalMap: YearRangeSignalMap) -> [Int: [Connectable: ConnectableSupportLevel]] {
       var support: [Int: [Connectable: ConnectableSupportLevel]] = [:]
+
       for modelYear in allModelYears {
         guard let connectedSignals = yearRangeSignalMap.connectedSignals(modelYear: modelYear) else {
+          fatalError("No connected signals found for model year \(modelYear)")
           continue
         }
-        // yearConfirmedSignals = signals with confirmed command responses.
+
+        // First track any connectables that *should* be supported
+        if let commandSupport = yearCommandSupport[modelYear] {
+          let allSupportedSignals = Set(commandSupport.allSupportedSignals)
+          let allSupportedConnectables = Set(allSupportedSignals.compactMap { connectedSignals[$0]})
+          for connectable in allSupportedConnectables {
+            support[modelYear, default: [:]][connectable] = .shouldBeSupported
+          }
+        }
+
+        // And then check for any connectables that are confirmed with real vehicle data
         if let confirmedSignals = yearConfirmedSignals[modelYear] {
-          // var connectableSupport: [Connectable: ConnectableSupportLevel] = [:]
-          // for signal in connectables {
-          //   if let connectable = Connectable(rawValue: signal) {
-          //     connectableSupport[connectable] = .confirmed
-          //   }
-          // }
-          // return [modelYear: connectableSupport]
+          let confirmedConnectables = Set(confirmedSignals.compactMap { connectedSignals[$0]})
+          for confirmedConnectable in confirmedConnectables {
+            support[modelYear, default: [:]][confirmedConnectable] = .confirmed
+          }
         }
       }
       return support
@@ -93,8 +90,27 @@ public class MergedSupportMatrix: @unchecked Sendable {
   /// Type alias for signal identifier (e.g., "TAYCAN_VSS")
   public typealias SignalID = String
 
-  /// Type alias for a standard signal name (e.g., "speed")
-  public typealias Connectable = String
+  public enum Connectable: String, CaseIterable {
+    case electricRange
+    case frontLeftTirePressure
+    case frontRightTirePressure
+    case fuelRange
+    case fuelTankLevel
+    case isCharging
+    case odometer
+    case pluggedIn
+    case rearLeftTirePressure
+    case rearRightTirePressure
+    case speed
+    case stateOfCharge
+    case stateOfHealth
+    case starterBatteryVoltage
+    case distanceSinceDTCsCleared
+
+    // Signal groups
+    case batteryModulesStateOfCharge
+    case batteryModulesVoltage
+  }
 
   public typealias YearRange = ClosedRange<Int>
 
@@ -312,11 +328,17 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
       // Prime the years with the SAE connectables
       for (signalID, connectable) in saeConnectables {
+        guard let connectable = Connectable(rawValue: connectable) else {
+          fatalError("Unknown connectable: \(connectable)")
+        }
         connectables[obdbID, default: YearRangeSignalMap()][yearRange, default: [:]][signalID] = connectable
       }
 
       // Add all signal mappings for this combination
       for (signalID, connectable) in signalMappings {
+        guard let connectable = Connectable(rawValue: connectable) else {
+          fatalError("Unknown connectable: \(connectable)")
+        }
         connectables[obdbID, default: YearRangeSignalMap()][yearRange, default: [:]][signalID] = connectable
       }
     }

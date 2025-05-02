@@ -92,6 +92,34 @@ struct YearsCell: View {
   }
 }
 
+struct OnboardedStatusCell: View {
+  var body: some View {
+    Bordered {
+      TableCell {
+        SupportedSeal()
+      }
+    }
+  }
+}
+
+struct TesterNeededStatusCell: View {
+  var body: some View {
+    Bordered {
+      TableCell {
+        Link("Tester needed", destination: becomeBetaURL)
+          .textColor(.link, darkness: 700)
+          .textColor(.link, darkness: 400, condition: .dark)
+          .fontWeight(600)
+          .underline(condition: .hover)
+          .textAlignment(.leading)
+      }
+    }
+    .padding(.horizontal, 4)
+    .padding(.horizontal, 8, condition: .desktop)
+    .padding(.vertical, 12)
+  }
+}
+
 struct TestingStatusCell: View {
   let status: VehicleSupportStatus
   let becomeBetaURL: URL?
@@ -105,25 +133,9 @@ struct TestingStatusCell: View {
     let numberOfFeatures = 10
     switch status.testingStatus {
     case .partiallyOnboarded:
-      Bordered {
-        TableCell {
-          Link("Tester needed", destination: becomeBetaURL)
-            .textColor(.link, darkness: 700)
-            .textColor(.link, darkness: 400, condition: .dark)
-            .fontWeight(600)
-            .underline(condition: .hover)
-            .textAlignment(.leading)
-        }
-      }
-      .padding(.horizontal, 4)
-      .padding(.horizontal, 8, condition: .desktop)
-      .padding(.vertical, 12)
+      TesterNeededStatusCell()
     case .onboarded:
-      Bordered {
-        TableCell {
-          SupportedSeal()
-        }
-      }
+      OnboardedStatusCell()
     case .activeTester(let username):
       Bordered {
         TableCell {

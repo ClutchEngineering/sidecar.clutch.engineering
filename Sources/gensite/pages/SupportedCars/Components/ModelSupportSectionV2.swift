@@ -43,7 +43,8 @@ struct ModelSupportSectionV2: View {
       .justifyContent(.center)
       .margin(.bottom, 16)
 
-      if let yearRange = modelSupport.modelYearRange {
+      if let yearRange = modelSupport.modelYearRange,
+         let yearRangeConnectables = supportMatrix.connectables[obdbID] {
         Div {
           Table {
             TableHeader {
@@ -63,28 +64,29 @@ struct ModelSupportSectionV2: View {
             .background(.zinc, darkness: 950, condition: .dark)
 
             TableBody {
+              let supportByModelYear = modelSupport.connectableSupportByModelYear(yearRangeSignalMap: yearRangeConnectables)
+
               let years = Array(modelSupport.yearCommandSupport.keys.sorted().enumerated())
               for (modelYearIndex, modelYear) in yearRange.enumerated() {
-                // if let confirmedSignals = modelSupport.yearConfirmedSignals[modelYear] {
+                if let support = supportByModelYear[modelYear] {
                   // Text(confirmedSignals.joined(separator: ", "))
                   EnvironmentAwareRow(isLastRow: modelYearIndex == years.count - 1) {
                     YearsCell(years: modelYear...modelYear)
-                    // TestingStatusCell(status: status, becomeBetaURL: becomeBetaURL)
-                    // if case .testerNeeded = status.testingStatus {
-                    //   // Do nothing.
-                    // } else {
-                    //   SupportStatus(supported: status.stateOfCharge)
-                    //   SupportStatus(supported: status.stateOfHealth)
-                    //   SupportStatus(supported: status.charging)
-                    //   SupportStatus(supported: status.cells)
-                    //   SupportStatus(supported: status.fuelLevel)
-                    //   SupportStatus(supported: status.speed)
-                    //   SupportStatus(supported: status.range)
-                    //   SupportStatus(supported: status.odometer)
-                    //   SupportStatus(supported: status.tirePressure, isLast: true)
-                    // }
+                    TesterNeededStatusCell()
+                    SupportStatusV2(supported: support[.stateOfCharge])
+                    SupportStatusV2(supported: support[.stateOfHealth])
+                    SupportStatusV2(supported: support[.isCharging])
+                    SupportStatusV2(supported: support[.batteryModulesStateOfCharge])
+                    SupportStatusV2(supported: support[.fuelTankLevel])
+                    SupportStatusV2(supported: support[.speed])
+                    SupportStatusV2(supported: max(support[.electricRange] ?? .unknown, support[.fuelRange] ?? .unknown))
+                    SupportStatusV2(supported: support[.odometer])
+                    SupportStatusV2(supported: max(
+                      max(support[.frontLeftTirePressure] ?? .unknown, support[.frontLeftTirePressure] ?? .unknown),
+                      max(support[.rearLeftTirePressure] ?? .unknown, support[.rearLeftTirePressure] ?? .unknown)
+                    ), isLast: true)
                   }
-                // }
+                }
               }
             }
           }
@@ -104,5 +106,47 @@ struct ModelSupportSectionV2: View {
     .background(.zinc, darkness: 200)
     .background(.zinc, darkness: 800, condition: .dark)
     .id(obdbID)
+  }
+}
+
+struct SupportStatusV2: View {
+  let supported: MergedSupportMatrix.ModelSupport.ConnectableSupportLevel??
+  let isLast: Bool
+
+  init(supported: MergedSupportMatrix.ModelSupport.ConnectableSupportLevel?, isLast: Bool = false) {
+    self.supported = supported
+    self.isLast = isLast
+  }
+
+  var body: some View {
+    switch supported {
+    case .confirmed:
+      Bordered(showTrailingBorder: !isLast) {
+        TableCell {
+          OBDStamp()
+        }
+      }
+      .padding(.horizontal, 8)
+    case .shouldBeSupported:
+      Bordered(showTrailingBorder: !isLast) {
+        TableCell {
+          HStack {
+            OBDStamp()
+              .opacity(0.25)
+          }
+          .justifyContent(.center)
+        }
+      }
+      .padding(.horizontal, 8)
+    case nil, .some(.none), .unknown:
+      Bordered(showTrailingBorder: !isLast) {
+        TableCell {
+          Text("")
+            .textColor(.text, darkness: 600)
+            .textColor(.text, darkness: 400, condition: .dark)
+        }
+      }
+      .padding(.horizontal, 8)
+    }
   }
 }
