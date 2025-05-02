@@ -64,15 +64,16 @@ struct ModelSupportSectionV2: View {
             .background(.zinc, darkness: 950, condition: .dark)
 
             TableBody {
+              // TODO: Migrate to connectableSupportGroupByModelYearRange, which returns the same basic data but keyed on ClosedRange<Int> model year ranges.
               let supportByModelYear = modelSupport.connectableSupportByModelYear(
                 yearRangeSignalMap: yearRangeConnectables,
                 saeConnectables: supportMatrix.saeConnectables
               )
 
-              for (modelYearIndex, modelYear) in yearRange.enumerated() {
+              for (modelYearIndex, modelYear) in yearRange.enumerated() {  // This will enumerate over model year ranges, sortedy by the lowerBound of each range.
                 if let support = supportByModelYear[modelYear] {
                   EnvironmentAwareRow(isLastRow: modelYearIndex == yearRange.count - 1) {
-                    YearsCell(years: modelYear...modelYear)
+                    YearsCell(years: modelYear...modelYear)  // TODO: This should be the enumerated model year range.
                     TesterNeededStatusCell()
                     if modelSupport.engineType.hasBattery {
                       SupportStatusV2(supported: support[.stateOfCharge])
