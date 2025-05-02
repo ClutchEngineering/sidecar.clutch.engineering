@@ -258,13 +258,17 @@ public class MergedSupportMatrix: @unchecked Sendable {
   /// Processed mapping of vehicle models to their signals and standard names, organized by year ranges
   private var connectables: [OBDbID: YearRangeSignalMap] = [:]
   public func connectables(for obdbID: OBDbID) -> YearRangeSignalMap {
+    if let existingMap = connectables[obdbID] {
+      return existingMap
+    }
     if let engineType = self.getModel(id: obdbID)?.engineType {
       let filteredConnectables = saeConnectables.filter {
         ($0.value.isBatteryRelated && engineType.hasBattery) || ($0.value.isFuelRelated && engineType.hasFuel) || (!$0.value.isBatteryRelated && !$0.value.isFuelRelated)
       }
       return YearRangeSignalMap(yearRangeSignals: [nil: filteredConnectables])
     }
-    return connectables[obdbID] ?? YearRangeSignalMap(yearRangeSignals: [nil: saeConnectables])
+    // No map and no engine, let's just fall back to the default SAE configuration.
+    return YearRangeSignalMap(yearRangeSignals: [nil: saeConnectables])
   }
 
   /// Raw data mapping from signal path to signal mappings, loaded directly from connectables.json
