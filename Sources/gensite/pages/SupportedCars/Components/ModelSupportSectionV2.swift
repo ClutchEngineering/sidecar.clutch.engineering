@@ -34,7 +34,6 @@ struct ModelSupportSectionV2: View {
             .fontSize(.extraLarge, condition: .desktop)
             .underline(condition: .hover)
         }
-        // TODO: Use the model's OBDb slug here.
         Link(URL(string: "https://github.com/OBDb/\(obdbID)")) {
           Text("OBDb")
             .bold()
@@ -43,6 +42,19 @@ struct ModelSupportSectionV2: View {
             .textColor(.link, darkness: 700)
             .textColor(.link, darkness: 400, condition: .dark)
             .underline(condition: .hover)
+        }
+        if modelSupport.numberOfDrivers > 0 || modelSupport.numberOfMilesDriven > 0 {
+          VStack(alignment: .center) {
+            if modelSupport.numberOfMilesDriven > 0 {
+              Text("\(NumberFormatter.localizedString(from: NSNumber(value: modelSupport.numberOfMilesDriven), number: .decimal)) mile\(modelSupport.numberOfMilesDriven != 1 ? "s" : "" ) driven")
+            }
+            if modelSupport.numberOfDrivers > 0 {
+              Text("\(NumberFormatter.localizedString(from: NSNumber(value: modelSupport.numberOfDrivers), number: .decimal)) driver\(modelSupport.numberOfDrivers != 1 ? "s" : "")")
+            }
+          }
+          .fontSize(.small)
+          .textColor(.text, darkness: 600)
+          .textColor(.text, darkness: 400, condition: .dark)
         }
         if !modelSupport.modelSVGs.isEmpty {
           HStack {

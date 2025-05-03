@@ -36,6 +36,22 @@ public class MergedSupportMatrix: @unchecked Sendable {
     }
     public let engineType: EngineType
     public let modelSVGs: [String]
+    public let numberOfDrivers: Int
+    public let numberOfMilesDriven: Int
+
+    enum CodingKeys: String, CodingKey {
+      case obdbID
+      case make
+      case model
+      case engineType
+      case modelSVGs
+      case yearCommandSupport
+      case yearConfirmedSignals
+      case generations
+      case numberOfDrivers
+      case numberOfMilesDriven
+    }
+
     public var yearCommandSupport: [Int: CommandSupport]
     public var yearConfirmedSignals: [Int: Set<String>]
     public var generations: [Generation]
@@ -45,7 +61,9 @@ public class MergedSupportMatrix: @unchecked Sendable {
       make: String,
       model: String,
       engineType: EngineType,
-      modelSVGs: [String]
+      modelSVGs: [String],
+      numberOfDrivers: Int,
+      numberOfMilesDriven: Int
     ) {
       self.obdbID = obdbID
       self.make = make
@@ -55,6 +73,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
       self.yearCommandSupport = [:]
       self.yearConfirmedSignals = [:]
       self.generations = []
+      self.numberOfDrivers = numberOfDrivers
+      self.numberOfMilesDriven = numberOfMilesDriven
     }
 
     public var allModelYears: [Int] {
@@ -214,18 +234,6 @@ public class MergedSupportMatrix: @unchecked Sendable {
       }
 
       return result
-    }
-
-    // Add custom coding keys for potential future compatibility
-    enum CodingKeys: String, CodingKey {
-      case obdbID
-      case make
-      case model
-      case engineType
-      case modelSVGs
-      case yearCommandSupport
-      case yearConfirmedSignals
-      case generations
     }
   }
 
@@ -644,6 +652,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
           continue
         }
         let modelSVGs = record.fields.symbolSVG?.map { $0.filename } ?? []
+        let numberOfDrivers: Int = record.fields.numberOfDrivers ?? 0
+        let numberOfMilesDriven: Int = record.fields.numberOfMilesDriven ?? 0
 
         guard let engineType = ModelSupport.EngineType(rawValue: engineType) else {
           fatalError("Unknown engine type: \(engineType)")
@@ -655,7 +665,9 @@ public class MergedSupportMatrix: @unchecked Sendable {
           make: make,
           model: model,
           engineType: engineType,
-          modelSVGs: modelSVGs
+          modelSVGs: modelSVGs,
+          numberOfDrivers: numberOfDrivers,
+          numberOfMilesDriven: numberOfMilesDriven
         )
 
         if let symbolSVGs = record.fields.symbolSVG {
