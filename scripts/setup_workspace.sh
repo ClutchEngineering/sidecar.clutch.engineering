@@ -40,4 +40,5 @@ echo "Creating workspace..."
 echo "Extracting all Connectables..."
 
 # Extract all Connectables
+mkdir -p .cache
 "$PYTHON_CMD" .schemas/python/dump_connectables.py workspace --output=.cache/connectables.json
