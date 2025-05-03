@@ -38,6 +38,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
     public let modelSVGs: [String]
     public let numberOfDrivers: Int
     public let numberOfMilesDriven: Int
+    public let onboarded: Bool
 
     enum CodingKeys: String, CodingKey {
       case obdbID
@@ -45,6 +46,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
       case model
       case engineType
       case modelSVGs
+      case onboarded
       case yearCommandSupport
       case yearConfirmedSignals
       case generations
@@ -63,7 +65,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
       engineType: EngineType,
       modelSVGs: [String],
       numberOfDrivers: Int,
-      numberOfMilesDriven: Int
+      numberOfMilesDriven: Int,
+      onboarded: Bool
     ) {
       self.obdbID = obdbID
       self.make = make
@@ -75,6 +78,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
       self.generations = []
       self.numberOfDrivers = numberOfDrivers
       self.numberOfMilesDriven = numberOfMilesDriven
+      self.onboarded = onboarded
     }
 
     public var allModelYears: [Int] {
@@ -114,6 +118,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
       var support: [Int: [Connectable: ConnectableSupportLevel]] = [:]
 
       for modelYear in allModelYears {
+        support[modelYear] = [:]
+
         guard let connectedSignals = yearRangeSignalMap.connectedSignals(modelYear: modelYear) else {
           fatalError("No connected signals found for model year \(modelYear)")
           continue
@@ -152,17 +158,24 @@ public class MergedSupportMatrix: @unchecked Sendable {
       }
 
       // Propagate confirmed signals within generations
-      // First, collect all confirmed connectables by generation
+      // First, collect all confirmed and shouldBeSupported connectables by generation
       var confirmedByGeneration: [Generation: Set<Connectable>] = [:]
+      var shouldBeSupportedByGeneration: [Generation: Set<Connectable>] = [:]
 
       for generation in generations {
         guard let yearRange = generation.yearRange else { continue }
 
         var generationConfirmed = Set<Connectable>()
+        var generationShouldBeSupported = Set<Connectable>()
+
         for year in yearRange {
           if let yearSupport = support[year] {
-            for (connectable, level) in yearSupport where level == .confirmed {
-              generationConfirmed.insert(connectable)
+            for (connectable, level) in yearSupport {
+              if level == .confirmed {
+                generationConfirmed.insert(connectable)
+              } else if level == .shouldBeSupported {
+                generationShouldBeSupported.insert(connectable)
+              }
             }
           }
         }
@@ -170,9 +183,27 @@ public class MergedSupportMatrix: @unchecked Sendable {
         if !generationConfirmed.isEmpty {
           confirmedByGeneration[generation] = generationConfirmed
         }
+
+        if !generationShouldBeSupported.isEmpty {
+          shouldBeSupportedByGeneration[generation] = generationShouldBeSupported
+        }
       }
 
-      // Then apply those confirmed connectables to all years in each generation
+      // Then apply those connectables to all years in each generation
+      // First apply shouldBeSupported, then confirmed (to ensure confirmed takes priority)
+      for (generation, shouldBeSupportedConnectables) in shouldBeSupportedByGeneration {
+        guard let yearRange = generation.yearRange else { continue }
+
+        for year in yearRange {
+          for connectable in shouldBeSupportedConnectables {
+            // Only set if not already set to .confirmed
+            if support[year]?[connectable] != .confirmed {
+              support[year, default: [:]][connectable] = .shouldBeSupported
+            }
+          }
+        }
+      }
+
       for (generation, confirmedConnectables) in confirmedByGeneration {
         guard let yearRange = generation.yearRange else { continue }
 
@@ -654,6 +685,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
         let modelSVGs = record.fields.symbolSVG?.map { $0.filename } ?? []
         let numberOfDrivers: Int = record.fields.numberOfDrivers ?? 0
         let numberOfMilesDriven: Int = record.fields.numberOfMilesDriven ?? 0
+        let onboarded = record.fields.onboarded ?? false
 
         guard let engineType = ModelSupport.EngineType(rawValue: engineType) else {
           fatalError("Unknown engine type: \(engineType)")
@@ -667,7 +699,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
           engineType: engineType,
           modelSVGs: modelSVGs,
           numberOfDrivers: numberOfDrivers,
-          numberOfMilesDriven: numberOfMilesDriven
+          numberOfMilesDriven: numberOfMilesDriven,
+          onboarded: onboarded
         )
 
         if let symbolSVGs = record.fields.symbolSVG {

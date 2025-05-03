@@ -26,6 +26,7 @@ public struct AirtableRecord: Codable, Sendable {
     public let numberOfMilesDriven: Int?
     public let engineType: String?
     public let symbolSVG: [RecordAsset]?
+    public let onboarded: Bool?
 
     public var alternateModelIDs: [String] {
       guard let alternateModels,
@@ -57,6 +58,7 @@ public struct AirtableRecord: Codable, Sendable {
       case alternateModels = "Alternate models"
       case obdbID = "OBDb ID"
       case engineType = "Engine type"
+      case onboarded = "Onboarded?"
       case symbolSVG = "Symbol (from Vehicle symbols)"
       case numberOfDrivers = "Number of drivers"
       case numberOfMilesDriven = "Number of miles driven"

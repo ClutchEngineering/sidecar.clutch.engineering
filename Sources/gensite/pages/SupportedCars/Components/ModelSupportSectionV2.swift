@@ -106,7 +106,11 @@ struct ModelSupportSectionV2: View {
                 let support = supportByModelYearRange[yearRangeKey]!
                 EnvironmentAwareRow(isLastRow: rangeIndex == modelYearRanges.count - 1) {
                   YearsCell(years: yearRangeKey) // Using the actual year range instead of single year
-                  TesterNeededStatusCell()
+                  if modelSupport.onboarded {
+                    OnboardedStatusCell()
+                  } else {
+                    TesterNeededStatusCell()
+                  }
                   if modelSupport.engineType.hasBattery {
                     SupportStatusV2(support: support, connectables: [.stateOfCharge], make: make, isLast: false)
                     SupportStatusV2(support: support, connectables: [.stateOfHealth], make: make, isLast: false)
