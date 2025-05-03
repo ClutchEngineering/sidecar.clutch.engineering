@@ -236,6 +236,8 @@ struct LeaderboardByMakePage: View {
         URL(string: "/scripts/miles-counter.js")
       ]
     ) {
+      SupportedCarsNavigation()
+
       ContentContainer {
         ContentContainer {
           VStack(alignment: .center) {

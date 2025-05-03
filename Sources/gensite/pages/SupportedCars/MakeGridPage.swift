@@ -2,6 +2,8 @@ import Foundation
 import Slipstream
 import VehicleSupportMatrix
 
+let becomeBetaURL = URL(string: "/beta")
+
 struct MakeGridPage: View {
   let supportMatrix: MergedSupportMatrix
   let makes: [String]
@@ -33,6 +35,8 @@ struct MakeGridPage: View {
         "vehicle connectivity",
       ]
     ) {
+      SupportedCarsNavigation()
+
       ContentContainer {
         VStack(alignment: .center) {
           HeroIconPuck(url: URL(string: "/gfx/supported-vehicle.png")!)
