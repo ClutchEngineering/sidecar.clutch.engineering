@@ -32,8 +32,12 @@ else
     exit 1
 fi
 
+echo "Creating workspace..."
+
 # Generate the workspace
 ./.meta/repo-tools/create_workspace.py --workspace workspace/
+
+echo "Extracting all Connectables..."
 
 # Extract all Connectables
 "$PYTHON_CMD" .schemas/python/dump_connectables.py workspace --output=.cache/connectables.json
