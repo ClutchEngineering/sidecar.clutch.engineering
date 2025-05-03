@@ -26,7 +26,7 @@ struct ModelSupportSectionV2: View {
   var body: some View {
     Div {
       VStack(alignment: .center, spacing: 4) {
-        Link(URL(string: "#" + obdbID)) {
+        Link(URL(string: "#" + modelSupport.obdbID)) {
           Text(modelSupport.model)
             .bold()
             .fontDesign("rounded")
@@ -34,7 +34,7 @@ struct ModelSupportSectionV2: View {
             .fontSize(.extraLarge, condition: .desktop)
             .underline(condition: .hover)
         }
-        Link(URL(string: "https://github.com/OBDb/\(obdbID)")) {
+        Link(URL(string: "https://github.com/OBDb/\(modelSupport.obdbID)")) {
           Text("OBDb")
             .bold()
             .fontDesign("rounded")
@@ -146,7 +146,7 @@ struct ModelSupportSectionV2: View {
     .cornerRadius(.extraExtraLarge)
     .background(.zinc, darkness: 200)
     .background(.zinc, darkness: 800, condition: .dark)
-    .id(obdbID)
+    .id(modelSupport.obdbID)
   }
 }
 
