@@ -101,6 +101,9 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
         let nonSAEConnectedSignals = connectedSignals.filter { saeConnectables[$0.key] == nil }
         for connectable in nonSAEConnectedSignals.values {
+          guard connectable.isVisualizedInSupportMatrix else {
+            continue
+          }
           support[modelYear, default: [:]][connectable] = .shouldBeSupported
         }
 
@@ -109,6 +112,9 @@ public class MergedSupportMatrix: @unchecked Sendable {
           let allSupportedSignals = Set(commandSupport.allSupportedSignals)
           let allSupportedConnectables = Set(allSupportedSignals.compactMap { connectedSignals[$0]})
           for connectable in allSupportedConnectables {
+          guard connectable.isVisualizedInSupportMatrix else {
+            continue
+          }
             support[modelYear, default: [:]][connectable] = .shouldBeSupported
           }
         }
@@ -117,10 +123,54 @@ public class MergedSupportMatrix: @unchecked Sendable {
         if let confirmedSignals = yearConfirmedSignals[modelYear] {
           let confirmedConnectables = Set(confirmedSignals.compactMap { connectedSignals[$0]})
           for confirmedConnectable in confirmedConnectables {
+            guard confirmedConnectable.isVisualizedInSupportMatrix else {
+              continue
+            }
             support[modelYear, default: [:]][confirmedConnectable] = .confirmed
           }
         }
       }
+
+      // Propagate confirmed signals within generations
+      // First, collect all confirmed connectables by generation
+      var confirmedByGeneration: [Generation: Set<Connectable>] = [:]
+
+      for generation in generations {
+        guard let yearRange = generation.yearRange else { continue }
+
+        var generationConfirmed = Set<Connectable>()
+        for year in yearRange {
+          if let yearSupport = support[year] {
+            for (connectable, level) in yearSupport where level == .confirmed {
+              generationConfirmed.insert(connectable)
+            }
+          }
+        }
+
+        if !generationConfirmed.isEmpty {
+          confirmedByGeneration[generation] = generationConfirmed
+        }
+      }
+
+      // Then apply those confirmed connectables to all years in each generation
+      for (generation, confirmedConnectables) in confirmedByGeneration {
+        guard let yearRange = generation.yearRange else { continue }
+
+        for year in yearRange {
+          for connectable in confirmedConnectables {
+            support[year, default: [:]][connectable] = .confirmed
+          }
+        }
+      }
+
+      for year in support.keys {
+        support[year] = support[year]?.filter {
+          ($0.key.isBatteryRelated && self.engineType.hasBattery)
+          || ($0.key.isFuelRelated && self.engineType.hasFuel)
+          || (!$0.key.isBatteryRelated && !$0.key.isFuelRelated)
+        }
+      }
+
       return support
     }
 
@@ -211,7 +261,13 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
     public var isBatteryRelated: Bool {
       switch self {
-      case .stateOfCharge, .stateOfHealth, .isCharging, .batteryModulesStateOfCharge, .batteryModulesVoltage, .electricRange:
+      case .stateOfCharge,
+      .stateOfHealth,
+      .isCharging,
+      .batteryModulesStateOfCharge,
+      .batteryModulesVoltage,
+      .electricRange,
+      .pluggedIn:
         return true
       default:
         return false
@@ -220,10 +276,21 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
     public var isFuelRelated: Bool {
       switch self {
-      case .fuelTankLevel, .fuelRange:
+      case .fuelTankLevel,
+      .fuelRange:
         return true
       default:
         return false
+      }
+    }
+
+    public var isVisualizedInSupportMatrix: Bool {
+      switch self {
+      case .distanceSinceDTCsCleared,
+        .starterBatteryVoltage:
+        return false
+      default:
+        return true
       }
     }
   }

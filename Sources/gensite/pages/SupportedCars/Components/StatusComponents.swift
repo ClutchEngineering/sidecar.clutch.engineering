@@ -47,7 +47,7 @@ struct NotApplicableCell: View {
     Bordered(showTrailingBorder: !isLast) {
       TableCell {
         NotApplicableStamp()
-          .opacity(0.5)
+          .opacity(0.3)
       }
     }
     .padding(.horizontal, 8)
@@ -120,6 +120,6 @@ struct ParameterHeader: View {
       Text(name)
     }
     .justifyContent(.center)
-    .opacity(secondary ? 0.3 : 1)
+    .opacity(secondary ? 0.25 : 1)
   }
 }
