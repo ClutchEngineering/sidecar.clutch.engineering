@@ -146,7 +146,7 @@ struct SupportedCars: View {
             }
             HStack(spacing: 16) {
               OTAStamp()
-              Text("Feature is supported via Connected Accounts.")
+              Text("Feature is supported via Connected Accounts (Beta).")
             }
             HStack(spacing: 16) {
               NotApplicableStamp()

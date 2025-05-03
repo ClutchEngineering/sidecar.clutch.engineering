@@ -43,7 +43,12 @@ struct MakePage: View {
     ) {
       ContentContainer {
         VStack(alignment: .center) {
-          MakeHeroIconPuck(make: make)
+          HStack(spacing: 32) {
+            Link(URL(string: "/supported-cars/")) {
+              HeroIconPuck(url: URL(string: "/gfx/supported-vehicle.png")!)
+            }
+            MakeHeroIconPuck(make: make)
+          }
 
           Div {
             H1(make + " Support")
@@ -111,7 +116,7 @@ struct MakePage: View {
             }
             HStack(spacing: 16) {
               OTAStamp()
-              Text("Feature is supported via Connected Accounts.")
+              Text("Feature is supported via Connected Accounts (Beta).")
             }
             HStack(spacing: 16) {
               NotApplicableStamp()
