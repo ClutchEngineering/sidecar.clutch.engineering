@@ -12,7 +12,7 @@ struct MakeHeroIconPuck: View {
           .padding(8)
           .colorInvert(condition: .dark)
       }
-      .background(.white, )
+      .background(.white)
       .background("sidecar-gray", condition: .dark)
       .margin(.horizontal, .auto)
       .margin(.top, 8)
