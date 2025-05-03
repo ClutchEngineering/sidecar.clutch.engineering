@@ -58,6 +58,10 @@ jobs:
         run: bash ./scripts/setup_workspace.sh
       - name: Generate site
         run: bash ./scripts/generate_site.sh
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+          AIRTABLE_MODELS_TABLE_ID: ${{ secrets.AIRTABLE_MODELS_TABLE_ID }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
