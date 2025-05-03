@@ -1,4 +1,6 @@
 import Foundation
+import AirtableAPI
+import PostHogAPI
 
 guard let apikey = ProcessInfo.processInfo.environment["POSTHOG_API_KEY"] else {
   fatalError("Missing POSTHOG_API_KEY")

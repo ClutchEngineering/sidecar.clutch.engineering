@@ -1,0 +1,6 @@
+--indent 2
+--indentcase true
+--trimwhitespace always
+--maxwidth 100
+--wraparguments before-first
+--wrapcollections before-first

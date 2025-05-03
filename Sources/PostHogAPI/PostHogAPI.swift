@@ -1,6 +1,6 @@
 import Foundation
 
-enum PostHogError: Error {
+public enum PostHogError: Error {
   case invalidURL
   case networkError(Error)
   case invalidResponse
@@ -8,9 +8,9 @@ enum PostHogError: Error {
   case exportFailed
 }
 
-struct PostHogExportResponse: Codable {
-  let id: Int
-  let hasContent: Bool
+public struct PostHogExportResponse: Codable {
+  public let id: Int
+  public let hasContent: Bool
 
   enum CodingKeys: String, CodingKey {
     case id
@@ -18,19 +18,19 @@ struct PostHogExportResponse: Codable {
   }
 }
 
-actor PostHogExportClient {
+public actor PostHogExportClient {
   private let baseURL: String
   private let apiKey: String
   private let session: URLSession
 
-  init(apiKey: String, projectID: Int) {
+  public init(apiKey: String, projectID: Int) {
     self.baseURL = "https://eu.posthog.com/api/environments/\(projectID)"
     self.apiKey = apiKey
     let config = URLSessionConfiguration.default
     self.session = URLSession(configuration: config)
   }
 
-  func fetchExportedCSV(query: String) async throws -> Data {
+  public func fetchExportedCSV(query: String) async throws -> Data {
     // 1. Create export request
     let exportId = try await createExport(query: query)
 

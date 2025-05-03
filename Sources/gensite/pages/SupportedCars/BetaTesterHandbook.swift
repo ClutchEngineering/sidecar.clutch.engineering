@@ -79,13 +79,13 @@ Please register your interest by filling in the form below:
 <iframe class="airtable-embed" src="https://airtable.com/embed/appqtcCtdikk37lX9/pagNEk4vaHhLGgfwl/form" frameborder="0" onmousewheel="" width="100%" height="700" style="background: transparent; border: 1px solid #ccc;"></iframe>
 
 We're onboarding cars in the order shown in [the leaderboard](http://sidecar.clutch.engineering/leaderboard/).
-               
+
 Once we start onboarding your model, you will receive your subscription promo code after you have:
 
 1. [installed Sidecar](https://apps.apple.com/us/app/electric-sidecar/id1663683832) and connected
 it to your car either with a Connected Account or via [OBD-II](https://sidecar.clutch.engineering/scanning/)
 (you can connect your car without a subscription),
-3. emailed an [export of your OBD logs](https://sidecar.clutch.engineering/help/#how-to-export-obd-scan-logs) to support@clutch.engineering.
+3. emailed an [export of your OBD logs](https://sidecar.clutch.engineering/help/#how-to-export-obd-scan-logs) to onboarding@clutch.engineering.
 """)
       .padding(.bottom, 16)
 

@@ -1,12 +1,82 @@
 import Foundation
+
+import AirtableAPI
+import DotEnvAPI
+import VehicleSupportMatrix
+
 import Slipstream
+
+// Assumes this file is located in a Sources/gensite sub-directory of a Swift package.
+guard let projectURL = URL(filePath: #filePath)?
+  .deletingLastPathComponent()
+  .deletingLastPathComponent()
+  .deletingLastPathComponent() else {
+  print("Unable to create URL for \(#filePath)")
+  exit(1)
+}
+
+let outputURL = projectURL.appending(path: "site")
 
 extension Condition {
   static var mobileOnly: Condition { Condition.within(Breakpoint.small..<Breakpoint.medium) }
   static var desktop: Condition { Condition.startingAt(.medium) }
 }
 
-let sitemap: Sitemap = [
+// Load environment variables from .env file if it exists
+DotEnv.load()
+
+guard let airtableAPIKey = ProcessInfo.processInfo.environment["AIRTABLE_API_KEY"] else {
+  fatalError("Missing AIRTABLE_API_KEY")
+}
+
+guard let airtableBaseID = ProcessInfo.processInfo.environment["AIRTABLE_BASE_ID"] else {
+  fatalError("Missing AIRTABLE_BASE_ID")
+}
+
+guard let modelsTableID = ProcessInfo.processInfo.environment["AIRTABLE_MODELS_TABLE_ID"] else {
+  fatalError("Missing AIRTABLE_MODELS_TABLE_ID")
+}
+
+// Get workspace path from command line arguments or use default
+let workspacePath: String
+let args = CommandLine.arguments
+
+// Check if cache should be used (default is false)
+let useCache = args.contains("--use-cache")
+
+// Extract workspace path from arguments
+if args.count > 1 && !args[1].hasPrefix("--") {
+  workspacePath = args[1]
+} else {
+  // Default to the workspace directory in the current project
+  let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
+  let workspaceURL = currentDirectoryURL.appendingPathComponent("workspace")
+  workspacePath = workspaceURL.path
+}
+
+// Create Airtable client
+let airtableClient = AirtableClient(baseID: airtableBaseID, apiKey: airtableAPIKey)
+
+// Load and merge vehicle data
+print("Loading vehicle metadata from: \(workspacePath)")
+if useCache {
+  print("Using cached data if available")
+}
+print("")
+
+// Use our new static function to load the MergedSupportMatrix
+let (supportMatrix, success) = await MergedSupportMatrix.load(
+  using: airtableClient,
+  modelsTableID: modelsTableID,
+  workspacePath: workspacePath,
+  useCache: useCache
+)
+
+assert(success, "Failed to load vehicle metadata")
+
+print("Generating sitemap...")
+
+var sitemap: Sitemap = [
   "index.html": Home(),
   "privacy-policy/index.html": PrivacyPolicy(
     appName: "Sidecar",
@@ -22,7 +92,7 @@ let sitemap: Sitemap = [
   "scanning/index.html": Scanning(),
   "scanning/extended-pids/index.html": ExtendedParameters(),
   "bug/index.html": Bug(),
-  "supported-cars/index.html": SupportedCars(),
+  "supported-cars/index.html": MakeGridPage(supportMatrix: supportMatrix),
   "beta/index.html": BetaTesterHandbook(),
   "leaderboard/index.html": LeaderboardPage(),
   "leaderboard/last24hours/index.html": Leaderboard24HoursPage(),
@@ -32,15 +102,27 @@ let sitemap: Sitemap = [
   "help/index.html": Help(),
 ]
 
-// Assumes this file is located in a Sources/gensite sub-directory of a Swift package.
-guard let projectURL = URL(filePath: #filePath)?
-  .deletingLastPathComponent()
-  .deletingLastPathComponent()
-  .deletingLastPathComponent() else {
-  print("Unable to create URL for \(#filePath)")
-  exit(1)
+for make in supportMatrix.getAllMakes() {
+  guard let url = MakeLink.url(for: make) else {
+    continue
+  }
+  sitemap[url.appending(component: "index.html").path()] = MakePage(supportMatrix: supportMatrix, make: make)
 }
 
-let outputURL = projectURL.appending(path: "site")
+func renderSitemapWithLogs(_ sitemap: Sitemap, to folder: URL, encoding: String.Encoding = .utf8) throws {
+  for (path, view) in sitemap.sorted(by: { $0.key < $1.key }) {
+    print("Rendering \(path)")
 
-try renderSitemap(sitemap, to: outputURL)
+    let output = try "<!DOCTYPE html>\n" + renderHTML(view)
+    let fileURL = folder.appending(path: path)
+    let folderURL = fileURL.deletingLastPathComponent()
+    if !FileManager.default.fileExists(atPath: folderURL.path(percentEncoded: false)) {
+      try FileManager.default.createDirectory(at: folderURL, withIntermediateDirectories: true)
+    }
+    try output.write(to: fileURL, atomically: true, encoding: encoding)
+  }
+}
+
+try renderSitemapWithLogs(sitemap, to: outputURL)
+
+print("Done")

@@ -12,3 +12,11 @@ DerivedData/
 .swiftpm/configuration/registries.json
 .swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 .netrc
+.meta
+node_modules/
+workspace/
+
+.env
+.cache/
+.schemas/
+site/gfx/vehicle/

@@ -2,9 +2,7 @@ import Foundation
 import Slipstream
 import VehicleSupportMatrix
 
-let becomeBetaURL = URL(string: "/beta")
-
-struct SupportedCars: View {
+struct MakeGridPage: View {
   let supportMatrix: MergedSupportMatrix
   let makes: [String]
 
@@ -122,63 +120,6 @@ struct SupportedCars: View {
 
       Section {
         ContentContainer {
-          VStack(alignment: .leading, spacing: 16) {
-            H1("Legend")
-              .fontSize(.extraLarge)
-              .fontSize(.fourXLarge, condition: .desktop)
-              .bold()
-              .fontDesign("rounded")
-
-            HStack(spacing: 16) {
-              SupportedSeal()
-              Text("Vehicle is fully onboarded and does not currently need new beta testers.")
-            }
-            HStack(spacing: 16) {
-              OBDStamp()
-              Text {
-                DOMString("Feature is supported via OBD. ")
-                Link("Requires a connected OBD-II scanner.", destination: URL(string: "/scanning/"))
-                  .textColor(.link, darkness: 700)
-                  .textColor(.link, darkness: 400, condition: .dark)
-                  .fontWeight(600)
-                  .underline(condition: .hover)
-              }
-            }
-            HStack(spacing: 16) {
-              OTAStamp()
-              Text("Feature is supported via Connected Accounts (Beta).")
-            }
-            HStack(spacing: 16) {
-              NotApplicableStamp()
-              Text("Not applicable to this vehicle.")
-            }
-            HStack(spacing: 16) {
-              Text {
-                Span("PID?")
-                  .bold()
-                DOMString(" The OBD parameter identifier (PID) is unknown.")
-              }
-            }
-          }
-          .alignItems(.center, condition: .desktop)
-          .textAlignment(.center, condition: .desktop)
-          .padding(.vertical, 16)
-        }
-      }
-      .margin(.bottom, 32)
-
-      HorizontalRule()
-
-      Section {
-        ContentContainer {
-          H1("Jump to your make")
-            .fontSize(.extraLarge)
-            .fontSize(.fourXLarge, condition: .desktop)
-            .bold()
-            .fontDesign("rounded")
-            .textAlignment(.center)
-            .margin(.bottom, 32)
-
           Div {
             for make in makes {
               MakeLink(make: make)
@@ -189,21 +130,6 @@ struct SupportedCars: View {
         }
       }
       .margin(.vertical, 64)
-
-      HorizontalRule()
-
-      VStack(alignment: .center, spacing: 64) {
-        for make in makes {
-          MakeSupportSectionV2(
-            make: make,
-            modelIDs: supportMatrix.getOBDbIDs(for: make),
-            supportMatrix: supportMatrix,
-            betaSubscriptionLength: betaSubscriptionLength,
-            becomeBetaURL: becomeBetaURL
-          )
-        }
-      }
-      .margin(.vertical, 32)
     }
   }
 }

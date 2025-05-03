@@ -2,25 +2,31 @@ import Foundation
 import Slipstream
 import VehicleSupportMatrix
 
-let becomeBetaURL = URL(string: "/beta")
-
-struct SupportedCars: View {
-  let supportMatrix: MergedSupportMatrix
-  let makes: [String]
-
-  init(supportMatrix: MergedSupportMatrix) {
-    self.supportMatrix = supportMatrix
-    let gfxURL = outputURL.appending(path: "gfx/make")
-    let fm = FileManager.default
-
-    self.makes = supportMatrix.getAllMakes().filter {
-      if !fm.fileExists(atPath: gfxURL.appending(component: makeNameForIcon($0)).appendingPathExtension("svg").path()) {
-        print("Dropping make: \($0) because no SVG found")
-        return false
+struct MakeHeroIconPuck: View {
+  let make: String
+  var body: some View {
+    Puck {
+      Div {
+        Image(URL(string: "/gfx/make/\(makeNameForIcon(make)).svg"))
+          .frame(width: 104, height: 104)
+          .padding(8)
+          .colorInvert(condition: .dark)
       }
-      return true
-    }.sorted(by: { makeNameForSorting($0) < makeNameForSorting($1) })
+      .background(.white, )
+      .background("sidecar-gray", condition: .dark)
+      .margin(.horizontal, .auto)
+      .margin(.top, 8)
+      .margin(.bottom, 24)
+      .cornerRadius(.extraExtraExtraLarge)
+    }
+    .border(.init(.zinc, darkness: 700), width: 4)
+    .border(.white, condition: .dark)
   }
+}
+
+struct MakePage: View {
+  let supportMatrix: MergedSupportMatrix
+  let make: String
 
   var body: some View {
     Page(
@@ -37,61 +43,25 @@ struct SupportedCars: View {
     ) {
       ContentContainer {
         VStack(alignment: .center) {
-          HeroIconPuck(url: URL(string: "/gfx/supported-vehicle.png")!)
+          HStack(spacing: 32) {
+            Link(URL(string: "/supported-cars/")) {
+              HeroIconPuck(url: URL(string: "/gfx/supported-vehicle.png")!)
+            }
+            MakeHeroIconPuck(make: make)
+          }
 
           Div {
-            H1("Supported Cars")
+            H1(make + " Support")
               .fontSize(.extraLarge)
               .fontSize(.fourXLarge, condition: .desktop)
               .bold()
               .fontDesign("rounded")
-            Text("Check which Sidecar features work with your car")
+            Text("Check which Sidecar features work with your \(make)")
           }
           .textAlignment(.center)
         }
         .padding(.vertical, 16)
       }
-
-      Section {
-        ContentContainer {
-          VStack(alignment: .center, spacing: 8) {
-            Link(becomeBetaURL) {
-              VStack(alignment: .center, spacing: 4) {
-                H1("Don't see your car?")
-                  .fontSize(.extraLarge)
-                  .fontSize(.fourXLarge, condition: .desktop)
-                  .bold()
-                  .fontDesign("rounded")
-                Text("Become a Sidecar beta tester, get \(betaSubscriptionLength) months free")
-                  .fontSize(.large)
-                  .fontSize(.extraLarge, condition: .desktop)
-                  .fontWeight(.medium)
-                  .fontDesign("rounded")
-                Text("Learn more ")
-                  .fontWeight(.bold)
-                  .fontDesign("rounded")
-                  .fontSize(.large)
-                  .underline(condition: .hover)
-              }
-              .textAlignment(.center)
-              .classNames(["bg-gradient-to-tl", "from-cyan-500", "to-blue-600"])
-              .transition(.all)
-              .textColor(.white)
-              .padding(.horizontal, 32)
-              .padding(.vertical, 24)
-              .background(.zinc, darkness: 100)
-              .background(.zinc, darkness: 900, condition: .dark)
-              .cornerRadius(.extraExtraLarge)
-            }
-          }
-          .frame(width: 0.8)
-          .frame(width: 0.6, condition: .desktop)
-          .margin(.horizontal, .auto)
-        }
-        .padding(.vertical, 8)
-        .padding(.vertical, 16, condition: .desktop)
-      }
-      .margin(.bottom, 32)
 
       Section {
         ContentContainer {
@@ -169,40 +139,13 @@ struct SupportedCars: View {
 
       HorizontalRule()
 
-      Section {
-        ContentContainer {
-          H1("Jump to your make")
-            .fontSize(.extraLarge)
-            .fontSize(.fourXLarge, condition: .desktop)
-            .bold()
-            .fontDesign("rounded")
-            .textAlignment(.center)
-            .margin(.bottom, 32)
-
-          Div {
-            for make in makes {
-              MakeLink(make: make)
-            }
-          }
-          .display(.grid)
-          .classNames(["grid-cols-3", "md:grid-cols-5", "gap-x-4", "gap-y-8"])
-        }
-      }
-      .margin(.vertical, 64)
-
-      HorizontalRule()
-
-      VStack(alignment: .center, spacing: 64) {
-        for make in makes {
-          MakeSupportSectionV2(
-            make: make,
-            modelIDs: supportMatrix.getOBDbIDs(for: make),
-            supportMatrix: supportMatrix,
-            betaSubscriptionLength: betaSubscriptionLength,
-            becomeBetaURL: becomeBetaURL
-          )
-        }
-      }
+      MakeSupportSectionV2(
+        make: make,
+        modelIDs: supportMatrix.getOBDbIDs(for: make),
+        supportMatrix: supportMatrix,
+        betaSubscriptionLength: betaSubscriptionLength,
+        becomeBetaURL: becomeBetaURL
+      )
       .margin(.vertical, 32)
     }
   }
