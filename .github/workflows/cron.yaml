@@ -65,9 +65,6 @@ jobs:
         if: steps.cache-workspace.outputs.cache-hit != 'true'
         run: mkdir -p workspace
 
-      - name: Install GitHub CLI
-        run: |
-          brew install gh
       - name: Authenticate with GitHub CLI
         run: |
           echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
