@@ -57,9 +57,9 @@ jobs:
           path: workspace
           # The cache key depends on the day of month to refresh cache periodically
           # This ensures a fresh clone every month while using cache for daily updates
-          key: ${{ runner.os }}-workspace-v2-${{ github.run_id }}-${{ github.run_number }}
+          key: ${{ runner.os }}-workspace-v3-${{ github.run_id }}-${{ github.run_number }}
           restore-keys: |
-            ${{ runner.os }}-workspace-v2-
+            ${{ runner.os }}-workspace-v3-
 
       - name: Create workspace directory if it doesn't exist
         if: steps.cache-workspace.outputs.cache-hit != 'true'
