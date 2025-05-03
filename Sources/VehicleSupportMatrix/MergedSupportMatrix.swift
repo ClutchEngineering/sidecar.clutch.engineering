@@ -58,7 +58,18 @@ public class MergedSupportMatrix: @unchecked Sendable {
     }
 
     public var allModelYears: [Int] {
-      return Set(yearCommandSupport.keys).union(Set(yearConfirmedSignals.keys)).sorted()
+      var years = Set(yearCommandSupport.keys).union(Set(yearConfirmedSignals.keys))
+
+      // Add years from generations
+      for generation in generations {
+        if let yearRange = generation.yearRange {
+          for year in yearRange {
+            years.insert(year)
+          }
+        }
+      }
+
+      return years.sorted()
     }
 
     public var modelYearRange: ClosedRange<Int>? {
