@@ -38,6 +38,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
     public let modelSVGs: [String]
     public var yearCommandSupport: [Int: CommandSupport]
     public var yearConfirmedSignals: [Int: Set<String>]
+    public var generations: [Generation]
 
     public init(
       obdbID: OBDbID,
@@ -53,6 +54,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
       self.modelSVGs = modelSVGs
       self.yearCommandSupport = [:]
       self.yearConfirmedSignals = [:]
+      self.generations = []
     }
 
     public var allModelYears: [Int] {
@@ -162,6 +164,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
       case modelSVGs
       case yearCommandSupport
       case yearConfirmedSignals
+      case generations
     }
   }
 
@@ -604,6 +607,14 @@ public class MergedSupportMatrix: @unchecked Sendable {
           for (model, years) in models {
             let obdbID = make + "-" + model
             supportMatrix[standardizedOBDbID(obdbID)]?.yearConfirmedSignals = years
+          }
+        }
+
+        // Add generations data from metadata
+        for (make, models) in vehicleMetadata.generations {
+          for (model, generations) in models {
+            let obdbID = make + "-" + model
+            supportMatrix[standardizedOBDbID(obdbID)]?.generations = generations
           }
         }
       }

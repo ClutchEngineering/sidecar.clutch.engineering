@@ -1,8 +1,40 @@
 import Foundation
 
+// Extension to get current year from Date
+extension Date {
+    var year: Int {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        return Int(formatter.string(from: self))!
+    }
+}
+
 public typealias Year = Int
 public typealias Make = String
 public typealias Model = String
+
+/// Represents a vehicle generation with name and year range
+public struct Generation: Codable, Equatable {
+  public let name: String
+  public let startYear: Int
+  public let endYear: Int?
+  public let description: String?
+
+  public var yearRange: ClosedRange<Int>? {
+    guard let endYear = endYear else {
+      // For generations that are still ongoing, use current year
+      return startYear...Int(Date().year)
+    }
+    return startYear...endYear
+  }
+
+  enum CodingKeys: String, CodingKey {
+    case name
+    case startYear = "start_year"
+    case endYear = "end_year"
+    case description
+  }
+}
 
 /// Represents command support information parsed from YAML files
 public struct CommandSupport: Codable {
@@ -57,10 +89,12 @@ public struct Vehicle {
 public struct VehicleMetadata {
   public var vehicles: [Make: [Model: [Year: CommandSupport]]]
   public var confirmedSignals: [Make: [Model: [Year: Set<String>]]]
+  public var generations: [Make: [Model: [Generation]]]
 
   public init() {
     self.vehicles = [:]
     self.confirmedSignals = [:]
+    self.generations = [:]
   }
 
   public mutating func addVehicle(
@@ -93,5 +127,19 @@ public struct VehicleMetadata {
     }
 
     confirmedSignals[make]?[model]?[year]?.insert(signal)
+  }
+
+  public mutating func addGenerations(
+    make: Make, model: Model, generations: [Generation]
+  ) {
+    if self.generations[make] == nil {
+      self.generations[make] = [:]
+    }
+
+    if self.generations[make]?[model] == nil {
+      self.generations[make]?[model] = []
+    }
+
+    self.generations[make]?[model] = generations
   }
 }

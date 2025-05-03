@@ -51,6 +51,13 @@ public class VehicleMetadataParser {
               metadata.addConfirmedSignal(make: make, model: model, year: year, signal: signal)
             }
           }
+
+          // Parse generations data
+          let generations = try parseGenerations(at: itemPath, make: make, model: model)
+
+          if !generations.isEmpty {
+            metadata.addGenerations(make: make, model: model, generations: generations)
+          }
         } catch {
           print("Error parsing vehicle directory \(item): \(error)")
         }
@@ -176,5 +183,30 @@ public class VehicleMetadataParser {
     }
 
     return signalsByYear
+  }
+
+  /// Parse generations data from generations.yaml file
+  private func parseGenerations(at path: String, make: String, model: String) throws -> [Generation] {
+    // Path to generations.yaml
+    let generationsPath = (path as NSString).appendingPathComponent("generations.yaml")
+
+    if !fileManager.fileExists(atPath: generationsPath) {
+      return []
+    }
+
+    do {
+      let yamlData = try String(contentsOfFile: generationsPath, encoding: .utf8)
+
+      // Use Yams to decode the generations data
+      struct GenerationsContainer: Codable {
+        let generations: [Generation]
+      }
+
+      let generationsContainer = try YAMLDecoder().decode(GenerationsContainer.self, from: yamlData)
+      return generationsContainer.generations
+    } catch {
+      print("Failed to parse generations data for \(make)-\(model): \(error)")
+      return []
+    }
   }
 }
