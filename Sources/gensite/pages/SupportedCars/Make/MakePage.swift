@@ -85,6 +85,55 @@ struct MakePage: View {
       }
       .margin(.bottom, 32)
 
+      Section {
+        ContentContainer {
+          VStack(alignment: .leading, spacing: 16) {
+            H1("Legend")
+              .fontSize(.extraLarge)
+              .fontSize(.fourXLarge, condition: .desktop)
+              .bold()
+              .fontDesign("rounded")
+
+            HStack(spacing: 16) {
+              SupportedSeal()
+              Text("Vehicle is fully onboarded and does not currently need new beta testers.")
+            }
+            HStack(spacing: 16) {
+              OBDStamp()
+              Text {
+                DOMString("Feature is supported via OBD. ")
+                Link("Requires a connected OBD-II scanner.", destination: URL(string: "/scanning/"))
+                  .textColor(.link, darkness: 700)
+                  .textColor(.link, darkness: 400, condition: .dark)
+                  .fontWeight(600)
+                  .underline(condition: .hover)
+              }
+            }
+            HStack(spacing: 16) {
+              OTAStamp()
+              Text("Feature is supported via Connected Accounts.")
+            }
+            HStack(spacing: 16) {
+              NotApplicableStamp()
+              Text("Not applicable to this vehicle.")
+            }
+            HStack(spacing: 16) {
+              Text {
+                Span("PID?")
+                  .bold()
+                DOMString(" The OBD parameter identifier (PID) is unknown.")
+              }
+            }
+          }
+          .alignItems(.center, condition: .desktop)
+          .textAlignment(.center, condition: .desktop)
+          .padding(.vertical, 16)
+        }
+      }
+      .margin(.bottom, 32)
+
+      HorizontalRule()
+
       MakeSupportSectionV2(
         make: make,
         modelIDs: supportMatrix.getOBDbIDs(for: make),

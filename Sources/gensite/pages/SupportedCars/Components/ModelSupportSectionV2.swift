@@ -96,10 +96,10 @@ struct ModelSupportSectionV2: View {
                   YearsCell(years: yearRangeKey) // Using the actual year range instead of single year
                   TesterNeededStatusCell()
                   if modelSupport.engineType.hasBattery {
-                    SupportStatusV2(supported: support[.stateOfCharge])
-                    SupportStatusV2(supported: support[.stateOfHealth])
-                    SupportStatusV2(supported: support[.isCharging])
-                    SupportStatusV2(supported: support[.batteryModulesStateOfCharge])
+                    SupportStatusV2(support: support, connectables: [.stateOfCharge], make: make, isLast: false)
+                    SupportStatusV2(support: support, connectables: [.stateOfHealth], make: make, isLast: false)
+                    SupportStatusV2(support: support, connectables: [.isCharging, .pluggedIn], make: make, isLast: false)
+                    SupportStatusV2(support: support, connectables: [.batteryModulesStateOfCharge], make: make, isLast: false)
                   } else {
                     NotApplicableCell(isLast: false)
                     NotApplicableCell(isLast: false)
@@ -107,17 +107,14 @@ struct ModelSupportSectionV2: View {
                     NotApplicableCell(isLast: false)
                   }
                   if modelSupport.engineType.hasFuel {
-                    SupportStatusV2(supported: support[.fuelTankLevel])
+                    SupportStatusV2(support: support, connectables: [.fuelTankLevel], make: make, isLast: false)
                   } else {
                     NotApplicableCell(isLast: false)
                   }
-                  SupportStatusV2(supported: support[.speed])
-                  SupportStatusV2(supported: max(support[.electricRange] ?? .unknown, support[.fuelRange] ?? .unknown))
-                  SupportStatusV2(supported: support[.odometer])
-                  SupportStatusV2(supported: max(
-                    max(support[.frontLeftTirePressure] ?? .unknown, support[.frontLeftTirePressure] ?? .unknown),
-                    max(support[.rearLeftTirePressure] ?? .unknown, support[.rearLeftTirePressure] ?? .unknown)
-                  ), isLast: true)
+                  SupportStatusV2(support: support, connectables: [.speed], make: make, isLast: false)
+                  SupportStatusV2(support: support, connectables: [.electricRange, .fuelRange], make: make, isLast: false)
+                  SupportStatusV2(support: support, connectables: [.odometer], make: make, isLast: false)
+                  SupportStatusV2(support: support, connectables: [.frontLeftTirePressure, .frontLeftTirePressure, .rearLeftTirePressure, .rearLeftTirePressure], make: make, isLast: true)
                 }
               }
             }
@@ -142,43 +139,37 @@ struct ModelSupportSectionV2: View {
 }
 
 struct SupportStatusV2: View {
-  let supported: MergedSupportMatrix.ModelSupport.ConnectableSupportLevel??
+  let support: [MergedSupportMatrix.Connectable : MergedSupportMatrix.ModelSupport.ConnectableSupportLevel]
+  let connectables: Set<MergedSupportMatrix.Connectable>
+  let make: String
   let isLast: Bool
 
-  init(supported: MergedSupportMatrix.ModelSupport.ConnectableSupportLevel?, isLast: Bool = false) {
-    self.supported = supported
-    self.isLast = isLast
+  var supported: MergedSupportMatrix.ModelSupport.ConnectableSupportLevel? {
+    return connectables.compactMap { support[$0] }.max()
   }
 
   var body: some View {
-    switch supported {
-    case .confirmed:
-      Bordered(showTrailingBorder: !isLast) {
-        TableCell {
-          OBDStamp()
-        }
-      }
-      .padding(.horizontal, 8)
-    case .shouldBeSupported:
-      Bordered(showTrailingBorder: !isLast) {
-        TableCell {
-          HStack {
+    Bordered(showTrailingBorder: !isLast) {
+      TableCell {
+        HStack {
+          switch supported {
+          case .confirmed:
+            OBDStamp()
+          case .shouldBeSupported:
             OBDStamp()
               .opacity(0.25)
+          case nil, .unknown:
+            Text("")
+              .textColor(.text, darkness: 600)
+              .textColor(.text, darkness: 400, condition: .dark)
           }
-          .justifyContent(.center)
+          if makeConnectedAccountSupport[make]?.intersection(connectables).isEmpty == false {
+            OTAStamp()
+          }
         }
+        .justifyContent(.center)
       }
-      .padding(.horizontal, 8)
-    case nil, .some(.none), .unknown:
-      Bordered(showTrailingBorder: !isLast) {
-        TableCell {
-          Text("")
-            .textColor(.text, darkness: 600)
-            .textColor(.text, darkness: 400, condition: .dark)
-        }
-      }
-      .padding(.horizontal, 8)
     }
+    .padding(.horizontal, 8)
   }
 }

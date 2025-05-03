@@ -170,7 +170,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
   /// Type alias for signal identifier (e.g., "TAYCAN_VSS")
   public typealias SignalID = String
 
-  public enum Connectable: String, CaseIterable {
+  public enum Connectable: String, CaseIterable, Sendable {
     case electricRange
     case frontLeftTirePressure
     case frontRightTirePressure
