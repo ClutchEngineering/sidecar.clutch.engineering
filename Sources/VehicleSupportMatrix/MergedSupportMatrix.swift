@@ -9,6 +9,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
   /// Structure to hold combined model data with command support information
   public struct ModelSupport: Codable {
+    public let obdbID: OBDbID
     public let make: String
     public let model: String
     public enum EngineType: String, Codable {
@@ -39,11 +40,13 @@ public class MergedSupportMatrix: @unchecked Sendable {
     public var yearConfirmedSignals: [Int: Set<String>]
 
     public init(
+      obdbID: OBDbID,
       make: String,
       model: String,
       engineType: EngineType,
       modelSVGs: [String]
     ) {
+      self.obdbID = obdbID
       self.make = make
       self.model = model
       self.engineType = engineType
@@ -152,6 +155,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
     // Add custom coding keys for potential future compatibility
     enum CodingKeys: String, CodingKey {
+      case obdbID
       case make
       case model
       case engineType
@@ -259,10 +263,17 @@ public class MergedSupportMatrix: @unchecked Sendable {
   /// Processed mapping of vehicle models to their signals and standard names, organized by year ranges
   public private(set) var saeConnectables: [SignalID: Connectable] = [:]
 
+  private func standardizedOBDbID(_ obdbID: OBDbID) -> OBDbID {
+    return obdbID
+      .lowercased()
+      .replacingOccurrences(of: " ", with: "_")
+      .replacingOccurrences(of: "-", with: "_")
+  }
+
   /// Processed mapping of vehicle models to their signals and standard names, organized by year ranges
   private var connectables: [OBDbID: YearRangeSignalMap] = [:]
   public func connectables(for obdbID: OBDbID) -> YearRangeSignalMap {
-    if let existingMap = connectables[obdbID] {
+    if let existingMap = connectables[standardizedOBDbID(obdbID)] {
       return existingMap
     }
     if let engineType = self.getModel(id: obdbID)?.engineType {
@@ -501,7 +512,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
         guard (connectable.isBatteryRelated && engineType.hasBattery) || (connectable.isFuelRelated && engineType.hasFuel) || (!connectable.isBatteryRelated && !connectable.isFuelRelated) else {
           continue
         }
-        connectables[obdbID, default: YearRangeSignalMap()][yearRange, default: [:]][signalID] = connectable
+        connectables[standardizedOBDbID(obdbID), default: YearRangeSignalMap()][yearRange, default: [:]][signalID] = connectable
       }
 
       // Add all signal mappings for this combination
@@ -512,7 +523,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
         guard (connectable.isBatteryRelated && engineType.hasBattery) || (connectable.isFuelRelated && engineType.hasFuel) || (!connectable.isBatteryRelated && !connectable.isFuelRelated) else {
           continue
         }
-        connectables[obdbID, default: YearRangeSignalMap()][yearRange, default: [:]][signalID] = connectable
+        connectables[standardizedOBDbID(obdbID), default: YearRangeSignalMap()][yearRange, default: [:]][signalID] = connectable
       }
     }
   }
@@ -558,7 +569,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
           continue
         }
 
-        supportMatrix[obdbID] = ModelSupport(
+        supportMatrix[standardizedOBDbID(obdbID)] = ModelSupport(
+          obdbID: obdbID,
           make: make,
           model: model,
           engineType: engineType,
@@ -583,7 +595,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
         for (make, models) in vehicleMetadata.vehicles {
           for (model, years) in models {
             let obdbID = make + "-" + model
-            supportMatrix[obdbID]?.yearCommandSupport = years
+            supportMatrix[standardizedOBDbID(obdbID)]?.yearCommandSupport = years
           }
         }
 
@@ -591,7 +603,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
         for (make, models) in vehicleMetadata.confirmedSignals {
           for (model, years) in models {
             let obdbID = make + "-" + model
-            supportMatrix[obdbID]?.yearConfirmedSignals = years
+            supportMatrix[standardizedOBDbID(obdbID)]?.yearConfirmedSignals = years
           }
         }
       }
@@ -657,7 +669,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
   /// - Parameter make: The vehicle make
   /// - Returns: Array of model names for the given make
   public func getModel(id: OBDbID) -> ModelSupport? {
-    return supportMatrix[id]
+    return supportMatrix[standardizedOBDbID(id)]
   }
 
   /// Get OBDbIDs for a specific make
@@ -668,27 +680,6 @@ public class MergedSupportMatrix: @unchecked Sendable {
       .filter { $0.value.make == make }
       .map { $0.key }
       .sorted()
-  }
-
-  /// Get years available for a specific make and model
-  /// - Parameters:
-  ///   - make: The vehicle make
-  ///   - model: The vehicle model
-  /// - Returns: Array of years for which command support data is available
-  public func getYears(for make: String, model: String) -> [Int] {
-    let obdbID = make + "-" + model
-    return supportMatrix[obdbID]?.yearCommandSupport.keys.sorted() ?? []
-  }
-
-  /// Get command support for a specific make, model, and year
-  /// - Parameters:
-  ///   - make: The vehicle make
-  ///   - model: The vehicle model
-  ///   - year: The model year
-  /// - Returns: The command support information if available
-  public func getCommandSupport(for make: String, model: String, year: Int) -> CommandSupport? {
-    let obdbID = make + "-" + model
-    return supportMatrix[obdbID]?.yearCommandSupport[year]
   }
 
   /// Get vehicles supporting a specific OBD-II command
@@ -728,27 +719,6 @@ public class MergedSupportMatrix: @unchecked Sendable {
     }
 
     return result
-  }
-
-  /// Get confirmed signals for a specific make, model, and year
-  /// - Parameters:
-  ///   - make: The vehicle make
-  ///   - model: The vehicle model
-  ///   - year: The vehicle year
-  /// - Returns: A set of confirmed signal names, or an empty set if none are found
-  public func getConfirmedSignals(for make: String, model: String, year: Int) -> Set<String> {
-    let obdbID = make + "-" + model
-    return supportMatrix[obdbID]?.yearConfirmedSignals[year] ?? []
-  }
-
-  /// Get all confirmed signals for a specific make and model across all years
-  /// - Parameters:
-  ///   - make: The vehicle make
-  ///   - model: The vehicle model
-  /// - Returns: A dictionary mapping years to sets of confirmed signals
-  public func getAllConfirmedSignals(for make: String, model: String) -> [Int: Set<String>] {
-    let obdbID = make + "-" + model
-    return supportMatrix[obdbID]?.yearConfirmedSignals ?? [:]
   }
 
   /// Get vehicles that support a specific signal

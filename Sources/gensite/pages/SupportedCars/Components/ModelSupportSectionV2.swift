@@ -59,17 +59,17 @@ struct ModelSupportSectionV2: View {
       Div {
         Table {
           TableHeader {
-            HeaderCell { Text("Year") }
+            HeaderCell { Text("Year") }.frame(width: 108)
             HeaderCell { Text("Overall") }
-            HeaderCell { ParameterHeader(icon: "bolt", name: "SoC") }
-            HeaderCell { ParameterHeader(icon: "health", name: "SoH") }
-            HeaderCell { ParameterHeader(icon: "plug", name: "State") }
-            HeaderCell { ParameterHeader(icon: "battery", name: "Cells") }
-            HeaderCell { ParameterHeader(icon: "fuel", name: "Fuel") }
-            HeaderCell { ParameterHeader(icon: "speed", name: "Speed") }
-            HeaderCell { ParameterHeader(icon: "length", name: "Range") }
-            HeaderCell { ParameterHeader(icon: "length", name: "Odom") }
-            HeaderCell(isLast: true) { ParameterHeader(icon: "tirepressure", name: "Tires") }
+            HeaderCell { ParameterHeader(icon: "bolt", name: "SoC", secondary: !modelSupport.engineType.hasBattery) }
+            HeaderCell { ParameterHeader(icon: "health", name: "SoH", secondary: !modelSupport.engineType.hasBattery) }
+            HeaderCell { ParameterHeader(icon: "plug", name: "State", secondary: !modelSupport.engineType.hasBattery) }
+            HeaderCell { ParameterHeader(icon: "battery", name: "Cells", secondary: !modelSupport.engineType.hasBattery) }
+            HeaderCell { ParameterHeader(icon: "fuel", name: "Fuel", secondary: !modelSupport.engineType.hasFuel) }
+            HeaderCell { ParameterHeader(icon: "speed", name: "Speed", secondary: false) }
+            HeaderCell { ParameterHeader(icon: "length", name: "Range", secondary: false) }
+            HeaderCell { ParameterHeader(icon: "length", name: "Odom", secondary: false) }
+            HeaderCell(isLast: true) { ParameterHeader(icon: "tirepressure", name: "Tires", secondary: false) }
           }
           .background(.gray, darkness: 100)
           .background(.zinc, darkness: 950, condition: .dark)

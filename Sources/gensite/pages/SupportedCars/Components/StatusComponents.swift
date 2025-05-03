@@ -47,6 +47,7 @@ struct NotApplicableCell: View {
     Bordered(showTrailingBorder: !isLast) {
       TableCell {
         NotApplicableStamp()
+          .opacity(0.5)
       }
     }
     .padding(.horizontal, 8)
@@ -107,6 +108,8 @@ struct SupportStatus: View {
 struct ParameterHeader: View {
   let icon: String
   let name: String
+  let secondary: Bool
+
   var body: some View {
     VStack(alignment: .center) {
       Image(URL(string: "/gfx/parameters/\(icon).png"))
@@ -117,5 +120,6 @@ struct ParameterHeader: View {
       Text(name)
     }
     .justifyContent(.center)
+    .opacity(secondary ? 0.3 : 1)
   }
 }
