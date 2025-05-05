@@ -93,7 +93,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
         }
       }
 
-      return years.sorted()
+      // Only return years since OBD was introduced.
+      return years.filter { $0 >= 1988 }.sorted()
     }
 
     public var modelYearRange: ClosedRange<Int>? {
