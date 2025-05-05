@@ -1,90 +1,90 @@
 series,custom name,total count
-/,# of stigs,287
-Porsche/Taycan,# of stigs,223
-Toyota/Camry,# of stigs,207
+/,# of stigs,292
+Porsche/Taycan,# of stigs,228
+Toyota/Camry,# of stigs,212
 Honda/Civic,# of stigs,155
-Toyota/4Runner,# of stigs,124
-Honda/Accord,# of stigs,122
-Ford/F-150,# of stigs,118
+Toyota/4Runner,# of stigs,125
+Honda/Accord,# of stigs,124
+Ford/F-150,# of stigs,120
+Hyundai/Elantra,# of stigs,83
 Volkswagen/Golf,# of stigs,83
-Hyundai/Elantra,# of stigs,81
 Toyota/Corolla,# of stigs,75
-Toyota/RAV4,# of stigs,71
+Toyota/RAV4,# of stigs,72
 Tesla/Model 3,# of stigs,69
 Toyota/Tacoma,# of stigs,63
 Porsche/Cayenne,# of stigs,61
+Mazda/3,# of stigs,59
 Honda/CR-V,# of stigs,58
-Mazda/3,# of stigs,58
 Ram/1500,# of stigs,56
 Hyundai/IONIQ 5,# of stigs,55
 BMW/3 Series,# of stigs,53
-Hyundai/Sonata,# of stigs,51
+Hyundai/Sonata,# of stigs,52
+Ford/Mustang,# of stigs,47
+Volkswagen/Polo,# of stigs,47
 Audi/A4,# of stigs,46
-Ford/Mustang,# of stigs,46
-Volkswagen/Polo,# of stigs,46
-Ford/Mustang Mach-E,# of stigs,43
-Porsche/Macan,# of stigs,43
-MG/MG4,# of stigs,40
+Ford/Mustang Mach-E,# of stigs,44
+Porsche/Macan,# of stigs,44
+MG/MG4,# of stigs,41
 Volkswagen/Tiguan,# of stigs,40
 Hyundai/Tucson,# of stigs,39
 Mazda/CX-5,# of stigs,39
 Polestar/2,# of stigs,39
+Chevrolet/Silverado 1500,# of stigs,38
 Ford/Escape,# of stigs,38
 Volkswagen/ID.4,# of stigs,38
-Chevrolet/Silverado 1500,# of stigs,37
 Kia/EV9,# of stigs,37
+Nissan/Altima,# of stigs,37
 Volkswagen/Jetta,# of stigs,37
-Nissan/Altima,# of stigs,36
+Ford/Focus,# of stigs,35
+Jeep/Wrangler,# of stigs,35
 BMW/,# of stigs,34
-Ford/Focus,# of stigs,34
 Jeep/Grand Cherokee,# of stigs,34
-Jeep/Wrangler,# of stigs,34
-Kia/Forte,# of stigs,32
+Kia/Forte,# of stigs,33
 BMW/5 Series,# of stigs,30
 Subaru/Outback,# of stigs,30
+Seat/Leon,# of stigs,29
+Subaru/Crosstrek,# of stigs,29
 Tesla/Model Y,# of stigs,29
 Toyota/Tundra,# of stigs,29
-Seat/Leon,# of stigs,28
+BMW/X3,# of stigs,28
 Toyota/RAV4 Hybrid,# of stigs,28
-BMW/X3,# of stigs,27
 BMW/X5,# of stigs,27
 Kia/EV6,# of stigs,27
-Subaru/Crosstrek,# of stigs,27
+Nissan/Rogue,# of stigs,27
 Dodge/Charger,# of stigs,26
 Ford/F-150 Lightning,# of stigs,26
 Ford/Ranger,# of stigs,26
+GMC/Sierra 1500,# of stigs,26
 Kia/K5,# of stigs,26
-Nissan/Rogue,# of stigs,26
 Toyota/Highlander,# of stigs,26
 Ford/Fusion,# of stigs,25
+Hyundai/Santa Fe,# of stigs,25
 Nissan/Sentra,# of stigs,25
 Audi/A3,# of stigs,24
 Chevrolet/Bolt EUV,# of stigs,24
 Chevrolet/Bolt EV,# of stigs,24
 Chevrolet/Malibu,# of stigs,24
-Hyundai/Santa Fe,# of stigs,24
 Toyota/Yaris,# of stigs,24
 Chevrolet/Tahoe,# of stigs,23
-GMC/Sierra 1500,# of stigs,23
 Toyota/Corolla Hybrid,# of stigs,23
+Volkswagen/Passat,# of stigs,23
 Chevrolet/Equinox,# of stigs,22
+Kia/Sportage,# of stigs,22
 Peugeot/208,# of stigs,22
-Volkswagen/Passat,# of stigs,22
+Toyota/Land Cruiser,# of stigs,22
+Vauxhall/Opel/Corsa,# of stigs,22
 Ford/Taurus,# of stigs,21
 Jeep/Compass,# of stigs,21
-Kia/Sportage,# of stigs,21
 Mazda/CX-9,# of stigs,21
 Nissan/LEAF,# of stigs,21
-Toyota/Land Cruiser,# of stigs,21
-Vauxhall/Opel/Corsa,# of stigs,21
 Ford/Fiesta,# of stigs,20
 Hyundai/Kona,# of stigs,20
 Chevrolet/Cruze,# of stigs,19
+Škoda/Octavia,# of stigs,19
 Audi/A5,# of stigs,18
 Ford/Edge,# of stigs,18
 Mercedes-Benz/C-Class,# of stigs,18
 Subaru/Forester,# of stigs,18
-Škoda/Octavia,# of stigs,18
 Ford/Bronco,# of stigs,17
 BMW/i4,# of stigs,16
 Ford/Explorer,# of stigs,16
@@ -102,11 +102,15 @@ Acura/Integra,# of stigs,14
 Audi/,# of stigs,14
 BMW/2 Series,# of stigs,14
 Hyundai/Accent,# of stigs,14
+Kia/Sorento,# of stigs,14
+Mazda/6,# of stigs,14
 Mercedes-Benz/E-Class,# of stigs,14
 Nissan/Qashqai,# of stigs,14
 Renault/Clio,# of stigs,14
 Subaru/WRX,# of stigs,14
 Toyota/RAV4 Prime,# of stigs,14
+Acura/TLX,# of stigs,13
+Audi/Q3,# of stigs,13
 BMW/1 Series,# of stigs,13
 Ford/Maverick,# of stigs,13
 GMC/Terrain,# of stigs,13
@@ -115,13 +119,9 @@ Honda/HR-V,# of stigs,13
 Hyundai/i30,# of stigs,13
 Jeep/Wrangler 4xe,# of stigs,13
 Kia/,# of stigs,13
-Kia/Sorento,# of stigs,13
-Mazda/6,# of stigs,13
 Peugeot/308,# of stigs,13
 Volkswagen/T-Roc,# of stigs,13
 Škoda/Enyaq,# of stigs,13
-Acura/TLX,# of stigs,12
-Audi/Q3,# of stigs,12
 BMW/i3,# of stigs,12
 Cupra/Formentor,# of stigs,12
 Honda/Accord Hybrid,# of stigs,12
@@ -138,6 +138,7 @@ Kia/Seltos,# of stigs,11
 Mazda/CX-30,# of stigs,11
 Subaru/BRZ,# of stigs,11
 Volkswagen/GTI,# of stigs,11
+Volvo/XC90,# of stigs,11
 Škoda/Superb,# of stigs,11
 Audi/A1,# of stigs,10
 Audi/Q7,# of stigs,10
@@ -149,6 +150,7 @@ Citroën/C3,# of stigs,10
 Cupra/Born,# of stigs,10
 Dodge/Challenger,# of stigs,10
 Ford/F-250,# of stigs,10
+Honda/Ridgeline,# of stigs,10
 Hyundai/Tucson Hybrid,# of stigs,10
 Mazda/Mazda3,# of stigs,10
 Mercedes-Benz/S-Class,# of stigs,10
@@ -158,9 +160,10 @@ Renault/Megane,# of stigs,10
 Suzuki/Swift,# of stigs,10
 Toyota/Camry Hybrid,# of stigs,10
 Vauxhall/Opel/Astra,# of stigs,10
-Volvo/XC90,# of stigs,10
 BMW/iX,# of stigs,9
+Chevrolet/Trax,# of stigs,9
 Chrysler/300,# of stigs,9
+Ford/,# of stigs,9
 Ford/Bronco Sport,# of stigs,9
 Ford/Kuga,# of stigs,9
 Genesis/G70,# of stigs,9
@@ -173,16 +176,15 @@ Toyota/bZ4X,# of stigs,9
 Volkswagen/ID.3,# of stigs,9
 Volkswagen/e-Golf,# of stigs,9
 Volvo/S60,# of stigs,9
+Audi/S5,# of stigs,8
 Audi/SQ5,# of stigs,8
 BYD/Atto 3,# of stigs,8
 Chevrolet/Camaro,# of stigs,8
-Chevrolet/Trax,# of stigs,8
 Chrysler/Pacifica,# of stigs,8
-Ford/,# of stigs,8
 Ford/Fusion Hybrid,# of stigs,8
 Ford/Puma,# of stigs,8
 GMC/Sierra,# of stigs,8
-Honda/Ridgeline,# of stigs,8
+Genesis/G80,# of stigs,8
 Hyundai/Veloster,# of stigs,8
 Jeep/Renegade,# of stigs,8
 Land Rover/Defender,# of stigs,8
@@ -196,14 +198,14 @@ Toyota/Prius Prime,# of stigs,8
 Volkswagen/Jetta GLI,# of stigs,8
 Volvo/,# of stigs,8
 Audi/Q4 e-tron,# of stigs,7
-Audi/S5,# of stigs,7
+BMW/3 Series eDrive,# of stigs,7
 BMW/330e,# of stigs,7
 BMW/4 Series,# of stigs,7
 Chevrolet/Trailblazer,# of stigs,7
 Citroën/C4,# of stigs,7
 GMC/Canyon,# of stigs,7
-Genesis/G80,# of stigs,7
 Hyundai/Azera,# of stigs,7
+Jeep/Gladiator,# of stigs,7
 Kia/Soul,# of stigs,7
 MINI/Countryman,# of stigs,7
 Mazda/2,# of stigs,7
@@ -216,7 +218,6 @@ Volkswagen/Atlas,# of stigs,7
 Volkswagen/T-Cross,# of stigs,7
 Audi/A3 e-tron,# of stigs,6
 Audi/e-tron,# of stigs,6
-BMW/3 Series eDrive,# of stigs,6
 Chevrolet/Spark,# of stigs,6
 Chevrolet/Traverse,# of stigs,6
 Ford/F-350,# of stigs,6
@@ -228,7 +229,6 @@ Hyundai/Venue,# of stigs,6
 Jaguar/I-PACE,# of stigs,6
 Jeep/Avenger,# of stigs,6
 Jeep/Cherokee,# of stigs,6
-Jeep/Gladiator,# of stigs,6
 Kia/Cerato,# of stigs,6
 Lexus/,# of stigs,6
 Lexus/ES 300h,# of stigs,6
@@ -241,6 +241,7 @@ Mercedes-Benz/GLC-Class,# of stigs,6
 Mitsubishi/Outlander,# of stigs,6
 Porsche/Panamera,# of stigs,6
 Renault/Zoe,# of stigs,6
+Subaru/Legacy,# of stigs,6
 Toyota/Corolla Cross,# of stigs,6
 Toyota/Sienna Hybrid,# of stigs,6
 Toyota/Yaris Cross,# of stigs,6
@@ -273,9 +274,11 @@ Nissan/Maxima,# of stigs,5
 OPEL/,# of stigs,5
 Toyota/Venza,# of stigs,5
 Volvo/XC40,# of stigs,5
+Alfa Romeo/Giulietta,# of stigs,4
 BMW/335i,# of stigs,4
 BMW/E46,# of stigs,4
 BMW/Z4,# of stigs,4
+Cadillac/LYRIQ,# of stigs,4
 Chevrolet/Corvette,# of stigs,4
 Dacia/Sandero III,# of stigs,4
 Dodge/Dakota,# of stigs,4
@@ -286,11 +289,14 @@ Ford/EcoSport,# of stigs,4
 Ford/Transit Connect,# of stigs,4
 GMC/Yukon XL,# of stigs,4
 Genesis/GV80,# of stigs,4
+Haval/H6,# of stigs,4
 Honda/,# of stigs,4
 Honda/Passport,# of stigs,4
 Hyundai/Ioniq Electric,# of stigs,4
 Hyundai/Ioniq Hybrid,# of stigs,4
+Hyundai/Santa Cruz,# of stigs,4
 Hyundai/i10,# of stigs,4
+Jaguar/F-PACE,# of stigs,4
 Kia/Ceed,# of stigs,4
 Kia/Sportage 4,# of stigs,4
 Kia/Sportage PHEV,# of stigs,4
@@ -309,7 +315,6 @@ Nissan/Versa,# of stigs,4
 Nissan/X-Trail,# of stigs,4
 Peugeot/,# of stigs,4
 Subaru/Ascent,# of stigs,4
-Subaru/Legacy,# of stigs,4
 Subaru/Solterra,# of stigs,4
 Suzuki/Baleno,# of stigs,4
 Toyota/Aygo X,# of stigs,4
@@ -318,7 +323,6 @@ Toyota/GR Supra,# of stigs,4
 Volkswagen/Amarok,# of stigs,4
 Volkswagen/Arteon,# of stigs,4
 Volkswagen/Touareg,# of stigs,4
-Alfa Romeo/Giulietta,# of stigs,3
 Alfa Romeo/Tonale,# of stigs,3
 Audi/TT,# of stigs,3
 BMW/4 Series Gran Coupe,# of stigs,3
@@ -330,11 +334,11 @@ BMW/M240i,# of stigs,3
 BMW/X4,# of stigs,3
 Buick/Encore,# of stigs,3
 Buick/LaCrosse,# of stigs,3
-Cadillac/LYRIQ,# of stigs,3
 Cadillac/XT5,# of stigs,3
 Chevrolet/,# of stigs,3
 Chevrolet/Blazer,# of stigs,3
 Chevrolet/Captiva,# of stigs,3
+Chevrolet/Silverado 2500,# of stigs,3
 Chevrolet/Sonic,# of stigs,3
 Cupra/Leon,# of stigs,3
 Dacia/Sandero,# of stigs,3
@@ -344,12 +348,10 @@ FIAT/Panda,# of stigs,3
 Ford/Focus ST,# of stigs,3
 Ford/S-Max,# of stigs,3
 GMC/Sierra 1500 Limited,# of stigs,3
-Haval/H6,# of stigs,3
 Honda/Odyssey,# of stigs,3
 Hyundai/Palisade,# of stigs,3
-Hyundai/Santa Cruz,# of stigs,3
 Hyundai/Santa Fe Hybrid,# of stigs,3
-Jaguar/F-PACE,# of stigs,3
+Jeep/Grand Cherokee L,# of stigs,3
 Jeep/Wrangler JK,# of stigs,3
 Kia/Carnival,# of stigs,3
 Kia/Rio,# of stigs,3
@@ -408,6 +410,7 @@ Alfa Romeo/MiTo,# of stigs,2
 Alpine/A110,# of stigs,2
 Audi/Q8 e-tron,# of stigs,2
 Audi/RS e-tron,# of stigs,2
+Audi/SQ7,# of stigs,2
 BMW/1 Series M,# of stigs,2
 BMW/320i,# of stigs,2
 BMW/328i,# of stigs,2
@@ -433,7 +436,6 @@ Cadillac/Escalade,# of stigs,2
 Changan/Cs95,# of stigs,2
 Changan/Uni-v,# of stigs,2
 Chevrolet/Avalanche,# of stigs,2
-Chevrolet/Silverado 2500,# of stigs,2
 Chevrolet/Tracker,# of stigs,2
 Citroën/C5,# of stigs,2
 Citroën/E-C4,# of stigs,2
@@ -472,10 +474,10 @@ Hyundai/Genesis,# of stigs,2
 Hyundai/Ioniq,# of stigs,2
 Hyundai/Ioniq Plug-In Hybrid,# of stigs,2
 INEOS/Grenadier,# of stigs,2
+INFINITI/G37,# of stigs,2
 INFINITI/QX60,# of stigs,2
 Jaguar/F-TYPE,# of stigs,2
 Jeep/Commander,# of stigs,2
-Jeep/Grand Cherokee L,# of stigs,2
 Jetour/T2,# of stigs,2
 Kia/Carens,# of stigs,2
 Kia/K7,# of stigs,2
@@ -487,6 +489,7 @@ Lexus/IS 500,# of stigs,2
 Lexus/LX,# of stigs,2
 Lexus/NX 300,# of stigs,2
 Lexus/UX,# of stigs,2
+Lincoln/MKX,# of stigs,2
 Lucid/Air,# of stigs,2
 Lynk & Co/01,# of stigs,2
 MG/HS,# of stigs,2
@@ -555,18 +558,17 @@ Volvo/XC40 Recharge,# of stigs,2
 Škoda/Fabia,# of stigs,2
 /Creta,# of stigs,1
 /יונדאי i25,# of stigs,1
-ALL ABOUT TRAILERS/All About Trailers,# of stigs,1
+AUDIdi/Q3,# of stigs,1
 Abarth/500,# of stigs,1
 Acura/TSX,# of stigs,1
 Aiways/U5,# of stigs,1
-Alfa Romeo/Giulia (952),# of stigs,1
 Alfa Romeo/Stelvio,# of stigs,1
 Audi/A3  TFSI e,# of stigs,1
 Audi/A4 Avant,# of stigs,1
 Audi/Audi A5,# of stigs,1
 Audi/GR86,# of stigs,1
 Audi/Q2,# of stigs,1
-Audi/Q4,# of stigs,1
+Audi/Q4 ,# of stigs,1
 Audi/Q4 Sportback e-tron,# of stigs,1
 Audi/Q5 50TFSI-e,# of stigs,1
 Audi/Q6 Quattro,# of stigs,1
@@ -575,60 +577,62 @@ Audi/Q8,# of stigs,1
 Audi/RS 5,# of stigs,1
 Audi/S6,# of stigs,1
 Audi/S8,# of stigs,1
-Audi/SQ7,# of stigs,1
-Audi/SQ8,# of stigs,1
+Audi/SQ2,# of stigs,1
+Audi/TT 8J,# of stigs,1
 Audi/TTS,# of stigs,1
 Audi/allroad,# of stigs,1
 Audi/allroad quattro,# of stigs,1
+Audu/S6 Avant e-tron,# of stigs,1
 BEIQI FOTON MOTOR / BEIJING BUS BRANCH/Passenger Car,# of stigs,1
 BME/G20 330i ,# of stigs,1
 BMW/118i,# of stigs,1
 BMW/1er,# of stigs,1
-BMW/2 Series Gran Coupe,# of stigs,1
+BMW/218i,# of stigs,1
 BMW/220i,# of stigs,1
 BMW/228i,# of stigs,1
 BMW/318i,# of stigs,1
-BMW/320D EFFICIENT DYNAMICS ,# of stigs,1
 BMW/320d,# of stigs,1
 BMW/323i,# of stigs,1
+BMW/325xi,# of stigs,1
+BMW/330i,# of stigs,1
+BMW/335d,# of stigs,1
 BMW/3er,# of stigs,1
+BMW/420d,# of stigs,1
 BMW/428 f32,# of stigs,1
 BMW/430d ,# of stigs,1
 BMW/430i,# of stigs,1
+BMW/5,# of stigs,1
 BMW/520,# of stigs,1
 BMW/530i E39,# of stigs,1
 BMW/530i xDrive,# of stigs,1
 BMW/545e,# of stigs,1
+BMW/550e,# of stigs,1
 BMW/550i,# of stigs,1
+BMW/6 Series,# of stigs,1
 BMW/640d,# of stigs,1
-BMW/730,# of stigs,1
 BMW/740i,# of stigs,1
-BMW/750i,# of stigs,1
+BMW/8 Series,# of stigs,1
+BMW/ActiveTourer 2,# of stigs,1
 BMW/Bmw 545e,# of stigs,1
 BMW/E39,# of stigs,1
 BMW/E91,# of stigs,1
 BMW/F20,# of stigs,1
 BMW/F31,# of stigs,1
 BMW/G31,# of stigs,1
-BMW/IX1,# of stigs,1
 BMW/Li730,# of stigs,1
 BMW/M135,# of stigs,1
-BMW/M135i xDrive,# of stigs,1
 BMW/M240i xdrive,# of stigs,1
 BMW/M340XI,# of stigs,1
 BMW/M340i,# of stigs,1
-BMW/M440i,# of stigs,1
 BMW/M550i,# of stigs,1
-BMW/Serie 1,# of stigs,1
 BMW/Serie 1 ,# of stigs,1
-BMW/Serie 2 Gran Coupè,# of stigs,1
 BMW/Serie 3 F34 GT,# of stigs,1
+BMW/Series 1,# of stigs,1
 BMW/Série 1,# of stigs,1
 BMW/X2 M 20i,# of stigs,1
+BMW/X3 M,# of stigs,1
 BMW/X3 M40I,# of stigs,1
-BMW/X5 45edrive,# of stigs,1
-BMW/X5 eDrive,# of stigs,1
-BMW/i3s,# of stigs,1
+BMW/i4 M50,# of stigs,1
 BMW/i8,# of stigs,1
 BMW/iX2,# of stigs,1
 BYD/DOLPHIN,# of stigs,1
@@ -640,132 +644,124 @@ BYD/Song Plus EV,# of stigs,1
 BYD/Song plus,# of stigs,1
 BYD/Yuan Pro,# of stigs,1
 Bentley/Bentayga,# of stigs,1
+Buick/Encore GX,# of stigs,1
 Buick/Envista,# of stigs,1
 Buick/Regal,# of stigs,1
 Buick/Regal TourX,# of stigs,1
 COBRA INDUSTRIES/,# of stigs,1
 COBRA INDUSTRIES/Jeep Cherokee ,# of stigs,1
+Cadillac/CT5,# of stigs,1
 Camry/24,# of stigs,1
-Changan /Uni-v,# of stigs,1
 Changan/Eado,# of stigs,1
-Changan/UNI-V,# of stigs,1
 Changan/Uni V,# of stigs,1
 Changan/Uni t,# of stigs,1
-Changan/Uni-K,# of stigs,1
 Changan/Uni-s,# of stigs,1
 Cherry /Teggo pro 7,# of stigs,1
-Cherry/Tiggo 8 pro,# of stigs,1
-Chery/Arizo 6,# of stigs,1
-Chery/Tiggo 8,# of stigs,1
+Chery/Tiggo 7 Pro,# of stigs,1
 Chevorlat/Tahoe,# of stigs,1
 Chevorlet/Malibu,# of stigs,1
 Chevrolet/2500hd,# of stigs,1
 Chevrolet/Aveo,# of stigs,1
 Chevrolet/Blazer EV,# of stigs,1
+Chevrolet/Chevy Van,# of stigs,1
 Chevrolet/Cobalt,# of stigs,1
 Chevrolet/Corvette Stingray,# of stigs,1
 Chevrolet/Matiz,# of stigs,1
 Chevrolet/Montana,# of stigs,1
 Chevrolet/Pontiac,# of stigs,1
+Chevrolet/Prisma,# of stigs,1
 Chevrolet/S-10,# of stigs,1
-Chevrolet/SS,# of stigs,1
 Chevrolet3022/Blazer,# of stigs,1
-Chrysler/200,# of stigs,1
+Chrysler/300C,# of stigs,1
 Chrysler/Crossfire,# of stigs,1
 Chrysler/Delta,# of stigs,1
 Chrysler/Pacifica Hybrid,# of stigs,1
+Chrysler/Sebring,# of stigs,1
 Chrysler/Voyager,# of stigs,1
 Citroen/C3 Aircross,# of stigs,1
 Citroen/Tupe commerciale,# of stigs,1
-Citroën/Berlingo,# of stigs,1
 Citroën/Jumpy,# of stigs,1
 Cupra/Forementor,# of stigs,1
 Cxfhhhvv/Hhhc. ,# of stigs,1
-Dacia/Duster,# of stigs,1
-Dacia/Lodgy,# of stigs,1
+DR/5.0 S3,# of stigs,1
+Dacia/Logan,# of stigs,1
 Daewoo/Cruze,# of stigs,1
 Daihatsu/Hijet Truck,# of stigs,1
+Dodge/Hornet,# of stigs,1
 Dodge/Journey,# of stigs,1
+EVO/EVO 7,# of stigs,1
 Eagle/Renault Captur Techno GPL,# of stigs,1
-Elantra/Smart,# of stigs,1
-FIAT/600 Hybrid,# of stigs,1
-FIAT/Bravo,# of stigs,1
 FIAT/Fastback,# of stigs,1
 FIAT/Fastback ,# of stigs,1
 Ferrari/812 Superfast,# of stigs,1
 Ford/C-Max Hybrid,# of stigs,1
-Ford/Capri,# of stigs,1
 Ford/E-Series Van,# of stigs,1
 Ford/F-max,# of stigs,1
 Ford/Galaxy,# of stigs,1
 Ford/Ranger wildtrak ,# of stigs,1
 Ford/Taurus X,# of stigs,1
+Ford/Territory,# of stigs,1
 Ford/Tourneo,# of stigs,1
 Ford/Tourneo Connect,# of stigs,1
+Ford/Transit custom ,# of stigs,1
 Ford/Turua,# of stigs,1
 Ford/Xlt,# of stigs,1
-GAC/EMZOOM,# of stigs,1
 GAC/GS3 EMZOOM,# of stigs,1
 GAC/GS3 Emzoom R-Style,# of stigs,1
 GAC/GS5,# of stigs,1
 GEELY/Monjaro,# of stigs,1
 GMC/HUMMER EV,# of stigs,1
-GMC/Sierra 3500HD,# of stigs,1
 GMC/Sierra HD,# of stigs,1
-GMC/Sierra Limited,# of stigs,1
 GWM/Cannon,# of stigs,1
+GWM/Haval H6,# of stigs,1
 Geely/,# of stigs,1
 Geely/Atlas Pro,# of stigs,1
-Geely/Monjato,# of stigs,1
+Geely/Preface,# of stigs,1
 Genesis/,# of stigs,1
-Genesis/Electrified GV70,# of stigs,1
 Great Wall/Ute,# of stigs,1
-HARLEY-DAVIDSON/Electra Glide Ultra Classic,# of stigs,1
 HARLEY-DAVIDSON/Street Glide ST,# of stigs,1
 HTTPS://M.YOUTUBE.COM/,# of stigs,1
-Harley Davidsion /Road Glide,# of stigs,1
-Haval/Jolion HEV,# of stigs,1
-Holden/Cruze,# of stigs,1
+Holden/Calais V,# of stigs,1
 Honda/2022,# of stigs,1
 Honda/Acurd,# of stigs,1
+Honda/Brio,# of stigs,1
 Honda/CITY HATCHBACK e:HEV,# of stigs,1
 Honda/City,# of stigs,1
+Honda/Civic Type R,# of stigs,1
 Honda/Civic Type-R,# of stigs,1
 Honda/Civic del Sol,# of stigs,1
 Honda/Honda city gm2,# of stigs,1
 Honda/NC700X,# of stigs,1
+Honda/Oddyssey,# of stigs,1
 Honda/Vezel,# of stigs,1
-Honda/WR-V,# of stigs,1
 Honda/e:Ny1,# of stigs,1
 Hundai/Creta,# of stigs,1
-Hundai/Krita,# of stigs,1
 Hyandiy/Azera,# of stigs,1
 Hyonday/Elentra,# of stigs,1
+Hyundai/Aura,# of stigs,1
 Hyundai/Avante,# of stigs,1
-Hyundai/Creta,# of stigs,1
 Hyundai/Elantr,# of stigs,1
 Hyundai/I30 sedan ,# of stigs,1
-Hyundai/Kauai,# of stigs,1
-Hyundai/Somata,# of stigs,1
 Hyundai/Veloster N,# of stigs,1
+Hyundai/Veracruz,# of stigs,1
 Hyundai/i30 Sedan,# of stigs,1
-INFINITI/G37,# of stigs,1
+Hyundai6/Accent,# of stigs,1
 INFINITI/QX50,# of stigs,1
 INFINITI/QX55,# of stigs,1
-JETOUR /T2,# of stigs,1
 Jaguar/S-Type,# of stigs,1
+Jaguar/XF,# of stigs,1
 Jeep/Grand Cherockee,# of stigs,1
 Jeep/Liberty,# of stigs,1
 Jeep/Wagoneer,# of stigs,1
-Kia/Cadenza,# of stigs,1
+Kia/Carens 3,# of stigs,1
 Kia/Carnival / Sedona,# of stigs,1
-Kia/EV3,# of stigs,1
+Kia/Cerato K3,# of stigs,1
 Kia/EV5,# of stigs,1
-Kia/Niro 2,# of stigs,1
 Kia/Niro 3,# of stigs,1
 Kia/Niro HEV,# of stigs,1
 Kia/Niro PHAEV,# of stigs,1
 Kia/Picanto 1.2,# of stigs,1
+Kia/Pro Ceed,# of stigs,1
 Kia/Rio 4,# of stigs,1
 Kia/Sonet,# of stigs,1
 Kia/Stonic,# of stigs,1
@@ -776,49 +772,47 @@ Lancia/Delta,# of stigs,1
 Land Rover/4e,# of stigs,1
 Land Rover/Defender X-dynamic HSE,# of stigs,1
 Land Rover/Evoque,# of stigs,1
-Land Rover/Freelander,# of stigs,1
 Land Rover/Range Rover,# of stigs,1
 Land Rover/Range Rover Velar,# of stigs,1
-Lexus/ES 300,# of stigs,1
 Lexus/IS 200t,# of stigs,1
 Lexus/LBX,# of stigs,1
 Lexus/LS,# of stigs,1
 Lexus/LS 460,# of stigs,1
+Lexus/LX 570,# of stigs,1
 Lexus/LX 600,# of stigs,1
 Lexus/NX,# of stigs,1
-Lexus/NX 200t,# of stigs,1
 Lexus/NX 250,# of stigs,1
 Lexus/RX 350h,# of stigs,1
 Lexus/RX 450h,# of stigs,1
 Lexus/RX 500h,# of stigs,1
 Lexus/UX 250h,# of stigs,1
 Lincoln/,# of stigs,1
-Lincoln/Continental,# of stigs,1
-Lincoln/MKX,# of stigs,1
-Lincoln/Nautilus,# of stigs,1
 Lincoln/Navigator,# of stigs,1
 Lotus/Eletre,# of stigs,1
+MERKUR/,# of stigs,1
 MG/GT,# of stigs,1
 MG/Hector,# of stigs,1
 MG/MG GT,# of stigs,1
+MG/MG3,# of stigs,1
 MG/One,# of stigs,1
 MG/RX8,# of stigs,1
 MINI/Convertible,# of stigs,1
 MINI/Cooper Countryman,# of stigs,1
-MINI/Cooper SE,# of stigs,1
 MINI/Cooper s,# of stigs,1
+MINI/One,# of stigs,1
+Ma/Outback,# of stigs,1
 Maruti /Baleno,# of stigs,1
 Mazda/,# of stigs,1
 Mazda/B-Series Pickup,# of stigs,1
-Mazda/Cx-60,# of stigs,1
 Mazda/Mazda 2,# of stigs,1
 Mazda/Mazda2,# of stigs,1
 Mazda/Mazda6,# of stigs,1
 Mazda/Mazdaspeed MX-5 Miata,# of stigs,1
-Mazda/Tribute,# of stigs,1
+Mercedes /,# of stigs,1
 Mercedes /Clk ,# of stigs,1
 Mercedes-Benz/560-Class,# of stigs,1
 Mercedes-Benz/A 45 AMG 4matic,# of stigs,1
+Mercedes-Benz/A-Class,# of stigs,1
 Mercedes-Benz/A-Klasse,# of stigs,1
 Mercedes-Benz/A45,# of stigs,1
 Mercedes-Benz/AMG C 43,# of stigs,1
@@ -832,33 +826,39 @@ Mercedes-Benz/C230 Kompressor,# of stigs,1
 Mercedes-Benz/C350e,# of stigs,1
 Mercedes-Benz/C400,# of stigs,1
 Mercedes-Benz/CL-Class,# of stigs,1
+Mercedes-Benz/CLA 180,# of stigs,1
 Mercedes-Benz/CLK 280,# of stigs,1
 Mercedes-Benz/E 280,# of stigs,1
-"Mercedes-Benz/E Class, W213, 2017",# of stigs,1
 Mercedes-Benz/E300,# of stigs,1
+Mercedes-Benz/EQE 43,# of stigs,1
 Mercedes-Benz/EQE350,# of stigs,1
-Mercedes-Benz/GLA,# of stigs,1
-Mercedes-Benz/GLA 180,# of stigs,1
+Mercedes-Benz/EQS SUV,# of stigs,1
 Mercedes-Benz/GLA 220,# of stigs,1
 Mercedes-Benz/GLA 250e,# of stigs,1
 Mercedes-Benz/GLA200d,# of stigs,1
 Mercedes-Benz/GLB 200,# of stigs,1
-Mercedes-Benz/GLB 200d Automatic,# of stigs,1
 Mercedes-Benz/GLB 250,# of stigs,1
+Mercedes-Benz/GLC 220,# of stigs,1
 Mercedes-Benz/GLC 300,# of stigs,1
 Mercedes-Benz/GLC 300e,# of stigs,1
 Mercedes-Benz/GLE-Class Coupe,# of stigs,1
 Mercedes-Benz/GLb,# of stigs,1
 Mercedes-Benz/M-Class,# of stigs,1
 Mercedes-Benz/Ml63 ,# of stigs,1
+Mercedes-Benz/SLK Roadster,# of stigs,1
 Mercedes-Benz/Sprinter,# of stigs,1
 Mercedes-Benz/W212/E300,# of stigs,1
+Mercedes-Benzv/C 200,# of stigs,1
 Mercedes/C200,# of stigs,1
+Mercedes/E 300,# of stigs,1
 Mercedes/Ecitan,# of stigs,1
 Mercedes/Gla 220,# of stigs,1
 Mercedes/Gle 53 coupe,# of stigs,1
-Mercury/Sable,# of stigs,1
+Mercedez-Benz/Glc,# of stigs,1
+Mitsubishi/Space Star,# of stigs,1
 Mitsubishi/Xpander,# of stigs,1
+Nissan/240SX,# of stigs,1
+Nissan/300ZX,# of stigs,1
 Nissan/All New Livina,# of stigs,1
 Nissan/Altama ,# of stigs,1
 Nissan/Murano,# of stigs,1
@@ -866,7 +866,7 @@ Nissan/NV200,# of stigs,1
 Nissan/Nissan,# of stigs,1
 Nissan/Note,# of stigs,1
 Nissan/Pulsar,# of stigs,1
-Nissan/QASHQAI e-power,# of stigs,1
+Nissan/Qashqai +2,# of stigs,1
 Nissan/Qashqaj,# of stigs,1
 Nissan/sunny,# of stigs,1
 OPEL/Astra H,# of stigs,1
@@ -878,89 +878,88 @@ OPEL/Grandland X,# of stigs,1
 OPEL/Granland,# of stigs,1
 Omoda/C5,# of stigs,1
 Opel/Mokka,# of stigs,1
+P/E,# of stigs,1
 Pe/3008,# of stigs,1
 Perodua/Bezza,# of stigs,1
+Perodua/Bezza ,# of stigs,1
 Peugeot/208 GTI,# of stigs,1
-Peugeot/306,# of stigs,1
 Peugeot/308 Hybrid,# of stigs,1
 Peugeot/308 SW,# of stigs,1
 Peugeot/308sw,# of stigs,1
 Peugeot/407,# of stigs,1
 Peugeot/408,# of stigs,1
-Peugeot/Boxer 335,# of stigs,1
 Peugeot/E2008,# of stigs,1
-Peugeot/E2008 GT,# of stigs,1
 Peugeot/Expert,# of stigs,1
 Peugeot/Partner,# of stigs,1
-Polestar/,# of stigs,1
-Polestar/3,# of stigs,1
 Polestar/4,# of stigs,1
+Porsche/968,# of stigs,1
 Porsche/Cayenne E-Hybrid,# of stigs,1
 Porsche/Cayman,# of stigs,1
 Porsche/Taycan 4,# of stigs,1
 Ram/3500,# of stigs,1
-Ram/ProMaster Cargo Van,# of stigs,1
 Renault/,# of stigs,1
 Renault/Austral,# of stigs,1
+Renault/Captur,# of stigs,1
 Renault/Clio 5,# of stigs,1
 Renault/Duster,# of stigs,1
 Renault/Kadjarr,# of stigs,1
 Renault/Koleos,# of stigs,1
 Renault/Laguna III GT,# of stigs,1
+Renault/Master,# of stigs,1
 Renault/New Captur,# of stigs,1
 Renault/Sandero,# of stigs,1
-Renault/Scenic E-Tech,# of stigs,1
 Renault/Stepaway,# of stigs,1
 Renault/Talisman,# of stigs,1
 Renault/Trafic,# of stigs,1
 Renault/Zoe INTENS (Selection) R135,# of stigs,1
+Renoult/Clio 4,# of stigs,1
 Rivian/R1S,# of stigs,1
 Rox/01,# of stigs,1
 SHERMAN + REILLY/,# of stigs,1
+SPORTSMAN TRAILERS/,# of stigs,1
 Saab/9-3,# of stigs,1
 Seat/Arona,# of stigs,1
-Seat/Leon 5F,# of stigs,1
+Seat/Leon SC,# of stigs,1
 Skoda/,# of stigs,1
 Skoda/ENYAQ 85,# of stigs,1
 Skoda/Octavia Break iV,# of stigs,1
 Skoda/Slavia,# of stigs,1
 Skoda/Superb 3V,# of stigs,1
+Skods/Octavia,# of stigs,1
 SsangYong/Tivoli,# of stigs,1
+SssngYong/,# of stigs,1
+Subaru/Baja,# of stigs,1
 Subaru/Impreza WRX,# of stigs,1
+Subaru/Levorg,# of stigs,1
 Subaru/STI S209,# of stigs,1
 Subaru/Tribeca,# of stigs,1
-Suzuki/,# of stigs,1
-Suzuki/Alto,# of stigs,1
 Suzuki/Fronx,# of stigs,1
 Suzuki/Jimny XL,# of stigs,1
 Suzuki/Kizashi,# of stigs,1
 Tesla/Model S,# of stigs,1
-Toyoa/Land crusier,# of stigs,1
 Toyota land cruiser/LC300,# of stigs,1
+Toyota/Celica,# of stigs,1
 Toyota/Corolla SE,# of stigs,1
 Toyota/Crown Hybrid,# of stigs,1
 Toyota/Fortuner 2.4 4x2,# of stigs,1
 Toyota/GT86,# of stigs,1
 Toyota/Grand Highlander Hybrid,# of stigs,1
-Toyota/Highlander Hybrid,# of stigs,1
 Toyota/Idk,# of stigs,1
+Toyota/Innova Zenix,# of stigs,1
 Toyota/Innova hycross,# of stigs,1
-Toyota/LC300,# of stigs,1
 Toyota/Land crusier,# of stigs,1
 Toyota/MR2,# of stigs,1
 Toyota/Matrix,# of stigs,1
-Toyota/Prius Plug-in,# of stigs,1
+Toyota/Prius Prime Plugin,# of stigs,1
 Toyota/Prius v,# of stigs,1
 Toyota/Proace,# of stigs,1
-Toyota/SAI ,# of stigs,1
-Toyota/Urban Cruiser,# of stigs,1
+Toyota/Supra,# of stigs,1
 Toyota/Veloz,# of stigs,1
 Toyota/Vitz,# of stigs,1
 Toyota/Yaris iA,# of stigs,1
-Toyota/iQ,# of stigs,1
+VW/ID.4,# of stigs,1
 VW/ID4,# of stigs,1
 VW/Id.6,# of stigs,1
-VW/Passat,# of stigs,1
 Vauxhall /Insignia,# of stigs,1
 Vauxhall/Opel/Karl,# of stigs,1
 Vauxhall/Opel/Vivaro,# of stigs,1
@@ -972,30 +971,31 @@ Volkswagen/Eos,# of stigs,1
 Volkswagen/Fox,# of stigs,1
 Volkswagen/GLI,# of stigs,1
 Volkswagen/GOLF R,# of stigs,1
+Volkswagen/Gol,# of stigs,1
 Volkswagen/Golf 6,# of stigs,1
-Volkswagen/Golf R,# of stigs,1
 Volkswagen/Golf Variant,# of stigs,1
+Volkswagen/Golff,# of stigs,1
 Volkswagen/ID.7,# of stigs,1
 Volkswagen/ID7 Tourer,# of stigs,1
-Volkswagen/New Beetle,# of stigs,1
 Volkswagen/Passat B8,# of stigs,1
 Volkswagen/Polo GTI,# of stigs,1
-Volkswagen/Scirocco,# of stigs,1
+Volkswagen/R32,# of stigs,1
 Volkswagen/Sharan,# of stigs,1
-Volkswagen/T roc cabriolet ,# of stigs,1
 Volkswagen/T6.1 California ,# of stigs,1
+Volkswagen/Taigo,# of stigs,1
 Volkswagen/Taigun ,# of stigs,1
 Volkswagen/Tcross 2021,# of stigs,1
 Volkswagen/Teramont,# of stigs,1
 Volvo/C40 Recharge,# of stigs,1
-Volvo/EX30,# of stigs,1
-Volvo/S60 PHEV,# of stigs,1
+Volvo/EX40,# of stigs,1
 Volvo/S80,# of stigs,1
 Volvo/V40,# of stigs,1
 Volvo/V40 CC 1.6T,# of stigs,1
 Volvo/V90,# of stigs,1
-Volvo/V90 Cross Country,# of stigs,1
 Vw/Idbuzz,# of stigs,1
 peugeot iran khodro/207,# of stigs,1
+smart/fortwo,# of stigs,1
 suzki/,# of stigs,1
+Škoda/Citigo,# of stigs,1
+Škoda/Scala,# of stigs,1
 Škoda/Yeti,# of stigs,1
