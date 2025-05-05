@@ -123,13 +123,23 @@ func renderSitemapWithLogs(_ sitemap: Sitemap, to folder: URL, encoding: String.
   }
 }
 
-// try renderSitemapWithLogs(sitemap, to: outputURL)
+try renderSitemapWithLogs(sitemap, to: outputURL)
 
 // Generate and write sitemap.xml
 func generateSitemapXML(from sitemap: Sitemap, baseURL: String = "https://sidecar.clutch.engineering") throws {
     let dateFormatter = ISO8601DateFormatter()
     dateFormatter.formatOptions = [.withFullDate]
     let today = dateFormatter.string(from: Date())
+
+    // Function to escape XML special characters in URLs
+    func escapeXMLSpecialCharacters(_ string: String) -> String {
+        return string
+            .replacingOccurrences(of: "&", with: "&amp;")
+            .replacingOccurrences(of: "<", with: "&lt;")
+            .replacingOccurrences(of: ">", with: "&gt;")
+            .replacingOccurrences(of: "'", with: "&apos;")
+            .replacingOccurrences(of: "\"", with: "&quot;")
+    }
 
     var xmlContent = """
     <?xml version="1.0" encoding="UTF-8"?>
@@ -151,9 +161,12 @@ func generateSitemapXML(from sitemap: Sitemap, baseURL: String = "https://sideca
         }
         absoluteURL += path.replacingOccurrences(of: "index.html", with: "")
 
+        // Escape special characters for XML
+        let escapedURL = escapeXMLSpecialCharacters(absoluteURL)
+
         xmlContent += """
         <url>
-          <loc>\(absoluteURL)</loc>
+          <loc>\(escapedURL)</loc>
         </url>
 
         """
