@@ -30,10 +30,11 @@ struct MakePage: View {
 
   var body: some View {
     Page(
-      "Supported Cars",
-      path: "/supported-cars/",
-      description: "Sidecar supports a wide range of makes and models.",
+      "\(make) vehicle support",
+      path: "/supported-cars/\(make)",
+      description: "Check which Sidecar features work with your \(make).",
       keywords: [
+        make,
         "OBD-II",
         "car scanner",
         "trip logger",
