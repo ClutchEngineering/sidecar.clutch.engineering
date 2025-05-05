@@ -30,7 +30,7 @@ struct MakePage: View {
 
   var body: some View {
     Page(
-      "\(make) vehicle support",
+      "\(make) OBD support",
       path: "/supported-cars/\(make)",
       description: "Check which Sidecar features work with your \(make).",
       keywords: [
@@ -54,7 +54,7 @@ struct MakePage: View {
           }
 
           Div {
-            H1(make + " Support")
+            H1(make + " OBD Support")
               .fontSize(.extraLarge)
               .fontSize(.fourXLarge, condition: .desktop)
               .bold()
