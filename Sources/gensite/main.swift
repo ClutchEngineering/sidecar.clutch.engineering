@@ -125,4 +125,42 @@ func renderSitemapWithLogs(_ sitemap: Sitemap, to folder: URL, encoding: String.
 
 try renderSitemapWithLogs(sitemap, to: outputURL)
 
+// Generate and write sitemap.xml
+func generateSitemapXML(from sitemap: Sitemap, baseURL: String = "https://sidecar.clutch.engineering") throws {
+    let dateFormatter = ISO8601DateFormatter()
+    dateFormatter.formatOptions = [.withFullDate]
+    let today = dateFormatter.string(from: Date())
+
+    var xmlContent = """
+    <?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    """
+
+    for path in sitemap.keys.sorted() {
+        // Skip redirects as they shouldn't be in the sitemap
+        if path.contains("leave-a-review") {
+            continue
+        }
+
+        // Convert relative path to absolute URL
+        let absoluteURL = URL(string: baseURL)!.appending(path: path.replacingOccurrences(of: "index.html", with: "")).path()
+
+        xmlContent += """
+        <url>
+          <loc>\(absoluteURL)</loc>
+        </url>
+
+        """
+    }
+
+    xmlContent += "</urlset>"
+
+    let sitemapURL = outputURL.appending(path: "sitemap.xml")
+    try xmlContent.write(to: sitemapURL, atomically: true, encoding: .utf8)
+    print("Generated sitemap.xml")
+}
+
+try generateSitemapXML(from: sitemap)
+
 print("Done")

@@ -1,5 +1,6 @@
 # Slipstream site output
 site/**/*.html
+site/sitemap.xml
 site/css/main.css
 discord_message.txt
 
