@@ -123,7 +123,7 @@ func renderSitemapWithLogs(_ sitemap: Sitemap, to folder: URL, encoding: String.
   }
 }
 
-try renderSitemapWithLogs(sitemap, to: outputURL)
+// try renderSitemapWithLogs(sitemap, to: outputURL)
 
 // Generate and write sitemap.xml
 func generateSitemapXML(from sitemap: Sitemap, baseURL: String = "https://sidecar.clutch.engineering") throws {
@@ -144,7 +144,12 @@ func generateSitemapXML(from sitemap: Sitemap, baseURL: String = "https://sideca
         }
 
         // Convert relative path to absolute URL
-        let absoluteURL = URL(string: baseURL)!.appending(path: path.replacingOccurrences(of: "index.html", with: "")).path()
+        var absoluteURL = baseURL
+        if !absoluteURL.hasSuffix("/"),
+           !path.hasPrefix("/") {
+          absoluteURL.append("/")
+        }
+        absoluteURL += path.replacingOccurrences(of: "index.html", with: "")
 
         xmlContent += """
         <url>
