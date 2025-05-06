@@ -19,17 +19,17 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
       public var hasBattery: Bool {
         switch self {
-        case .combustion:
-          return false
         case .hybrid, .electric:
           return true
+        case .combustion:
+          return false
         }
       }
       public var hasFuel: Bool {
         switch self {
-        case .combustion:
+        case .combustion, .hybrid:
           return true
-        case .hybrid, .electric:
+        case .electric:
           return false
         }
       }
