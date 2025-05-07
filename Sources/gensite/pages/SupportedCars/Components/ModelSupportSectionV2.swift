@@ -128,7 +128,7 @@ struct ModelSupportSectionV2: View {
                     NotApplicableCell(isLast: false)
                   }
                   SupportStatusV2(support: support, connectables: [.speed], make: make, isLast: false)
-                  SupportStatusV2(support: support, connectables: [.electricRange, .fuelRange], make: make, isLast: false)
+                  RangeSupportStatus(support: support, connectables: [.electricRange, .fuelRange], estimatingConnectables: [.fuelTankLevel, .stateOfCharge], make: make, isLast: false)
                   SupportStatusV2(support: support, connectables: [.odometer], make: make, isLast: false)
                   SupportStatusV2(support: support, connectables: [.frontLeftTirePressure, .frontLeftTirePressure, .rearLeftTirePressure, .rearLeftTirePressure], make: make, isLast: true)
                 }
@@ -184,6 +184,66 @@ struct SupportStatusV2: View {
           }
         }
         .justifyContent(.center)
+      }
+    }
+    .padding(.horizontal, 8)
+  }
+}
+
+struct RangeSupportStatus: View {
+  let support: [MergedSupportMatrix.Connectable : MergedSupportMatrix.ModelSupport.ConnectableSupportLevel]
+  let connectables: Set<MergedSupportMatrix.Connectable>
+  let estimatingConnectables: Set<MergedSupportMatrix.Connectable>
+  let make: String
+  let isLast: Bool
+
+  var supported: MergedSupportMatrix.ModelSupport.ConnectableSupportLevel? {
+    return connectables.compactMap { support[$0] }.max()
+  }
+
+  var generallySupported: MergedSupportMatrix.ModelSupport.ConnectableSupportLevel? {
+    return (connectables.union(estimatingConnectables)).compactMap { support[$0] }.max()
+  }
+
+  var estimatingSupported: MergedSupportMatrix.ModelSupport.ConnectableSupportLevel? {
+    return estimatingConnectables.compactMap { support[$0] }.max()
+  }
+
+  var body: some View {
+    Bordered(showTrailingBorder: !isLast) {
+      TableCell {
+        VStack(alignment: .center) {
+          HStack {
+            switch generallySupported {
+            case .confirmed:
+              OBDStamp()
+            case .shouldBeSupported:
+              OBDStamp()
+                .opacity(0.25)
+            case nil, .unknown:
+              Text("")
+                .textColor(.text, darkness: 600)
+                .textColor(.text, darkness: 400, condition: .dark)
+            }
+            if makeConnectedAccountSupport[make]?.intersection(connectables).isEmpty == false {
+              OTAStamp()
+            }
+          }
+          .justifyContent(.center)
+          if supported == nil || supported == .unknown,
+             estimatingSupported != nil,
+             estimatingSupported != .unknown {
+            Text("Estimatable")
+              .fontSize(.extraSmall)
+              .textColor(.text, darkness: 600)
+              .textColor(.text, darkness: 400, condition: .dark)
+              .padding(.vertical, 2)
+              .padding(.horizontal, 4)
+              .background(.zinc, darkness: 100)
+              .background(.zinc, darkness: 900, condition: .dark)
+              .cornerRadius(.large)
+          }
+        }
       }
     }
     .padding(.horizontal, 8)
