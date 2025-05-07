@@ -118,6 +118,8 @@ Tested Scanners
 <div>
 <input type="radio" name="country" id="us" class="mr-2" checked>
 <label class="mr-4" for="us">United States 🇺🇸</label>
+<input type="radio" name="country" id="br" class="mr-2">
+<label class="mr-4" for="br">Brazil 🇧🇷</label>
 <input type="radio" name="country" id="canada" class="mr-2">
 <label class="mr-4" for="canada">Canada 🇨🇦</label>
 <input type="radio" name="country" id="india" class="mr-2">
@@ -479,6 +481,87 @@ Tested Scanners
  <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 27/s</td>
  <td class="pl-2 md:pl-4 py-2">$139.95</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="br-products">
+<table class="table-auto border-collapse border border-gray-800 mt-4">
+ <thead>
+  <tr class="bg-gray-800 text-xs md:text-base text-white text-left">
+   <th class="pl-2 md:pl-4 py-2">Product</th>
+   <th class="pl-2 md:pl-4 py-2">Supported</th>
+   <th class="pl-2 md:pl-4 py-2">Type</th>
+   <th class="pl-2 md:pl-4 py-2">PIDs / second</th>
+   <th class="px-2 md:px-4 py-2">Price (BRL)</th>
+  </tr>
+ </thead>
+<tbody class="text-xs md:text-base">
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  ELM327 Bluetooth OBD2 Scanner<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.br/dp/B0BVLZ27TL?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 4.7/s</td>
+ <td class="pl-2 md:pl-4 py-2">R$153,48</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  LELink^2<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.br/dp/B0755N61PW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
+ <td class="pl-2 md:pl-4 py-2">R$365,30</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  FIXD<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.br/dp/B013RIQMEO?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">R$400,95</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Veepeak OBDCheck BLE<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.br/dp/B073XKQQQW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
+ <td class="pl-2 md:pl-4 py-2">R$527,54</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  BlueDriver<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.br/dp/B00652G4TS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">R$962,27</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  OBDLink LX<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.br/dp/B00H9S71LW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">R$1.689,00</td>
 </tr>
 </tbody>
 </table>
@@ -1162,13 +1245,13 @@ In summary: Vgate iCar Pro Bluetooth 4.0 is the best value, while OBDLink offers
 To connect to your scanner for the first time, follow these steps:
 
 1.  Open Sidecar's Settings tab.
-    
+
 2.  Enable "Vehicle scanning".
-    
+
 3.  Enable connections over Wi-Fi and/or BTLE.
-    
+
 4.  Follow further instructions based on your scanner type.
-    
+
 
 If using a BTLE scanner:
 

@@ -1,4 +1,5 @@
 #us-products,
+#br-products,
 #ca-products,
 #in-products,
 #uk-products {
@@ -6,6 +7,10 @@
 }
 
 #us:checked ~ #us-products {
+  display: block;
+}
+
+#br:checked ~ #br-products {
   display: block;
 }
 
