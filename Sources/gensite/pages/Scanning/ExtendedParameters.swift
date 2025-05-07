@@ -425,6 +425,7 @@ If a unit includes a version (e.g. **v1.13+**), that means the unit was introdu
 
 #### Length units
 
+\(inlineHTML { Parameter("millimeters", icon: "length") }) Distance in millimeters.    
 \(inlineHTML { Parameter("centimeters", icon: "length") }) Distance in centimeters.    
 \(inlineHTML { Parameter("meters", icon: "length") }) Distance in meters.    
 \(inlineHTML { Parameter("kilometers", icon: "length") }) Distance in kilometers.    
