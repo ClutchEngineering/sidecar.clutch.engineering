@@ -372,6 +372,11 @@ If a unit includes a version (e.g. **v1.13+**), that means the unit was introdu
 \(inlineHTML { Parameter("degrees", icon: "angle") }) Angle in degrees.    
 \(inlineHTML { Parameter("radians", icon: "angle") }) Angle in radians.
 
+#### Concentration mass
+
+\(inlineHTML { Parameter("gramsPerLiter", icon: "engine") }) Concentration mass in grams per liter.    
+\(inlineHTML { Parameter("milligramsPerDeciliter", icon: "engine") }) Concentration mass in milligrams per decileter.
+
 #### Electric current units
 
 \(inlineHTML { Parameter("kiloamps", icon: "current") }) Current in kiloamps.    
