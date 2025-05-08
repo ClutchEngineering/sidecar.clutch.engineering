@@ -1,6 +1,7 @@
 import Foundation
 import Slipstream
 import VehicleSupport
+import VehicleSupportMatrix
 
 // MARK: - Shared Types
 
@@ -36,7 +37,7 @@ struct LeaderboardUtils {
     return formatter.string(from: NSNumber(value: value)) ?? "0"
   }
 
-  static func findVehicleInfo(series: String, in makes: [Make: [Model: [VehicleSupportStatus]]]) -> (symbolName: String?, vehicleName: String) {
+  static func findVehicleInfo(series: String, in supportMatrix: MergedSupportMatrix) -> (symbolName: String?, vehicleName: String) {
     let components = series
       .replacingOccurrences(of: "BMW ", with: "BMW/")
       .components(separatedBy: "/")
@@ -59,14 +60,17 @@ struct LeaderboardUtils {
     }
     seriesMake = standardizeMake(seriesMake)
 
-    for (make, models) in makes {
+    for make in supportMatrix.getAllMakes() {
       let normalizedMake = standardizeMake(make)
       if normalizedMake == seriesMake {
-        for (model, _) in models {
-          let normalizedModel = model.name.lowercased()
+        for obdbID in supportMatrix.getOBDbIDs(for: make) {
+          guard let vehicle = supportMatrix.getModel(id: obdbID) else {
+            continue
+          }
+          let normalizedModel = vehicle.model.lowercased()
           if normalizedModel == seriesModel {
-            let vehicleName = "\(localizedNameForStandardizedMake(normalizedMake)) \(model.name)"
-            return (model.symbolName, vehicleName)
+            let vehicleName = "\(localizedNameForStandardizedMake(normalizedMake)) \(vehicle.model)"
+            return (vehicle.modelSVGs.first, vehicleName)
           }
         }
       }
@@ -103,7 +107,7 @@ struct LeaderboardUtils {
     currentCSV: String,
     yesterdayCSV: String?,
     driversCSV: String,
-    makes: [Make: [Model: [VehicleSupportStatus]]]
+    supportMatrix: MergedSupportMatrix
   ) -> [LeaderboardEntry] {
     var vehicleEntries: [String: (LeaderboardEntry, String)] = [:]
     var yesterdayEntries: [String: Float] = [:]
@@ -118,7 +122,7 @@ struct LeaderboardUtils {
          !columns[0].hasSuffix("/"),
          let driverCount = Int(columns[2]) {
         let normalizedSeries = modelNormalizations[columns[0]] ?? columns[0]
-        let vehicleInfo = findVehicleInfo(series: normalizedSeries, in: makes)
+        let vehicleInfo = findVehicleInfo(series: normalizedSeries, in: supportMatrix)
         if vehicleInfo.vehicleName != "/" {
           let normalizedName = vehicleInfo.vehicleName.lowercased()
           driverCounts[normalizedName] = (driverCounts[normalizedName] ?? 0) + driverCount
@@ -137,7 +141,7 @@ struct LeaderboardUtils {
            !columns[0].hasSuffix("/"),
            let count = Float(columns[2]) {
           let normalizedSeries = modelNormalizations[columns[0]] ?? columns[0]
-          let vehicleInfo = findVehicleInfo(series: normalizedSeries, in: makes)
+          let vehicleInfo = findVehicleInfo(series: normalizedSeries, in: supportMatrix)
           if vehicleInfo.vehicleName != "/" {
             let normalizedName = vehicleInfo.vehicleName.lowercased()
             yesterdayEntries[normalizedName] = (yesterdayEntries[normalizedName] ?? 0) + count
@@ -160,7 +164,7 @@ struct LeaderboardUtils {
          !columns[0].hasSuffix("/"),
          let count = Float(columns[2]) {
         let normalizedSeries = modelNormalizations[columns[0]] ?? columns[0]
-        let vehicleInfo = findVehicleInfo(series: normalizedSeries, in: makes)
+        let vehicleInfo = findVehicleInfo(series: normalizedSeries, in: supportMatrix)
         if vehicleInfo.vehicleName != "/" {
           let normalizedName = vehicleInfo.vehicleName.lowercased()
           let entry = LeaderboardEntry(

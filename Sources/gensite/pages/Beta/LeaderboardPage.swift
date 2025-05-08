@@ -1,14 +1,14 @@
 import Foundation
 import Slipstream
 import VehicleSupport
+import VehicleSupportMatrix
 
 struct LeaderboardPage: View {
+  let supportMatrix: MergedSupportMatrix
   private let leaderboardData: [LeaderboardEntry]
-  private let makes: [Make: [Model: [VehicleSupportStatus]]]
 
-  init() {
-    // Load vehicle support data first
-    self.makes = try! VehicleSupportStatus.loadAll()
+  init(supportMatrix: MergedSupportMatrix) {
+    self.supportMatrix = supportMatrix
 
     // Load and process CSV data
     let csvContent = try! String(contentsOf: Bundle.module.url(forResource: "export-carplay-distance-traveled-by-model", withExtension: "csv")!)
@@ -20,7 +20,7 @@ struct LeaderboardPage: View {
       currentCSV: csvContent,
       yesterdayCSV: yesterdayContent,
       driversCSV: driversContent,
-      makes: makes
+      supportMatrix: supportMatrix
     )
 
     exportStatsForDiscord()
@@ -111,7 +111,7 @@ struct LeaderboardPage: View {
 
           TableBody {
             for (index, entry) in leaderboardData.enumerated() {
-              let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: makes)
+              let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: supportMatrix)
               if vehicleInfo.vehicleName != "/" {
                 LeaderboardRow(
                   rank: index + 1,
@@ -212,7 +212,7 @@ extension LeaderboardPage {
 
     let top10 = leaderboardData.prefix(10).enumerated()
     for (index, entry) in top10 {
-      let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: makes)
+      let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: supportMatrix)
       let rank = index + 1
 
       // Format the rank change indicator if it exists

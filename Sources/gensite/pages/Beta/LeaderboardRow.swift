@@ -61,7 +61,7 @@ struct LeaderboardRow: View {
           HStack {
             Text(vehicleName)
             if let symbolName = symbolName {
-              Image(URL(string: "/gfx/model/\(symbolName).svg")!)
+              Image(URL(string: "/gfx/vehicle/\(symbolName)")!)
                 .colorInvert(condition: .dark)
                 .frame(width: 48)
                 .margin(.right, 8)

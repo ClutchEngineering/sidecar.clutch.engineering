@@ -1,6 +1,7 @@
 import Foundation
 import Slipstream
 import VehicleSupport
+import VehicleSupportMatrix
 
 struct LeaderboardByMakePage: View {
   private struct MakeEntry {
@@ -14,7 +15,7 @@ struct LeaderboardByMakePage: View {
   }
 
   private let leaderboardData: [MakeEntry]
-  private let makes: [Make: [Model: [VehicleSupportStatus]]]
+  let supportMatrix: MergedSupportMatrix
 
   private static func getLogoURL(for make: String) -> URL? {
     let normalizedMake = make.lowercased()
@@ -33,9 +34,8 @@ struct LeaderboardByMakePage: View {
     return URL(string: "/gfx/make/\(standardizeMake(filename)).svg")
   }
 
-  init() {
-    // Load vehicle support data first
-    self.makes = try! VehicleSupportStatus.loadAll()
+  init(supportMatrix: MergedSupportMatrix) {
+    self.supportMatrix = supportMatrix
 
     // Load and process CSV data
     let csvContent = try! String(contentsOf: Bundle.module.url(forResource: "export-carplay-distance-traveled-by-model", withExtension: "csv")!)
@@ -47,7 +47,7 @@ struct LeaderboardByMakePage: View {
       currentCSV: csvContent,
       yesterdayCSV: yesterdayContent,
       driversCSV: driversContent,
-      makes: makes
+      supportMatrix: supportMatrix
     )
 
     // Group entries by make
@@ -87,13 +87,13 @@ struct LeaderboardByMakePage: View {
       currentCSV: yesterdayContent,
       yesterdayCSV: nil,
       driversCSV: driversContent,
-      makes: makes
+      supportMatrix: supportMatrix
     )
 
     // Group yesterday's entries by make
     var yesterdayMakeEntries: [String: Float] = [:]
     for entry in yesterdayEntries {
-      let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: makes)
+      let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: supportMatrix)
       let standardizedMake = standardizeMake(vehicleInfo.vehicleName.split(separator: " ").first?.description ?? "Unknown")
       yesterdayMakeEntries[standardizedMake] = (yesterdayMakeEntries[standardizedMake] ?? 0) + entry.count
     }

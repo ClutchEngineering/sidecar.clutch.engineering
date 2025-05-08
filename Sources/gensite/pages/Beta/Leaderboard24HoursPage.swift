@@ -1,15 +1,15 @@
 import Foundation
 import Slipstream
 import VehicleSupport
+import VehicleSupportMatrix
 
 struct Leaderboard24HoursPage: View {
   private let leaderboardData: [LeaderboardEntry]
-  private let makes: [Make: [Model: [VehicleSupportStatus]]]
+  let supportMatrix: MergedSupportMatrix
   private let totalMilesDriven: Float
 
-  init() {
-    // Load vehicle support data first
-    self.makes = try! VehicleSupportStatus.loadAll()
+  init(supportMatrix: MergedSupportMatrix) {
+    self.supportMatrix = supportMatrix
 
     // Load CSV data for today and yesterday
     let csvContent = try! String(contentsOf: Bundle.module.url(forResource: "export-carplay-distance-traveled-by-model", withExtension: "csv")!)
@@ -21,7 +21,7 @@ struct Leaderboard24HoursPage: View {
       currentCSV: csvContent,
       yesterdayCSV: yesterdayContent,
       driversCSV: driversContent,
-      makes: makes
+      supportMatrix: supportMatrix
     )
 
     // Sort by mileage change instead of total miles
@@ -109,7 +109,7 @@ struct Leaderboard24HoursPage: View {
           TableBody {
             // Show all entries with non-zero changes
             for (index, entry) in leaderboardData.enumerated() {
-              let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: makes)
+              let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: supportMatrix)
               if vehicleInfo.vehicleName != "/" {
                 LeaderboardRow(
                   rank: index + 1,
