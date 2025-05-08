@@ -194,14 +194,14 @@ extension LeaderboardPage {
     message += "🏆 **Top 10 Vehicles**\n```"
 
     // Define column widths
-    let rankWidth = 6
-    let vehicleWidth = 25
-    let milesWidth = 20
-    let stigsWidth = 8
+    let rankWidth = 3
+    let vehicleWidth = 20
+    let milesWidth = 15
+    let stigsWidth = 6
 
     // Create header
     message += "\n"
-    message += padString("Rank", toWidth: rankWidth)
+    message += padString("#", toWidth: rankWidth)
     message += padString("Vehicle", toWidth: vehicleWidth)
     message += padString("Miles", toWidth: milesWidth, alignment: .right)
     message += padString("Stigs", toWidth: stigsWidth, alignment: .right)
