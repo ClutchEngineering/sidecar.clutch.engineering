@@ -89,8 +89,8 @@ struct ModelSupportSectionV2: View {
           TableBody {
             // Use the grouped model year ranges instead of individual years
             let supportByModelYearRange = modelSupport.connectableSupportGroupByModelYearRange(
-              yearRangeSignalMap: yearRangeConnectables,
-              saeConnectables: supportMatrix.saeConnectables
+              filterableSignalMap: yearRangeConnectables,
+              saeConnectables: supportMatrix.compiledSAEConnectables ?? .init(filterableSignals: [:])
             )
 
             let modelYearRanges = Array(supportByModelYearRange.keys).sorted { $0.lowerBound < $1.lowerBound }
@@ -155,8 +155,8 @@ struct ModelSupportSectionV2: View {
 }
 
 struct SupportStatusV2: View {
-  let support: [MergedSupportMatrix.Connectable : MergedSupportMatrix.ModelSupport.ConnectableSupportLevel]
-  let connectables: Set<MergedSupportMatrix.Connectable>
+  let support: [Connectable : MergedSupportMatrix.ModelSupport.ConnectableSupportLevel]
+  let connectables: Set<Connectable>
   let make: String
   let isLast: Bool
 
@@ -191,9 +191,9 @@ struct SupportStatusV2: View {
 }
 
 struct RangeSupportStatus: View {
-  let support: [MergedSupportMatrix.Connectable : MergedSupportMatrix.ModelSupport.ConnectableSupportLevel]
-  let connectables: Set<MergedSupportMatrix.Connectable>
-  let estimatingConnectables: Set<MergedSupportMatrix.Connectable>
+  let support: [Connectable : MergedSupportMatrix.ModelSupport.ConnectableSupportLevel]
+  let connectables: Set<Connectable>
+  let estimatingConnectables: Set<Connectable>
   let make: String
   let isLast: Bool
 

@@ -181,7 +181,7 @@ public actor AirtableClient {
     let sortedRecords = allRecords.sorted { $0.fields.ID < $1.fields.ID }
 
     // Save to cache if caching is enabled
-    if let cacheURL = self.cacheURL {
+    if self.cacheURL != nil {
       try? await saveToCache(records: sortedRecords, for: tableID)
       print("Models data cached successfully")
     }

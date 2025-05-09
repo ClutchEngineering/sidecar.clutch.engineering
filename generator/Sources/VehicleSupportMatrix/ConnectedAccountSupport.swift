@@ -1,6 +1,6 @@
 import Foundation
 
-public let makeConnectedAccountSupport: [String: Set<MergedSupportMatrix.Connectable>] = [
+public let makeConnectedAccountSupport: [String: Set<Connectable>] = [
   "Porsche": [
     .isCharging,
     .pluggedIn,

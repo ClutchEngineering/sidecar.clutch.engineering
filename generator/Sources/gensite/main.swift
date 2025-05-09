@@ -129,7 +129,6 @@ try renderSitemapWithLogs(sitemap, to: outputURL)
 func generateSitemapXML(from sitemap: Sitemap, baseURL: String = "https://sidecar.clutch.engineering") throws {
     let dateFormatter = ISO8601DateFormatter()
     dateFormatter.formatOptions = [.withFullDate]
-    let today = dateFormatter.string(from: Date())
 
     // Function to escape XML special characters in URLs
     func escapeXMLSpecialCharacters(_ string: String) -> String {
