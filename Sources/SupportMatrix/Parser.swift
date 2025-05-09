@@ -118,6 +118,7 @@ public class VehicleMetadataParser {
         let commandsPath = (yearPath as NSString).appendingPathComponent("commands")
         if fileManager.fileExists(atPath: commandsPath) {
           let commandFiles = try fileManager.contentsOfDirectory(atPath: commandsPath)
+          var confirmedCommandIDs = Set<String>()
           var signals = Set<String>()
           for commandFile in commandFiles {
             if commandFile.hasSuffix(".yaml") || commandFile.hasSuffix(".yml") {
@@ -125,20 +126,25 @@ public class VehicleMetadataParser {
               let yamlData = try String(contentsOfFile: commandFilePath, encoding: .utf8)
 
               // Parse YAML structure using Yams
-              if let yamlDict = try Yams.load(yaml: yamlData) as? [String: Any],
-                let testCases = yamlDict["test_cases"] as? [[String: Any]] {
+              if let yamlDict = try Yams.load(yaml: yamlData) as? [String: Any] {
+                if let commandID = yamlDict["command_id"] as? String {
+                  confirmedCommandIDs.insert(commandID)
+                }
 
-                for testCase in testCases {
-                  if let expectedValues = testCase["expected_values"] as? [String: Any] {
-                    // Add all keys from expected_values as confirmed signals
-                    for key in expectedValues.keys {
-                      signals.insert(key)
+                if let testCases = yamlDict["test_cases"] as? [[String: Any]] {
+                  for testCase in testCases {
+                    if let expectedValues = testCase["expected_values"] as? [String: Any] {
+                      // Add all keys from expected_values as confirmed signals
+                      for key in expectedValues.keys {
+                        signals.insert(key)
+                      }
                     }
                   }
                 }
               }
             }
           }
+          commandSupport.confirmedCommandIDs = confirmedCommandIDs
           commandSupport.confirmedSignals = signals
         }
 

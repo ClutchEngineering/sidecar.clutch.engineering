@@ -60,6 +60,14 @@ public struct CommandSupport: Codable {
 
   /// Not encoded in YAML, but used to store confirmed signals.
   public var confirmedSignals: Set<String>?
+  public var confirmedCommandIDs: Set<String>?
+
+  /// All command IDs that, to the best of our knowledge, are not supported by the vehicle.
+  public var allUnsupportedCommandIDs: Set<String> {
+    var allUnsupportedCommandIDs = unsupportedCommandsByEcu?.values.reduce(into: Set<String>()) { $0.formUnion($1) } ?? []
+    allUnsupportedCommandIDs.subtract(confirmedCommandIDs ?? [])
+    return allUnsupportedCommandIDs
+  }
 
   public var allSupportedSignals: [String] {
     var allSignals = Set<String>()

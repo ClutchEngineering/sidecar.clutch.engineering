@@ -363,7 +363,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
     public func connectedSignals(modelYear: Int) -> [SignalID: Connectable]? {
       // First check for specific year ranges that contain this model year
       for (yearRange, signals) in yearRangeSignals where yearRange != nil {
-        if let range = yearRange, range.contains(modelYear) {
+        if let range = yearRange,
+           range.contains(modelYear) {
           return signals
         }
       }
