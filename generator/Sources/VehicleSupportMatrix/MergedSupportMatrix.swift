@@ -68,6 +68,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
   @discardableResult
   public static func load(
     using airtableClient: AirtableClient,
+    projectRoot: URL,
     modelsTableID: String,
     workspacePath: String,
     useCache: Bool = false
@@ -76,7 +77,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
     // Check for cached data if useCache is enabled
     if useCache {
-      if let cachedMatrix = await tryLoadFromCache() {
+      if let cachedMatrix = await tryLoadFromCache(projectRoot: projectRoot) {
         // We have a cached matrix - use it
         matrix.supportMatrix = cachedMatrix.supportMatrix
         print("Loaded vehicle support matrix from cache")
@@ -93,22 +94,22 @@ public class MergedSupportMatrix: @unchecked Sendable {
     }
 
     // Connectables require the vehicle matrix to be loaded first for engine type data.
-    try matrix.loadConnectables()
+    try matrix.loadConnectables(projectRoot: projectRoot)
     print("Loaded connectables data successfully")
 
     // Save to cache if successful and caching is enabled
-    try await saveToCacheAsync(matrix: matrix)
+    try await saveToCacheAsync(matrix: matrix, projectRoot: projectRoot)
 
     return matrix
   }
 
-  private static func getCachePath() -> String {
+  private static func getCachePath(projectRoot: URL) -> String {
     let fileManager = FileManager.default
     let path: String
     if let cachePath = ProcessInfo.processInfo.environment["CACHE_DIR"] {
-      path = fileManager.currentDirectoryPath + "/" + cachePath
+      path = projectRoot.appending(path: cachePath).path()
     } else {
-      path = fileManager.currentDirectoryPath + "/.cache"
+      path = projectRoot.appending(path: ".cache").path()
     }
 
     // Create cache directory if it doesn't exist
@@ -137,14 +138,14 @@ public class MergedSupportMatrix: @unchecked Sendable {
   }
 
   // Helper function to construct the cache file path
-  private static func getCacheFilePath() -> URL {
-    let cacheDirectory: String = getCachePath()
+  private static func getCacheFilePath(projectRoot: URL) -> URL {
+    let cacheDirectory: String = getCachePath(projectRoot: projectRoot)
     return URL(fileURLWithPath: cacheDirectory).appendingPathComponent("mergedSupportMatrix.json")
   }
 
   // Try to load the matrix from cache
-  private static func tryLoadFromCache() async -> MergedSupportMatrix? {
-    let cacheFilePath = getCacheFilePath()
+  private static func tryLoadFromCache(projectRoot: URL) async -> MergedSupportMatrix? {
+    let cacheFilePath = getCacheFilePath(projectRoot: projectRoot)
 
     do {
       let data = try Data(contentsOf: cacheFilePath)
@@ -161,8 +162,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
   }
 
   // Save matrix to cache asynchronously
-  private static func saveToCacheAsync(matrix: MergedSupportMatrix) async throws {
-    let cacheFilePath = getCacheFilePath()
+  private static func saveToCacheAsync(matrix: MergedSupportMatrix, projectRoot: URL) async throws {
+    let cacheFilePath = getCacheFilePath(projectRoot: projectRoot)
 
     let encoder = JSONEncoder()
     let data = try encoder.encode(matrix.supportMatrix)
@@ -172,8 +173,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
   /// Load connectables data from the .cache/connectables.json file
   /// - Throws: Error if the file doesn't exist or can't be parsed
-  private func loadConnectables() throws {
-    let connectablesFilePath = Self.getConnectablesFilePath()
+  private func loadConnectables(projectRoot: URL) throws {
+    let connectablesFilePath = Self.getConnectablesFilePath(projectRoot: projectRoot)
 
     guard FileManager.default.fileExists(atPath: connectablesFilePath.path) else {
       throw NSError(
@@ -298,8 +299,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
 
   /// Get the path to the connectables file
   /// - Returns: URL to the connectables.json file
-  private static func getConnectablesFilePath() -> URL {
-    let cacheDirectory: String = getCachePath()
+  private static func getConnectablesFilePath(projectRoot: URL) -> URL {
+    let cacheDirectory: String = getCachePath(projectRoot: projectRoot)
     return URL(fileURLWithPath: cacheDirectory).appendingPathComponent("connectables.json")
   }
 

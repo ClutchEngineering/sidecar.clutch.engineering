@@ -41,65 +41,11 @@
             "problemMatcher": []
         },
         {
-            "label": "Build Site",
-            "type": "shell",
-            "command": "swift",
-            "args": [
-                "run",
-                "gensite"
-            ],
-            "presentation": {
-                "reveal": "always",
-                "panel": "dedicated",
-                "group": "dev-server"
-            },
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "options": {
-                "env": {
-                    "ENV_FILE": "${workspaceFolder}/.env"
-                }
-            },
-            "problemMatcher": []
-        },
-        {
-            "label": "Watch Source Files",
-            "type": "shell",
-            "command": "fswatch",
-            "args": [
-                "-o",
-                "Sources",
-                "|",
-                "xargs",
-                "-n1",
-                "-I{}",
-                "swift",
-                "run",
-                "gensite"
-            ],
-            "presentation": {
-                "reveal": "always",
-                "panel": "dedicated",
-                "group": "dev-server"
-            },
-            "isBackground": true,
-            "options": {
-                "env": {
-                    "ENV_FILE": "${workspaceFolder}/.env"
-                }
-            },
-            "problemMatcher": [],
-            "dependsOn": ["Build Site"]
-        },
-        {
             "label": "Dev Environment",
             "dependsOrder": "parallel",
             "dependsOn": [
                 "Start HTTP Server",
-                "Tailwind CSS Watch",
-                "Watch Source Files"
+                "Tailwind CSS Watch"
             ],
             "presentation": {
                 "reveal": "always",

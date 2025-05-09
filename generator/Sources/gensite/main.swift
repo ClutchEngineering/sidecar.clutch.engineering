@@ -7,7 +7,7 @@ import VehicleSupportMatrix
 import Slipstream
 
 // Assumes this file is located in a Sources/gensite sub-directory of a Swift package.
-guard let projectURL = URL(filePath: #filePath)?
+guard let projectRoot = URL(filePath: #filePath)?
   .deletingLastPathComponent()
   .deletingLastPathComponent()
   .deletingLastPathComponent()
@@ -16,7 +16,7 @@ guard let projectURL = URL(filePath: #filePath)?
   exit(1)
 }
 
-let outputURL = projectURL.appending(path: "site")
+let outputURL = projectRoot.appending(path: "site")
 
 extension Condition {
   static var mobileOnly: Condition { Condition.within(Breakpoint.small..<Breakpoint.medium) }
@@ -24,7 +24,7 @@ extension Condition {
 }
 
 // Load environment variables from .env file if it exists
-DotEnv.load(from: projectURL.appending(path: ".env").path())
+DotEnv.load(from: projectRoot.appending(path: ".env").path())
 
 guard let airtableAPIKey = ProcessInfo.processInfo.environment["AIRTABLE_API_KEY"] else {
   fatalError("Missing AIRTABLE_API_KEY")
@@ -66,6 +66,7 @@ if useCache {
 
 let supportMatrix = try await MergedSupportMatrix.load(
   using: airtableClient,
+  projectRoot: projectRoot,
   modelsTableID: modelsTableID,
   workspacePath: workspacePath,
   useCache: useCache
