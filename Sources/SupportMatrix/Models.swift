@@ -44,6 +44,23 @@ public struct CommandSupport: Codable {
   public var supportedCommandsByEcu: [String: [String]]?
   public var unsupportedCommandsByEcu: [String: [String]]?
 
+  init(
+    modelYear: Int,
+    canIdFormat: String = "",
+    extendedAddressingEnabled: Bool = false,
+    supportedCommandsByEcu: [String: [String]]? = nil,
+    unsupportedCommandsByEcu: [String: [String]]? = nil
+  ) {
+    self.modelYear = modelYear
+    self.canIdFormat = canIdFormat
+    self.extendedAddressingEnabled = extendedAddressingEnabled
+    self.supportedCommandsByEcu = supportedCommandsByEcu
+    self.unsupportedCommandsByEcu = unsupportedCommandsByEcu
+  }
+
+  /// Not encoded in YAML, but used to store confirmed signals.
+  public var confirmedSignals: Set<String>?
+
   public var allSupportedSignals: [String] {
     var allSignals = Set<String>()
     for ecuCommands in (supportedCommandsByEcu ?? [:]).values {
@@ -111,24 +128,6 @@ public struct VehicleMetadata {
     }
 
     vehicles[make]?[model]?[year] = commandSupport
-  }
-
-  public mutating func addConfirmedSignal(
-    make: Make, model: Model, year: Year, signal: String
-  ) {
-    if confirmedSignals[make] == nil {
-      confirmedSignals[make] = [:]
-    }
-
-    if confirmedSignals[make]?[model] == nil {
-      confirmedSignals[make]?[model] = [:]
-    }
-
-    if confirmedSignals[make]?[model]?[year] == nil {
-      confirmedSignals[make]?[model]?[year] = Set<String>()
-    }
-
-    confirmedSignals[make]?[model]?[year]?.insert(signal)
   }
 
   public mutating func addGenerations(

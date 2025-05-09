@@ -14,8 +14,9 @@ struct MakeGridPage: View {
     let fm = FileManager.default
 
     self.makes = supportMatrix.getAllMakes().filter {
-      if !fm.fileExists(atPath: gfxURL.appending(component: makeNameForIcon($0)).appendingPathExtension("svg").path()) {
-        print("Dropping make: \($0) because no SVG found")
+      let svgPath = gfxURL.appending(component: makeNameForIcon($0)).appendingPathExtension("svg").path()
+      if !fm.fileExists(atPath: svgPath) {
+        print("Dropping make: \($0) because no SVG found at \(svgPath)")
         return false
       }
       return true

@@ -39,16 +39,10 @@ public class VehicleMetadataParser {
           let vehicleData = try parseVehicleDirectory(at: itemPath, make: make, model: model)
 
           for (year, commandSupport) in vehicleData {
-            metadata.addVehicle(
-              make: make, model: model, year: year, commandSupport: commandSupport)
-          }
+            metadata.addVehicle(make: make, model: model, year: year, commandSupport: commandSupport)
 
-          // Parse confirmed signals from test cases
-          let signalData = try parseConfirmedSignals(at: itemPath, make: make, model: model)
-
-          for (year, signals) in signalData {
-            for signal in signals {
-              metadata.addConfirmedSignal(make: make, model: model, year: year, signal: signal)
+            if let confirmedSignals = commandSupport.confirmedSignals {
+              metadata.confirmedSignals[make, default: [:]][model, default: [:]][year] = confirmedSignals
             }
           }
 
@@ -107,79 +101,52 @@ public class VehicleMetadataParser {
         let year = Int(yearString) {
         let commandSupportPath = (yearPath as NSString).appendingPathComponent("command_support.yaml")
 
+        var commandSupport: CommandSupport
         if fileManager.fileExists(atPath: commandSupportPath) {
           do {
             let yamlData = try String(contentsOfFile: commandSupportPath, encoding: .utf8)
-            let commandSupport = try YAMLDecoder().decode(CommandSupport.self, from: yamlData)
+            commandSupport = try YAMLDecoder().decode(CommandSupport.self, from: yamlData)
             yearData[year] = commandSupport
           } catch let error {
             print("Failed to load vehicle data: \(error)")
+            commandSupport = CommandSupport(modelYear: year)
           }
+        } else {
+          commandSupport = CommandSupport(modelYear: year)
         }
-      }
-    }
 
-    return yearData
-  }
-
-  /// Parse confirmed signals from test case files
-  private func parseConfirmedSignals(at path: String, make: String, model: String) throws -> [Year: Set<String>] {
-    var signalsByYear = [Year: Set<String>]()
-
-    // Path to tests/test_cases
-    let testCasesPath = (path as NSString).appendingPathComponent("tests/test_cases")
-
-    if !fileManager.fileExists(atPath: testCasesPath) {
-      return signalsByYear
-    }
-
-    let years = try fileManager.contentsOfDirectory(atPath: testCasesPath)
-
-    for yearString in years {
-      let yearPath = (testCasesPath as NSString).appendingPathComponent(yearString)
-      var isDirectory: ObjCBool = false
-
-      if fileManager.fileExists(atPath: yearPath, isDirectory: &isDirectory),
-         isDirectory.boolValue,
-         let year = Int(yearString)
-      {
         let commandsPath = (yearPath as NSString).appendingPathComponent("commands")
+        if fileManager.fileExists(atPath: commandsPath) {
+          let commandFiles = try fileManager.contentsOfDirectory(atPath: commandsPath)
+          var signals = Set<String>()
+          for commandFile in commandFiles {
+            if commandFile.hasSuffix(".yaml") || commandFile.hasSuffix(".yml") {
+              let commandFilePath = (commandsPath as NSString).appendingPathComponent(commandFile)
+              let yamlData = try String(contentsOfFile: commandFilePath, encoding: .utf8)
 
-        if !fileManager.fileExists(atPath: commandsPath) {
-          continue
-        }
+              // Parse YAML structure using Yams
+              if let yamlDict = try Yams.load(yaml: yamlData) as? [String: Any],
+                let testCases = yamlDict["test_cases"] as? [[String: Any]] {
 
-        let commandFiles = try fileManager.contentsOfDirectory(atPath: commandsPath)
-        var signalsForYear = Set<String>()
-
-        for commandFile in commandFiles {
-          if commandFile.hasSuffix(".yaml") || commandFile.hasSuffix(".yml") {
-            let commandFilePath = (commandsPath as NSString).appendingPathComponent(commandFile)
-            let yamlData = try String(contentsOfFile: commandFilePath, encoding: .utf8)
-
-            // Parse YAML structure using Yams
-            if let yamlDict = try Yams.load(yaml: yamlData) as? [String: Any],
-               let testCases = yamlDict["test_cases"] as? [[String: Any]] {
-
-              for testCase in testCases {
-                if let expectedValues = testCase["expected_values"] as? [String: Any] {
-                  // Add all keys from expected_values as confirmed signals
-                  for key in expectedValues.keys {
-                    signalsForYear.insert(key)
+                for testCase in testCases {
+                  if let expectedValues = testCase["expected_values"] as? [String: Any] {
+                    // Add all keys from expected_values as confirmed signals
+                    for key in expectedValues.keys {
+                      signals.insert(key)
+                    }
                   }
                 }
               }
             }
           }
+          commandSupport.confirmedSignals = signals
         }
 
-        if !signalsForYear.isEmpty {
-          signalsByYear[year] = signalsForYear
-        }
+        yearData[year] = commandSupport
       }
     }
 
-    return signalsByYear
+    return yearData
   }
 
   /// Parse generations data from generations.yaml file
