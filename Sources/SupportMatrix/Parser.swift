@@ -104,11 +104,8 @@ public class VehicleMetadataParser {
 
       if fileManager.fileExists(atPath: yearPath, isDirectory: &isDirectory),
         isDirectory.boolValue,
-        let year = Int(yearString)
-      {
-
-        let commandSupportPath = (yearPath as NSString).appendingPathComponent(
-          "command_support.yaml")
+        let year = Int(yearString) {
+        let commandSupportPath = (yearPath as NSString).appendingPathComponent("command_support.yaml")
 
         if fileManager.fileExists(atPath: commandSupportPath) {
           do {

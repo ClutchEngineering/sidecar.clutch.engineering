@@ -50,47 +50,6 @@ public final class SupportMatrix: @unchecked Sendable {
     return vehicleMetadata?.vehicles[make]?[model]?[year]
   }
 
-  /// Get all vehicles that support a specific command
-  /// - Parameter command: The command to search for (e.g., "0104")
-  /// - Returns: A dictionary of vehicles that support the command
-  public func getVehiclesSupporting(command: String) -> [Make: [Model: [Year]]] {
-    var result = [Make: [Model: [Year]]]()
-
-    guard let metadata = vehicleMetadata else {
-      return result
-    }
-
-    for (make, models) in metadata.vehicles {
-      for (model, years) in models {
-        for (year, support) in years {
-          for (_, commands) in (support.supportedCommandsByEcu ?? [:]) {
-            for cmdWithParams in commands {
-              if cmdWithParams.starts(with: command + ":") {
-                if result[make] == nil {
-                  result[make] = [:]
-                }
-                if result[make]?[model] == nil {
-                  result[make]?[model] = []
-                }
-                result[make]?[model]?.append(year)
-                break
-              }
-            }
-          }
-        }
-      }
-    }
-
-    // Sort years within each model
-    for (make, models) in result {
-      for (model, _) in models {
-        result[make]?[model]?.sort()
-      }
-    }
-
-    return result
-  }
-
   /// Get confirmed signals for a specific make, model, and year
   /// - Parameters:
   ///   - make: The vehicle make
@@ -108,41 +67,5 @@ public final class SupportMatrix: @unchecked Sendable {
   /// - Returns: A dictionary mapping years to sets of confirmed signals
   public func getAllConfirmedSignals(for make: Make, model: Model) -> [Year: Set<String>] {
     return vehicleMetadata?.confirmedSignals[make]?[model] ?? [:]
-  }
-
-  /// Get vehicles that support a specific signal
-  /// - Parameter signalName: The signal name to search for (e.g., "TAYCAN_VSS")
-  /// - Returns: A dictionary of makes, models, and years that support the signal
-  public func getVehiclesSupporting(signalName: String) -> [Make: [Model: [Year]]] {
-    var result = [Make: [Model: [Year]]]()
-
-    guard let metadata = vehicleMetadata else {
-      return result
-    }
-
-    for (make, models) in metadata.confirmedSignals {
-      for (model, years) in models {
-        for (year, signals) in years {
-          if signals.contains(signalName) {
-            if result[make] == nil {
-              result[make] = [:]
-            }
-            if result[make]?[model] == nil {
-              result[make]?[model] = []
-            }
-            result[make]?[model]?.append(year)
-          }
-        }
-      }
-    }
-
-    // Sort years within each model
-    for (make, models) in result {
-      for (model, _) in models {
-        result[make]?[model]?.sort()
-      }
-    }
-
-    return result
   }
 }

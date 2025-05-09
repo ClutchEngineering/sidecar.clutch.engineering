@@ -42,6 +42,7 @@ public struct CommandSupport: Codable {
   public var canIdFormat: String
   public var extendedAddressingEnabled: Bool
   public var supportedCommandsByEcu: [String: [String]]?
+  public var unsupportedCommandsByEcu: [String: [String]]?
 
   public var allSupportedSignals: [String] {
     var allSignals = Set<String>()
@@ -69,6 +70,7 @@ public struct CommandSupport: Codable {
     case canIdFormat = "can_id_format"
     case extendedAddressingEnabled = "extended_addressing_enabled"
     case supportedCommandsByEcu = "supported_commands_by_ecu"
+    case unsupportedCommandsByEcu = "unsupported_commands_by_ecu"
   }
 }
 
