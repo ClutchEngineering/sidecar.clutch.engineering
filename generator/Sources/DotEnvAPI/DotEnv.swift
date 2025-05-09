@@ -4,7 +4,7 @@ import Foundation
 public struct DotEnv {
   /// Loads environment variables from a .env file if it exists
   /// - Parameter defaultPath: The default path to the .env file (default: ".env")
-  public static func load(from defaultPath: String = ".env") {
+  public static func load(from defaultPath: String) {
     // Check if ENV_FILE environment variable is set
     let fileManager = FileManager.default
     let envPath = ProcessInfo.processInfo.environment["ENV_FILE"] ?? defaultPath

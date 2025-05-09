@@ -54,31 +54,34 @@ public struct Filter: Codable, Hashable, Equatable, Sendable {
     }
   }
 
-  public func matches(modelYear: Int?) -> Bool {
-    if let modelYear {
-      if let from,
-         let to {
-        if from < to {
-          if modelYear >= from,
-             modelYear <= to {
-            return true
-          }
-        } else if modelYear >= from || modelYear <= to {
+  public func matches(modelYear: Int) -> Bool {
+    if from == nil,
+       to == nil,
+       years == nil {
+      return true
+    }
+    if let from,
+       let to {
+      if from < to {
+        if modelYear >= from,
+           modelYear <= to {
           return true
         }
-      } else if let to {
-        if modelYear <= to {
-          return true
-        }
-      } else if let from {
-        if modelYear >= from {
-          return true
-        }
-      }
-      if let years,
-         years.contains(modelYear) {
+      } else if modelYear >= from || modelYear <= to {
         return true
       }
+    } else if let to {
+      if modelYear <= to {
+        return true
+      }
+    } else if let from {
+      if modelYear >= from {
+        return true
+      }
+    }
+    if let years,
+       years.contains(modelYear) {
+      return true
     }
     return false
   }
