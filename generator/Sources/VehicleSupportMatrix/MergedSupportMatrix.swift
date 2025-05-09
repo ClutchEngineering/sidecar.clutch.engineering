@@ -243,7 +243,9 @@ public class MergedSupportMatrix: @unchecked Sendable {
       // - "Audi-TT/signalsets/v3/default.json" -> OBDbID: "Audi-TT", YearRange: nil
       // - "Ford-F-150/signalsets/v3/2015-2018.json" -> OBDbID: "Ford-F-150", YearRange: 2015...2018
       let components = path.components(separatedBy: "/")
-      guard components.count >= 4 else { continue }
+      guard components.count >= 4 else {
+        continue
+      }
 
       let obdbID = components[0]
 

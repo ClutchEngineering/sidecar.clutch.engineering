@@ -36,7 +36,7 @@ public struct Filter: Codable, Hashable, Equatable, Sendable {
           from = year
         }
       } else if component.hasPrefix("<=") {
-        let yearString = component.replacingOccurrences(of: ">=", with: "")
+        let yearString = component.replacingOccurrences(of: "<=", with: "")
         if let year = Int(yearString) {
           to = year
         }
