@@ -56,9 +56,6 @@ public class MergedSupportMatrix: @unchecked Sendable {
   typealias ConnectableMap = [Path: [Filters: [SignalID: Connectable]]]
   private var rawConnectables: ConnectableMap = [:]
 
-  /// Optional error that occurred during the last merge operation
-  public private(set) var lastError: Error?
-
   private init() {}
 
   /// Static function to load the MergedSupportMatrix with optional caching
@@ -74,23 +71,21 @@ public class MergedSupportMatrix: @unchecked Sendable {
     modelsTableID: String,
     workspacePath: String,
     useCache: Bool = false
-  ) async -> (matrix: MergedSupportMatrix, success: Bool) {
+  ) async throws -> MergedSupportMatrix {
     let matrix: MergedSupportMatrix = MergedSupportMatrix.shared
-    var success: Bool = false
 
     // Check for cached data if useCache is enabled
     if useCache {
       if let cachedMatrix = await tryLoadFromCache() {
         // We have a cached matrix - use it
         matrix.supportMatrix = cachedMatrix.supportMatrix
-        success = true
         print("Loaded vehicle support matrix from cache")
       }
     }
 
     if matrix.supportMatrix.isEmpty {
       // No cache available or caching disabled, perform full load
-      success = await matrix.loadAndMerge(
+      try await matrix.loadAndMerge(
         using: airtableClient,
         modelsTableID: modelsTableID,
         workspacePath: workspacePath
@@ -98,21 +93,13 @@ public class MergedSupportMatrix: @unchecked Sendable {
     }
 
     // Connectables require the vehicle matrix to be loaded first for engine type data.
-    do {
-      try matrix.loadConnectables()
-      print("Loaded connectables data successfully")
-    } catch {
-      print("Failed to load connectables data: \(error.localizedDescription)")
-      matrix.lastError = error
-      success = false
-    }
+    try matrix.loadConnectables()
+    print("Loaded connectables data successfully")
 
     // Save to cache if successful and caching is enabled
-    if success {
-      await saveToCacheAsync(matrix: matrix)
-    }
+    try await saveToCacheAsync(matrix: matrix)
 
-    return (matrix, success)
+    return matrix
   }
 
   private static func getCachePath() -> String {
@@ -174,17 +161,13 @@ public class MergedSupportMatrix: @unchecked Sendable {
   }
 
   // Save matrix to cache asynchronously
-  private static func saveToCacheAsync(matrix: MergedSupportMatrix) async {
+  private static func saveToCacheAsync(matrix: MergedSupportMatrix) async throws {
     let cacheFilePath = getCacheFilePath()
 
-    do {
-      let encoder = JSONEncoder()
-      let data = try encoder.encode(matrix.supportMatrix)
-      try data.write(to: cacheFilePath)
-      print("Saved vehicle support matrix to cache")
-    } catch {
-      print("Cache write failed: \(error.localizedDescription)")
-    }
+    let encoder = JSONEncoder()
+    let data = try encoder.encode(matrix.supportMatrix)
+    try data.write(to: cacheFilePath)
+    print("Saved vehicle support matrix to cache")
   }
 
   /// Load connectables data from the .cache/connectables.json file
@@ -326,91 +309,81 @@ public class MergedSupportMatrix: @unchecked Sendable {
   ///   - modelsTableID: The ID of the models table in Airtable
   ///   - workspacePath: Path to the local workspace containing vehicle metadata
   /// - Returns: A boolean indicating whether the operation was successful
-  @discardableResult
   public func loadAndMerge(
     using airtableClient: AirtableClient, modelsTableID: String, workspacePath: String
-  ) async -> Bool {
-    do {
-      // Reset any previous errors
-      lastError = nil
-      supportMatrix = [:]
+  ) async throws {
+    supportMatrix = [:]
 
-      // 1. Fetch models from Airtable
-      let sortedRecords: [AirtableRecord] = try await airtableClient.fetchModels(from: modelsTableID)
+    // 1. Fetch models from Airtable
+    let sortedRecords: [AirtableRecord] = try await airtableClient.fetchModels(from: modelsTableID)
 
-      // 2. Create initial support matrix with Airtable data
-      for record: AirtableRecord in sortedRecords {
-        guard let make = record.fields.make,
-          let model = record.fields.model,
-          let obdbID = record.fields.obdbID,
-          let engineType = record.fields.engineType else {
-          print("Unknown record: \(record)")
-          continue
-        }
-        let modelSVGs = record.fields.symbolSVG?.map { $0.filename } ?? []
-        let numberOfDrivers: Int = record.fields.numberOfDrivers ?? 0
-        let numberOfMilesDriven: Int = record.fields.numberOfMilesDriven ?? 0
-        let onboarded = record.fields.onboarded ?? false
+    // 2. Create initial support matrix with Airtable data
+    for record: AirtableRecord in sortedRecords {
+      guard let make = record.fields.make,
+            let model = record.fields.model,
+            let obdbID = record.fields.obdbID,
+            let engineType = record.fields.engineType else {
+        print("Unknown record: \(record)")
+        continue
+      }
+      let modelSVGs = record.fields.symbolSVG?.map { $0.filename } ?? []
+      let numberOfDrivers: Int = record.fields.numberOfDrivers ?? 0
+      let numberOfMilesDriven: Int = record.fields.numberOfMilesDriven ?? 0
+      let onboarded = record.fields.onboarded ?? false
 
-        guard let engineType = ModelSupport.EngineType(rawValue: engineType) else {
-          fatalError("Unknown engine type: \(engineType)")
-          continue
-        }
+      guard let engineType = ModelSupport.EngineType(rawValue: engineType) else {
+        fatalError("Unknown engine type: \(engineType)")
+        continue
+      }
 
-        supportMatrix[standardizedOBDbID(obdbID)] = ModelSupport(
-          obdbID: obdbID,
-          make: make,
-          model: model,
-          engineType: engineType,
-          modelSVGs: modelSVGs,
-          numberOfDrivers: numberOfDrivers,
-          numberOfMilesDriven: numberOfMilesDriven,
-          onboarded: onboarded
-        )
+      supportMatrix[standardizedOBDbID(obdbID)] = ModelSupport(
+        obdbID: obdbID,
+        make: make,
+        model: model,
+        engineType: engineType,
+        modelSVGs: modelSVGs,
+        numberOfDrivers: numberOfDrivers,
+        numberOfMilesDriven: numberOfMilesDriven,
+        onboarded: onboarded
+      )
 
-        if let symbolSVGs = record.fields.symbolSVG {
-          for asset in symbolSVGs {
-            // Download and cache image assets
-            Task {
-              await downloadAndCacheAsset(url: URL(string: asset.url)!, filename: asset.filename)
-            }
+      if let symbolSVGs = record.fields.symbolSVG {
+        for asset in symbolSVGs {
+          // Download and cache image assets
+          Task {
+            await downloadAndCacheAsset(url: URL(string: asset.url)!, filename: asset.filename)
           }
         }
       }
+    }
 
-      // 3. Load local vehicle metadata
-      try SupportMatrix.shared.loadVehicleMetadata(from: workspacePath)
+    // 3. Load local vehicle metadata
+    try SupportMatrix.shared.loadVehicleMetadata(from: workspacePath)
 
-      // 4. Merge with local metadata if available
-      if let vehicleMetadata = SupportMatrix.shared.vehicleMetadata {
-        for (make, models) in vehicleMetadata.vehicles {
-          for (model, years) in models {
-            let obdbID = make + "-" + model
-            supportMatrix[standardizedOBDbID(obdbID)]?.yearCommandSupport = years
-          }
-        }
-
-        // Add confirmed signals from metadata
-        for (make, models) in vehicleMetadata.confirmedSignals {
-          for (model, years) in models {
-            let obdbID = make + "-" + model
-            supportMatrix[standardizedOBDbID(obdbID)]?.yearConfirmedSignals = years
-          }
-        }
-
-        // Add generations data from metadata
-        for (make, models) in vehicleMetadata.generations {
-          for (model, generations) in models {
-            let obdbID = make + "-" + model
-            supportMatrix[standardizedOBDbID(obdbID)]?.generations = generations
-          }
+    // 4. Merge with local metadata if available
+    if let vehicleMetadata = SupportMatrix.shared.vehicleMetadata {
+      for (make, models) in vehicleMetadata.vehicles {
+        for (model, years) in models {
+          let obdbID = make + "-" + model
+          supportMatrix[standardizedOBDbID(obdbID)]?.yearCommandSupport = years
         }
       }
 
-      return true
-    } catch {
-      lastError = error
-      return false
+      // Add confirmed signals from metadata
+      for (make, models) in vehicleMetadata.confirmedSignals {
+        for (model, years) in models {
+          let obdbID = make + "-" + model
+          supportMatrix[standardizedOBDbID(obdbID)]?.yearConfirmedSignals = years
+        }
+      }
+
+      // Add generations data from metadata
+      for (make, models) in vehicleMetadata.generations {
+        for (model, generations) in models {
+          let obdbID = make + "-" + model
+          supportMatrix[standardizedOBDbID(obdbID)]?.generations = generations
+        }
+      }
     }
   }
 

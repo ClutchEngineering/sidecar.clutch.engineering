@@ -10,6 +10,7 @@ import Slipstream
 guard let projectURL = URL(filePath: #filePath)?
   .deletingLastPathComponent()
   .deletingLastPathComponent()
+  .deletingLastPathComponent()
   .deletingLastPathComponent() else {
   print("Unable to create URL for \(#filePath)")
   exit(1)
@@ -23,7 +24,7 @@ extension Condition {
 }
 
 // Load environment variables from .env file if it exists
-DotEnv.load()
+DotEnv.load(from: projectURL.appending(path: ".env").path())
 
 guard let airtableAPIKey = ProcessInfo.processInfo.environment["AIRTABLE_API_KEY"] else {
   fatalError("Missing AIRTABLE_API_KEY")
@@ -42,7 +43,7 @@ let workspacePath: String
 let args = CommandLine.arguments
 
 // Check if cache should be used (default is false)
-let useCache = args.contains("--use-cache")
+let useCache = true // args.contains("--use-cache")
 
 // Extract workspace path from arguments
 if args.count > 1 && !args[1].hasPrefix("--") {
@@ -62,17 +63,13 @@ print("Loading vehicle metadata from: \(workspacePath)")
 if useCache {
   print("Using cached data if available")
 }
-print("")
 
-// Use our new static function to load the MergedSupportMatrix
-let (supportMatrix, success) = await MergedSupportMatrix.load(
+let supportMatrix = try await MergedSupportMatrix.load(
   using: airtableClient,
   modelsTableID: modelsTableID,
   workspacePath: workspacePath,
   useCache: useCache
 )
-
-assert(success, "Failed to load vehicle metadata")
 
 print("Generating sitemap...")
 
