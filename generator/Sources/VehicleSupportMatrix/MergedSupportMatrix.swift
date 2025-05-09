@@ -89,7 +89,8 @@ public class MergedSupportMatrix: @unchecked Sendable {
       try await matrix.loadAndMerge(
         using: airtableClient,
         modelsTableID: modelsTableID,
-        workspacePath: workspacePath
+        workspacePath: workspacePath,
+        projectRoot: projectRoot
       )
     }
 
@@ -313,7 +314,10 @@ public class MergedSupportMatrix: @unchecked Sendable {
   ///   - workspacePath: Path to the local workspace containing vehicle metadata
   /// - Returns: A boolean indicating whether the operation was successful
   public func loadAndMerge(
-    using airtableClient: AirtableClient, modelsTableID: String, workspacePath: String
+    using airtableClient: AirtableClient,
+    modelsTableID: String,
+    workspacePath: String,
+    projectRoot: URL
   ) async throws {
     supportMatrix = [:]
 
@@ -354,7 +358,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
         for asset in symbolSVGs {
           // Download and cache image assets
           Task {
-            await downloadAndCacheAsset(url: URL(string: asset.url)!, filename: asset.filename)
+            await downloadAndCacheAsset(url: URL(string: asset.url)!, filename: asset.filename, projectRoot: projectRoot)
           }
         }
       }
@@ -394,9 +398,9 @@ public class MergedSupportMatrix: @unchecked Sendable {
   /// - Parameters:
   ///   - url: The URL of the asset to download
   ///   - filename: The filename to use when saving the asset
-  private func downloadAndCacheAsset(url: URL, filename: String) async {
+  private func downloadAndCacheAsset(url: URL, filename: String, projectRoot: URL) async {
     let fileManager = FileManager.default
-    let cacheDirectory = Self.getVehicleImagesPath()
+    let cacheDirectory = Self.getVehicleImagesPath(projectRoot: projectRoot)
     let filePath = URL(fileURLWithPath: cacheDirectory).appendingPathComponent(filename)
 
     // Check if file already exists in cache
