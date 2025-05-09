@@ -6,7 +6,7 @@ discord_message.txt
 
 .swiftpm/
 .DS_Store
-/.build
+.build
 /Packages
 xcuserdata/
 DerivedData/

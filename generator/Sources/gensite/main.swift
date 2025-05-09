@@ -50,8 +50,7 @@ if args.count > 1 && !args[1].hasPrefix("--") {
   workspacePath = args[1]
 } else {
   // Default to the workspace directory in the current project
-  let currentDirectoryURL = URL(fileURLWithPath: FileManager.default.currentDirectoryPath)
-  let workspaceURL = currentDirectoryURL.appendingPathComponent("workspace")
+  let workspaceURL = projectRoot.appendingPathComponent("workspace")
   workspacePath = workspaceURL.path
 }
 

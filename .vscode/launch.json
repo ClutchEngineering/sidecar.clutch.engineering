@@ -10,7 +10,7 @@
             "preLaunchTask": "swift: Build Debug import",
             "env": {
                 "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
-                "CACHE_DIR": ".cache",
+                "CACHE_DIR": ".cache"
             }
         },
         {
@@ -23,7 +23,7 @@
             "preLaunchTask": "swift: Build Release import",
             "env": {
                 "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
-                "CACHE_DIR": ".cache",
+                "CACHE_DIR": ".cache"
             }
         },
         {
@@ -36,7 +36,7 @@
             "preLaunchTask": "swift: Build Debug gensite",
             "env": {
                 "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
-                "CACHE_DIR": ".cache",
+                "CACHE_DIR": ".cache"
             }
         },
         {
@@ -49,7 +49,7 @@
             "preLaunchTask": "swift: Build Release gensite",
             "env": {
                 "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
-                "CACHE_DIR": ".cache",
+                "CACHE_DIR": ".cache"
             }
         },
         {
@@ -62,7 +62,7 @@
             "preLaunchTask": "swift: Build Debug export",
             "env": {
                 "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
-                "CACHE_DIR": ".cache",
+                "CACHE_DIR": ".cache"
             }
         },
         {
@@ -75,7 +75,7 @@
             "preLaunchTask": "swift: Build Release export",
             "env": {
                 "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
-                "CACHE_DIR": ".cache",
+                "CACHE_DIR": ".cache"
             }
         },
         {
@@ -88,7 +88,7 @@
             "preLaunchTask": "swift: Build Debug analytics",
             "env": {
                 "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
-                "CACHE_DIR": ".cache",
+                "CACHE_DIR": ".cache"
             }
         },
         {
@@ -101,7 +101,7 @@
             "preLaunchTask": "swift: Build Release analytics",
             "env": {
                 "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
-                "CACHE_DIR": ".cache",
+                "CACHE_DIR": ".cache"
             }
         },
         {
@@ -114,7 +114,7 @@
             "preLaunchTask": "swift: Build Debug supportmatrix-cli",
             "env": {
                 "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
-                "CACHE_DIR": ".cache",
+                "CACHE_DIR": ".cache"
             }
         },
         {
@@ -127,7 +127,7 @@
             "preLaunchTask": "swift: Build Release supportmatrix-cli",
             "env": {
                 "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
-                "CACHE_DIR": ".cache",
+                "CACHE_DIR": ".cache"
             }
         },
         {
@@ -140,7 +140,7 @@
             "preLaunchTask": "swift: Build Debug modellist",
             "env": {
                 "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
-                "CACHE_DIR": ".cache",
+                "CACHE_DIR": ".cache"
             }
         },
         {
@@ -153,8 +153,116 @@
             "preLaunchTask": "swift: Build Release modellist",
             "env": {
                 "ENV_FILE": "${workspaceFolder:sidecar.clutch.engineering}/.env",
-                "CACHE_DIR": ".cache",
+                "CACHE_DIR": ".cache"
             }
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}/generator",
+            "name": "Debug supportmatrix-cli (generator)",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/generator/.build/debug/supportmatrix-cli",
+            "preLaunchTask": "swift: Build Debug supportmatrix-cli (generator)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}/generator",
+            "name": "Release supportmatrix-cli (generator)",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/generator/.build/release/supportmatrix-cli",
+            "preLaunchTask": "swift: Build Release supportmatrix-cli (generator)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}/generator",
+            "name": "Debug modellist (generator)",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/generator/.build/debug/modellist",
+            "preLaunchTask": "swift: Build Debug modellist (generator)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}/generator",
+            "name": "Release modellist (generator)",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/generator/.build/release/modellist",
+            "preLaunchTask": "swift: Build Release modellist (generator)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}/generator",
+            "name": "Debug import (generator)",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/generator/.build/debug/import",
+            "preLaunchTask": "swift: Build Debug import (generator)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}/generator",
+            "name": "Release import (generator)",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/generator/.build/release/import",
+            "preLaunchTask": "swift: Build Release import (generator)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}/generator",
+            "name": "Debug gensite (generator)",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/generator/.build/debug/gensite",
+            "preLaunchTask": "swift: Build Debug gensite (generator)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}/generator",
+            "name": "Release gensite (generator)",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/generator/.build/release/gensite",
+            "preLaunchTask": "swift: Build Release gensite (generator)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}/generator",
+            "name": "Debug export (generator)",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/generator/.build/debug/export",
+            "preLaunchTask": "swift: Build Debug export (generator)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}/generator",
+            "name": "Release export (generator)",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/generator/.build/release/export",
+            "preLaunchTask": "swift: Build Release export (generator)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}/generator",
+            "name": "Debug analytics (generator)",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/generator/.build/debug/analytics",
+            "preLaunchTask": "swift: Build Debug analytics (generator)"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:sidecar.clutch.engineering}/generator",
+            "name": "Release analytics (generator)",
+            "program": "${workspaceFolder:sidecar.clutch.engineering}/generator/.build/release/analytics",
+            "preLaunchTask": "swift: Build Release analytics (generator)"
         }
     ]
 }

@@ -120,13 +120,13 @@ public class MergedSupportMatrix: @unchecked Sendable {
     return path
   }
 
-  private static func getVehicleImagesPath() -> String {
+  private static func getVehicleImagesPath(projectRoot: URL) -> String {
     let fileManager = FileManager.default
     let path: String
     if let cachePath = ProcessInfo.processInfo.environment["VEHICLE_IMAGES_DIR"] {
-      path = fileManager.currentDirectoryPath + "/" + cachePath
+      path = projectRoot.appending(path: cachePath).path()
     } else {
-      path = fileManager.currentDirectoryPath + "/site/gfx/vehicle/"
+      path = projectRoot.appending(path: "/site/gfx/vehicle/").path()
     }
 
     // Create cache directory if it doesn't exist
