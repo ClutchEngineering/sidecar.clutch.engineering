@@ -92,7 +92,7 @@ jobs:
         run: |
           EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
           echo "DISCORD_CONTENT<<$EOF" >> $GITHUB_OUTPUT
-          echo "$(perl -pe 's/\n/\\n/' discord_message.txt)" >> $GITHUB_OUTPUT
+          echo "$(perl -pe 's/\n/\\n/' generator/discord_message.txt)" >> $GITHUB_OUTPUT
           echo "$EOF" >> $GITHUB_OUTPUT
 
       - uses: sarisia/actions-status-discord@v1
