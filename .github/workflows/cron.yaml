@@ -39,7 +39,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git add Sources/gensite/
+          git add generator/Sources/gensite/
           git commit -m "Update PostHog export data" || echo "No changes to commit"
           git push origin main
           echo "commit_sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
