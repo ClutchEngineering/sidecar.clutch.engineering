@@ -77,7 +77,7 @@ Getting started
 
 Sidecar aims to make OBD-II scanning intuitive and simple. Follow these steps to get started.
 
-Note: OBD-II scanning in Sidecar for longer than 30 seconds requires a subscription or a ScanPass.
+Note: OBD-II scanning in Sidecar for longer than 5 minutes requires a subscription or a ScanPass.
 
 \(inlineHTML {
   Image(URL(string: "/gfx/scanners.png"))
