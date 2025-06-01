@@ -391,6 +391,12 @@ If a unit includes a version (e.g. **v1.13+**), that means the unit was introdu
 \(inlineHTML { Parameter("ampereHours", icon: "current") }) Electric charge in ampere-hours.    
 \(inlineHTML { Parameter("milliampereHours", icon: "current") }) Electric charge in milliampere-hours.
 
+#### Electric efficiency units
+
+\(inlineHTML { Parameter("kilowattHoursPerHundredKilometers", icon: "current") }) Electric efficiency in kilowatt hours per 100 kilometers.    
+\(inlineHTML { Parameter("kilowattHoursPerHundredMiles", icon: "current") }) Electric efficiency in kilowatt hours per 100 miles.    
+\(inlineHTML { Parameter("milesPerKilowattHour", icon: "current") }) Electric efficiency in miles per kilowatt hour.    
+
 #### Electric resistance units
 
 \(inlineHTML { Parameter("megaohms", icon: "current") }) Electric resistance in megaohms.    
