@@ -393,8 +393,8 @@ If a unit includes a version (e.g. **v1.13+**), that means the unit was introdu
 
 #### Electric efficiency units
 
-\(inlineHTML { Parameter("kilowattHoursPerHundredKilometers", icon: "current") }) Electric efficiency in kilowatt hours per 100 kilometers.    
-\(inlineHTML { Parameter("kilowattHoursPerHundredMiles", icon: "current") }) Electric efficiency in kilowatt hours per 100 miles.    
+\(inlineHTML { Parameter("kilowattHoursPer100Kilometers", icon: "current") }) Electric efficiency in kilowatt hours per 100 kilometers.    
+\(inlineHTML { Parameter("kilowattHoursPer100Miles", icon: "current") }) Electric efficiency in kilowatt hours per 100 miles.    
 \(inlineHTML { Parameter("milesPerKilowattHour", icon: "current") }) Electric efficiency in miles per kilowatt hour.    
 
 #### Electric resistance units
