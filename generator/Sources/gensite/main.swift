@@ -150,8 +150,7 @@ func generateSitemapXML(from sitemap: Sitemap, baseURL: String = "https://sideca
         }
 
         // Convert relative path to absolute URL
-        var absoluteURL = baseURL
-        absoluteURL += path.replacingOccurrences(of: "index.html", with: "")
+        let absoluteURL = baseURL + path.replacingOccurrences(of: "/index.html", with: "")
 
         // Escape special characters for XML
         let escapedURL = escapeXMLSpecialCharacters(absoluteURL)
