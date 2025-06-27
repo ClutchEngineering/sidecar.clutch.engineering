@@ -31,7 +31,7 @@ struct MakePage: View {
   var body: some View {
     Page(
       "\(make) OBD support",
-      path: "/supported-cars/\(make)",
+      path: "/supported-cars/\(make.lowercased())/",
       description: "Check which Sidecar features work with your \(make).",
       keywords: [
         make,
