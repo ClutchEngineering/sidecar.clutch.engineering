@@ -1,8 +1,8 @@
 import Foundation
 
-import Markdown
+@preconcurrency import Markdown
 
-struct Post {
+struct Post: Sendable {
   let content: String
   let tableOfContents: [Heading]
 

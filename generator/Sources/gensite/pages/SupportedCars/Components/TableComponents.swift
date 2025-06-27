@@ -4,11 +4,11 @@ import VehicleSupport
 
 struct Bordered<Content: View>: View {
   let showTrailingBorder: Bool
-  init(showTrailingBorder: Bool = true, @ViewBuilder content: @escaping () -> Content) {
+  init(showTrailingBorder: Bool = true, @ViewBuilder content: @escaping @Sendable () -> Content) {
     self.showTrailingBorder = showTrailingBorder
     self.content = content
   }
-  @ViewBuilder let content: () -> Content
+  @ViewBuilder let content: @Sendable () -> Content
   @Environment(\.isLastRow) var isLastRow
 
   var edges: Edge.Set {
@@ -30,7 +30,7 @@ struct Bordered<Content: View>: View {
 }
 
 struct Borderless<Content: View>: View {
-  @ViewBuilder let content: () -> Content
+  @ViewBuilder let content: @Sendable () -> Content
 
   var body: some View {
     content()
@@ -40,9 +40,9 @@ struct Borderless<Content: View>: View {
 
 struct HeaderCell<Content: View>: View {
   let isLast: Bool
-  @ViewBuilder let content: () -> Content
+  @ViewBuilder let content: @Sendable () -> Content
 
-  init(isLast: Bool = false, @ViewBuilder content: @escaping () -> Content) {
+  init(isLast: Bool = false, @ViewBuilder content: @escaping @Sendable () -> Content) {
     self.isLast = isLast
     self.content = content
   }
@@ -64,7 +64,7 @@ struct HeaderCell<Content: View>: View {
 struct EnvironmentAwareRow<Content: View>: View {
   let isLastRow: Bool
   @ViewBuilder
-  let content: () -> Content
+  let content: @Sendable () -> Content
 
   var body: some View {
     TableRow {

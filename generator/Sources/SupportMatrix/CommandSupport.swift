@@ -1,7 +1,7 @@
 import Foundation
 
 /// Represents command support information parsed from YAML files
-public struct CommandSupport: Codable {
+public struct CommandSupport: Codable, Sendable {
   public var modelYear: Int
   public var canIdFormat: String
   public var extendedAddressingEnabled: Bool

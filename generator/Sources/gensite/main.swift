@@ -106,21 +106,27 @@ for make in supportMatrix.getAllMakes() {
   sitemap[url.appending(component: "index.html").path()] = MakePage(supportMatrix: supportMatrix, make: make)
 }
 
-func renderSitemapWithLogs(_ sitemap: Sitemap, to folder: URL, encoding: String.Encoding = .utf8) throws {
-  for (path, view) in sitemap.sorted(by: { $0.key < $1.key }) {
-    print("Rendering \(path)")
+func renderSitemapWithLogs(_ sitemap: Sitemap, to folder: URL, encoding: String.Encoding = .utf8) async throws {
+  try await withThrowingTaskGroup(of: Void.self) { group in
+    for (path, view) in sitemap.sorted(by: { $0.key < $1.key }) {
+      group.addTask {
+        print("Rendering \(path)")
 
-    let output = try "<!DOCTYPE html>\n" + renderHTML(view)
-    let fileURL = folder.appending(path: path)
-    let folderURL = fileURL.deletingLastPathComponent()
-    if !FileManager.default.fileExists(atPath: folderURL.path(percentEncoded: false)) {
-      try FileManager.default.createDirectory(at: folderURL, withIntermediateDirectories: true)
+        let output = try "<!DOCTYPE html>\n" + renderHTML(view)
+        let fileURL = folder.appending(path: path)
+        let folderURL = fileURL.deletingLastPathComponent()
+        if !FileManager.default.fileExists(atPath: folderURL.path(percentEncoded: false)) {
+          try FileManager.default.createDirectory(at: folderURL, withIntermediateDirectories: true)
+        }
+        try output.write(to: fileURL, atomically: true, encoding: encoding)
+      }
     }
-    try output.write(to: fileURL, atomically: true, encoding: encoding)
+
+    try await group.waitForAll()
   }
 }
 
-try renderSitemapWithLogs(sitemap, to: outputURL)
+try await renderSitemapWithLogs(sitemap, to: outputURL)
 
 // Generate and write sitemap.xml
 func generateSitemapXML(from sitemap: Sitemap, baseURL: String = "https://sidecar.clutch.engineering") throws {

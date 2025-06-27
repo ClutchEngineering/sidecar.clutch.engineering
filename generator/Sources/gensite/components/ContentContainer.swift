@@ -1,7 +1,7 @@
 import Slipstream
 
 struct ContentContainer<Content: View>: View {
-  @ViewBuilder let content: () -> Content
+  @ViewBuilder let content: @Sendable () -> Content
 
   var body: some View {
     Container {

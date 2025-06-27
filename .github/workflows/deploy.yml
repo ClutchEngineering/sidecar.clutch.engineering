@@ -28,6 +28,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: macos-15
     steps:
+      - name: Select Xcode
+        run: sudo xcode-select -s "/Applications/Xcode_16.4.app"
+
       - name: Checkout
         uses: actions/checkout@v4
 

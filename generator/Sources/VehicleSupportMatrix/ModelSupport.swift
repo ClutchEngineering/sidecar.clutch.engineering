@@ -4,11 +4,11 @@ import SupportMatrix
 
 extension MergedSupportMatrix {
   /// Structure to hold combined model data with command support information
-  public struct ModelSupport: Codable {
+  public struct ModelSupport: Codable, Sendable {
     public let obdbID: OBDbID
     public let make: String
     public let model: String
-    public enum EngineType: String, Codable {
+    public enum EngineType: String, Codable, Sendable {
       case combustion = "Combustion"
       case hybrid = "Hybrid"
       case electric = "Electric"
@@ -102,7 +102,7 @@ extension MergedSupportMatrix {
       return minYear...maxYear
     }
 
-    public enum ConnectableSupportLevel: Int, Comparable {
+    public enum ConnectableSupportLevel: Int, Comparable, Sendable {
       case unknown = 0
       case shouldBeSupported = 1
       case confirmed = 2

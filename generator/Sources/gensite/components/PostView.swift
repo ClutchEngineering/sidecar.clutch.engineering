@@ -1,5 +1,6 @@
 import Foundation
 
+@preconcurrency import Markdown
 import Slipstream
 
 private struct TOCHyperlink: View {
@@ -18,7 +19,7 @@ private struct TOCHyperlink: View {
 }
 
 private struct TOCListItem<Content: View>: View {
-  let content: () -> Content
+  let content: @Sendable () -> Content
 
   var body: some View {
     Slipstream.ListItem {

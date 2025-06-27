@@ -2,7 +2,7 @@ import Slipstream
 
 struct FeatureCard<Content: View>: View {
   @ViewBuilder
-  let content: () -> Content
+  let content: @Sendable () -> Content
 
   var body: some View {
     Puck {
@@ -18,8 +18,8 @@ struct FeatureCard<Content: View>: View {
 }
 
 struct FeatureCardTitle<Content: View>: View {
-  let content: () -> Content
-  public init(@ViewBuilder content: @escaping () -> Content) {
+  let content: @Sendable () -> Content
+  public init(@ViewBuilder content: @escaping @Sendable () -> Content) {
     self.content = content
   }
 
@@ -37,8 +37,8 @@ struct FeatureCardTitle<Content: View>: View {
 }
 
 struct FeatureCardBody<Content: View>: View {
-  let content: () -> Content
-  public init(@ViewBuilder content: @escaping () -> Content) {
+  let content: @Sendable () -> Content
+  public init(@ViewBuilder content: @escaping @Sendable () -> Content) {
     self.content = content
   }
 

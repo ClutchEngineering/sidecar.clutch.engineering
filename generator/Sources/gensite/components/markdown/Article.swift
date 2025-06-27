@@ -1,6 +1,6 @@
 import Foundation
 
-import Markdown
+@preconcurrency import Markdown
 import Slipstream
 
 private enum TableContext {
@@ -22,7 +22,7 @@ extension EnvironmentValues {
 private struct ContextAwareTableCell<Content: View>: View {
   @Environment(\.tableContext) var tableContext
 
-  @ViewBuilder let content: () -> Content
+  @ViewBuilder let content: @Sendable () -> Content
 
   var body: some View {
     switch tableContext {
@@ -51,7 +51,7 @@ private struct ContextAwareTableCell<Content: View>: View {
 private struct ContextAwareParagraph<Content: View>: View {
   @Environment(\.disableParagraphMargins) var disableParagraphMargins
 
-  @ViewBuilder let content: () -> Content
+  @ViewBuilder let content: @Sendable () -> Content
 
   var body: some View {
     Slipstream.Paragraph {

@@ -3,7 +3,7 @@ import Foundation
 public typealias SignalID = String
 
 /// Structure to manage signal mappings with year range support
-public struct FilterableSignalMap {
+public struct FilterableSignalMap: Sendable {
   private var filterableSignals: [Filter: [SignalID: Connectable]] = [:]
 
   public init() {}

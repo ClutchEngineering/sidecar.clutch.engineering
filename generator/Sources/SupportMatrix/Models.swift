@@ -14,7 +14,7 @@ public typealias Make = String
 public typealias Model = String
 
 /// Represents a vehicle generation with name and year range
-public struct Generation: Codable, Equatable, Hashable {
+public struct Generation: Codable, Equatable, Hashable, Sendable {
   public let name: String
   public let startYear: Int
   public let endYear: Int?

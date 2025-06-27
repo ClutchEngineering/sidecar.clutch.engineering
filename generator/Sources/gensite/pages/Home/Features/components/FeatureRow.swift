@@ -4,10 +4,10 @@ struct FeatureRow<ImageContent: View, ExplanationContent: View>: View {
   let imageOnLeft: Bool
 
   @ViewBuilder
-  let image: () -> ImageContent
+  let image: @Sendable () -> ImageContent
 
   @ViewBuilder
-  let explanation: () -> ExplanationContent
+  let explanation: @Sendable () -> ExplanationContent
 
   var body: some View {
     Container {

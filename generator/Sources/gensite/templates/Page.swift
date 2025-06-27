@@ -11,7 +11,7 @@ struct Page<Content: View>: View {
     scripts: Set<URL?> = Set(),
     additionalStylesheets: Set<URL?> = Set(),
     socialBannerPath: String? = nil,
-    @ViewBuilder content: @escaping () -> Content
+    @ViewBuilder content: @escaping @Sendable () -> Content
   ) {
     self.title = title
     self.path = path
@@ -31,7 +31,7 @@ struct Page<Content: View>: View {
   let additionalStylesheets: Set<URL?>
   let socialBannerPath: String?
   @ViewBuilder
-  let content: () -> Content
+  let content: @Sendable () -> Content
 
   var body: some View {
     HTML {
