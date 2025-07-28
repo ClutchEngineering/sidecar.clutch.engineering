@@ -1,6 +1,7 @@
 #us-products,
 #br-products,
 #ca-products,
+#de-products,
 #in-products,
 #uk-products {
   display: none;
@@ -19,6 +20,10 @@
 }
 
 #india:checked ~ #in-products {
+  display: block;
+}
+
+#germany:checked ~ #de-products {
   display: block;
 }
 
