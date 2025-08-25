@@ -42,8 +42,8 @@ guard let modelsTableID = ProcessInfo.processInfo.environment["AIRTABLE_MODELS_T
 let workspacePath: String
 let args = CommandLine.arguments
 
-// Check if cache should be used (default is false)
-let useCache = true // args.contains("--use-cache")
+// Check if cache should be used
+let useCache = args.contains("--use-cache")
 
 // Extract workspace path from arguments
 if args.count > 1 && !args[1].hasPrefix("--") {
