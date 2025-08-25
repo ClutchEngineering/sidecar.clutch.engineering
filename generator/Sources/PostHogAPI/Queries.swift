@@ -13,7 +13,7 @@ public func stigsQuery() -> String {
         "breakdown_group_type_index": null,
         "breakdown_hide_other_aggregation": true,
         "breakdown_histogram_bin_count": null,
-        "breakdown_limit": 1000,
+        "breakdown_limit": 5000,
         "breakdown_normalize_url": null,
         "breakdown_type": "event",
         "breakdowns": [
@@ -135,7 +135,7 @@ public func milesTraveledQuery() -> String {
         "breakdown_group_type_index": null,
         "breakdown_hide_other_aggregation": true,
         "breakdown_histogram_bin_count": null,
-        "breakdown_limit": 1000,
+        "breakdown_limit": 5000,
         "breakdown_normalize_url": null,
         "breakdown_type": "event",
         "breakdowns": [
