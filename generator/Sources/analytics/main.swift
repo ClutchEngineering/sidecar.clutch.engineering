@@ -1,6 +1,20 @@
 import Foundation
+
 import AirtableAPI
+import DotEnvAPI
 import PostHogAPI
+
+guard let projectRoot = URL(filePath: #filePath)?
+  .deletingLastPathComponent()
+  .deletingLastPathComponent()
+  .deletingLastPathComponent()
+  .deletingLastPathComponent() else {
+  print("Unable to create URL for \(#filePath)")
+  exit(1)
+}
+
+// Load environment variables from .env file if it exists
+DotEnv.load(from: projectRoot.appending(path: ".env").path())
 
 guard let apikey = ProcessInfo.processInfo.environment["POSTHOG_API_KEY"] else {
   fatalError("Missing POSTHOG_API_KEY")

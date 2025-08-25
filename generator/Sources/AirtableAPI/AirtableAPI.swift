@@ -401,10 +401,9 @@ public actor AirtableClient {
     let payload = ["records": updates]
     request.httpBody = try JSONSerialization.data(withJSONObject: payload)
 
-    let (_, response) = try await session.data(for: request)
+    let (data, response) = try await session.data(for: request)
     guard let httpResponse = response as? HTTPURLResponse,
-      (200...299).contains(httpResponse.statusCode)
-    else {
+      (200...299).contains(httpResponse.statusCode) else {
       throw AirtableError.invalidResponse
     }
   }

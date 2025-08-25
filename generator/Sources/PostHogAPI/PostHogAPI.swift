@@ -89,7 +89,27 @@ public actor PostHogExportClient {
     var request = URLRequest(url: url)
     request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
 
-    let (data, _) = try await session.data(for: request)
+    var (data, _) = try await session.data(for: request)
+    if let string = String(data: data, encoding: .utf8) {
+      let filteredData = string
+        .components(separatedBy: .newlines)
+        .map { $0.trimmingCharacters(in: .whitespaces) }
+        .filter {
+          !$0.isEmpty
+          && !$0.contains("youtube")
+          && !$0.contains("/,")
+          && !$0.contains("google")
+          && !$0.contains("http")
+          && !$0.contains(":")
+          && !$0.contains("EFFECT UP TO THE DATE")
+          && $0.allSatisfy { $0.isASCII }
+        }
+        .joined(separator: "\r\n")
+        .data(using: .utf8)
+      if let filteredData {
+        data = filteredData
+      }
+    }
     return data
   }
 }

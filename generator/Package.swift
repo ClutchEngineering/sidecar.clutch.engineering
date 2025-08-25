@@ -15,6 +15,7 @@ let package = Package(
   targets: [
     .executableTarget(name: "analytics", dependencies: [
       "AirtableAPI",
+      "DotEnvAPI",
       "PostHogAPI",
     ]),
 
