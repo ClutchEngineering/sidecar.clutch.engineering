@@ -3,21 +3,15 @@ import Foundation
 /// Represents command support information parsed from YAML files
 public struct CommandSupport: Codable, Sendable {
   public var modelYear: Int
-  public var canIdFormat: String
-  public var extendedAddressingEnabled: Bool
   public var supportedCommandsByEcu: [String: [String]]?
   public var unsupportedCommandsByEcu: [String: [String]]?
 
   init(
     modelYear: Int,
-    canIdFormat: String = "",
-    extendedAddressingEnabled: Bool = false,
     supportedCommandsByEcu: [String: [String]]? = nil,
     unsupportedCommandsByEcu: [String: [String]]? = nil
   ) {
     self.modelYear = modelYear
-    self.canIdFormat = canIdFormat
-    self.extendedAddressingEnabled = extendedAddressingEnabled
     self.supportedCommandsByEcu = supportedCommandsByEcu
     self.unsupportedCommandsByEcu = unsupportedCommandsByEcu
   }
@@ -56,8 +50,6 @@ public struct CommandSupport: Codable, Sendable {
 
   enum CodingKeys: String, CodingKey {
     case modelYear = "model_year"
-    case canIdFormat = "can_id_format"
-    case extendedAddressingEnabled = "extended_addressing_enabled"
     case supportedCommandsByEcu = "supported_commands_by_ecu"
     case unsupportedCommandsByEcu = "unsupported_commands_by_ecu"
   }
