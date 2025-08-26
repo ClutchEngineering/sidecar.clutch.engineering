@@ -97,7 +97,6 @@ public actor PostHogExportClient {
         .filter {
           !$0.isEmpty
           && !$0.contains("youtube")
-          && !$0.contains("/,")
           && !$0.contains("google")
           && !$0.contains("http")
           && !$0.contains(":")
