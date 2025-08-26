@@ -110,7 +110,8 @@ struct Leaderboard24HoursPage: View {
             // Show all entries with non-zero changes
             for (index, entry) in leaderboardData.enumerated() {
               let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: supportMatrix)
-              if vehicleInfo.vehicleName != "/" {
+              if vehicleInfo.vehicleName != "/",
+                 (entry.mileageChange ?? 0) > 0 {
                 LeaderboardRow(
                   rank: index + 1,
                   symbolName: vehicleInfo.symbolName,
