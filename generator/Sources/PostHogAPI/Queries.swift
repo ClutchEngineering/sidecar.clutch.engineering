@@ -83,7 +83,7 @@ public func stigsQuery() -> String {
               "value": "is_set"
             },
             {
-              "key": "toInt(properties.$app_build) <= 286 OR (toInt(properties.$app_build) >= 288 AND properties.metersTraveledWithCarPlayConnected > 0)",
+              "key": "toInt(properties.$app_build) <= 286 OR (toInt(properties.$app_build) >= 288 AND properties.metersTraveled > 0)",
               "label": null,
               "type": "hogql",
               "value": null
@@ -172,7 +172,7 @@ public func milesTraveledQuery() -> String {
           "kind": "EventsNode",
           "math": "hogql",
           "math_group_type_index": null,
-          "math_hogql": "(sum(IF(toInt(properties.$app_build) <= 286, properties.metersTraveled, properties.metersTraveledWithCarPlayConnected)) / 1000) / 1.609344",
+          "math_hogql": "(sum(IF(toInt(properties.$app_build) <= 286, properties.metersTraveled, properties.metersTraveled)) / 1000) / 1.609344",
           "math_property": null,
           "math_property_type": null,
           "name": "carplay",
@@ -201,7 +201,7 @@ public func milesTraveledQuery() -> String {
               "value": "is_set"
             },
             {
-              "key": "toInt(properties.$app_build) <= 286 OR (toInt(properties.$app_build) >= 288 AND properties.metersTraveledWithCarPlayConnected > 0)",
+              "key": "toInt(properties.$app_build) <= 286 OR (toInt(properties.$app_build) >= 288 AND properties.metersTraveled > 0)",
               "label": null,
               "type": "hogql",
               "value": null
