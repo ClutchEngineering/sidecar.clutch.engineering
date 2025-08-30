@@ -42,6 +42,69 @@ let exportsURL = URL(filePath: #filePath)
   .deletingLastPathComponent()
   .appending(path: "gensite")
 
+// Data sanitization function
+func sanitizeCSVData(_ csvData: Data, typoCorrections: [String: String]) throws -> Data {
+  guard let csvString = String(data: csvData, encoding: .utf8) else {
+    throw NSError(domain: "CSVSanitization", code: 1, userInfo: [NSLocalizedDescriptionKey: "Unable to decode CSV data"])
+  }
+
+  let lines = csvString.components(separatedBy: .newlines).filter { !$0.isEmpty }
+
+  guard !lines.isEmpty else {
+    return csvData
+  }
+
+  // Keep the header line
+  let header = lines[0]
+  let dataLines = Array(lines.dropFirst())
+
+  var aggregatedData: [String: Double] = [:]
+
+  // Process each data line
+  for line in dataLines {
+    let columns = line.components(separatedBy: ",")
+
+    guard columns.count >= 3 else {
+      continue
+    }
+
+    let originalSeries = columns[0].trimmingCharacters(in: .whitespacesAndNewlines)
+    let customName = columns[1].trimmingCharacters(in: .whitespacesAndNewlines)
+    let totalCountString = columns[2].trimmingCharacters(in: .whitespacesAndNewlines)
+
+    guard let totalCount = Double(totalCountString) else {
+      continue
+    }
+
+    // Apply typo correction
+    let correctedSeries = typoCorrections[originalSeries] ?? originalSeries
+
+    // Create the key for aggregation (series + custom name)
+    let aggregationKey = "\(correctedSeries),\(customName)"
+
+    // Add to aggregated data
+    aggregatedData[aggregationKey, default: 0.0] += totalCount
+  }
+
+  // Sort by total count (descending)
+  let sortedEntries = aggregatedData.sorted { $0.value > $1.value }
+
+  // Rebuild CSV
+  var sanitizedLines = [header]
+  for (key, value) in sortedEntries {
+    let formattedValue = value.truncatingRemainder(dividingBy: 1) == 0 ? String(Int(value)) : String(value)
+    sanitizedLines.append("\(key),\(formattedValue)")
+  }
+
+  let sanitizedCSV = sanitizedLines.joined(separator: "\r\n")
+
+  guard let sanitizedData = sanitizedCSV.data(using: .utf8) else {
+    throw NSError(domain: "CSVSanitization", code: 2, userInfo: [NSLocalizedDescriptionKey: "Unable to encode sanitized CSV"])
+  }
+
+  return sanitizedData
+}
+
 print("Fetching # of stigs...")
 
 // Create Airtable client
@@ -50,7 +113,21 @@ let airtableClient = AirtableClient(baseID: airtableBaseID, apiKey: airtableAPIK
 // # of stigs
 do {
   let client = PostHogExportClient(apiKey: apikey, projectID: projectID)
-  let csvData = try await client.fetchExportedCSV(query: stigsQuery())
+  let rawCSVData = try await client.fetchExportedCSV(query: stigsQuery())
+  let csvData = try sanitizeCSVData(rawCSVData, typoCorrections: typoCorrections)
+
+// Example output:
+// ```
+// series,custom name,total count
+// Toyota/Camry,# of stigs,920
+// /,# of stigs,913
+// Porsche/Taycan,# of stigs,766
+// Toyota/4Runner,# of stigs,433
+// Honda/Civic,# of stigs,257
+// Ford/F-150,# of stigs,212
+// ...
+// ```
+
   try csvData.write(to: exportsURL.appending(path: "export-carplay-drivers-by-model.csv"))
 //  let csvData = try Data(contentsOf: exportsURL.appending(path: "export-carplay-drivers-by-model.csv"))
 
@@ -73,7 +150,20 @@ print("Fetching today's stats...")
 
 do {
   let client = PostHogExportClient(apiKey: apikey, projectID: projectID)
-  let csvData = try await client.fetchExportedCSV(query: milesTraveledQuery())
+  let rawCSVData = try await client.fetchExportedCSV(query: milesTraveledQuery())
+  let csvData = try sanitizeCSVData(rawCSVData, typoCorrections: typoCorrections)
+
+// Example output:
+// ```
+// series,custom name,total count
+// Porsche/Taycan,Miles traveled,222204.81054912304
+// Toyota/Camry,Miles traveled,211605.4127345223
+// /,Miles traveled,138731.3786228466
+// Ford/F-150,Miles traveled,103014.43439880807
+// Toyota/4Runner,Miles traveled,91293.81221820317
+// ...
+// ```
+
   try csvData.write(to: todayURL)
 
   // Update Models table in Airtable with miles driven
