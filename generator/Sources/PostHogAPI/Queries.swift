@@ -76,14 +76,7 @@ public func stigsQuery() -> String {
               "value": "100"
             },
             {
-              "key": "vehicleMake",
-              "label": null,
-              "operator": "is_set",
-              "type": "event",
-              "value": "is_set"
-            },
-            {
-              "key": "toInt(properties.$app_build) <= 286 OR (toInt(properties.$app_build) >= 288 AND properties.metersTraveled > 0)",
+              "key": "toInt(properties.$app_build) <= 286 OR (toInt(properties.$app_build) >= 288 AND properties.metersTraveled > 100)",
               "label": null,
               "type": "hogql",
               "value": null
@@ -194,14 +187,7 @@ public func milesTraveledQuery() -> String {
               "value": "100"
             },
             {
-              "key": "vehicleMake",
-              "label": null,
-              "operator": "is_set",
-              "type": "event",
-              "value": "is_set"
-            },
-            {
-              "key": "toInt(properties.$app_build) <= 286 OR (toInt(properties.$app_build) >= 288 AND properties.metersTraveled > 0)",
+              "key": "toInt(properties.$app_build) <= 286 OR (toInt(properties.$app_build) >= 288 AND properties.metersTraveled > 100)",
               "label": null,
               "type": "hogql",
               "value": null
