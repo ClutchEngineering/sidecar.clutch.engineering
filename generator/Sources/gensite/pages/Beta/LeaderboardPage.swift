@@ -188,7 +188,7 @@ extension LeaderboardPage {
 
     message += "📊 **Overall Stats**\n"
     message += "• Total Miles: \(LeaderboardUtils.formatNumber(totalMiles))\n"
-    message += "• Total Stigs: \(totalStigs)\n\n"
+    message += "• Total Stigs: \(LeaderboardUtils.formatNumber(Float(totalStigs)))\n\n"
 
     // Top 10 vehicles section
     message += "🏆 **Top 10 Vehicles**\n```"
