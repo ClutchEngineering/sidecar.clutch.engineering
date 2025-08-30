@@ -89,7 +89,7 @@ struct LeaderboardPage: View {
             Text("# of Stigs")
               .bold()
               .fontSize(.large)
-            Text("\(leaderboardData.reduce(0) { $0 + $1.driverCount })")
+            Text(LeaderboardUtils.formatNumber(Float(leaderboardData.reduce(0) { $0 + $1.driverCount })))
               .fontSize(.extraExtraLarge)
               .bold()
               .fontDesign("rounded")
