@@ -77,7 +77,11 @@ func sanitizeCSVData(_ csvData: Data, typoCorrections: [String: String]) throws 
     }
 
     // Apply typo correction
-    let correctedSeries = typoCorrections[originalSeries] ?? originalSeries
+    var correctedSeries = typoCorrections[originalSeries] ?? originalSeries
+
+    if correctedSeries.hasSuffix("/") {
+      correctedSeries = anonymousName
+    }
 
     // Create the key for aggregation (series + custom name)
     let aggregationKey = "\(correctedSeries),\(customName)"
