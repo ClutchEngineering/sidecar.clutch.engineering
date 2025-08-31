@@ -83,6 +83,8 @@ func sanitizeCSVData(_ csvData: Data, typoCorrections: [String: String]) throws 
       correctedSeries = anonymousName
     }
 
+    correctedSeries = correctedSeries.replacingOccurrences(of: "Vauxhall/Opel", with: "Vauxhall-Opel")
+
     // Create the key for aggregation (series + custom name)
     let aggregationKey = "\(correctedSeries),\(customName)"
 

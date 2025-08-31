@@ -210,7 +210,7 @@ extension LeaderboardPage {
     message += "\n"
     message += String(repeating: "─", count: rankWidth + vehicleWidth + milesWidth + stigsWidth)
 
-    let top10 = leaderboardData.prefix(10).enumerated()
+    let top10 = leaderboardData.filter({ $0.customName != anonymousDriverName }).prefix(10).enumerated()
     for (index, entry) in top10 {
       let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: supportMatrix)
       let rank = index + 1
