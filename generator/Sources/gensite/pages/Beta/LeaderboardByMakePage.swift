@@ -324,7 +324,7 @@ struct LeaderboardByMakePage: View {
           .background(.zinc, darkness: 950, condition: .dark)
 
           TableBody {
-            for (index, entry) in leaderboardData.filter({ $0.series != anonymousDriverName }).enumerated() {
+            for (index, entry) in leaderboardData.filter({ $0.standardizedMake != standardizeMake(anonymousDriverName) }).enumerated() {
               MakeRow(
                 rank: index + 1,
                 make: entry.standardizedMake,
