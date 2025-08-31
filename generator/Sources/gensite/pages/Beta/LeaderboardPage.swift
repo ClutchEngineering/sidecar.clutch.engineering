@@ -110,7 +110,7 @@ struct LeaderboardPage: View {
           .background(.zinc, darkness: 950, condition: .dark)
 
           TableBody {
-            for (index, entry) in leaderboardData.enumerated() {
+            for (index, entry) in leaderboardData.filter({ $0.series != anonymousDriverName }).enumerated() {
               let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: supportMatrix)
               if vehicleInfo.vehicleName != "/" {
                 LeaderboardRow(

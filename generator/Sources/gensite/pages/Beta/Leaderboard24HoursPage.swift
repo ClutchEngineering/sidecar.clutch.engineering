@@ -108,7 +108,7 @@ struct Leaderboard24HoursPage: View {
 
           TableBody {
             // Show all entries with non-zero changes
-            for (index, entry) in leaderboardData.enumerated() {
+            for (index, entry) in leaderboardData.filter({ $0.series != anonymousDriverName }).enumerated() {
               let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: supportMatrix)
               if vehicleInfo.vehicleName != "/",
                  (entry.mileageChange ?? 0) > 0 {

@@ -27,6 +27,8 @@ let modelNormalizations: [String: String] = [
   "Hyundai/Ioniq": "Hyundai/IONIQ",
 ]
 
+let anonymousDriverName = "The stig"
+
 // MARK: - Shared Utilities
 
 struct LeaderboardUtils {
@@ -119,14 +121,11 @@ struct LeaderboardUtils {
     for row in driverRows.dropFirst() {
       let columns = row.components(separatedBy: ",")
       if columns.count == 3,
-         !columns[0].hasSuffix("/"),
          let driverCount = Int(columns[2]) {
         let normalizedSeries = modelNormalizations[columns[0]] ?? columns[0]
         let vehicleInfo = findVehicleInfo(series: normalizedSeries, in: supportMatrix)
-        if vehicleInfo.vehicleName != "/" {
-          let normalizedName = vehicleInfo.vehicleName.lowercased()
-          driverCounts[normalizedName] = (driverCounts[normalizedName] ?? 0) + driverCount
-        }
+        let normalizedName = vehicleInfo.vehicleName.lowercased()
+        driverCounts[normalizedName] = (driverCounts[normalizedName] ?? 0) + driverCount
       }
     }
 
@@ -138,14 +137,11 @@ struct LeaderboardUtils {
       for row in yesterdayRows.dropFirst() {
         let columns = row.components(separatedBy: ",")
         if columns.count == 3,
-           !columns[0].hasSuffix("/"),
            let count = Float(columns[2]) {
           let normalizedSeries = modelNormalizations[columns[0]] ?? columns[0]
           let vehicleInfo = findVehicleInfo(series: normalizedSeries, in: supportMatrix)
-          if vehicleInfo.vehicleName != "/" {
-            let normalizedName = vehicleInfo.vehicleName.lowercased()
-            yesterdayEntries[normalizedName] = (yesterdayEntries[normalizedName] ?? 0) + count
-          }
+          let normalizedName = vehicleInfo.vehicleName.lowercased()
+          yesterdayEntries[normalizedName] = (yesterdayEntries[normalizedName] ?? 0) + count
         }
       }
 
@@ -161,36 +157,33 @@ struct LeaderboardUtils {
     for row in rows.dropFirst() {
       let columns = row.components(separatedBy: ",")
       if columns.count == 3,
-         !columns[0].hasSuffix("/"),
          let count = Float(columns[2]) {
         let normalizedSeries = modelNormalizations[columns[0]] ?? columns[0]
         let vehicleInfo = findVehicleInfo(series: normalizedSeries, in: supportMatrix)
-        if vehicleInfo.vehicleName != "/" {
-          let normalizedName = vehicleInfo.vehicleName.lowercased()
-          let entry = LeaderboardEntry(
-            series: normalizedSeries,
-            customName: columns[1],
-            count: count,
-            driverCount: driverCounts[normalizedName] ?? 0,
+        let normalizedName = vehicleInfo.vehicleName.lowercased()
+        let entry = LeaderboardEntry(
+          series: normalizedSeries,
+          customName: columns[1],
+          count: count,
+          driverCount: driverCounts[normalizedName] ?? 0,
+          rankChange: nil,
+          mileageChange: nil
+        )
+
+        if let existingEntry = vehicleEntries[normalizedName] {
+          // Add the count to the existing entry
+          let updatedEntry = LeaderboardEntry(
+            series: existingEntry.0.series,
+            customName: existingEntry.0.customName,
+            count: existingEntry.0.count + entry.count,
+            driverCount: existingEntry.0.driverCount,
             rankChange: nil,
             mileageChange: nil
           )
-
-          if let existingEntry = vehicleEntries[normalizedName] {
-            // Add the count to the existing entry
-            let updatedEntry = LeaderboardEntry(
-              series: existingEntry.0.series,
-              customName: existingEntry.0.customName,
-              count: existingEntry.0.count + entry.count,
-              driverCount: existingEntry.0.driverCount,
-              rankChange: nil,
-              mileageChange: nil
-            )
-            vehicleEntries[normalizedName] = (updatedEntry, existingEntry.1)
-          } else {
-            // Create new entry
-            vehicleEntries[normalizedName] = (entry, vehicleInfo.vehicleName)
-          }
+          vehicleEntries[normalizedName] = (updatedEntry, existingEntry.1)
+        } else {
+          // Create new entry
+          vehicleEntries[normalizedName] = (entry, vehicleInfo.vehicleName)
         }
       }
     }
