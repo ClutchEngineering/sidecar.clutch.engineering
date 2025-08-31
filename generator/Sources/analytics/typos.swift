@@ -159,6 +159,7 @@ let typoCorrections: [String: String] = [
   "Toyota/Hillux": "Toyota/Hilux",
   "Toyota/Land crusier": "Toyota/Land Cruiser",
   "Toyta/Crolla": "Toyota/Corolla",
+  "Unknown/Unknown": anonymousName,
   "Vauxhall /Insignia": "Vauxhall/Insignia",
   "Vauxhaull/Astra": "Vauxhall/Astra",
   "Vlvo/V70": "Volvo/V70",
