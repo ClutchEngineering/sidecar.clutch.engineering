@@ -147,7 +147,7 @@ struct LeaderboardUtils {
 
       // Second pass: Assign ranks based on sorted combined totals
       let sortedYesterdayEntries = yesterdayEntries.sorted { $0.value > $1.value }
-      for (index, entry) in sortedYesterdayEntries.enumerated() {
+      for (index, entry) in sortedYesterdayEntries.filter({ $0.series != anonymousDriverName }).enumerated() {
         yesterdayRanks[entry.key] = index + 1
       }
     }
@@ -205,7 +205,7 @@ struct LeaderboardUtils {
 
     // Update rank changes based on current position
     if !yesterdayRanks.isEmpty {
-      for (currentRank, entry) in sortedEntries.enumerated() {
+      for (currentRank, entry) in sortedEntries.filter({ $0.1 != anonymousDriverName }).enumerated() {
         let normalizedName = entry.1.lowercased()
         if let yesterdayRank = yesterdayRanks[normalizedName] {
           sortedEntries[currentRank].0.rankChange = yesterdayRank - (currentRank + 1)

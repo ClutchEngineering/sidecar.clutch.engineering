@@ -100,7 +100,7 @@ struct LeaderboardByMakePage: View {
 
     // Calculate yesterday's rankings
     let sortedYesterdayMakes = yesterdayMakeEntries.sorted { $0.value > $1.value }
-    for (index, entry) in sortedYesterdayMakes.enumerated() {
+    for (index, entry) in sortedYesterdayMakes.filter({ $0.key != anonymousDriverName }).enumerated() {
       yesterdayRanks[standardizeMake(entry.key)] = index + 1
     }
 
@@ -109,7 +109,7 @@ struct LeaderboardByMakePage: View {
 
     // Update rank changes and mileage changes based on current position
     var finalEntries: [MakeEntry] = []
-    for (currentRank, entry) in sortedMakes.enumerated() {
+    for (currentRank, entry) in sortedMakes.filter({ $0.standardizedMake != standardizeMake(anonymousDriverName) }).enumerated() {
       var updatedEntry = entry
       if let yesterdayRank = yesterdayRanks[entry.standardizedMake] {
         updatedEntry.rankChange = yesterdayRank - (currentRank + 1)
@@ -324,7 +324,7 @@ struct LeaderboardByMakePage: View {
           .background(.zinc, darkness: 950, condition: .dark)
 
           TableBody {
-            for (index, entry) in leaderboardData.enumerated() {
+            for (index, entry) in leaderboardData.filter({ $0.series != anonymousDriverName }).enumerated() {
               MakeRow(
                 rank: index + 1,
                 make: entry.standardizedMake,
