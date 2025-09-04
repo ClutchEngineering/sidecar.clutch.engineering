@@ -100,7 +100,6 @@ struct Leaderboard24HoursPage: View {
           TableHeader {
             HeaderCell { Text("Rank") }
             HeaderCell { Text("Vehicle") }
-            HeaderCell { Text("Stigs") }
             HeaderCell { Text("Miles in 24h") }
           }
           .background(.gray, darkness: 100)
@@ -118,7 +117,7 @@ struct Leaderboard24HoursPage: View {
                   vehicleName: vehicleInfo.vehicleName,
                   count: entry.mileageChange ?? 0,  // Show the delta instead of total
                   driverCount: entry.driverCount,
-                  showDriverCount: true
+                  showDriverCount: false
                 )
               }
             }
