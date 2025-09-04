@@ -31,6 +31,7 @@ package func localizedNameForStandardizedMake(_ make: String) -> String {
   case "bmw": return "BMW"
   case "citroen": return "Citroën"
   case "greatwall": return "GWM"
+  case "gwm": return "GWM"
   case "gmc": return "GMC"
   case "landrover": return "Land Rover"
   case "mg": return "MG"
@@ -47,7 +48,7 @@ package func standardizeMake(_ make: String) -> String {
     "audu": "audi",
     "bmw4series": "bmw",
     "alfa romeo": "alfaromeo",
-    "great wall": "greatwall",
+    "great wall": "gwm",
     "land rover": "landrover",
     "peugeot iran khodro": "peugeot",
     "mercedes-benz": "mercedes",

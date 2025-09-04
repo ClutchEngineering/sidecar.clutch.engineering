@@ -75,13 +75,13 @@ struct LeaderboardPage: View {
             Text("Total Miles Driven")
               .bold()
               .fontSize(.large)
-            Text(LeaderboardUtils.formatNumber(leaderboardData.reduce(0) { $0 + $1.count }))
+            Text(LeaderboardUtils.formatNumber(leaderboardData.reduce(0) { $0 + $1.milesDriven }))
               .fontSize(.extraExtraLarge)
               .bold()
               .fontDesign("rounded")
               .id("total-miles-counter")
               .data([
-                "base-value": String(leaderboardData.reduce(0) { $0 + $1.count }),
+                "base-value": String(leaderboardData.reduce(0) { $0 + $1.milesDriven }),
                 "snapshot-date": LeaderboardUtils.getCSVModificationDate(resourceName: "export-carplay-distance-traveled-by-model")
               ])
           }
@@ -117,7 +117,7 @@ struct LeaderboardPage: View {
                   rank: index + 1,
                   symbolName: vehicleInfo.symbolName,
                   vehicleName: vehicleInfo.vehicleName,
-                  count: entry.count,
+                  count: entry.milesDriven,
                   driverCount: entry.driverCount,
                   rankChange: entry.rankChange,
                   mileageChange: entry.mileageChange,
@@ -183,7 +183,7 @@ extension LeaderboardPage {
     var message = "🏁 **Daily Leaderboard Update**\n\n• Main leaderboard: https://sidecar.clutch.engineering/leaderboard/\n• Last 24 hours: https://sidecar.clutch.engineering/leaderboard/last24hours/\n• By make: https://sidecar.clutch.engineering/leaderboard/makes/\n\n"
 
     // Overall stats section
-    let totalMiles = leaderboardData.reduce(0) { $0 + $1.count }
+    let totalMiles = leaderboardData.reduce(0) { $0 + $1.milesDriven }
     let totalStigs = leaderboardData.reduce(0) { $0 + $1.driverCount }
 
     message += "📊 **Overall Stats**\n"
@@ -210,7 +210,7 @@ extension LeaderboardPage {
     message += "\n"
     message += String(repeating: "─", count: rankWidth + vehicleWidth + milesWidth + stigsWidth)
 
-    let top10 = leaderboardData.filter({ $0.customName != anonymousDriverName }).prefix(10).enumerated()
+    let top10 = leaderboardData.filter({ $0.series != anonymousDriverName }).prefix(10).enumerated()
     for (index, entry) in top10 {
       let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: supportMatrix)
       let rank = index + 1
@@ -231,7 +231,7 @@ extension LeaderboardPage {
 
       // Format the mileage with change if it exists
       let milesText: String
-      let baseText = LeaderboardUtils.formatNumber(entry.count)
+      let baseText = LeaderboardUtils.formatNumber(entry.milesDriven)
       if let mileageChange = entry.mileageChange {
         let sign = mileageChange > 0 ? "+" : ""
         milesText = "(\(sign)\(LeaderboardUtils.formatNumber(mileageChange))) \(baseText)"

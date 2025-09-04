@@ -14,7 +14,11 @@ struct LeaderboardByMakePage: View {
     var logoURL: URL?
   }
 
-  private let leaderboardData: [MakeEntry]
+  private struct LeaderboardData {
+    let totalMilesDriven: Float
+    let leaderboard: [MakeEntry]
+  }
+  private let leaderboardData: LeaderboardData
   let supportMatrix: MergedSupportMatrix
 
   private static func getLogoURL(for make: String) -> URL? {
@@ -52,27 +56,26 @@ struct LeaderboardByMakePage: View {
 
     // Group entries by make
     var makeEntries: [String: MakeEntry] = [:]
-    var yesterdayRanks: [String: Int] = [:]
 
     // Process entries to aggregate by make
-    for entry in rawEntries {
+    for entry in rawEntries.filter({ $0.series != anonymousDriverName }) {
       let standardizedMake = standardizeMake(entry.series.split(separator: "/").first?.description ?? "Unknown")
 
       // Update or create make entry
       if let existing = makeEntries[standardizedMake] {
         makeEntries[standardizedMake] = MakeEntry(
           standardizedMake: standardizedMake,
-          count: existing.count + entry.count,
+          count: existing.count + entry.milesDriven,
           driverCount: existing.driverCount + entry.driverCount,
           modelCount: existing.modelCount + 1,
           rankChange: nil,
           mileageChange: (existing.mileageChange ?? 0) + (entry.mileageChange ?? 0),
-          logoURL: Self.getLogoURL(for: standardizedMake)
+          logoURL: existing.logoURL
         )
       } else {
         makeEntries[standardizedMake] = MakeEntry(
           standardizedMake: standardizedMake,
-          count: entry.count,
+          count: entry.milesDriven,
           driverCount: entry.driverCount,
           modelCount: 1,
           rankChange: nil,
@@ -92,35 +95,43 @@ struct LeaderboardByMakePage: View {
 
     // Group yesterday's entries by make
     var yesterdayMakeEntries: [String: Float] = [:]
-    for entry in yesterdayEntries {
-      let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: supportMatrix)
-      let standardizedMake = standardizeMake(vehicleInfo.vehicleName.split(separator: " ").first?.description ?? "Unknown")
-      yesterdayMakeEntries[standardizedMake] = (yesterdayMakeEntries[standardizedMake] ?? 0) + entry.count
+    for entry in yesterdayEntries.filter({ $0.series != anonymousDriverName }) {
+      let standardizedMake = standardizeMake(entry.series.split(separator: "/").first?.description ?? "Unknown")
+      yesterdayMakeEntries[standardizedMake] = (yesterdayMakeEntries[standardizedMake] ?? 0) + entry.milesDriven
     }
 
     // Calculate yesterday's rankings
     let sortedYesterdayMakes = yesterdayMakeEntries.sorted { $0.value > $1.value }
+    var yesterdayRanks: [String: Int] = [:]
     for (index, entry) in sortedYesterdayMakes.filter({ $0.key != anonymousDriverName }).enumerated() {
       yesterdayRanks[standardizeMake(entry.key)] = index + 1
     }
 
     // Sort current makes by total miles
-    let sortedMakes = makeEntries.values.sorted { $0.count > $1.count }
+    let sortedMakes = makeEntries.sorted { $0.value.count > $1.value.count }
+    var todayRanks: [String: Int] = [:]
+    for (index, entry) in sortedMakes.filter({ $0.key != anonymousDriverName }).enumerated() {
+      todayRanks[standardizeMake(entry.key)] = index + 1
+    }
 
     // Update rank changes and mileage changes based on current position
     var finalEntries: [MakeEntry] = []
-    for (currentRank, entry) in sortedMakes.filter({ $0.standardizedMake != standardizeMake(anonymousDriverName) }).enumerated() {
+    for (_, entry) in sortedMakes.enumerated() {
       var updatedEntry = entry
-      if let yesterdayRank = yesterdayRanks[entry.standardizedMake] {
-        updatedEntry.rankChange = yesterdayRank - (currentRank + 1)
+      if let yesterdayRank = yesterdayRanks[entry.value.standardizedMake],
+         let todayRank = todayRanks[entry.value.standardizedMake] {
+        updatedEntry.value.rankChange = yesterdayRank - todayRank
       }
       // Calculate mileage change
-      let yesterdayMiles = yesterdayMakeEntries[entry.standardizedMake] ?? 0
-      updatedEntry.mileageChange = entry.count - yesterdayMiles
-      finalEntries.append(updatedEntry)
+      let yesterdayMiles = yesterdayMakeEntries[entry.value.standardizedMake] ?? 0
+      updatedEntry.value.mileageChange = entry.value.count - yesterdayMiles
+      finalEntries.append(updatedEntry.value)
     }
 
-    self.leaderboardData = finalEntries
+    self.leaderboardData = LeaderboardData(
+      totalMilesDriven: rawEntries.map { $0.milesDriven }.reduce(0, +),
+      leaderboard: finalEntries
+    )
   }
 
   private struct MakeRow: View {
@@ -268,13 +279,13 @@ struct LeaderboardByMakePage: View {
             Text("Total Miles Driven")
               .bold()
               .fontSize(.large)
-            Text(LeaderboardUtils.formatNumber(leaderboardData.reduce(0) { $0 + $1.count }))
+            Text(LeaderboardUtils.formatNumber(leaderboardData.totalMilesDriven))
               .fontSize(.extraExtraLarge)
               .bold()
               .fontDesign("rounded")
               .id("total-miles-counter")
               .data([
-                "base-value": String(leaderboardData.reduce(0) { $0 + $1.count }),
+                "base-value": String(leaderboardData.totalMilesDriven),
                 "snapshot-date": LeaderboardUtils.getCSVModificationDate(resourceName: "export-carplay-distance-traveled-by-model")
               ])
           }
@@ -283,7 +294,7 @@ struct LeaderboardByMakePage: View {
               Text("Makes")
                 .bold()
                 .fontSize(.large)
-              Text("\(leaderboardData.count)")
+              Text("\(leaderboardData.leaderboard.count)")
                 .fontSize(.extraLarge)
                 .bold()
                 .fontDesign("rounded")
@@ -292,7 +303,7 @@ struct LeaderboardByMakePage: View {
               Text("Models")
                 .bold()
                 .fontSize(.large)
-              Text("\(leaderboardData.reduce(0) { $0 + $1.modelCount })")
+              Text("\(leaderboardData.leaderboard.reduce(0) { $0 + $1.modelCount })")
                 .fontSize(.extraLarge)
                 .bold()
                 .fontDesign("rounded")
@@ -301,7 +312,7 @@ struct LeaderboardByMakePage: View {
               Text("Stigs")
                 .bold()
                 .fontSize(.large)
-              Text("\(leaderboardData.reduce(0) { $0 + $1.driverCount })")
+              Text("\(leaderboardData.leaderboard.reduce(0) { $0 + $1.driverCount })")
                 .fontSize(.extraLarge)
                 .bold()
                 .fontDesign("rounded")
@@ -324,7 +335,7 @@ struct LeaderboardByMakePage: View {
           .background(.zinc, darkness: 950, condition: .dark)
 
           TableBody {
-            for (index, entry) in leaderboardData.filter({ $0.standardizedMake != standardizeMake(anonymousDriverName) }).enumerated() {
+            for (index, entry) in leaderboardData.leaderboard.enumerated() {
               MakeRow(
                 rank: index + 1,
                 make: entry.standardizedMake,

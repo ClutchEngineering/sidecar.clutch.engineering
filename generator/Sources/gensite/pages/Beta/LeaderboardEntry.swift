@@ -7,8 +7,7 @@ import VehicleSupportMatrix
 
 struct LeaderboardEntry {
   let series: String
-  let customName: String
-  let count: Float
+  let milesDriven: Float
   let driverCount: Int
   var rankChange: Int?  // Change in rank since yesterday
   var mileageChange: Float?  // Change in miles since yesterday
@@ -163,8 +162,7 @@ struct LeaderboardUtils {
         let normalizedName = vehicleInfo.vehicleName.lowercased()
         let entry = LeaderboardEntry(
           series: normalizedSeries,
-          customName: columns[1],
-          count: count,
+          milesDriven: count,
           driverCount: driverCounts[normalizedName] ?? 0,
           rankChange: nil,
           mileageChange: nil
@@ -174,8 +172,7 @@ struct LeaderboardUtils {
           // Add the count to the existing entry
           let updatedEntry = LeaderboardEntry(
             series: existingEntry.0.series,
-            customName: existingEntry.0.customName,
-            count: existingEntry.0.count + entry.count,
+            milesDriven: existingEntry.0.milesDriven + entry.milesDriven,
             driverCount: existingEntry.0.driverCount,
             rankChange: nil,
             mileageChange: nil
@@ -188,7 +185,7 @@ struct LeaderboardUtils {
       }
     }
 
-    let sortedTodayEntries = vehicleEntries.sorted { $0.value.0.count > $1.value.0.count }
+    let sortedTodayEntries = vehicleEntries.sorted { $0.value.0.milesDriven > $1.value.0.milesDriven }
     var todayRanks: [String: Int] = [:]
     for (index, entry) in sortedTodayEntries.filter({ $0.key != anonymousDriverName.lowercased() && $0.key != "unknown" }).enumerated() {
       todayRanks[entry.key] = index + 1
@@ -205,7 +202,7 @@ struct LeaderboardUtils {
 
       var updatedEntry = entry.0
       if !yesterdayEntries.isEmpty {
-        updatedEntry.mileageChange = entry.0.count - yesterdayCount
+        updatedEntry.mileageChange = entry.0.milesDriven - yesterdayCount
         if let yesterdayRank,
            let currentRank = todayRanks[normalizedName] {
           updatedEntry.rankChange = yesterdayRank - currentRank
@@ -213,7 +210,7 @@ struct LeaderboardUtils {
       }
 
       return (updatedEntry, entry.1)
-    }.sorted { $0.0.count > $1.0.count }
+    }.sorted { $0.0.milesDriven > $1.0.milesDriven }
 
     // Return just the LeaderboardEntry array
     return sortedEntries.map { $0.0 }
