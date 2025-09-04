@@ -188,8 +188,17 @@ struct LeaderboardUtils {
       }
     }
 
+    let sortedTodayEntries = vehicleEntries.sorted { $0.value.0.count > $1.value.0.count }
+    var todayRanks: [String: Int] = [:]
+    for (index, entry) in sortedTodayEntries.filter({ $0.key != anonymousDriverName.lowercased() && $0.key != "unknown" }).enumerated() {
+      todayRanks[entry.key] = index + 1
+    }
+
+//    let sortedYesterdayRanks = yesterdayRanks.sorted { $0.value < $1.value }
+//    let sortedTodayRanks = todayRanks.sorted { $0.value < $1.value }
+
     // Convert to array and sort by count
-    var sortedEntries = vehicleEntries.values.map { entry -> (LeaderboardEntry, String) in
+    let sortedEntries = vehicleEntries.values.map { entry -> (LeaderboardEntry, String) in
       let normalizedName = entry.1.lowercased()
       let yesterdayCount = yesterdayEntries[normalizedName] ?? 0
       let yesterdayRank = yesterdayRanks[normalizedName]
@@ -197,24 +206,16 @@ struct LeaderboardUtils {
       var updatedEntry = entry.0
       if !yesterdayEntries.isEmpty {
         updatedEntry.mileageChange = entry.0.count - yesterdayCount
-        updatedEntry.rankChange = yesterdayRank
+        if let yesterdayRank,
+           let currentRank = todayRanks[normalizedName] {
+          updatedEntry.rankChange = yesterdayRank - currentRank
+        }
       }
 
       return (updatedEntry, entry.1)
     }.sorted { $0.0.count > $1.0.count }
 
-    // Update rank changes based on current position
-    if !yesterdayRanks.isEmpty {
-      for (currentRank, entry) in sortedEntries.filter({ $0.1 != anonymousDriverName }).enumerated() {
-        let normalizedName = entry.1.lowercased()
-        if let yesterdayRank = yesterdayRanks[normalizedName] {
-          sortedEntries[currentRank].0.rankChange = yesterdayRank - (currentRank + 1)
-        }
-      }
-    }
-
     // Return just the LeaderboardEntry array
     return sortedEntries.map { $0.0 }
   }
 }
-
