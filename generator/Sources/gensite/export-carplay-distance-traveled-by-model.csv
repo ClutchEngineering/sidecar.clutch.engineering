@@ -1,857 +1,859 @@
 series,custom name,total count
-The stig,Miles traveled,17883185.540751748
-Porsche/Taycan,Miles traveled,315497.2068307228
-Toyota/Camry,Miles traveled,277856.14436314616
-Ford/F-150,Miles traveled,192416.26906141994
-Land Rover/Defender,Miles traveled,122106.10476664662
-Honda/Civic,Miles traveled,115255.44566328365
-Toyota/4Runner,Miles traveled,111659.08417709357
-Volkswagen/Golf,Miles traveled,107487.87357392497
-Honda/Accord,Miles traveled,98072.87640039485
-Hyundai/Elantra,Miles traveled,91227.31139793355
-Ford/Escape,Miles traveled,90109.85162937547
-Toyota/RAV4,Miles traveled,82700.77354453683
-Tesla/Model 3,Miles traveled,76144.49954156649
-Kia/K5,Miles traveled,63543.055941880455
-Hyundai/Sonata,Miles traveled,62700.23419580635
-Ford/Taurus,Miles traveled,60019.02373457808
-Ford/Mustang Mach-E,Miles traveled,59816.108526397285
-Honda/CR-V,Miles traveled,53282.063275763416
-Subaru/Crosstrek,Miles traveled,53009.9673401837
-Toyota/Corolla Hybrid,Miles traveled,51303.09931040752
-Ram/1500,Miles traveled,49612.76098916675
-Kia/EV9,Miles traveled,47820.392683673206
-Nissan/Altima,Miles traveled,47712.92250577417
-Toyota/Corolla,Miles traveled,46288.8104029247
-Jeep/Grand Cherokee,Miles traveled,46279.03391850659
-Chevrolet/Bolt EV,Miles traveled,46214.314153729465
-Volkswagen/Jetta,Miles traveled,45333.26825415221
-Kia/EV6,Miles traveled,44054.85355613462
-Toyota/Tacoma,Miles traveled,44019.085085500425
-Tesla/Model Y,Miles traveled,43239.221833172225
-Ford/Explorer,Miles traveled,42688.594132719685
-Chevrolet/Silverado 1500,Miles traveled,40878.3915242686
-Toyota/RAV4 Hybrid,Miles traveled,40877.31445552106
-Audi/A4,Miles traveled,40016.67309952218
-Hyundai/IONIQ 5,Miles traveled,37506.05291960991
-Ford/Fusion,Miles traveled,36907.91512691835
-Hyundai/Kona Electric,Miles traveled,35829.06266167221
-Nissan/Rogue,Miles traveled,34903.73021191038
-Chevrolet/Malibu,Miles traveled,33688.26101744096
-MG/MG4,Miles traveled,33642.215968716424
-Mazda/3,Miles traveled,33479.03270812609
-Subaru/Forester,Miles traveled,33258.09212044893
-Kia/Forte,Miles traveled,31104.072767802656
-Ford/Fiesta,Miles traveled,30920.001080894388
-Ford/Bronco,Miles traveled,30697.42469404312
-Volkswagen/Polo,Miles traveled,30232.838849980955
-Hyundai/Tucson,Miles traveled,30227.63684453994
-Kia/Sorento,Miles traveled,29948.46066301127
-Dodge/Challenger,Miles traveled,29426.96786493832
-Mazda/CX-5,Miles traveled,29299.547261385746
-BMW/i3,Miles traveled,29047.33951059808
-Mazda/MX-5 Miata,Miles traveled,28782.759718415196
+The stig,Miles traveled,18042316.28007936
+Porsche/Taycan,Miles traveled,317196.0429464318
+Toyota/Camry,Miles traveled,278913.25363717414
+Ford/F-150,Miles traveled,193025.49359409264
+Land Rover/Defender,Miles traveled,124271.39616786363
+Honda/Civic,Miles traveled,115658.27194601354
+Toyota/4Runner,Miles traveled,113189.54142434351
+Volkswagen/Golf,Miles traveled,107746.55173392997
+Honda/Accord,Miles traveled,98510.49546043569
+Hyundai/Elantra,Miles traveled,91601.24535023511
+Ford/Escape,Miles traveled,90186.70797792896
+Toyota/RAV4,Miles traveled,82929.3170145038
+Tesla/Model 3,Miles traveled,76327.96368107964
+Kia/K5,Miles traveled,63750.31588905277
+Hyundai/Sonata,Miles traveled,63124.94010926217
+Ford/Taurus,Miles traveled,60469.15681759664
+Ford/Mustang Mach-E,Miles traveled,60038.40825952343
+Honda/CR-V,Miles traveled,53348.85105216578
+Subaru/Crosstrek,Miles traveled,53293.947881555454
+Toyota/Corolla Hybrid,Miles traveled,51466.408058031164
+Ram/1500,Miles traveled,49673.23277275727
+Kia/EV9,Miles traveled,47879.17787713889
+Nissan/Altima,Miles traveled,47832.14301469579
+Jeep/Grand Cherokee,Miles traveled,46431.147470986194
+Chevrolet/Bolt EV,Miles traveled,46370.201286535645
+Toyota/Corolla,Miles traveled,46339.08397477597
+Volkswagen/Jetta,Miles traveled,45585.85479809155
+Kia/EV6,Miles traveled,44068.92501605228
+Toyota/Tacoma,Miles traveled,44045.708931975176
+Tesla/Model Y,Miles traveled,43269.28877541
+Ford/Explorer,Miles traveled,42864.63105649956
+Toyota/RAV4 Hybrid,Miles traveled,41040.57117580385
+Chevrolet/Silverado 1500,Miles traveled,40922.9204518934
+Audi/A4,Miles traveled,40039.464044561595
+Hyundai/IONIQ 5,Miles traveled,37620.27258876618
+Ford/Fusion,Miles traveled,36962.09201793661
+Hyundai/Kona Electric,Miles traveled,35970.39738438848
+Nissan/Rogue,Miles traveled,34979.84551968934
+Chevrolet/Malibu,Miles traveled,33933.918770028744
+MG/MG4,Miles traveled,33698.517933694624
+Mazda/3,Miles traveled,33645.71293598069
+Subaru/Forester,Miles traveled,33425.419018783905
+Kia/Forte,Miles traveled,31218.269178402028
+Ford/Fiesta,Miles traveled,30953.293326503506
+Ford/Bronco,Miles traveled,30778.81051768712
+Hyundai/Tucson,Miles traveled,30571.551845954145
+Volkswagen/Polo,Miles traveled,30265.485251439743
+Kia/Sorento,Miles traveled,29952.644239700003
+Dodge/Challenger,Miles traveled,29514.31729616069
+Mazda/CX-5,Miles traveled,29336.454601805504
+BMW/i3,Miles traveled,29148.44183553229
+Mazda/MX-5 Miata,Miles traveled,28839.212983222307
 Ford/Transit Connect,Miles traveled,28613.031752209354
-Honda/Pilot,Miles traveled,25855.84756228763
-Chevrolet/Bolt EUV,Miles traveled,25849.13265504942
-Nissan/Sentra,Miles traveled,25137.207394423895
-Toyota/Prius,Miles traveled,24988.215861744142
-Jeep/Wrangler,Miles traveled,24906.942181981063
-BMW/5 Series,Miles traveled,24828.626605598707
-Subaru/WRX,Miles traveled,24474.146016151375
-Audi/Q4 e-tron,Miles traveled,24432.385648309406
-Hyundai/IONIQ 6,Miles traveled,24424.39400226128
-Porsche/Cayenne,Miles traveled,24367.134401835072
-Subaru/Impreza,Miles traveled,24304.29551776299
-GMC/Sierra 1500,Miles traveled,23632.5183359155
-Toyota/Tundra,Miles traveled,23608.253225397497
-Chevrolet/Trailblazer,Miles traveled,23384.75151769587
-Ford/Ranger,Miles traveled,22863.774733636128
-Nissan/Kicks,Miles traveled,22272.66423889102
-Ram/2500,Miles traveled,22124.450316382892
-Volkswagen/Tiguan,Miles traveled,21836.106327366382
-Ford/Mustang,Miles traveled,21818.17981713633
-Volvo/S60,Miles traveled,21418.49509881637
-Toyota/Prius Prime,Miles traveled,21341.905538746276
-Kia/Stinger,Miles traveled,21271.93171513077
-Nissan/Patrol,Miles traveled,21232.11574088913
-Audi/S4,Miles traveled,21071.901392078
-Volkswagen/GTI,Miles traveled,21066.820095678868
-BMW/3 Series,Miles traveled,19794.32470190516
-Nissan/Frontier,Miles traveled,19032.216262553247
-Toyota/Sequoia,Miles traveled,18823.512987922437
-Ford/F-150 Lightning,Miles traveled,18704.394356035948
-Kia/Niro,Miles traveled,18573.014821567765
-Audi/A6,Miles traveled,18382.19685846259
-Mazda/6,Miles traveled,18108.816971485725
-GMC/Sierra,Miles traveled,17986.612729230616
-BMW/X5,Miles traveled,17505.81856424327
-Acura/TLX,Miles traveled,17452.386735366985
-Lexus/ES 350,Miles traveled,17184.51054002497
-Kia/Optima,Miles traveled,17156.976497953125
-BMW/2 Series,Miles traveled,17095.558202584314
-Volkswagen/Arteon,Miles traveled,16600.64915706977
-Vauxhall-Opel/Corsa,Miles traveled,16477.042843136347
-Volkswagen/Atlas,Miles traveled,16458.357649848076
-Mazda/CX-30,Miles traveled,16246.600574256734
-BMW/X1,Miles traveled,15751.615567136232
-BMW/3 Series eDrive,Miles traveled,15592.923262836473
-Volkswagen/Passat,Miles traveled,15565.240022519165
-Jeep/Renegade,Miles traveled,15382.626308547366
-Toyota/Land Cruiser,Miles traveled,15285.457038905124
-Nissan/Armada,Miles traveled,15034.725294625145
-Renault/Megane,Miles traveled,15029.959455559881
-Volkswagen/ID.4,Miles traveled,14888.05956288555
-Audi/SQ5,Miles traveled,14864.120222746556
-Genesis/G80,Miles traveled,14685.304192125779
-Chrysler/200,Miles traveled,14197.443181944074
-Mercedes-Benz/A 180,Miles traveled,13874.362509201594
-Mazda/CX-9,Miles traveled,13806.46273331541
-Hyundai/Santa Fe,Miles traveled,13786.109447303072
-Toyota/Sienna,Miles traveled,13534.01896969764
-Mercedes-Benz/C-Class,Miles traveled,13521.622400143764
-Kia/Sportage,Miles traveled,13414.915472338434
-Peugeot/3008,Miles traveled,13414.091269837474
-MINI/Cooper,Miles traveled,13396.222450584974
-Kia/Soul,Miles traveled,13335.604672808697
-Mercedes-Benz/E-Class,Miles traveled,13329.955347209403
-BMW/i4,Miles traveled,13292.491341956204
-Peugeot/208,Miles traveled,13232.877395107846
-Ford/Focus,Miles traveled,13100.089466891093
-Nissan/ARIYA,Miles traveled,12994.437633847645
-Toyota/RAV4 Prime,Miles traveled,12809.98603932595
+Honda/Pilot,Miles traveled,26000.11489247317
+Chevrolet/Bolt EUV,Miles traveled,25903.82616306548
+Toyota/Prius,Miles traveled,25310.743256964164
+Nissan/Sentra,Miles traveled,25210.00993534528
+Jeep/Wrangler,Miles traveled,25058.65080735727
+BMW/5 Series,Miles traveled,24926.218230024562
+Subaru/WRX,Miles traveled,24609.816959943273
+Hyundai/IONIQ 6,Miles traveled,24549.363635838727
+Porsche/Cayenne,Miles traveled,24510.806110409383
+Audi/Q4 e-tron,Miles traveled,24437.144777512898
+Subaru/Impreza,Miles traveled,24358.79838420229
+Toyota/Tundra,Miles traveled,24155.729668426524
+GMC/Sierra 1500,Miles traveled,23772.44402974247
+Chevrolet/Trailblazer,Miles traveled,23460.952636655613
+Ford/Ranger,Miles traveled,22893.251536892236
+Nissan/Kicks,Miles traveled,22280.43152242393
+Ram/2500,Miles traveled,22239.297085244863
+Ford/Mustang,Miles traveled,22099.181061136827
+Volkswagen/Tiguan,Miles traveled,21916.499045902867
+Volvo/S60,Miles traveled,21735.00294770604
+Nissan/Patrol,Miles traveled,21519.46243485174
+Toyota/Prius Prime,Miles traveled,21434.336131534044
+Kia/Stinger,Miles traveled,21331.411982650163
+Audi/S4,Miles traveled,21190.98691561853
+Volkswagen/GTI,Miles traveled,21119.98154398897
+BMW/3 Series,Miles traveled,19805.09365356642
+Nissan/Frontier,Miles traveled,19053.78768473173
+Ford/F-150 Lightning,Miles traveled,18860.775945790898
+Toyota/Sequoia,Miles traveled,18831.968573806374
+Kia/Niro,Miles traveled,18650.342746731814
+Audi/A6,Miles traveled,18625.90667942862
+Mazda/6,Miles traveled,18112.903771065397
+GMC/Sierra,Miles traveled,17992.5846182318
+BMW/X5,Miles traveled,17555.654892025956
+Acura/TLX,Miles traveled,17523.012848285958
+BMW/2 Series,Miles traveled,17240.78386271509
+Lexus/ES 350,Miles traveled,17239.153566954104
+Kia/Optima,Miles traveled,17206.29420436156
+Volkswagen/Arteon,Miles traveled,16609.610705819363
+Volkswagen/Atlas,Miles traveled,16538.218359034767
+Vauxhall-Opel/Corsa,Miles traveled,16496.625171856776
+Mazda/CX-30,Miles traveled,16269.534812620834
+BMW/X1,Miles traveled,15793.282188590656
+BMW/3 Series eDrive,Miles traveled,15681.473292773175
+Volkswagen/Passat,Miles traveled,15589.613504231473
+Jeep/Renegade,Miles traveled,15545.050123865058
+Toyota/Land Cruiser,Miles traveled,15432.649398693087
+Nissan/Armada,Miles traveled,15157.232563585889
+Renault/Megane,Miles traveled,15033.867796056422
+Audi/SQ5,Miles traveled,14910.211154030458
+Volkswagen/ID.4,Miles traveled,14908.4392588473
+Genesis/G80,Miles traveled,14698.396130214023
+Chrysler/200,Miles traveled,14227.767928127285
+Mercedes-Benz/A 180,Miles traveled,13874.481056753195
+Hyundai/Santa Fe,Miles traveled,13831.130755562797
+Mazda/CX-9,Miles traveled,13823.320188904981
+Mercedes-Benz/C-Class,Miles traveled,13614.439533136247
+Toyota/Sienna,Miles traveled,13571.204812688977
+Kia/Sportage,Miles traveled,13467.366748891332
+Peugeot/3008,Miles traveled,13439.097304393703
+MINI/Cooper,Miles traveled,13398.658415762007
+Kia/Soul,Miles traveled,13366.226397792214
+Mercedes-Benz/E-Class,Miles traveled,13329.955347209407
+BMW/i4,Miles traveled,13292.4913419562
+Peugeot/208,Miles traveled,13250.801071613103
+Ford/Focus,Miles traveled,13128.922261759733
+Nissan/ARIYA,Miles traveled,13054.807568705764
+Toyota/RAV4 Prime,Miles traveled,12833.189440974782
 Mazda/CX-50,Miles traveled,12574.150525859817
-Polestar/2,Miles traveled,12396.193024842843
-Nissan/LEAF,Miles traveled,12376.949609467072
-Hyundai/Ioniq Hybrid,Miles traveled,12363.51745291913
-Seat/Ibiza,Miles traveled,12336.375196546569
-Volkswagen/R32,Miles traveled,12271.17464702349
-Ford/Fusion Hybrid,Miles traveled,12207.523436358235
-BMW/X7,Miles traveled,12156.56846887561
-Ford/Edge,Miles traveled,11964.247183018833
-Hyundai/Kona,Miles traveled,11946.354510886307
-Toyota/Corolla Cross,Miles traveled,11866.112461959265
-BMW/4 Series,Miles traveled,11816.666980426831
-Jaguar/I-PACE,Miles traveled,11763.880136164722
-Chrysler/300,Miles traveled,11630.6668960222
-Seat/Leon,Miles traveled,11574.589159846177
-Hyundai/Veloster,Miles traveled,11505.16874140941
-Toyota/Yaris,Miles traveled,11491.706873944579
+Nissan/LEAF,Miles traveled,12515.466289392689
+Polestar/2,Miles traveled,12420.85168912629
+Hyundai/Ioniq Hybrid,Miles traveled,12385.792338990776
+Ford/Edge,Miles traveled,12358.679759690644
+Seat/Ibiza,Miles traveled,12336.375196546565
+Volkswagen/R32,Miles traveled,12310.004243073823
+Ford/Fusion Hybrid,Miles traveled,12243.487455324701
+BMW/X7,Miles traveled,12156.568468875608
+Hyundai/Kona,Miles traveled,11988.460825463791
+Toyota/Corolla Cross,Miles traveled,11866.333370266377
+BMW/4 Series,Miles traveled,11822.904134557195
+Jaguar/I-PACE,Miles traveled,11782.590214869768
+Chrysler/300,Miles traveled,11719.1225885525
+Seat/Leon,Miles traveled,11660.927619849725
+Hyundai/Veloster,Miles traveled,11546.170973365155
+Toyota/Yaris,Miles traveled,11531.71740142953
 BMW/325xi,Miles traveled,11335.691439767561
-Chevrolet/Camaro,Miles traveled,11024.832950296464
-Chrysler/Pacifica,Miles traveled,10986.16537659341
-Jeep/Wrangler 4xe,Miles traveled,10904.974349359116
-Ford/Maverick,Miles traveled,10904.36314701906
-Mitsubishi/Outlander Sport,Miles traveled,10791.731915676768
-Land Rover/Range Rover Sport,Miles traveled,10462.413230603623
-Chevrolet/Colorado,Miles traveled,10446.83807992857
-Toyota/bZ4X,Miles traveled,10432.475901464803
-Chevrolet/Tahoe,Miles traveled,10208.008708422582
-GMC/Canyon,Miles traveled,10176.490994657115
-Subaru/Outback,Miles traveled,10143.820033544944
-Audi/RS 3,Miles traveled,10115.522395129863
-Genesis/G70,Miles traveled,10053.103800244873
-Volkswagen/e-Golf,Miles traveled,9978.167242721715
-Hyundai/i30,Miles traveled,9973.768532731416
-Hyundai/Azera,Miles traveled,9967.664700266214
-Mazda/CX-90,Miles traveled,9915.87680646592
-Porsche/Macan,Miles traveled,9860.375918535114
-Hyundai/Santa Fe Hybrid,Miles traveled,9830.135350178103
-Ford/F-250,Miles traveled,9797.277898516722
-BMW/iX3,Miles traveled,9761.786068199786
-Kia/Cadenza,Miles traveled,9743.691402745852
-Dodge/Ram 1500,Miles traveled,9660.693628148743
-Toyota/Aygo,Miles traveled,9579.780853819037
-Dodge/Charger,Miles traveled,9497.935417251962
-Audi/Q5,Miles traveled,9493.223099865148
-Jeep/Grand Cherokee L,Miles traveled,9165.955478520173
-Toyota/Hilux,Miles traveled,8992.945210306962
-Chevrolet/Cruze,Miles traveled,8806.920639425534
-Mitsubishi/ASX,Miles traveled,8800.750416753312
-Toyota/Highlander,Miles traveled,8608.182453730626
-Subaru/XV Crosstrek,Miles traveled,8569.608139260654
-Audi/A5,Miles traveled,8555.010873785699
-Toyota/GR Corolla,Miles traveled,8554.071192038384
-Jeep/Cherokee,Miles traveled,8495.136779185661
-Volkswagen/Jetta GLI,Miles traveled,8404.799707332255
-Vauxhall-Opel/Astra,Miles traveled,8390.46265118307
-Vauxhall-Opel/Insignia,Miles traveled,8350.725303245532
-Kia/Ceed,Miles traveled,8349.100888009149
-Dodge/Dakota,Miles traveled,8250.609392557828
-Ford/Bronco Sport,Miles traveled,8211.66376677202
-BMW/X3,Miles traveled,7949.978615820874
-Hyundai/Palisade,Miles traveled,7940.335511211156
-Toyota/Grand Highlander,Miles traveled,7813.964288023614
-Honda/Accord Hybrid,Miles traveled,7765.822012708773
-Hyundai/Accent,Miles traveled,7664.417202245088
-Audi/A3,Miles traveled,7660.848394214348
-Nissan/NV200,Miles traveled,7651.554330226061
-Audi/RS e-tron,Miles traveled,7451.521591927619
-Peugeot/508,Miles traveled,7305.705551402111
-Chevrolet/Volt,Miles traveled,7108.695521596631
-Mercedes-Benz/G-Class,Miles traveled,7102.554010521934
-Chrysler/Delta,Miles traveled,7051.69387151726
-FIAT/500X,Miles traveled,6883.887881643691
-Jeep/Patriot,Miles traveled,6848.501003688946
-BMW/4 Series Gran Coupe,Miles traveled,6729.15949289516
-Toyota/Sienna Hybrid,Miles traveled,6619.727919227872
-Lexus/GX,Miles traveled,6617.724478134572
+Chevrolet/Camaro,Miles traveled,11040.620576256095
+Jeep/Wrangler 4xe,Miles traveled,10997.970420623635
+Chrysler/Pacifica,Miles traveled,10992.67349631582
+Ford/Maverick,Miles traveled,10948.628653571426
+Mitsubishi/Outlander Sport,Miles traveled,10861.883549215407
+Land Rover/Range Rover Sport,Miles traveled,10575.1510785439
+Chevrolet/Colorado,Miles traveled,10539.417875381589
+Toyota/bZ4X,Miles traveled,10433.591902271826
+GMC/Canyon,Miles traveled,10218.895167088669
+Chevrolet/Tahoe,Miles traveled,10209.728299794515
+Subaru/Outback,Miles traveled,10169.827397220826
+Audi/RS 3,Miles traveled,10158.297881985158
+Genesis/G70,Miles traveled,10061.991998452546
+Hyundai/i30,Miles traveled,10034.05953343605
+Hyundai/Azera,Miles traveled,10018.926744145721
+Volkswagen/e-Golf,Miles traveled,9999.046101349892
+Mazda/CX-90,Miles traveled,9943.517397418454
+Porsche/Macan,Miles traveled,9934.847298230896
+Hyundai/Santa Fe Hybrid,Miles traveled,9866.097340101767
+Ford/F-250,Miles traveled,9828.04122899528
+BMW/iX3,Miles traveled,9803.336033798845
+Kia/Cadenza,Miles traveled,9748.016907359335
+Dodge/Ram 1500,Miles traveled,9678.609199581804
+Toyota/Aygo,Miles traveled,9579.780853819035
+Dodge/Charger,Miles traveled,9569.910827900118
+Audi/Q5,Miles traveled,9493.223099865143
+Jeep/Grand Cherokee L,Miles traveled,9165.955478520174
+Toyota/Hilux,Miles traveled,8992.94521030696
+Chevrolet/Cruze,Miles traveled,8894.268709230522
+Mitsubishi/ASX,Miles traveled,8800.750416753315
+Subaru/XV Crosstrek,Miles traveled,8710.634593828181
+Toyota/Highlander,Miles traveled,8621.005012217149
+Toyota/GR Corolla,Miles traveled,8616.903946822651
+Audi/A5,Miles traveled,8581.9560026041
+Jeep/Cherokee,Miles traveled,8569.949557121065
+Volkswagen/Jetta GLI,Miles traveled,8451.783956413443
+Vauxhall-Opel/Astra,Miles traveled,8440.717902628889
+Vauxhall-Opel/Insignia,Miles traveled,8383.94320536696
+Kia/Ceed,Miles traveled,8370.01495807389
+Dodge/Dakota,Miles traveled,8250.60939255783
+Ford/Bronco Sport,Miles traveled,8219.855381277855
+Hyundai/Palisade,Miles traveled,7984.625426046494
+BMW/X3,Miles traveled,7956.087949234256
+Toyota/Grand Highlander,Miles traveled,7813.964288023616
+Honda/Accord Hybrid,Miles traveled,7770.703554240955
+Hyundai/Accent,Miles traveled,7741.12924450541
+Nissan/NV200,Miles traveled,7737.7760826658205
+Audi/A3,Miles traveled,7689.717186356426
+Audi/RS e-tron,Miles traveled,7451.5215919276225
+Peugeot/508,Miles traveled,7359.66334247834
+Chevrolet/Volt,Miles traveled,7130.710004520256
+Mercedes-Benz/G-Class,Miles traveled,7122.872166913781
+Chrysler/Delta,Miles traveled,7051.693871517257
+FIAT/500X,Miles traveled,6967.784635200661
+Jeep/Patriot,Miles traveled,6848.774365293018
+BMW/4 Series Gran Coupe,Miles traveled,6729.1594928951645
+Toyota/Sienna Hybrid,Miles traveled,6630.640197870012
+Lexus/GX,Miles traveled,6617.724478134569
 Honda/Jazz,Miles traveled,6519.579712664382
-Audi/A3 e-tron,Miles traveled,6367.742078985872
-Suzuki/Swift,Miles traveled,6301.1531585723915
-Mitsubishi/Outlander,Miles traveled,6299.311329701014
-Porsche/911,Miles traveled,6295.812282684698
-Chevrolet/Impala,Miles traveled,6283.834685453266
-Kia/Telluride,Miles traveled,6272.063069289252
-Hyundai/Genesis,Miles traveled,6220.932266361869
-Porsche/Panamera,Miles traveled,6191.602563558836
-Kia/Niro EV,Miles traveled,6076.012678416188
-BMW/M4,Miles traveled,6049.555005279851
-Suzuki/Jimny,Miles traveled,5972.440678099019
-MINI/Countryman,Miles traveled,5848.92254435841
-GMC/Sierra 1500 Limited,Miles traveled,5802.008164068511
-Audi/e-tron,Miles traveled,5745.07413210112
-Mazda/Mazda3,Miles traveled,5717.51463785271
-Volkswagen/CC,Miles traveled,5698.4250578521005
+Chevrolet/Impala,Miles traveled,6460.529128585139
+Mitsubishi/Outlander,Miles traveled,6388.604976782749
+Audi/A3 e-tron,Miles traveled,6372.267977774137
+Porsche/911,Miles traveled,6353.423624419064
+Suzuki/Swift,Miles traveled,6328.437016669532
+Kia/Telluride,Miles traveled,6300.530371554448
+Hyundai/Genesis,Miles traveled,6232.942828717232
+Porsche/Panamera,Miles traveled,6227.280997012308
+Kia/Niro EV,Miles traveled,6110.0987633958675
+BMW/M4,Miles traveled,6049.555005279849
+Suzuki/Jimny,Miles traveled,5972.440678099013
+MINI/Countryman,Miles traveled,5848.922544358411
+GMC/Sierra 1500 Limited,Miles traveled,5805.329145289895
+Mazda/Mazda3,Miles traveled,5769.531289956049
+Audi/e-tron,Miles traveled,5756.801967357162
+Hyundai/i20,Miles traveled,5752.591308085115
+Volkswagen/CC,Miles traveled,5698.425057852104
 Audi/S6,Miles traveled,5669.77949095482
 Honda/HR-V,Miles traveled,5646.417293118805
-Hyundai/i20,Miles traveled,5644.693836109212
 Chevrolet/Equinox,Miles traveled,5505.384737478776
-Mercedes-Benz/C43 AMG,Miles traveled,5497.232408382624
-Changan/UNI-V,Miles traveled,5464.091084898381
-MG/Rx8,Miles traveled,5433.11261032032
-BMW/M3,Miles traveled,5416.938864528271
-GMC/Yukon,Miles traveled,5402.694631786715
-Subaru/BRZ,Miles traveled,5382.894718049229
-BMW/Z4,Miles traveled,5354.698305312305
-Volvo/XC90,Miles traveled,5337.3777710863715
+Subaru/BRZ,Miles traveled,5504.692578260242
+Mercedes-Benz/C43 AMG,Miles traveled,5499.328448741823
+Changan/UNI-V,Miles traveled,5464.09108489838
+MG/Rx8,Miles traveled,5463.704109082249
+BMW/M3,Miles traveled,5422.6003074870405
+GMC/Yukon,Miles traveled,5402.694631786716
+BMW/Z4,Miles traveled,5354.698305312304
+Volvo/XC90,Miles traveled,5337.377771086374
 Lexus/LS 460,Miles traveled,5312.078498450059
-Toyota/GR Supra,Miles traveled,5305.291031582857
-BMW/X2,Miles traveled,5101.17571681138
-Volkswagen/T-Roc,Miles traveled,5100.280530523909
-Ford/Transit,Miles traveled,5088.730532225377
+Toyota/GR Supra,Miles traveled,5305.291031582855
+Volkswagen/T-Roc,Miles traveled,5120.4255789162635
+BMW/X2,Miles traveled,5101.297805644195
+Ford/Transit,Miles traveled,5092.677230319922
 Toyota/Camry Hybrid,Miles traveled,5007.2409784669435
-Nissan/Murano,Miles traveled,4963.113811669003
-Ford/F-350,Miles traveled,4932.71101641082
+Nissan/Murano,Miles traveled,4963.113811669002
+Ford/F-350,Miles traveled,4951.6317115568645
+Land Rover/Range Rover,Miles traveled,4905.523344544471
 Kawasaki/Ninja 650,Miles traveled,4894.410722369185
-GWM/Cannon,Miles traveled,4861.28643189937
-BMW/iX,Miles traveled,4860.320112366702
-Land Rover/Range Rover,Miles traveled,4832.110585490964
-Audi/Q6 e-tron,Miles traveled,4802.858729655926
-GMC/Sierra Limited,Miles traveled,4764.589116441803
-Jaguar/F-PACE,Miles traveled,4761.8061993552255
+GWM/Cannon,Miles traveled,4869.29565443656
+BMW/iX,Miles traveled,4861.716914247169
+Haval/Jolion,Miles traveled,4840.965940974614
+Jaguar/F-PACE,Miles traveled,4809.0432418194905
+Audi/Q6 e-tron,Miles traveled,4802.858729655928
+GMC/Sierra Limited,Miles traveled,4791.242501401293
 Honda/Insight,Miles traveled,4735.972020394008
 Jeep/Gladiator,Miles traveled,4685.288682742982
-Citroen/Jumper,Miles traveled,4632.8146583629705
-Land Rover/2024,Miles traveled,4595.3764338163755
-Haval/Jolion,Miles traveled,4560.202949526866
-Chevrolet/Silverado 2500,Miles traveled,4556.715326939566
-Land Rover/X 6,Miles traveled,4538.96520782053
-Volvo/XC60,Miles traveled,4441.186231477786
-GMC/Sierra 2500HD,Miles traveled,4390.4073025888765
-Nissan/Nissan Patrol,Miles traveled,4381.802446789244
-KTM/Duke,Miles traveled,4374.47406258864
+Citroen/Jumper,Miles traveled,4632.81465836297
+Land Rover/2024,Miles traveled,4595.376433816375
+Chevrolet/Silverado 2500,Miles traveled,4556.715326939564
+Land Rover/X 6,Miles traveled,4538.965207820529
+GMC/Sierra 2500HD,Miles traveled,4467.145886564458
+Volvo/XC60,Miles traveled,4441.186231477789
+Nissan/Nissan Patrol,Miles traveled,4388.520744191787
+KTM/Duke,Miles traveled,4378.164592216082
 Nissan/Maxima,Miles traveled,4371.819489772338
-Geely/Monjaro,Miles traveled,4287.820894820211
-Kia/Sedona,Miles traveled,4189.5586233660915
-MG/MG5,Miles traveled,4172.101679346187
-Subaru/Legacy,Miles traveled,4149.904186430946
+Geely/Monjaro,Miles traveled,4287.820894820209
+Kia/Sedona,Miles traveled,4224.053895118027
+MG/MG5,Miles traveled,4172.101679346189
+Subaru/Legacy,Miles traveled,4149.904186430945
 Toyota/Grand Highlander Hybrid,Miles traveled,4141.773362533858
 Mercedes-Benz/GLC-Class Coupe,Miles traveled,4109.427321789063
-Polestar/3,Miles traveled,3950.120588496021
-Volvo/C40,Miles traveled,3940.6501210420156
-BYD/Seal U DMI,Miles traveled,3917.86586670344
-Honda/Element,Miles traveled,3892.7167498833724
-Ford/Mondeo,Miles traveled,3887.753941133171
-Subaru/Ascent,Miles traveled,3847.1239899151333
-Peugeot/E-308,Miles traveled,3845.271486420364
-Lexus/IS 350,Miles traveled,3830.920842753404
-Kia/Carnival,Miles traveled,3826.223318233107
-Renault/Zoe,Miles traveled,3810.2766847832513
-Chevrolet/Blazer,Miles traveled,3795.463479219088
-Chery/Arrizo 8,Miles traveled,3794.8278493814014
-Jetour/T2,Miles traveled,3760.1890752434356
-MINI/Cooper Diesel,Miles traveled,3704.9034211423646
-Lucid/Air,Miles traveled,3666.403959693895
-Mercedes-Benz/Vito,Miles traveled,3632.5739353501535
-BMW/220i Cabriolet Steptronic,Miles traveled,3601.0271492255515
-Jeep/Compass,Miles traveled,3593.2941757150434
-BMW/7 Series,Miles traveled,3592.2602815415303
-Nissan/Pathfinder,Miles traveled,3530.283965450158
-Toyota/FJ Cruiser,Miles traveled,3485.771122064766
-Volkswagen/Taos,Miles traveled,3463.328832518415
-Honda/Odyssey,Miles traveled,3454.699810655159
-Genesis/Electrified GV70,Miles traveled,3434.3790908824585
-Toyota/Landcruiser Hybrid,Miles traveled,3432.793531976199
-Haval/Jolion HEV,Miles traveled,3400.138949920266
-Lexus/RX 300,Miles traveled,3294.6708228943526
-Lexus/NX,Miles traveled,3263.731897619387
-BMW/4 Series Plug-in Hybrid,Miles traveled,3211.7174425970666
-Volkswagen/T-Cross,Miles traveled,3203.6730745129553
-MINI/Cooper SE,Miles traveled,3185.2395466686235
-Mazda/MX-5 Miata RF,Miles traveled,3123.29015886291
-Land Rover/LR4,Miles traveled,3082.6463430312665
-Nissan/X-Trail,Miles traveled,3078.647964857845
-BYD/Seal,Miles traveled,3063.8855432941095
+Volvo/C40,Miles traveled,4041.0066564869644
+Polestar/3,Miles traveled,3950.12058849602
+BYD/Seal U DMI,Miles traveled,3932.0469914534774
+Honda/Element,Miles traveled,3892.7167498833733
+Ford/Mondeo,Miles traveled,3887.7539411331722
+Subaru/Ascent,Miles traveled,3871.9899674918747
+Peugeot/E-308,Miles traveled,3855.5801168366716
+Lexus/IS 350,Miles traveled,3840.3123341458086
+Kia/Carnival,Miles traveled,3826.2916908810116
+Chevrolet/Blazer,Miles traveled,3816.3756777383824
+Renault/Zoe,Miles traveled,3810.27668478325
+Jetour/T2,Miles traveled,3807.727241015512
+Chery/Arrizo 8,Miles traveled,3794.827849381402
+MINI/Cooper Diesel,Miles traveled,3704.903421142364
+BMW/220i Cabriolet Steptronic,Miles traveled,3666.465999877357
+Lucid/Air,Miles traveled,3666.403959693896
+Mercedes-Benz/Vito,Miles traveled,3632.573935350155
+Jeep/Compass,Miles traveled,3593.2941757150447
+BMW/7 Series,Miles traveled,3592.26028154153
+Nissan/Pathfinder,Miles traveled,3552.679772510241
+Toyota/FJ Cruiser,Miles traveled,3492.460011030157
+Volkswagen/Taos,Miles traveled,3463.328832518413
+Toyota/Landcruiser Hybrid,Miles traveled,3462.3662863302347
+Honda/Odyssey,Miles traveled,3454.69981065516
+Genesis/Electrified GV70,Miles traveled,3442.202847177979
+Haval/Jolion HEV,Miles traveled,3409.9836572999056
+Lexus/RX 300,Miles traveled,3317.452250327195
+Lexus/NX,Miles traveled,3268.2856640749956
+BMW/4 Series Plug-in Hybrid,Miles traveled,3211.717442597067
+Volkswagen/T-Cross,Miles traveled,3203.673074512955
+MINI/Cooper SE,Miles traveled,3185.239546668623
+Mazda/MX-5 Miata RF,Miles traveled,3123.290158862912
+BYD/Seal,Miles traveled,3100.5398002203474
+Land Rover/LR4,Miles traveled,3093.2001408321053
+Nissan/X-Trail,Miles traveled,3078.6479648578443
 Dacia/Duster,Miles traveled,3040.847526263258
-Hyundai/Ioniq,Miles traveled,3029.4965309687423
-Toyota/Avalon,Miles traveled,2994.322312412821
-Lexus/UX 250,Miles traveled,2990.5716639083134
-Toyota/Corolla Cross Hybrid,Miles traveled,2990.475293010683
-Ford/Expedition,Miles traveled,2985.3827519050637
+Hyundai/Ioniq,Miles traveled,3029.496530968741
+Toyota/Corolla Cross Hybrid,Miles traveled,2994.814054594324
+Toyota/Avalon,Miles traveled,2994.3223124128217
+Lexus/UX 250,Miles traveled,2990.5716639083125
+Ford/Expedition,Miles traveled,2985.382751905063
 Renault/Scenic E-Tech,Miles traveled,2948.0216398683565
-MINI/Hardtop,Miles traveled,2921.998600636277
-Lexus/IS 500,Miles traveled,2919.1467325493354
+MINI/Hardtop,Miles traveled,2921.9986006362774
+Lexus/IS 500,Miles traveled,2920.837892444416
 Audi/Q7,Miles traveled,2916.3873194043554
-Honda/Ridgeline,Miles traveled,2896.3417400483568
+Honda/Ridgeline,Miles traveled,2896.3417400483563
+Tesla/Cybertruck,Miles traveled,2893.1138598528514
 Toyota/C-HR,Miles traveled,2886.7628428540575
 ZEEKR/Tugella,Miles traveled,2885.63503246033
-Tesla/Cybertruck,Miles traveled,2881.7566365278312
-Lexus/ES,Miles traveled,2865.6382112135534
-Volvo/C30,Miles traveled,2850.540327277836
-Cadillac/Escalade,Miles traveled,2843.793903980261
+Lexus/ES,Miles traveled,2867.0698993406845
+Volvo/C30,Miles traveled,2850.540327277835
+Cadillac/Escalade,Miles traveled,2843.7939039802604
+Hyundai/Elentra,Miles traveled,2804.713382091241
 MG/MG6,Miles traveled,2801.1930585314753
-Lincoln/Navigator,Miles traveled,2796.3984414453234
-Hyundai/Elentra,Miles traveled,2779.4887056526054
-Toyota/Venza,Miles traveled,2755.9594075770397
-Audi/allroad quattro,Miles traveled,2733.4487043644485
-Kia/Rio,Miles traveled,2724.675803808676
-Toyota/Venza Hybrid,Miles traveled,2711.486581038496
-Chevrolet/Corvette,Miles traveled,2705.9802208990404
+Lincoln/Navigator,Miles traveled,2796.398441445323
+Toyota/Venza,Miles traveled,2755.959407577041
+Audi/allroad quattro,Miles traveled,2733.4487043644494
+Kia/Rio,Miles traveled,2724.6758038086764
+Toyota/Venza Hybrid,Miles traveled,2711.4865810384968
+Chevrolet/Corvette,Miles traveled,2705.9802208990386
 Volkswagen/Atlas Cross Sport,Miles traveled,2678.6783895575654
-Mercedes-Benz/S-Class,Miles traveled,2603.1726777563467
-Mazda/Mazdaspeed 6,Miles traveled,2591.254555345323
-BMW/530,Miles traveled,2535.7184425011133
-Honda/2024,Miles traveled,2525.0730015326253
-Hyundai/Avanti,Miles traveled,2524.4702381464367
-Cupra/Formentor,Miles traveled,2484.9995248329183
-Dodge/Durango,Miles traveled,2471.718738546764
-Lexus/IS 300,Miles traveled,2466.9109070760364
-Volkswagen/ID.3,Miles traveled,2451.1006876106126
-Toyota/GR86,Miles traveled,2449.3166928045252
-BYD/Atto 3,Miles traveled,2419.1583593299506
-Nissan/NT400,Miles traveled,2410.1306726061944
-Lexus/GX 460,Miles traveled,2406.68608918497
-BMW/1 Series,Miles traveled,2396.0381999275596
+Mercedes-Benz/S-Class,Miles traveled,2646.9584945599354
+Mazda/Mazdaspeed 6,Miles traveled,2607.380163583647
+Lexus/IS 300,Miles traveled,2562.805614006443
+BMW/530,Miles traveled,2535.718442501113
+Hyundai/Avanti,Miles traveled,2532.509484996139
+Honda/2024,Miles traveled,2529.7780035129995
+Cupra/Formentor,Miles traveled,2484.9995248329174
+Dodge/Durango,Miles traveled,2472.0788768574157
+Volkswagen/ID.3,Miles traveled,2451.100687610613
+Toyota/GR86,Miles traveled,2449.316692804526
+BYD/Atto 3,Miles traveled,2419.1583593299497
+Nissan/NT400,Miles traveled,2410.130672606193
+Lexus/GX 460,Miles traveled,2406.686089184969
+Nissan/Versa,Miles traveled,2402.4420185079352
+BMW/1 Series,Miles traveled,2396.03819992756
+Honda/Clarity,Miles traveled,2373.7288536697583
 Chevrolet/Silverado,Miles traveled,2369.350006617473
-Honda/Clarity,Miles traveled,2368.1853735528675
-Nissan/Versa,Miles traveled,2364.871077263463
-Lancia/Delta,Miles traveled,2364.2986879954033
-MAN/TGE,Miles traveled,2346.99006160868
-MG/Hector,Miles traveled,2334.4525375855114
-Ford/2018,Miles traveled,2330.7232508368293
+MAN/TGE,Miles traveled,2365.441790971481
+Lancia/Delta,Miles traveled,2364.298687995403
+MG/Hector,Miles traveled,2334.452537585512
+Ford/2018,Miles traveled,2330.7232508368297
 FIAT/Fastback,Miles traveled,2319.7883221634556
-GMC/Terrain,Miles traveled,2316.9096619423462
-Mercedes-Benz/GLC-Class,Miles traveled,2252.535871043153
-Ford/Kuga,Miles traveled,2235.0468746257516
+GMC/Terrain,Miles traveled,2316.9096619423467
+Mercedes-Benz/C 280,Miles traveled,2282.0534663456706
+Mercedes-Benz/GLC-Class,Miles traveled,2252.7088935807856
+Ford/Kuga,Miles traveled,2235.5526354669364
+Mercedes-Benz/C 350,Miles traveled,2220.6782119098416
 Chevrolet/Trax,Miles traveled,2220.1363826268744
-Renault/Kadjar,Miles traveled,2215.235334123887
-Mercedes-Benz/C 280,Miles traveled,2209.9202433492055
-Volkswagen/Touran,Miles traveled,2207.671285169419
-Mercedes-Benz/C 350,Miles traveled,2203.7693860234517
-Lexus/RX 350,Miles traveled,2162.8554600803077
-Audi/S3,Miles traveled,2146.4419388645847
-BMW/M240i,Miles traveled,2089.1166922452917
-Abarth/595,Miles traveled,2017.7679343182017
+Renault/Kadjar,Miles traveled,2215.2353341238872
+Volkswagen/Touran,Miles traveled,2207.6712851694197
+Audi/S3,Miles traveled,2173.6205767798733
+Lexus/RX 350,Miles traveled,2162.8554600803072
+BMW/M240i,Miles traveled,2089.1166922452912
+Volvo/V90,Miles traveled,2034.9774440941003
+Abarth/595,Miles traveled,2017.767934318202
 Volkswagen/Golf GTI,Miles traveled,1972.8998583472653
 Hyundai/Tucson Hybrid,Miles traveled,1968.8968080104116
-Mercedes-Benz/W212/E300,Miles traveled,1945.1956673842762
-Toyota/Yaris Cross,Miles traveled,1944.2880749397166
-Lexus/RX,Miles traveled,1918.9605365776272
+Mercedes-Benz/W212/E300,Miles traveled,1945.195667384276
+Toyota/Yaris Cross,Miles traveled,1944.2880749397164
+Honda/Fit,Miles traveled,1935.2523786267493
+Lexus/RX,Miles traveled,1918.9605365776274
 Acura/MDX,Miles traveled,1911.7583792318117
-Honda/Fit,Miles traveled,1902.583348819317
-Kia/Niro HEV,Miles traveled,1892.7256178942412
-Hyundai/Venue,Miles traveled,1884.912468279534
-Volvo/V90,Miles traveled,1880.6805332438803
-Volvo/S70,Miles traveled,1880.5564178070904
-Ford/F-450,Miles traveled,1866.95872417143
-Nissan/Titan,Miles traveled,1865.3832868298814
-Acura/Integra,Miles traveled,1860.8805074070794
-Hyundai/Bayon,Miles traveled,1859.7858112213742
+Ford/F-450,Miles traveled,1896.7355403366507
+Kia/Niro HEV,Miles traveled,1892.725617894241
+Hyundai/Venue,Miles traveled,1884.9124682795343
+Volvo/S70,Miles traveled,1880.5564178070897
+Acura/Integra,Miles traveled,1873.8672173646894
+Nissan/Titan,Miles traveled,1865.3832868298812
+Hyundai/Bayon,Miles traveled,1859.785811221373
 Genesis/GV80,Miles traveled,1858.5587225313952
-FIAT/124 Spider,Miles traveled,1849.6765274698364
-Lexus/IS,Miles traveled,1819.9633359815016
+FIAT/124 Spider,Miles traveled,1849.6765274698357
+Lexus/IS,Miles traveled,1819.9633359815011
 Kia/Carens,Miles traveled,1773.335770464057
-Mercedes-Benz/E 220,Miles traveled,1753.626295006303
-Alfa Romeo/Stelvio,Miles traveled,1713.3576028246425
+Mercedes-Benz/E 220,Miles traveled,1753.6262950063026
+Alfa Romeo/Stelvio,Miles traveled,1713.3576028246423
 Volkswagen/Eos,Miles traveled,1708.118807617076
+Lexus/GS 300,Miles traveled,1694.618228862288
 Ford/E-450,Miles traveled,1685.6326574277255
 BMW/E46,Miles traveled,1664.9098337949893
-Lexus/GS 300,Miles traveled,1645.8080091588095
-Mercedes-Benz/EQB,Miles traveled,1624.7492332821573
-MINI/Clubman,Miles traveled,1623.7287093948958
-Volvo/XC40,Miles traveled,1617.9399477522525
-Nissan/Rogue Select,Miles traveled,1612.4785370338284
+Volvo/XC40,Miles traveled,1658.2221367011712
+Mercedes-Benz/EQB,Miles traveled,1624.7492332821585
+MINI/Clubman,Miles traveled,1623.7287093948955
+Nissan/Rogue Select,Miles traveled,1622.7030784071644
+Volvo/XC40 Recharge,Miles traveled,1620.7296734792205
+Hyundai/Sedan,Miles traveled,1612.6592801206627
 Ford/EcoSport,Miles traveled,1606.6576466979236
-Lexus/UX,Miles traveled,1571.2952433776027
-Chevrolet/Traverse,Miles traveled,1545.5506744655222
+Lexus/UX,Miles traveled,1571.2952433776031
+Chevrolet/Traverse,Miles traveled,1545.5506744655215
 BMW/1 Series M,Miles traveled,1544.3709177489511
-Ford/Tourneo,Miles traveled,1540.208628960531
-Volvo/XC40 Recharge,Miles traveled,1523.842636934963
-Kia/Sportage 3,Miles traveled,1522.4521720446514
-Hyundai/Santa Cruz,Miles traveled,1520.5490872357693
-Audi/Q4,Miles traveled,1512.6864953301656
-Hyundai/Sedan,Miles traveled,1504.4658716070674
-Volkswagen/New Beetle,Miles traveled,1465.0558244900878
-Subaru/Solterra,Miles traveled,1457.9745300808042
+Ford/Tourneo,Miles traveled,1540.2086289605318
+Kia/Sportage 3,Miles traveled,1523.6096417273911
+Hyundai/Santa Cruz,Miles traveled,1520.5490872357695
+Audi/Q4,Miles traveled,1512.6864953301654
+Dacia/Duster III,Miles traveled,1492.2629633034985
+Subaru/Solterra,Miles traveled,1490.9193646286485
+Volkswagen/New Beetle,Miles traveled,1465.0558244900885
+McLaren/Artura,Miles traveled,1461.7021724085184
 BMW/328i,Miles traveled,1456.006280185369
-Volvo/V40,Miles traveled,1402.4145351596635
-Jaguar/F-TYPE,Miles traveled,1401.4349226622792
-Dacia/Duster III,Miles traveled,1389.0505956140844
-Changan/Eado,Miles traveled,1370.013971167367
+Volvo/V40,Miles traveled,1402.4145351596637
+Jaguar/F-TYPE,Miles traveled,1401.4349226622796
+Changan/Eado,Miles traveled,1370.0139711673676
+Ford/Fusion Energi,Miles traveled,1367.4859598022322
 OPEL/Astra K,Miles traveled,1367.1513591776902
-Lexus/Lexus,Miles traveled,1357.9937359337632
-MINI/Cooper Countryman,Miles traveled,1354.1999701008838
+Lexus/Lexus,Miles traveled,1357.993735933763
+MINI/Cooper Countryman,Miles traveled,1354.1999701008842
 Seat/Leon SC,Miles traveled,1346.4733621846901
-Nissan/Xterra,Miles traveled,1342.582093232624
-Ford/Fusion Energi,Miles traveled,1340.840309005288
-MINI/Cooper S,Miles traveled,1327.895968801283
-Kia/Sportage 4,Miles traveled,1300.0737824057715
-Kia/Picanto 3,Miles traveled,1297.73591107799
+Nissan/Xterra,Miles traveled,1342.5820932326244
+MINI/Cooper S,Miles traveled,1327.8959688012835
+Kia/Sportage 4,Miles traveled,1300.073782405771
+Kia/Picanto 3,Miles traveled,1297.7359110779892
+Volkswagen/T5 Transporter,Miles traveled,1296.1193623866066
 Land Rover/Defender P400,Miles traveled,1285.3355797177662
-Volkswagen/T5 Transporter,Miles traveled,1284.8606609770804
-Renault/Espace,Miles traveled,1284.3782441664082
-McLaren/Artura,Miles traveled,1278.6110875363338
+Renault/Espace,Miles traveled,1284.3782441664084
+Toyota/Alphard,Miles traveled,1281.3983392036
+Dacia/Spring,Miles traveled,1279.8243060578154
 Omoda/C5,Miles traveled,1272.095084339853
-Toyota/Alphard,Miles traveled,1263.1927716319078
-Dacia/Spring,Miles traveled,1258.2940487797155
-Kia/Cerato,Miles traveled,1257.9373208976835
-GMC/Yukon XL,Miles traveled,1232.351679255508
+Kia/Cerato,Miles traveled,1257.9373208976838
+Land Rover/110,Miles traveled,1247.5480757223734
+GMC/Yukon XL,Miles traveled,1232.3516792555083
 Mercedes-Benz/E 350,Miles traveled,1214.1213493902346
-Audi/A1,Miles traveled,1204.025152606582
-Land Rover/110,Miles traveled,1197.5010959890008
+Audi/A1,Miles traveled,1204.0251526065817
 Mitsubishi/Montero,Miles traveled,1195.2592511134028
-Chevrolet/Captiva,Miles traveled,1189.9796395337112
-Ford/Mondeo Turnier,Miles traveled,1185.5430751913277
+Chevrolet/Captiva,Miles traveled,1189.9796395337116
+Ford/Mondeo Turnier,Miles traveled,1185.5430751913282
 Scion/tC,Miles traveled,1176.5705324448704
-BMW/i5,Miles traveled,1161.3945384725164
-MINI/Convertible,Miles traveled,1147.1956721636682
+MINI/Convertible,Miles traveled,1168.613201193282
+BMW/i5,Miles traveled,1161.3945384725166
 MG/HS,Miles traveled,1146.9389504037115
-Chevrolet/Suburban,Miles traveled,1133.781423677035
-Land Rover/Devender,Miles traveled,1133.1839871665375
-Mitsubishi/Triton,Miles traveled,1128.9669033097578
+Land Rover/Devender,Miles traveled,1143.3773012496017
+Chevrolet/Suburban,Miles traveled,1134.6846121013605
+Mitsubishi/Triton,Miles traveled,1128.9669033097575
 Hundai/2025,Miles traveled,1110.268440577606
-Renault/Talisman,Miles traveled,1108.7521610035208
+Renault/Talisman,Miles traveled,1108.752161003521
 Audi/RS 5,Miles traveled,1106.7163661142515
-Mazda/Mazda6,Miles traveled,1085.150853134
+Mazda/Mazda6,Miles traveled,1085.1508531340005
+Hyundai/Krita,Miles traveled,1082.8594614411013
 OPEL/Insignia,Miles traveled,1077.9752406173259
-Volkswagen/GOLF R,Miles traveled,1071.8498146883321
+Volkswagen/GOLF R,Miles traveled,1071.8498146883326
 Dacia/Dokker,Miles traveled,1067.9282284026222
-Chevrolet/Spark,Miles traveled,1060.6195472282545
-Saab/9-3,Miles traveled,1059.4974528468724
+Chevrolet/Spark,Miles traveled,1060.6195472282543
+Saab/9-3,Miles traveled,1059.4974528468722
 Seat/Leon ST,Miles traveled,1049.046695523808
 Buick/LaCrosse,Miles traveled,1047.9273712452664
-Nissan/370Z NISMO,Miles traveled,1039.3726922479434
-Mercedes-Benz/E55 AMG,Miles traveled,1032.2839762372175
-Toyota/GR Yaris,Miles traveled,1026.3147646161208
-Mitsubishi/Xpander,Miles traveled,1016.039015988659
-Hyundai/Krita,Miles traveled,1014.0046933626105
-Peugeot/308,Miles traveled,1012.3963404818119
-Toyota/Crown,Miles traveled,996.8131006116332
-Kia/Seltos,Miles traveled,987.7822481175713
-Mercedes-Benz/CLK 280,Miles traveled,972.1353012038363
-Kia/K7,Miles traveled,945.1422768796398
+Nissan/370Z NISMO,Miles traveled,1039.3726922479436
+Mercedes-Benz/E55 AMG,Miles traveled,1032.283976237218
+Toyota/GR Yaris,Miles traveled,1026.314764616121
+Mitsubishi/Xpander,Miles traveled,1016.0390159886591
+Peugeot/308,Miles traveled,1012.3963404818116
+Toyota/Crown,Miles traveled,996.8853757311185
+Kia/Seltos,Miles traveled,993.0845359071752
+Mercedes-Benz/CLK 280,Miles traveled,981.970800556252
+Kia/K7,Miles traveled,945.1422768796394
 Mercedes-Benz/EQC 400,Miles traveled,941.0743075390154
-Chevrolet/Aveo,Miles traveled,939.7379762709508
-GAC/EMZOOM,Miles traveled,930.3790745447346
+Chevrolet/Aveo,Miles traveled,939.7379762709505
+GAC/EMZOOM,Miles traveled,930.3790745447345
 Volvo/S90,Miles traveled,928.4370612073102
-Volkswagen/Golf Mk4,Miles traveled,923.5240086118603
-Mercedes-Benz/Sedan,Miles traveled,919.262335880805
-MG/GT,Miles traveled,899.179750889828
+Volkswagen/Golf Mk4,Miles traveled,923.5240086118605
+Mercedes-Benz/Sedan,Miles traveled,919.2623358808049
+MG/GT,Miles traveled,899.1797508898285
 Toyota/Corolla touring sport,Miles traveled,897.4904784703891
-BMW/530i E39,Miles traveled,897.4089610007763
-GAC Ambao/athlete,Miles traveled,878.8680756802237
+BMW/530i E39,Miles traveled,897.408961000776
+GAC Ambao/athlete,Miles traveled,878.8680756802232
 Lexus/LS,Miles traveled,860.0315513222603
 Chery/Arrizo 6 Pro,Miles traveled,854.3966650360686
-Audi/A6 C4,Miles traveled,848.5948656675982
+Audi/A6 C4,Miles traveled,848.5948656675979
 Alfa Romeo/Giulia,Miles traveled,835.0305888725476
 BMW/340i,Miles traveled,834.60290285588
-Kia/K4,Miles traveled,829.0811317014109
-CHERY/ARRIZO 8,Miles traveled,827.8855218857715
-Geely/preface,Miles traveled,792.5338612321378
-Audi/S8,Miles traveled,783.5847634978268
+CHERY/ARRIZO 8,Miles traveled,829.1923701424731
+Kia/K4,Miles traveled,829.081131701411
+Audi/Q3,Miles traveled,826.226242438947
+Geely/preface,Miles traveled,792.5338612321377
+Audi/S8,Miles traveled,783.5847634978264
 Mitsubishi/Outlander PHEV,Miles traveled,781.4132751007338
 BMW/X4,Miles traveled,776.1950707900959
-Cadillac/CTS,Miles traveled,772.8152477077739
+Cadillac/CTS,Miles traveled,772.8152477077736
 Lexus/ES 250,Miles traveled,771.7556473476625
-Renault/Kadjarr,Miles traveled,766.2724098105754
-FIAT/Panda,Miles traveled,763.4681524679002
-BMW/M2,Miles traveled,762.2405359020228
+BMW/M2,Miles traveled,769.6287782113418
+Renault/Kadjarr,Miles traveled,766.2724098105755
+FIAT/Panda,Miles traveled,763.4681524679005
 Lexus/RX 450h,Miles traveled,757.2111737379902
-Mercedes-Benz/C 220,Miles traveled,756.7584355112314
-BMW/X5 eDrive,Miles traveled,751.9048162678059
-BMW/X5 45edrive,Miles traveled,740.8260551744078
+Mercedes-Benz/C 220,Miles traveled,756.7584355112311
+BMW/X5 eDrive,Miles traveled,751.904816267806
+BMW/X5 45edrive,Miles traveled,740.8260551744079
 Lexus/IS 300h,Miles traveled,736.0363598580014
-Acura/TL,Miles traveled,733.534465121435
-Kia/Rio 3,Miles traveled,728.3339355574188
-Audi/Q3,Miles traveled,716.0463005980635
-Changan/Eado plus,Miles traveled,709.9456968779239
-Honda/Passport,Miles traveled,702.1289437853533
-Lexus/UX 250h,Miles traveled,695.4911832805218
-AGM/GMX 450,Miles traveled,677.6843910121004
-Haval/H9,Miles traveled,668.6924174561958
-Mazda/B-Series Pickup,Miles traveled,668.1312271581467
-Toyota/Camry Solara,Miles traveled,663.9652050181438
+Acura/TL,Miles traveled,733.5344651214352
+Kia/Rio 3,Miles traveled,728.3339355574187
+Changan/Eado plus,Miles traveled,709.945696877924
+Honda/Passport,Miles traveled,702.1289437853534
+Lexus/UX 250h,Miles traveled,695.4911832805219
+AGM/GMX 450,Miles traveled,677.6843910121005
+Haval/H9,Miles traveled,668.6924174561957
+Mazda/B-Series Pickup,Miles traveled,668.1312271581468
+Toyota/Camry Solara,Miles traveled,663.9652050181437
 BMW/335d Xdrive,Miles traveled,662.2096099685576
 Chevrolet/2019,Miles traveled,661.1606717836955
 Nissan/350Z,Miles traveled,659.1542585511844
-Hyundai/Ioniq Electric,Miles traveled,655.3128721601696
+Hyundai/Ioniq Electric,Miles traveled,655.3128721601698
 Mercedes-Benz/GLB 220,Miles traveled,655.0401078857486
-Jeep/Wrangler Rubicon jl 4xe,Miles traveled,652.0960051961944
-Audi/S5,Miles traveled,650.4657321260948
+Genesis/GV70,Miles traveled,653.8906123538226
+Jeep/Wrangler Rubicon jl 4xe,Miles traveled,652.0960051961946
+Audi/S5,Miles traveled,650.465732126095
 Mazda/Mazda 6,Miles traveled,646.28472885879
-Genesis/GV70,Miles traveled,632.9778077419692
 Toyota/Veloz,Miles traveled,631.1312026370384
-Lexus/RX 350h,Miles traveled,630.8145265458281
-Kia/K3,Miles traveled,620.5421206821604
-Chevrolet/Equinox EV,Miles traveled,608.047611463958
-Ford/Puma,Miles traveled,600.8704166627092
-Lincoln/MKZ,Miles traveled,596.3747697599725
+Lexus/RX 350h,Miles traveled,630.8145265458282
+Kia/K3,Miles traveled,620.5421206821603
+Chevrolet/Equinox EV,Miles traveled,608.0476114639579
+Ford/Puma,Miles traveled,600.8704166627091
+Lincoln/MKZ,Miles traveled,596.3747697599727
 Hyundai/Ioniq Plug-In Hybrid,Miles traveled,595.7300362626338
 BMW/G20,Miles traveled,593.607358315673
-Chevrolet/Sonic,Miles traveled,584.8082459055112
+Chevrolet/Sonic,Miles traveled,584.8082459055111
 Honda/Pliot,Miles traveled,584.1162141983731
-Pontiac/Safari,Miles traveled,583.7139120316913
+Pontiac/Safari,Miles traveled,583.7139120316912
 smart/1,Miles traveled,580.5391864389339
-Dodge/Ram,Miles traveled,578.4516594910538
-BMW/320i,Miles traveled,576.4714655666023
+Dodge/Ram,Miles traveled,578.8005111759297
+BMW/320i,Miles traveled,576.4714655666024
 Audi/Audi A5,Miles traveled,568.8901834172676
-Kia/2023,Miles traveled,563.8192756353576
-Toyota/iQ,Miles traveled,563.5635565308314
-Acura/RDX,Miles traveled,562.2508504387938
+Kia/2023,Miles traveled,563.8192756353577
+Toyota/iQ,Miles traveled,563.5635565308318
+Acura/RDX,Miles traveled,562.2508504387937
 Ford/C-Max,Miles traveled,555.3669041081896
-MG/MG3,Miles traveled,554.369642712871
+MG/MG3,Miles traveled,554.3696427128712
 BMW/440i,Miles traveled,544.7583490202213
-Jetour/X70 plus,Miles traveled,544.175860975469
+Jetour/X70 plus,Miles traveled,544.1758609754688
 Audi/SQ6 e-tron,Miles traveled,535.7857978124454
 Nissan/Patrol Platinum,Miles traveled,535.0654944230201
-BMW/5,Miles traveled,532.6151704782392
-Mercedes-Benz/A-Class,Miles traveled,524.5737689751538
+BMW/5,Miles traveled,532.6151704782394
+Mercedes-Benz/A-Class,Miles traveled,524.5737689751536
 Suzuki/Baleno,Miles traveled,521.2859711178712
+Nissan/Juke,Miles traveled,520.3129522205163
 Mitsubishi/Lancer,Miles traveled,519.8594972687921
 BYD/Yuan Pro,Miles traveled,512.2793724936797
-Honda/ZR-V,Miles traveled,510.2630335688514
-Lexus/LS 500,Miles traveled,509.06101350152096
+Honda/ZR-V,Miles traveled,510.26303356885137
+Lexus/LS 500,Miles traveled,509.0610135015209
 Dodge/Daytona,Miles traveled,506.09024564951807
 Lincoln/Continental,Miles traveled,504.96654452283303
-FIAT/500e,Miles traveled,504.1764230749925
+FIAT/500e,Miles traveled,504.1764230749924
 BMW/M5 CS,Miles traveled,502.7934160923325
 Cadillac/XT4,Miles traveled,502.001767594346
 Mercedes-Benz/C 200,Miles traveled,501.68153152676007
-FIAT/Bravo,Miles traveled,500.3149518263704
-Mercedes-Benz/GLB 250,Miles traveled,498.1904552958294
-Toyota/Fortuner,Miles traveled,495.6601103233441
-Acura/ILX,Miles traveled,492.8542543637049
+FIAT/Bravo,Miles traveled,500.3149518263706
+Mercedes-Benz/GLB 250,Miles traveled,499.43907494626
+Toyota/Fortuner,Miles traveled,495.66011032334404
+Acura/ILX,Miles traveled,492.85425436370497
 Hyundai/Tiburon,Miles traveled,492.2621339170771
-Nissan/Juke,Miles traveled,488.17330407277876
-Vauxhall/Astra,Miles traveled,484.25938125984266
+Vauxhall/Astra,Miles traveled,484.25938125984254
 MG/7,Miles traveled,478.3451749464423
 Honda/Crosstour,Miles traveled,476.8225392330451
-Renault/Fluence,Miles traveled,474.099537961985
-Toyota/Innova hycross,Miles traveled,470.31359611320886
-Mazda/2,Miles traveled,465.6153710511902
-CHERY/Arrizo 8,Miles traveled,459.41179971036655
+Renault/Fluence,Miles traveled,474.0995379619849
+Toyota/Innova hycross,Miles traveled,470.3135961132088
+Mazda/2,Miles traveled,465.61537105119
+CHERY/Arrizo 8,Miles traveled,462.5456980957676
+Lexus/LBX,Miles traveled,460.69920972590194
 Rox/01,Miles traveled,443.6748324122174
 Nissan/Magnite,Miles traveled,441.6870322084873
-BYD/Dolphin,Miles traveled,441.1030710154129
+BYD/Dolphin,Miles traveled,441.103071015413
 Volkswagen/T6 Transporter,Miles traveled,440.9068607559399
 Mercedes-Benz/Ml63,Miles traveled,440.5816463589746
 Scion/xB,Miles traveled,439.4849889807445
-Vauxhall-Opel/Crossland,Miles traveled,438.981568811786
-Peugeot/2008,Miles traveled,433.996144773336
-Chrysler/300C,Miles traveled,433.23238235086336
-Renault/Austral,Miles traveled,433.09977973392466
-Haval/H6,Miles traveled,431.3935927684935
-Land Rover/Range Rover Velar,Miles traveled,429.41104469044535
+Vauxhall-Opel/Crossland,Miles traveled,438.98156881178585
+Peugeot/2008,Miles traveled,433.9961447733361
+Chrysler/300C,Miles traveled,433.2323823508633
+Renault/Austral,Miles traveled,433.0997797339247
+Haval/H6,Miles traveled,431.3935927684936
+Land Rover/Range Rover Velar,Miles traveled,429.4110446904455
 Buick/Encore,Miles traveled,429.2253083647147
 Dodge/Avenger,Miles traveled,428.3715133203328
-Lexus/LBX,Miles traveled,424.4491537318533
-Ford/E-Series Van,Miles traveled,418.8262162914991
+Ford/E-Series Van,Miles traveled,418.82621629149924
+Toyota/Corolla Hatchback,Miles traveled,418.18261715633923
 Volvo/V60,Miles traveled,407.87724006257054
-Toyota/Corolla Hatchback,Miles traveled,407.3005626296833
+Audi/SQ7,Miles traveled,407.4159889403156
 MG/ZS EV,Miles traveled,401.0638751310966
-BMW/M340i,Miles traveled,393.78227039794547
+BMW/M340i,Miles traveled,393.7822703979456
 Subaru/Levorg,Miles traveled,390.89088316829935
 BMW/Serie 1,Miles traveled,390.70660358049224
-Lexus/ES 300,Miles traveled,390.460890336935
+Lexus/ES 300,Miles traveled,390.46089033693494
 MG/Marvel R,Miles traveled,389.3357159968955
-Hyundai/i10,Miles traveled,388.4660685785747
-Audi/SQ7,Miles traveled,388.4027768858113
-Cupra/Born,Miles traveled,381.8989462938116
-Lexus/ES 300h,Miles traveled,381.52741912537886
-Lexus/NX 350h,Miles traveled,379.5399557121384
-Honda/Prologue,Miles traveled,375.60046498195743
+Hyundai/i10,Miles traveled,388.4660685785746
+Cupra/Born,Miles traveled,381.8989462938117
+Lexus/ES 300h,Miles traveled,381.52741912537897
+Lexus/NX 350h,Miles traveled,379.53995571213824
+Honda/Prologue,Miles traveled,375.6004649819576
 Porsche/CAYMAN,Miles traveled,374.68278145946266
 Nissan/Note,Miles traveled,373.50143844801
-Mercedes-Benz/A 200,Miles traveled,373.29188642211363
+Mercedes-Benz/A 200,Miles traveled,373.29188642211346
 BMW/330e,Miles traveled,372.8263260506216
-Kia/Niro 2,Miles traveled,372.06715526189
+Kia/Niro 2,Miles traveled,372.06715526189004
 Renault/Clio,Miles traveled,369.9588535848341
 Dacia/Sandero III,Miles traveled,369.91082998184913
 Ford/Territory,Miles traveled,367.6099209852976
-FIAT/Ducato,Miles traveled,365.70393863872494
-Perodua/Bezza,Miles traveled,363.6906581858916
+FIAT/Ducato,Miles traveled,365.70393863872505
+Perodua/Bezza,Miles traveled,363.6906581858915
 Audi/Q8 e-tron,Miles traveled,361.3652952416118
 Toyota/Aygo X,Miles traveled,359.5471152574477
-Chevrolet/Avalanche,Miles traveled,354.0957007365826
-Volvo/XC40 T4,Miles traveled,352.7683209152894
+Chevrolet/Avalanche,Miles traveled,354.09570073658267
+Volvo/XC40 T4,Miles traveled,352.76832091528945
 BMW/530i,Miles traveled,352.2464360298083
-BMW/X4 M40i,Miles traveled,350.30044227589497
-BMW/R 1200 GS,Miles traveled,347.4060857616799
+BMW/X4 M40i,Miles traveled,350.30044227589485
+BMW/R 1200 GS,Miles traveled,347.40608576167983
 Jeep/Liberty,Miles traveled,347.05927157036103
 BMW/320d,Miles traveled,342.0772046923968
+Land Rover/Defender 110,Miles traveled,335.6245848779037
 Kia/Picanto 1,Miles traveled,333.03248853505465
-INFINITI/QX60,Miles traveled,331.8681390587654
+INFINITI/QX60,Miles traveled,331.8681390587653
 Land Rover/Defender X,Miles traveled,331.31345412894495
 Lexus/RC,Miles traveled,329.7816333031107
-Skoda/Slavia,Miles traveled,328.965905199846
+Skoda/Slavia,Miles traveled,328.9659051998461
 Honda/Azera,Miles traveled,327.45028347157023
 BMW/520i,Miles traveled,326.73419724376237
-GAC/Empow,Miles traveled,325.2915272513748
+GAC/Empow,Miles traveled,325.2915272513749
 Dodge/Grand Caravan,Miles traveled,319.13526724927357
 Lincoln/Corsair,Miles traveled,318.8211233301687
-Nissan/Qashqai,Miles traveled,318.04384604950127
-BMW/F31,Miles traveled,314.62676274012273
+Nissan/Qashqai,Miles traveled,318.0438460495013
+BMW/F31,Miles traveled,314.6267627401228
 BMW/Ix40,Miles traveled,306.53082942752917
-Land Rover/Defender 110,Miles traveled,305.79266487487905
-Lotus/Eletre,Miles traveled,303.81215947075606
-Toyota/AXVA80L-AEZDBD,Miles traveled,299.800693139265
-Nissan/Nissan,Miles traveled,297.4774214275441
+Lotus/Eletre,Miles traveled,303.812159470756
+Toyota/AXVA80L-AEZDBD,Miles traveled,299.80069313926504
+Nissan/Nissan,Miles traveled,297.4774214275442
 BMW/3er,Miles traveled,296.11995275981246
-Toyota/Matrix,Miles traveled,294.843853741368
-Land Rover/Range Rover Evoque,Miles traveled,291.13715871259944
-Audi/TT,Miles traveled,285.8870761860782
+Toyota/Matrix,Miles traveled,294.8438537413679
+Land Rover/Range Rover Evoque,Miles traveled,291.1371587125994
+Toyota/GT86,Miles traveled,287.3992381061687
+Audi/TT,Miles traveled,285.8870761860783
 Mercedes-Benz/400-Class,Miles traveled,278.85753146407603
-Toyota/GT86,Miles traveled,276.99582898081593
-Peugeot/206,Miles traveled,270.2741363425989
+Peugeot/206,Miles traveled,270.274136342599
 Volkswagen/Caddy,Miles traveled,266.4359479987617
 Lexus/NX 350,Miles traveled,264.32454238012264
 Chery/Tiggo 7 Pro,Miles traveled,263.040479474079
 Audi/TTS,Miles traveled,262.90802872408585
 Peugeot/308 Hybrid,Miles traveled,260.51677966942697
 Volvo/EX30,Miles traveled,258.2078140992261
-Mercedes-Benz/B 200,Miles traveled,256.356076873252
+Mercedes-Benz/B 200,Miles traveled,256.35607687325194
 Chrysler/Town and Country,Miles traveled,256.28541973493947
 Toyota/Innova,Miles traveled,254.54067604312542
-BMW/550i,Miles traveled,253.45035346512364
+BMW/550i,Miles traveled,253.4503534651237
 Nissan/Navara,Miles traveled,249.08202363871948
-Hyundai/Ix25,Miles traveled,245.16215710970144
+Hyundai/Ix25,Miles traveled,245.16215710970147
 Mercedes-Benz/EQS SUV,Miles traveled,241.93937813760598
+Lamborghini/Urus,Miles traveled,238.2008587758923
 Lynk & Co/03,Miles traveled,236.97937546548303
-Volkswagen/T-Roc Cabriolet,Miles traveled,231.30693331665384
-BMW/128 Ti,Miles traveled,230.90324282470675
-Cadillac/Seville,Miles traveled,230.0417679038823
-BMW/430i,Miles traveled,228.824787660435
-Volkswagen/Golf 6,Miles traveled,227.50550500365142
-smart/fortwo,Miles traveled,224.44574021011348
+BMW/430i,Miles traveled,232.04758627539576
+Volkswagen/T-Roc Cabriolet,Miles traveled,231.30693331665387
+BMW/128 Ti,Miles traveled,230.90324282470672
+Cadillac/Seville,Miles traveled,230.04176790388232
+Volkswagen/Golf 6,Miles traveled,227.50550500365145
+smart/fortwo,Miles traveled,224.4457402101135
 Mazda/MAZDA 6,Miles traveled,224.43265999064337
 Dodge/Hornet,Miles traveled,218.89052824588202
-INFINITI/Q50,Miles traveled,218.026486805969
-Ford/TITANIUM TERRITORY,Miles traveled,217.49491334408398
+INFINITI/Q50,Miles traveled,218.02648680596903
+Ford/TITANIUM TERRITORY,Miles traveled,217.49491334408404
 Porsche/Macan Electric,Miles traveled,216.124934505234
-Lamborghini/Urus,Miles traveled,214.3714332114206
 Seat/Ateca,Miles traveled,214.28100961467362
 Saab/9-5,Miles traveled,213.6852735584592
-Mercedes-Benz/CLA 220,Miles traveled,212.40149332605955
+Mercedes-Benz/CLA 220,Miles traveled,212.4014933260596
 BMW/530e,Miles traveled,208.99725508946594
-Geely/Tugella,Miles traveled,208.63475751546468
-Jeep/Avenger,Miles traveled,208.1732553263405
-Great Wall/Steed,Miles traveled,207.0155300186892
-BMW/iX1,Miles traveled,206.45871088121277
+Geely/Tugella,Miles traveled,208.6347575154647
+Jeep/Avenger,Miles traveled,208.17325532634047
+Great Wall/Steed,Miles traveled,207.01553001868916
+BMW/iX1,Miles traveled,206.45871088121282
 Mazda/Mazda 2,Miles traveled,205.5275234115581
-VW/Passat,Miles traveled,205.38630275278246
+VW/Passat,Miles traveled,205.3863027527825
+Subaru/Baja,Miles traveled,203.80615290496326
 Ram/ProMaster Cargo Van,Miles traveled,203.01619037019012
-Chery/Tiggo 4 Pro,Miles traveled,202.90783758656886
+Chery/Tiggo 4 Pro,Miles traveled,202.9078375865689
 BMW/M5,Miles traveled,202.31089296004714
-Subaru/Baja,Miles traveled,201.82890160348464
 Ford/E-Series Wagon,Miles traveled,199.47210194231423
-Buick/LeSabre,Miles traveled,199.3153234013147
+Buick/LeSabre,Miles traveled,199.31532340131474
 MINI/Cooper s,Miles traveled,199.19274521255952
+Hyundai/GRANDUAR,Miles traveled,198.52304479230366
 Vauxhall-Opel/Zafira,Miles traveled,196.97418667066435
 Alpine/A110,Miles traveled,196.42127823070294
 Cadillac/CT4,Miles traveled,195.41667357182155
-BEIQI FOTON MOTOR / BEIJING BUS BRANCH/Passenger Car,Miles traveled,194.20342872339475
-BMW/323i,Miles traveled,191.63087970600202
-Honda/Civic Type R,Miles traveled,191.26182118050895
-Hyundai/Avante,Miles traveled,191.1406347884226
-Ford/Everest,Miles traveled,190.92782276555687
+BEIQI FOTON MOTOR / BEIJING BUS BRANCH/Passenger Car,Miles traveled,194.20342872339472
+BMW/323i,Miles traveled,191.63087970600205
+Honda/Civic Type R,Miles traveled,191.26182118050897
+Hyundai/Avante,Miles traveled,191.14063478842255
+Ford/Everest,Miles traveled,190.92782276555684
 Peugeot/E3008,Miles traveled,188.39229918814044
 Audi/Q2,Miles traveled,186.93614498545247
 Alfa Romeo/Giulia (952),Miles traveled,186.2671772647479
-Changan/Eado Plus,Miles traveled,184.7111563802287
-MG/One,Miles traveled,178.56589481835033
+Changan/Eado Plus,Miles traveled,184.71115638022863
+Chery/Arrizo8,Miles traveled,180.1902026129164
+MG/One,Miles traveled,178.5658948183503
 MG/ONE,Miles traveled,174.81478473146325
 Geely/Atlas Pro,Miles traveled,172.53280455620936
-Hyundai/GRANDUAR,Miles traveled,172.3879673962582
 Honda/Accrod,Miles traveled,169.72400902754327
-Peugeot/Boxer 335,Miles traveled,167.68091536829428
+Peugeot/Boxer 335,Miles traveled,167.6809153682943
 Geely/Coolray,Miles traveled,167.5256819401856
-BMW/Z3,Miles traveled,165.2761633204461
+BMW/Z3,Miles traveled,165.27616332044602
 AM General/Hummer,Miles traveled,164.2436908332312
 GAC/GS5,Miles traveled,163.61748865265255
 Mercedes-Benz/300 e class,Miles traveled,162.44014001193227
 Seat/Tarraco,Miles traveled,160.76119891233014
 Hyundai/HB20S,Miles traveled,160.64582046436243
-Isuzu/D-Max,Miles traveled,159.74399152148328
+Isuzu/D-Max,Miles traveled,159.7439915214833
 Renault/Scenic,Miles traveled,159.016132938849
-Kia/Pro Ceed,Miles traveled,158.89063705380693
+Kia/Pro Ceed,Miles traveled,158.8906370538069
 MG/RX8,Miles traveled,158.1558557783219
-OPEL/Astra,Miles traveled,157.20123950769334
+OPEL/Astra,Miles traveled,157.20123950769337
 Cadillac/CT5,Miles traveled,155.67346148297167
 GMC/Acadia,Miles traveled,155.38346665656096
 Mercedes-Benz/Eqa250+,Miles traveled,154.28225852804954
-Chevrolet/Groove,Miles traveled,154.2653882090375
+Chevrolet/Groove,Miles traveled,154.26538820903747
 Toyota/Crown Hybrid,Miles traveled,153.1546231812897
 Mazda/Tribute,Miles traveled,152.38401945786407
 Honda/Cvic,Miles traveled,152.23925005130488
-Cupra/Leon,Miles traveled,146.6530330153489
-COBRA INDUSTRIES/Jeep,Miles traveled,145.5620507687079
+Cupra/Leon,Miles traveled,146.65303301534894
+COBRA INDUSTRIES/Jeep,Miles traveled,146.29931394895465
 Rivian/R1S,Miles traveled,144.32955916779295
+Holden/Colorado,Miles traveled,142.29994481369394
 Volkswagen/Lupo,Miles traveled,140.83088958713378
-Suzuki/Dzire,Miles traveled,139.32038266023832
+Suzuki/Dzire,Miles traveled,139.32038266023835
 Land Rover/Defender 9,Miles traveled,138.57086620354292
-BMW/Serie 3,Miles traveled,137.87901152181138
-Ford/Taurus X,Miles traveled,136.81506512736945
-Buick/Envision,Miles traveled,136.46162848723696
+BMW/Serie 3,Miles traveled,137.8790115218114
+Ford/Taurus X,Miles traveled,136.81506512736942
+Buick/Envision,Miles traveled,136.46162848723694
+Toyota/Yaris iA,Miles traveled,136.30225948237987
 BMW/530D xdrive,Miles traveled,135.0843184763033
 Honda/Civic Hatchback,Miles traveled,134.7798539752279
-Toyota/Yaris iA,Miles traveled,134.2110924729489
 BMW/2 Series Gran Coupe,Miles traveled,132.81162845173145
 Lexus/GS 350,Miles traveled,132.31305445504665
 Tesla/Model S,Miles traveled,132.2079234801408
 Seat/Leon 5F,Miles traveled,131.89516211663704
 Mercedes-Benz/SLK Roadster,Miles traveled,131.55897743075727
-BYD/Dolphin Plus,Miles traveled,131.07370111575554
+BYD/Dolphin Plus,Miles traveled,131.0737011157555
 Vauxhall/Insignia,Miles traveled,130.8277285917764
 Land Rover/Defender Z,Miles traveled,130.62480458702848
-BMW/i3s,Miles traveled,130.55765568406335
+BMW/i3s,Miles traveled,128.9062049544196
+Toyota/Avalon Hybrid,Miles traveled,128.69970273181784
 Pontiac/Vibe,Miles traveled,128.58320612957257
 VW/Golf R,Miles traveled,127.91797479955241
-Toyota/Avalon Hybrid,Miles traveled,126.66760417107793
 Jeep/Wrangler JK,Miles traveled,125.96242191848356
-Renault/Twingo,Miles traveled,125.57081603760231
-Audi/A7,Miles traveled,124.5307621626574
-FIAT/600 Hybrid,Miles traveled,121.81592855385972
-FIAT/500,Miles traveled,121.60393083194491
+Bentley/Bentayga,Miles traveled,125.8740296111726
+Renault/Twingo,Miles traveled,125.57081603760233
+Audi/A7,Miles traveled,124.53076216265741
+BMW/335i,Miles traveled,124.1013776201908
+FIAT/600 Hybrid,Miles traveled,121.81592855385973
+FIAT/500,Miles traveled,121.6039308319449
 Toyota/Celica,Miles traveled,120.94877769743415
-BMW/335i,Miles traveled,119.79526635765332
 BYD/Song Plus EV,Miles traveled,119.19873504817126
 Volkswagen/Gol,Miles traveled,118.80850348922021
 Mercedes-Benz/CLS-Class,Miles traveled,118.05107404998822
-Alfa Romeo/Giulietta,Miles traveled,117.41792948020782
+Alfa Romeo/Giulietta,Miles traveled,117.41792948020779
 Volvo/V70,Miles traveled,117.25638306516738
 Mercury/Grand Marquis,Miles traveled,115.28532543723367
-Bentley/Bentayga,Miles traveled,114.64807461712812
 Alfa Romeo/Tonale,Miles traveled,114.59019001280193
 Cadillac/ATS,Miles traveled,113.585721865716
-Mercedes-Benz/AMG C 43,Miles traveled,112.19785917221671
-Ford/E-150,Miles traveled,110.52193524203359
-STANDARD IRON/Standard Iron,Miles traveled,109.43921009762809
-MG/MG GT,Miles traveled,109.0752640836352
-Mercedes-Benz/S 500,Miles traveled,108.92178178195455
+Mercedes-Benz/AMG C 43,Miles traveled,112.19785917221672
+MINI/JCW,Miles traveled,111.04654909653685
+Ford/E-150,Miles traveled,110.52193524203362
+STANDARD IRON/Standard Iron,Miles traveled,109.43921009762812
+MG/MG GT,Miles traveled,109.07526408363518
+Mercedes-Benz/S 500,Miles traveled,108.92178178195456
 Porsche/718,Miles traveled,108.33307121466882
 INFINITI/QX70,Miles traveled,108.02958072310881
-MINI/JCW,Miles traveled,107.8054092748113
-Nissan/300ZX,Miles traveled,106.70800407778597
-Mercedes-Benz/GLE-Class,Miles traveled,105.52774752006594
+Nissan/300ZX,Miles traveled,106.70800407778596
+Mercedes-Benz/GLE-Class,Miles traveled,105.52774752006593
 Toyota/Innova Crysta,Miles traveled,103.25724753852155
-Eagle/Renault Captur Techno GPL,Miles traveled,101.80122864117774
-GEELY/Monjaro,Miles traveled,101.57357195367322
+Eagle/Renault Captur Techno GPL,Miles traveled,101.80122864117772
+GEELY/Monjaro,Miles traveled,101.57357195367324
 Ford/F-max,Miles traveled,100.99719760968502
-Suzuki/Kizashi,Miles traveled,100.7903525145662
+Suzuki/Kizashi,Miles traveled,100.79035251456621
 Nissan/Super safari,Miles traveled,100.37595300341765
 Mazda/CX-70,Miles traveled,100.17654671714585
 Hyundai/Creta,Miles traveled,99.2829710861021
 Nissan/NV Passenger,Miles traveled,98.83885135920978
-BMW/520d,Miles traveled,98.77495614758988
-Chery/Arrizo8,Miles traveled,97.35137361865549
+BMW/520d,Miles traveled,98.77495614758989
 Cadillac/Rav4,Miles traveled,97.18925959083116
 Chevrolet/Orlando,Miles traveled,96.61027048225213
 Dodge/Dart,Miles traveled,95.95669553275773
-Ford/Focus ST,Miles traveled,95.31794810035365
+Ford/Focus ST,Miles traveled,95.31794810035363
 Dodge/Journey,Miles traveled,95.26252802712312
 Mazda/Mazda 3,Miles traveled,94.99582385881426
-BMW/E39,Miles traveled,94.25275272391414
-Scion/FR-S,Miles traveled,93.68258112042001
-Volkswagen/Up,Miles traveled,92.49002162210029
+BMW/E39,Miles traveled,94.25275272391416
+Scion/FR-S,Miles traveled,93.68258112042002
+Volkswagen/Up,Miles traveled,92.4900216221003
 Mazda/Cx-60,Miles traveled,92.02302849334959
 Porsche/Cayenne S E,Miles traveled,90.04193244696263
 Great Wall/Ute,Miles traveled,89.91591875911165
 Kia/Sonet,Miles traveled,89.08520458176014
-Holden/Colorado,Miles traveled,88.51852336523255
-Hyundai/i30 Sedan,Miles traveled,88.27162692607111
+Hyundai/i30 Sedan,Miles traveled,88.2716269260711
 Ford/S-Max,Miles traveled,87.8092915238797
+Hyundai/Azira,Miles traveled,87.50019280151744
 Nissan/Z,Miles traveled,86.81347283373711
 GMC/SIERRA,Miles traveled,86.42090875491316
 Volkswagen/Golf Variant,Miles traveled,85.09356211486948
-Volvo/V90 Cross Country,Miles traveled,84.83097690204345
+Volvo/V90 Cross Country,Miles traveled,84.83097690204346
 Ford/Tourneo Connect,Miles traveled,84.4920383552673
 Volkswagen/Beetle,Miles traveled,83.89971002848644
-Jetour/Jetour,Miles traveled,83.4773825174653
+Jetour/Jetour,Miles traveled,83.47738251746532
 Honda/civic TYPE R,Miles traveled,81.77935346465712
 Seat/Exeo ST,Miles traveled,81.23881401069417
 Peugeot/207,Miles traveled,80.9180075042601
 Jaguar/E-PACE,Miles traveled,80.39381163845678
 INFINITI/QX80,Miles traveled,80.16252070812904
 Suzuki/Vitara,Miles traveled,79.61684824657684
+BMW/M140i,Miles traveled,79.35812149052316
 Audi/Q5 50TFSI-e,Miles traveled,79.25846181977992
-Renault/Duster,Miles traveled,79.22980393636932
+Renault/Duster,Miles traveled,79.22980393636934
 Acura/ZDX,Miles traveled,78.48997156839856
 Lincoln/Nautilus,Miles traveled,77.89708790423273
-Chery/Tiggo 4,Miles traveled,77.70704400341987
-BMW/M140i,Miles traveled,77.70575266694533
-Chevrolet/Tracker,Miles traveled,76.5540342590699
-Mercedes-Benz/CLA 250,Miles traveled,76.53053105583018
+Chery/Tiggo 4,Miles traveled,77.70704400341988
+Chevrolet/Tracker,Miles traveled,76.55403425906991
+Mercedes-Benz/CLA 250,Miles traveled,76.5305310558302
 Volkswagen/ID. Buzz,Miles traveled,75.39506904775662
 Land Rover/2023,Miles traveled,74.83943399324315
-Ford/Crown Victoria,Miles traveled,74.77498987650232
+Ford/Crown Victoria,Miles traveled,74.77498987650233
 Mercedes-Benz/GLA 220,Miles traveled,74.53573602501598
 BMW/530i xDrive,Miles traveled,74.45702862317408
 Volkswagen/Golf R,Miles traveled,74.3823464443873
 BYD/Dolphin Mini,Miles traveled,74.31661501689754
-Seat/Arona,Miles traveled,73.98627424204513
-Cadillac/LYRIQ,Miles traveled,73.68137697199683
+Seat/Arona,Miles traveled,73.98627424204511
+Cadillac/LYRIQ,Miles traveled,73.68137697199684
 BYD/K8M,Miles traveled,71.00889651306386
 Nissan/370Z,Miles traveled,69.46968215147496
 Perodua/Myvi,Miles traveled,68.70875492681132
+Volkswagen/ID.5,Miles traveled,68.27366099351462
 Lexus/2023,Miles traveled,67.93303004297422
 Nissan/240SX,Miles traveled,67.07421933698618
 Kia/2022,Miles traveled,66.78499279527166
-Volkswagen/Taigun,Miles traveled,66.54895374761908
+Volkswagen/Taigun,Miles traveled,66.5489537476191
 Porsche/Cayenne S,Miles traveled,65.72695865323223
 Mercedes-Benz/Viano,Miles traveled,65.29483822213352
 Land Rover/Defender 90,Miles traveled,64.64888115876776
+Volkswagen/Golf 8,Miles traveled,64.54038680548864
 Chery/Tiggo 8,Miles traveled,63.96627834388368
 Daewoo/Cruze,Miles traveled,63.955319780026485
-Volkswagen/ID.5,Miles traveled,61.992885933095046
 Suzuki/Grand Vitara,Miles traveled,61.800143190139984
 Chevrolet/Premier,Miles traveled,61.62510664725364
 Nissan/Patrol Y62 V8,Miles traveled,61.5087215654617
 Toyota/LC300,Miles traveled,60.937460993829404
 BMW/X3 M40I,Miles traveled,60.53512456056624
-VW/ID.4,Miles traveled,60.39549700280296
-Toyota/Camrey,Miles traveled,59.347611195514574
-BMW/330i,Miles traveled,58.802341868137056
+VW/ID.4,Miles traveled,60.39549700280297
+Toyota/Camrey,Miles traveled,59.34761119551457
+BMW/330i,Miles traveled,58.80234186813706
 BMW/118i,Miles traveled,58.73600688331786
 Chery/Tiggo 8 Pro,Miles traveled,58.7094763623295
-Toyota/Frontlander,Miles traveled,58.25250500428434
-Volkswagen/Golf 8,Miles traveled,58.17980726533423
+Toyota/Frontlander,Miles traveled,58.252505004284345
 Hhgfggv/Gghggh,Miles traveled,57.593183081598646
 Mercedes-Benz/GLE53 4matic,Miles traveled,57.53899487392777
-Lexus/LX 570,Miles traveled,57.374737635511906
-Volkswagen/Amarok,Miles traveled,55.242545378900104
-BMW/XM,Miles traveled,54.87884876915715
+Lexus/LX 570,Miles traveled,57.37473763551189
+Volkswagen/Amarok,Miles traveled,55.2425453789001
+BMW/XM,Miles traveled,54.878848769157145
 Land Rover/Defender X-dynamic HSE,Miles traveled,54.801261114258594
 Peugeot/E-2008,Miles traveled,54.59437387017082
-Kia/Carnival II,Miles traveled,54.232053445936046
-BMW/i7,Miles traveled,53.622154472347205
+Kia/Carnival II,Miles traveled,54.23205344593605
+BMW/i7,Miles traveled,53.6221544723472
 Lexus/IS 250,Miles traveled,53.472751065547826
 Toyota/Idk,Miles traveled,53.056935823461394
-Mercedes-Benz/SL-Class,Miles traveled,52.67401694439804
-Cupra/Terramar,Miles traveled,52.478179887667956
+Mercedes-Benz/SL-Class,Miles traveled,52.67401694439803
+Cupra/Terramar,Miles traveled,52.47817988766795
 Skoda/ENYAQ 85,Miles traveled,52.32926344556108
 Peugeot/306,Miles traveled,52.06381112945102
-Kia/EV5,Miles traveled,51.00284159436095
+Land Rover/Discovery Sport,Miles traveled,51.782932313005816
+Kia/EV5,Miles traveled,51.00284159436096
 Mercedes-Benz/EQE350,Miles traveled,50.95588241943862
 Mercedes-Benz/GLE 53 AMG Coupe,Miles traveled,50.177565902440904
 BYD/Shark 6,Miles traveled,49.5815671449501
@@ -861,28 +863,28 @@ Mitsubishi/Mirage,Miles traveled,48.62033034963017
 INFINITI/G37,Miles traveled,48.46158935893852
 Ford/Ranger Raptor,Miles traveled,48.12843645283602
 Porsche/Cayenne E-Hybrid,Miles traveled,47.9192725665116
-Kia/Pro Ceed 2,Miles traveled,47.56761159569204
+Kia/Pro Ceed 2,Miles traveled,47.56761159569205
 Mercedes-Benz/560-Class,Miles traveled,47.05890297910224
-Land Rover/Discovery Sport,Miles traveled,46.86062069693568
 Lexus/LX 600,Miles traveled,46.61954125529736
 Toyota/Land cruser,Miles traveled,46.04382210001296
 Mercedes-Benz/Sprinter,Miles traveled,46.032083041481016
-Mazda/5,Miles traveled,46.00721279060755
+Mazda/5,Miles traveled,46.00721279060754
 Audi/2024,Miles traveled,45.833007998870514
 Cadillac/Camry,Miles traveled,45.77808118332405
 Kia/XCeed,Miles traveled,45.55233650470759
 Porsche/911 Carrera,Miles traveled,44.863377554252395
-Opel/Astra,Miles traveled,44.78932360703583
-Honda/CR-V Hybrid,Miles traveled,44.69893959821502
-HMC/Staria,Miles traveled,44.473377445658976
+Opel/Astra,Miles traveled,44.78932360703584
+Honda/CR-V Hybrid,Miles traveled,44.698939598215006
+HMC/Staria,Miles traveled,44.47337744565898
 Audi/Q8,Miles traveled,43.957598304404144
 Mercedes-Benz/GLA200d,Miles traveled,43.90989032837344
+Geely/Preface,Miles traveled,43.8087772369465
 Mercedes-Benz/E 300,Miles traveled,43.7491259547488
 Mercedes-Benz/A 160,Miles traveled,43.49725685036053
 Holden/Cruze,Miles traveled,43.26661939152938
 Kia/Optima 2,Miles traveled,42.760306400343204
 Lexus/NX 200t,Miles traveled,42.46034617226445
-Mercedes-Benz/S 320,Miles traveled,42.45518675382693
+Mercedes-Benz/S 320,Miles traveled,42.45518675382694
 MINI/Mini,Miles traveled,42.07760592890151
 BMW/640d,Miles traveled,42.053334135587555
 Volkswagen/Golf 7,Miles traveled,41.15238420190868
@@ -891,99 +893,101 @@ BMW/F20,Miles traveled,40.8281769120611
 Alfa Romeo/MiTo,Miles traveled,40.40429624618537
 Mercedes-Benz/GL 350,Miles traveled,40.16927541174564
 Mercedes-Benz/C350e,Miles traveled,39.88816272360103
-Hyundai/Elantr,Miles traveled,39.87945519056097
+Hyundai/Elantr,Miles traveled,39.879455190560975
 Toyota/Urban Cruiser,Miles traveled,39.37561647063314
 Toyota/MR0DB9CD7N4989236,Miles traveled,39.161456245588894
 Lotus/Evora GT,Miles traveled,39.047233653455486
 Lexus/RZ 450e,Miles traveled,38.6496038277235
 Volkswagen/Teramont,Miles traveled,38.55915155997901
-Mercedes-Benz/GLB 200,Miles traveled,38.45342103481292
+Mercedes-Benz/GLB 200,Miles traveled,38.453421034812905
 Audi/SQ2,Miles traveled,38.316266001274144
 BMW/M240i x-drive,Miles traveled,38.229947830597915
-Dacia/Sandero,Miles traveled,37.87808456146042
-Chrysler/Pacifica Hybrid,Miles traveled,37.83050795881364
+Dacia/Sandero,Miles traveled,37.87808456146041
+Chrysler/Pacifica Hybrid,Miles traveled,37.830507958813634
 Ford/Flex,Miles traveled,37.415304933730674
 Kia/Bongo,Miles traveled,36.84534826234694
 Ora/Funky Cat,Miles traveled,36.235917877287605
 Nissan/X trail t33,Miles traveled,36.179495224043464
+Alfa Romeo/Junior,Miles traveled,36.15080855264128
 Acura/CL,Miles traveled,35.26269224199681
-Mazda/CX-3,Miles traveled,34.919710637643085
-Land Rover/4e,Miles traveled,34.704039883329685
-BYD/Sealion 7,Miles traveled,34.62425841773527
-Ford/Mach E,Miles traveled,34.3796087894638
+Mazda/CX-3,Miles traveled,34.91971063764308
+Land Rover/4e,Miles traveled,34.70403988332969
+BYD/Sealion 7,Miles traveled,34.62425841773528
+Ford/Mach E,Miles traveled,34.37960878946381
 Honda/WR-V,Miles traveled,34.271154921782255
 Nissan/4800 VTC,Miles traveled,34.2677036039129
 BYD/Seagull,Miles traveled,34.13256022350206
-Volkswagen/Touareg,Miles traveled,34.105964667530785
+Volkswagen/Touareg,Miles traveled,34.10596466753079
 Subaru/Impreza WRX,Miles traveled,33.975650158107236
-Mercedes-Benz/GLA 250e,Miles traveled,33.51589127041292
-ALL ABOUT TRAILERS/All About Trailers,Miles traveled,33.23488266764304
+Mercedes-Benz/GLA 250e,Miles traveled,33.51589127041293
+ALL ABOUT TRAILERS/All About Trailers,Miles traveled,33.23488266764305
 Bentley/Brooklands,Miles traveled,32.858599735200066
 BMW/520,Miles traveled,32.567776498271904
 Toyota/Fortuner Legender,Miles traveled,32.52110399793252
 BMW/318i,Miles traveled,32.45110642412963
 Aiways/U5,Miles traveled,32.32960986245404
 Mazda/Sedan,Miles traveled,32.28280741178125
-Polestar/4,Miles traveled,31.89467282553849
-Nissan/Pulsar,Miles traveled,30.899615304360854
-Honda/Brio,Miles traveled,30.410663515961463
-BMW/4.20i,Miles traveled,30.31949291563146
+Polestar/4,Miles traveled,31.894672825538485
+Nissan/Pulsar,Miles traveled,30.89961530436086
+Honda/Brio,Miles traveled,30.410663515961467
+BMW/4.20i,Miles traveled,30.319492915631464
 BMW/X4 M,Miles traveled,30.28678457692124
 FIAT/Pulse,Miles traveled,30.167507951459733
 Kia/Picanto 1.2,Miles traveled,30.030998201577507
 Maruti Suzuki/Baleno,Miles traveled,29.664571952137813
-Vauxhall-Opel/Meriva,Miles traveled,29.30363275136353
+Vauxhall-Opel/Meriva,Miles traveled,29.303632751363526
 Vauxhall-Opel/Karl,Miles traveled,29.186503200940184
-Renault/Sandero,Miles traveled,29.177441386491754
+Renault/Sandero,Miles traveled,29.177441386491758
 Changan/Cs95,Miles traveled,29.066982598836947
 Mercedes-Benz/E 200,Miles traveled,28.993940813220533
 Toyota/2023,Miles traveled,28.933796292113886
 Lexus/HS 250h,Miles traveled,28.155846014372262
 Mercedes-Benz/GLB 200d Automatic,Miles traveled,27.750517929501793
 LDV/T60 Max,Miles traveled,27.625168662495113
-Kia/Ceed CD,Miles traveled,27.574343041033234
+Kia/Ceed CD,Miles traveled,27.57434304103323
 Land Rover/Evoque,Miles traveled,27.55064441186889
 BMW/428i,Miles traveled,27.50016376994596
-Volkswagen/Nivus,Miles traveled,27.045097275775593
+Volkswagen/Nivus,Miles traveled,27.04509727577559
 chery/jetour,Miles traveled,26.755312749545276
 BYD/K11M,Miles traveled,26.592490788379397
 Mitsubishi/Eclipse,Miles traveled,26.575162605736246
-Chrysler/Voyager,Miles traveled,26.313343032972682
+Koria/2025,Miles traveled,26.322815551095065
+Chrysler/Voyager,Miles traveled,26.31334303297268
 Jaguar/S-Type,Miles traveled,26.151305604592157
-BMW/M340XI,Miles traveled,26.145356334725555
+BMW/M340XI,Miles traveled,26.14535633472556
 Maruti suzuki/S cross,Miles traveled,25.91947125587763
-Chery/Tiggo 1x,Miles traveled,25.907210774764984
-BMW/M850i,Miles traveled,25.5808669984039
-Lynk & Co/01,Miles traveled,25.373644619170733
+Chery/Tiggo 1x,Miles traveled,25.90721077476498
+BMW/M850i,Miles traveled,25.580866998403902
+Lynk & Co/01,Miles traveled,25.37364461917073
 BMW/X3 M,Miles traveled,25.25334570929666
-Mercedes-Benz/CLS,Miles traveled,25.24889234589458
+Mercedes-Benz/CLS,Miles traveled,25.248892345894586
 Renault/Arkana,Miles traveled,25.052551578890224
 Lexus/LX,Miles traveled,24.99489463093749
 INFINITI/M37,Miles traveled,24.96759314505352
+Hindai/Elntra,Miles traveled,24.539894519508945
 Renault/Trafic,Miles traveled,24.45146162171889
+KTM/Duke 390,Miles traveled,24.26392929593782
 Cadillac/XT5,Miles traveled,24.140590906952454
 Mercedes-Benz/C 300,Miles traveled,24.13946544108089
 BMW/750LiX,Miles traveled,23.954233551738426
 Seat/Cordoba,Miles traveled,23.953697422273994
-Gac/Empaw,Miles traveled,23.74041874552043
-Acura/TSX,Miles traveled,23.715571486556204
-Alfa Romeo/Junior,Miles traveled,23.54985944647942
-Vauxhall-Opel/Grandland,Miles traveled,23.53581242911245
+Gac/Empaw,Miles traveled,23.740418745520426
+Acura/TSX,Miles traveled,23.715571486556208
+Vauxhall-Opel/Grandland,Miles traveled,23.535812429112443
 Renault/Captur,Miles traveled,23.255169783189604
 Mercedes-Benz/CLA-Class,Miles traveled,23.153904194259557
 Toyota/Innova Zenix,Miles traveled,22.90909487103729
 Mercedes-Benz/G63,Miles traveled,22.83456435491797
-Hyundai/Azira,Miles traveled,22.58574974062238
 Volvo/V50,Miles traveled,22.52607488303967
 Kia/Kia K5 2023,Miles traveled,22.167408227779024
-INEOS/Grenadier,Miles traveled,22.01343540990259
+INEOS/Grenadier,Miles traveled,22.013435409902588
 Toyota/Auris Touring Sport,Miles traveled,21.932662005871972
 Volvo/S40,Miles traveled,21.62996434031876
 Honda/City GN2,Miles traveled,21.340262734876713
 Lexus/NX 300,Miles traveled,21.33814087406477
 Volkswagen/Fox,Miles traveled,21.305842670670312
 Mazda/Mazdaspeed 3,Miles traveled,20.94848028798064
-Buick/Envista,Miles traveled,20.675792237385377
+Buick/Envista,Miles traveled,20.675792237385384
 GAC/GS3 Emzoom R-Style,Miles traveled,20.592932568311696
 Land Rover/Discovery,Miles traveled,20.266960991761994
 Lexus/GX 470,Miles traveled,20.242811766858054
@@ -994,6 +998,7 @@ Lincoln/Aviator,Miles traveled,19.56558268014164
 Volkswagen/Scirocco,Miles traveled,19.526173702700294
 Volvo/C40 Recharge,Miles traveled,19.28898167945535
 Volkswagen/Bora,Miles traveled,19.197130934883145
+Mitsubishi/Mirage G4,Miles traveled,19.174041760260092
 Opel/Mokka,Miles traveled,19.116307070623254
 Toyota/Prius v,Miles traveled,18.80418155152616
 Audi/A8,Miles traveled,18.56004347944011
@@ -1001,10 +1006,10 @@ Renault/Symbioz,Miles traveled,18.442399191087308
 Hyundai/I30 sedan,Miles traveled,18.368297629270657
 Honda/Civic Type-R,Miles traveled,18.250552567477282
 Geely/Emgrand,Miles traveled,18.15782483052692
-Chevrolet/Cobalt,Miles traveled,18.149204059483104
+Chevrolet/Cobalt,Miles traveled,18.1492040594831
 DS/DS7,Miles traveled,18.024886612688338
-Changan/Uni t,Miles traveled,17.723775992618098
-Kia/Sportage PHEV,Miles traveled,17.511550362941406
+Changan/Uni t,Miles traveled,17.723775992618094
+Kia/Sportage PHEV,Miles traveled,17.511550362941403
 Jaecoo/J7,Miles traveled,17.4494946103934
 Jeep/Commander,Miles traveled,17.421463487042494
 GAC/GS3 EMZOOM,Miles traveled,17.26535110946892
@@ -1016,7 +1021,7 @@ Mercedes-Benz/CLA 200,Miles traveled,16.29067690331468
 Toyota/Yaris Cross Hybrid,Miles traveled,16.25778142887791
 Lexus/GS,Miles traveled,16.057247601921166
 Holden/Calais V,Miles traveled,15.931427322785625
-Mazda/CX-60,Miles traveled,15.793349179272758
+Mazda/CX-60,Miles traveled,15.793349179272756
 Jaecoo/J8,Miles traveled,15.760168424074333
 Mercedes-Benz/M-Class,Miles traveled,15.645060597043964
 Volkswagen/ID.7,Miles traveled,15.63507732215239
@@ -1026,23 +1031,22 @@ BMW/535d,Miles traveled,15.546730571706563
 HARLEY-DAVIDSON/FLTRX / Road Glide,Miles traveled,15.350588228862962
 MG/4,Miles traveled,15.307306435324278
 GWM/HAVAL,Miles traveled,15.212708547039325
-Jeep/Wagoneer,Miles traveled,14.889789718599038
+Jeep/Wagoneer,Miles traveled,15.185163950601824
 Nissan/Micra,Miles traveled,14.830012236022965
 Honda/NC700X,Miles traveled,14.673270686980178
 HARLEY-DAVIDSON/Electra Glide Ultra Classic,Miles traveled,14.627987102470488
-Mitsubishi/Mirage G4,Miles traveled,14.3436404783806
+Toyota/Korla,Miles traveled,14.246654884816504
 Peugeot/E2008 GT,Miles traveled,14.20387389240361
 Honda/Civic del Sol,Miles traveled,14.180358692852739
 FIAT/500 abarth,Miles traveled,14.09000888143338
-Chevrolet/Express Cargo,Miles traveled,13.862316590611181
+Chevrolet/Express Cargo,Miles traveled,13.86231659061118
 BMW/8 Series Gran Coupe,Miles traveled,13.851050099371422
-Toyota/Aqua,Miles traveled,13.81292390506805
+Toyota/Aqua,Miles traveled,13.812923905068047
 HongQi/Ousado,Miles traveled,13.806726644207213
 BMW/M440i xDrive,Miles traveled,13.558904187996577
 Mitsubishi/Pajero,Miles traveled,13.497173169278254
 Toyota/Crown Signia,Miles traveled,13.444966563930215
 Dacia/Duster II,Miles traveled,13.298674840461521
-Toyota/Korla,Miles traveled,13.279189241616841
 BMW/530D,Miles traveled,13.057317807080903
 BMW/Serie 3 F34 GT,Miles traveled,12.968364774254809
 BMW/Serie1,Miles traveled,12.888968314334942
@@ -1051,23 +1055,24 @@ Kia/Niro 3,Miles traveled,12.536110108121749
 INFINITI/M35,Miles traveled,12.415759159466365
 BMW/428 f32,Miles traveled,11.9958547767439
 Volkswagen/Crafter,Miles traveled,11.945376402692444
-Renault/Zoe INTENS (Selection) R135,Miles traveled,11.814517887758866
+Renault/Zoe INTENS (Selection) R135,Miles traveled,11.814517887758864
+Chevrolet/Scala,Miles traveled,11.79110268694276
 Toyota/Auris,Miles traveled,11.726596026271475
 Chevrolet/Cavalier,Miles traveled,11.380208632606797
 BMW/730D,Miles traveled,11.327511966810937
-Volkswagen/Transporter,Miles traveled,11.112922369839325
+Volkswagen/Transporter,Miles traveled,11.112922369839326
 GMC/Sierra HD,Miles traveled,11.108693128732007
 Genesis/GV60,Miles traveled,11.038005121128391
 Hyundai/Veracruz,Miles traveled,11.01535186939365
 Mercedes-Benz/GLA-Class,Miles traveled,10.984223035851608
 Kia/Niro 4,Miles traveled,10.821035270675427
-Mazda/MX-5,Miles traveled,10.76388235811607
+Mazda/MX-5,Miles traveled,10.763882358116073
 BMW/545e,Miles traveled,10.6977070056352
 GMC/Sierra 3500HD,Miles traveled,10.652123287688056
 Volkswagen/Virtus,Miles traveled,10.593682950890772
 BMW/M135,Miles traveled,10.5295833071189
 Buick/Enclave,Miles traveled,10.493603577982146
-Ford/Capri,Miles traveled,10.493322188450875
+Ford/Capri,Miles traveled,10.493322188450872
 Ford/C-Max Energi,Miles traveled,10.440594619757025
 Toyota/Land Crusier LC300,Miles traveled,10.433229714332105
 Mazda/Mazda2,Miles traveled,10.30652271151744
@@ -1088,38 +1093,38 @@ Toyota/Prius Prime Plugin,Miles traveled,9.161630758090281
 Lexus/LS 400,Miles traveled,9.077215439728635
 Subaru/STI S209,Miles traveled,8.974790300461333
 BMW/520i Touring,Miles traveled,8.93102169566037
-Koria/2025,Miles traveled,8.90431112792106
 BMW/2 Series Plug-in Hybrid,Miles traveled,8.874069004267243
 Changan/Edo plus,Miles traveled,8.833973382695113
 Chevrolet/2500hd,Miles traveled,8.814985791925148
 Skoda/Fabia 4,Miles traveled,8.650534811927441
 Mazda/mazda 6,Miles traveled,8.562346448071823
-Volkswagen/Sharan,Miles traveled,8.40832691474025
+Volkswagen/Sharan,Miles traveled,8.408326914740252
 BMW/730,Miles traveled,8.393663411951744
 Mercury/Milan,Miles traveled,8.095737056812153
 Kia/E.g,Miles traveled,8.085833541433308
 Mercedes-Benz/CLK,Miles traveled,8.036950949005787
-Vauxhall-Opel/Mokka,Miles traveled,7.758752197505089
+Vauxhall-Opel/Mokka,Miles traveled,7.758752197505088
 BYD/Song plus,Miles traveled,7.748988694251767
 BMW/X6,Miles traveled,7.736530027135641
 Tata/Nexon,Miles traveled,7.697718624971139
 BYD/Sealion 6,Miles traveled,7.650994757643418
+Skoda/Octavia scout,Miles traveled,7.607899281976049
 Subaru/Tribeca,Miles traveled,7.587476277749518
-Mercedes-Benz/EQS,Miles traveled,7.511889505607344
+Mercedes-Benz/EQS,Miles traveled,7.511889505607343
 Mercedes-Benz/G 63 AMG,Miles traveled,7.507489786694473
 Volkswagen/ID.6,Miles traveled,7.462125440882079
-Skoda/Octavia scout,Miles traveled,7.202534187324467
 Suzuki/Ciaz,Miles traveled,7.167623250481712
 Skoda/Superb 3V,Miles traveled,7.15289493595586
 Kia/Carnival / Sedona,Miles traveled,7.147661068890082
-FIAT/Tipo,Miles traveled,7.006612087798826
+FIAT/Tipo,Miles traveled,7.0066120877988265
 Mercedes-Benz/C400,Miles traveled,6.929357608947236
 SsangYong/Rexton,Miles traveled,6.916552710264123
-Mercedes-Benz/E300,Miles traveled,6.913928952195197
+Mercedes-Benz/E300,Miles traveled,6.913928952195198
 Ram/3500,Miles traveled,6.906679922541388
 Volkswagen/Passat B8,Miles traveled,6.790033690972859
 Mercedes-Benz/B-Class,Miles traveled,6.726294915554463
 Lexus/RX 500h,Miles traveled,6.659545729229955
+Toyota/HILUX 150 SER,Miles traveled,6.622054450464207
 Peugeot/505,Miles traveled,6.592945705837696
 Kia/Soluto,Miles traveled,6.543989807744799
 BMW/220i,Miles traveled,6.534720420460842
@@ -1129,7 +1134,7 @@ Geely/Emagrandi,Miles traveled,6.38599313191059
 Renault/Grand Scenic,Miles traveled,6.370596573441364
 BMW/E82 1 SERIES,Miles traveled,6.34905384813975
 BMW/iX2,Miles traveled,6.30894624569313
-BMW/3,Miles traveled,6.2715649338721375
+BMW/3,Miles traveled,6.271564933872139
 Chevrolet/Bolt,Miles traveled,6.238307029070974
 BMW/750i,Miles traveled,6.196766805605236
 BMW/420d,Miles traveled,6.167445771801974
@@ -1167,7 +1172,7 @@ Mercedes-Benz/E-class cab.,Miles traveled,4.764326712413244
 Seat/Altea,Miles traveled,4.7517228475303055
 Cadillac/ELR,Miles traveled,4.668346132152253
 BMW/Serie 2,Miles traveled,4.647013916753155
-Peugeot/407,Miles traveled,4.61519200558157
+Peugeot/407,Miles traveled,4.615192005581571
 Geely/Monjato,Miles traveled,4.601882968754198
 Chevrolet/Montana,Miles traveled,4.576382479283156
 Land Rover/HSE,Miles traveled,4.557895651132202
@@ -1197,6 +1202,7 @@ Honda/City,Miles traveled,3.527473217282167
 Mercedes-Benz/C 63 AMG,Miles traveled,3.46335520200882
 Dacia/Lodgy,Miles traveled,3.4593121115560868
 Mercury/Sable,Miles traveled,3.434137069741678
+Vw/Tiguan,Miles traveled,3.3750473351819625
 Toyota/Land Cruiser LC300,Miles traveled,3.3661909654260205
 Toyota/MR2,Miles traveled,3.3254048605358313
 Audi/A3 sportback,Miles traveled,3.261396688041491
@@ -1247,7 +1253,7 @@ Ford/Ka,Miles traveled,2.040254639158006
 Chevrolet/Pontiac,Miles traveled,2.032342667902469
 OPEL/Crossland X,Miles traveled,2.019673269995854
 Peugeot/308 SW,Miles traveled,2.0094845385215767
-Nissan/All New Livina,Miles traveled,2.0093696059804675
+Nissan/All New Livina,Miles traveled,2.009369605980467
 faw/B70,Miles traveled,2.0031520102013167
 GAC/GS4,Miles traveled,1.9879706254593144
 Kia/Carens 3,Miles traveled,1.9836076312324817
@@ -1256,7 +1262,6 @@ Chrysler/Sebring,Miles traveled,1.951969837990126
 Peugeot/Partner,Miles traveled,1.9462596101846377
 MINI/Hatch,Miles traveled,1.9381858401197711
 Kia/Siltos,Miles traveled,1.906436447900636
-Toyota/HILUX 150 SER,Miles traveled,1.900301423629477
 Chevrolet/Corvette Stingray,Miles traveled,1.878208640075285
 Nissan/Qashqai +2,Miles traveled,1.8330023656706165
 International/Travelall,Miles traveled,1.82136057318119
@@ -1273,7 +1278,6 @@ DR/5.0 S3,Miles traveled,1.7048944644439146
 Mercedes-Benz/GLE-Class Coupe,Miles traveled,1.690184785112176
 BMW/228i,Miles traveled,1.6389492032698534
 Citroen/C3 Aircross,Miles traveled,1.63214886230831
-Geely/Preface,Miles traveled,1.6135401410620867
 BMW/G31,Miles traveled,1.606787985692291
 Renault/Clio IV,Miles traveled,1.6018289872397875
 Renault/Laguna,Miles traveled,1.5901166573838057
@@ -1327,7 +1331,7 @@ Honda/Vezel,Miles traveled,0.9826376922362448
 Haval/F7,Miles traveled,0.9515705722526931
 Chevrolet/SS,Miles traveled,0.9349699203038659
 Toyota/Proace,Miles traveled,0.9100285070808876
-FIAT/Punto,Miles traveled,0.9066606839931839
+FIAT/Punto,Miles traveled,0.9066606839931838
 Kia/K8,Miles traveled,0.8727417737681061
 Mazda/MAZDA6,Miles traveled,0.8593870299667765
 Volvo/S80,Miles traveled,0.8112977545208412
@@ -1448,6 +1452,7 @@ Mercedes-Benz/A45,Miles traveled,0.11272680522032635
 Dacia/Logan,Miles traveled,0.11014631704026615
 Nissan/Tiida,Miles traveled,0.10415686013070331
 Nissan/Platinum City,Miles traveled,0.10257366480220667
+BMW/X3 M40d,Miles traveled,0.09429287933999576
 Skoda/Octavia,Miles traveled,0.09295548848414817
 Toyota/RAV4 Prime Plugin Hybrid,Miles traveled,0.08897355859970013
 Volkswagen/Vento,Miles traveled,0.08877147852468337
