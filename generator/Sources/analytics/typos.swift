@@ -103,6 +103,8 @@ let typoCorrections: [String: String] = [
   "Ma/Outback": "Subaru/Outback",
   "Maruti /Baleno": "Maruti Suzuki/Baleno",
   "Mazada/Mazada 6": "Mazda/Mazda6",
+  "Mazda/MX-5 Miata RF": "Mazda/MX-5",
+  "Mazda/MX-5 Miata": "Mazda/MX-5",
   "Mazda 6/": "Mazda/6",
   "Meganr/": "Renault/Megane",
   "Mercedec/G class": "Mercedes-Benz/G-Class",
