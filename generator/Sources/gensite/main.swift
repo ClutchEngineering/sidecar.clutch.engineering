@@ -54,23 +54,6 @@ if args.count > 1 && !args[1].hasPrefix("--") {
   workspacePath = workspaceURL.path
 }
 
-// Create Airtable client
-let airtableClient = AirtableClient(baseID: airtableBaseID, apiKey: airtableAPIKey)
-
-// Load and merge vehicle data
-print("Loading vehicle metadata from: \(workspacePath)")
-if useCache {
-  print("Using cached data if available")
-}
-
-let supportMatrix = try await MergedSupportMatrix.load(
-  using: airtableClient,
-  projectRoot: projectRoot,
-  modelsTableID: modelsTableID,
-  workspacePath: workspacePath,
-  useCache: useCache
-)
-
 print("Generating sitemap...")
 
 var sitemap: Sitemap = [
@@ -89,15 +72,38 @@ var sitemap: Sitemap = [
   "scanning/index.html": Scanning(),
   "scanning/extended-pids/index.html": ExtendedParameters(),
   "bug/index.html": Bug(),
-  "supported-cars/index.html": MakeGridPage(supportMatrix: supportMatrix),
   "beta/index.html": BetaTesterHandbook(),
-  "leaderboard/index.html": LeaderboardPage(supportMatrix: supportMatrix),
-  "leaderboard/last24hours/index.html": Leaderboard24HoursPage(supportMatrix: supportMatrix),
-  "leaderboard/makes/index.html": LeaderboardByMakePage(supportMatrix: supportMatrix),
+  "beta/redeem/index.html": RedeemBetaCode(),
   "beta/leaderboard/index.html": Redirect(URL(string: "/leaderboard")),
   "leave-a-review/index.html": Redirect(URL(string: "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1663683832&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software")),
   "help/index.html": Help(),
 ]
+
+// Create Airtable client
+let airtableClient = AirtableClient(baseID: airtableBaseID, apiKey: airtableAPIKey)
+
+// Load and merge vehicle data
+print("Loading vehicle metadata from: \(workspacePath)")
+if useCache {
+  print("Using cached data if available")
+}
+
+let supportMatrix = try await MergedSupportMatrix.load(
+  using: airtableClient,
+  projectRoot: projectRoot,
+  modelsTableID: modelsTableID,
+  workspacePath: workspacePath,
+  useCache: useCache
+)
+
+sitemap.merge([
+  "supported-cars/index.html": MakeGridPage(supportMatrix: supportMatrix),
+  "leaderboard/index.html": LeaderboardPage(supportMatrix: supportMatrix),
+  "leaderboard/last24hours/index.html": Leaderboard24HoursPage(supportMatrix: supportMatrix),
+  "leaderboard/makes/index.html": LeaderboardByMakePage(supportMatrix: supportMatrix),
+],
+uniquingKeysWith: { first, second in first }
+)
 
 for make in supportMatrix.getAllMakes() {
   guard let url = MakeLink.url(for: make) else {

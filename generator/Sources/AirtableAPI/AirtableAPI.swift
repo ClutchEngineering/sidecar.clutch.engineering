@@ -302,9 +302,10 @@ public actor AirtableClient {
 
     let (data, response) = try await session.data(for: request)
 
-    guard let httpResponse = response as? HTTPURLResponse,
-      (200...299).contains(httpResponse.statusCode)
-    else {
+    guard let httpResponse = response as? HTTPURLResponse else {
+      throw AirtableError.invalidResponse
+    }
+    guard (200...299).contains(httpResponse.statusCode) else {
       throw AirtableError.invalidResponse
     }
 
@@ -402,10 +403,13 @@ public actor AirtableClient {
     request.httpBody = try JSONSerialization.data(withJSONObject: payload)
 
     let (data, response) = try await session.data(for: request)
-    guard let httpResponse = response as? HTTPURLResponse,
-      (200...299).contains(httpResponse.statusCode) else {
+    guard let httpResponse = response as? HTTPURLResponse else {
       throw AirtableError.invalidResponse
     }
+    guard (200...299).contains(httpResponse.statusCode) else {
+      throw AirtableError.invalidResponse
+    }
+
   }
 }
 
