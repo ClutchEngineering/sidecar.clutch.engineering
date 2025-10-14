@@ -93,12 +93,17 @@ jobs:
       - name: Create failure message
         if: failure()
         run: |
-          echo "❌ **Export Data Job Failed**
+          mkdir -p generator
+          cat > generator/discord_message.txt << 'EOF'
+          ❌ **Export Data Job Failed**
 
           The daily PostHog export job has failed. Please check the workflow logs for details.
 
           Workflow: ${{ github.workflow }}
-          Run: ${{ github.run_id }}" > generator/discord_message.txt
+          Run: ${{ github.run_id }}
+
+          Logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          EOF
 
       - name: Read Discord message
         id: discord_message
