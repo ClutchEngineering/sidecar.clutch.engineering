@@ -90,12 +90,32 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
+      - name: Create failure message
+        if: failure()
+        run: |
+          mkdir -p generator
+          cat > generator/discord_message.txt << 'EOF'
+          ❌ **Export Data Job Failed**
+
+          The daily PostHog export job has failed. Please check the workflow logs for details.
+
+          Workflow: ${{ github.workflow }}
+          Run: ${{ github.run_id }}
+
+          Logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          EOF
+
       - name: Read Discord message
         id: discord_message
+        if: always()
         run: |
           EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
           echo "DISCORD_CONTENT<<$EOF" >> $GITHUB_OUTPUT
-          echo "$(perl -pe 's/\n/\\n/' generator/discord_message.txt)" >> $GITHUB_OUTPUT
+          if [ -f generator/discord_message.txt ]; then
+            echo "$(perl -pe 's/\n/\\n/' generator/discord_message.txt)" >> $GITHUB_OUTPUT
+          else
+            echo "No message file found" >> $GITHUB_OUTPUT
+          fi
           echo "$EOF" >> $GITHUB_OUTPUT
 
       - uses: sarisia/actions-status-discord@v1
@@ -108,10 +128,12 @@ jobs:
           ack_no_webhook: true
           content: ${{ env.DISCORD_CONTENT }}
           status: ${{ job.status }}
-          title: "📊 Leaderboard Update"
+          title: ${{ job.status == 'success' && '📊 Leaderboard Update' || '❌ Export Data Failed' }}
 
       - run: npm install axios
+        if: always()
       - uses: actions/github-script@v7
+        if: always()
         env:
           WEBHOOK_PAYLOAD: ${{ steps.webhook.outputs.payload }}
           WEBHOOK_URL: ${{ secrets.DISCORD_LEADERBOARD_WEBHOOK_URL }}
