@@ -76,7 +76,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'G-TDB4CTWESJ');
-""")i
+""")
       }
       Body {
         DocumentMain {
