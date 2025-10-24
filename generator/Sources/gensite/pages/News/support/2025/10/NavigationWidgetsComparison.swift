@@ -16,7 +16,7 @@ struct News_2025_10_23_NavigationWidgetsComparison: View {
         Image(URL(string: "/gfx/news/2025/10/carplay-navigation-before.png"))
       }
       VStack(alignment: .center) {
-        Text("Without Sidecar navigation widgets")
+        Text("With Sidecar navigation widgets")
           .bold()
         Text("The canvas if fully yours")
           .fontSize(.small)
