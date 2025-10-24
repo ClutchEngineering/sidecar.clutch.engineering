@@ -18,7 +18,7 @@ struct News_2025_10_23_NavigationWidgetsComparison: View {
       VStack(alignment: .center) {
         Text("With Sidecar navigation widgets")
           .bold()
-        Text("The canvas if fully yours")
+        Text("The canvas is fully yours")
           .fontSize(.small)
           .italic()
           .padding(.bottom, 8)
