@@ -6,8 +6,18 @@ import Foundation
 @main
 struct ModelsListApp {
   static func main() async throws {
+  // Assumes this file is located in a Sources/gensite sub-directory of a Swift package.
+  guard let projectRoot = URL(filePath: #filePath)?
+    .deletingLastPathComponent()
+    .deletingLastPathComponent()
+    .deletingLastPathComponent()
+    .deletingLastPathComponent() else {
+    print("Unable to create URL for \(#filePath)")
+    exit(1)
+  }
+
     // Load environment variables from .env file if it exists
-    DotEnv.load()
+    DotEnv.load(from: projectRoot.appending(path: ".env").path())
 
     guard let airtableAPIKey = ProcessInfo.processInfo.environment["AIRTABLE_API_KEY"] else {
       fatalError("Missing AIRTABLE_API_KEY")
