@@ -2,6 +2,7 @@ import Foundation
 
 import AirtableAPI
 import DotEnvAPI
+import Markdown
 import VehicleSupportMatrix
 
 import Slipstream
@@ -15,6 +16,10 @@ guard let projectRoot = URL(filePath: #filePath)?
   print("Unable to create URL for \(#filePath)")
   exit(1)
 }
+guard let blogURLPrefix = URL(string: "/news/") else {
+  fatalError()
+}
+let postsURL = projectRoot.appending(path: "posts")
 
 let outputURL = projectRoot.appending(path: "site")
 
@@ -78,6 +83,92 @@ var sitemap: Sitemap = [
   "leave-a-review/index.html": Redirect(URL(string: "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=1663683832&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software")),
   "help/index.html": Help(),
 ]
+
+func allBlogFiles(in directory: URL?) -> [URL] {
+  guard let directory else {
+    return []
+  }
+  var markdownFiles: [URL] = []
+  guard let enumerator = FileManager.default.enumerator(at: directory, includingPropertiesForKeys: nil) else {
+    return markdownFiles
+  }
+  for case let fileURL as URL in enumerator {
+    if fileURL.pathExtension == "md" {
+      markdownFiles.append(fileURL)
+    }
+  }
+  return markdownFiles.sorted { $0.path() < $1.path() }
+}
+
+func postURL(filePath file: URL) throws -> BlogPost? {
+  let datedSlug = file.deletingPathExtension().lastPathComponent
+  var parts = datedSlug.components(separatedBy: "-")
+  guard parts.count > 3 else {
+    print("Malformed slug: ", file)
+    return nil
+  }
+  guard let year = Int(parts[0]),
+        let month = Int(parts[1]),
+        let day = Int(parts[2]) else {
+    print("Malformed slug date: ", file)
+    return nil
+  }
+  let components = DateComponents(calendar: .current, year: year, month: month, day: day)
+  guard let date = Calendar.current.date(from: components) else {
+    print("Invalid date components: \(components)")
+    return nil
+  }
+
+  parts.removeFirst(3)
+  let slug = parts.joined(separator: "-")
+
+  let postContent = try String(contentsOf: file, encoding: .utf8)
+  let document = Document(parsing: postContent)
+
+  let documentHeading = (document.children.first { node in
+    if let heading = node as? Markdown.Heading,
+       heading.level == 1 {
+      return true
+    }
+    return false
+  } as? Markdown.Heading)?.plainText
+
+  let tableOfContents = document.children.compactMap { node in
+    return node as? Markdown.Heading
+  }
+
+  let outputURL = blogURLPrefix
+    .appending(components: String(format: "%04d", year), String(format: "%02d", month), String(format: "%02d", day))
+    .appending(path: slug)
+    .appending(path: "index")
+    .appendingPathExtension("html")
+  return BlogPost(
+    fileURL: file,
+    slug: slug,
+    outputURL: outputURL,
+    url: outputURL.deletingLastPathComponent(),
+    date: date,
+    draft: file.deletingLastPathComponent().lastPathComponent == "Drafts",
+    title: documentHeading,
+    tableOfContents: tableOfContents,
+    content: postContent,
+    document: document
+  )
+}
+
+let posts = try allBlogFiles(in: postsURL).compactMap { try postURL(filePath: $0) }
+for (index, post) in posts.enumerated() {
+  let previous = index > 0 ? posts[index - 1] : nil
+  let next = (index < posts.count - 1) ? posts[index + 1] : nil
+
+  sitemap[post.outputURL.path()] = BlogPostView(
+    post: post,
+    next: next,
+    previous: previous
+  )
+}
+
+sitemap["blog/index.html"] = BlogList(posts: posts)
 
 // Create Airtable client
 let airtableClient = AirtableClient(baseID: airtableBaseID, apiKey: airtableAPIKey)

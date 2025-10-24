@@ -3,7 +3,7 @@ import Foundation
 @preconcurrency import Markdown
 import Slipstream
 
-private struct TOCHyperlink: View {
+struct TOCHyperlink: View {
   let url: URL?
   let text: String
   var body: some View {
@@ -18,7 +18,7 @@ private struct TOCHyperlink: View {
   }
 }
 
-private struct TOCListItem<Content: View>: View {
+struct TOCListItem<Content: View>: View {
   let content: @Sendable () -> Content
 
   var body: some View {
