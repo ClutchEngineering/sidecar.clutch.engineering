@@ -8,7 +8,7 @@ struct MakeGridPage: View {
   let supportMatrix: MergedSupportMatrix
   let makes: [String]
 
-  init(supportMatrix: MergedSupportMatrix) {
+  init(supportMatrix: MergedSupportMatrix, outputURL: URL) {
     self.supportMatrix = supportMatrix
     let gfxURL = outputURL.appending(path: "gfx/make")
     let fm = FileManager.default

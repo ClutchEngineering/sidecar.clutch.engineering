@@ -11,6 +11,7 @@ let package = Package(
   dependencies: [
     .package(url: "https://github.com/jverkoey/slipstream.git", branch: "main"),
     .package(url: "https://github.com/jpsim/Yams.git", from: "5.1.3"),
+    .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.5.0"),
   ],
   targets: [
     .executableTarget(name: "analytics", dependencies: [
@@ -34,6 +35,7 @@ let package = Package(
       "AirtableAPI",
       "DotEnvAPI",
       .product(name: "Slipstream", package: "slipstream"),
+      .product(name: "ArgumentParser", package: "swift-argument-parser"),
       "VehicleSupport",
       "VehicleSupportMatrix",
     ], resources: [
