@@ -247,7 +247,7 @@ struct LeaderboardByMakePage: View {
         URL(string: "/scripts/miles-counter.js")
       ]
     ) {
-      SupportedCarsNavigation()
+      FeaturesBreadcrumb()
 
       ContentContainer {
         ContentContainer {

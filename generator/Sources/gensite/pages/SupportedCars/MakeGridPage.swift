@@ -36,8 +36,6 @@ struct MakeGridPage: View {
         "vehicle connectivity",
       ]
     ) {
-      SupportedCarsNavigation()
-
       ContentContainer {
         VStack(alignment: .center) {
           HeroIconPuck(url: URL(string: "/gfx/supported-vehicle.png")!)

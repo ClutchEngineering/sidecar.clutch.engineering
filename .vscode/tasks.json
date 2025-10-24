@@ -43,7 +43,7 @@
         {
             "label": "Watch Blog Posts",
             "type": "shell",
-            "command": "fswatch -o posts/ | while read f; do echo 'Posts changed, regenerating blog...'; cd generator && swift run gensite --blog; done",
+            "command": "cd generator; fswatch -o ../posts/ | while read f; do echo 'Posts changed, regenerating blog...'; swift run gensite --blog; done",
             "presentation": {
                 "reveal": "always",
                 "panel": "dedicated",

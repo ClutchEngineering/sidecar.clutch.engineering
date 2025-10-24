@@ -101,6 +101,7 @@ struct Gensite: AsyncParsableCommand {
           introText: "ELMCheck is the easiest way to check the authenticity of your OBD scanner.",
           publicationDate: "October 2, 2024"
         ),
+        "features/index.html": Features(),
         "shortcuts/index.html": Shortcuts(),
         "scanning/index.html": Scanning(),
         "scanning/extended-pids/index.html": ExtendedParameters(),

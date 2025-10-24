@@ -41,7 +41,7 @@ struct PostView: View {
       let headings = post.tableOfContents.filter({ $0.level == 2 })
       if !headings.isEmpty {
         Div {
-          Slipstream.Text("Quick links")
+          Slipstream.Text("On this page")
             .bold()
           Slipstream.List {
             for heading in headings {

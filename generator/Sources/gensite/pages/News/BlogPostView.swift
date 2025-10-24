@@ -47,7 +47,7 @@ struct BlogPostView: View {
           .placement(top: 16)
         }
 
-        Container {
+        NarrowContainer {
           navigation
           Div {
             let postDate = post.date.formatted(date: .abbreviated, time: .omitted)
@@ -71,6 +71,7 @@ struct BlogPostView: View {
         .textColor(.text, darkness: 950)
         .textColor(.text, darkness: 200, condition: .dark)
         .padding(.horizontal, 4)
+        .padding(.top, 8)
         .padding(.bottom, 32)
       }
       .position(.relative)
