@@ -18,24 +18,22 @@ struct Help: View {
       ]
     ) {
       ContentContainer {
-        ContentContainer {
-          VStack(alignment: .center) {
-            HeroIconPuck(url: URL(string: "/gfx/help.png")!)
+        VStack(alignment: .center) {
+          HeroIconPuck(url: URL(string: "/gfx/help.png")!)
 
-            Div {
-              H1("Help resources")
-                .fontSize(.fourXLarge)
-                .bold()
-                .fontDesign("rounded")
-              Text("Stuck? Find the guidance you need here")
-                .fontSize(.large)
-            }
-            .textAlignment(.center)
+          Div {
+            H1("Help resources")
+              .fontSize(.fourXLarge)
+              .bold()
+              .fontDesign("rounded")
+            Text("Stuck? Find the guidance you need here")
+              .fontSize(.large)
           }
-          .padding(.vertical, 16)
+          .textAlignment(.center)
         }
-        .margin(.bottom, 16)
+        .padding(.vertical, 16)
       }
+      .margin(.bottom, 16)
 
       PostView("""
 I don't see my scanner in Sidecar

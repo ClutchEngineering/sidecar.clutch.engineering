@@ -19,25 +19,25 @@ struct BetaTesterHandbook: View {
         "vehicle connectivity",
       ]
     ) {
-      ContentContainer {
-        ContentContainer {
-          VStack(alignment: .center) {
-            HeroIconPuck(url: URL(string: "/gfx/supported-vehicle.png")!)
+      FeaturesBreadcrumb()
 
-            Div {
-              H1("Become a Sidecar beta tester")
-                .fontSize(.fourXLarge)
-                .bold()
-                .fontDesign("rounded")
-              Text("Get a free \(betaSubscriptionLength) month subscription")
-                .fontSize(.large)
-            }
-            .textAlignment(.center)
+      ContentContainer {
+        VStack(alignment: .center) {
+          HeroIconPuck(url: URL(string: "/gfx/supported-vehicle.png")!)
+
+          Div {
+            H1("Become a Sidecar beta tester")
+              .fontSize(.fourXLarge)
+              .bold()
+              .fontDesign("rounded")
+            Text("Get a free \(betaSubscriptionLength) month subscription")
+              .fontSize(.large)
           }
-          .padding(.vertical, 16)
+          .textAlignment(.center)
         }
-        .margin(.bottom, 16)
+        .padding(.vertical, 16)
       }
+      .margin(.bottom, 16)
 
       PostView("""
 About the Beta Tester Program

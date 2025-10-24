@@ -8,6 +8,14 @@ struct NavigationFooter: View {
     Footer {
       Container {
         VStack(alignment: .leading, spacing: 16) {
+          HStack(spacing: 16) {
+            Link("Privacy Policy", destination: URL(string: "/privacy-policy"))
+              .textColor(.link, darkness: 300)
+              .fontWeight(.medium)
+              .underline(condition: .hover)
+          }
+          .margin(.bottom, 8)
+
           Text("Apple Watch, watchOS and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries and regions.")
           Text("Third party logos and brand names are used for information purposes only and do not necessarily indicate affiliation with Sidecar or Clutch Engineering.")
           Text {

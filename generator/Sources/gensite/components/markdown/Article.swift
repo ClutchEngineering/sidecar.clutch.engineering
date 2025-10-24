@@ -81,6 +81,12 @@ struct Article: View {
     self.document = document
   }
 
+  let injectables: [String: any View] = [
+    "News_2025_10_23_FeatureTable": News_2025_10_23_FeatureTable(),
+    "News_2025_10_23_NavigationWidgetsComparison": News_2025_10_23_NavigationWidgetsComparison(),
+
+  ]
+
   var body: some View {
     MarkdownText(document) { node, context in
       switch node {
@@ -88,24 +94,29 @@ struct Article: View {
         Slipstream.DOMString(text.string)
 
       case let codeBlock as Markdown.CodeBlock:
-        Slipstream.Preformatted {
-          DOMString(codeBlock.code)
+        let sanitized = codeBlock.code.trimmingCharacters(in: .whitespacesAndNewlines)
+        if sanitized.hasPrefix("#insert:"),
+          let injectable = injectables[String(sanitized.dropFirst("#insert:".count))] {
+          AnyView(injectable)
+        } else {
+          Slipstream.Preformatted {
+            DOMString(codeBlock.code)
+          }
+          .textColor(.zinc, darkness: 950)
+          .textColor(.zinc, darkness: 50, condition: .dark)
+          .fontWeight(500)
+          .padding(16)
+          .border(.init(.zinc, darkness: 300))
+          .border(.init(.zinc, darkness: 700), condition: .dark)
+          .cornerRadius(.medium)
+          .margin(.bottom, 16)
+          .fontDesign(.monospaced)
+          .background(.zinc, darkness: 200)
+          .background(.black, condition: .dark)
+          .fontSize(.extraSmall)
+          .fontSize(.small, condition: .desktop)
+          .modifier(ClassModifier(add: "overflow-scroll"))
         }
-        .textColor(.zinc, darkness: 950)
-        .textColor(.zinc, darkness: 50, condition: .dark)
-        .fontWeight(500)
-        .padding(16)
-        .border(.init(.zinc, darkness: 300))
-        .border(.init(.zinc, darkness: 700), condition: .dark)
-        .cornerRadius(.medium)
-        .margin(.bottom, 16)
-        .fontDesign(.monospaced)
-        .background(.zinc, darkness: 200)
-        .background(.black, condition: .dark)
-        .fontSize(.extraSmall)
-        .fontSize(.small, condition: .desktop)
-        .modifier(ClassModifier(add: "overflow-scroll"))
-
       case let inlineCode as Markdown.InlineCode:
         Slipstream.Code {
           DOMString(inlineCode.code)

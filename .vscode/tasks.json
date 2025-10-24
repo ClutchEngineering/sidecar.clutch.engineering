@@ -41,11 +41,38 @@
             "problemMatcher": []
         },
         {
+            "label": "Watch Blog Posts",
+            "type": "shell",
+            "command": "cd generator; fswatch -o ../posts/ | while read f; do echo 'Posts changed, regenerating blog...'; swift run gensite --blog; done",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "dev-server"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
             "label": "Dev Environment",
             "dependsOrder": "parallel",
             "dependsOn": [
                 "Start HTTP Server",
                 "Tailwind CSS Watch"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "group": "dev-server"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Dev Environment with Blog Watch",
+            "dependsOrder": "parallel",
+            "dependsOn": [
+                "Start HTTP Server",
+                "Tailwind CSS Watch",
+                "Watch Blog Posts"
             ],
             "presentation": {
                 "reveal": "always",

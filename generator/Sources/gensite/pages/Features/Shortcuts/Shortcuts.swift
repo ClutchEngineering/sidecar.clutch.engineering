@@ -80,6 +80,8 @@ struct Shortcuts: View {
         "vehicle connectivity",
       ]
     ) {
+      FeaturesBreadcrumb()
+
       Container {
         Section {
           VStack(alignment: .center) {

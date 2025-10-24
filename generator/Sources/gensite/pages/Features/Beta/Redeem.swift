@@ -18,6 +18,8 @@ struct RedeemBetaCode: View {
       ],
       scripts: [URL(string: "/scripts/redeem.js")],
     ) {
+      FeaturesBreadcrumb()
+
       Container {
         VStack(alignment: .center) {
           HeroIconPuck(url: URL(string: "/gfx/appicon.gif")!)

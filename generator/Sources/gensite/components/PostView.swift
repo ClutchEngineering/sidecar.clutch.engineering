@@ -3,7 +3,7 @@ import Foundation
 @preconcurrency import Markdown
 import Slipstream
 
-private struct TOCHyperlink: View {
+struct TOCHyperlink: View {
   let url: URL?
   let text: String
   var body: some View {
@@ -18,7 +18,7 @@ private struct TOCHyperlink: View {
   }
 }
 
-private struct TOCListItem<Content: View>: View {
+struct TOCListItem<Content: View>: View {
   let content: @Sendable () -> Content
 
   var body: some View {
@@ -41,7 +41,7 @@ struct PostView: View {
       let headings = post.tableOfContents.filter({ $0.level == 2 })
       if !headings.isEmpty {
         Div {
-          Slipstream.Text("Quick links")
+          Slipstream.Text("On this page")
             .bold()
           Slipstream.List {
             for heading in headings {

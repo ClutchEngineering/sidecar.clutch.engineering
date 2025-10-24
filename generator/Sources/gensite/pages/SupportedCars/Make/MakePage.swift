@@ -42,8 +42,6 @@ struct MakePage: View {
         "vehicle connectivity",
       ]
     ) {
-      SupportedCarsNavigation()
-
       ContentContainer {
         VStack(alignment: .center) {
           HStack(spacing: 32) {

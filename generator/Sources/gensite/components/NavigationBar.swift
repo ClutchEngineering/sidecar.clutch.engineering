@@ -33,9 +33,9 @@ struct NavigationBar: View {
 
         Navigation {
           HStack {
-            NavigationLink(URL(string: "/shortcuts"), text: "Shortcuts")
-            NavigationLink(URL(string: "/scanning"), text: "Scanning")
-            NavigationLink(URL(string: "/privacy-policy"), text: "Privacy")
+            NavigationLink(URL(string: "/news"), text: "News")
+            NavigationLink(URL(string: "/features"), text: "Features", matchPaths: ["/shortcuts", "/scanning", "/leaderboard", "/beta"])
+            NavigationLink(URL(string: "/help"), text: "Help")
             NavigationLink(URL(string: "/supported-cars"), text: "Supported Cars")
             AppStoreLink()
               .hidden()

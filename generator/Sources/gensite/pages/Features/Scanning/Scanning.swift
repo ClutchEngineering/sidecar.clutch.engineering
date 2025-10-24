@@ -20,6 +20,8 @@ struct Scanning: View {
       ],
       socialBannerPath: "/gfx/social/obdii.png"
     ) {
+      FeaturesBreadcrumb()
+
       ScanningNavigation()
 
       Container {

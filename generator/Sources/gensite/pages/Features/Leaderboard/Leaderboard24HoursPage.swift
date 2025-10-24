@@ -54,7 +54,7 @@ struct Leaderboard24HoursPage: View {
         URL(string: "/scripts/miles-counter.js")
       ]
     ) {
-      SupportedCarsNavigation()
+      FeaturesBreadcrumb()
 
       ContentContainer {
         ContentContainer {

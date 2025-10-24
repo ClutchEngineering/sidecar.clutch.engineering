@@ -16,6 +16,8 @@ struct ExtendedParameters: View {
         "vehicle connectivity",
       ]
     ) {
+      FeaturesBreadcrumb()
+
       ScanningNavigation()
 
       Container {
