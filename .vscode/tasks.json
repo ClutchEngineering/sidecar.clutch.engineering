@@ -53,6 +53,18 @@
             "problemMatcher": []
         },
         {
+            "label": "Watch Static Pages",
+            "type": "shell",
+            "command": "cd generator; fswatch -o Sources/gensite/ -e '.*' -i '\\.swift$' | while read f; do echo 'Swift files changed, regenerating static pages...'; swift run gensite --static-pages; done",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "dev-server"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
             "label": "Dev Environment",
             "dependsOrder": "parallel",
             "dependsOn": [
@@ -73,6 +85,37 @@
                 "Start HTTP Server",
                 "Tailwind CSS Watch",
                 "Watch Blog Posts"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "group": "dev-server"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Dev Environment with Static Pages Watch",
+            "dependsOrder": "parallel",
+            "dependsOn": [
+                "Start HTTP Server",
+                "Tailwind CSS Watch",
+                "Watch Static Pages"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "group": "dev-server"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Dev Environment with All Watches",
+            "dependsOrder": "parallel",
+            "dependsOn": [
+                "Start HTTP Server",
+                "Tailwind CSS Watch",
+                "Watch Blog Posts",
+                "Watch Static Pages"
             ],
             "presentation": {
                 "reveal": "always",
