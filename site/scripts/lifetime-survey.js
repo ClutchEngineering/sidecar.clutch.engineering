@@ -314,7 +314,46 @@ document.addEventListener('DOMContentLoaded', function() {
         // Hide the form (success message is now a sibling, so it will remain visible)
         form.style.display = 'none';
       } else {
-        throw new Error('Failed to submit survey');
+        // Try to parse error response
+        let errorBody;
+        try {
+          errorBody = await response.json();
+        } catch {
+          throw new Error('Failed to submit survey');
+        }
+
+        // Handle validation errors
+        if (errorBody.detail && Array.isArray(errorBody.detail)) {
+          // Clear any previous field errors
+          pricingFields.forEach(fieldId => clearFieldError(fieldId));
+
+          // Display field-specific errors
+          errorBody.detail.forEach(err => {
+            // Extract field name from location array (e.g., ["body", "too-cheap"])
+            const fieldName = err.loc && err.loc.length > 1 ? err.loc[1] : null;
+            if (fieldName && pricingFields.includes(fieldName)) {
+              showFieldError(fieldName, err.msg || 'Invalid value');
+            }
+          });
+
+          // Show general error message
+          const errorText = document.createElement('span');
+          errorText.textContent = 'Please fix the validation errors above.';
+          errorMessage.appendChild(errorText);
+          errorMessage.classList.remove('hidden');
+        } else if (errorBody.detail && typeof errorBody.detail === 'string') {
+          // Handle simple string error message
+          const errorText = document.createElement('span');
+          errorText.textContent = errorBody.detail;
+          errorMessage.appendChild(errorText);
+          errorMessage.classList.remove('hidden');
+        } else {
+          throw new Error('Failed to submit survey');
+        }
+
+        submitButton.disabled = false;
+        submitButton.textContent = 'Submit Responses';
+        return;
       }
     } catch (error) {
       const errorText = document.createElement('span');
