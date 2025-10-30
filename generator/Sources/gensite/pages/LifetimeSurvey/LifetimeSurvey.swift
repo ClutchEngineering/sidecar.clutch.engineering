@@ -612,7 +612,7 @@ private struct CurrencySelector: View {
       ("XPF", "XPF - CFP Franc")
     ]
 
-    for (code, label) in currencies {
+    for (code, label) in currencies.sorted(by: { $0.0 < $1.0 }) {
       let option = try select.appendElement("option")
       try option.attr("value", code)
       try option.text(label)
