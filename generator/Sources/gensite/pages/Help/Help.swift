@@ -55,8 +55,8 @@ log is stored privately on your phone.
 
 To export the logs from your phone, follow these steps from within the Sidecar app:
 
-1. Tap the Settings tab.
-2. Scroll down and tap the "Scan sessions" button.
+1. Tap the Logbook tab.
+2. Tap "Scan sessions".
 3. Tap the three-dot menu button.
 4. Tap "Export latest sessions" or "Select sessions" and then select the specific sessions you want to export.
 5. A share sheet will appear once you've selected your sessions for export. You can now airdrop the file, send it via email, or perform any other share action with the data. You'll typically want to email this file to support@clutch.engineering for onboarding purposes.
