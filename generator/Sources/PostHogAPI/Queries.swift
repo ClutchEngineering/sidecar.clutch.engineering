@@ -140,9 +140,9 @@ public func milesTraveledQuery() -> String {
       "breakdownFilter": {
         "breakdown": null,
         "breakdown_group_type_index": null,
-        "breakdown_hide_other_aggregation": null,
+        "breakdown_hide_other_aggregation": true,
         "breakdown_histogram_bin_count": null,
-        "breakdown_limit": null,
+        "breakdown_limit": 5000,
         "breakdown_normalize_url": null,
         "breakdown_type": "event",
         "breakdowns": [
@@ -206,6 +206,12 @@ public func milesTraveledQuery() -> String {
               "operator": "gt",
               "type": "event",
               "value": "100"
+            },
+            {
+              "key": "toInt(properties.$app_build) <= 286 OR (toInt(properties.$app_build) >= 288 AND properties.metersTraveled > 100)",
+              "label": null,
+              "type": "hogql",
+              "value": null
             }
           ],
           "response": null,
@@ -221,7 +227,7 @@ public func milesTraveledQuery() -> String {
         "confidenceLevel": null,
         "decimalPlaces": 0,
         "detailedResultsAggregationType": null,
-        "display": "ActionsLineGraphCumulative",
+        "display": "ActionsTable",
         "formula": null,
         "formulaNodes": null,
         "formulas": null,
