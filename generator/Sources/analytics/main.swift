@@ -56,6 +56,11 @@ func sanitizeCSVData(_ csvData: Data, typoCorrections: [String: String]) throws 
 
   // Keep the header line
   let header = lines[0]
+  let headerColumns = header.components(separatedBy: ",")
+  guard headerColumns.count == 4 else {
+    throw NSError(domain: "CSVSanitization", code: 2, userInfo: [NSLocalizedDescriptionKey: "Incorrect number of header columns: \(headerColumns). Expected 4."])
+  }
+
   let dataLines = Array(lines.dropFirst())
 
   var aggregatedData: [String: Double] = [:]
@@ -64,13 +69,13 @@ func sanitizeCSVData(_ csvData: Data, typoCorrections: [String: String]) throws 
   for line in dataLines {
     let columns = line.components(separatedBy: ",")
 
-    guard columns.count >= 3 else {
+    guard columns.count == headerColumns.count else {
       continue
     }
 
     let originalSeries = columns[0].trimmingCharacters(in: .whitespacesAndNewlines)
     let customName = columns[1].trimmingCharacters(in: .whitespacesAndNewlines)
-    let totalCountString = columns[2].trimmingCharacters(in: .whitespacesAndNewlines)
+    let totalCountString = columns[3].trimmingCharacters(in: .whitespacesAndNewlines)
 
     guard let totalCount = Double(totalCountString) else {
       continue
@@ -96,7 +101,7 @@ func sanitizeCSVData(_ csvData: Data, typoCorrections: [String: String]) throws 
   let sortedEntries = aggregatedData.sorted { $0.value > $1.value }
 
   // Rebuild CSV
-  var sanitizedLines = [header]
+  var sanitizedLines = ["series,custom name,total count"]
   for (key, value) in sortedEntries {
     let formattedValue = value.truncatingRemainder(dividingBy: 1) == 0 ? String(Int(value)) : String(value)
     sanitizedLines.append("\(key),\(formattedValue)")

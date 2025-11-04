@@ -54,9 +54,12 @@ public func stigsQuery() -> String {
           "math": "dau",
           "math_group_type_index": null,
           "math_hogql": null,
+          "math_multiplier": null,
           "math_property": null,
+          "math_property_revenue_currency": null,
           "math_property_type": null,
           "name": "carplay",
+          "optionalInFunnel": null,
           "orderBy": null,
           "properties": [
             {
@@ -76,37 +79,48 @@ public func stigsQuery() -> String {
               "value": "100"
             },
             {
-              "key": "toInt(properties.$app_build) <= 286 OR (toInt(properties.$app_build) >= 288 AND properties.metersTraveled > 100)",
+              "key": "toInt(properties.$app_build) <= 286 OR (toInt(properties.$app_build) >= 288 AND properties.metersTraveled > 0)",
               "label": null,
               "type": "hogql",
               "value": null
             }
           ],
-          "response": null
+          "response": null,
+          "version": null
         }
       ],
+      "tags": null,
       "trendsFilter": {
         "aggregationAxisFormat": "numeric",
         "aggregationAxisPostfix": null,
         "aggregationAxisPrefix": null,
         "breakdown_histogram_bin_count": null,
+        "confidenceLevel": null,
         "decimalPlaces": 0,
+        "detailedResultsAggregationType": null,
         "display": "ActionsTable",
         "formula": null,
+        "formulaNodes": null,
         "formulas": null,
         "goalLines": null,
         "hiddenLegendIndexes": null,
+        "minDecimalPlaces": null,
+        "movingAverageIntervals": null,
         "resultCustomizationBy": "value",
         "resultCustomizations": null,
         "showAlertThresholdLines": false,
+        "showConfidenceIntervals": null,
         "showLabelsOnSeries": null,
         "showLegend": false,
+        "showMovingAverage": null,
         "showMultipleYAxes": false,
         "showPercentStackView": false,
+        "showTrendLines": null,
         "showValuesOnSeries": true,
         "smoothingIntervals": 1,
         "yAxisScaleType": "linear"
-      }
+      },
+      "version": 2
     },
     "filename": "export-CarPlay drivers (by model)"
   },
@@ -126,9 +140,9 @@ public func milesTraveledQuery() -> String {
       "breakdownFilter": {
         "breakdown": null,
         "breakdown_group_type_index": null,
-        "breakdown_hide_other_aggregation": true,
+        "breakdown_hide_other_aggregation": null,
         "breakdown_histogram_bin_count": null,
-        "breakdown_limit": 5000,
+        "breakdown_limit": null,
         "breakdown_normalize_url": null,
         "breakdown_type": "event",
         "breakdowns": [
@@ -141,10 +155,11 @@ public func milesTraveledQuery() -> String {
           }
         ]
       },
+      "compareFilter": null,
       "conversionGoal": null,
       "dataColorTheme": null,
       "dateRange": {
-        "date_from": "2024-12-03T00:00:00",
+        "date_from": "2024-12-03",
         "date_to": null,
         "explicitDate": false
       },
@@ -162,13 +177,19 @@ public func milesTraveledQuery() -> String {
         {
           "custom_name": "Miles traveled",
           "event": "carplay",
+          "fixedProperties": null,
           "kind": "EventsNode",
+          "limit": null,
           "math": "hogql",
           "math_group_type_index": null,
           "math_hogql": "(sum(IF(toInt(properties.$app_build) <= 286, properties.metersTraveled, properties.metersTraveled)) / 1000) / 1.609344",
+          "math_multiplier": null,
           "math_property": null,
+          "math_property_revenue_currency": null,
           "math_property_type": null,
           "name": "carplay",
+          "optionalInFunnel": null,
+          "orderBy": null,
           "properties": [
             {
               "key": "actionContext",
@@ -185,38 +206,44 @@ public func milesTraveledQuery() -> String {
               "operator": "gt",
               "type": "event",
               "value": "100"
-            },
-            {
-              "key": "toInt(properties.$app_build) <= 286 OR (toInt(properties.$app_build) >= 288 AND properties.metersTraveled > 100)",
-              "label": null,
-              "type": "hogql",
-              "value": null
             }
-          ]
+          ],
+          "response": null,
+          "version": null
         }
       ],
+      "tags": null,
       "trendsFilter": {
         "aggregationAxisFormat": "numeric",
         "aggregationAxisPostfix": null,
         "aggregationAxisPrefix": null,
         "breakdown_histogram_bin_count": null,
+        "confidenceLevel": null,
         "decimalPlaces": 0,
-        "display": "ActionsTable",
+        "detailedResultsAggregationType": null,
+        "display": "ActionsLineGraphCumulative",
         "formula": null,
         "formulaNodes": null,
         "formulas": null,
         "goalLines": null,
         "hiddenLegendIndexes": null,
+        "minDecimalPlaces": null,
+        "movingAverageIntervals": null,
         "resultCustomizationBy": "value",
         "resultCustomizations": null,
         "showAlertThresholdLines": false,
+        "showConfidenceIntervals": null,
         "showLabelsOnSeries": null,
         "showLegend": false,
+        "showMovingAverage": null,
         "showMultipleYAxes": false,
         "showPercentStackView": false,
+        "showTrendLines": null,
         "showValuesOnSeries": true,
+        "smoothingIntervals": 1,
         "yAxisScaleType": "linear"
-      }
+      },
+      "version": 2
     },
     "filename": "export-CarPlay distance traveled (by model)"
   },

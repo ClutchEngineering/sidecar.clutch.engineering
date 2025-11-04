@@ -318,13 +318,14 @@ public actor AirtableClient {
     }
 
     let lines = csvString.components(separatedBy: .newlines)
-    guard lines.count >= 2 else { throw AirtableError.csvParsingError }
+    guard lines.count >= 2 else {
+      throw AirtableError.csvParsingError
+    }
 
     // Find the vehicleMake and value columns
     let headers = lines[0].components(separatedBy: ",")
     guard let makeIndex = headers.firstIndex(of: "series"),
-      let countIndex = headers.firstIndex(of: "total count")
-    else {
+      let countIndex = headers.firstIndex(of: "total count") else {
       throw AirtableError.csvParsingError
     }
 
@@ -350,13 +351,14 @@ public actor AirtableClient {
     }
 
     let lines = csvString.components(separatedBy: .newlines)
-    guard lines.count >= 2 else { throw AirtableError.csvParsingError }
+    guard lines.count >= 2 else {
+      throw AirtableError.csvParsingError
+    }
 
     // Find the vehicleMake and miles columns
     let headers = lines[0].components(separatedBy: ",")
     guard let makeIndex = headers.firstIndex(of: "series"),
-      let milesIndex = headers.firstIndex(of: "total count")
-    else {
+      let milesIndex = headers.firstIndex(of: "total count") else {
       throw AirtableError.csvParsingError
     }
 
