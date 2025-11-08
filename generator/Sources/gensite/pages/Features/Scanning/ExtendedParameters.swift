@@ -69,7 +69,7 @@ Extended PIDs are stored at the following path in each repository:
 
 ```
 signalsets/v3/default.json
-```    
+```
 
 ### Examples
 
@@ -118,8 +118,8 @@ Extended PIDs are stored in a [JSON file format](https://developer.mozilla.org/
 
 ### Properties
 
-\(inlineHTML { Parameter("commands", type: "[Command] | Required") }) Array of OBD-II commands that can be sent to this vehicle.    
-\(inlineHTML { Parameter("diagnosticLevel", type: "String | Optional") }) The one-byte diagnostic level to use for this vehicle. Written in hex.    
+\(inlineHTML { Parameter("commands", type: "[Command] | Required") }) Array of OBD-II commands that can be sent to this vehicle.<br/>
+\(inlineHTML { Parameter("diagnosticLevel", type: "String | Optional") }) The one-byte diagnostic level to use for this vehicle. Written in hex.<br/>
 \(inlineHTML { Parameter("signalGroups", type: "[SignalGroup] | Optional") }) Array of signal groups that can aggregate various signals together.
 
 ### Command
@@ -152,19 +152,21 @@ Commands represent a single OBD-II message that can be sent to the vehicle. The 
 
 #### Required properties
 
-\(inlineHTML { Parameter("hdr", type: "String | ATSHhhh") }) The command's 11-bit header, expressed as 3 hexadecimal characters.    
-\(inlineHTML { Parameter("cmd", type: "ServicePID") }) The service and PID that should be sent.    
-\(inlineHTML { Parameter("freq", type: "Number") }) The maximum frequency at which this command should be sent, in seconds.    
+\(inlineHTML { Parameter("hdr", type: "String | ATSHhhh") }) The command's 11-bit header, expressed as 3 hexadecimal characters.<br/>
+\(inlineHTML { Parameter("cmd", type: "ServicePID") }) The service and PID that should be sent.<br/>
+\(inlineHTML { Parameter("freq", type: "Number") }) The maximum frequency at which this command should be sent, in seconds.<br/>
 \(inlineHTML { Parameter("signals", type: "[Signal]") }) The collection of signals that this command returns.
 
 #### Optional properties
 
-\(inlineHTML { Parameter("rax", type: "String | ATCRAhhh") }) The command's 11-bit receive address, expressed as 3 hexadecimal characters. If not provided, then the command will attempt to guess the receive address based on the response.        
-\(inlineHTML { Parameter("eax", type: "String | ATCEAhh") }) An extended address byte to be prefixed to the command's CAN messages, expressed as 2 hexadecimal characters. Some vehicle protocols (e.g. BMW) require this.        
-\(inlineHTML { Parameter("pri", type: "String | ATCPhh") }) On 29-bit CAN-ID networks, this property can be used to set the top 5 bits of the CAN header. If not provided, then the default priority bits of `18` will be used.        
-\(inlineHTML { Parameter("tst", type: "String | ATTAhh") }) The tester (ie. scan tool) address that is used in the headers, periodic messages, filters, etc. If not provided, then the default tester address of `F1` will be used.        
-\(inlineHTML { Parameter("tmo", type: "String | ATSThh") }) The timeout, expressed as a hexadecimal value in increments of 4 msec. The ELM327 waits a preset time for a response before it can declare that there was `NO DATA` received from the vehicle. The same timer setting is also used after a response has been received, while waiting to see if any more are coming. This property allows this timeout period to be adjusted. If no timeout value is provided, then the default of `32` (~200ms) will be used.        
-\(inlineHTML { Parameter("fcm1", type: "Boolean") }) Some parameters only respond with the first frame when using the default flow control mode, 0. Setting this property to true enables flow control mode 1, requesting that all frames be returned together. If not provided, false is assumed and flow control mode 0 will be used. When enabled, the following configuration will be set prior to invoking the command:
+\(inlineHTML { Parameter("rax", type: "String | ATCRAhhh") }) The command's 11-bit receive address, expressed as 3 hexadecimal characters. If not provided, then the command will attempt to guess the receive address based on the response.<br/>
+\(inlineHTML { Parameter("eax", type: "String | ATCEAhh") }) An extended address byte to be prefixed to the command's CAN messages, expressed as 2 hexadecimal characters. Some vehicle protocols (e.g. BMW) require this.<br/>
+\(inlineHTML { Parameter("pri", type: "String | ATCPhh") }) On 29-bit CAN-ID networks, this property can be used to set the top 5 bits of the CAN header. If not provided, then the default priority bits of `18` will be used.<br/>
+\(inlineHTML { Parameter("tst", type: "String | ATTAhh") }) The tester (ie. scan tool) address that is used in the headers, periodic messages, filters, etc. If not provided, then the default tester address of `F1` will be used.<br/>
+\(inlineHTML { Parameter("tmo", type: "String | ATSThh") }) The timeout, expressed as a hexadecimal value in increments of 4 msec. The ELM327 waits a preset time for a response before it can declare that there was `NO DATA` received from the vehicle. The same timer setting is also used after a response has been received, while waiting to see if any more are coming. This property allows this timeout period to be adjusted. If no timeout value is provided, then the default of `32` (~200ms) will be used.<br/>
+\(inlineHTML { Parameter("din", type: "String | 10hh") }) The diagnostic level this command requires the ECU to be in before sending any commands.<br/>
+\(inlineHTML { Parameter("dout", type: "String | 10hh") }) The diagnostic level this command should reset the ECU to once it has finished sending the command.<br/>
+\(inlineHTML { Parameter("fcm1", type: "Boolean") }) Some parameters only respond with the first frame when using the default flow control mode, 0. Setting this property to true enables flow control mode 1, requesting that all frames be returned together. If not provided, false is assumed and flow control mode 0 will be used. When enabled, the following configuration will be set prior to invoking the command:<br/>
 ```
 ATFCSH7E0
 ATFCSD300000
@@ -204,20 +206,20 @@ Connectables are elements of the Sidecar user interface that can be powered by v
 
 #### Available Connectables
 
-\(inlineHTML { Parameter("fuelTankLevel", icon: "fuel", type: "Normal") }) How full the vehicle's gas tank is, as a percentage.    
-\(inlineHTML { Parameter("isCharging", icon: "bolt", type: "Enum") }) Is the vehicle charging? Must either be an enumeration mapped to a value with a prefix of "CHARGING", or a scalar unit where a non-zero value means the vehicle is charging.    
-\(inlineHTML { Parameter("odometer", icon: "length", type: "Length") }) The total distance the vehicle has traveled.    
-\(inlineHTML { Parameter("electricRange", icon: "length", type: "Length") }) The distance the vehicle can travel on electricity alone.    
-\(inlineHTML { Parameter("fuelRange", icon: "length", type: "Length") }) The distance the vehicle can travel on fuel.    
-\(inlineHTML { Parameter("pluggedIn", icon: "plug", type: "Enum") }) Is the vehicle plugged in? Must either be an enumeration mapped to a value with a prefix of "PLUGGED",  or a scalar unit where a non-zero value means the vehicle is plugged in.    
-\(inlineHTML { Parameter("speed", icon: "speed", type: "Speed") }) How fast the vehicle is moving.    
-\(inlineHTML { Parameter("stateOfCharge", icon: "battery", type: "Normal") }) How full the vehicle's battery is.    
-\(inlineHTML { Parameter("stateOfHealth", icon: "health", type: "Normal") }) The health of the vehicle's high voltage battery pack.    
-\(inlineHTML { Parameter("frontLeftTirePressure", icon: "tirepressure", type: "Pressure") }) The front left tire pressure.    
-\(inlineHTML { Parameter("frontRightTirePressure", icon: "tirepressure", type: "Pressure") }) The front right tire pressure.    
-\(inlineHTML { Parameter("rearLeftTirePressure", icon: "tirepressure", type: "Pressure") }) The rear left tire pressure.    
-\(inlineHTML { Parameter("rearRightTirePressure", icon: "tirepressure", type: "Pressure") }) The rear right tire pressure.    
-\(inlineHTML { Parameter("starterBatteryVoltage", icon: "battery", type: "Volts") }) The starter battery's voltage.    
+\(inlineHTML { Parameter("fuelTankLevel", icon: "fuel", type: "Normal") }) How full the vehicle's gas tank is, as a percentage.<br/>
+\(inlineHTML { Parameter("isCharging", icon: "bolt", type: "Enum") }) Is the vehicle charging? Must either be an enumeration mapped to a value with a prefix of "CHARGING", or a scalar unit where a non-zero value means the vehicle is charging.<br/>
+\(inlineHTML { Parameter("odometer", icon: "length", type: "Length") }) The total distance the vehicle has traveled.<br/>
+\(inlineHTML { Parameter("electricRange", icon: "length", type: "Length") }) The distance the vehicle can travel on electricity alone.<br/>
+\(inlineHTML { Parameter("fuelRange", icon: "length", type: "Length") }) The distance the vehicle can travel on fuel.<br/>
+\(inlineHTML { Parameter("pluggedIn", icon: "plug", type: "Enum") }) Is the vehicle plugged in? Must either be an enumeration mapped to a value with a prefix of "PLUGGED",  or a scalar unit where a non-zero value means the vehicle is plugged in.<br/>
+\(inlineHTML { Parameter("speed", icon: "speed", type: "Speed") }) How fast the vehicle is moving.<br/>
+\(inlineHTML { Parameter("stateOfCharge", icon: "battery", type: "Normal") }) How full the vehicle's battery is.<br/>
+\(inlineHTML { Parameter("stateOfHealth", icon: "health", type: "Normal") }) The health of the vehicle's high voltage battery pack.<br/>
+\(inlineHTML { Parameter("frontLeftTirePressure", icon: "tirepressure", type: "Pressure") }) The front left tire pressure.<br/>
+\(inlineHTML { Parameter("frontRightTirePressure", icon: "tirepressure", type: "Pressure") }) The front right tire pressure.<br/>
+\(inlineHTML { Parameter("rearLeftTirePressure", icon: "tirepressure", type: "Pressure") }) The rear left tire pressure.<br/>
+\(inlineHTML { Parameter("rearRightTirePressure", icon: "tirepressure", type: "Pressure") }) The rear right tire pressure.<br/>
+\(inlineHTML { Parameter("starterBatteryVoltage", icon: "battery", type: "Volts") }) The starter battery's voltage.<br/>
 \(inlineHTML { Parameter("distanceSinceDTCsCleared", icon: "length", type: "Length") }) How far you've traveled since resetting your diagnostic trouble codes.
 
 ---
@@ -265,23 +267,23 @@ return Measurement(value: value, unit: unit)
 
 #### Required properties
 
-\(inlineHTML { Parameter("len", type: "Int") }) The number of bits to decode from the response, starting from the bit offset (bix).    
-\(inlineHTML { Parameter("max", type: "Double") }) The maximum value this signal can have.    
+\(inlineHTML { Parameter("len", type: "Int") }) The number of bits to decode from the response, starting from the bit offset (bix).<br/>
+\(inlineHTML { Parameter("max", type: "Double") }) The maximum value this signal can have.<br/>
 \(inlineHTML { Parameter("unit", type: "Unit") }) The unit this value should be interpreted as.
 
 #### Optional properties
 
-\(inlineHTML { Parameter("bix", type: "Int") }) The bit offset to start reading the value from. Defaults to 0.    
-\(inlineHTML { Parameter("blsb", type: "Boolean") }) Whether to swap the byte order prior to reading bits. E.g. a 16 bit value read from offset 8 of `0x012345` in blsb format would be passed to the bit decoder as `0x4523`.  Defaults to false.    
-\(inlineHTML { Parameter("sign", type: "Boolean") }) Whether to treat the bit values as a signed, twos-complement integer. Defaults to false.    
-\(inlineHTML { Parameter("min", type: "Double") }) The minimum value this signal can have. Defaults to 0.    
-\(inlineHTML { Parameter("add", type: "Double") }) Added to the extracted numerical value. Defaults to 0.    
-\(inlineHTML { Parameter("mul", type: "Double") }) The extracted numerical value is multiplied by this value. Defaults to 1.    
-\(inlineHTML { Parameter("div", type: "Double") }) The extracted numerical value is divided by this value. Defaults to 1.    
-\(inlineHTML { Parameter("nullmin", type: "Double") }) An optional null value. Any response equal to or less than this value will be treated as a null value.    
-\(inlineHTML { Parameter("nullmax", type: "Double") }) An optional null value. Any response equal to or greater than this value will be treated as a null value.    
-\(inlineHTML { Parameter("omin", type: "Double") }) The optimal minimum value, expressed in the same unit as the value. If not provided, no optimal minimum value will be shown.    
-\(inlineHTML { Parameter("omax", type: "Double") }) The optimal maximum value, expressed in the same unit as the value. If not provided, no optimal maximum value will be shown.    
+\(inlineHTML { Parameter("bix", type: "Int") }) The bit offset to start reading the value from. Defaults to 0.<br/>
+\(inlineHTML { Parameter("blsb", type: "Boolean") }) Whether to swap the byte order prior to reading bits. E.g. a 16 bit value read from offset 8 of `0x012345` in blsb format would be passed to the bit decoder as `0x4523`.  Defaults to false.<br/>
+\(inlineHTML { Parameter("sign", type: "Boolean") }) Whether to treat the bit values as a signed, twos-complement integer. Defaults to false.<br/>
+\(inlineHTML { Parameter("min", type: "Double") }) The minimum value this signal can have. Defaults to 0.<br/>
+\(inlineHTML { Parameter("add", type: "Double") }) Added to the extracted numerical value. Defaults to 0.<br/>
+\(inlineHTML { Parameter("mul", type: "Double") }) The extracted numerical value is multiplied by this value. Defaults to 1.<br/>
+\(inlineHTML { Parameter("div", type: "Double") }) The extracted numerical value is divided by this value. Defaults to 1.<br/>
+\(inlineHTML { Parameter("nullmin", type: "Double") }) An optional null value. Any response equal to or less than this value will be treated as a null value.<br/>
+\(inlineHTML { Parameter("nullmax", type: "Double") }) An optional null value. Any response equal to or greater than this value will be treated as a null value.<br/>
+\(inlineHTML { Parameter("omin", type: "Double") }) The optimal minimum value, expressed in the same unit as the value. If not provided, no optimal minimum value will be shown.<br/>
+\(inlineHTML { Parameter("omax", type: "Double") }) The optimal maximum value, expressed in the same unit as the value. If not provided, no optimal maximum value will be shown.<br/>
 \(inlineHTML { Parameter("oval", type: "Double") }) The optimal value, expressed in the same unit as the value. If not provided, no optimal value will be shown.
 
 ### ServicePID
@@ -293,7 +295,7 @@ A service PID represents a parameter ID for a specific service.
 ```
 {"22": "2B1B"}
 {"01": "02"}
-```    
+```
 
 Two services are currently supported: 01 and 22.
 
@@ -349,15 +351,15 @@ Signals are individual values contained within the response of a [Command](#com
 
 #### Required properties
 
-\(inlineHTML { Parameter("id", type: "String") }) The signal's globally unique identifier.    
-\(inlineHTML { Parameter("name", type: "String") }) The signal's human-readable name. Should be short and descriptive.    
+\(inlineHTML { Parameter("id", type: "String") }) The signal's globally unique identifier.<br/>
+\(inlineHTML { Parameter("name", type: "String") }) The signal's human-readable name. Should be short and descriptive.<br/>
 \(inlineHTML { Parameter("fmt", type: "Format") }) How to interpret the signal's value from the command response.
 
 #### Optional properties
 
-\(inlineHTML { Parameter("path", type: "String") }) The navigation path for the signal in Sidecar's parameters page. If not provided, the signal's id property will be used as the navigation path instead.    
-\(inlineHTML { Parameter("description", type: "String") }) A long form description of the signal's purpose and how it should be interpreted.    
-\(inlineHTML { Parameter("hidden", type: "Boolean") }) If true, hides the signal from the user interface. Default value is false if not provided.    
+\(inlineHTML { Parameter("path", type: "String") }) The navigation path for the signal in Sidecar's parameters page. If not provided, the signal's id property will be used as the navigation path instead.<br/>
+\(inlineHTML { Parameter("description", type: "String") }) A long form description of the signal's purpose and how it should be interpreted.<br/>
+\(inlineHTML { Parameter("hidden", type: "Boolean") }) If true, hides the signal from the user interface. Default value is false if not provided.<br/>
 \(inlineHTML { Parameter("suggestedMetric", type: "Connectable") }) The user interface value that this signal should update.
 
 ### Unit
@@ -372,84 +374,84 @@ If a unit includes a version (e.g. **v1.13+**), that means the unit was introdu
 
 #### Angle units
 
-\(inlineHTML { Parameter("degrees", icon: "angle") }) Angle in degrees.    
+\(inlineHTML { Parameter("degrees", icon: "angle") }) Angle in degrees.<br/>
 \(inlineHTML { Parameter("radians", icon: "angle") }) Angle in radians.
 
 #### Concentration mass
 
-\(inlineHTML { Parameter("gramsPerLiter", icon: "engine") }) Concentration mass in grams per liter.    
+\(inlineHTML { Parameter("gramsPerLiter", icon: "engine") }) Concentration mass in grams per liter.<br/>
 \(inlineHTML { Parameter("milligramsPerDeciliter", icon: "engine") }) Concentration mass in milligrams per decileter.
 
 #### Electric current units
 
-\(inlineHTML { Parameter("kiloamps", icon: "current") }) Current in kiloamps.    
-\(inlineHTML { Parameter("amps", icon: "current") }) Current in amperes.    
+\(inlineHTML { Parameter("kiloamps", icon: "current") }) Current in kiloamps.<br/>
+\(inlineHTML { Parameter("amps", icon: "current") }) Current in amperes.<br/>
 \(inlineHTML { Parameter("milliamps", icon: "current") }) Current in milliamps.
 
 #### Electric charge units
 
-\(inlineHTML { Parameter("coulombs", icon: "current") }) Electric charge in coulombs.    
-\(inlineHTML { Parameter("kiloampereHours", icon: "current") }) Electric charge in kiloampere-hours.    
-\(inlineHTML { Parameter("ampereHours", icon: "current") }) Electric charge in ampere-hours.    
+\(inlineHTML { Parameter("coulombs", icon: "current") }) Electric charge in coulombs.<br/>
+\(inlineHTML { Parameter("kiloampereHours", icon: "current") }) Electric charge in kiloampere-hours.<br/>
+\(inlineHTML { Parameter("ampereHours", icon: "current") }) Electric charge in ampere-hours.<br/>
 \(inlineHTML { Parameter("milliampereHours", icon: "current") }) Electric charge in milliampere-hours.
 
 #### Electric efficiency units
 
-\(inlineHTML { Parameter("kilowattHoursPer100Kilometers", icon: "current") }) Electric efficiency in kilowatt hours per 100 kilometers.    
-\(inlineHTML { Parameter("kilowattHoursPer100Miles", icon: "current") }) Electric efficiency in kilowatt hours per 100 miles.    
-\(inlineHTML { Parameter("milesPerKilowattHour", icon: "current") }) Electric efficiency in miles per kilowatt hour.    
+\(inlineHTML { Parameter("kilowattHoursPer100Kilometers", icon: "current") }) Electric efficiency in kilowatt hours per 100 kilometers.<br/>
+\(inlineHTML { Parameter("kilowattHoursPer100Miles", icon: "current") }) Electric efficiency in kilowatt hours per 100 miles.<br/>
+\(inlineHTML { Parameter("milesPerKilowattHour", icon: "current") }) Electric efficiency in miles per kilowatt hour.
 
 #### Electric resistance units
 
-\(inlineHTML { Parameter("megaohms", icon: "current") }) Electric resistance in megaohms.    
-\(inlineHTML { Parameter("kiloohms", icon: "current") }) Electric resistance in kiloohms.    
-\(inlineHTML { Parameter("ohms", icon: "current") }) Electric resistance in ohms.    
-\(inlineHTML { Parameter("milliohms", icon: "current") }) Electric resistance in milliohms.    
+\(inlineHTML { Parameter("megaohms", icon: "current") }) Electric resistance in megaohms.<br/>
+\(inlineHTML { Parameter("kiloohms", icon: "current") }) Electric resistance in kiloohms.<br/>
+\(inlineHTML { Parameter("ohms", icon: "current") }) Electric resistance in ohms.<br/>
+\(inlineHTML { Parameter("milliohms", icon: "current") }) Electric resistance in milliohms.<br/>
 \(inlineHTML { Parameter("microohms", icon: "current") }) Electric resistance in microohms.
 
 #### Electric potential difference units
 
-\(inlineHTML { Parameter("kilovolts", icon: "volts") }) Voltage measured in kilovolts.    
-\(inlineHTML { Parameter("volts", icon: "volts") }) Voltage measured in volts.    
+\(inlineHTML { Parameter("kilovolts", icon: "volts") }) Voltage measured in kilovolts.<br/>
+\(inlineHTML { Parameter("volts", icon: "volts") }) Voltage measured in volts.<br/>
 \(inlineHTML { Parameter("millivolts", icon: "volts") }) Voltage measured in millivolts.
 
 #### Energy units
 
-\(inlineHTML { Parameter("kilowattHours", icon: "volts") }) Kilowatt-hours.    
-\(inlineHTML { Parameter("kiljoules", icon: "volts") }) Kilojoules.    
+\(inlineHTML { Parameter("kilowattHours", icon: "volts") }) Kilowatt-hours.<br/>
+\(inlineHTML { Parameter("kiljoules", icon: "volts") }) Kilojoules.<br/>
 \(inlineHTML { Parameter("joules", icon: "volts") }) Joules.
 
 #### Energy units
 
-\(inlineHTML { Parameter("kilowattHours", icon: "volts") }) Kilowatt-hours.    
-\(inlineHTML { Parameter("kiljoules", icon: "volts") }) Kilojoules.    
+\(inlineHTML { Parameter("kilowattHours", icon: "volts") }) Kilowatt-hours.<br/>
+\(inlineHTML { Parameter("kiljoules", icon: "volts") }) Kilojoules.<br/>
 \(inlineHTML { Parameter("joules", icon: "volts") }) Joules.
 
 #### Frequency units
 
-\(inlineHTML { Parameter("terahertz", icon: "frequency") }) Frequency measured in terahertz.     
-\(inlineHTML { Parameter("gigahertz", icon: "frequency") }) Frequency measured in gigahertz.     
-\(inlineHTML { Parameter("megahertz", icon: "frequency") }) Frequency measured in megahertz.     
-\(inlineHTML { Parameter("kilohertz", icon: "frequency") }) Frequency measured in kilohertz.     
-\(inlineHTML { Parameter("hertz", icon: "frequency") }) Frequency measured in hertz.     
-\(inlineHTML { Parameter("millihertz", icon: "frequency") }) Frequency measured in millihertz.     
-\(inlineHTML { Parameter("microhertz", icon: "frequency") }) Frequency measured in microhertz.     
-\(inlineHTML { Parameter("nanohertz", icon: "frequency") }) Frequency measured in nanohertz.     
+\(inlineHTML { Parameter("terahertz", icon: "frequency") }) Frequency measured in terahertz.<br/>
+\(inlineHTML { Parameter("gigahertz", icon: "frequency") }) Frequency measured in gigahertz.<br/>
+\(inlineHTML { Parameter("megahertz", icon: "frequency") }) Frequency measured in megahertz.<br/>
+\(inlineHTML { Parameter("kilohertz", icon: "frequency") }) Frequency measured in kilohertz.<br/>
+\(inlineHTML { Parameter("hertz", icon: "frequency") }) Frequency measured in hertz.<br/>
+\(inlineHTML { Parameter("millihertz", icon: "frequency") }) Frequency measured in millihertz.<br/>
+\(inlineHTML { Parameter("microhertz", icon: "frequency") }) Frequency measured in microhertz.<br/>
+\(inlineHTML { Parameter("nanohertz", icon: "frequency") }) Frequency measured in nanohertz.<br/>
 \(inlineHTML { Parameter("framesPerSecond", icon: "frequency") }) Frequency measured in frames per second.
 
 #### Length units
 
-\(inlineHTML { Parameter("millimeters", icon: "length") }) Distance in millimeters.    
-\(inlineHTML { Parameter("centimeters", icon: "length") }) Distance in centimeters.    
-\(inlineHTML { Parameter("meters", icon: "length") }) Distance in meters.    
-\(inlineHTML { Parameter("kilometers", icon: "length") }) Distance in kilometers.    
-\(inlineHTML { Parameter("miles", icon: "length") }) Distance in miles.    
-\(inlineHTML { Parameter("feet", icon: "length") }) Distance in feet.    
+\(inlineHTML { Parameter("millimeters", icon: "length") }) Distance in millimeters.<br/>
+\(inlineHTML { Parameter("centimeters", icon: "length") }) Distance in centimeters.<br/>
+\(inlineHTML { Parameter("meters", icon: "length") }) Distance in meters.<br/>
+\(inlineHTML { Parameter("kilometers", icon: "length") }) Distance in kilometers.<br/>
+\(inlineHTML { Parameter("miles", icon: "length") }) Distance in miles.<br/>
+\(inlineHTML { Parameter("feet", icon: "length") }) Distance in feet.<br/>
 \(inlineHTML { Parameter("inches", icon: "length") }) Distance in inches.
 
 #### Mass flow rate units
 
-\(inlineHTML { Parameter("gramsPerSecond", icon: "airflow") }) Mass flow rate in grams per second.    
+\(inlineHTML { Parameter("gramsPerSecond", icon: "airflow") }) Mass flow rate in grams per second.<br/>
 \(inlineHTML { Parameter("kilogramsPerHour", icon: "airflow") }) Mass flow rate in kilograms per hour.
 
 #### Mass per stroke units
@@ -458,19 +460,19 @@ If a unit includes a version (e.g. **v1.13+**), that means the unit was introdu
 
 #### Normal units
 
-\(inlineHTML { Parameter("percent", icon: "percent") }) A percentage, typically between 0-100%.    
+\(inlineHTML { Parameter("percent", icon: "percent") }) A percentage, typically between 0-100%.<br/>
 \(inlineHTML { Parameter("normal", icon: "percent") }) A normal, typically between 0.0-1.0.
 
 #### Power units
 
-\(inlineHTML { Parameter("kilowatts", icon: "volts") }) Kilowatts.    
-\(inlineHTML { Parameter("watts", icon: "volts") }) Kilowatts.    
+\(inlineHTML { Parameter("kilowatts", icon: "volts") }) Kilowatts.<br/>
+\(inlineHTML { Parameter("watts", icon: "volts") }) Kilowatts.<br/>
 \(inlineHTML { Parameter("milliwatts", icon: "volts") }) Milliwatts.
 
 #### Pressure units
 
-\(inlineHTML { Parameter("bars", icon: "tirepressure") }) Pressure in bar.    
-\(inlineHTML { Parameter("psi", icon: "tirepressure") }) Pound-force per square inch.    
+\(inlineHTML { Parameter("bars", icon: "tirepressure") }) Pressure in bar.<br/>
+\(inlineHTML { Parameter("psi", icon: "tirepressure") }) Pound-force per square inch.<br/>
 \(inlineHTML { Parameter("kilopascal", icon: "tirepressure") }) Pressure in kilopascal.
 
 #### Revolutions units
@@ -479,41 +481,41 @@ If a unit includes a version (e.g. **v1.13+**), that means the unit was introdu
 
 #### Scalar units
 
-\(inlineHTML { Parameter("scalar", icon: "scalar") }) An as-is numerical value.    
-\(inlineHTML { Parameter("ascii", icon: "scalar") }) The extracted bytes will be formatted as an ASCII string. Scaling values will be ignored.    
-\(inlineHTML { Parameter("hex", icon: "scalar") }) An as-is numerical value, formatted in hexadecimal. Scaling values will be ignored.    
-\(inlineHTML { Parameter("offon", icon: "scalar") }) 0 = "off", 1 = "on"    
-\(inlineHTML { Parameter("noyes", icon: "scalar") }) 0 = "no", 1 = "yes"    
-\(inlineHTML { Parameter("yesno", icon: "scalar") }) 0 = "yes", 1 = "no".    
+\(inlineHTML { Parameter("scalar", icon: "scalar") }) An as-is numerical value.<br/>
+\(inlineHTML { Parameter("ascii", icon: "scalar") }) The extracted bytes will be formatted as an ASCII string. Scaling values will be ignored.<br/>
+\(inlineHTML { Parameter("hex", icon: "scalar") }) An as-is numerical value, formatted in hexadecimal. Scaling values will be ignored.<br/>
+\(inlineHTML { Parameter("offon", icon: "scalar") }) 0 = "off", 1 = "on"<br/>
+\(inlineHTML { Parameter("noyes", icon: "scalar") }) 0 = "no", 1 = "yes"<br/>
+\(inlineHTML { Parameter("yesno", icon: "scalar") }) 0 = "yes", 1 = "no".<br/>
 \(inlineHTML { Parameter("unknown", icon: "scalar") }) Treated as an as-is numerical value.
 
 #### Speed units
 
-\(inlineHTML { Parameter("metersPerSecond", icon: "speed") }) Speed in meters per second.    
-\(inlineHTML { Parameter("kilometersPerHour", icon: "speed") }) Speed in kilometers per hour.    
+\(inlineHTML { Parameter("metersPerSecond", icon: "speed") }) Speed in meters per second.<br/>
+\(inlineHTML { Parameter("kilometersPerHour", icon: "speed") }) Speed in kilometers per hour.<br/>
 \(inlineHTML { Parameter("milesPerHour", icon: "speed") }) Speed in miles per hour.
 
 #### Temperature units
 
-\(inlineHTML { Parameter("celsius", icon: "thermometer") }) Temperature in degrees celsius.    
-\(inlineHTML { Parameter("fahrenheit", icon: "thermometer") }) Temperature in degrees fahrenheit.    
+\(inlineHTML { Parameter("celsius", icon: "thermometer") }) Temperature in degrees celsius.<br/>
+\(inlineHTML { Parameter("fahrenheit", icon: "thermometer") }) Temperature in degrees fahrenheit.<br/>
 \(inlineHTML { Parameter("kelvin", icon: "thermometer") }) Temperature in degrees kelvin.
 
 #### Time units
 
-\(inlineHTML { Parameter("seconds", icon: "time") }) Time, measured in seconds.    
-\(inlineHTML { Parameter("minutes", icon: "time") }) Time, measured in minutes.    
-\(inlineHTML { Parameter("hours", icon: "time") }) Time, measured in hours.    
+\(inlineHTML { Parameter("seconds", icon: "time") }) Time, measured in seconds.<br/>
+\(inlineHTML { Parameter("minutes", icon: "time") }) Time, measured in minutes.<br/>
+\(inlineHTML { Parameter("hours", icon: "time") }) Time, measured in hours.
 
 #### Torque units
 
-\(inlineHTML { Parameter("newtonMeters", icon: "wrench") }) Newton-meters.    
-\(inlineHTML { Parameter("poundFoot", icon: "wrench") }) Pound-foot.    
+\(inlineHTML { Parameter("newtonMeters", icon: "wrench") }) Newton-meters.<br/>
+\(inlineHTML { Parameter("poundFoot", icon: "wrench") }) Pound-foot.<br/>
 \(inlineHTML { Parameter("inchPound", icon: "wrench") }) Inch-pound.
 
 #### Volume units
 
-\(inlineHTML { Parameter("liters", icon: "volume") }) Volume in liters.    
+\(inlineHTML { Parameter("liters", icon: "volume") }) Volume in liters.<br/>
 \(inlineHTML { Parameter("gallons", icon: "volume") }) Volume in gallons.
 """)
     }
