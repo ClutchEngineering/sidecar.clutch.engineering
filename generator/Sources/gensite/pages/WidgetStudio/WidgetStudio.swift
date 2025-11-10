@@ -115,9 +115,7 @@ struct WidgetStudio: View {
           .id("editor-area")
           .classNames(["flex-1", "p-6", "bg-gray-50"])
         }
-        .classNames(["flex", "flex-col", "md:flex-row"])
-      }
-      .classNames(["min-h-screen"])
+        .classNames(["flex", "flex-col", "md:flex-row", "min-h-screen"])
     }
   }
 }
