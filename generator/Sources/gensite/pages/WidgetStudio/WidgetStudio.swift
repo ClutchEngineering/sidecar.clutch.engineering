@@ -194,22 +194,22 @@ private struct PhoneFrame: View {
     try dropZonesContainer.addClass("absolute inset-0 pointer-events-none z-10")
 
     // Create all 8 drop zones - made larger for better hit detection
-    let positions = [
-      ("top-left", "top-0 left-0"),
-      ("top-center", "top-0 left-1/2 -translate-x-1/2"),
-      ("top-right", "top-0 right-0"),
-      ("left-center", "top-1/2 left-0 -translate-y-1/2"),
-      ("right-center", "top-1/2 right-0 -translate-y-1/2"),
-      ("bottom-left", "bottom-0 left-0"),
-      ("bottom-center", "bottom-0 left-1/2 -translate-x-1/2"),
-      ("bottom-right", "bottom-0 right-0")
+    let positions: [(String, String)] = [
+      ("top-left", "top: 0; left: 0;"),
+      ("top-center", "top: 0; left: 50%; transform: translateX(-50%);"),
+      ("top-right", "top: 0; right: 0;"),
+      ("left-center", "top: 50%; left: 0; transform: translateY(-50%);"),
+      ("right-center", "top: 50%; right: 0; transform: translateY(-50%);"),
+      ("bottom-left", "bottom: 0; left: 0;"),
+      ("bottom-center", "bottom: 0; left: 50%; transform: translateX(-50%);"),
+      ("bottom-right", "bottom: 0; right: 0;")
     ]
 
-    for (position, classes) in positions {
+    for (position, inlineStyle) in positions {
       let dropZone = try dropZonesContainer.appendElement("div")
-      try dropZone.addClass("drop-zone absolute w-32 h-32 pointer-events-auto \(classes)")
+      try dropZone.addClass("drop-zone")
       try dropZone.attr("data-position", position)
-      try dropZone.attr("style", "pointer-events: auto;") // Ensure pointer events work
+      try dropZone.attr("style", "position: absolute; width: 128px; height: 128px; pointer-events: auto; \(inlineStyle)")
     }
 
     // Map background
