@@ -14,17 +14,49 @@ struct WidgetStudio: View {
     ) {
       // Main container wrapper
       Div {
-        // Left sidebar - Widget palette
+        // Left sidebar - Widget palette and controls
         Div {
-            H2("Widget Palette")
-              .fontSize(.extraExtraLarge)
-              .fontWeight(.bold)
-              .margin(.bottom, 16)
+            // Device Dimensions Section
+            Div {
+              H2("Device Dimensions")
+                .fontSize(.large)
+                .fontWeight(.bold)
+                .margin(.bottom, 12)
 
-            Paragraph("Drag widgets to the phone screen")
+              // Preset buttons
+              Div {
+                DimensionButton(label: "iPhone SE", width: 375, height: 667)
+                DimensionButton(label: "iPhone 14", width: 390, height: 844)
+                DimensionButton(label: "iPhone 14 Plus", width: 428, height: 926)
+                DimensionButton(label: "Landscape", width: 844, height: 390)
+              }
+              .classNames(["flex", "flex-wrap", "gap-2"])
+              .margin(.bottom, 12)
+
+              // Custom inputs
+              Div {
+                DimensionInput(label: "Width", inputId: "width-input", defaultValue: "844")
+                DimensionInput(label: "Height", inputId: "height-input", defaultValue: "390")
+              }
+              .classNames(["grid", "grid-cols-2", "gap-4"])
+            }
+            .margin(.bottom, 32)
+
+            // Divider
+            Div {}
+              .classNames(["border-t", "border-gray-300"])
+              .margin(.bottom, 32)
+
+            // Widget Palette Section
+            H2("Widget Palette")
+              .fontSize(.large)
+              .fontWeight(.bold)
+              .margin(.bottom, 12)
+
+            Paragraph("Drag widgets to the canvas")
               .fontSize(.small)
               .textColor(.text, darkness: 600)
-              .margin(.bottom, 24)
+              .margin(.bottom, 16)
 
             // Widget items
             VStack(spacing: 12) {
@@ -67,55 +99,23 @@ struct WidgetStudio: View {
             .id("widget-palette")
           }
           .id("sidebar")
-          .classNames(["w-full", "bg-white", "p-6", "border", "border-gray-200", "md:w-80", "md:h-screen", "md:overflow-y-auto", "md:sticky", "md:top-0"])
+          .classNames(["bg-white", "p-6", "border-r", "border-gray-200", "overflow-y-auto"])
+          .inlineStyle("width: 320px; height: 100vh; position: sticky; top: 0;")
 
-          // Main editor area
+          // Main canvas area
           Div {
-            // Controls section
-            Div {
-              H2("Device Dimensions")
-                .fontSize(.extraExtraLarge)
-                .fontWeight(.bold)
-                .margin(.bottom, 16)
-
-              // Dimension controls
-              Div {
-                // Preset buttons
-                Div {
-                  DimensionButton(label: "iPhone SE", width: 375, height: 667)
-                  DimensionButton(label: "iPhone 14", width: 390, height: 844)
-                  DimensionButton(label: "iPhone 14 Plus", width: 428, height: 926)
-                  DimensionButton(label: "iPhone Landscape", width: 844, height: 390)
-                }
-                .classNames(["flex", "flex-wrap", "gap-2"])
-                .margin(.bottom, 16)
-
-                // Custom inputs
-                Div {
-                  DimensionInput(label: "Width", inputId: "width-input", defaultValue: "390")
-                  DimensionInput(label: "Height", inputId: "height-input", defaultValue: "844")
-                }
-                .classNames(["grid", "grid-cols-2", "gap-4"])
-              }
-              .padding(16)
-              .background(.white)
-              .border(.palette(.gray, darkness: 200), width: 1)
-              .cornerRadius(8)
-            }
-            .margin(.bottom, 32)
-
             // Phone preview container
             Div {
               // Phone frame
               PhoneFrame()
             }
-            .classNames(["flex", "justify-center"])
-            .padding(.vertical, 48)
+            .classNames(["flex", "items-center", "justify-center"])
+            .inlineStyle("min-height: 100vh;")
           }
           .id("editor-area")
-          .classNames(["flex-1", "p-6", "bg-gray-50"])
+          .classNames(["flex-1", "bg-gray-50"])
         }
-        .classNames(["flex", "flex-col", "md:flex-row", "min-h-screen"])
+        .classNames(["flex", "flex-row", "min-h-screen"])
     }
   }
 }
@@ -185,8 +185,8 @@ private struct PhoneFrame: View {
   func render(_ container: SwiftSoup.Element, environment: EnvironmentValues) throws {
     let phoneFrame = try container.appendElement("div")
     try phoneFrame.attr("id", "phone-frame")
-    try phoneFrame.attr("style", "width: 390px; height: 844px;")
-    try phoneFrame.addClass("relative bg-white border-8 border-gray-800 rounded-3xl overflow-hidden shadow-2xl mx-auto")
+    try phoneFrame.attr("style", "width: 844px; height: 390px;")
+    try phoneFrame.addClass("relative bg-white border-8 border-gray-800 rounded-3xl overflow-hidden shadow-2xl")
 
     // Drop zones container - will be populated by JavaScript
     let dropZonesContainer = try phoneFrame.appendElement("div")

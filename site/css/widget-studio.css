@@ -207,7 +207,11 @@
   pointer-events: none;
 }
 
-/* Sidebar Scrollbar Styles */
+/* Sidebar Styles */
+#sidebar {
+  flex-shrink: 0; /* Don't allow sidebar to shrink */
+}
+
 #sidebar::-webkit-scrollbar {
   width: 8px;
 }
@@ -223,6 +227,14 @@
 
 #sidebar::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* Editor Area */
+#editor-area {
+  flex-grow: 1; /* Take up remaining space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Responsive Adjustments */

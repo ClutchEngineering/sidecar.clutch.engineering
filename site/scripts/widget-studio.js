@@ -414,8 +414,8 @@ function initializeDimensionControls() {
  */
 function updatePhoneFrameDimensions(width, height) {
   const phoneFrame = document.getElementById('phone-frame');
-  const currentWidth = parseInt(phoneFrame.style.width) || 390;
-  const currentHeight = parseInt(phoneFrame.style.height) || 844;
+  const currentWidth = parseInt(phoneFrame.style.width) || 844;
+  const currentHeight = parseInt(phoneFrame.style.height) || 390;
 
   const newWidth = width !== null ? width : currentWidth;
   const newHeight = height !== null ? height : currentHeight;
