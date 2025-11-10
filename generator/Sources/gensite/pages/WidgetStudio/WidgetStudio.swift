@@ -193,22 +193,23 @@ private struct PhoneFrame: View {
     try dropZonesContainer.attr("id", "drop-zones")
     try dropZonesContainer.addClass("absolute inset-0 pointer-events-none z-10")
 
-    // Create all 8 drop zones
+    // Create all 8 drop zones - made larger for better hit detection
     let positions = [
-      ("top-left", "top-4 left-4"),
-      ("top-center", "top-4 left-1/2 -translate-x-1/2"),
-      ("top-right", "top-4 right-4"),
-      ("left-center", "top-1/2 left-4 -translate-y-1/2"),
-      ("right-center", "top-1/2 right-4 -translate-y-1/2"),
-      ("bottom-left", "bottom-4 left-4"),
-      ("bottom-center", "bottom-4 left-1/2 -translate-x-1/2"),
-      ("bottom-right", "bottom-4 right-4")
+      ("top-left", "top-0 left-0"),
+      ("top-center", "top-0 left-1/2 -translate-x-1/2"),
+      ("top-right", "top-0 right-0"),
+      ("left-center", "top-1/2 left-0 -translate-y-1/2"),
+      ("right-center", "top-1/2 right-0 -translate-y-1/2"),
+      ("bottom-left", "bottom-0 left-0"),
+      ("bottom-center", "bottom-0 left-1/2 -translate-x-1/2"),
+      ("bottom-right", "bottom-0 right-0")
     ]
 
     for (position, classes) in positions {
       let dropZone = try dropZonesContainer.appendElement("div")
-      try dropZone.addClass("drop-zone absolute pointer-events-auto w-20 h-20 \(classes)")
+      try dropZone.addClass("drop-zone absolute w-32 h-32 pointer-events-auto \(classes)")
       try dropZone.attr("data-position", position)
+      try dropZone.attr("style", "pointer-events: auto;") // Ensure pointer events work
     }
 
     // Map background
