@@ -11,11 +11,10 @@ struct WidgetStudio: View {
       keywords: ["widget", "editor", "drag and drop", "design", "interface", "dashboard"],
       scripts: [URL(string: "/scripts/widget-studio.js")]
     ) {
+      // Main container wrapper
       Div {
-        // Main container
+        // Left sidebar - Widget palette
         Div {
-          // Left sidebar - Widget palette
-          Div {
             H2("Widget Palette")
               .fontSize(.extraExtraLarge)
               .fontWeight(.bold)
@@ -27,7 +26,7 @@ struct WidgetStudio: View {
               .margin(.bottom, 24)
 
             // Widget items
-            Div {
+            VStack(spacing: 12) {
               WidgetPaletteItem(
                 id: "tire-pressure",
                 title: "Tire Pressure",
@@ -65,9 +64,6 @@ struct WidgetStudio: View {
               )
             }
             .id("widget-palette")
-            .display(.flex)
-            .flexDirection(.column)
-            .gap(12)
           }
           .id("sidebar")
           .classNames(["w-full", "bg-white", "p-6", "border", "border-gray-200", "md:w-80", "md:h-screen", "md:overflow-y-auto", "md:sticky", "md:top-0"])
@@ -90,9 +86,7 @@ struct WidgetStudio: View {
                   DimensionButton(label: "iPhone 14 Plus", width: 428, height: 926)
                   DimensionButton(label: "iPhone Landscape", width: 844, height: 390)
                 }
-                .display(.flex)
-                .flexWrap(.wrap)
-                .gap(8)
+                .classNames(["flex", "flex-wrap", "gap-2"])
                 .margin(.bottom, 16)
 
                 // Custom inputs
@@ -114,16 +108,13 @@ struct WidgetStudio: View {
               // Phone frame
               PhoneFrame()
             }
-            .display(.flex)
-            .justifyContent(.center)
+            .classNames(["flex", "justify-center"])
             .padding(.vertical, 48)
           }
           .id("editor-area")
           .classNames(["flex-1", "p-6", "bg-gray-50"])
         }
-        .display(.flex)
-        .flexDirection(.column)
-        .classNames(["md:flex-row"])
+        .classNames(["flex", "flex-col", "md:flex-row"])
       }
       .classNames(["min-h-screen"])
 
