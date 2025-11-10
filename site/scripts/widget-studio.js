@@ -131,10 +131,15 @@ function handleDragStart(e) {
   e.dataTransfer.effectAllowed = 'copy';
   e.dataTransfer.setData('text/plain', widgetType);
 
+  // Add dragging class for visual feedback
+  e.target.classList.add('dragging');
+
   // Show drop zones
   document.querySelectorAll('.drop-zone').forEach(zone => {
     zone.classList.add('drop-zone-active');
   });
+
+  console.log('Drag started:', widgetType);
 }
 
 /**
@@ -143,10 +148,15 @@ function handleDragStart(e) {
 function handleDragEnd(e) {
   state.draggingWidget = null;
 
+  // Remove dragging class
+  e.target.classList.remove('dragging');
+
   // Hide drop zones
   document.querySelectorAll('.drop-zone').forEach(zone => {
     zone.classList.remove('drop-zone-active', 'drop-zone-hover');
   });
+
+  console.log('Drag ended');
 }
 
 /**
@@ -185,13 +195,17 @@ function handleDrop(e) {
   const widgetType = e.dataTransfer.getData('text/plain');
   const dropZone = e.target.closest('.drop-zone');
 
+  console.log('Drop event:', { widgetType, dropZone, target: e.target });
+
   if (dropZone && widgetType) {
     const position = dropZone.dataset.position;
+    console.log('Adding widget to position:', position);
     addWidgetToPosition(widgetType, position);
     renderWidgets();
+    dropZone.classList.remove('drop-zone-hover');
+  } else {
+    console.warn('Drop failed:', { dropZone, widgetType });
   }
-
-  dropZone.classList.remove('drop-zone-hover');
 }
 
 /**
@@ -359,7 +373,8 @@ function initializePhoneFrameResize() {
  * Add resize handles to phone frame
  */
 function addResizeHandles(element) {
-  const handles = ['nw', 'ne', 'sw', 'se', 'n', 's', 'e', 'w'];
+  // Only right, bottom, and bottom-right corner handles
+  const handles = ['se', 's', 'e'];
 
   handles.forEach(handle => {
     const handleEl = document.createElement('div');
@@ -390,18 +405,14 @@ function startResize(e, element, handle) {
     let newWidth = startWidth;
     let newHeight = startHeight;
 
-    // Handle horizontal resize
+    // Handle horizontal resize (right edge)
     if (handle.includes('e')) {
       newWidth = startWidth + deltaX;
-    } else if (handle.includes('w')) {
-      newWidth = startWidth - deltaX;
     }
 
-    // Handle vertical resize
+    // Handle vertical resize (bottom edge)
     if (handle.includes('s')) {
       newHeight = startHeight + deltaY;
-    } else if (handle.includes('n')) {
-      newHeight = startHeight - deltaY;
     }
 
     // Apply constraints (minimum size)

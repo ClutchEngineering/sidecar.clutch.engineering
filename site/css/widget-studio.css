@@ -17,13 +17,13 @@
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
 }
 
-/* Resize Handles */
+/* Resize Handles - Only right and bottom edges */
 .resize-handle {
   position: absolute;
   z-index: 1000;
-  background: rgba(59, 130, 246, 0.5);
+  background: rgba(59, 130, 246, 0.3);
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, background 0.2s ease;
 }
 
 #phone-frame:hover .resize-handle {
@@ -31,76 +31,34 @@
 }
 
 .resize-handle:hover {
-  background: rgba(59, 130, 246, 0.8);
+  background: rgba(59, 130, 246, 0.6);
 }
 
-/* Corner handles */
-.resize-handle-nw,
-.resize-handle-ne,
-.resize-handle-sw,
+/* Corner handle - bottom right only */
 .resize-handle-se {
-  width: 12px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
+  bottom: -12px;
+  right: -12px;
   border-radius: 50%;
-}
-
-.resize-handle-nw {
-  top: -6px;
-  left: -6px;
-  cursor: nw-resize;
-}
-
-.resize-handle-ne {
-  top: -6px;
-  right: -6px;
-  cursor: ne-resize;
-}
-
-.resize-handle-sw {
-  bottom: -6px;
-  left: -6px;
-  cursor: sw-resize;
-}
-
-.resize-handle-se {
-  bottom: -6px;
-  right: -6px;
   cursor: se-resize;
 }
 
-/* Edge handles */
-.resize-handle-n,
+/* Edge handles - right and bottom only */
 .resize-handle-s {
-  height: 4px;
+  height: 16px;
   left: 12px;
   right: 12px;
-}
-
-.resize-handle-e,
-.resize-handle-w {
-  width: 4px;
-  top: 12px;
-  bottom: 12px;
-}
-
-.resize-handle-n {
-  top: -2px;
-  cursor: n-resize;
-}
-
-.resize-handle-s {
-  bottom: -2px;
+  bottom: -8px;
   cursor: s-resize;
 }
 
 .resize-handle-e {
-  right: -2px;
+  width: 16px;
+  top: 12px;
+  bottom: 12px;
+  right: -8px;
   cursor: e-resize;
-}
-
-.resize-handle-w {
-  left: -2px;
-  cursor: w-resize;
 }
 
 /* Drop Zone Styles */
@@ -108,17 +66,19 @@
   border-radius: 12px;
   transition: all 0.2s ease;
   background: transparent;
+  border: 2px solid transparent;
 }
 
 .drop-zone-active {
-  background: rgba(59, 130, 246, 0.1);
-  border: 2px dashed rgba(59, 130, 246, 0.3);
+  background: rgba(59, 130, 246, 0.15);
+  border: 2px dashed rgba(59, 130, 246, 0.5);
 }
 
 .drop-zone-hover {
-  background: rgba(59, 130, 246, 0.2);
-  border: 2px solid rgba(59, 130, 246, 0.6);
-  transform: scale(1.05);
+  background: rgba(59, 130, 246, 0.3);
+  border: 2px solid rgba(59, 130, 246, 0.8);
+  transform: scale(1.08);
+  box-shadow: 0 0 16px rgba(59, 130, 246, 0.4);
 }
 
 /* Widget Container Styles */
@@ -197,6 +157,7 @@
 /* Widget Palette Styles */
 .widget-item {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: grab;
 }
 
 .widget-item:hover {
@@ -206,6 +167,12 @@
 
 .widget-item:active {
   transform: scale(0.98);
+  cursor: grabbing;
+}
+
+.widget-item.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
 }
 
 /* Dimension Preset Button Styles */
