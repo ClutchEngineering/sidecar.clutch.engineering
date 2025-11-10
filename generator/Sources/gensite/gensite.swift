@@ -94,12 +94,22 @@ struct Gensite: AsyncParsableCommand {
         "privacy-policy/index.html": PrivacyPolicy(
           appName: "Sidecar",
           introText: "Sidecar is delighted to be our users' choice for understanding the state of their garage.",
-          publicationDate: "October 2, 2024"
+          publicationDate: "November 10, 2025"
+        ),
+        "privacy-policy/canstudio/index.html": PrivacyPolicy(
+          appName: "CANStudio",
+          introText: "CANStudio is a powerful CAN OBD workbench.",
+          publicationDate: "November 10, 2025"
         ),
         "privacy-policy/elmcheck/index.html": PrivacyPolicy(
           appName: "ELMCheck",
           introText: "ELMCheck is the easiest way to check the authenticity of your OBD scanner.",
-          publicationDate: "October 2, 2024"
+          publicationDate: "November 10, 2025"
+        ),
+        "privacy-policy/scout/index.html": PrivacyPolicy(
+          appName: "Scout",
+          introText: "Scout is the map we build together.",
+          publicationDate: "November 10, 2025"
         ),
         "features/index.html": Features(),
         "shortcuts/index.html": Shortcuts(),
