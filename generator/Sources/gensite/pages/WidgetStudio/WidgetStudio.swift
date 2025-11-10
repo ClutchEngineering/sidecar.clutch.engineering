@@ -98,22 +98,20 @@ struct WidgetStudio: View {
             }
             .id("widget-palette")
           }
-          .id("sidebar")
-          .classNames(["bg-white", "p-6", "border-r", "border-gray-200", "overflow-y-auto"])
-          .inlineStyle("width: 320px; height: 100vh; position: sticky; top: 0;")
+        .id("sidebar")
+        .classNames(["bg-white", "p-6", "border-r", "border-gray-200", "overflow-y-auto"])
 
-          // Main canvas area
+        // Main canvas area
+        Div {
+          // Phone preview container
           Div {
-            // Phone preview container
-            Div {
-              // Phone frame
-              PhoneFrame()
-            }
-            .classNames(["flex", "items-center", "justify-center"])
-            .inlineStyle("min-height: 100vh;")
+            // Phone frame
+            PhoneFrame()
           }
-          .id("editor-area")
-          .classNames(["flex-1", "bg-gray-50"])
+          .classNames(["flex", "items-center", "justify-center"])
+        }
+        .id("editor-area")
+        .classNames(["flex-1", "bg-gray-50"])
         }
         .classNames(["flex", "flex-row", "min-h-screen"])
     }
