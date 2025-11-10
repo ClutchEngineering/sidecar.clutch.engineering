@@ -9,7 +9,8 @@ struct WidgetStudio: View {
       path: "/widgetstudio/",
       description: "Design your own custom widget interface with our drag and drop editor. Create personalized widget layouts for your dashboard.",
       keywords: ["widget", "editor", "drag and drop", "design", "interface", "dashboard"],
-      scripts: [URL(string: "/scripts/widget-studio.js")]
+      scripts: [URL(string: "/scripts/widget-studio.js")],
+      additionalStylesheets: [URL(string: "/css/widget-studio.css")]
     ) {
       // Main container wrapper
       Div {
@@ -117,10 +118,6 @@ struct WidgetStudio: View {
         .classNames(["flex", "flex-col", "md:flex-row"])
       }
       .classNames(["min-h-screen"])
-
-      // Link to CSS
-      Link(url: "/css/widget-studio.css")
-        .relationship(.stylesheet)
     }
   }
 }
