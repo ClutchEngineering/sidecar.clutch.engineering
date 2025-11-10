@@ -1,5 +1,6 @@
 import Foundation
 import Slipstream
+import SwiftSoup
 
 struct WidgetStudio: View {
   var body: some View {
@@ -7,26 +8,23 @@ struct WidgetStudio: View {
       "Widget Studio",
       path: "/widgetstudio/",
       description: "Design your own custom widget interface with our drag and drop editor. Create personalized widget layouts for your dashboard.",
-      keywords: ["widget", "editor", "drag and drop", "design", "interface", "dashboard"]
+      keywords: ["widget", "editor", "drag and drop", "design", "interface", "dashboard"],
+      scripts: [URL(string: "/scripts/widget-studio.js")]
     ) {
       Div {
         // Main container
         Div {
           // Left sidebar - Widget palette
           Div {
-            H2 {
-              "Widget Palette"
-            }
-            .fontSize(.extraExtraLarge)
-            .fontWeight(.bold)
-            .margin(.bottom, 16)
+            H2("Widget Palette")
+              .fontSize(.extraExtraLarge)
+              .fontWeight(.bold)
+              .margin(.bottom, 16)
 
-            Paragraph {
-              "Drag widgets to the phone screen"
-            }
-            .fontSize(.small)
-            .textColor(.gray, darkness: 600)
-            .margin(.bottom, 24)
+            Paragraph("Drag widgets to the phone screen")
+              .fontSize(.small)
+              .textColor(.text, darkness: 600)
+              .margin(.bottom, 24)
 
             // Widget items
             Div {
@@ -72,22 +70,16 @@ struct WidgetStudio: View {
             .gap(12)
           }
           .id("sidebar")
-          .width(.full)
-          .backgroundColor(.white)
-          .padding(24)
-          .border(.gray, width: 1, darkness: 200)
-          .classModifier("md:w-80 md:h-screen md:overflow-y-auto md:sticky md:top-0")
+          .classNames(["w-full", "bg-white", "p-6", "border", "border-gray-200", "md:w-80", "md:h-screen", "md:overflow-y-auto", "md:sticky", "md:top-0"])
 
           // Main editor area
           Div {
             // Controls section
             Div {
-              H2 {
-                "Device Dimensions"
-              }
-              .fontSize(.extraExtraLarge)
-              .fontWeight(.bold)
-              .margin(.bottom, 16)
+              H2("Device Dimensions")
+                .fontSize(.extraExtraLarge)
+                .fontWeight(.bold)
+                .margin(.bottom, 16)
 
               // Dimension controls
               Div {
@@ -105,186 +97,137 @@ struct WidgetStudio: View {
 
                 // Custom inputs
                 Div {
-                  Div {
-                    Label("Width") {
-                      Input(type: .number)
-                        .id("width-input")
-                        .value("390")
-                        .classModifier("w-full px-3 py-2 border border-gray-300 rounded-md")
-                    }
-                    .fontSize(.small)
-                    .fontWeight(.medium)
-                  }
-
-                  Div {
-                    Label("Height") {
-                      Input(type: .number)
-                        .id("height-input")
-                        .value("844")
-                        .classModifier("w-full px-3 py-2 border border-gray-300 rounded-md")
-                    }
-                    .fontSize(.small)
-                    .fontWeight(.medium)
-                  }
+                  DimensionInput(label: "Width", inputId: "width-input", defaultValue: "390")
+                  DimensionInput(label: "Height", inputId: "height-input", defaultValue: "844")
                 }
-                .display(.grid)
-                .classModifier("grid-cols-2 gap-4")
+                .classNames(["grid", "grid-cols-2", "gap-4"])
               }
               .padding(16)
-              .backgroundColor(.white)
-              .border(.gray, width: 1, darkness: 200)
-              .classModifier("rounded-lg")
+              .background(.white)
+              .border(.palette(.gray, darkness: 200), width: 1)
+              .cornerRadius(8)
             }
             .margin(.bottom, 32)
 
             // Phone preview container
             Div {
               // Phone frame
-              Div {
-                // Drop zones container
-                Div {
-                  // Top left
-                  DropZone(position: "top-left")
-                  // Top center
-                  DropZone(position: "top-center")
-                  // Top right
-                  DropZone(position: "top-right")
-                  // Left center
-                  DropZone(position: "left-center")
-                  // Right center
-                  DropZone(position: "right-center")
-                  // Bottom left
-                  DropZone(position: "bottom-left")
-                  // Bottom center
-                  DropZone(position: "bottom-center")
-                  // Bottom right
-                  DropZone(position: "bottom-right")
-                }
-                .id("drop-zones")
-                .position(.absolute)
-                .classModifier("inset-0 pointer-events-none z-10")
-
-                // Map background
-                Div {
-                  // This will be replaced with Apple Maps via JavaScript
-                }
-                .id("map-container")
-                .width(.full)
-                .height(.full)
-                .backgroundColor(.gray, darkness: 200)
-                .position(.relative)
-              }
-              .id("phone-frame")
-              .position(.relative)
-              .backgroundColor(.white)
-              .border(.gray, width: 8, darkness: 800)
-              .classModifier("rounded-3xl overflow-hidden shadow-2xl resize mx-auto")
-              .inlineStyle("width: 390px; height: 844px;")
+              PhoneFrame()
             }
             .display(.flex)
             .justifyContent(.center)
             .padding(.vertical, 48)
           }
           .id("editor-area")
-          .classModifier("flex-1 p-6 bg-gray-50")
+          .classNames(["flex-1", "p-6", "bg-gray-50"])
         }
         .display(.flex)
         .flexDirection(.column)
-        .classModifier("md:flex-row")
+        .classNames(["md:flex-row"])
       }
-      .classModifier("min-h-screen")
+      .classNames(["min-h-screen"])
 
       // Link to CSS
       Link(url: "/css/widget-studio.css")
         .relationship(.stylesheet)
-
-      // Link to JavaScript
-      Script(url: "/scripts/widget-studio.js")
-        .attribute("defer", nil)
     }
   }
 }
 
 // Helper component for widget palette items
-struct WidgetPaletteItem: View {
+private struct WidgetPaletteItem: View {
   let id: String
   let title: String
   let icon: String
 
-  var body: some View {
-    Div {
-      Div {
-        Text(icon)
-      }
-      .fontSize(.extraExtraLarge)
-      .margin(.bottom, 8)
+  func render(_ container: SwiftSoup.Element, environment: EnvironmentValues) throws {
+    let div = try container.appendElement("div")
+    try div.addClass("widget-item cursor-grab active:cursor-grabbing p-4 bg-white border border-gray-300 rounded-lg hover:shadow-md transition-shadow text-center")
+    try div.attr("data-widget-type", id)
+    try div.attr("draggable", "true")
 
-      Div {
-        Text(title)
-      }
-      .fontSize(.small)
-      .fontWeight(.medium)
-    }
-    .classModifier("widget-item cursor-grab active:cursor-grabbing")
-    .attribute("data-widget-type", id)
-    .attribute("draggable", "true")
-    .padding(16)
-    .backgroundColor(.white)
-    .border(.gray, width: 1, darkness: 300)
-    .classModifier("rounded-lg hover:shadow-md transition-shadow")
-    .textAlignment(.center)
+    let iconDiv = try div.appendElement("div")
+    try iconDiv.addClass("text-4xl mb-2")
+    try iconDiv.text(icon)
+
+    let titleDiv = try div.appendElement("div")
+    try titleDiv.addClass("text-sm font-medium")
+    try titleDiv.text(title)
   }
 }
 
 // Helper component for dimension preset buttons
-struct DimensionButton: View {
+private struct DimensionButton: View {
   let label: String
   let width: Int
   let height: Int
 
-  var body: some View {
-    Button {
-      Text(label)
-    }
-    .classModifier("dimension-preset px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors text-sm")
-    .attribute("data-width", String(width))
-    .attribute("data-height", String(height))
+  func render(_ container: SwiftSoup.Element, environment: EnvironmentValues) throws {
+    let button = try container.appendElement("button")
+    try button.addClass("dimension-preset px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors text-sm")
+    try button.attr("data-width", String(width))
+    try button.attr("data-height", String(height))
+    try button.attr("type", "button")
+    try button.text(label)
   }
 }
 
-// Helper component for drop zones
-struct DropZone: View {
-  let position: String
+// Helper component for dimension inputs
+private struct DimensionInput: View {
+  let label: String
+  let inputId: String
+  let defaultValue: String
 
-  var body: some View {
-    Div {
-      // Visual indicator (hidden by default, shown on drag)
-    }
-    .classModifier("drop-zone absolute pointer-events-auto")
-    .attribute("data-position", position)
-    .classModifier(positionClasses)
+  func render(_ container: SwiftSoup.Element, environment: EnvironmentValues) throws {
+    let div = try container.appendElement("div")
+
+    let labelElement = try div.appendElement("label")
+    try labelElement.attr("for", inputId)
+    try labelElement.addClass("block text-sm font-medium mb-1")
+    try labelElement.text(label)
+
+    let input = try div.appendElement("input")
+    try input.attr("type", "number")
+    try input.attr("id", inputId)
+    try input.attr("value", defaultValue)
+    try input.addClass("w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500")
   }
+}
 
-  private var positionClasses: String {
-    switch position {
-    case "top-left":
-      return "top-4 left-4 w-20 h-20"
-    case "top-center":
-      return "top-4 left-1/2 -translate-x-1/2 w-20 h-20"
-    case "top-right":
-      return "top-4 right-4 w-20 h-20"
-    case "left-center":
-      return "top-1/2 left-4 -translate-y-1/2 w-20 h-20"
-    case "right-center":
-      return "top-1/2 right-4 -translate-y-1/2 w-20 h-20"
-    case "bottom-left":
-      return "bottom-4 left-4 w-20 h-20"
-    case "bottom-center":
-      return "bottom-4 left-1/2 -translate-x-1/2 w-20 h-20"
-    case "bottom-right":
-      return "bottom-4 right-4 w-20 h-20"
-    default:
-      return ""
+// Helper component for phone frame with drop zones
+private struct PhoneFrame: View {
+  func render(_ container: SwiftSoup.Element, environment: EnvironmentValues) throws {
+    let phoneFrame = try container.appendElement("div")
+    try phoneFrame.attr("id", "phone-frame")
+    try phoneFrame.attr("style", "width: 390px; height: 844px;")
+    try phoneFrame.addClass("relative bg-white border-8 border-gray-800 rounded-3xl overflow-hidden shadow-2xl mx-auto")
+
+    // Drop zones container
+    let dropZonesContainer = try phoneFrame.appendElement("div")
+    try dropZonesContainer.attr("id", "drop-zones")
+    try dropZonesContainer.addClass("absolute inset-0 pointer-events-none z-10")
+
+    // Create all 8 drop zones
+    let positions = [
+      ("top-left", "top-4 left-4"),
+      ("top-center", "top-4 left-1/2 -translate-x-1/2"),
+      ("top-right", "top-4 right-4"),
+      ("left-center", "top-1/2 left-4 -translate-y-1/2"),
+      ("right-center", "top-1/2 right-4 -translate-y-1/2"),
+      ("bottom-left", "bottom-4 left-4"),
+      ("bottom-center", "bottom-4 left-1/2 -translate-x-1/2"),
+      ("bottom-right", "bottom-4 right-4")
+    ]
+
+    for (position, classes) in positions {
+      let dropZone = try dropZonesContainer.appendElement("div")
+      try dropZone.addClass("drop-zone absolute pointer-events-auto w-20 h-20 \(classes)")
+      try dropZone.attr("data-position", position)
     }
+
+    // Map background
+    let mapContainer = try phoneFrame.appendElement("div")
+    try mapContainer.attr("id", "map-container")
+    try mapContainer.addClass("w-full h-full bg-gray-200 relative")
   }
 }
