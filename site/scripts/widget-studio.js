@@ -107,6 +107,20 @@ function initializeDragAndDrop() {
   const widgetItems = document.querySelectorAll('.widget-item');
   const dropZones = document.querySelectorAll('.drop-zone');
 
+  console.log('Initializing drag and drop:', {
+    widgetItems: widgetItems.length,
+    dropZones: dropZones.length
+  });
+
+  // Log drop zone details
+  dropZones.forEach((zone, index) => {
+    console.log(`Drop zone ${index}:`, {
+      position: zone.dataset.position,
+      classes: zone.className,
+      style: zone.style.cssText
+    });
+  });
+
   // Setup drag events for widget items
   widgetItems.forEach(item => {
     item.addEventListener('dragstart', handleDragStart);
@@ -163,14 +177,17 @@ function handleDragEnd(e) {
  * Handle drag over event
  */
 function handleDragOver(e) {
+  console.log('Drag over:', e.target.className, e.target.dataset.position);
   e.preventDefault();
   e.dataTransfer.dropEffect = 'copy';
+  return false;
 }
 
 /**
  * Handle drag enter event
  */
 function handleDragEnter(e) {
+  console.log('Drag enter:', e.target.className, e.target.dataset.position);
   if (e.target.classList.contains('drop-zone')) {
     e.target.classList.add('drop-zone-hover');
   }
@@ -180,6 +197,7 @@ function handleDragEnter(e) {
  * Handle drag leave event
  */
 function handleDragLeave(e) {
+  console.log('Drag leave:', e.target.className);
   if (e.target.classList.contains('drop-zone')) {
     e.target.classList.remove('drop-zone-hover');
   }
