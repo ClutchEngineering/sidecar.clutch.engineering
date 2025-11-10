@@ -55,6 +55,7 @@ const widgetTypes = {
 // Initialize the application when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   initializeMap();
+  createDropZones(); // Create drop zones dynamically with JavaScript
   initializeDragAndDrop();
   initializeDimensionControls();
   initializePhoneFrameResize();
@@ -98,6 +99,66 @@ function initializeMap() {
       </div>
     `;
   }
+}
+
+/**
+ * Create drop zones dynamically with JavaScript for better positioning control
+ */
+function createDropZones() {
+  const dropZonesContainer = document.getElementById('drop-zones');
+
+  if (!dropZonesContainer) {
+    console.error('Drop zones container not found!');
+    return;
+  }
+
+  console.log('Creating drop zones dynamically...');
+
+  // Define drop zone positions with their CSS properties
+  const positions = [
+    { name: 'top-left', top: 0, left: 0 },
+    { name: 'top-center', top: 0, left: '50%', transform: 'translateX(-50%)' },
+    { name: 'top-right', top: 0, right: 0 },
+    { name: 'left-center', top: '50%', left: 0, transform: 'translateY(-50%)' },
+    { name: 'right-center', top: '50%', right: 0, transform: 'translateY(-50%)' },
+    { name: 'bottom-left', bottom: 0, left: 0 },
+    { name: 'bottom-center', bottom: 0, left: '50%', transform: 'translateX(-50%)' },
+    { name: 'bottom-right', bottom: 0, right: 0 }
+  ];
+
+  positions.forEach((pos, index) => {
+    const dropZone = document.createElement('div');
+    dropZone.className = 'drop-zone';
+    dropZone.dataset.position = pos.name;
+
+    // Apply positioning styles
+    dropZone.style.position = 'absolute';
+    dropZone.style.width = '128px';
+    dropZone.style.height = '128px';
+    dropZone.style.pointerEvents = 'auto';
+    dropZone.style.zIndex = '50';
+
+    // Apply position-specific styles
+    if (pos.top !== undefined) dropZone.style.top = typeof pos.top === 'number' ? `${pos.top}px` : pos.top;
+    if (pos.bottom !== undefined) dropZone.style.bottom = typeof pos.bottom === 'number' ? `${pos.bottom}px` : pos.bottom;
+    if (pos.left !== undefined) dropZone.style.left = typeof pos.left === 'number' ? `${pos.left}px` : pos.left;
+    if (pos.right !== undefined) dropZone.style.right = typeof pos.right === 'number' ? `${pos.right}px` : pos.right;
+    if (pos.transform) dropZone.style.transform = pos.transform;
+
+    dropZonesContainer.appendChild(dropZone);
+
+    console.log(`Created drop zone ${index} (${pos.name}):`, {
+      position: dropZone.style.position,
+      top: dropZone.style.top,
+      left: dropZone.style.left,
+      right: dropZone.style.right,
+      bottom: dropZone.style.bottom,
+      transform: dropZone.style.transform,
+      boundingRect: dropZone.getBoundingClientRect()
+    });
+  });
+
+  console.log(`Created ${positions.length} drop zones`);
 }
 
 /**

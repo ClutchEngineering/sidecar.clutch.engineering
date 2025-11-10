@@ -188,29 +188,10 @@ private struct PhoneFrame: View {
     try phoneFrame.attr("style", "width: 390px; height: 844px;")
     try phoneFrame.addClass("relative bg-white border-8 border-gray-800 rounded-3xl overflow-hidden shadow-2xl mx-auto")
 
-    // Drop zones container
+    // Drop zones container - will be populated by JavaScript
     let dropZonesContainer = try phoneFrame.appendElement("div")
     try dropZonesContainer.attr("id", "drop-zones")
-    try dropZonesContainer.addClass("absolute inset-0 pointer-events-none z-10")
-
-    // Create all 8 drop zones - made larger for better hit detection
-    let positions: [(String, String)] = [
-      ("top-left", "top: 0; left: 0;"),
-      ("top-center", "top: 0; left: 50%; transform: translateX(-50%);"),
-      ("top-right", "top: 0; right: 0;"),
-      ("left-center", "top: 50%; left: 0; transform: translateY(-50%);"),
-      ("right-center", "top: 50%; right: 0; transform: translateY(-50%);"),
-      ("bottom-left", "bottom: 0; left: 0;"),
-      ("bottom-center", "bottom: 0; left: 50%; transform: translateX(-50%);"),
-      ("bottom-right", "bottom: 0; right: 0;")
-    ]
-
-    for (position, inlineStyle) in positions {
-      let dropZone = try dropZonesContainer.appendElement("div")
-      try dropZone.addClass("drop-zone")
-      try dropZone.attr("data-position", position)
-      try dropZone.attr("style", "position: absolute; width: 128px; height: 128px; pointer-events: auto; \(inlineStyle)")
-    }
+    try dropZonesContainer.attr("style", "position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; z-index: 10;")
 
     // Map background
     let mapContainer = try phoneFrame.appendElement("div")
