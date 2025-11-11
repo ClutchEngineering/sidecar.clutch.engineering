@@ -55,6 +55,26 @@ const widgetTypes = {
   }
 };
 
+// Compact encoding/decoding mappings
+const widgetCodes = {
+  'tire-pressure': 't',
+  'now-playing': 'n',
+  'battery': 'b',
+  'speed': 's',
+  'temperature': 'm',
+  'fuel': 'f'
+};
+
+const codeToWidget = Object.fromEntries(
+  Object.entries(widgetCodes).map(([key, val]) => [val, key])
+);
+
+const positionOrder = [
+  'top-left', 'top-center', 'top-right',
+  'left-center', 'right-center',
+  'bottom-left', 'bottom-center', 'bottom-right'
+];
+
 // Initialize the application when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   initializeMap();
@@ -62,6 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeDragAndDrop();
   initializeDimensionControls();
   initializePhoneFrameResize();
+
+  // Load layout from URL if present
+  loadLayoutFromURL();
 });
 
 /**
@@ -639,6 +662,9 @@ function renderWidgets() {
       widgetContainer.appendChild(widgetEl);
     });
   });
+
+  // Update URL with current layout
+  updateURLWithLayout();
 }
 
 /**
@@ -734,6 +760,9 @@ function updatePhoneFrameDimensions(width, height) {
 
   phoneFrame.style.width = `${newWidth}px`;
   phoneFrame.style.height = `${newHeight}px`;
+
+  // Update URL with new dimensions
+  updateURLWithLayout();
 }
 
 /**
@@ -820,6 +849,94 @@ function startResize(e, element, handle) {
 
   document.addEventListener('mousemove', onMouseMove);
   document.addEventListener('mouseup', onMouseUp);
+}
+
+/**
+ * Encode layout to compact string
+ * Format: widgetCodes.separated.by.dots|widthxheight
+ * Example: tnb.s..mf...|844x390
+ */
+function encodeLayout() {
+  // Encode widgets for each position
+  const parts = positionOrder.map(pos => {
+    const widgets = state.widgets[pos];
+    return widgets.map(w => widgetCodes[w.type] || '').join('');
+  });
+
+  // Get dimensions
+  const phoneFrame = document.getElementById('phone-frame');
+  const width = parseInt(phoneFrame.style.width) || 844;
+  const height = parseInt(phoneFrame.style.height) || 390;
+
+  return `${parts.join('.')}|${width}x${height}`;
+}
+
+/**
+ * Decode layout from compact string
+ */
+function decodeLayout(encoded) {
+  if (!encoded) return;
+
+  try {
+    const [widgetsPart, dimensionsPart] = encoded.split('|');
+
+    // Clear existing widgets
+    positionOrder.forEach(pos => {
+      state.widgets[pos] = [];
+    });
+
+    // Decode widgets
+    if (widgetsPart) {
+      const parts = widgetsPart.split('.');
+      parts.forEach((part, index) => {
+        if (index < positionOrder.length && part) {
+          const position = positionOrder[index];
+          // Each character is a widget code
+          for (const code of part) {
+            const widgetType = codeToWidget[code];
+            if (widgetType) {
+              addWidgetToPosition(widgetType, position);
+            }
+          }
+        }
+      });
+    }
+
+    // Decode dimensions
+    if (dimensionsPart) {
+      const [width, height] = dimensionsPart.split('x').map(n => parseInt(n));
+      if (width && height) {
+        updatePhoneFrameDimensions(width, height);
+        document.getElementById('width-input').value = width;
+        document.getElementById('height-input').value = height;
+      }
+    }
+
+    renderWidgets();
+  } catch (e) {
+    console.error('Failed to decode layout:', e);
+  }
+}
+
+/**
+ * Update URL with current layout
+ */
+function updateURLWithLayout() {
+  const encoded = encodeLayout();
+  const url = new URL(window.location);
+  url.searchParams.set('layout', encoded);
+  window.history.replaceState({}, '', url);
+}
+
+/**
+ * Load layout from URL on page load
+ */
+function loadLayoutFromURL() {
+  const url = new URL(window.location);
+  const encoded = url.searchParams.get('layout');
+  if (encoded) {
+    decodeLayout(encoded);
+  }
 }
 
 /**
