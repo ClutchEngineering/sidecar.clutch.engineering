@@ -5,6 +5,8 @@
 // State management
 const state = {
   draggingWidget: null,
+  dragImageClone: null,
+  lastHoverZone: null,
   widgets: {
     'top-left': [],
     'top-center': [],
@@ -217,11 +219,6 @@ function handleDragStart(e) {
     zone.classList.add('drop-zone-active');
   });
 
-  // Add wiggle effect to widgets in canvas (not sidebar)
-  document.querySelectorAll('.drop-zone .widget-instance').forEach(widget => {
-    widget.classList.add('wiggling');
-  });
-
   console.log('Drag started:', widgetType);
 }
 
@@ -256,12 +253,14 @@ function handleWidgetInstanceDragStart(e) {
 
   // Create a proper drag image by cloning the element
   const dragImage = e.currentTarget.cloneNode(true);
-  dragImage.style.position = 'absolute';
+  dragImage.id = 'drag-image-clone';
+  dragImage.style.position = 'fixed';
   dragImage.style.top = '-9999px';
   dragImage.style.left = '-9999px';
   dragImage.style.width = e.currentTarget.offsetWidth + 'px';
   dragImage.style.height = e.currentTarget.offsetHeight + 'px';
   dragImage.style.opacity = '1';
+  dragImage.style.pointerEvents = 'none';
   dragImage.classList.remove('dragging');
   document.body.appendChild(dragImage);
 
@@ -270,12 +269,8 @@ function handleWidgetInstanceDragStart(e) {
   const offsetY = e.offsetY || e.currentTarget.offsetHeight / 2;
   e.dataTransfer.setDragImage(dragImage, offsetX, offsetY);
 
-  // Clean up the cloned element after drag starts
-  requestAnimationFrame(() => {
-    if (dragImage.parentNode) {
-      document.body.removeChild(dragImage);
-    }
-  });
+  // Store cleanup reference
+  state.dragImageClone = dragImage;
 
   // Add dragging class for visual feedback
   e.currentTarget.classList.add('dragging');
@@ -283,11 +278,6 @@ function handleWidgetInstanceDragStart(e) {
   // Show drop zones
   document.querySelectorAll('.drop-zone').forEach(zone => {
     zone.classList.add('drop-zone-active');
-  });
-
-  // Add wiggle effect to other widgets in canvas (not sidebar)
-  document.querySelectorAll('.drop-zone .widget-instance:not(.dragging)').forEach(widget => {
-    widget.classList.add('wiggling');
   });
 
   console.log('Widget instance drag started:', { widgetId, widgetType, currentPosition });
@@ -303,6 +293,12 @@ function handleDragEnd(e) {
   const element = e.currentTarget || e.target;
   element.classList.remove('dragging');
 
+  // Clean up drag image clone if it exists
+  if (state.dragImageClone && state.dragImageClone.parentNode) {
+    document.body.removeChild(state.dragImageClone);
+    state.dragImageClone = null;
+  }
+
   // Hide drop zones and remove snap previews
   document.querySelectorAll('.drop-zone').forEach(zone => {
     zone.classList.remove('drop-zone-active', 'drop-zone-hover');
@@ -312,10 +308,8 @@ function handleDragEnd(e) {
     }
   });
 
-  // Remove wiggle effect from all widgets
-  document.querySelectorAll('.widget-instance.wiggling').forEach(widget => {
-    widget.classList.remove('wiggling');
-  });
+  // Clear last hover zone
+  state.lastHoverZone = null;
 
   console.log('Drag ended');
 }
@@ -333,6 +327,54 @@ function handleDragOver(e) {
     e.dataTransfer.dropEffect = 'move';
   }
 
+  // Find the drop zone we're currently over
+  const dropZone = e.target.closest('.drop-zone');
+
+  if (dropZone && state.draggingWidget) {
+    // If we've moved to a new drop zone, update the snap preview
+    if (state.lastHoverZone !== dropZone) {
+      // Remove old snap preview
+      if (state.lastHoverZone) {
+        state.lastHoverZone.classList.remove('drop-zone-hover');
+        const oldPreview = state.lastHoverZone.querySelector('.snap-preview');
+        if (oldPreview) {
+          oldPreview.remove();
+        }
+      }
+
+      // Add new snap preview
+      dropZone.classList.add('drop-zone-hover');
+
+      if (!dropZone.querySelector('.snap-preview')) {
+        const widgetType = state.draggingWidget.type;
+        const config = widgetTypes[widgetType];
+
+        const snapPreview = document.createElement('div');
+        snapPreview.className = 'snap-preview';
+        snapPreview.style.backgroundColor = config.color;
+        snapPreview.innerHTML = `
+          <div class="widget-icon">${config.icon}</div>
+          <div class="widget-title">${config.title}</div>
+        `;
+
+        const widgetContainer = dropZone.querySelector('.widget-container');
+        if (widgetContainer) {
+          widgetContainer.appendChild(snapPreview);
+        }
+      }
+
+      state.lastHoverZone = dropZone;
+    }
+  } else if (state.lastHoverZone) {
+    // We've left all drop zones
+    state.lastHoverZone.classList.remove('drop-zone-hover');
+    const oldPreview = state.lastHoverZone.querySelector('.snap-preview');
+    if (oldPreview) {
+      oldPreview.remove();
+    }
+    state.lastHoverZone = null;
+  }
+
   return false;
 }
 
@@ -340,41 +382,16 @@ function handleDragOver(e) {
  * Handle drag enter event
  */
 function handleDragEnter(e) {
-  if (e.target.classList.contains('drop-zone')) {
-    e.target.classList.add('drop-zone-hover');
-
-    // Show snap preview
-    if (state.draggingWidget && !e.target.querySelector('.snap-preview')) {
-      const widgetType = state.draggingWidget.type;
-      const config = widgetTypes[widgetType];
-
-      const snapPreview = document.createElement('div');
-      snapPreview.className = 'snap-preview';
-      snapPreview.style.backgroundColor = config.color;
-      snapPreview.innerHTML = `
-        <div class="widget-icon">${config.icon}</div>
-        <div class="widget-title">${config.title}</div>
-      `;
-
-      const widgetContainer = e.target.querySelector('.widget-container') || e.target;
-      widgetContainer.appendChild(snapPreview);
-    }
-  }
+  // Handled in dragover for more reliable behavior
+  e.preventDefault();
 }
 
 /**
  * Handle drag leave event
  */
 function handleDragLeave(e) {
-  if (e.target.classList.contains('drop-zone')) {
-    e.target.classList.remove('drop-zone-hover');
-
-    // Remove snap preview when leaving
-    const snapPreview = e.target.querySelector('.snap-preview');
-    if (snapPreview) {
-      snapPreview.remove();
-    }
-  }
+  // Handled in dragover for more reliable behavior
+  e.preventDefault();
 }
 
 /**

@@ -290,23 +290,6 @@
   animation: slideIn 0.3s ease;
 }
 
-/* Wiggle animation for widgets during drag */
-@keyframes wiggle {
-  0%, 100% {
-    transform: translateY(-2px) rotate(0deg);
-  }
-  25% {
-    transform: translateY(-2px) rotate(-1deg);
-  }
-  75% {
-    transform: translateY(-2px) rotate(1deg);
-  }
-}
-
-.widget-instance.wiggling {
-  animation: wiggle 0.3s ease-in-out infinite;
-}
-
 /* Snap preview styling */
 .snap-preview {
   position: relative;
@@ -320,8 +303,9 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  opacity: 0.5;
-  border: 2px dashed rgba(255, 255, 255, 0.8);
+  opacity: 0.6;
+  border: 2px dashed rgba(255, 255, 255, 0.9);
+  pointer-events: none;
   animation: pulse 1s ease-in-out infinite;
 }
 
