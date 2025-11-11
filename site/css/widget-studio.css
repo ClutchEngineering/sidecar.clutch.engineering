@@ -366,6 +366,12 @@
   -ms-user-select: none;
 }
 
+/* Deletion cursor when dragging outside canvas */
+body.deleting-widget,
+body.deleting-widget * {
+  cursor: not-allowed !important;
+}
+
 /* Loading state for map */
 #map-container.loading {
   display: flex;

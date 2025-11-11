@@ -7,6 +7,7 @@ const state = {
   draggingWidget: null,
   dragImageClone: null,
   lastHoverZone: null,
+  currentDropZone: null,
   widgets: {
     'top-left': [],
     'top-center': [],
@@ -307,11 +308,12 @@ function handleDragEnd(e) {
 
       // Clean up deletion visual state
       phoneFrame.classList.remove('deletion-zone');
-      document.body.style.cursor = '';
+      document.body.classList.remove('deleting-widget');
     }
   }
 
   state.draggingWidget = null;
+  state.currentDropZone = null;
 
   // Remove dragging class - use currentTarget to get the element with the listener
   const element = e.currentTarget || e.target;
@@ -361,7 +363,8 @@ function handleDragOver(e) {
       if (isOutsideFrame) {
         e.dataTransfer.dropEffect = 'none';
         phoneFrame.classList.add('deletion-zone');
-        document.body.style.cursor = 'not-allowed';
+        // Use class for cursor to ensure it's not overridden
+        document.body.classList.add('deleting-widget');
 
         // Clear any snap previews when in deletion zone
         if (state.lastHoverZone) {
@@ -375,7 +378,7 @@ function handleDragOver(e) {
         return false;
       } else {
         phoneFrame.classList.remove('deletion-zone');
-        document.body.style.cursor = '';
+        document.body.classList.remove('deleting-widget');
       }
     }
   }
@@ -387,10 +390,25 @@ function handleDragOver(e) {
     e.dataTransfer.dropEffect = 'move';
   }
 
-  // Find the drop zone we're currently over
+  // Find the drop zone we're currently over - must be directly over it
   const dropZone = e.target.closest('.drop-zone');
 
-  if (dropZone && state.draggingWidget) {
+  // Verify we're actually inside the drop zone bounds, not just hovering near it
+  let isActuallyInZone = false;
+  if (dropZone) {
+    const rect = dropZone.getBoundingClientRect();
+    isActuallyInZone = (
+      e.clientX >= rect.left &&
+      e.clientX <= rect.right &&
+      e.clientY >= rect.top &&
+      e.clientY <= rect.bottom
+    );
+  }
+
+  if (dropZone && isActuallyInZone && state.draggingWidget) {
+    // Store the zone we're currently over
+    state.currentDropZone = dropZone;
+
     // If we've moved to a new drop zone, update the snap preview
     if (state.lastHoverZone !== dropZone) {
       // Remove old snap preview
@@ -417,22 +435,31 @@ function handleDragOver(e) {
           <div class="widget-title">${config.title}</div>
         `;
 
-        const widgetContainer = dropZone.querySelector('.widget-container');
-        if (widgetContainer) {
-          widgetContainer.appendChild(snapPreview);
+        // Ensure widget container exists
+        let widgetContainer = dropZone.querySelector('.widget-container');
+        if (!widgetContainer) {
+          widgetContainer = document.createElement('div');
+          widgetContainer.className = 'widget-container';
+          dropZone.appendChild(widgetContainer);
         }
+        widgetContainer.appendChild(snapPreview);
       }
 
       state.lastHoverZone = dropZone;
     }
-  } else if (state.lastHoverZone) {
-    // We've left all drop zones
-    state.lastHoverZone.classList.remove('drop-zone-hover');
-    const oldPreview = state.lastHoverZone.querySelector('.snap-preview');
-    if (oldPreview) {
-      oldPreview.remove();
+  } else {
+    // Not over a valid drop zone - clear current zone
+    state.currentDropZone = null;
+
+    // Clear snap previews
+    if (state.lastHoverZone) {
+      state.lastHoverZone.classList.remove('drop-zone-hover');
+      const oldPreview = state.lastHoverZone.querySelector('.snap-preview');
+      if (oldPreview) {
+        oldPreview.remove();
+      }
+      state.lastHoverZone = null;
     }
-    state.lastHoverZone = null;
   }
 
   return false;
@@ -462,9 +489,10 @@ function handleDrop(e) {
   e.stopPropagation();
 
   const dataString = e.dataTransfer.getData('text/plain');
-  const dropZone = e.target.closest('.drop-zone');
+  // Use the zone we tracked during dragover, not the zone from the drop event
+  const dropZone = state.currentDropZone;
 
-  console.log('Drop event:', { dataString, dropZone, target: e.target });
+  console.log('Drop event:', { dataString, dropZone, currentDropZone: state.currentDropZone, target: e.target });
 
   if (dropZone && dataString) {
     const position = dropZone.dataset.position;
@@ -500,7 +528,7 @@ function handleDrop(e) {
       console.error('Failed to parse drop data:', e);
     }
   } else {
-    console.warn('Drop failed:', { dropZone, dataString });
+    console.warn('Drop failed - no valid drop zone:', { dropZone, dataString });
   }
 }
 
