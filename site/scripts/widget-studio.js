@@ -198,13 +198,16 @@ function initializeDragAndDrop() {
 }
 
 /**
- * Handle drag start event
+ * Handle drag start event (for palette widgets)
  */
 function handleDragStart(e) {
   const widgetType = e.target.dataset.widgetType;
-  state.draggingWidget = widgetType;
+  state.draggingWidget = {
+    type: widgetType,
+    isNew: true
+  };
   e.dataTransfer.effectAllowed = 'copy';
-  e.dataTransfer.setData('text/plain', widgetType);
+  e.dataTransfer.setData('text/plain', JSON.stringify({ type: widgetType, isNew: true }));
 
   // Add dragging class for visual feedback
   e.target.classList.add('dragging');
@@ -215,6 +218,46 @@ function handleDragStart(e) {
   });
 
   console.log('Drag started:', widgetType);
+}
+
+/**
+ * Handle drag start event for widget instances (already placed widgets)
+ */
+function handleWidgetInstanceDragStart(e) {
+  // Prevent dragging if clicking on remove button
+  if (e.target.classList.contains('widget-remove')) {
+    e.preventDefault();
+    return;
+  }
+
+  const widgetId = e.currentTarget.dataset.widgetId;
+  const widgetType = e.currentTarget.dataset.widgetType;
+  const currentPosition = e.currentTarget.dataset.currentPosition;
+
+  state.draggingWidget = {
+    type: widgetType,
+    isNew: false,
+    widgetId: widgetId,
+    currentPosition: currentPosition
+  };
+
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/plain', JSON.stringify({
+    type: widgetType,
+    isNew: false,
+    widgetId: widgetId,
+    currentPosition: currentPosition
+  }));
+
+  // Add dragging class for visual feedback
+  e.currentTarget.classList.add('dragging');
+
+  // Show drop zones
+  document.querySelectorAll('.drop-zone').forEach(zone => {
+    zone.classList.add('drop-zone-active');
+  });
+
+  console.log('Widget instance drag started:', { widgetId, widgetType, currentPosition });
 }
 
 /**
@@ -238,9 +281,15 @@ function handleDragEnd(e) {
  * Handle drag over event
  */
 function handleDragOver(e) {
-  console.log('Drag over:', e.target.className, e.target.dataset.position);
   e.preventDefault();
-  e.dataTransfer.dropEffect = 'copy';
+
+  // Set drop effect based on whether it's a new widget or move
+  if (state.draggingWidget && state.draggingWidget.isNew) {
+    e.dataTransfer.dropEffect = 'copy';
+  } else {
+    e.dataTransfer.dropEffect = 'move';
+  }
+
   return false;
 }
 
@@ -248,7 +297,6 @@ function handleDragOver(e) {
  * Handle drag enter event
  */
 function handleDragEnter(e) {
-  console.log('Drag enter:', e.target.className, e.target.dataset.position);
   if (e.target.classList.contains('drop-zone')) {
     e.target.classList.add('drop-zone-hover');
   }
@@ -258,7 +306,6 @@ function handleDragEnter(e) {
  * Handle drag leave event
  */
 function handleDragLeave(e) {
-  console.log('Drag leave:', e.target.className);
   if (e.target.classList.contains('drop-zone')) {
     e.target.classList.remove('drop-zone-hover');
   }
@@ -271,19 +318,42 @@ function handleDrop(e) {
   e.preventDefault();
   e.stopPropagation();
 
-  const widgetType = e.dataTransfer.getData('text/plain');
+  const dataString = e.dataTransfer.getData('text/plain');
   const dropZone = e.target.closest('.drop-zone');
 
-  console.log('Drop event:', { widgetType, dropZone, target: e.target });
+  console.log('Drop event:', { dataString, dropZone, target: e.target });
 
-  if (dropZone && widgetType) {
+  if (dropZone && dataString) {
     const position = dropZone.dataset.position;
-    console.log('Adding widget to position:', position);
-    addWidgetToPosition(widgetType, position);
-    renderWidgets();
-    dropZone.classList.remove('drop-zone-hover');
+
+    try {
+      const data = JSON.parse(dataString);
+
+      if (data.isNew) {
+        // Adding a new widget from the palette
+        console.log('Adding new widget to position:', position);
+        addWidgetToPosition(data.type, position);
+      } else {
+        // Moving an existing widget
+        console.log('Moving widget:', { from: data.currentPosition, to: position });
+
+        // Don't do anything if dropping in the same position
+        if (data.currentPosition !== position) {
+          // Remove from old position
+          removeWidget(data.widgetId, data.currentPosition);
+
+          // Add to new position
+          addWidgetToPosition(data.type, position);
+        }
+      }
+
+      renderWidgets();
+      dropZone.classList.remove('drop-zone-hover');
+    } catch (e) {
+      console.error('Failed to parse drop data:', e);
+    }
   } else {
-    console.warn('Drop failed:', { dropZone, widgetType });
+    console.warn('Drop failed:', { dropZone, dataString });
   }
 }
 
@@ -361,7 +431,10 @@ function createWidgetElement(widget, position) {
   const div = document.createElement('div');
   div.className = 'widget-instance';
   div.dataset.widgetId = widget.id;
+  div.dataset.widgetType = widget.type;
+  div.dataset.currentPosition = position;
   div.style.backgroundColor = config.color;
+  div.draggable = true; // Make widget draggable
 
   div.innerHTML = `
     <button class="widget-remove" data-widget-id="${widget.id}" data-position="${position}">×</button>
@@ -375,6 +448,10 @@ function createWidgetElement(widget, position) {
     e.stopPropagation();
     removeWidget(widget.id, position);
   });
+
+  // Add drag handlers for moving widgets within the layout
+  div.addEventListener('dragstart', handleWidgetInstanceDragStart);
+  div.addEventListener('dragend', handleDragEnd);
 
   return div;
 }

@@ -72,16 +72,17 @@
 .drop-zone {
   border-radius: 12px;
   transition: all 0.2s ease;
-  background: rgba(255, 0, 0, 0.4); /* Bright red for debugging */
-  border: 3px solid rgba(255, 0, 0, 0.8); /* Solid red border */
+  background: transparent; /* Hidden by default */
+  border: 2px dashed transparent;
   pointer-events: auto !important;
   z-index: 50;
-  box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.5);
+  opacity: 0; /* Hidden by default */
 }
 
 .drop-zone-active {
-  background: rgba(59, 130, 246, 0.25);
-  border: 2px dashed rgba(59, 130, 246, 0.7);
+  opacity: 1; /* Show when dragging */
+  background: rgba(59, 130, 246, 0.15);
+  border: 2px dashed rgba(59, 130, 246, 0.5);
 }
 
 .drop-zone-hover {
@@ -113,13 +114,25 @@
   gap: 4px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: move;
-  user-select: none;
+  cursor: grab; /* Open hand cursor */
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .widget-instance:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.widget-instance:active {
+  cursor: grabbing; /* Closed hand cursor when clicking */
+}
+
+.widget-instance.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
 }
 
 .widget-icon {
