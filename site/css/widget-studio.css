@@ -10,12 +10,17 @@
   min-height: 300px;
   max-width: 100%;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, opacity 0.2s ease;
   z-index: 1;
 }
 
 #phone-frame:hover {
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+#phone-frame.deletion-zone {
+  opacity: 0.5;
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.6);
 }
 
 /* Resize Handles - Only right and bottom edges */

@@ -251,23 +251,22 @@ function handleWidgetInstanceDragStart(e) {
     currentPosition: currentPosition
   }));
 
-  // Create a proper drag image by cloning the element
-  const dragImage = e.currentTarget.cloneNode(true);
+  // Create a generic outlined box as drag preview for canvas widgets
+  const dragImage = document.createElement('div');
   dragImage.id = 'drag-image-clone';
   dragImage.style.position = 'fixed';
   dragImage.style.top = '-9999px';
   dragImage.style.left = '-9999px';
-  dragImage.style.width = e.currentTarget.offsetWidth + 'px';
-  dragImage.style.height = e.currentTarget.offsetHeight + 'px';
-  dragImage.style.opacity = '1';
+  dragImage.style.width = '80px';
+  dragImage.style.height = '80px';
+  dragImage.style.border = '2px dashed rgba(255, 255, 255, 0.8)';
+  dragImage.style.borderRadius = '16px';
+  dragImage.style.backgroundColor = 'rgba(100, 100, 100, 0.3)';
   dragImage.style.pointerEvents = 'none';
-  dragImage.classList.remove('dragging');
   document.body.appendChild(dragImage);
 
-  // Set the drag image to the cloned element
-  const offsetX = e.offsetX || e.currentTarget.offsetWidth / 2;
-  const offsetY = e.offsetY || e.currentTarget.offsetHeight / 2;
-  e.dataTransfer.setDragImage(dragImage, offsetX, offsetY);
+  // Set the drag image to the generic box
+  e.dataTransfer.setDragImage(dragImage, 40, 40);
 
   // Store cleanup reference
   state.dragImageClone = dragImage;
@@ -287,6 +286,31 @@ function handleWidgetInstanceDragStart(e) {
  * Handle drag end event
  */
 function handleDragEnd(e) {
+  // Check if we should delete the widget (if it's a canvas widget and dropped outside)
+  if (state.draggingWidget && !state.draggingWidget.isNew) {
+    const phoneFrame = document.getElementById('phone-frame');
+    if (phoneFrame) {
+      const rect = phoneFrame.getBoundingClientRect();
+      const buffer = 50;
+      const isOutsideFrame = (
+        e.clientX < rect.left - buffer ||
+        e.clientX > rect.right + buffer ||
+        e.clientY < rect.top - buffer ||
+        e.clientY > rect.bottom + buffer
+      );
+
+      if (isOutsideFrame) {
+        // Delete the widget
+        console.log('Deleting widget:', state.draggingWidget.widgetId);
+        removeWidget(state.draggingWidget.widgetId, state.draggingWidget.currentPosition);
+      }
+
+      // Clean up deletion visual state
+      phoneFrame.classList.remove('deletion-zone');
+      document.body.style.cursor = '';
+    }
+  }
+
   state.draggingWidget = null;
 
   // Remove dragging class - use currentTarget to get the element with the listener
@@ -319,6 +343,42 @@ function handleDragEnd(e) {
  */
 function handleDragOver(e) {
   e.preventDefault();
+
+  // Check if we're dragging a canvas widget (not a new widget from palette)
+  if (state.draggingWidget && !state.draggingWidget.isNew) {
+    // Check if cursor is outside the phone frame (with 50px buffer)
+    const phoneFrame = document.getElementById('phone-frame');
+    if (phoneFrame) {
+      const rect = phoneFrame.getBoundingClientRect();
+      const buffer = 50;
+      const isOutsideFrame = (
+        e.clientX < rect.left - buffer ||
+        e.clientX > rect.right + buffer ||
+        e.clientY < rect.top - buffer ||
+        e.clientY > rect.bottom + buffer
+      );
+
+      if (isOutsideFrame) {
+        e.dataTransfer.dropEffect = 'none';
+        phoneFrame.classList.add('deletion-zone');
+        document.body.style.cursor = 'not-allowed';
+
+        // Clear any snap previews when in deletion zone
+        if (state.lastHoverZone) {
+          state.lastHoverZone.classList.remove('drop-zone-hover');
+          const oldPreview = state.lastHoverZone.querySelector('.snap-preview');
+          if (oldPreview) {
+            oldPreview.remove();
+          }
+          state.lastHoverZone = null;
+        }
+        return false;
+      } else {
+        phoneFrame.classList.remove('deletion-zone');
+        document.body.style.cursor = '';
+      }
+    }
+  }
 
   // Set drop effect based on whether it's a new widget or move
   if (state.draggingWidget && state.draggingWidget.isNew) {
@@ -420,8 +480,12 @@ function handleDrop(e) {
         // Moving an existing widget
         console.log('Moving widget:', { from: data.currentPosition, to: position });
 
-        // Don't do anything if dropping in the same position
-        if (data.currentPosition !== position) {
+        if (data.currentPosition === position) {
+          // Reordering within same drop zone
+          const insertIndex = getDropInsertIndex(e, dropZone, data.widgetId);
+          reorderWidget(data.widgetId, position, insertIndex);
+        } else {
+          // Moving to different drop zone
           // Remove from old position
           removeWidget(data.widgetId, data.currentPosition);
 
@@ -457,6 +521,66 @@ function addWidgetToPosition(widgetType, position) {
 function removeWidget(widgetId, position) {
   state.widgets[position] = state.widgets[position].filter(w => w.id !== widgetId);
   renderWidgets();
+}
+
+/**
+ * Reorder a widget within the same drop zone
+ */
+function reorderWidget(widgetId, position, newIndex) {
+  const widgets = state.widgets[position];
+  const currentIndex = widgets.findIndex(w => w.id === widgetId);
+
+  if (currentIndex === -1 || currentIndex === newIndex) {
+    return; // Widget not found or already at target position
+  }
+
+  // Remove widget from current position
+  const [widget] = widgets.splice(currentIndex, 1);
+
+  // Adjust insert index if we removed an element before it
+  const adjustedIndex = newIndex > currentIndex ? newIndex - 1 : newIndex;
+
+  // Insert at new position
+  widgets.splice(adjustedIndex, 0, widget);
+}
+
+/**
+ * Calculate the insertion index for a drop within a zone
+ */
+function getDropInsertIndex(e, dropZone, draggingWidgetId) {
+  const widgetContainer = dropZone.querySelector('.widget-container');
+  if (!widgetContainer) {
+    return 0;
+  }
+
+  const widgets = Array.from(widgetContainer.querySelectorAll('.widget-instance:not(.dragging):not(.snap-preview)'));
+  const position = dropZone.dataset.position;
+
+  // Determine if this is a horizontal or vertical layout
+  const isHorizontal = ['top-left', 'top-center', 'top-right', 'bottom-left', 'bottom-center', 'bottom-right'].includes(position);
+
+  let insertIndex = 0;
+
+  for (let i = 0; i < widgets.length; i++) {
+    const widget = widgets[i];
+    const rect = widget.getBoundingClientRect();
+
+    if (isHorizontal) {
+      // For horizontal layouts, check if drop is to the right of center
+      const widgetCenter = rect.left + rect.width / 2;
+      if (e.clientX > widgetCenter) {
+        insertIndex = i + 1;
+      }
+    } else {
+      // For vertical layouts, check if drop is below center
+      const widgetCenter = rect.top + rect.height / 2;
+      if (e.clientY > widgetCenter) {
+        insertIndex = i + 1;
+      }
+    }
+  }
+
+  return insertIndex;
 }
 
 /**
