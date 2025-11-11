@@ -73,16 +73,14 @@
   border-radius: 12px;
   transition: all 0.2s ease;
   background: transparent; /* Hidden by default */
-  border: 2px dashed transparent;
+  border: 2px dashed transparent; /* Hidden by default */
   pointer-events: auto !important;
   z-index: 50;
-  opacity: 0; /* Hidden by default */
 }
 
 .drop-zone-active {
-  opacity: 1; /* Show when dragging */
-  background: rgba(59, 130, 246, 0.15);
-  border: 2px dashed rgba(59, 130, 246, 0.5);
+  background: rgba(59, 130, 246, 0.15); /* Show when dragging */
+  border: 2px dashed rgba(59, 130, 246, 0.5); /* Show when dragging */
 }
 
 .drop-zone-hover {
