@@ -133,6 +133,13 @@
   cursor: grabbing; /* Closed hand cursor when clicking */
 }
 
+.widget-instance.selected {
+  outline: 3px solid rgba(59, 130, 246, 0.9);
+  outline-offset: 2px;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+  transform: scale(1.02);
+}
+
 .widget-instance.dragging {
   opacity: 0.5;
   cursor: grabbing;

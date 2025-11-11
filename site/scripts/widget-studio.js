@@ -8,6 +8,7 @@ const state = {
   dragImageClone: null,
   lastHoverZone: null,
   currentDropZone: null,
+  selectedWidget: null,  // Currently selected widget for configuration
   widgets: {
     'top-left': [],
     'top-center': [],
@@ -52,6 +53,11 @@ const widgetTypes = {
     title: 'Fuel',
     icon: '⛽',
     color: '#6366F1'
+  },
+  'signal': {
+    title: 'Signal',
+    icon: '📡',
+    color: '#EC4899'
   }
 };
 
@@ -62,7 +68,8 @@ const widgetCodes = {
   'battery': 'b',
   'speed': 's',
   'temperature': 'm',
-  'fuel': 'f'
+  'fuel': 'f',
+  'signal': 'g'  // 'g' for siGnal
 };
 
 const codeToWidget = Object.fromEntries(
@@ -696,6 +703,165 @@ function getLayoutClassForPosition(position) {
 }
 
 /**
+ * Select a widget for configuration
+ */
+function selectWidget(widget, position) {
+  state.selectedWidget = { ...widget, position };
+  showConfigPanel();
+}
+
+/**
+ * Deselect the current widget
+ */
+function deselectWidget() {
+  state.selectedWidget = null;
+  hideConfigPanel();
+  renderWidgets(); // Re-render to remove selected class
+}
+
+/**
+ * Show the configuration panel
+ */
+function showConfigPanel() {
+  const panel = document.getElementById('widget-config-panel');
+  const divider = document.getElementById('config-divider');
+
+  if (!panel || !state.selectedWidget) return;
+
+  panel.classList.remove('hidden');
+  divider.classList.remove('hidden');
+
+  // Build configuration UI based on widget type
+  panel.innerHTML = buildConfigUI(state.selectedWidget);
+
+  // Attach event listeners
+  attachConfigListeners();
+
+  // Re-render widgets to show selected state
+  renderWidgets();
+}
+
+/**
+ * Hide the configuration panel
+ */
+function hideConfigPanel() {
+  const panel = document.getElementById('widget-config-panel');
+  const divider = document.getElementById('config-divider');
+
+  if (panel) {
+    panel.classList.add('hidden');
+    panel.innerHTML = '';
+  }
+  if (divider) {
+    divider.classList.add('hidden');
+  }
+}
+
+/**
+ * Build configuration UI HTML based on widget type
+ */
+function buildConfigUI(widget) {
+  const config = widgetTypes[widget.type];
+  const widgetConfig = widget.config || {};
+
+  let html = `
+    <div class="widget-config">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-bold">Configure ${config.title}</h2>
+        <button id="close-config" class="text-gray-500 hover:text-gray-700 text-xl">×</button>
+      </div>
+  `;
+
+  // Widget-specific configuration
+  if (widget.type === 'signal') {
+    const signals = widgetConfig.signals || [];
+    const signalsText = signals.join('\n');
+
+    html += `
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-2">Signal IDs (one per line)</label>
+        <textarea
+          id="config-signals"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono text-sm"
+          rows="5"
+          placeholder="TAYCAN_HVBAT_CELL1&#10;TAYCAN_HVBAT_CELL2&#10;TAYCAN_TRIP_RANGE_EFFICIENCY"
+        >${signalsText}</textarea>
+        <p class="text-xs text-gray-500 mt-1">Enter signal IDs to display</p>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-sm font-medium mb-2">
+          <input type="checkbox" id="config-show-labels" ${widgetConfig.showLabels ? 'checked' : ''} class="mr-2">
+          Show custom labels
+        </label>
+      </div>
+
+      <button id="save-config" class="w-full px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors">
+        Save Configuration
+      </button>
+    `;
+  } else {
+    // Generic message for widgets without specific config
+    html += `
+      <p class="text-sm text-gray-600">This widget doesn't have configuration options yet.</p>
+    `;
+  }
+
+  html += `</div>`;
+  return html;
+}
+
+/**
+ * Attach event listeners to config panel elements
+ */
+function attachConfigListeners() {
+  const closeBtn = document.getElementById('close-config');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', deselectWidget);
+  }
+
+  const saveBtn = document.getElementById('save-config');
+  if (saveBtn) {
+    saveBtn.addEventListener('click', saveWidgetConfig);
+  }
+}
+
+/**
+ * Save widget configuration
+ */
+function saveWidgetConfig() {
+  if (!state.selectedWidget) return;
+
+  const { id, position } = state.selectedWidget;
+  const widget = state.widgets[position].find(w => w.id === id);
+
+  if (!widget) return;
+
+  // Save configuration based on widget type
+  if (widget.type === 'signal') {
+    const signalsInput = document.getElementById('config-signals');
+    const showLabelsInput = document.getElementById('config-show-labels');
+
+    if (signalsInput) {
+      const signalsText = signalsInput.value.trim();
+      const signals = signalsText ? signalsText.split('\n').map(s => s.trim()).filter(s => s) : [];
+
+      widget.config = {
+        ...widget.config,
+        signals: signals,
+        showLabels: showLabelsInput ? showLabelsInput.checked : false
+      };
+    }
+  }
+
+  // Update URL and re-render
+  updateURLWithLayout();
+  renderWidgets();
+
+  console.log('Configuration saved:', widget.config);
+}
+
+/**
  * Create a widget element
  */
 function createWidgetElement(widget, position) {
@@ -708,6 +874,11 @@ function createWidgetElement(widget, position) {
   div.style.backgroundColor = config.color;
   div.draggable = true; // Make widget draggable
 
+  // Show selected state
+  if (state.selectedWidget && state.selectedWidget.id === widget.id) {
+    div.classList.add('selected');
+  }
+
   div.innerHTML = `
     <button class="widget-remove" data-widget-id="${widget.id}" data-position="${position}">×</button>
     <div class="widget-icon">${config.icon}</div>
@@ -719,6 +890,16 @@ function createWidgetElement(widget, position) {
   removeBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     removeWidget(widget.id, position);
+  });
+
+  // Add click handler for configuration
+  div.addEventListener('click', (e) => {
+    // Don't select if clicking remove button
+    if (e.target.classList.contains('widget-remove')) {
+      return;
+    }
+    e.stopPropagation();
+    selectWidget(widget, position);
   });
 
   // Add drag handlers for moving widgets within the layout

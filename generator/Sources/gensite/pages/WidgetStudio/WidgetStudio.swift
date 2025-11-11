@@ -50,6 +50,16 @@ struct WidgetStudio: View {
               .classNames(["border-t", "border-gray-300"])
               .margin(.bottom, 32)
 
+            // Configuration Panel (hidden by default, shown when widget selected)
+            Div {}
+              .id("widget-config-panel")
+              .classNames(["hidden"])
+
+            // Divider between config and palette
+            Div {}
+              .id("config-divider")
+              .classNames(["border-t", "border-gray-300", "my-8", "hidden"])
+
             // Widget Palette Section
             H2("Widget Palette")
               .fontSize(.large)
@@ -97,6 +107,12 @@ struct WidgetStudio: View {
                 id: "fuel",
                 title: "Fuel",
                 icon: "⛽"
+              )
+
+              WidgetPaletteItem(
+                id: "signal",
+                title: "Signal",
+                icon: "📡"
               )
             }
             .id("widget-palette")
