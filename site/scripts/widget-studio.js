@@ -266,8 +266,9 @@ function handleWidgetInstanceDragStart(e) {
 function handleDragEnd(e) {
   state.draggingWidget = null;
 
-  // Remove dragging class
-  e.target.classList.remove('dragging');
+  // Remove dragging class - use currentTarget to get the element with the listener
+  const element = e.currentTarget || e.target;
+  element.classList.remove('dragging');
 
   // Hide drop zones
   document.querySelectorAll('.drop-zone').forEach(zone => {
