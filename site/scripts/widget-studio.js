@@ -249,6 +249,23 @@ function handleWidgetInstanceDragStart(e) {
     currentPosition: currentPosition
   }));
 
+  // Create a proper drag image by cloning the element
+  const dragImage = e.currentTarget.cloneNode(true);
+  dragImage.style.position = 'absolute';
+  dragImage.style.top = '-9999px';
+  dragImage.style.left = '-9999px';
+  dragImage.style.width = e.currentTarget.offsetWidth + 'px';
+  dragImage.style.height = e.currentTarget.offsetHeight + 'px';
+  document.body.appendChild(dragImage);
+
+  // Set the drag image to the cloned element
+  e.dataTransfer.setDragImage(dragImage, e.currentTarget.offsetWidth / 2, e.currentTarget.offsetHeight / 2);
+
+  // Clean up the cloned element after a short delay
+  setTimeout(() => {
+    document.body.removeChild(dragImage);
+  }, 0);
+
   // Add dragging class for visual feedback
   e.currentTarget.classList.add('dragging');
 
