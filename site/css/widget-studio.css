@@ -290,6 +290,50 @@
   animation: slideIn 0.3s ease;
 }
 
+/* Wiggle animation for widgets during drag */
+@keyframes wiggle {
+  0%, 100% {
+    transform: translateY(-2px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-2px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-2px) rotate(1deg);
+  }
+}
+
+.widget-instance.wiggling {
+  animation: wiggle 0.3s ease-in-out infinite;
+}
+
+/* Snap preview styling */
+.snap-preview {
+  position: relative;
+  min-width: 80px;
+  min-height: 80px;
+  border-radius: 16px;
+  padding: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  opacity: 0.5;
+  border: 2px dashed rgba(255, 255, 255, 0.8);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
 /* Drop zone position specific styles */
 .drop-zone[data-position="top-left"],
 .drop-zone[data-position="top-center"],

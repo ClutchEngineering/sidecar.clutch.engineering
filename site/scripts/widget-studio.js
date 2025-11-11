@@ -217,6 +217,11 @@ function handleDragStart(e) {
     zone.classList.add('drop-zone-active');
   });
 
+  // Add wiggle effect to widgets in canvas (not sidebar)
+  document.querySelectorAll('.drop-zone .widget-instance').forEach(widget => {
+    widget.classList.add('wiggling');
+  });
+
   console.log('Drag started:', widgetType);
 }
 
@@ -256,15 +261,21 @@ function handleWidgetInstanceDragStart(e) {
   dragImage.style.left = '-9999px';
   dragImage.style.width = e.currentTarget.offsetWidth + 'px';
   dragImage.style.height = e.currentTarget.offsetHeight + 'px';
+  dragImage.style.opacity = '1';
+  dragImage.classList.remove('dragging');
   document.body.appendChild(dragImage);
 
   // Set the drag image to the cloned element
-  e.dataTransfer.setDragImage(dragImage, e.currentTarget.offsetWidth / 2, e.currentTarget.offsetHeight / 2);
+  const offsetX = e.offsetX || e.currentTarget.offsetWidth / 2;
+  const offsetY = e.offsetY || e.currentTarget.offsetHeight / 2;
+  e.dataTransfer.setDragImage(dragImage, offsetX, offsetY);
 
-  // Clean up the cloned element after a short delay
-  setTimeout(() => {
-    document.body.removeChild(dragImage);
-  }, 0);
+  // Clean up the cloned element after drag starts
+  requestAnimationFrame(() => {
+    if (dragImage.parentNode) {
+      document.body.removeChild(dragImage);
+    }
+  });
 
   // Add dragging class for visual feedback
   e.currentTarget.classList.add('dragging');
@@ -272,6 +283,11 @@ function handleWidgetInstanceDragStart(e) {
   // Show drop zones
   document.querySelectorAll('.drop-zone').forEach(zone => {
     zone.classList.add('drop-zone-active');
+  });
+
+  // Add wiggle effect to other widgets in canvas (not sidebar)
+  document.querySelectorAll('.drop-zone .widget-instance:not(.dragging)').forEach(widget => {
+    widget.classList.add('wiggling');
   });
 
   console.log('Widget instance drag started:', { widgetId, widgetType, currentPosition });
@@ -287,9 +303,18 @@ function handleDragEnd(e) {
   const element = e.currentTarget || e.target;
   element.classList.remove('dragging');
 
-  // Hide drop zones
+  // Hide drop zones and remove snap previews
   document.querySelectorAll('.drop-zone').forEach(zone => {
     zone.classList.remove('drop-zone-active', 'drop-zone-hover');
+    const snapPreview = zone.querySelector('.snap-preview');
+    if (snapPreview) {
+      snapPreview.remove();
+    }
+  });
+
+  // Remove wiggle effect from all widgets
+  document.querySelectorAll('.widget-instance.wiggling').forEach(widget => {
+    widget.classList.remove('wiggling');
   });
 
   console.log('Drag ended');
@@ -317,6 +342,23 @@ function handleDragOver(e) {
 function handleDragEnter(e) {
   if (e.target.classList.contains('drop-zone')) {
     e.target.classList.add('drop-zone-hover');
+
+    // Show snap preview
+    if (state.draggingWidget && !e.target.querySelector('.snap-preview')) {
+      const widgetType = state.draggingWidget.type;
+      const config = widgetTypes[widgetType];
+
+      const snapPreview = document.createElement('div');
+      snapPreview.className = 'snap-preview';
+      snapPreview.style.backgroundColor = config.color;
+      snapPreview.innerHTML = `
+        <div class="widget-icon">${config.icon}</div>
+        <div class="widget-title">${config.title}</div>
+      `;
+
+      const widgetContainer = e.target.querySelector('.widget-container') || e.target;
+      widgetContainer.appendChild(snapPreview);
+    }
   }
 }
 
@@ -326,6 +368,12 @@ function handleDragEnter(e) {
 function handleDragLeave(e) {
   if (e.target.classList.contains('drop-zone')) {
     e.target.classList.remove('drop-zone-hover');
+
+    // Remove snap preview when leaving
+    const snapPreview = e.target.querySelector('.snap-preview');
+    if (snapPreview) {
+      snapPreview.remove();
+    }
   }
 }
 
