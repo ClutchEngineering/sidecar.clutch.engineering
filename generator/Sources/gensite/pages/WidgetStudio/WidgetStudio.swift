@@ -9,7 +9,10 @@ struct WidgetStudio: View {
       path: "/widgetstudio/",
       description: "Design your own custom widget interface with our drag and drop editor. Create personalized widget layouts for your dashboard.",
       keywords: ["widget", "editor", "drag and drop", "design", "interface", "dashboard"],
-      scripts: [URL(string: "/scripts/widget-studio.js")],
+      scripts: [
+        URL(string: "https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"),
+        URL(string: "/scripts/widget-studio.js")
+      ],
       additionalStylesheets: [URL(string: "/css/widget-studio.css")]
     ) {
       // Main container wrapper

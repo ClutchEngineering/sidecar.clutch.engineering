@@ -557,12 +557,23 @@ function handleDrop(e) {
 
 /**
  * Add a widget to a specific position
+ *
+ * @param {string} widgetType - The type of widget (e.g., 'tire-pressure', 'battery')
+ * @param {string} position - The drop zone position
+ * @param {object} config - Widget-specific configuration
+ *
+ * Example config for signal widget:
+ * {
+ *   signals: ['TAYCAN_HVBAT_CELL1', 'TAYCAN_HVBAT_CELL2', 'TAYCAN_TRIP_RANGE_EFFICIENCY'],
+ *   labels: { 'TAYCAN_HVBAT_CELL1': 'Cell 1', 'TAYCAN_HVBAT_CELL2': 'Cell 2' }
+ * }
  */
-function addWidgetToPosition(widgetType, position) {
+function addWidgetToPosition(widgetType, position, config = {}) {
   const widgetId = `widget-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   state.widgets[position].push({
     id: widgetId,
-    type: widgetType
+    type: widgetType,
+    config: config  // Store widget-specific configuration (signals, labels, etc.)
   });
 }
 
@@ -852,64 +863,97 @@ function startResize(e, element, handle) {
 }
 
 /**
- * Encode layout to compact string
- * Format: widgetCodes.separated.by.dots|widthxheight
- * Example: tnb.s..mf...|844x390
+ * Encode layout to compressed string using LZ-String
+ * This allows efficient encoding of widget configs with long signal IDs
  */
 function encodeLayout() {
-  // Encode widgets for each position
-  const parts = positionOrder.map(pos => {
-    const widgets = state.widgets[pos];
-    return widgets.map(w => widgetCodes[w.type] || '').join('');
-  });
-
   // Get dimensions
   const phoneFrame = document.getElementById('phone-frame');
   const width = parseInt(phoneFrame.style.width) || 844;
   const height = parseInt(phoneFrame.style.height) || 390;
 
-  return `${parts.join('.')}|${width}x${height}`;
+  // Build layout object with full widget data including configs
+  const layout = {
+    dims: [width, height],
+    widgets: {}
+  };
+
+  // Only include positions that have widgets (saves space)
+  positionOrder.forEach((pos, index) => {
+    const widgets = state.widgets[pos];
+    if (widgets.length > 0) {
+      // Use position index as key to save space
+      layout.widgets[index] = widgets.map(w => ({
+        t: widgetCodes[w.type],  // Short type code
+        c: w.config || {}         // Full config object
+      }));
+    }
+  });
+
+  // Convert to JSON and compress
+  const json = JSON.stringify(layout);
+
+  // Use LZ-String for URL-safe compression
+  if (typeof LZString !== 'undefined') {
+    return LZString.compressToEncodedURIComponent(json);
+  }
+
+  // Fallback if LZ-String not loaded yet
+  return encodeURIComponent(json);
 }
 
 /**
- * Decode layout from compact string
+ * Decode layout from compressed string
  */
 function decodeLayout(encoded) {
   if (!encoded) return;
 
   try {
-    const [widgetsPart, dimensionsPart] = encoded.split('|');
+    let json;
+
+    // Try to decompress with LZ-String
+    if (typeof LZString !== 'undefined') {
+      try {
+        json = LZString.decompressFromEncodedURIComponent(encoded);
+      } catch (e) {
+        // Fallback to direct decode if not compressed
+        json = decodeURIComponent(encoded);
+      }
+    } else {
+      json = decodeURIComponent(encoded);
+    }
+
+    if (!json) {
+      console.error('Failed to decompress layout');
+      return;
+    }
+
+    const layout = JSON.parse(json);
 
     // Clear existing widgets
     positionOrder.forEach(pos => {
       state.widgets[pos] = [];
     });
 
-    // Decode widgets
-    if (widgetsPart) {
-      const parts = widgetsPart.split('.');
-      parts.forEach((part, index) => {
-        if (index < positionOrder.length && part) {
-          const position = positionOrder[index];
-          // Each character is a widget code
-          for (const code of part) {
-            const widgetType = codeToWidget[code];
-            if (widgetType) {
-              addWidgetToPosition(widgetType, position);
-            }
+    // Restore widgets
+    if (layout.widgets) {
+      Object.entries(layout.widgets).forEach(([posIndex, widgets]) => {
+        const position = positionOrder[parseInt(posIndex)];
+        widgets.forEach(w => {
+          const widgetType = codeToWidget[w.t];
+          if (widgetType) {
+            addWidgetToPosition(widgetType, position, w.c || {});
           }
-        }
+        });
       });
     }
 
-    // Decode dimensions
-    if (dimensionsPart) {
-      const [width, height] = dimensionsPart.split('x').map(n => parseInt(n));
-      if (width && height) {
-        updatePhoneFrameDimensions(width, height);
-        document.getElementById('width-input').value = width;
-        document.getElementById('height-input').value = height;
-      }
+    // Restore dimensions
+    if (layout.dims && layout.dims.length === 2) {
+      const [width, height] = layout.dims;
+      updatePhoneFrameDimensions(width, height);
+      document.getElementById('width-input').value = width;
+      document.getElementById('height-input').value = height;
     }
 
     renderWidgets();
@@ -926,6 +970,14 @@ function updateURLWithLayout() {
   const url = new URL(window.location);
   url.searchParams.set('layout', encoded);
   window.history.replaceState({}, '', url);
+
+  // Log compression stats for debugging
+  if (console.debug) {
+    const originalSize = JSON.stringify(state.widgets).length;
+    const compressedSize = encoded.length;
+    const ratio = ((1 - compressedSize / originalSize) * 100).toFixed(1);
+    console.debug(`Layout encoded: ${originalSize}→${compressedSize} bytes (${ratio}% reduction)`);
+  }
 }
 
 /**
