@@ -121,7 +121,7 @@ extension MergedSupportMatrix {
         support[modelYear] = [:]
 
         guard let connectedSignals = filterableSignalMap.connectedSignals(modelYear: modelYear) else {
-          fatalError("No connected signals found for model year \(modelYear)")
+          print("Warning: No connected signals found for model year \(modelYear)")
           continue
         }
 

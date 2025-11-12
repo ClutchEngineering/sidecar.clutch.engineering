@@ -339,7 +339,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
       let onboarded = record.fields.onboarded ?? false
 
       guard let engineType = ModelSupport.EngineType(rawValue: engineType) else {
-        fatalError("Unknown engine type: \(engineType)")
+        print("Error: Unknown engine type: \(engineType)")
         continue
       }
 
@@ -367,9 +367,12 @@ public class MergedSupportMatrix: @unchecked Sendable {
     }
 
     // 3. Load local vehicle metadata
+    print("Loading vehicle metadata from workspace...")
     try SupportMatrix.shared.loadVehicleMetadata(from: workspacePath)
+    print("Vehicle metadata loaded successfully")
 
     // 4. Merge with local metadata if available
+    print("Merging with local metadata...")
     if let vehicleMetadata = SupportMatrix.shared.vehicleMetadata {
       for (make, models) in vehicleMetadata.vehicles {
         for (model, years) in models {
@@ -394,6 +397,7 @@ public class MergedSupportMatrix: @unchecked Sendable {
         }
       }
     }
+    print("Support matrix loading completed successfully")
   }
 
   /// Download and cache an asset from a URL if it doesn't already exist in the cache

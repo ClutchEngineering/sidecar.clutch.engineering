@@ -60,15 +60,18 @@ struct Gensite: AsyncParsableCommand {
     DotEnv.load(from: projectRoot.appending(path: ".env").path())
 
     guard let airtableAPIKey = ProcessInfo.processInfo.environment["AIRTABLE_API_KEY"] else {
-      fatalError("Missing AIRTABLE_API_KEY")
+      fputs("Error: Missing required environment variable AIRTABLE_API_KEY\n", stderr)
+      throw ExitCode.failure
     }
 
     guard let airtableBaseID = ProcessInfo.processInfo.environment["AIRTABLE_BASE_ID"] else {
-      fatalError("Missing AIRTABLE_BASE_ID")
+      fputs("Error: Missing required environment variable AIRTABLE_BASE_ID\n", stderr)
+      throw ExitCode.failure
     }
 
     guard let modelsTableID = ProcessInfo.processInfo.environment["AIRTABLE_MODELS_TABLE_ID"] else {
-      fatalError("Missing AIRTABLE_MODELS_TABLE_ID")
+      fputs("Error: Missing required environment variable AIRTABLE_MODELS_TABLE_ID\n", stderr)
+      throw ExitCode.failure
     }
 
     // Determine workspace path
@@ -232,8 +235,10 @@ struct Gensite: AsyncParsableCommand {
         workspacePath: finalWorkspacePath,
         useCache: useCache
       )
+      print("Support matrix loaded, contains \(supportMatrix.getAllMakes().count) makes")
 
       if buildAll || supportedCars {
+        print("Generating supported cars pages...")
         sitemap["supported-cars/index.html"] = MakeGridPage(supportMatrix: supportMatrix, outputURL: outputURL)
 
         for make in supportMatrix.getAllMakes() {
@@ -245,6 +250,7 @@ struct Gensite: AsyncParsableCommand {
       }
 
       if buildAll || leaderboard {
+        print("Generating leaderboard pages...")
         sitemap.merge([
           "leaderboard/index.html": LeaderboardPage(supportMatrix: supportMatrix),
           "leaderboard/last24hours/index.html": Leaderboard24HoursPage(supportMatrix: supportMatrix),
