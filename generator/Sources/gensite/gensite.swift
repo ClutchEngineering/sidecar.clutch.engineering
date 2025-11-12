@@ -228,6 +228,7 @@ struct Gensite: AsyncParsableCommand {
         print("Using cached data if available")
       }
 
+      print("Calling MergedSupportMatrix.load()...")
       let supportMatrix = try await MergedSupportMatrix.load(
         using: airtableClient,
         projectRoot: projectRoot,
@@ -235,7 +236,10 @@ struct Gensite: AsyncParsableCommand {
         workspacePath: finalWorkspacePath,
         useCache: useCache
       )
-      print("Support matrix loaded, contains \(supportMatrix.getAllMakes().count) makes")
+      print("MergedSupportMatrix.load() returned successfully")
+      print("Getting all makes...")
+      let makes = supportMatrix.getAllMakes()
+      print("Support matrix loaded, contains \(makes.count) makes")
 
       if buildAll || supportedCars {
         print("Generating supported cars pages...")

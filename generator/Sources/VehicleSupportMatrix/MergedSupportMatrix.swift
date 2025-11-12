@@ -95,12 +95,16 @@ public class MergedSupportMatrix: @unchecked Sendable {
     }
 
     // Connectables require the vehicle matrix to be loaded first for engine type data.
+    print("Loading connectables...")
     try matrix.loadConnectables(projectRoot: projectRoot)
     print("Loaded connectables data successfully")
 
     // Save to cache if successful and caching is enabled
+    print("Saving to cache...")
     try await saveToCacheAsync(matrix: matrix, projectRoot: projectRoot)
+    print("Cache saved successfully")
 
+    print("Returning matrix from load()")
     return matrix
   }
 
@@ -166,10 +170,12 @@ public class MergedSupportMatrix: @unchecked Sendable {
   private static func saveToCacheAsync(matrix: MergedSupportMatrix, projectRoot: URL) async throws {
     let cacheFilePath = getCacheFilePath(projectRoot: projectRoot)
 
+    print("Encoding support matrix for cache...")
     let encoder = JSONEncoder()
     let data = try encoder.encode(matrix.supportMatrix)
+    print("Encoded \(data.count) bytes, writing to cache file...")
     try data.write(to: cacheFilePath)
-    print("Saved vehicle support matrix to cache")
+    print("Saved vehicle support matrix to cache at \(cacheFilePath.path)")
   }
 
   /// Load connectables data from the .cache/connectables.json file
@@ -185,12 +191,17 @@ public class MergedSupportMatrix: @unchecked Sendable {
       )
     }
 
+    print("Reading connectables file from \(connectablesFilePath.path)...")
     let data = try Data(contentsOf: connectablesFilePath)
+    print("Decoding connectables JSON (\(data.count) bytes)...")
     let decoder = JSONDecoder()
     self.rawConnectables = try decoder.decode(ConnectableMap.self, from: data)
+    print("Decoded \(rawConnectables.count) connectable entries")
 
     // Process the raw connectables into the structured format
+    print("Processing connectables...")
     processConnectables()
+    print("Finished processing connectables")
   }
 
   /// Process raw connectables data into structured format with OBDbIDs and year ranges
