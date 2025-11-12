@@ -16,6 +16,17 @@ public enum Connectable: String, CaseIterable, Decodable, Sendable {
   case stateOfHealth
   case starterBatteryVoltage
   case distanceSinceDTCsCleared
+  case cvtDeterioration
+  case engineOilTemperature
+  case engineCoolantTemperature
+  case transmissionFluidTemperature
+  case fuelRate
+  case massAirFlow
+  case commandedLambda
+  case o2Lambda
+  case shortTermFuelTrim
+  case engineLoad
+  case throttlePosition
 
   // Signal groups
   case batteryModulesStateOfCharge

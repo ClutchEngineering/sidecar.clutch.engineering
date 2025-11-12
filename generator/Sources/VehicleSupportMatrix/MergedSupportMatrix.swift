@@ -195,8 +195,32 @@ public class MergedSupportMatrix: @unchecked Sendable {
     let data = try Data(contentsOf: connectablesFilePath)
     print("Decoding connectables JSON (\(data.count) bytes)...")
     let decoder = JSONDecoder()
-    self.rawConnectables = try decoder.decode(ConnectableMap.self, from: data)
-    print("Decoded \(rawConnectables.count) connectable entries")
+    do {
+      self.rawConnectables = try decoder.decode(ConnectableMap.self, from: data)
+      print("Decoded \(rawConnectables.count) connectable entries")
+    } catch {
+      fputs("Error decoding connectables JSON: \(error)\n", stderr)
+      if let decodingError = error as? DecodingError {
+        fputs("Decoding error details: \(decodingError.localizedDescription)\n", stderr)
+        switch decodingError {
+        case .keyNotFound(let key, let context):
+          fputs("Key '\(key.stringValue)' not found: \(context.debugDescription)\n", stderr)
+          fputs("Coding path: \(context.codingPath.map { $0.stringValue }.joined(separator: " -> "))\n", stderr)
+        case .typeMismatch(let type, let context):
+          fputs("Type mismatch for type \(type): \(context.debugDescription)\n", stderr)
+          fputs("Coding path: \(context.codingPath.map { $0.stringValue }.joined(separator: " -> "))\n", stderr)
+        case .valueNotFound(let type, let context):
+          fputs("Value of type \(type) not found: \(context.debugDescription)\n", stderr)
+          fputs("Coding path: \(context.codingPath.map { $0.stringValue }.joined(separator: " -> "))\n", stderr)
+        case .dataCorrupted(let context):
+          fputs("Data corrupted: \(context.debugDescription)\n", stderr)
+          fputs("Coding path: \(context.codingPath.map { $0.stringValue }.joined(separator: " -> "))\n", stderr)
+        @unknown default:
+          fputs("Unknown decoding error\n", stderr)
+        }
+      }
+      throw error
+    }
 
     // Process the raw connectables into the structured format
     print("Processing connectables...")
