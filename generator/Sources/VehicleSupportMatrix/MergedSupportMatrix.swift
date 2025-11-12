@@ -355,10 +355,12 @@ public class MergedSupportMatrix: @unchecked Sendable {
       )
 
       if let symbolSVGs = record.fields.symbolSVG {
-        for asset in symbolSVGs {
-          // Download and cache image assets
-          Task {
-            await downloadAndCacheAsset(url: URL(string: asset.url)!, filename: asset.filename, projectRoot: projectRoot)
+        await withTaskGroup(of: Void.self) { taskGroup in
+          for asset in symbolSVGs {
+            // Download and cache image assets
+            taskGroup.addTask {
+              await self.downloadAndCacheAsset(url: URL(string: asset.url)!, filename: asset.filename, projectRoot: projectRoot)
+            }
           }
         }
       }
