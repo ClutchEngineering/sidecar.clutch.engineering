@@ -3,6 +3,7 @@ set -e
 
 # Generate the site
 cd generator
+export SWIFT_BACKTRACE=enable=yes,color=yes
 swift run gensite
 cd ..
 
