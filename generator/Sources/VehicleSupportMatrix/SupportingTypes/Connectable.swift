@@ -50,7 +50,12 @@ public enum Connectable: String, CaseIterable, Decodable, Sendable {
   public var isFuelRelated: Bool {
     switch self {
     case .fuelTankLevel,
-        .fuelRange:
+        .fuelRange,
+        .fuelRate,
+        .massAirFlow,
+        .commandedLambda,
+        .o2Lambda,
+        .shortTermFuelTrim:
       return true
     default:
       return false
@@ -60,7 +65,18 @@ public enum Connectable: String, CaseIterable, Decodable, Sendable {
   public var isVisualizedInSupportMatrix: Bool {
     switch self {
     case .distanceSinceDTCsCleared,
-        .starterBatteryVoltage:
+        .starterBatteryVoltage,
+        .cvtDeterioration,
+        .engineOilTemperature,
+        .engineCoolantTemperature,
+        .transmissionFluidTemperature,
+        .fuelRate,
+        .massAirFlow,
+        .commandedLambda,
+        .o2Lambda,
+        .shortTermFuelTrim,
+        .engineLoad,
+        .throttlePosition:
       return false
     default:
       return true
