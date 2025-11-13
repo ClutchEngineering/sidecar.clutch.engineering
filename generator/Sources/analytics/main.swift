@@ -83,7 +83,7 @@ func sanitizeCSVData(_ csvData: Data, vestigialColumnName: String, typoCorrectio
     // Apply typo correction
     var correctedVehicle = typoCorrections[vehicle] ?? vehicle
 
-    if correctedVehicle.hasSuffix("/") {
+    if correctedVehicle.hasSuffix("/") || correctedVehicle == "None (i.e. no value)" {
       correctedVehicle = anonymousName
     }
 
