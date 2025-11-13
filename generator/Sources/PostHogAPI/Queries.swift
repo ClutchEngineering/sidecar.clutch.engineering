@@ -46,7 +46,6 @@ public func stigsQuery() -> String {
       "samplingFactor": null,
       "series": [
         {
-          "custom_name": "# of stigs",
           "event": "carplay",
           "fixedProperties": null,
           "kind": "EventsNode",
@@ -175,14 +174,13 @@ public func milesTraveledQuery() -> String {
       "samplingFactor": null,
       "series": [
         {
-          "custom_name": "Miles traveled",
           "event": "carplay",
           "fixedProperties": null,
           "kind": "EventsNode",
           "limit": null,
           "math": "hogql",
           "math_group_type_index": null,
-          "math_hogql": "(sum(IF(toInt(properties.$app_build) <= 286, properties.metersTraveled, properties.metersTraveled)) / 1000) / 1.609344",
+          "math_hogql": "sum(properties.metersTraveled / 1000) / 1.609344",
           "math_multiplier": null,
           "math_property": null,
           "math_property_revenue_currency": null,
@@ -206,12 +204,6 @@ public func milesTraveledQuery() -> String {
               "operator": "gt",
               "type": "event",
               "value": "100"
-            },
-            {
-              "key": "toInt(properties.$app_build) <= 286 OR (toInt(properties.$app_build) >= 288 AND properties.metersTraveled > 100)",
-              "label": null,
-              "type": "hogql",
-              "value": null
             }
           ],
           "response": null,

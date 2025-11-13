@@ -43,7 +43,7 @@ let exportsURL = URL(filePath: #filePath)
   .appending(path: "gensite")
 
 // Data sanitization function
-func sanitizeCSVData(_ csvData: Data, typoCorrections: [String: String]) throws -> Data {
+func sanitizeCSVData(_ csvData: Data, vestigialColumnName: String, typoCorrections: [String: String]) throws -> Data {
   guard let csvString = String(data: csvData, encoding: .utf8) else {
     throw NSError(domain: "CSVSanitization", code: 1, userInfo: [NSLocalizedDescriptionKey: "Unable to decode CSV data"])
   }
@@ -57,7 +57,7 @@ func sanitizeCSVData(_ csvData: Data, typoCorrections: [String: String]) throws 
   // Keep the header line
   let header = lines[0]
   let headerColumns = header.components(separatedBy: ",")
-  guard headerColumns.count == 4 else {
+  guard headerColumns.count == 3 else {
     throw NSError(domain: "CSVSanitization", code: 2, userInfo: [NSLocalizedDescriptionKey: "Incorrect number of header columns: \(headerColumns). Expected 4."])
   }
 
@@ -73,25 +73,24 @@ func sanitizeCSVData(_ csvData: Data, typoCorrections: [String: String]) throws 
       continue
     }
 
-    let originalSeries = columns[0].trimmingCharacters(in: .whitespacesAndNewlines)
-    let customName = columns[1].trimmingCharacters(in: .whitespacesAndNewlines)
-    let totalCountString = columns[3].trimmingCharacters(in: .whitespacesAndNewlines)
+    let vehicle = columns[1].trimmingCharacters(in: .whitespacesAndNewlines)
+    let totalCountString = columns[2].trimmingCharacters(in: .whitespacesAndNewlines)
 
     guard let totalCount = Double(totalCountString) else {
       continue
     }
 
     // Apply typo correction
-    var correctedSeries = typoCorrections[originalSeries] ?? originalSeries
+    var correctedVehicle = typoCorrections[vehicle] ?? vehicle
 
-    if correctedSeries.hasSuffix("/") {
-      correctedSeries = anonymousName
+    if correctedVehicle.hasSuffix("/") {
+      correctedVehicle = anonymousName
     }
 
-    correctedSeries = correctedSeries.replacingOccurrences(of: "Vauxhall/Opel", with: "Vauxhall-Opel")
+    correctedVehicle = correctedVehicle.replacingOccurrences(of: "Vauxhall/Opel", with: "Vauxhall-Opel")
 
     // Create the key for aggregation (series + custom name)
-    let aggregationKey = "\(correctedSeries),\(customName)"
+    let aggregationKey = correctedVehicle
 
     // Add to aggregated data
     aggregatedData[aggregationKey, default: 0.0] += totalCount
@@ -104,7 +103,7 @@ func sanitizeCSVData(_ csvData: Data, typoCorrections: [String: String]) throws 
   var sanitizedLines = ["series,custom name,total count"]
   for (key, value) in sortedEntries {
     let formattedValue = value.truncatingRemainder(dividingBy: 1) == 0 ? String(Int(value)) : String(value)
-    sanitizedLines.append("\(key),\(formattedValue)")
+    sanitizedLines.append("\(key),\(vestigialColumnName),\(formattedValue)")
   }
 
   let sanitizedCSV = sanitizedLines.joined(separator: "\r\n")
@@ -125,7 +124,7 @@ let airtableClient = AirtableClient(baseID: airtableBaseID, apiKey: airtableAPIK
 do {
   let client = PostHogExportClient(apiKey: apikey, projectID: projectID)
   let rawCSVData = try await client.fetchExportedCSV(query: stigsQuery())
-  let csvData = try sanitizeCSVData(rawCSVData, typoCorrections: typoCorrections)
+  let csvData = try sanitizeCSVData(rawCSVData, vestigialColumnName: "# of stigs", typoCorrections: typoCorrections)
 
 // Example output:
 // ```
@@ -140,11 +139,10 @@ do {
 // ```
 
   try csvData.write(to: exportsURL.appending(path: "export-carplay-drivers-by-model.csv"))
-//  let csvData = try Data(contentsOf: exportsURL.appending(path: "export-carplay-drivers-by-model.csv"))
-
-  // Update Models table in Airtable
-  print("Updating driver counts in Airtable Models table...")
-  try await airtableClient.updateDriverCounts(csvData, in: modelsTableID)
+//
+//  // Update Models table in Airtable
+//  print("Updating driver counts in Airtable Models table...")
+//  try await airtableClient.updateDriverCounts(csvData, in: modelsTableID)
 }
 
 print("Copying today's stats to yesterday...")
@@ -162,7 +160,7 @@ print("Fetching today's stats...")
 do {
   let client = PostHogExportClient(apiKey: apikey, projectID: projectID)
   let rawCSVData = try await client.fetchExportedCSV(query: milesTraveledQuery())
-  let csvData = try sanitizeCSVData(rawCSVData, typoCorrections: typoCorrections)
+  let csvData = try sanitizeCSVData(rawCSVData, vestigialColumnName: "Miles traveled", typoCorrections: typoCorrections)
 
 // Example output:
 // ```
@@ -177,9 +175,9 @@ do {
 
   try csvData.write(to: todayURL)
 
-  // Update Models table in Airtable with miles driven
-  print("Updating miles driven in Airtable Models table...")
-  try await airtableClient.updateMilesDriven(csvData, in: modelsTableID)
+//  // Update Models table in Airtable with miles driven
+//  print("Updating miles driven in Airtable Models table...")
+//  try await airtableClient.updateMilesDriven(csvData, in: modelsTableID)
 }
 
 print("Done.")
