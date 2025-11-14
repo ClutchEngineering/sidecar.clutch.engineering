@@ -160,7 +160,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B07FKDFYZ3?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 11/s</td>
  <td class="pl-2 md:pl-4 py-2">$18.99</td>
 </tr>
@@ -193,7 +193,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B0755N61PW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$29.99</td>
 </tr>
@@ -215,7 +215,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B06XGB4873?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">$31.99</td>
 </tr>
@@ -226,7 +226,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B0CYZRMCK9?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">$33.99</td>
 </tr>
@@ -237,7 +237,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B073XKQQQW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$34.99</td>
 </tr>
@@ -248,7 +248,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B089NFZ81P?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$39.00</td>
 </tr>
@@ -281,7 +281,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B08BR4KY1G?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">$43.99</td>
 </tr>
@@ -292,7 +292,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B0BBS73F6J?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$44.99</td>
 </tr>
@@ -303,7 +303,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B076XVQMVS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$44.99</td>
 </tr>
@@ -314,7 +314,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B0C53GMRXL?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$49.99</td>
 </tr>
@@ -336,7 +336,7 @@ Tested Scanners
    href="https://www.nonda.co/products/smart-vehicle-health-monitor-mini">nonda.co</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 6.7/s</td>
  <td class="pl-2 md:pl-4 py-2">$59.99</td>
 </tr>
@@ -358,7 +358,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B088LW211V?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">$62.99</td>
 </tr>
@@ -380,7 +380,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B08NFLL3NT?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$79.95</td>
 </tr>
@@ -391,7 +391,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B09WVJPF2F?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$82.99</td>
 </tr>
@@ -402,7 +402,7 @@ Tested Scanners
    href="https://www.amazon.com/dp/B00H9S71LW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">Unknown</td>
  <td class="pl-2 md:pl-4 py-2">$89.95</td>
 </tr>
@@ -530,7 +530,7 @@ Tested Scanners
    href="https://www.amazon.com.br/dp/B0755N61PW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">R$365,30</td>
 </tr>
@@ -552,7 +552,7 @@ Tested Scanners
    href="https://www.amazon.com.br/dp/B073XKQQQW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">R$527,54</td>
 </tr>
@@ -574,7 +574,7 @@ Tested Scanners
    href="https://www.amazon.com.br/dp/B00H9S71LW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">Unknown</td>
  <td class="pl-2 md:pl-4 py-2">R$1.689,00</td>
 </tr>
@@ -633,7 +633,7 @@ Tested Scanners
    href="https://www.amazon.ca/dp/B07FKDFYZ3?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 11/s</td>
  <td class="pl-2 md:pl-4 py-2">$39.54</td>
 </tr>
@@ -644,7 +644,7 @@ Tested Scanners
    href="https://www.amazon.ca/dp/B06XGB4873?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">$39.99</td>
 </tr>
@@ -655,7 +655,7 @@ Tested Scanners
    href="https://www.amazon.ca/dp/B073XKQQQW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$44.99</td>
 </tr>
@@ -666,7 +666,7 @@ Tested Scanners
    href="https://www.amazon.ca/dp/B0CYZRMCK9?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">$45.99</td>
 </tr>
@@ -677,7 +677,7 @@ Tested Scanners
    href="https://www.amazon.ca/dp/B076XVQMVS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$51.99</td>
 </tr>
@@ -688,7 +688,7 @@ Tested Scanners
    href="https://www.amazon.ca/dp/B08BR4KY1G?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">$53.99</td>
 </tr>
@@ -699,7 +699,7 @@ Tested Scanners
    href="https://www.amazon.ca/dp/B0BBS73F6J?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$54.99</td>
 </tr>
@@ -732,7 +732,7 @@ Tested Scanners
    href="https://www.amazon.ca/dp/B088LW211V?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">$75.99</td>
 </tr>
@@ -776,7 +776,7 @@ Tested Scanners
    href="https://www.amazon.ca/dp/B08NFLL3NT?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$114.95</td>
 </tr>
@@ -809,7 +809,7 @@ Tested Scanners
    href="https://www.amazon.ca/dp/B00H9S71LW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">Unknown</td>
  <td class="pl-2 md:pl-4 py-2">$129.95</td>
 </tr>
@@ -820,7 +820,7 @@ Tested Scanners
    href="https://www.amazon.ca/dp/B0C53GMRXL?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">$136.59</td>
 </tr>
@@ -879,7 +879,7 @@ Tested Scanners
    href="https://www.amazon.de/dp/B073XKQQQW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">€39.99</td>
 </tr>
@@ -890,7 +890,7 @@ Tested Scanners
    href="https://www.amazon.de/dp/B0BBS73F6J?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">€42.99</td>
 </tr>
@@ -912,7 +912,7 @@ Tested Scanners
    href="https://www.amazon.de/dp/B076XVQMVS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">€49.99</td>
 </tr>
@@ -923,7 +923,7 @@ Tested Scanners
    href="https://www.amazon.de/dp/B0755N61PW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">€58.48</td>
 </tr>
@@ -934,7 +934,7 @@ Tested Scanners
    href="https://www.amazon.de/dp/B088LW211V?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">€59.99</td>
 </tr>
@@ -945,7 +945,7 @@ Tested Scanners
    href="https://www.amazon.de/dp/B09WVJPF2F?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">€79.99</td>
 </tr>
@@ -978,7 +978,7 @@ Tested Scanners
    href="https://www.amazon.de/dp/B08NFLL3NT?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">€99.99</td>
 </tr>
@@ -1015,7 +1015,7 @@ Tested Scanners
    href="https://www.amazon.in/dp/B0BBS73F6J?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">₹4,999</td>
 </tr>
@@ -1037,7 +1037,7 @@ Tested Scanners
    href="https://www.amazon.in/dp/B07FKDFYZ3?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 11/s</td>
  <td class="pl-2 md:pl-4 py-2">₹7,530.78</td>
 </tr>
@@ -1059,7 +1059,7 @@ Tested Scanners
    href="https://www.amazon.in/dp/B0CYZRMCK9?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">₹9,715</td>
 </tr>
@@ -1070,7 +1070,7 @@ Tested Scanners
    href="https://www.amazon.in/dp/B0C53GMRXL?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">₹10,999</td>
 </tr>
@@ -1103,7 +1103,7 @@ Tested Scanners
    href="https://www.amazon.in/dp/B06XGB4873?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">₹15,999</td>
 </tr>
@@ -1114,7 +1114,7 @@ Tested Scanners
    href="https://www.amazon.in/dp/B073XKQQQW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">₹16,999</td>
 </tr>
@@ -1136,7 +1136,7 @@ Tested Scanners
    href="https://www.amazon.in/dp/B088LW211V?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">₹25,599</td>
 </tr>
@@ -1147,7 +1147,7 @@ Tested Scanners
    href="https://www.amazon.in/dp/B076XVQMVS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">₹29,699</td>
 </tr>
@@ -1206,7 +1206,7 @@ Tested Scanners
    href="https://www.amazon.co.uk/dp/B06XGB4873?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">£22.06</td>
 </tr>
@@ -1239,7 +1239,7 @@ Tested Scanners
    href="https://www.amazon.co.uk/dp/B0755N61PW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">£29.00</td>
 </tr>
@@ -1250,7 +1250,7 @@ Tested Scanners
    href="https://www.amazon.co.uk/dp/B073XKQQQW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">£39.99</td>
 </tr>
@@ -1261,7 +1261,7 @@ Tested Scanners
    href="https://www.amazon.co.uk/dp/B0BBS73F6J?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">£44.99</td>
 </tr>
@@ -1272,7 +1272,7 @@ Tested Scanners
    href="https://www.amazon.co.uk/dp/B076XVQMVS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">£44.99</td>
 </tr>
@@ -1283,7 +1283,7 @@ Tested Scanners
    href="https://www.amazon.co.uk/dp/B088LW211V?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
  <td class="pl-2 md:pl-4 py-2">£54.89</td>
 </tr>
@@ -1294,7 +1294,7 @@ Tested Scanners
    href="https://www.amazon.co.uk/dp/B09WVJPF2F?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">£67.99</td>
 </tr>
@@ -1327,7 +1327,7 @@ Tested Scanners
    href="https://www.amazon.co.uk/dp/B08NFLL3NT?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
  <td class="pl-2 md:pl-4 py-2">£84.95</td>
 </tr>
@@ -1338,7 +1338,7 @@ Tested Scanners
    href="https://www.amazon.co.uk/dp/B00H9S71LW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
  </td>
  <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
- <td class="pl-2 md:pl-4 py-2 font-bold">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
  <td class="pl-2 md:pl-4 py-2">Unknown</td>
  <td class="pl-2 md:pl-4 py-2">£95.50</td>
 </tr>
