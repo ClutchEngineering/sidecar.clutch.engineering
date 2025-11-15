@@ -104,25 +104,3 @@ All 2025 Toyota Camry models come standard with **Toyota Safety Sense 3.0 (TSS 3
 - Toyota's Star Safety System (VSC, TRAC, ABS, EBD, BA, Smart Stop Technology)
 
 The TSS 3.0 system features upgraded cameras and radar sensors for improved detection range and accuracy compared to previous generations.
-
-### What is Toyota Remote Connect?
-
-**Toyota Remote Connect** is Toyota's connected vehicle service that allows owners to remotely control and monitor their Camry using a smartphone app (available for iOS and Android). Remote Connect is included with all Toyota connected services plans.
-
-**Key Features:**
-
-- **Remote Engine Start/Stop**: Start your Camry remotely to pre-heat or pre-cool the cabin for up to 10 minutes before entering the vehicle.
-
-- **Door Lock/Unlock**: Lock or unlock doors remotely from anywhere with cellular coverage. Doors automatically re-lock after 30 seconds if not opened.
-
-- **Vehicle Finder**: Locate your parked Camry in large parking lots using GPS tracking through the app.
-
-- **Guest Driver Monitor**: Set speed, curfew, and distance alerts - ideal for monitoring teen drivers or tracking mileage.
-
-- **Vehicle Status**: Check fuel level, odometer reading, and maintenance reminders remotely.
-
-- **Smartwatch Integration**: Control Remote Connect features from compatible Apple Watch or Android Wear devices.
-
-New Toyota vehicles typically include a complimentary trial period for connected services, after which a subscription is required to maintain access to Remote Connect features.
-
-[Learn more about Toyota Connected Services](https://www.toyota.com/connected-services/)
