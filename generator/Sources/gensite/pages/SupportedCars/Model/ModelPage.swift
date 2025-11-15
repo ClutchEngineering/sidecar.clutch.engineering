@@ -274,6 +274,25 @@ struct ModelPage: View {
           }
           .margin(.bottom, 32)
         }
+
+        // Parameter Support Table
+        Section {
+          ContentContainer {
+            VStack(alignment: .leading, spacing: 16) {
+              let parameterMap = supportMatrix.parameters(for: obdbID)
+              let sections = modelSupport.buildParameterSupportTable(parameterMap: parameterMap)
+
+              if !sections.isEmpty {
+                ParameterSupportTable(
+                  sections: sections,
+                  modelYears: modelSupport.allModelYears
+                )
+              }
+            }
+            .padding(.vertical, 16)
+          }
+        }
+        .margin(.bottom, 32)
       }
     } else {
       Page(

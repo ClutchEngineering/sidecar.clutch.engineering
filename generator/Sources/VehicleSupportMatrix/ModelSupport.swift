@@ -274,5 +274,84 @@ extension MergedSupportMatrix {
 
       return result
     }
+
+    /// Structure representing a row in the parameter support table
+    public struct ParameterTableRow: Sendable {
+      public let parameter: Parameter
+      public let supportByYear: [Int: ParameterSupportLevel]
+
+      public init(parameter: Parameter, supportByYear: [Int: ParameterSupportLevel]) {
+        self.parameter = parameter
+        self.supportByYear = supportByYear
+      }
+    }
+
+    /// Structure grouping parameters by their path
+    public struct ParameterTableSection: Sendable {
+      public let path: String
+      public let rows: [ParameterTableRow]
+
+      public init(path: String, rows: [ParameterTableRow]) {
+        self.path = path
+        self.rows = rows
+      }
+    }
+
+    /// Build a parameter support table organized by path
+    /// - Parameter parameterMap: The ParameterMap containing all parameters for this vehicle
+    /// - Returns: Array of sections, each containing parameters grouped by path
+    public func buildParameterSupportTable(
+      parameterMap: ParameterMap
+    ) -> [ParameterTableSection] {
+      let allModelYears = self.allModelYears
+
+      // Get all unique parameters and organize by path
+      var parametersByPath: [String: Set<Parameter>] = [:]
+
+      for year in allModelYears {
+        guard let yearParameters = parameterMap.parameters(modelYear: year) else {
+          continue
+        }
+
+        for parameter in yearParameters.values {
+          parametersByPath[parameter.path, default: Set()].insert(parameter)
+        }
+      }
+
+      // Build rows for each parameter
+      var sections: [ParameterTableSection] = []
+
+      for (path, parameters) in parametersByPath.sorted(by: { $0.key < $1.key }) {
+        var rows: [ParameterTableRow] = []
+
+        for parameter in parameters.sorted(by: { $0.name < $1.name }) {
+          var supportByYear: [Int: ParameterSupportLevel] = [:]
+
+          for year in allModelYears {
+            // Check if this parameter is present for this year
+            if let yearParameters = parameterMap.parameters(modelYear: year),
+               yearParameters[parameter.id] != nil {
+              // Check if it's confirmed
+              if let confirmedSignals = yearConfirmedSignals[year],
+                 confirmedSignals.contains(parameter.id) {
+                supportByYear[year] = .confirmed
+              } else {
+                supportByYear[year] = .shouldBeSupported
+              }
+            } else {
+              supportByYear[year] = .unknown
+            }
+          }
+
+          rows.append(ParameterTableRow(parameter: parameter, supportByYear: supportByYear))
+        }
+
+        if !rows.isEmpty {
+          sections.append(ParameterTableSection(path: path, rows: rows))
+        }
+      }
+
+      return sections
+    }
   }
 }

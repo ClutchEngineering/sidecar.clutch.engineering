@@ -59,6 +59,13 @@ public class MergedSupportMatrix: @unchecked Sendable {
   typealias ConnectableMap = [Path: [Filters: [SignalID: Connectable]]]
   private var rawConnectables: ConnectableMap = [:]
 
+  /// All parameters (not just connectables) organized by OBDbID
+  private var allParameters: [OBDbID: ParameterMap] = [:]
+
+  /// Raw parameter data loaded from parameters.json
+  typealias ParameterDefinitionMap = [Path: [Filters: [SignalID: RawParameterDefinition]]]
+  private var rawParameters: ParameterDefinitionMap = [:]
+
   private init() {}
 
   /// Static function to load the MergedSupportMatrix with optional caching
@@ -101,6 +108,11 @@ public class MergedSupportMatrix: @unchecked Sendable {
     print("Loading connectables...")
     try matrix.loadConnectables(projectRoot: projectRoot)
     print("Loaded connectables data successfully")
+
+    // Load all parameters (not just connectables)
+    print("Loading all parameters...")
+    try matrix.loadParameters(projectRoot: projectRoot)
+    print("Loaded all parameters successfully")
 
     // Save to cache if successful and caching is enabled
     print("Saving to cache...")
@@ -343,6 +355,89 @@ public class MergedSupportMatrix: @unchecked Sendable {
   private static func getConnectablesFilePath(projectRoot: URL) -> URL {
     let cacheDirectory: String = getCachePath(projectRoot: projectRoot)
     return URL(fileURLWithPath: cacheDirectory).appendingPathComponent("connectables.json")
+  }
+
+  /// Get the path to the parameters file
+  /// - Returns: URL to the parameters.json file
+  private static func getParametersFilePath(projectRoot: URL) -> URL {
+    let cacheDirectory: String = getCachePath(projectRoot: projectRoot)
+    return URL(fileURLWithPath: cacheDirectory).appendingPathComponent("parameters.json")
+  }
+
+  /// Load parameters data from the .cache/parameters.json file
+  /// - Throws: Error if the file doesn't exist or can't be parsed
+  private func loadParameters(projectRoot: URL) throws {
+    let parametersFilePath = Self.getParametersFilePath(projectRoot: projectRoot)
+
+    guard FileManager.default.fileExists(atPath: parametersFilePath.path) else {
+      print("Warning: Parameters file not found at \(parametersFilePath.path), skipping parameter loading")
+      // Not throwing here as parameters.json is optional - connectables.json is still required
+      return
+    }
+
+    print("Reading parameters file from \(parametersFilePath.path)...")
+    let data = try Data(contentsOf: parametersFilePath)
+    print("Decoding parameters JSON (\(data.count) bytes)...")
+    let decoder = JSONDecoder()
+    do {
+      self.rawParameters = try decoder.decode(ParameterDefinitionMap.self, from: data)
+      print("Decoded \(rawParameters.count) parameter entries")
+    } catch {
+      FileHandle.standardError.write("Error decoding parameters JSON: \(error)\n".data(using: .utf8)!)
+      throw error
+    }
+
+    // Process the raw parameters into the structured format
+    print("Processing parameters...")
+    processParameters()
+    print("Finished processing parameters")
+  }
+
+  /// Process raw parameter data into structured format with OBDbIDs and year ranges
+  private func processParameters() {
+    // Reset the parameters dictionary
+    allParameters = [:]
+
+    // Process each path's parameter definitions
+    for (path, filterMappings) in rawParameters {
+      // Extract OBDbID from the path
+      // Format: "Make-Model/signalsets/v3/default.json" or "SAEJ1979/signalsets/v3/default.json"
+      let components = path.components(separatedBy: "/")
+      guard components.count >= 4 else {
+        continue
+      }
+
+      let obdbID = components[0]
+
+      // Skip SAE parameters for now (we could add them later if needed)
+      if obdbID == "SAEJ1979" {
+        continue
+      }
+
+      guard obdbID.contains("-") else {
+        continue
+      }
+
+      // Process each filter mapping (e.g., "2021<=", "<=2020", etc.)
+      for (filterKey, parameterDefinitions) in filterMappings {
+        let filter: Filter = Filter(rawValue: filterKey)
+
+        // Add each parameter in this filter's mapping to the parameters map
+        for (signalID, rawParamDef) in parameterDefinitions {
+          let parameter = rawParamDef.toParameter(id: signalID)
+
+          // Add the parameter to the vehicle's parameter map
+          allParameters[standardizedOBDbID(obdbID), default: ParameterMap()][filter, default: [:]][signalID] = parameter
+        }
+      }
+    }
+  }
+
+  /// Get all parameters for a specific vehicle
+  /// - Parameter obdbID: The OBDb ID of the vehicle
+  /// - Returns: ParameterMap containing all parameters organized by filters
+  public func parameters(for obdbID: OBDbID) -> ParameterMap {
+    return allParameters[standardizedOBDbID(obdbID)] ?? ParameterMap()
   }
 
   /// Load and merge vehicle data from Airtable and local vehicle metadata

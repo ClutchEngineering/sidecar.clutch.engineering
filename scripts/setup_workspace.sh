@@ -42,3 +42,8 @@ echo "Extracting all Connectables..."
 # Extract all Connectables
 mkdir -p .cache
 "$PYTHON_CMD" .schemas/python/dump_connectables.py workspace --output=.cache/connectables.json
+
+echo "Extracting all Parameters..."
+
+# Extract all Parameters
+"$PYTHON_CMD" scripts/dump_parameters.py workspace --output=.cache/parameters.json
