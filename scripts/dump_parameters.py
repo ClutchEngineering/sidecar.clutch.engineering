@@ -15,8 +15,11 @@ import sys
 from pathlib import Path
 from typing import Dict, Any, Optional
 
-# Add the parent directory to the path so we can import the signalsets module
-sys.path.insert(0, str(Path(__file__).parent))
+# Add the .schemas/python directory to the path so we can import the modules
+script_dir = Path(__file__).parent
+repo_root = script_dir.parent
+schemas_python_dir = repo_root / ".schemas" / "python"
+sys.path.insert(0, str(schemas_python_dir))
 
 from can.repo_utils import extract_make_from_repo_name
 
