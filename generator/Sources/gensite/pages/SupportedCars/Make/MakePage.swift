@@ -217,7 +217,7 @@ struct MakePage: View {
                   .border(.init(.zinc, darkness: 700), width: 1, condition: .dark)
                   .transition(.all)
                 }
-                .textDecoration("none")
+                .textDecoration(.none)
                 .modifier(ClassModifier(add: "hover:scale-105"))
               }
             }
