@@ -66,87 +66,56 @@ struct MakePage: View {
 
       Section {
         ContentContainer {
-          VStack(alignment: .leading, spacing: 8) {
-            HStack(spacing: 8) {
-              Image(URL(string: "/gfx/symbols/checkmark.seal.png"))
-                .colorInvert(condition: .dark)
-                .display(.inlineBlock)
-                .frame(width: 36)
-
-              H1("General support")
-                .fontSize(.extraLarge)
-                .fontSize(.fourXLarge, condition: .desktop)
-                .bold()
-                .fontDesign("rounded")
-            }
-            Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996 and vehicles worldwide in the 2000's. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Sidecar for free.")
-          }
-          .padding([.top, .horizontal], 16)
-          .background(.zinc, darkness: 0)
-          .background(.zinc, darkness: 900, condition: .dark)
-          .cornerRadius(.extraExtraLarge)
-          .margin(.horizontal, .auto, condition: .desktop)
-          .frame(width: 0.5, condition: .desktop)
-        }
-      }
-      .margin(.bottom, 32)
-
-      Section {
-        ContentContainer {
-          VStack(alignment: .leading, spacing: 16) {
-            H1("Legend")
-              .fontSize(.extraLarge)
-              .fontSize(.fourXLarge, condition: .desktop)
-              .bold()
-              .fontDesign("rounded")
-
-            HStack(spacing: 16) {
-              SupportedSeal()
-              Text("Vehicle is fully onboarded and does not currently need new beta testers.")
-            }
-            HStack(spacing: 16) {
-              OBDStamp()
-              Text {
-                DOMString("Feature is supported via OBD. ")
-                Link("Requires a connected OBD-II scanner.", destination: URL(string: "/scanning/"))
-                  .textColor(.link, darkness: 700)
-                  .textColor(.link, darkness: 400, condition: .dark)
-                  .fontWeight(600)
+          VStack(alignment: .center, spacing: 8) {
+            Link(becomeBetaURL) {
+              VStack(alignment: .center, spacing: 4) {
+                H1("Don't see your car?")
+                  .fontSize(.large)
+                  .fontSize(.extraLarge, condition: .desktop)
+                  .bold()
+                  .fontDesign("rounded")
+                Text("Become a Sidecar beta tester, get \(betaSubscriptionLength) months free")
+                  .fontSize(.small)
+                  .fontSize(.base, condition: .desktop)
+                  .fontWeight(.medium)
+                  .fontDesign("rounded")
+                Text("Learn more")
+                  .fontWeight(.bold)
+                  .fontDesign("rounded")
+                  .fontSize(.large)
                   .underline(condition: .hover)
               }
+              .textAlignment(.center)
+              .classNames(["bg-gradient-to-tl", "from-cyan-500", "to-blue-600"])
+              .transition(.all)
+              .textColor(.white)
+              .padding(.horizontal, 16)
+              .padding(.vertical, 12)
+              .background(.zinc, darkness: 100)
+              .background(.zinc, darkness: 900, condition: .dark)
+              .cornerRadius(.extraExtraLarge)
             }
-            HStack(spacing: 16) {
-              OTAStamp()
-              Text("Feature is supported via Connected Accounts (Beta).")
-            }
-            HStack(spacing: 16) {
-              NotApplicableStamp()
-              Text("Not applicable to this vehicle.")
-            }
-            HStack(spacing: 16) {
-              Text {
-                Span("PID?")
-                  .bold()
-                DOMString(" The OBD parameter identifier (PID) is unknown.")
+          }
+          .frame(width: 0.8)
+          .frame(width: 0.6, condition: .desktop)
+          .margin(.horizontal, .auto)
+          .margin(.bottom, 32)
+
+          // Grid of model cards
+          Div {
+            for obdbID in supportMatrix.getOBDbIDs(for: make) {
+              if let modelSupport = supportMatrix.getModel(id: obdbID) {
+                ModelCard(make: make, modelSupport: modelSupport)
               }
             }
           }
-          .alignItems(.center, condition: .desktop)
-          .textAlignment(.center, condition: .desktop)
-          .padding(.vertical, 16)
+          .display(.grid)
+          .modifier(ClassModifier(add: "grid-cols-2"))
+          .modifier(ClassModifier(add: "md:grid-cols-3"))
+          .modifier(ClassModifier(add: "lg:grid-cols-4"))
+          .modifier(ClassModifier(add: "gap-4"))
         }
       }
-      .margin(.bottom, 32)
-
-      HorizontalRule()
-
-      MakeSupportSectionV2(
-        make: make,
-        modelIDs: supportMatrix.getOBDbIDs(for: make),
-        supportMatrix: supportMatrix,
-        betaSubscriptionLength: betaSubscriptionLength,
-        becomeBetaURL: becomeBetaURL
-      )
       .margin(.vertical, 32)
     }
   }
