@@ -52,7 +52,7 @@ struct ModelPage: View {
 
     return Page(
       "\(make) \(modelSupport.model) OBD support",
-      path: "/supported-cars/\(makeNameForSorting(make))/\(modelNameForSorting(modelSupport.model))/",
+      path: "/supported-cars/\(makeNameForSorting(make))/\(modelNameForURL(modelSupport.model))/",
       description: "Check which Sidecar features work with your \(make) \(modelSupport.model).",
       keywords: [
         make,
