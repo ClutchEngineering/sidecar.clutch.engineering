@@ -1,6 +1,7 @@
 import Foundation
 import Slipstream
 import VehicleSupport
+import VehicleSupportMatrix
 
 func makeNameForSorting(_ string: Make) -> String {
   string
@@ -97,6 +98,52 @@ struct MakeLink: View {
 struct ModelLink {
   static func url(for make: Make, model: String) -> URL? {
     URL(string: "/supported-cars/\(makeNameForSorting(make))/\(modelNameForURL(model))")
+  }
+}
+
+struct ModelCard: View {
+  let make: Make
+  let modelSupport: MergedSupportMatrix.ModelSupport
+
+  var body: some View {
+    Link(ModelLink.url(for: make, model: modelSupport.model)) {
+      VStack(alignment: .center, spacing: 8) {
+        if !modelSupport.modelSVGs.isEmpty {
+          Image(URL(string: "/gfx/vehicle/\(modelSupport.modelSVGs[0])"))
+            .colorInvert(condition: .dark)
+            .display(.inlineBlock)
+            .frame(width: 96)
+        }
+        Text(modelSupport.model)
+          .bold()
+          .fontDesign("rounded")
+          .fontSize(.large)
+          .textAlignment(.center)
+        VStack(alignment: .center, spacing: 4) {
+          if modelSupport.numberOfMilesDriven > 0 {
+            Text("\(NumberFormatter.localizedString(from: NSNumber(value: modelSupport.numberOfMilesDriven), number: .decimal)) miles")
+              .fontSize(.small)
+              .textColor(.text, darkness: 600)
+              .textColor(.text, darkness: 400, condition: .dark)
+          }
+          if modelSupport.numberOfDrivers > 0 {
+            Text("\(NumberFormatter.localizedString(from: NSNumber(value: modelSupport.numberOfDrivers), number: .decimal)) drivers")
+              .fontSize(.small)
+              .textColor(.text, darkness: 600)
+              .textColor(.text, darkness: 400, condition: .dark)
+          }
+        }
+      }
+      .padding(16)
+      .background(.zinc, darkness: 100)
+      .background(.zinc, darkness: 800, condition: .dark)
+      .cornerRadius(.extraLarge)
+      .border(.init(.zinc, darkness: 300), width: 1)
+      .border(.init(.zinc, darkness: 700), width: 1, condition: .dark)
+      .transition(.all)
+    }
+    .textDecoration(.none)
+    .modifier(ClassModifier(add: "hover:scale-105"))
   }
 }
 
