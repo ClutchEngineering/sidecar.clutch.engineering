@@ -40,13 +40,11 @@ struct Gensite: AsyncParsableCommand {
 
   mutating func run() async throws {
     // Assumes this file is located in a Sources/gensite sub-directory of a Swift package.
-    guard let projectRoot = URL(filePath: #filePath)?
+    let projectRoot = URL(filePath: #filePath)
       .deletingLastPathComponent()
       .deletingLastPathComponent()
       .deletingLastPathComponent()
-      .deletingLastPathComponent() else {
-      print("Unable to create URL for \(#filePath)")
-      throw ExitCode.failure
+      .deletingLastPathComponent()
     }
 
     guard let blogURLPrefix = URL(string: "/news/") else {

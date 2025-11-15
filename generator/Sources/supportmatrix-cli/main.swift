@@ -5,14 +5,11 @@ import SupportMatrix
 import VehicleSupportMatrix
 
 // Assumes this file is located in a Sources/gensite sub-directory of a Swift package.
-guard let projectRoot = URL(filePath: #filePath)?
+let projectRoot = URL(filePath: #filePath)
   .deletingLastPathComponent()
   .deletingLastPathComponent()
   .deletingLastPathComponent()
-  .deletingLastPathComponent() else {
-  print("Unable to create URL for \(#filePath)")
-  exit(1)
-}
+  .deletingLastPathComponent()
 
 // Load environment variables from .env file if it exists
 DotEnv.load(from: projectRoot.appending(path: ".env").path())
