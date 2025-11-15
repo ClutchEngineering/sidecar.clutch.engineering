@@ -8,11 +8,8 @@ on:
 
 jobs:
   build:
-    runs-on: macos-15
+    runs-on: ubuntu-latest
     steps:
-      - name: Select Xcode
-        run: sudo xcode-select -s "/Applications/Xcode_16.4.app"
-
       - name: Checkout
         uses: actions/checkout@v4
 
