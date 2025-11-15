@@ -1,0 +1,97 @@
+# About the Ford Mustang Mach-E
+
+The Ford Mustang Mach-E is an all-electric SUV that combines the iconic Mustang heritage with modern electric vehicle technology. Launched in 2021, the Mach-E represents Ford's bold entry into the electric vehicle market, offering impressive performance, long range capabilities, and advanced technology in a stylish crossover package.
+
+## Frequently Asked Questions
+
+### Are there limitations on OBD2 parameter access for 2025+ model years?
+
+**Yes, 2025 model year and newer Mustang Mach-E vehicles introduced significant ECU encryption that limits diagnostic parameter access.**
+
+Starting with the 2025 model year, Ford implemented enhanced security measures across many of the Mustang Mach-E's Electronic Control Units (ECUs). This encryption layer restricts which parameters can be read through standard OBD2 diagnostic tools and third-party scanning applications.
+
+**What this means for owners and enthusiasts:**
+
+- **Limited diagnostic data**: Many advanced vehicle parameters that were previously accessible on 2021-2024 models are now encrypted and unavailable through aftermarket OBD2 scanners
+- **Reduced monitoring capabilities**: Real-time monitoring of certain powertrain, battery, and system-level metrics may be restricted
+- **Standard diagnostics still work**: Basic OBD2 functions like reading standard trouble codes (DTCs) and emissions-related data remain accessible
+
+This encryption is part of Ford's broader cybersecurity initiative to protect vehicle systems from unauthorized access, but it does limit the depth of vehicle data available to third-party diagnostic tools and monitoring applications.
+
+[Learn more about OBD2 diagnostics](https://www.macheforum.com)
+
+### What trim levels are available for the Mustang Mach-E?
+
+The Mustang Mach-E is available in several trim levels, each offering different performance and feature combinations:
+
+- **Select**: The entry-level trim offering essential features with either Standard Range or Extended Range battery options in RWD or AWD configurations.
+
+- **Premium**: Adds premium comfort features including a panoramic fixed-glass roof, Bang & Olufsen premium audio system, and upgraded interior materials. Available with both battery ranges and drive configurations.
+
+- **GT**: A performance-focused variant featuring AWD, enhanced acceleration (0-60 mph in mid-3 seconds), sport-tuned suspension, and unique styling elements with 20-inch wheels.
+
+- **Rally**: Introduced for 2024, the Rally edition features rally-inspired styling, increased ground clearance, all-terrain capabilities, and unique MagneRide suspension tuning.
+
+[View current Mustang Mach-E models](https://www.ford.com/suvs/mach-e/)
+
+### What is the range of the Mustang Mach-E?
+
+The Mustang Mach-E offers two battery pack options with varying range capabilities:
+
+**Standard Range Battery (68 kWh usable):**
+- RWD: Up to 250 miles EPA-estimated range
+- AWD: Up to 226 miles EPA-estimated range
+
+**Extended Range Battery (88 kWh usable):**
+- RWD: Up to 320 miles EPA-estimated range
+- AWD: Up to 290 miles EPA-estimated range
+
+Range varies based on driving conditions, temperature, driving style, and vehicle configuration. The GT and Rally models, despite having the larger battery pack, achieve slightly lower range due to their performance-oriented powertrains.
+
+### How fast can the Mustang Mach-E charge?
+
+The Mustang Mach-E supports both AC and DC fast charging:
+
+**DC Fast Charging:**
+- Maximum rate: Up to 150 kW on Extended Range models
+- 10-80% charge time: Approximately 38 minutes at peak charging rates
+- Uses CCS1 (Combined Charging System) connector
+
+**AC Level 2 Charging:**
+- Onboard charger: 11.5 kW (48A)
+- 0-100% charge time: Approximately 8-10 hours depending on battery size
+- Compatible with standard J1772 connector
+
+The Mach-E includes access to the Ford BlueOval Charge Network and, starting in 2024, Ford provided adapters allowing access to the Tesla Supercharger network for even more convenient charging options.
+
+### Does the Mustang Mach-E support hands-free driving?
+
+Yes, the Mustang Mach-E offers **BlueCruise**, Ford's hands-free highway driving technology. BlueCruise is available on Premium trims and above.
+
+**BlueCruise capabilities:**
+
+- Hands-free driving on over 130,000 miles of pre-mapped highways in North America (called "Blue Zones")
+- Active Driver Monitoring System using a driver-facing camera to ensure attention on the road
+- Automatic lane centering and adaptive cruise control
+- Available as an optional feature with subscription-based activation
+
+**BlueCruise 1.5** (introduced for 2025 model year):
+- Added automatic lane change capability
+- Enhanced hands-free features
+- Improved driver monitoring
+
+The system requires drivers to remain attentive and ready to take control at all times. BlueCruise typically includes a complimentary trial period with new vehicles, followed by a subscription model.
+
+### Is the Mustang Mach-E compatible with Apple CarPlay and Android Auto?
+
+Yes, all Mustang Mach-E model years support both Apple CarPlay and Android Auto:
+
+**All Model Years (2021-2025):**
+- Wireless Apple CarPlay
+- Wireless Android Auto
+- 15.5-inch portrait-oriented touchscreen (SYNC 4A system)
+- Wireless smartphone charging pad (standard on Premium and above, available on Select)
+
+The Mach-E's large vertical touchscreen provides an excellent interface for both smartphone integration systems, and the wireless connectivity eliminates the need for cables.
+
+[View Mustang Mach-E technology features](https://www.ford.com/suvs/mach-e/)
