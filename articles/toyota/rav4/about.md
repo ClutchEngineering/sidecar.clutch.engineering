@@ -172,27 +172,3 @@ All 2025 Toyota RAV4 models come standard with **Toyota Safety Sense 2.5 (TSS 2.
 - Ratings apply to 2019-2025 models (current generation)
 
 The RAV4's comprehensive safety suite comes standard across all trim levels, ensuring every model offers the same high level of protection regardless of price point.
-
-### What is Toyota Remote Connect?
-
-**Toyota Remote Connect** is Toyota's connected vehicle service that allows RAV4 owners to remotely control and monitor their vehicle using a smartphone app (available for iOS and Android). Remote Connect is included with Toyota connected services plans.
-
-**Key Features:**
-
-- **Remote Engine Start/Stop**: Start your RAV4 remotely to pre-heat or pre-cool the cabin before entering the vehicle. Engine runs for up to 10 minutes per remote start.
-
-- **Door Lock/Unlock**: Lock or unlock doors remotely from anywhere with cellular coverage. Doors automatically re-lock after 30 seconds if not opened for added security.
-
-- **Vehicle Finder**: Locate your parked RAV4 in large parking lots using GPS tracking through the app, with visual guidance to the vehicle's location.
-
-- **Guest Driver Monitor**: Set speed, curfew, and distance alerts ideal for monitoring teen drivers or tracking business mileage. Receive notifications when limits are exceeded.
-
-- **Vehicle Status**: Check fuel level, odometer reading, door status, and maintenance reminders remotely without being near the vehicle.
-
-- **Destination Assist**: Send destinations to your RAV4's navigation system from your smartphone for seamless trip planning.
-
-- **Smartwatch Integration**: Control Remote Connect features from compatible Apple Watch or Android Wear devices for convenient access.
-
-New Toyota vehicles typically include a complimentary trial period for connected services (often 1 year), after which a subscription is required to maintain access to Remote Connect features. Subscription pricing varies, and some features may require specific trim levels or equipment packages.
-
-[Learn more about Toyota Connected Services](https://www.toyota.com/connected-services/)

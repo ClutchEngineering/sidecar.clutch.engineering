@@ -28,12 +28,6 @@ The Acura TLX is highly reliable, earning a 4.5 out of 5.0 rating from RepairPal
 
 [Read RepairPal's TLX reliability ratings](https://repairpal.com/reliability/acura/tlx)
 
-### What is AcuraLink?
-
-AcuraLink is Acura's connected vehicle service platform that provides remote access, safety features, and convenience functions through a smartphone app. Services include remote start, door lock/unlock, vehicle location tracking, automatic collision notification, and roadside assistance. New vehicles typically include a complimentary trial period.
-
-[Learn more about AcuraLink features](https://acuralink.acura.com)
-
 ### Does the TLX support Apple CarPlay and Android Auto?
 
 Apple CarPlay and Android Auto support varies by model year:
