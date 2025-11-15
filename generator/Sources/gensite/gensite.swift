@@ -45,7 +45,6 @@ struct Gensite: AsyncParsableCommand {
       .deletingLastPathComponent()
       .deletingLastPathComponent()
       .deletingLastPathComponent()
-    }
 
     guard let blogURLPrefix = URL(string: "/news/") else {
       throw ExitCode.failure
