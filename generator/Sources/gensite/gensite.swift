@@ -246,7 +246,7 @@ struct Gensite: AsyncParsableCommand {
           guard let url = MakeLink.url(for: make) else {
             continue
           }
-          sitemap[url.appending(component: "index.html").path()] = MakePage(supportMatrix: supportMatrix, make: make)
+          sitemap[url.appending(component: "index.html").path()] = MakePage(supportMatrix: supportMatrix, make: make, projectRoot: projectRoot)
 
           // Generate individual model pages
           for obdbID in supportMatrix.getOBDbIDs(for: make) {
@@ -257,7 +257,8 @@ struct Gensite: AsyncParsableCommand {
             sitemap[modelURL.appending(component: "index.html").path()] = ModelPage(
               supportMatrix: supportMatrix,
               make: make,
-              obdbID: obdbID
+              obdbID: obdbID,
+              projectRoot: projectRoot
             )
           }
         }
