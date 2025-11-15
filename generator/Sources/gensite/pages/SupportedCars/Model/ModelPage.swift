@@ -212,6 +212,22 @@ struct ModelPage: View {
         }
         .margin(.bottom, 32)
 
+        // Parameter Support Table
+        Section {
+          ContentContainer {
+            VStack(alignment: .leading, spacing: 16) {
+              let parameterMap = supportMatrix.parameters(for: obdbID)
+              let sections = modelSupport.buildParameterSupportTable(parameterMap: parameterMap)
+
+              if !sections.isEmpty {
+                ParameterSupportTable(sections: sections)
+              }
+            }
+            .padding(.vertical, 16)
+          }
+        }
+        .margin(.bottom, 32)
+
         // Generations Section - Only show if generations data exists
         if !modelSupport.generations.isEmpty {
           Section {

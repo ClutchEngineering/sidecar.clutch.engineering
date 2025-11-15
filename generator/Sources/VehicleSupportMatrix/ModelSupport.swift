@@ -274,5 +274,150 @@ extension MergedSupportMatrix {
 
       return result
     }
+
+    /// Structure representing a row in the parameter support table
+    public struct ParameterTableRow: Sendable {
+      public let parameter: Parameter
+      public let supportByYear: [Int: ParameterSupportLevel]
+
+      public init(parameter: Parameter, supportByYear: [Int: ParameterSupportLevel]) {
+        self.parameter = parameter
+        self.supportByYear = supportByYear
+      }
+    }
+
+    /// Represents a year or year range column in the parameter table
+    public struct YearColumn: Sendable, Hashable {
+      public let startYear: Int
+      public let endYear: Int
+
+      public var label: String {
+        if startYear == endYear {
+          return String(startYear)
+        } else {
+          return "\(startYear)-\(endYear)"
+        }
+      }
+
+      public init(startYear: Int, endYear: Int) {
+        self.startYear = startYear
+        self.endYear = endYear
+      }
+
+      public init(year: Int) {
+        self.startYear = year
+        self.endYear = year
+      }
+    }
+
+    /// Structure grouping parameters by their path
+    public struct ParameterTableSection: Sendable {
+      public let path: String
+      public let rows: [ParameterTableRow]
+      public let yearColumns: [YearColumn]
+
+      public init(path: String, rows: [ParameterTableRow], yearColumns: [YearColumn]) {
+        self.path = path
+        self.rows = rows
+        self.yearColumns = yearColumns
+      }
+    }
+
+    /// Build a parameter support table organized by path
+    /// - Parameter parameterMap: The ParameterMap containing all parameters for this vehicle
+    /// - Returns: Array of sections, each containing parameters grouped by path
+    public func buildParameterSupportTable(
+      parameterMap: ParameterMap
+    ) -> [ParameterTableSection] {
+      let allModelYears = self.allModelYears
+
+      // Get all unique parameters and organize by path
+      var parametersByPath: [String: Set<Parameter>] = [:]
+
+      for year in allModelYears {
+        guard let yearParameters = parameterMap.parameters(modelYear: year) else {
+          continue
+        }
+
+        for parameter in yearParameters.values {
+          parametersByPath[parameter.path, default: Set()].insert(parameter)
+        }
+      }
+
+      // Build rows for each parameter
+      var sections: [ParameterTableSection] = []
+
+      for (path, parameters) in parametersByPath.sorted(by: { $0.key < $1.key }) {
+        var rows: [ParameterTableRow] = []
+
+        for parameter in parameters.sorted(by: { $0.name < $1.name }) {
+          var supportByYear: [Int: ParameterSupportLevel] = [:]
+
+          for year in allModelYears {
+            // Only mark as confirmed if we have actual vehicle data
+            if let confirmedSignals = yearConfirmedSignals[year],
+               confirmedSignals.contains(parameter.id) {
+              supportByYear[year] = .confirmed
+            } else {
+              // If the parameter exists in the definition but isn't confirmed, mark as unknown
+              supportByYear[year] = .unknown
+            }
+          }
+
+          rows.append(ParameterTableRow(parameter: parameter, supportByYear: supportByYear))
+        }
+
+        if !rows.isEmpty {
+          // Collapse consecutive years with identical support patterns for this section
+          let yearColumns = collapseYearColumns(rows: rows, allYears: allModelYears)
+          sections.append(ParameterTableSection(path: path, rows: rows, yearColumns: yearColumns))
+        }
+      }
+
+      return sections
+    }
+
+    /// Collapse consecutive years that have identical support levels across all parameters
+    private func collapseYearColumns(rows: [ParameterTableRow], allYears: [Int]) -> [YearColumn] {
+      guard !allYears.isEmpty else { return [] }
+      guard !rows.isEmpty else { return allYears.map { YearColumn(year: $0) } }
+
+      var yearColumns: [YearColumn] = []
+      var currentRangeStart = allYears[0]
+      var currentRangeEnd = allYears[0]
+
+      // Get support pattern for a given year across all parameters
+      func getSupportPattern(year: Int) -> [ParameterSupportLevel] {
+        return rows.map { row in
+          row.supportByYear[year] ?? .unknown
+        }
+      }
+
+      var currentPattern = getSupportPattern(year: allYears[0])
+
+      for i in 1..<allYears.count {
+        let year = allYears[i]
+        let pattern = getSupportPattern(year: year)
+
+        // Check if this year is consecutive and has the same pattern
+        if year == currentRangeEnd + 1 && pattern == currentPattern {
+          // Extend the current range
+          currentRangeEnd = year
+        } else {
+          // Different pattern or non-consecutive year, save the current range
+          yearColumns.append(YearColumn(startYear: currentRangeStart, endYear: currentRangeEnd))
+
+          // Start a new range
+          currentRangeStart = year
+          currentRangeEnd = year
+          currentPattern = pattern
+        }
+      }
+
+      // Add the last range
+      yearColumns.append(YearColumn(startYear: currentRangeStart, endYear: currentRangeEnd))
+
+      return yearColumns
+    }
   }
 }
