@@ -132,7 +132,9 @@ struct ModelCard: View {
         cardContent
           .padding(16)
           .background(.zinc, darkness: 50)
-          .background(.zinc, darkness: 850, condition: .dark)
+          .background(.zinc, darkness: 200, condition: .hover)
+          .background(.zinc, darkness: 800, condition: .dark)
+          .background(.zinc, darkness: 700, condition: .init(state: [.hover, .dark]))
           .cornerRadius(.extraLarge)
           .border(.init(.zinc, darkness: 600), width: 1, condition: .dark)
           .shadow("puck")
@@ -144,8 +146,10 @@ struct ModelCard: View {
       Link(ModelLink.url(for: make, model: modelSupport.model)) {
         cardContent
           .padding(16)
-          .background(.zinc, darkness: 75)
-          .background(.zinc, darkness: 875, condition: .dark)
+          .background(.zinc, darkness: 100)
+          .background(.zinc, darkness: 200, condition: .hover)
+          .background(.zinc, darkness: 900, condition: .dark)
+          .background(.zinc, darkness: 800, condition: .init(state: [.hover, .dark]))
           .cornerRadius(.extraLarge)
           .border(.init(.zinc, darkness: 300), width: 1)
           .border(.init(.zinc, darkness: 700), width: 1, condition: .dark)
@@ -158,7 +162,9 @@ struct ModelCard: View {
         cardContent
           .padding(16)
           .background(.zinc, darkness: 100)
-          .background(.zinc, darkness: 900, condition: .dark)
+          .background(.zinc, darkness: 200, condition: .hover)
+          .background(.zinc, darkness: 950, condition: .dark)
+          .background(.zinc, darkness: 900, condition: .init(state: [.hover, .dark]))
           .cornerRadius(.extraLarge)
           .transition(.all)
       }
