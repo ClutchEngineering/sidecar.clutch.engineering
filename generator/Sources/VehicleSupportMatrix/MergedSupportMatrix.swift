@@ -202,24 +202,24 @@ public class MergedSupportMatrix: @unchecked Sendable {
       self.rawConnectables = try decoder.decode(ConnectableMap.self, from: data)
       print("Decoded \(rawConnectables.count) connectable entries")
     } catch {
-      fputs("Error decoding connectables JSON: \(error)\n", stderr)
+      FileHandle.standardError.write("Error decoding connectables JSON: \(error)\n".data(using: .utf8)!)
       if let decodingError = error as? DecodingError {
-        fputs("Decoding error details: \(decodingError.localizedDescription)\n", stderr)
+        FileHandle.standardError.write("Decoding error details: \(decodingError.localizedDescription)\n".data(using: .utf8)!)
         switch decodingError {
         case .keyNotFound(let key, let context):
-          fputs("Key '\(key.stringValue)' not found: \(context.debugDescription)\n", stderr)
-          fputs("Coding path: \(context.codingPath.map { $0.stringValue }.joined(separator: " -> "))\n", stderr)
+          FileHandle.standardError.write("Key '\(key.stringValue)' not found: \(context.debugDescription)\n".data(using: .utf8)!)
+          FileHandle.standardError.write("Coding path: \(context.codingPath.map { $0.stringValue }.joined(separator: " -> "))\n".data(using: .utf8)!)
         case .typeMismatch(let type, let context):
-          fputs("Type mismatch for type \(type): \(context.debugDescription)\n", stderr)
-          fputs("Coding path: \(context.codingPath.map { $0.stringValue }.joined(separator: " -> "))\n", stderr)
+          FileHandle.standardError.write("Type mismatch for type \(type): \(context.debugDescription)\n".data(using: .utf8)!)
+          FileHandle.standardError.write("Coding path: \(context.codingPath.map { $0.stringValue }.joined(separator: " -> "))\n".data(using: .utf8)!)
         case .valueNotFound(let type, let context):
-          fputs("Value of type \(type) not found: \(context.debugDescription)\n", stderr)
-          fputs("Coding path: \(context.codingPath.map { $0.stringValue }.joined(separator: " -> "))\n", stderr)
+          FileHandle.standardError.write("Value of type \(type) not found: \(context.debugDescription)\n".data(using: .utf8)!)
+          FileHandle.standardError.write("Coding path: \(context.codingPath.map { $0.stringValue }.joined(separator: " -> "))\n".data(using: .utf8)!)
         case .dataCorrupted(let context):
-          fputs("Data corrupted: \(context.debugDescription)\n", stderr)
-          fputs("Coding path: \(context.codingPath.map { $0.stringValue }.joined(separator: " -> "))\n", stderr)
+          FileHandle.standardError.write("Data corrupted: \(context.debugDescription)\n".data(using: .utf8)!)
+          FileHandle.standardError.write("Coding path: \(context.codingPath.map { $0.stringValue }.joined(separator: " -> "))\n".data(using: .utf8)!)
         @unknown default:
-          fputs("Unknown decoding error\n", stderr)
+          FileHandle.standardError.write("Unknown decoding error\n".data(using: .utf8)!)
         }
       }
       throw error
