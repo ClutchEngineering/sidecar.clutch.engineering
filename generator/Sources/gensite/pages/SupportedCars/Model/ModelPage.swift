@@ -141,11 +141,11 @@ struct ModelPage: View {
 
               HStack(spacing: 16) {
                 SupportedSeal()
-                Text("Vehicle is fully onboarded and does not currently need new beta testers.")
+                Slipstream.Text("Vehicle is fully onboarded and does not currently need new beta testers.")
               }
               HStack(spacing: 16) {
                 OBDStamp()
-                Text {
+                Slipstream.Text {
                   DOMString("Feature is supported via OBD. ")
                   Link("Requires a connected OBD-II scanner.", destination: URL(string: "/scanning/"))
                     .textColor(.link, darkness: 700)
@@ -156,14 +156,14 @@ struct ModelPage: View {
               }
               HStack(spacing: 16) {
                 OTAStamp()
-                Text("Feature is supported via Connected Accounts (Beta).")
+                Slipstream.Text("Feature is supported via Connected Accounts (Beta).")
               }
               HStack(spacing: 16) {
                 NotApplicableStamp()
-                Text("Not applicable to this vehicle.")
+                Slipstream.Text("Not applicable to this vehicle.")
               }
               HStack(spacing: 16) {
-                Text {
+                Slipstream.Text {
                   Span("PID?")
                     .bold()
                   DOMString(" The OBD parameter identifier (PID) is unknown.")
@@ -221,7 +221,7 @@ struct ModelPage: View {
                       .bold()
                       .margin(.bottom, 8)
 
-                    Text {
+                    Slipstream.Text {
                       Span("Years: ")
                         .bold()
                       if let endYear = generation.endYear {
@@ -330,7 +330,7 @@ struct ModelPage: View {
         keywords: []
       ) {
         ContentContainer {
-          Text("Model not found")
+          Slipstream.Text("Model not found")
         }
       }
     }
