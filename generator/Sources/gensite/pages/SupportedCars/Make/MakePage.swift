@@ -140,13 +140,95 @@ struct MakePage: View {
 
       HorizontalRule()
 
-      MakeSupportSectionV2(
-        make: make,
-        modelIDs: supportMatrix.getOBDbIDs(for: make),
-        supportMatrix: supportMatrix,
-        betaSubscriptionLength: betaSubscriptionLength,
-        becomeBetaURL: becomeBetaURL
-      )
+      Section {
+        ContentContainer {
+          VStack(alignment: .center, spacing: 8) {
+            Link(becomeBetaURL) {
+              VStack(alignment: .center, spacing: 4) {
+                H1("Don't see your car?")
+                  .fontSize(.large)
+                  .fontSize(.extraLarge, condition: .desktop)
+                  .bold()
+                  .fontDesign("rounded")
+                Text("Become a Sidecar beta tester, get \(betaSubscriptionLength) months free")
+                  .fontSize(.small)
+                  .fontSize(.base, condition: .desktop)
+                  .fontWeight(.medium)
+                  .fontDesign("rounded")
+                Text("Learn more")
+                  .fontWeight(.bold)
+                  .fontDesign("rounded")
+                  .fontSize(.large)
+                  .underline(condition: .hover)
+              }
+              .textAlignment(.center)
+              .classNames(["bg-gradient-to-tl", "from-cyan-500", "to-blue-600"])
+              .transition(.all)
+              .textColor(.white)
+              .padding(.horizontal, 16)
+              .padding(.vertical, 12)
+              .background(.zinc, darkness: 100)
+              .background(.zinc, darkness: 900, condition: .dark)
+              .cornerRadius(.extraExtraLarge)
+            }
+          }
+          .frame(width: 0.8)
+          .frame(width: 0.6, condition: .desktop)
+          .margin(.horizontal, .auto)
+          .margin(.bottom, 32)
+
+          // Grid of model cards
+          Div {
+            for obdbID in supportMatrix.getOBDbIDs(for: make) {
+              if let modelSupport = supportMatrix.getModel(id: obdbID) {
+                Link(ModelLink.url(for: make, model: modelSupport.model)) {
+                  VStack(alignment: .center, spacing: 8) {
+                    if !modelSupport.modelSVGs.isEmpty {
+                      Image(URL(string: "/gfx/vehicle/\(modelSupport.modelSVGs[0])"))
+                        .colorInvert(condition: .dark)
+                        .display(.inlineBlock)
+                        .frame(width: 96)
+                    }
+                    Text(modelSupport.model)
+                      .bold()
+                      .fontDesign("rounded")
+                      .fontSize(.large)
+                      .textAlignment(.center)
+                    VStack(alignment: .center, spacing: 4) {
+                      if modelSupport.numberOfMilesDriven > 0 {
+                        Text("\(NumberFormatter.localizedString(from: NSNumber(value: modelSupport.numberOfMilesDriven), number: .decimal)) miles")
+                          .fontSize(.small)
+                          .textColor(.text, darkness: 600)
+                          .textColor(.text, darkness: 400, condition: .dark)
+                      }
+                      if modelSupport.numberOfDrivers > 0 {
+                        Text("\(NumberFormatter.localizedString(from: NSNumber(value: modelSupport.numberOfDrivers), number: .decimal)) drivers")
+                          .fontSize(.small)
+                          .textColor(.text, darkness: 600)
+                          .textColor(.text, darkness: 400, condition: .dark)
+                      }
+                    }
+                  }
+                  .padding(16)
+                  .background(.zinc, darkness: 100)
+                  .background(.zinc, darkness: 800, condition: .dark)
+                  .cornerRadius(.extraLarge)
+                  .border(.init(.zinc, darkness: 300), width: 1)
+                  .border(.init(.zinc, darkness: 700), width: 1, condition: .dark)
+                  .transition(.all)
+                }
+                .underline(false)
+                .modifier(ClassModifier(add: "hover:scale-105"))
+              }
+            }
+          }
+          .display(.grid)
+          .modifier(ClassModifier(add: "grid-cols-2"))
+          .modifier(ClassModifier(add: "md:grid-cols-3"))
+          .modifier(ClassModifier(add: "lg:grid-cols-4"))
+          .modifier(ClassModifier(add: "gap-4"))
+        }
+      }
       .margin(.vertical, 32)
     }
   }

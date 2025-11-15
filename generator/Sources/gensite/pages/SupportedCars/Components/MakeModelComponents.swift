@@ -11,6 +11,7 @@ func makeNameForSorting(_ string: Make) -> String {
 
 func modelNameForSorting(_ model: Model) -> String {
   model.name
+    .lowercased()
     .replacingOccurrences(of: " ", with: "-")
     .applyingTransform(.stripDiacritics, reverse: false)!
 }
@@ -83,6 +84,12 @@ struct MakeLink: View {
 
   static func url(for make: Make) -> URL? {
     URL(string: "/supported-cars/\(makeNameForSorting(make))")
+  }
+}
+
+struct ModelLink {
+  static func url(for make: Make, model: String) -> URL? {
+    URL(string: "/supported-cars/\(makeNameForSorting(make))/\(modelNameForSorting(model))")
   }
 }
 
