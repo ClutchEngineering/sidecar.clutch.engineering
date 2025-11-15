@@ -1,7 +1,7 @@
 import Foundation
 
 /// Represents a vehicle parameter/signal from OBDb
-public struct Parameter: Codable, Hashable, Sendable {
+public struct Parameter: Decodable, Hashable, Sendable {
   /// Unique identifier for the signal (e.g., "TLX_GENERATOR")
   public let id: String
 
@@ -38,7 +38,7 @@ public struct Parameter: Codable, Hashable, Sendable {
 }
 
 /// Support level for a parameter
-public enum ParameterSupportLevel: Int, Comparable, Codable, Sendable {
+public enum ParameterSupportLevel: Int, Comparable, Sendable {
   case unsupported = 0
   case unknown = 1
   case shouldBeSupported = 2
