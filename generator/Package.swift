@@ -44,14 +44,6 @@ let package = Package(
       .process("export-carplay-drivers-by-model.csv"),
     ]),
 
-    .executableTarget(name: "export", dependencies: [
-      "VehicleSupport",
-    ]),
-
-    .executableTarget(name: "import", dependencies: [
-      "VehicleSupport",
-    ]),
-
     .executableTarget(name: "supportmatrix-cli", dependencies: [
       "AirtableAPI",
       "DotEnvAPI",
@@ -68,8 +60,6 @@ let package = Package(
       "SupportMatrix",
     ]),
 
-    .target(name: "VehicleSupport", resources: [
-      .process("supportmatrix.json")
-    ])
+    .target(name: "VehicleSupport")
   ]
 )

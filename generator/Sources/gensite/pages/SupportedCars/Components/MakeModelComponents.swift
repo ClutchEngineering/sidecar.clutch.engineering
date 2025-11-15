@@ -235,16 +235,3 @@ struct CustomStringComparator {
     return normalizedLhs.localizedStandardCompare(normalizedRhs) == .orderedAscending
   }
 }
-
-extension Dictionary where Key == Model, Value == [VehicleSupportStatus] {
-  func sortedByLocalizedStandard() -> [(key: Key, value: Value)] {
-    sorted { lhs, rhs in
-      if lhs.key.name == rhs.key.name,
-         let yearA = lhs.value.first?.years.lowerBound,
-         let yearB = rhs.value.first?.years.lowerBound {
-        return yearA < yearB
-      }
-      return CustomStringComparator.compare(lhs.key, rhs.key)
-    }
-  }
-}

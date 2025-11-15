@@ -1,7 +1,6 @@
 import AirtableAPI
 import DotEnvAPI
 import Foundation
-import SupportMatrix
 import VehicleSupportMatrix
 
 // Assumes this file is located in a Sources/gensite sub-directory of a Swift package.
