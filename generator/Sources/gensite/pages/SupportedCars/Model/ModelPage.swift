@@ -106,7 +106,7 @@ struct ModelPage: View {
                 .fontSize(.fourXLarge, condition: .desktop)
                 .bold()
                 .fontDesign("rounded")
-              Text("Check which Sidecar features work with your \(make) \(modelSupport.model)")
+              Slipstream.Text("Check which Sidecar features work with your \(make) \(modelSupport.model)")
             }
             .textAlignment(.center)
           }

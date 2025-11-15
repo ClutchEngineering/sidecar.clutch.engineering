@@ -74,7 +74,7 @@ struct MakePage: View {
               .fontSize(.fourXLarge, condition: .desktop)
               .bold()
               .fontDesign("rounded")
-            Text("Check which Sidecar features work with your \(make)")
+            Slipstream.Text("Check which Sidecar features work with your \(make)")
           }
           .textAlignment(.center)
         }
