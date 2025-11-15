@@ -125,14 +125,18 @@ Target three primary search intents:
    - "What safety features come standard?"
    - "What are the safety ratings?"
 
-5. **Features & Systems**
-   - Brand-specific technologies (e.g., "What is Toyota Safety Sense?", "What is BlueCruise?")
-   - Connected services (e.g., "What is AcuraLink?", "What is FordPass?")
-
-6. **Special Considerations**
+5. **Special Considerations**
    - "Are there limitations on OBD2 access?" (critical for Sidecar users)
    - Generation-specific information
    - Notable changes by model year
+
+**Note**: Avoid creating FAQs about brand-specific connected services (e.g., "What is AcuraLink?", "What is FordPass?", "What is Toyota Remote Connect?"). These services:
+- Change frequently (features, pricing, subscription terms)
+- Are documented in detail on manufacturer websites
+- Are not core to Sidecar's diagnostic value proposition
+- Create high maintenance burden for low SEO value
+
+For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Polestar), this should be communicated on Sidecar's platform documentation, not in individual vehicle articles.
 
 **FAQ Answer Structure**:
 
@@ -294,10 +298,9 @@ Before publishing, verify:
 
 3. **Technology & Features**
    - Advanced driver assistance systems (ADAS)
-   - Brand-specific technologies
-   - Connected services and apps
-   - Hands-free driving capabilities
-   - *Why it matters for Sidecar*: Demonstrates expertise in vehicle technology
+   - Hands-free driving capabilities (e.g., BlueCruise, Super Cruise)
+   - Infotainment systems and smartphone integration
+   - *Why it matters for Sidecar*: Demonstrates expertise in vehicle technology while staying focused on features users actively search for
 
 4. **OBD2 & Diagnostic Considerations**
    - ECU encryption limitations (e.g., 2025+ Mustang Mach-E)
