@@ -213,37 +213,39 @@ struct ModelPage: View {
                   .fontDesign("rounded")
                   .margin(.bottom, 16)
 
-                for generation in modelSupport.generations {
-                  VStack(alignment: .leading, spacing: 8) {
-                    H2(generation.name)
-                      .fontSize(.large)
-                      .fontSize(.extraLarge, condition: .desktop)
-                      .bold()
+                Div {
+                  for generation in modelSupport.generations {
+                    VStack(alignment: .leading, spacing: 8) {
+                      H2(generation.name)
+                        .fontSize(.large)
+                        .fontSize(.extraLarge, condition: .desktop)
+                        .bold()
+                        .margin(.bottom, 8)
+
+                      Slipstream.Text {
+                        Span("Years: ")
+                          .bold()
+                        if let endYear = generation.endYear {
+                          DOMString("\(generation.startYear)–\(endYear)")
+                        } else {
+                          DOMString("\(generation.startYear)–Present")
+                        }
+                      }
                       .margin(.bottom, 8)
 
-                    Slipstream.Text {
-                      Span("Years: ")
-                        .bold()
-                      if let endYear = generation.endYear {
-                        DOMString("\(generation.startYear)–\(endYear)")
-                      } else {
-                        DOMString("\(generation.startYear)–Present")
+                      if let description = generation.description {
+                        Paragraph {
+                          DOMString(description)
+                        }
+                        .margin(.bottom, 16)
                       }
                     }
-                    .margin(.bottom, 8)
-
-                    if let description = generation.description {
-                      Paragraph {
-                        DOMString(description)
-                      }
-                      .margin(.bottom, 16)
-                    }
+                    .padding(16)
+                    .background(.zinc, darkness: 0)
+                    .background(.zinc, darkness: 900, condition: .dark)
+                    .cornerRadius(.large)
+                    .margin(.bottom, 16)
                   }
-                  .padding(16)
-                  .background(.zinc, darkness: 0)
-                  .background(.zinc, darkness: 900, condition: .dark)
-                  .cornerRadius(.large)
-                  .margin(.bottom, 16)
                 }
               }
               .padding(.vertical, 16)
