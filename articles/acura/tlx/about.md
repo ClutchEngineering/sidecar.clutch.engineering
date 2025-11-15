@@ -34,20 +34,20 @@ AcuraLink is Acura's connected vehicle service platform that provides remote acc
 
 [Learn more about AcuraLink features](https://acuralink.acura.com)
 
-### Does the TLX support wireless Apple CarPlay and Android Auto?
+### Does the TLX support Apple CarPlay and Android Auto?
 
-Yes, the TLX supports wireless Apple CarPlay and Android Auto integration, along with a Qi-compatible wireless charging pad for convenient smartphone charging without cables.
+Apple CarPlay and Android Auto support varies by model year:
+
+#### First Generation (2015-2020)
+
+- 2015-2017: No CarPlay/Android Auto support
+- 2018-2020: Wired CarPlay and Android Auto (USB connection required)
+
+#### Second Generation (2021-2025)
+
+- 2021-2023: Wired CarPlay and Android Auto (USB connection required)
+- 2024-2025: **Wireless** CarPlay and Android Auto (also includes Qi wireless charging pad)
+
+If you have a 2015-2023 model, aftermarket wireless adapters are available to add wireless functionality to the existing wired CarPlay system.
 
 [View TLX features on Acura.com](https://www.acura.com/cars/tlx/features)
-
-## Using Sidecar with Your Acura TLX
-
-Sidecar enhances your TLX ownership experience by providing deeper insights into your vehicle's health and performance. Through your TLX's OBD-II port, Sidecar can:
-
-- **Monitor vehicle diagnostics in real-time**: Track engine performance, transmission behavior, and emissions systems
-- **Decode check engine lights**: Instantly understand what diagnostic trouble codes mean and their severity
-- **Track maintenance schedules**: Stay on top of oil changes, tire rotations, and other scheduled maintenance
-- **Log driving data**: Review trip information, fuel efficiency trends, and driving patterns
-- **Export diagnostic reports**: Generate comprehensive vehicle health reports for service appointments or resale documentation
-
-The TLX's sophisticated onboard diagnostics system provides extensive data through the OBD-II interface, making Sidecar an invaluable tool for proactive vehicle maintenance and troubleshooting. Whether you're monitoring the performance of your Type S's turbocharged V6 or tracking the efficiency of the SH-AWD system, Sidecar gives you professional-grade diagnostic capabilities right from your smartphone.

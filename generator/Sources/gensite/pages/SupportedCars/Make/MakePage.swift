@@ -142,13 +142,6 @@ struct MakePage: View {
         Section {
           ContentContainer {
             VStack(alignment: .leading, spacing: 16) {
-              H1("About \(make)")
-                .fontSize(.extraLarge)
-                .fontSize(.fourXLarge, condition: .desktop)
-                .bold()
-                .fontDesign("rounded")
-                .margin(.bottom, 16)
-
               Article(makeContent)
             }
             .padding(.vertical, 16)
