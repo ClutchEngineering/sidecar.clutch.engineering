@@ -16,6 +16,13 @@ func modelNameForSorting(_ model: Model) -> String {
     .applyingTransform(.stripDiacritics, reverse: false)!
 }
 
+func modelNameForSorting(_ modelName: String) -> String {
+  modelName
+    .lowercased()
+    .replacingOccurrences(of: " ", with: "-")
+    .applyingTransform(.stripDiacritics, reverse: false)!
+}
+
 func makeNameForIcon(_ make: Make) -> String {
   make
     .replacingOccurrences(of: " ", with: "")
