@@ -128,25 +128,3 @@ The Golf's comprehensive safety equipment provides peace of mind for both daily 
 While the discontinuation of the manual transmission may disappoint some driving enthusiasts, the DSG transmission is widely praised for its quick shifts, smooth operation, and performance characteristics. The transmission features multiple driving modes and provides engaging performance with the convenience of an automatic.
 
 For buyers specifically seeking a manual transmission Golf, pre-owned 2024 or earlier model years remain excellent options on the used market.
-
-### What is Volkswagen Car-Net?
-
-**Volkswagen Car-Net** is Volkswagen's suite of connected vehicle services that allows Golf owners to remotely interact with their vehicle using a smartphone app (available for iOS and Android). Car-Net provides convenient features for monitoring and controlling various vehicle functions.
-
-**Key Car-Net Features:**
-
-- **Remote Access**: Lock or unlock doors remotely from anywhere with cellular coverage, useful if you've forgotten to lock your vehicle or need to grant access to someone.
-
-- **Vehicle Status**: Check fuel level, odometer reading, door/window status, and parking location remotely through the app.
-
-- **Vehicle Health Report**: Receive notifications about maintenance needs, diagnostic trouble codes, and service reminders.
-
-- **Speed Alert**: Set speed thresholds and receive notifications if the vehicle exceeds them—helpful for monitoring teen drivers or fleet vehicles.
-
-- **Boundary Alert**: Establish virtual geographic boundaries and receive alerts when the vehicle enters or exits designated areas.
-
-- **Valet Alert**: Receive notifications if the vehicle is driven beyond a certain distance, helping monitor valet parking situations.
-
-New Volkswagen vehicles typically include a complimentary trial period for Car-Net services, after which a subscription is required to maintain access to remote features. Some basic features like vehicle health reports may remain accessible without a subscription depending on the service plan.
-
-[Learn more about Volkswagen Car-Net](https://www.vwserviceandparts.com/digital-resources/vw-car-net/)
