@@ -7,12 +7,18 @@ on:
     branches: ["main"]
 
 jobs:
-  build:
-    runs-on: macos-15
+  build-linux:
+    runs-on: ubuntu-latest
     steps:
-      - name: Select Xcode
-        run: sudo xcode-select -s "/Applications/Xcode_16.4.app"
+      - name: Checkout
+        uses: actions/checkout@v4
 
+      - name: Build generator
+        run: cd generator && swift build
+
+  build-macos:
+    runs-on: macos-latest
+    steps:
       - name: Checkout
         uses: actions/checkout@v4
 

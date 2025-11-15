@@ -40,14 +40,11 @@ struct Gensite: AsyncParsableCommand {
 
   mutating func run() async throws {
     // Assumes this file is located in a Sources/gensite sub-directory of a Swift package.
-    guard let projectRoot = URL(filePath: #filePath)?
+    let projectRoot = URL(filePath: #filePath)
       .deletingLastPathComponent()
       .deletingLastPathComponent()
       .deletingLastPathComponent()
-      .deletingLastPathComponent() else {
-      print("Unable to create URL for \(#filePath)")
-      throw ExitCode.failure
-    }
+      .deletingLastPathComponent()
 
     guard let blogURLPrefix = URL(string: "/news/") else {
       throw ExitCode.failure
@@ -60,17 +57,17 @@ struct Gensite: AsyncParsableCommand {
     DotEnv.load(from: projectRoot.appending(path: ".env").path())
 
     guard let airtableAPIKey = ProcessInfo.processInfo.environment["AIRTABLE_API_KEY"] else {
-      fputs("Error: Missing required environment variable AIRTABLE_API_KEY\n", stderr)
+      FileHandle.standardError.write("Error: Missing required environment variable AIRTABLE_API_KEY\n".data(using: .utf8)!)
       throw ExitCode.failure
     }
 
     guard let airtableBaseID = ProcessInfo.processInfo.environment["AIRTABLE_BASE_ID"] else {
-      fputs("Error: Missing required environment variable AIRTABLE_BASE_ID\n", stderr)
+      FileHandle.standardError.write("Error: Missing required environment variable AIRTABLE_BASE_ID\n".data(using: .utf8)!)
       throw ExitCode.failure
     }
 
     guard let modelsTableID = ProcessInfo.processInfo.environment["AIRTABLE_MODELS_TABLE_ID"] else {
-      fputs("Error: Missing required environment variable AIRTABLE_MODELS_TABLE_ID\n", stderr)
+      FileHandle.standardError.write("Error: Missing required environment variable AIRTABLE_MODELS_TABLE_ID\n".data(using: .utf8)!)
       throw ExitCode.failure
     }
 
