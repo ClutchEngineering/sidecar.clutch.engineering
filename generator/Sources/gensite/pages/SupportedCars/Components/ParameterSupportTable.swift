@@ -64,10 +64,17 @@ struct ParameterTable: View {
     try paramHeader.addClass("text-left py-2 px-3 font-bold min-w-[200px]")
 
     // Year column headers
-    for yearColumn in section.yearColumns {
+    for (index, yearColumn) in section.yearColumns.enumerated() {
       let yearHeader = try headerRow.appendElement("th")
       try yearHeader.text(yearColumn.label)
       try yearHeader.addClass("text-center py-2 px-2 font-bold min-w-[60px]")
+
+      // Add alternating background colors
+      if index % 2 == 0 {
+        try yearHeader.addClass("bg-zinc-100 dark:bg-zinc-800")
+      } else {
+        try yearHeader.addClass("bg-zinc-50 dark:bg-zinc-850")
+      }
     }
 
     // Body rows
@@ -102,9 +109,16 @@ struct ParameterTable: View {
       }
 
       // Year support cells - use the first year in each column since they're all the same
-      for yearColumn in section.yearColumns {
+      for (index, yearColumn) in section.yearColumns.enumerated() {
         let cell = try tr.appendElement("td")
         try cell.addClass("py-2 px-2 text-center")
+
+        // Add alternating background colors
+        if index % 2 == 0 {
+          try cell.addClass("bg-zinc-50 dark:bg-zinc-900")
+        } else {
+          try cell.addClass("bg-white dark:bg-zinc-950")
+        }
 
         // Get support level from the first year in this column (all years in the range have the same level)
         if let supportLevel = row.supportByYear[yearColumn.startYear] {
