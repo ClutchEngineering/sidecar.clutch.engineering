@@ -326,11 +326,13 @@ struct Gensite: AsyncParsableCommand {
         }
 
         // Convert relative path to absolute URL
-        var absoluteURL = baseURL + path.replacingOccurrences(of: "index.html", with: "")
+        let cleanPath = path.replacingOccurrences(of: "index.html", with: "")
+        var absoluteURL = baseURL
         if !absoluteURL.hasSuffix("/"),
-           !path.hasPrefix("/") {
+           !cleanPath.hasPrefix("/") {
           absoluteURL.append("/")
         }
+        absoluteURL.append(cleanPath)
 
         // Escape special characters for XML
         let escapedURL = escapeXMLSpecialCharacters(absoluteURL)
