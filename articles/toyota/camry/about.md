@@ -2,6 +2,11 @@
 
 The Toyota Camry is a midsize sedan renowned for its exceptional reliability, comfortable ride, and practicality. As one of the best-selling vehicles in North America for decades, the Camry has built a reputation as a dependable family sedan that balances efficiency, comfort, and value. Starting with the 2025 model year, Toyota made the Camry exclusively hybrid, marking a significant shift in the model's powertrain strategy while maintaining the qualities that have made it a perennial favorite.
 
+## ECU map
+
+- `700`: Engine control module (ECM)
+- `701`: Transmission control module (TCM)
+
 ## Frequently Asked Questions
 
 ### What trim levels are available for the Toyota Camry?
