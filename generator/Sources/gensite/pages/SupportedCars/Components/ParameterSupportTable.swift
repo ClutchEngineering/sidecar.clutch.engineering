@@ -10,8 +10,8 @@ struct ParameterSupportTable: View {
   var body: some View {
     VStack(alignment: .leading, spacing: 24) {
       H2("All Parameters by Model Year")
-        .fontSize(.extraLarge)
-        .fontSize(.twoXLarge, condition: .desktop)
+        .fontSize(.large)
+        .fontSize(.extraLarge, condition: .desktop)
         .bold()
         .fontDesign("rounded")
         .margin(.bottom, 16)

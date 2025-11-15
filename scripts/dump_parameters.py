@@ -15,6 +15,49 @@ from pathlib import Path
 from typing import Dict, Any
 
 
+def dbgfilter_to_string(dbgfilter: Any) -> str:
+    """
+    Convert a dbgfilter (which can be a string or dict) to a filter string.
+
+    Args:
+        dbgfilter: The dbgfilter value from OBDb JSON (string or dict)
+
+    Returns:
+        Filter string in the format expected by Filter.swift
+    """
+    # If it's already a string, return it
+    if isinstance(dbgfilter, str):
+        return dbgfilter
+
+    # If it's not a dict, convert to string
+    if not isinstance(dbgfilter, dict):
+        return str(dbgfilter)
+
+    # Parse dictionary format
+    parts = []
+
+    # Handle 'from' field (e.g., "2021<=")
+    if "from" in dbgfilter and dbgfilter["from"] is not None:
+        parts.append(f"{dbgfilter['from']}<=")
+
+    # Handle 'to' field (e.g., "<=2020")
+    if "to" in dbgfilter and dbgfilter["to"] is not None:
+        parts.append(f"<={dbgfilter['to']}")
+
+    # Handle 'years' field (e.g., "2015,2016,2017")
+    if "years" in dbgfilter and dbgfilter["years"]:
+        if isinstance(dbgfilter["years"], list):
+            years = [str(y) for y in dbgfilter["years"]]
+            parts.extend(years)
+
+    # If no parts, return "ALL"
+    if not parts:
+        return "ALL"
+
+    # Join parts with comma
+    return ",".join(parts)
+
+
 def process_signal(signal: Dict[str, Any]) -> Dict[str, Any]:
     """
     Extract parameter metadata from a signal definition.
@@ -87,7 +130,7 @@ def process_vehicle_file(filepath: Path) -> Dict[str, Dict[str, Dict[str, Any]]]
             # Check for dbgfilter (year-based filtering in OBDb)
             cmd_filter = filter_key
             if "dbgfilter" in command:
-                cmd_filter = command["dbgfilter"]
+                cmd_filter = dbgfilter_to_string(command["dbgfilter"])
 
             if cmd_filter not in result:
                 result[cmd_filter] = {}
