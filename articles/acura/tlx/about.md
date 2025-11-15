@@ -2,54 +2,52 @@
 
 The Acura TLX is a mid-size luxury sedan that combines sophisticated styling, advanced technology, and engaging performance in a practical package. Introduced in 2014 as a replacement for both the TL and TSX sedans, the TLX represents Acura's vision of the modern sports sedan.
 
-## Design Philosophy
+## Frequently Asked Questions
 
-The TLX embodies Acura's "Precision Crafted Performance" ethos, featuring the brand's signature Diamond Pentagon grille and Jewel Eye LED headlights. The exterior design strikes a balance between athletic stance and elegant proportions, with sculpted lines that emphasize the car's dynamic character while maintaining a refined luxury appearance.
+### Does the Acura TLX come with all-wheel drive?
 
-The interior showcases Acura's Precision Cockpit design, which prioritizes driver engagement through thoughtful ergonomics and intuitive controls. Premium materials, including available open-pore wood trim and Milano leather seating, create an upscale cabin environment.
+Yes, Super Handling All-Wheel Drive (SH-AWD) is available as an option on Technology and A-Spec trims, and comes standard on the Type S. The SH-AWD system is more advanced than conventional AWD, featuring torque vectoring that can distribute power between individual rear wheels for enhanced handling and cornering performance.
 
-## Performance and Technology
+[Learn more about SH-AWD technology](https://www.acura.com/performance/modals/super-handling-all-wheel-drive)
 
-### Powertrain Options
+### What's the difference between TLX Technology, A-Spec, and Type S?
 
-The TLX has been offered with several powertrain configurations throughout its production:
+The TLX is offered in three main trim levels:
 
-- **2.4L 4-cylinder**: The base engine offering a balance of efficiency and performance
-- **3.5L V6**: A naturally aspirated engine providing smooth, linear power delivery
-- **2.0L Turbocharged 4-cylinder**: Available in second-generation models, offering strong torque and efficiency
-- **3.0L Turbocharged V6**: The Type S performance variant delivers 355 horsepower and 354 lb-ft of torque
+- **Technology Package**: The base trim offering all essential luxury features, AcuraWatch safety suite, and premium materials. Available with either the 2.0L turbo engine in FWD or SH-AWD configurations.
 
-### Super Handling All-Wheel Drive (SH-AWD)
+- **A-Spec Package**: Adds sport-oriented styling with unique front and rear fascias, larger wheels, sport seats, red interior accents, and sport-tuned suspension. Shares the same 2.0L turbo engine as Technology trim.
 
-One of the TLX's standout features is Acura's available Super Handling All-Wheel Drive system. Unlike conventional AWD systems, SH-AWD can actively transfer torque side-to-side and front-to-rear, enhancing handling dynamics and cornering performance. The system can send up to 70% of power to the rear wheels and distribute it asymmetrically between the left and right rear wheels for improved agility.
+- **Type S**: The high-performance variant featuring a more powerful turbocharged V6 engine, standard SH-AWD with increased rear torque bias, Brembo brakes, adaptive dampers, and exclusive styling elements.
 
-### Advanced Safety Features
+[View TLX details on Acura.com](https://www.acura.com/cars/tlx)
 
-The TLX comes equipped with AcuraWatch, a comprehensive suite of advanced safety and driver-assistive technologies including:
+### How reliable is the Acura TLX?
 
-- Collision Mitigation Braking System (CMBS)
-- Road Departure Mitigation System (RDM)
-- Adaptive Cruise Control (ACC)
-- Lane Keeping Assist System (LKAS)
-- Traffic Sign Recognition
-- Blind Spot Information System (BSI)
+The Acura TLX is highly reliable, earning a 4.5 out of 5.0 rating from RepairPal and ranking #1 in the luxury midsize sedan category for reliability. Acura's reputation for dependability, combined with lower-than-average repair costs and frequencies, makes the TLX one of the most reliable vehicles in its segment.
 
-## Type S Performance Variant
+[Read RepairPal's TLX reliability ratings](https://repairpal.com/reliability/acura/tlx)
 
-The TLX Type S, reintroduced with the second generation, represents the pinnacle of the TLX lineup. It features:
+### What is AcuraLink?
 
-- 3.0L turbocharged V6 engine producing 355 hp
-- Sport-tuned SH-AWD with increased rear torque bias
-- Brembo high-performance brakes
-- Adaptive dampers for enhanced handling
-- Exclusive styling elements including unique grille, wheels, and quad exhaust outlets
+AcuraLink is Acura's connected vehicle service platform that provides remote access, safety features, and convenience functions through a smartphone app. Services include remote start, door lock/unlock, vehicle location tracking, automatic collision notification, and roadside assistance. New vehicles typically include a complimentary trial period.
 
-## Technology and Connectivity
+[Learn more about AcuraLink features](https://acuralink.acura.com)
 
-Modern TLX models feature Acura's True Touchpad Interface, which uses absolute positioning to mirror the screen layout, making it easier to select functions without looking away from the road. The available ELS Studio 3D premium audio system, designed in collaboration with Grammy-winning engineer Elliot Scheiner, delivers exceptional sound quality with carefully positioned speakers throughout the cabin.
+### Does the TLX support wireless Apple CarPlay and Android Auto?
 
-The TLX also offers wireless Apple CarPlay and Android Auto integration, a head-up display, and a suite of connected services through AcuraLink.
+Yes, the TLX supports wireless Apple CarPlay and Android Auto integration, along with a Qi-compatible wireless charging pad for convenient smartphone charging without cables.
 
-## Market Position
+[View TLX features on Acura.com](https://www.acura.com/cars/tlx/features)
 
-The TLX competes in the competitive mid-size luxury sedan segment against rivals like the BMW 3 Series, Mercedes-Benz C-Class, Audi A4, and Lexus IS. It distinguishes itself through a combination of reliability, advanced technology, standard features, and competitive pricing, while maintaining the engaging driving dynamics that have historically defined Acura products.
+## Using Sidecar with Your Acura TLX
+
+Sidecar enhances your TLX ownership experience by providing deeper insights into your vehicle's health and performance. Through your TLX's OBD-II port, Sidecar can:
+
+- **Monitor vehicle diagnostics in real-time**: Track engine performance, transmission behavior, and emissions systems
+- **Decode check engine lights**: Instantly understand what diagnostic trouble codes mean and their severity
+- **Track maintenance schedules**: Stay on top of oil changes, tire rotations, and other scheduled maintenance
+- **Log driving data**: Review trip information, fuel efficiency trends, and driving patterns
+- **Export diagnostic reports**: Generate comprehensive vehicle health reports for service appointments or resale documentation
+
+The TLX's sophisticated onboard diagnostics system provides extensive data through the OBD-II interface, making Sidecar an invaluable tool for proactive vehicle maintenance and troubleshooting. Whether you're monitoring the performance of your Type S's turbocharged V6 or tracking the efficiency of the SH-AWD system, Sidecar gives you professional-grade diagnostic capabilities right from your smartphone.

@@ -136,7 +136,7 @@ struct ModelPage: View {
         }
         .margin(.vertical, 32)
 
-        // Legend - Below the feature table
+        // Legend
         Section {
           ContentContainer {
             VStack(alignment: .leading, spacing: 16) {
@@ -184,29 +184,33 @@ struct ModelPage: View {
         }
         .margin(.bottom, 32)
 
-        HorizontalRule()
+        // General support
+        Section {
+          ContentContainer {
+            VStack(alignment: .leading, spacing: 8) {
+              HStack(spacing: 8) {
+                Image(URL(string: "/gfx/symbols/checkmark.seal.png"))
+                  .colorInvert(condition: .dark)
+                  .display(.inlineBlock)
+                  .frame(width: 36)
 
-        // Model About Section - Only show if markdown file exists
-        if let aboutContent = modelAboutMarkdown {
-          Section {
-            ContentContainer {
-              VStack(alignment: .leading, spacing: 16) {
-                H1("About the \(make) \(modelSupport.model)")
+                H1("General support")
                   .fontSize(.extraLarge)
                   .fontSize(.fourXLarge, condition: .desktop)
                   .bold()
                   .fontDesign("rounded")
-                  .margin(.bottom, 16)
-
-                Article(aboutContent)
               }
-              .padding(.vertical, 16)
+              Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996 and vehicles worldwide in the 2000's. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Sidecar for free.")
             }
+            .padding([.top, .horizontal], 16)
+            .background(.zinc, darkness: 0)
+            .background(.zinc, darkness: 900, condition: .dark)
+            .cornerRadius(.extraExtraLarge)
+            .margin(.horizontal, .auto, condition: .desktop)
+            .frame(width: 0.5, condition: .desktop)
           }
-          .margin(.bottom, 32)
-
-          HorizontalRule()
         }
+        .margin(.bottom, 32)
 
         // Generations Section - Only show if generations data exists
         if !modelSupport.generations.isEmpty {
@@ -257,77 +261,19 @@ struct ModelPage: View {
             }
           }
           .margin(.bottom, 32)
-
-          HorizontalRule()
         }
 
-        // FAQ Section - Placeholder for now
-        Section {
-          ContentContainer {
-            VStack(alignment: .leading, spacing: 16) {
-              H1("Frequently Asked Questions")
-                .fontSize(.extraLarge)
-                .fontSize(.fourXLarge, condition: .desktop)
-                .bold()
-                .fontDesign("rounded")
-                .margin(.bottom, 16)
-            }
-            .padding(.vertical, 16)
-          }
-        }
-        .margin(.bottom, 32)
-
-        HorizontalRule()
-
-        // Make About Section - Only show if markdown file exists
-        if let makeContent = makeAboutMarkdown {
+        if let aboutContent = modelAboutMarkdown {
           Section {
             ContentContainer {
               VStack(alignment: .leading, spacing: 16) {
-                H1("About \(make)")
-                  .fontSize(.extraLarge)
-                  .fontSize(.fourXLarge, condition: .desktop)
-                  .bold()
-                  .fontDesign("rounded")
-                  .margin(.bottom, 16)
-
-                Article(makeContent)
+                Article(aboutContent)
               }
               .padding(.vertical, 16)
             }
           }
           .margin(.bottom, 32)
-
-          HorizontalRule()
         }
-
-        // General support - Moved to bottom
-        Section {
-          ContentContainer {
-            VStack(alignment: .leading, spacing: 8) {
-              HStack(spacing: 8) {
-                Image(URL(string: "/gfx/symbols/checkmark.seal.png"))
-                  .colorInvert(condition: .dark)
-                  .display(.inlineBlock)
-                  .frame(width: 36)
-
-                H1("General support")
-                  .fontSize(.extraLarge)
-                  .fontSize(.fourXLarge, condition: .desktop)
-                  .bold()
-                  .fontDesign("rounded")
-              }
-              Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996 and vehicles worldwide in the 2000's. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Sidecar for free.")
-            }
-            .padding([.top, .horizontal], 16)
-            .background(.zinc, darkness: 0)
-            .background(.zinc, darkness: 900, condition: .dark)
-            .cornerRadius(.extraExtraLarge)
-            .margin(.horizontal, .auto, condition: .desktop)
-            .frame(width: 0.5, condition: .desktop)
-          }
-        }
-        .margin(.bottom, 32)
       }
     } else {
       Page(
