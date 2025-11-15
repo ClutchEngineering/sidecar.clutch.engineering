@@ -6,7 +6,6 @@ import SwiftSoup
 /// View component for displaying the full parameter support table
 struct ParameterSupportTable: View {
   let sections: [MergedSupportMatrix.ModelSupport.ParameterTableSection]
-  let modelYears: [Int]
 
   var body: some View {
     VStack(alignment: .leading, spacing: 24) {
@@ -30,7 +29,7 @@ struct ParameterSupportTable: View {
               .fontDesign("rounded")
               .margin(.bottom, 8)
 
-            ParameterTable(section: section, modelYears: modelYears)
+            ParameterTable(section: section)
           }
           .padding(16)
           .background(.zinc, darkness: 50)
@@ -46,7 +45,6 @@ struct ParameterSupportTable: View {
 /// Individual parameter table for a section
 struct ParameterTable: View {
   let section: MergedSupportMatrix.ModelSupport.ParameterTableSection
-  let modelYears: [Int]
 
   func render(_ container: SwiftSoup.Element, environment: EnvironmentValues) throws {
     let wrapper = try container.appendElement("div")
@@ -65,10 +63,10 @@ struct ParameterTable: View {
     try paramHeader.text("Parameter")
     try paramHeader.addClass("text-left py-2 px-3 font-bold min-w-[200px]")
 
-    // Year headers
-    for year in modelYears {
+    // Year column headers
+    for yearColumn in section.yearColumns {
       let yearHeader = try headerRow.appendElement("th")
-      try yearHeader.text(String(year))
+      try yearHeader.text(yearColumn.label)
       try yearHeader.addClass("text-center py-2 px-2 font-bold min-w-[60px]")
     }
 
@@ -103,12 +101,13 @@ struct ParameterTable: View {
         try unitSpan.addClass("text-xs text-zinc-600 dark:text-zinc-400")
       }
 
-      // Year support cells
-      for year in modelYears {
+      // Year support cells - use the first year in each column since they're all the same
+      for yearColumn in section.yearColumns {
         let cell = try tr.appendElement("td")
         try cell.addClass("py-2 px-2 text-center")
 
-        if let supportLevel = row.supportByYear[year] {
+        // Get support level from the first year in this column (all years in the range have the same level)
+        if let supportLevel = row.supportByYear[yearColumn.startYear] {
           let indicator = try cell.appendElement("span")
 
           switch supportLevel {

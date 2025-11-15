@@ -220,10 +220,7 @@ struct ModelPage: View {
               let sections = modelSupport.buildParameterSupportTable(parameterMap: parameterMap)
 
               if !sections.isEmpty {
-                ParameterSupportTable(
-                  sections: sections,
-                  modelYears: modelSupport.allModelYears
-                )
+                ParameterSupportTable(sections: sections)
               }
             }
             .padding(.vertical, 16)
