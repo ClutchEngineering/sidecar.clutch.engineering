@@ -7,8 +7,17 @@ on:
     branches: ["main"]
 
 jobs:
-  build:
+  build-linux:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build generator
+        run: cd generator && swift build
+
+  build-macos:
+    runs-on: macos-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
