@@ -230,57 +230,6 @@ struct ModelPage: View {
         }
         .margin(.bottom, 32)
 
-        // Generations Section - Only show if generations data exists
-        if !modelSupport.generations.isEmpty {
-          Section {
-            ContentContainer {
-              VStack(alignment: .leading, spacing: 16) {
-                H1("Generations")
-                  .fontSize(.extraLarge)
-                  .fontSize(.fourXLarge, condition: .desktop)
-                  .bold()
-                  .fontDesign("rounded")
-                  .margin(.bottom, 16)
-
-                ForEach(modelSupport.generations, id: \.self) { generation in
-                  VStack(alignment: .leading, spacing: 8) {
-                    H2(generation.name)
-                      .fontSize(.large)
-                      .fontSize(.extraLarge, condition: .desktop)
-                      .bold()
-                      .margin(.bottom, 8)
-
-                    Slipstream.Text {
-                      Span("Years: ")
-                        .bold()
-                      if let endYear = generation.endYear {
-                        DOMString("\(generation.startYear)–\(endYear)")
-                      } else {
-                        DOMString("\(generation.startYear)–Present")
-                      }
-                    }
-                    .margin(.bottom, 8)
-
-                    if let description = generation.description {
-                      Paragraph {
-                        DOMString(description)
-                      }
-                      .margin(.bottom, 16)
-                    }
-                  }
-                  .padding(16)
-                  .background(.zinc, darkness: 0)
-                  .background(.zinc, darkness: 900, condition: .dark)
-                  .cornerRadius(.large)
-                  .margin(.bottom, 16)
-                }
-              }
-              .padding(.vertical, 16)
-            }
-          }
-          .margin(.bottom, 32)
-        }
-
         if let aboutContent = modelAboutMarkdown {
           Section {
             ContentContainer {
