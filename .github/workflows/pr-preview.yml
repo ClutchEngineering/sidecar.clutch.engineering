@@ -1,0 +1,116 @@
+name: PR Preview
+
+on:
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  pull-requests: write  # To post preview link comments
+
+concurrency:
+  group: "pages-pr-${{ github.event.number }}"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - name: Select Xcode
+        run: sudo xcode-select -s "/Applications/Xcode_16.4.app"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: bash ./scripts/install_dependencies.sh
+
+      # Cache the workspace directory containing cloned repositories
+      - name: Cache workspace repositories
+        id: cache-workspace
+        uses: actions/cache@v3
+        with:
+          path: workspace
+          key: ${{ runner.os }}-workspace-v3-${{ github.run_id }}-${{ github.run_number }}
+          restore-keys: |
+            ${{ runner.os }}-workspace-v3-
+
+      - name: Create workspace directory if it doesn't exist
+        if: steps.cache-workspace.outputs.cache-hit != 'true'
+        run: mkdir -p workspace
+
+      - name: Authenticate with GitHub CLI
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
+
+      - name: Setup workspace
+        run: bash ./scripts/setup_workspace.sh
+
+      - name: Generate site
+        run: bash ./scripts/generate_site.sh
+        env:
+          AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+          AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+          AIRTABLE_MODELS_TABLE_ID: ${{ secrets.AIRTABLE_MODELS_TABLE_ID }}
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './site'
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Comment PR with preview link
+        uses: actions/github-script@v7
+        if: github.event_name == 'pull_request'
+        with:
+          script: |
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const botComment = comments.find(comment => {
+              return comment.user.type === 'Bot' && comment.body.includes('Preview deployment')
+            });
+
+            const output = `### 🚀 Preview deployment ready!
+
+            **Preview URL:** ${{ steps.deployment.outputs.page_url }}
+
+            Built from commit: ${context.sha.substring(0, 7)}
+
+            ---
+            *This preview will be automatically updated when you push new commits to this PR.*`;
+
+            if (botComment) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: output
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: output
+              });
+            }
