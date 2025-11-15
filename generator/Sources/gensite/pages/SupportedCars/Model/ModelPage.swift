@@ -75,13 +75,15 @@ struct ModelPage: View {
   var body: some View {
     if let modelSupport = modelSupport {
       Page(
-        "OBD scanning for the \(make) \(modelSupport.model)",
+        "OBD pids for the \(make) \(modelSupport.model)",
         path: "/supported-cars/\(makeNameForSorting(make))/\(modelNameForURL(modelSupport.model))/",
-        description: "OBD scanning for the \(make) \(modelSupport.model).",
+        description: "OBD pids for the \(make) \(modelSupport.model).",
         keywords: [
           make,
           modelSupport.model,
           "OBD-II",
+          "OBD pids",
+          "OBD pid database",
           "car scanner",
           "trip logger",
           "vehicle diagnostics",
@@ -106,7 +108,7 @@ struct ModelPage: View {
                 .fontSize(.fourXLarge, condition: .desktop)
                 .bold()
                 .fontDesign("rounded")
-              Slipstream.Text("OBD scanning for the \(make) \(modelSupport.model)")
+              Slipstream.Text("OBD pids for the \(make) \(modelSupport.model)")
 
               Link(URL(string: "https://github.com/OBDb/\(modelSupport.obdbID)")) {
                 Text("OBDb")
