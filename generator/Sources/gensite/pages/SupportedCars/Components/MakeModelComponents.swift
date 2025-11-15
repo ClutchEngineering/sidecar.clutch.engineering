@@ -105,45 +105,112 @@ struct ModelCard: View {
   let make: Make
   let modelSupport: MergedSupportMatrix.ModelSupport
 
+  enum PresenceLevel {
+    case strongest
+    case medium
+    case standard
+  }
+
+  var presenceLevel: PresenceLevel {
+    let hasDrivers = modelSupport.numberOfDrivers > 0
+    let hasSymbol = !modelSupport.modelSVGs.isEmpty
+
+    if hasDrivers,
+       hasSymbol {
+      return .strongest
+    } else if hasDrivers || hasSymbol {
+      return .medium
+    } else {
+      return .standard
+    }
+  }
+
   var body: some View {
-    Link(ModelLink.url(for: make, model: modelSupport.model)) {
-      VStack(alignment: .center, spacing: 8) {
-        if !modelSupport.modelSVGs.isEmpty {
-          Image(URL(string: "/gfx/vehicle/\(modelSupport.modelSVGs[0])"))
-            .colorInvert(condition: .dark)
-            .display(.inlineBlock)
-            .frame(width: 96)
+    switch presenceLevel {
+    case .strongest:
+      Link(ModelLink.url(for: make, model: modelSupport.model)) {
+        cardContent
+          .padding(16)
+          .background(.zinc, darkness: 50)
+          .background(.zinc, darkness: 850, condition: .dark)
+          .cornerRadius(.extraLarge)
+          .border(.init(.zinc, darkness: 600), width: 1, condition: .dark)
+          .shadow("puck")
+          .transition(.all)
+      }
+      .textDecoration(.none)
+
+    case .medium:
+      Link(ModelLink.url(for: make, model: modelSupport.model)) {
+        cardContent
+          .padding(16)
+          .background(.zinc, darkness: 75)
+          .background(.zinc, darkness: 875, condition: .dark)
+          .cornerRadius(.extraLarge)
+          .border(.init(.zinc, darkness: 300), width: 1)
+          .border(.init(.zinc, darkness: 700), width: 1, condition: .dark)
+          .transition(.all)
+      }
+      .textDecoration(.none)
+
+    case .standard:
+      Link(ModelLink.url(for: make, model: modelSupport.model)) {
+        cardContent
+          .padding(16)
+          .background(.zinc, darkness: 100)
+          .background(.zinc, darkness: 900, condition: .dark)
+          .cornerRadius(.extraLarge)
+          .transition(.all)
+      }
+      .textDecoration(.none)
+    }
+  }
+
+  @ViewBuilder
+  var cardContent: some View {
+    VStack(alignment: .center, spacing: 8) {
+      if !modelSupport.modelSVGs.isEmpty {
+        Image(URL(string: "/gfx/vehicle/\(modelSupport.modelSVGs[0])"))
+          .colorInvert(condition: .dark)
+          .display(.inlineBlock)
+          .frame(width: 96)
+      } else {
+        Image(URL(string: "/gfx/placeholder-car.png"))
+          .colorInvert(condition: .dark)
+          .display(.inlineBlock)
+          .frame(width: 64)
+          .margin(24)
+      }
+      Text(modelSupport.model)
+        .bold()
+        .fontDesign("rounded")
+        .fontSize(.large)
+        .textAlignment(.center)
+      VStack(alignment: .center, spacing: 4) {
+        if modelSupport.numberOfMilesDriven > 0 {
+          Text("\(NumberFormatter.localizedString(from: NSNumber(value: modelSupport.numberOfMilesDriven), number: .decimal)) miles")
+            .fontSize(.small)
+            .textColor(.text, darkness: 600)
+            .textColor(.text, darkness: 400, condition: .dark)
+        } else {
+          Text("Not driven yet")
+            .fontSize(.small)
+            .textColor(.text, darkness: 600)
+            .textColor(.text, darkness: 400, condition: .dark)
         }
-        Text(modelSupport.model)
-          .bold()
-          .fontDesign("rounded")
-          .fontSize(.large)
-          .textAlignment(.center)
-        VStack(alignment: .center, spacing: 4) {
-          if modelSupport.numberOfMilesDriven > 0 {
-            Text("\(NumberFormatter.localizedString(from: NSNumber(value: modelSupport.numberOfMilesDriven), number: .decimal)) miles")
-              .fontSize(.small)
-              .textColor(.text, darkness: 600)
-              .textColor(.text, darkness: 400, condition: .dark)
-          }
-          if modelSupport.numberOfDrivers > 0 {
-            Text("\(NumberFormatter.localizedString(from: NSNumber(value: modelSupport.numberOfDrivers), number: .decimal)) drivers")
-              .fontSize(.small)
-              .textColor(.text, darkness: 600)
-              .textColor(.text, darkness: 400, condition: .dark)
-          }
+        if modelSupport.numberOfDrivers > 0 {
+          Text("\(NumberFormatter.localizedString(from: NSNumber(value: modelSupport.numberOfDrivers), number: .decimal)) drivers")
+            .fontSize(.small)
+            .textColor(.text, darkness: 600)
+            .textColor(.text, darkness: 400, condition: .dark)
+        } else {
+          Text("No drivers yet")
+            .fontSize(.small)
+            .textColor(.text, darkness: 600)
+            .textColor(.text, darkness: 400, condition: .dark)
         }
       }
-      .padding(16)
-      .background(.zinc, darkness: 100)
-      .background(.zinc, darkness: 800, condition: .dark)
-      .cornerRadius(.extraLarge)
-      .border(.init(.zinc, darkness: 300), width: 1)
-      .border(.init(.zinc, darkness: 700), width: 1, condition: .dark)
-      .transition(.all)
     }
-    .textDecoration(.none)
-    .modifier(ClassModifier(add: "hover:scale-105"))
   }
 }
 
