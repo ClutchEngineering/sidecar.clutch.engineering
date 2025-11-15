@@ -1,5 +1,8 @@
 import AirtableAPI
 import Foundation
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 import SupportMatrix
 
 /// Provides a unified API to retrieve vehicle support information by merging Airtable data with local vehicle metadata
