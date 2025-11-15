@@ -13,6 +13,15 @@ struct ModelHeroIconPuck: View {
             .frame(width: 104, height: 104)
             .padding(8)
             .colorInvert(condition: .dark)
+        } else {
+          Image(URL(string: "/gfx/placeholder-car.png"))
+            .colorInvert(condition: .dark)
+            .display(.inlineBlock)
+            .frame(width: 32)
+            .frame(width: 64, condition: .desktop)
+            .margin(14)
+            .margin(.horizontal, 20, condition: .desktop)
+            .margin(.vertical, 24, condition: .desktop)
         }
       }
       .background(.white)
@@ -42,7 +51,7 @@ struct ModelPage: View {
       Page(
         "\(make) \(modelSupport.model) OBD support",
         path: "/supported-cars/\(makeNameForSorting(make))/\(modelNameForURL(modelSupport.model))/",
-        description: "Check which Sidecar features work with your \(make) \(modelSupport.model).",
+        description: "OBD parameters supported by the \(make) \(modelSupport.model).",
         keywords: [
           make,
           modelSupport.model,
