@@ -57,22 +57,42 @@ Target three primary search intents:
 
 ### Make Page Content (`{make}/about.md`)
 
-**Purpose**: Introduce the automotive brand and establish its identity, heritage, and innovation.
+**Purpose**: Provide minimal, evergreen context about the brand's identity and heritage to support SEO structure and brand positioning.
 
 **Structure**:
-1. **Opening paragraph**: Brand positioning, founding date, market position, unique value proposition
-2. **History and Innovation**: Key milestones, groundbreaking vehicles, technological firsts
-3. **Modern Era**: Current design language, recent innovations, brand philosophy
-4. **Technology Highlights**: Proprietary systems, safety features, unique technologies (use bullet points)
-5. **Heritage/Legacy**: Racing, awards, cultural impact (if applicable)
-6. **Closing**: Forward-looking statement about brand direction
+1. **Opening paragraph**: Brand origin, founding date, market position (1-2 sentences)
+2. **Historical Significance**: Key innovations or iconic vehicles that defined the brand (evergreen only)
+3. **Heritage** (if notable): Racing legacy, awards, or cultural impact that shaped brand identity
 
-**Tone**: Authoritative, informative, balanced. Acknowledge both strengths and any relevant context.
+**What to AVOID** (high maintenance, dates quickly):
+- ❌ Current design languages or styling trends
+- ❌ Recent technology features or proprietary systems
+- ❌ Forward-looking statements about brand direction
+- ❌ Anything with "currently", "recently", "today", or "now"
+- ❌ Model year-specific details
+- ❌ Latest awards or achievements
 
-**Length**: 200-400 words
+**What to INCLUDE** (evergreen, low maintenance):
+- ✅ Founding date and origin story
+- ✅ Historical innovations that defined the brand (e.g., "first Japanese luxury brand")
+- ✅ Iconic vehicles from brand history (e.g., "NSX supercar")
+- ✅ Long-standing heritage (e.g., racing history, decades-long achievements)
+- ✅ Market positioning that changes slowly (luxury vs. mainstream vs. performance)
+
+**Tone**: Factual, historical, evergreen. Focus on established facts that won't need updating.
+
+**Length**: 100-200 words (keep it concise)
 
 **Example Opening**:
 > "Acura is the luxury vehicle division of Japanese automaker Honda Motor Company. Launched in the United States and Canada on March 27, 1986, Acura was the first Japanese automotive luxury brand, predating Toyota's Lexus and Nissan's Infiniti by several years."
+
+**Example of Evergreen Content**:
+> "Throughout the 1990s, Acura established itself as a leader in automotive technology and performance. The NSX supercar, launched in 1990, became the world's first all-aluminum production car and demonstrated that exotic performance could coexist with everyday usability and reliability."
+
+**Example of What NOT to Include**:
+> ~~"In 2006, Acura introduced its distinctive 'Power Plenum' grille design"~~ (dates the content)
+> ~~"Acura continues to pioneer advanced technologies, including Super Handling All-Wheel Drive"~~ (requires updates as tech evolves)
+> ~~"Today, Acura blends performance, luxury, and advanced technology"~~ (vague, dated language)
 
 ### Model Page Content (`{make}/{model}/about.md`)
 
