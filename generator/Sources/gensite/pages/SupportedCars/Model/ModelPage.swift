@@ -1,6 +1,8 @@
 import Foundation
 import Slipstream
 import VehicleSupportMatrix
+import Markdown
+import SupportMatrix
 
 struct ModelHeroIconPuck: View {
   let modelSVGs: [String]
@@ -40,18 +42,42 @@ struct ModelPage: View {
   let supportMatrix: MergedSupportMatrix
   let make: String
   let obdbID: MergedSupportMatrix.OBDbID
+  let projectRoot: URL
 
   var modelSupport: MergedSupportMatrix.ModelSupport? {
     supportMatrix.getModel(id: obdbID)
+  }
+
+  /// Helper function to read markdown content from articles directory
+  private func readMarkdownFile(relativePath: String) -> String? {
+    let articlesPath = projectRoot.appending(path: "articles").appending(path: relativePath)
+    guard FileManager.default.fileExists(atPath: articlesPath.path()) else {
+      return nil
+    }
+    return try? String(contentsOf: articlesPath, encoding: .utf8)
+  }
+
+  /// Get the markdown content for this model's about section
+  private var modelAboutMarkdown: String? {
+    let makeForPath = makeNameForSorting(make)
+    guard let model = modelSupport else { return nil }
+    let modelForPath = modelNameForURL(model.model)
+    return readMarkdownFile(relativePath: "\(makeForPath)/\(modelForPath)/about.md")
+  }
+
+  /// Get the markdown content for the make's about section
+  private var makeAboutMarkdown: String? {
+    let makeForPath = makeNameForSorting(make)
+    return readMarkdownFile(relativePath: "\(makeForPath)/about.md")
   }
 
   @ViewBuilder
   var body: some View {
     if let modelSupport = modelSupport {
       Page(
-        "\(make) \(modelSupport.model) OBD support",
+        "OBD scanning for the \(make) \(modelSupport.model)",
         path: "/supported-cars/\(makeNameForSorting(make))/\(modelNameForURL(modelSupport.model))/",
-        description: "OBD parameters supported by the \(make) \(modelSupport.model).",
+        description: "OBD scanning for the \(make) \(modelSupport.model).",
         keywords: [
           make,
           modelSupport.model,
@@ -75,18 +101,90 @@ struct ModelPage: View {
             }
 
             Div {
-              H1("\(make) \(modelSupport.model) OBD Support")
+              H1("\(make) \(modelSupport.model)")
                 .fontSize(.extraLarge)
                 .fontSize(.fourXLarge, condition: .desktop)
                 .bold()
                 .fontDesign("rounded")
-              Text("Check which Sidecar features work with your \(make) \(modelSupport.model)")
+              Slipstream.Text("OBD scanning for the \(make) \(modelSupport.model)")
+
+              Link(URL(string: "https://github.com/OBDb/\(modelSupport.obdbID)")) {
+                Text("OBDb")
+                  .bold()
+                  .fontDesign("rounded")
+                  .textColor(.link, darkness: 700)
+                  .textColor(.link, darkness: 400, condition: .dark)
+                  .underline(condition: .hover)
+              }
             }
             .textAlignment(.center)
           }
           .padding(.vertical, 16)
         }
 
+        // Feature Support Table - Above the fold for better SEO
+        Section {
+          ContentContainer {
+            ModelSupportSectionV2(
+              make: make,
+              modelSupport: modelSupport,
+              obdbID: obdbID,
+              supportMatrix: supportMatrix,
+              becomeBetaURL: becomeBetaURL
+            )
+          }
+        }
+        .margin(.vertical, 32)
+
+        // Legend
+        Section {
+          ContentContainer {
+            VStack(alignment: .leading, spacing: 16) {
+              H1("Legend")
+                .fontSize(.extraLarge)
+                .fontSize(.fourXLarge, condition: .desktop)
+                .bold()
+                .fontDesign("rounded")
+
+              HStack(spacing: 16) {
+                SupportedSeal()
+                Slipstream.Text("Vehicle is fully onboarded and does not currently need new beta testers.")
+              }
+              HStack(spacing: 16) {
+                OBDStamp()
+                Slipstream.Text {
+                  DOMString("Feature is supported via OBD. ")
+                  Link("Requires a connected OBD-II scanner.", destination: URL(string: "/scanning/"))
+                    .textColor(.link, darkness: 700)
+                    .textColor(.link, darkness: 400, condition: .dark)
+                    .fontWeight(600)
+                    .underline(condition: .hover)
+                }
+              }
+              HStack(spacing: 16) {
+                OTAStamp()
+                Slipstream.Text("Feature is supported via Connected Accounts (Beta).")
+              }
+              HStack(spacing: 16) {
+                NotApplicableStamp()
+                Slipstream.Text("Not applicable to this vehicle.")
+              }
+              HStack(spacing: 16) {
+                Slipstream.Text {
+                  Span("PID?")
+                    .bold()
+                  DOMString(" The OBD parameter identifier (PID) is unknown.")
+                }
+              }
+            }
+            .alignItems(.center, condition: .desktop)
+            .textAlignment(.center, condition: .desktop)
+            .padding(.vertical, 16)
+          }
+        }
+        .margin(.bottom, 32)
+
+        // General support
         Section {
           ContentContainer {
             VStack(alignment: .leading, spacing: 8) {
@@ -114,67 +212,68 @@ struct ModelPage: View {
         }
         .margin(.bottom, 32)
 
-        Section {
-          ContentContainer {
-            VStack(alignment: .leading, spacing: 16) {
-              H1("Legend")
-                .fontSize(.extraLarge)
-                .fontSize(.fourXLarge, condition: .desktop)
-                .bold()
-                .fontDesign("rounded")
+        // Generations Section - Only show if generations data exists
+        if !modelSupport.generations.isEmpty {
+          Section {
+            ContentContainer {
+              VStack(alignment: .leading, spacing: 16) {
+                H1("Generations")
+                  .fontSize(.extraLarge)
+                  .fontSize(.fourXLarge, condition: .desktop)
+                  .bold()
+                  .fontDesign("rounded")
+                  .margin(.bottom, 16)
 
-              HStack(spacing: 16) {
-                SupportedSeal()
-                Text("Vehicle is fully onboarded and does not currently need new beta testers.")
-              }
-              HStack(spacing: 16) {
-                OBDStamp()
-                Text {
-                  DOMString("Feature is supported via OBD. ")
-                  Link("Requires a connected OBD-II scanner.", destination: URL(string: "/scanning/"))
-                    .textColor(.link, darkness: 700)
-                    .textColor(.link, darkness: 400, condition: .dark)
-                    .fontWeight(600)
-                    .underline(condition: .hover)
+                ForEach(modelSupport.generations, id: \.self) { generation in
+                  VStack(alignment: .leading, spacing: 8) {
+                    H2(generation.name)
+                      .fontSize(.large)
+                      .fontSize(.extraLarge, condition: .desktop)
+                      .bold()
+                      .margin(.bottom, 8)
+
+                    Slipstream.Text {
+                      Span("Years: ")
+                        .bold()
+                      if let endYear = generation.endYear {
+                        DOMString("\(generation.startYear)–\(endYear)")
+                      } else {
+                        DOMString("\(generation.startYear)–Present")
+                      }
+                    }
+                    .margin(.bottom, 8)
+
+                    if let description = generation.description {
+                      Paragraph {
+                        DOMString(description)
+                      }
+                      .margin(.bottom, 16)
+                    }
+                  }
+                  .padding(16)
+                  .background(.zinc, darkness: 0)
+                  .background(.zinc, darkness: 900, condition: .dark)
+                  .cornerRadius(.large)
+                  .margin(.bottom, 16)
                 }
               }
-              HStack(spacing: 16) {
-                OTAStamp()
-                Text("Feature is supported via Connected Accounts (Beta).")
-              }
-              HStack(spacing: 16) {
-                NotApplicableStamp()
-                Text("Not applicable to this vehicle.")
-              }
-              HStack(spacing: 16) {
-                Text {
-                  Span("PID?")
-                    .bold()
-                  DOMString(" The OBD parameter identifier (PID) is unknown.")
-                }
-              }
+              .padding(.vertical, 16)
             }
-            .alignItems(.center, condition: .desktop)
-            .textAlignment(.center, condition: .desktop)
-            .padding(.vertical, 16)
           }
+          .margin(.bottom, 32)
         }
-        .margin(.bottom, 32)
 
-        HorizontalRule()
-
-        Section {
-          ContentContainer {
-            ModelSupportSectionV2(
-              make: make,
-              modelSupport: modelSupport,
-              obdbID: obdbID,
-              supportMatrix: supportMatrix,
-              becomeBetaURL: becomeBetaURL
-            )
+        if let aboutContent = modelAboutMarkdown {
+          Section {
+            ContentContainer {
+              VStack(alignment: .leading, spacing: 16) {
+                Article(aboutContent)
+              }
+              .padding(.vertical, 16)
+            }
           }
+          .margin(.bottom, 32)
         }
-        .margin(.vertical, 32)
       }
     } else {
       Page(
@@ -184,7 +283,7 @@ struct ModelPage: View {
         keywords: []
       ) {
         ContentContainer {
-          Text("Model not found")
+          Slipstream.Text("Model not found")
         }
       }
     }

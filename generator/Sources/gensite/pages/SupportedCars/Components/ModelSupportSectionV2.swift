@@ -26,23 +26,6 @@ struct ModelSupportSectionV2: View {
   var body: some View {
     Div {
       VStack(alignment: .center, spacing: 4) {
-        Link(URL(string: "#" + modelSupport.obdbID)) {
-          Text(modelSupport.model)
-            .bold()
-            .fontDesign("rounded")
-            .fontSize(.large)
-            .fontSize(.extraLarge, condition: .desktop)
-            .underline(condition: .hover)
-        }
-        Link(URL(string: "https://github.com/OBDb/\(modelSupport.obdbID)")) {
-          Text("OBDb")
-            .bold()
-            .fontDesign("rounded")
-            .fontSize(.small)
-            .textColor(.link, darkness: 700)
-            .textColor(.link, darkness: 400, condition: .dark)
-            .underline(condition: .hover)
-        }
         if modelSupport.numberOfDrivers > 0 || modelSupport.numberOfMilesDriven > 0 {
           VStack(alignment: .center) {
             if modelSupport.numberOfMilesDriven > 0 {
@@ -55,13 +38,6 @@ struct ModelSupportSectionV2: View {
           .fontSize(.small)
           .textColor(.text, darkness: 600)
           .textColor(.text, darkness: 400, condition: .dark)
-        }
-        if !modelSupport.modelSVGs.isEmpty {
-          HStack {
-            for modelSVGFilename in modelSupport.modelSVGs {
-              ModelVehicleImage(filename: modelSVGFilename)
-            }
-          }
         }
       }
       .justifyContent(.center)
@@ -145,12 +121,6 @@ struct ModelSupportSectionV2: View {
       .border(.init(.zinc, darkness: 600), width: 1)
       .cornerRadius(.large)
     }
-    .padding(.vertical, 16)
-    .padding(32, condition: .desktop)
-    .cornerRadius(.extraExtraLarge)
-    .background(.zinc, darkness: 200)
-    .background(.zinc, darkness: 800, condition: .dark)
-    .id(modelSupport.obdbID)
   }
 }
 

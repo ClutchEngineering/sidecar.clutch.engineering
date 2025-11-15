@@ -1,6 +1,7 @@
 import Foundation
 import Slipstream
 import VehicleSupportMatrix
+import Markdown
 
 struct MakeHeroIconPuck: View {
   let make: String
@@ -27,6 +28,22 @@ struct MakeHeroIconPuck: View {
 struct MakePage: View {
   let supportMatrix: MergedSupportMatrix
   let make: String
+  let projectRoot: URL
+
+  /// Helper function to read markdown content from articles directory
+  private func readMarkdownFile(relativePath: String) -> String? {
+    let articlesPath = projectRoot.appending(path: "articles").appending(path: relativePath)
+    guard FileManager.default.fileExists(atPath: articlesPath.path()) else {
+      return nil
+    }
+    return try? String(contentsOf: articlesPath, encoding: .utf8)
+  }
+
+  /// Get the markdown content for the make's about section
+  private var makeAboutMarkdown: String? {
+    let makeForPath = makeNameForSorting(make)
+    return readMarkdownFile(relativePath: "\(makeForPath)/about.md")
+  }
 
   var body: some View {
     Page(
@@ -57,7 +74,7 @@ struct MakePage: View {
               .fontSize(.fourXLarge, condition: .desktop)
               .bold()
               .fontDesign("rounded")
-            Text("Check which Sidecar features work with your \(make)")
+            Slipstream.Text("Check which Sidecar features work with your \(make)")
           }
           .textAlignment(.center)
         }
@@ -74,12 +91,12 @@ struct MakePage: View {
                   .fontSize(.extraLarge, condition: .desktop)
                   .bold()
                   .fontDesign("rounded")
-                Text("Become a Sidecar beta tester, get \(betaSubscriptionLength) months free")
+                Slipstream.Text("Become a Sidecar beta tester, get \(betaSubscriptionLength) months free")
                   .fontSize(.small)
                   .fontSize(.base, condition: .desktop)
                   .fontWeight(.medium)
                   .fontDesign("rounded")
-                Text("Learn more")
+                Slipstream.Text("Learn more")
                   .fontWeight(.bold)
                   .fontDesign("rounded")
                   .fontSize(.large)
@@ -117,6 +134,21 @@ struct MakePage: View {
         }
       }
       .margin(.vertical, 32)
+
+      // Make About Section - Only show if markdown file exists
+      if let makeContent = makeAboutMarkdown {
+        HorizontalRule()
+
+        Section {
+          ContentContainer {
+            VStack(alignment: .leading, spacing: 16) {
+              Article(makeContent)
+            }
+            .padding(.vertical, 16)
+          }
+        }
+        .margin(.bottom, 32)
+      }
     }
   }
 }
