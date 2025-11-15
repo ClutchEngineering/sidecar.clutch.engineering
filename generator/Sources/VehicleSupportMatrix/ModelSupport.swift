@@ -328,17 +328,12 @@ extension MergedSupportMatrix {
           var supportByYear: [Int: ParameterSupportLevel] = [:]
 
           for year in allModelYears {
-            // Check if this parameter is present for this year
-            if let yearParameters = parameterMap.parameters(modelYear: year),
-               yearParameters[parameter.id] != nil {
-              // Check if it's confirmed
-              if let confirmedSignals = yearConfirmedSignals[year],
-                 confirmedSignals.contains(parameter.id) {
-                supportByYear[year] = .confirmed
-              } else {
-                supportByYear[year] = .shouldBeSupported
-              }
+            // Only mark as confirmed if we have actual vehicle data
+            if let confirmedSignals = yearConfirmedSignals[year],
+               confirmedSignals.contains(parameter.id) {
+              supportByYear[year] = .confirmed
             } else {
+              // If the parameter exists in the definition but isn't confirmed, mark as unknown
               supportByYear[year] = .unknown
             }
           }

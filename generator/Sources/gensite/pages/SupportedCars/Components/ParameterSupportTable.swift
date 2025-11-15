@@ -92,6 +92,11 @@ struct ParameterTable: View {
       try nameSpan.text(row.parameter.name)
       try nameSpan.addClass("font-medium")
 
+      // Signal ID in smaller, secondary color
+      let idSpan = try nameDiv.appendElement("span")
+      try idSpan.text(row.parameter.id)
+      try idSpan.addClass("text-xs text-zinc-500 dark:text-zinc-500 font-mono")
+
       if let unit = row.parameter.unit {
         let unitSpan = try nameDiv.appendElement("span")
         try unitSpan.text("(\(unit))")
