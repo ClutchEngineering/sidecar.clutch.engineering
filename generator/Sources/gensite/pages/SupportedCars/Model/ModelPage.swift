@@ -75,9 +75,9 @@ struct ModelPage: View {
   var body: some View {
     if let modelSupport = modelSupport {
       Page(
-        "\(make) \(modelSupport.model) OBD support",
+        "OBD scanning for the \(make) \(modelSupport.model)",
         path: "/supported-cars/\(makeNameForSorting(make))/\(modelNameForURL(modelSupport.model))/",
-        description: "OBD parameters supported by the \(make) \(modelSupport.model).",
+        description: "OBD scanning for the \(make) \(modelSupport.model).",
         keywords: [
           make,
           modelSupport.model,
@@ -101,12 +101,21 @@ struct ModelPage: View {
             }
 
             Div {
-              H1("\(make) \(modelSupport.model) OBD Support")
+              H1("\(make) \(modelSupport.model)")
                 .fontSize(.extraLarge)
                 .fontSize(.fourXLarge, condition: .desktop)
                 .bold()
                 .fontDesign("rounded")
-              Slipstream.Text("Check which Sidecar features work with your \(make) \(modelSupport.model)")
+              Slipstream.Text("OBD scanning for the \(make) \(modelSupport.model)")
+
+              Link(URL(string: "https://github.com/OBDb/\(modelSupport.obdbID)")) {
+                Text("OBDb")
+                  .bold()
+                  .fontDesign("rounded")
+                  .textColor(.link, darkness: 700)
+                  .textColor(.link, darkness: 400, condition: .dark)
+                  .underline(condition: .hover)
+              }
             }
             .textAlignment(.center)
           }
@@ -126,8 +135,6 @@ struct ModelPage: View {
           }
         }
         .margin(.vertical, 32)
-
-        HorizontalRule()
 
         // Legend - Below the feature table
         Section {
