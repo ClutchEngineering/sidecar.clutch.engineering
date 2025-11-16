@@ -35,7 +35,7 @@ The turbocharged powerplant provides strong low-end torque that's particularly b
 
 ### What is the towing capacity of the Nissan Armada?
 
-The 2025 Nissan Armada has a maximum towing capacity of **8,500 pounds when properly equipped**, making it one of the most capable vehicles in the full-size SUV segment for hauling boats, trailers, and recreational vehicles.
+The Nissan Armada offers competitive towing capability for the full-size SUV segment, making it well-suited for hauling boats, trailers, and recreational vehicles. Actual capacity varies by configuration and equipment.
 
 **Standard towing equipment includes:**
 - Class IV tow hitch
@@ -46,9 +46,9 @@ The 2025 Nissan Armada has a maximum towing capacity of **8,500 pounds when prop
 - Integrated trailer brake controller for improved braking control when towing
 - Tow/Haul mode for optimized transmission shift patterns
 
-The combination of 516 lb-ft of torque from the twin-turbo V6, body-on-frame construction, and available four-wheel drive makes the Armada well-suited for towing heavy loads. The available Intelligent 4x4 system with seven drive modes (including a dedicated Tow mode) helps maintain stability and control while hauling trailers.
+The combination of substantial torque from the twin-turbo V6, body-on-frame construction, and available four-wheel drive makes the Armada well-suited for towing heavy loads. The available Intelligent 4x4 system with seven drive modes (including a dedicated Tow mode) helps maintain stability and control while hauling trailers.
 
-For comparison, this towing capacity puts the Armada in line with competitors like the Chevrolet Tahoe (8,400 lbs) and Ford Expedition (9,300 lbs), though slightly below the Toyota Sequoia (9,520 lbs).
+Consult your owner's manual for specific towing capacities for your configuration.
 
 ### Does the Nissan Armada support Apple CarPlay and Android Auto?
 
@@ -119,27 +119,9 @@ The all-new twin-turbo V6 engine and 9-speed transmission are new to the Armada,
 
 [Read RepairPal's detailed Armada reliability analysis](https://repairpal.com/reliability/nissan/armada)
 
-### What safety features and ratings does the Nissan Armada have?
+### What safety features does the Nissan Armada have?
 
-The 2025 Nissan Armada has earned the **IIHS TOP SAFETY PICK+ award**, the highest safety honor from the Insurance Institute for Highway Safety. This represents a significant achievement, as the Armada achieved "Good" ratings (the highest) in all crash test categories.
-
-**IIHS crash test results:**
-- Small overlap front (driver-side): Good
-- Small overlap front (passenger-side): Good
-- Moderate overlap front: Good (including second-row passenger protection)
-- Side impact: Good
-- Roof strength: Good
-- Head restraints: Good
-
-**Headlight ratings:**
-- Standard headlights: Acceptable or Good (varies by trim)
-- Required for TOP SAFETY PICK+ award
-
-**Front crash prevention:**
-- Vehicle-to-vehicle: Superior
-- Vehicle-to-pedestrian: Superior
-
-**NHTSA crash test ratings** for the 2025 model have not yet been published. Historically, the Armada has performed well in federal crash tests, typically earning 4-5 stars in most categories.
+The Nissan Armada comes equipped with comprehensive safety features designed to protect all three rows of passengers.
 
 **Nissan Safety Shield 360 (standard on all trims):**
 - Automatic Emergency Braking with Pedestrian Detection
@@ -156,7 +138,7 @@ The 2025 Nissan Armada has earned the **IIHS TOP SAFETY PICK+ award**, the highe
 - Traffic Sign Recognition
 - Rear Door Alert
 
-[View 2025 Armada IIHS safety ratings](https://www.iihs.org/ratings/vehicle/nissan/armada-4-door-suv/2025)
+For current crash test ratings and safety performance data, visit [NHTSA.gov](https://www.nhtsa.gov) or [IIHS.org](https://www.iihs.org).
 
 ### Does the Nissan Armada offer hands-free highway driving?
 

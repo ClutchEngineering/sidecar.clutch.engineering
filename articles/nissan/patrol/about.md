@@ -179,32 +179,15 @@ The Nissan Patrol comes equipped with Nissan's Intelligent Mobility suite of adv
 - Anti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)
 - Trailer Sway Control for enhanced stability when towing
 
-**Safety Ratings:**
-
-The Nissan Patrol is not rated by NHTSA or IIHS, as these organizations primarily test vehicles sold in the United States market. However, the closely related Nissan Armada—which shares the Patrol's platform and many structural components—earned the IIHS TOP SAFETY PICK+ designation for 2025, achieving "Good" ratings in updated crash tests including protection for second-row passengers.
-
 The Patrol's comprehensive safety suite demonstrates Nissan's commitment to protecting occupants both on highways and in off-road environments where emergency services may be distant.
 
 ### What is the towing capacity of the Nissan Patrol?
 
-The Nissan Patrol offers robust towing capability suitable for serious recreational and commercial applications:
+The Nissan Patrol offers robust towing capability suitable for serious recreational and commercial applications. Actual towing capacity varies by market, configuration, and equipment.
 
-**Maximum Towing Capacity:**
+**Important Considerations:**
 
-- **3,500 kg (7,716 pounds)** braked towing capacity across most configurations
-- **750 kg (1,653 pounds)** unbraked towing capacity
-- **350 kg (772 pounds)** maximum towball download (the weight the trailer tongue can place on the hitch)
-
-**Important Payload Considerations:**
-
-When towing at maximum capacity, payload is significantly reduced. For example:
-
-- Gross Vehicle Mass (GVM): 3,500 kg
-- Kerb weight: Approximately 2,650-2,860 kg depending on trim and options
-- Available payload: 640-850 kg when not towing
-- **Payload when towing 3,500 kg**: Approximately 289-500 kg remaining for occupants, luggage, and cargo
-
-This reduced payload when towing at maximum capacity is an important consideration for families or those carrying equipment, as the combined weight of passengers and gear can quickly consume available payload capacity.
+When towing at or near maximum capacity, available payload for occupants and cargo is significantly reduced. The combined weight of passengers, luggage, and equipment can quickly consume available payload capacity, so careful planning is essential when towing heavy trailers with a fully loaded vehicle.
 
 **Towing Features and Equipment:**
 
@@ -213,22 +196,9 @@ This reduced payload when towing at maximum capacity is an important considerati
 - **Tow/Haul mode**: Adjusts transmission shift patterns and throttle response for optimal performance when towing heavy loads
 - **Reversing camera with trajectory lines**: Helps align the vehicle with trailers during hitching
 
-**2025 Model Year Considerations:**
+The Patrol's substantial torque output from its turbocharged engines, combined with body-on-frame construction and comprehensive towing features, makes it well-suited for towing large travel trailers, boat trailers, horse floats, and equipment trailers.
 
-The new 3.5L twin-turbo V6 engine produces 700 Nm (516 lb-ft) of torque, providing strong pulling power throughout the rev range. The massive torque output and 9-speed automatic transmission are well-suited for towing heavy trailers, boats, and caravans.
-
-**Towing Best Practices:**
-
-For optimal towing performance and safety:
-- Distribute trailer weight properly with 10-15% of trailer weight on the towball
-- Use a weight-distribution hitch when approaching maximum capacity
-- Consider aftermarket upgrades like transmission coolers for frequent heavy towing, particularly in hot climates
-- Ensure proper tire pressures for both vehicle and trailer
-- Allow increased braking distances when fully loaded
-
-The Patrol's body-on-frame construction, powerful engines, and comprehensive towing features make it well-suited for towing large travel trailers, boat trailers, horse floats, and equipment trailers regularly.
-
-[View detailed Patrol towing specifications](https://www.nissan.com.au/vehicles/browse-range/patrol-my25/towing.html)
+Always consult your owner's manual for specific towing and payload capacities for your market and configuration.
 
 ### What kind of fuel economy does the Nissan Patrol get?
 

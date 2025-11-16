@@ -123,7 +123,7 @@ Target three primary search intents:
 4. **Reliability & Safety**
    - "How reliable is the [model]?"
    - "What safety features come standard?"
-   - "What are the safety ratings?"
+   - Note: Avoid creating dedicated "What are the safety ratings?" FAQs. Instead, include a link to NHTSA/IIHS in the safety features section
 
 5. **Special Considerations**
    - "Are there limitations on OBD2 access?" (critical for Sidecar users)
@@ -159,6 +159,94 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 - Opening paragraph: 100-150 words
 - Each FAQ answer: 100-300 words
 - Total article: 1,500-3,000 words
+
+## Evergreen Content Requirements
+
+**CRITICAL**: Model articles must focus on **evergreen content** that attracts organic search traffic over time. Avoid ephemeral information that requires constant updates or becomes outdated within months.
+
+### ❌ AVOID: High-Maintenance Ephemeral Content
+
+**Year-Specific Crash Test Ratings**
+- ❌ "The 2025 Tacoma receives a 4-star overall safety rating from NHTSA"
+- ❌ "Earned IIHS TOP SAFETY PICK+ award for 2025"
+- ❌ Detailed crash test results with star ratings or Good/Acceptable/Poor scores
+- **Why**: These change annually and become outdated, requiring constant updates
+- **Impact**: Hurts SEO as content becomes inaccurate within 12 months
+
+**Specific Towing/Payload Ratings**
+- ❌ "Up to 6,500 pounds when properly equipped"
+- ❌ "Maximum payload: 1,709 pounds depending on configuration"
+- ❌ Detailed towing capacity breakdowns by trim level
+- **Why**: These vary by configuration, model year, and equipment; difficult to verify and keep accurate
+- **Impact**: Risk of providing incorrect information that could have safety implications
+
+**Year-Specific Recall Information**
+- ❌ "The 2025 Tundra has been recalled 2 times by NHTSA"
+- ❌ Listing specific recall counts by model year
+- **Why**: Recall counts change throughout the model year as new recalls are issued
+- **Impact**: Information is immediately outdated and requires constant monitoring
+
+**Unverified OBD2/Diagnostic Claims**
+- ❌ "The ID.4 has significant restrictions on diagnostic parameter access"
+- ❌ Recommending specific competitor products (VCDS, OBDeleven, etc.)
+- ❌ Making technical claims about ECU encryption without explicit verification
+- **Why**: Can be inaccurate, recommends competitors, and harms Sidecar's value proposition
+- **Impact**: CRITICAL - Undermines product positioning and may provide false information
+
+**Specific Pricing**
+- ❌ "Starting at $31,590 MSRP"
+- ❌ Detailed pricing by trim level
+- **Why**: Prices change frequently (sometimes mid-year)
+- **Impact**: Becomes outdated quickly, requires frequent updates
+
+### ✅ INCLUDE: Evergreen, SEO-Friendly Content
+
+**Standard Safety Features (not ratings)**
+- ✅ "All Tacoma models come standard with Toyota Safety Sense 3.0"
+- ✅ List of included safety technologies (AEB, LKA, ACC, etc.)
+- ✅ "For current crash test ratings, visit [NHTSA.gov](https://www.nhtsa.gov) or [IIHS.org](https://www.iihs.org)"
+- **Why**: Feature lists are relatively stable; links direct users to current information
+
+**General Capability Categories**
+- ✅ "The Tacoma offers competitive towing capability for the midsize truck segment"
+- ✅ "When properly equipped with available tow packages, the Tacoma can handle travel trailers, boat trailers, and equipment"
+- ✅ "Consult your owner's manual for specific towing and payload capacities for your configuration"
+- **Why**: Provides helpful context without specific numbers that may be incorrect
+
+**Reliability Trends (not year-specific predictions)**
+- ✅ "RepairPal rates the Armada with a 3.5 out of 5.0 rating, ranking 2nd in the full-size SUV category"
+- ✅ "The second-generation Tundra (2007-2021) earned an outstanding reputation for reliability"
+- ✅ Link to RepairPal and Consumer Reports for current ratings
+- **Why**: Historical patterns are evergreen; links provide current data
+
+**Technology Features (by generation/model year)**
+- ✅ "2024-2025 models feature wireless Apple CarPlay and Android Auto"
+- ✅ "Pre-2020 models did not include factory smartphone integration"
+- ✅ "The fourth-generation Tacoma (2024+) introduced modern turbocharged powertrains"
+- **Why**: Helps users understand what their specific model year offers
+
+**OBD2 Information (verified only)**
+- ✅ "The Tacoma provides standard OBD2 port access for diagnostic tools like Sidecar"
+- ✅ Only mention verified restrictions with explicit evidence
+- ✅ NEVER recommend competitor products as alternatives
+- **Why**: Supports Sidecar's value proposition without making unverified claims
+
+### Content Review Checklist
+
+Before publishing, verify that content does NOT include:
+- [ ] Year-specific crash test star ratings or IIHS award mentions
+- [ ] Specific towing/payload pound ratings
+- [ ] Current-year recall counts
+- [ ] Unverified OBD2 restrictions or recommendations for competitor tools
+- [ ] Specific MSRP pricing
+- [ ] Phrases like "for 2025" when describing safety ratings or test results
+
+Content SHOULD include:
+- [ ] Links to NHTSA/IIHS for users to check current safety ratings
+- [ ] General capability descriptions without specific numbers
+- [ ] Links to manufacturer sites for current specifications
+- [ ] "Consult your owner's manual" for towing/payload specifics
+- [ ] Only verified, Sidecar-relevant OBD2 information
 
 ## SEO Optimization Guidelines
 
@@ -229,18 +317,18 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 Always provide:
 - **Model years** when features or specifications vary
 - **Trim levels** when features are trim-specific
-- **Actual numbers**: "Up to 14,000 pounds" not "excellent towing capacity"
-- **Price points** when available and current
-- **EPA ratings** for fuel economy
-- **Safety ratings** from NHTSA (stars) and IIHS (Good/Acceptable/Marginal/Poor)
+- **General capability descriptions** for towing/payload, not specific pound ratings (see Evergreen Content Requirements)
+- **EPA ratings** for fuel economy when discussing efficiency
+- **Links to current safety ratings** from NHTSA and IIHS, not year-specific scores (see Evergreen Content Requirements)
 
 ### Common Phrases to Use
 
 - "Starting with the [year] model year..." (for feature introductions)
-- "When properly equipped..." (for towing/payload capacities)
+- "Offers competitive towing capability for the [segment]" (for towing - avoid specific numbers)
+- "Consult your owner's manual for specific towing and payload capacities" (instead of citing numbers)
 - "EPA-estimated [X] miles of range" (for EVs)
 - "Available on [trim] and above" (for feature availability)
-- "Starting MSRP of $X" (for pricing)
+- "For current crash test ratings and safety performance data, visit NHTSA.gov or IIHS.org" (instead of citing specific ratings)
 
 ### Common Phrases to Avoid
 
@@ -303,9 +391,11 @@ Before publishing, verify:
    - *Why it matters for Sidecar*: Demonstrates expertise in vehicle technology while staying focused on features users actively search for
 
 4. **OBD2 & Diagnostic Considerations**
-   - ECU encryption limitations (e.g., 2025+ Mustang Mach-E)
-   - Parameter access by model year
-   - Diagnostic capabilities and restrictions
+   - ECU encryption limitations (ONLY if explicitly verified - e.g., 2025+ Mustang Mach-E)
+   - Parameter access by model year (verified information only)
+   - Diagnostic capabilities and restrictions (verified only)
+   - **CRITICAL**: NEVER recommend competitor diagnostic products (VCDS, OBDeleven, etc.)
+   - **CRITICAL**: Only mention OBD2 restrictions if explicitly verified; do not speculate
    - *Why it matters for Sidecar*: **Core value proposition** - directly impacts product functionality
 
 5. **Trim Level Guides**
@@ -346,10 +436,13 @@ Rank content opportunities by:
 ### Critical Information for Sidecar Users
 
 1. **OBD2 Parameter Access**
-   - ECU encryption status
-   - Accessible vs. restricted parameters
-   - Model year changes affecting diagnostics
-   - Example: "Are there limitations on OBD2 parameter access for 2025+ model years?"
+   - ECU encryption status (ONLY if explicitly verified)
+   - Accessible vs. restricted parameters (verified information only)
+   - Model year changes affecting diagnostics (verified only)
+   - **NEVER** recommend competitor diagnostic tools as alternatives
+   - **NEVER** make unverified claims about OBD2 restrictions
+   - Example: "The Tacoma provides standard OBD2 port access for diagnostic tools like Sidecar"
+   - Only create "Are there limitations on OBD2 parameter access?" FAQs if restrictions are verified
 
 2. **Connected Services Compatibility**
    - Factory telemetry systems
@@ -464,13 +557,15 @@ The [Model] has [excellent/solid/average] reliability, earning a **[X] out of 5.
 **Key Reliability Metrics:**
 - Average annual repair cost: $X (compared to $Y segment average)
 - Unscheduled repair frequency: X times per year
-- Probability of major repair: X%
+- Lower/Higher than segment average probability of major repair
 
 **Consumer Reports** rates the [Model Year] [Model] with [above-average/average/below-average] predicted reliability based on data from recent model years.
 
 The [Model] is known for [specific reliability strengths], with many owners reporting trouble-free operation beyond [mileage] with proper maintenance.
 
 [Read RepairPal's detailed reliability ratings](URL)
+
+**Note**: RepairPal and Consumer Reports ratings are evergreen and change slowly. Avoid citing year-specific predictions that become outdated quickly.
 ```
 
 ## When to Use This Skill

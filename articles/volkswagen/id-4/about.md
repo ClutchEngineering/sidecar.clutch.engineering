@@ -131,37 +131,6 @@ All Volkswagen ID.4 models come standard with **IQ.DRIVE**, Volkswagen's compreh
 - Anti-lock Braking System (ABS)
 - Car2X communication technology (enables vehicle-to-vehicle and vehicle-to-infrastructure communication where supported)
 
-### What are the safety ratings for the Volkswagen ID.4?
-
-The Volkswagen ID.4 has earned top safety honors from both major crash testing organizations:
-
-**NHTSA (National Highway Traffic Safety Administration):**
-- **Overall Rating**: 5 stars (highest rating)
-- **Frontal Crash**: 5 stars combined (5 stars driver, 4 stars passenger)
-- **Side Crash**: 5 stars
-- **Rollover**: 4 stars (10.3% rollover risk)
-
-The RWD ID.4 achieved NHTSA's highest overall safety rating, demonstrating excellent occupant protection in crash scenarios.
-
-[View NHTSA ratings](https://www.nhtsa.gov/vehicle/2024/VOLKSWAGEN/ID.4/SUV/RWD)
-
-**IIHS (Insurance Institute for Highway Safety):**
-
-**2021 Model Year**: Earned **Top Safety Pick+** award (highest IIHS honor)
-- All crash tests rated "Good" (highest rating)
-- Headlights rated "Good" (with optional equipment) or "Acceptable"
-- Front crash prevention rated "Superior" for vehicle-to-vehicle and "Advanced" for vehicle-to-pedestrian
-
-**2024 Model Year**: Earned **Top Safety Pick** award
-- All crash tests rated "Good"
-- Headlights rated at least "Acceptable" with available "Good" ratings
-- Front crash prevention rated "Superior" for vehicle-to-vehicle and "Advanced" for vehicle-to-pedestrian
-- Note: Did not undergo updated moderate overlap front test, making it ineligible for the higher-tier Top Safety Pick+ designation
-
-[View IIHS ratings](https://www.iihs.org/ratings/vehicle/volkswagen/id.4-4-door-suv/2024)
-
-The ID.4's strong safety performance across both testing programs demonstrates comprehensive occupant protection and advanced collision avoidance capabilities.
-
 ### How reliable is the Volkswagen ID.4?
 
 The Volkswagen ID.4's reliability record has been mixed, with some notable concerns emerging as the vehicle has matured in the market:
@@ -181,45 +150,8 @@ For reference, Volkswagen as a brand receives a 3.5 out of 5.0 reliability ratin
 
 [Read more about VW reliability on RepairPal](https://repairpal.com/volkswagen/id-4)
 
-**Recall History:**
-The ID.4 has experienced numerous recalls across model years:
-- 2023 model: 11 recalls
-- 2022 model: 7 recalls
-- 2021 model: 11 recalls
-
 **Important Context:**
 Electric vehicles generally have fewer moving parts than gasoline vehicles and require less routine maintenance. Many early ID.4 issues were related to software and electrical systems rather than mechanical failures. Volkswagen has addressed many early problems through over-the-air software updates and technical service bulletins. However, prospective buyers should be aware of the vehicle's reliability track record and consider extended warranty coverage.
-
-### Are there limitations on OBD2 parameter access?
-
-**Yes, the Volkswagen ID.4 has significant restrictions on diagnostic parameter access through standard OBD2 interfaces.**
-
-The ID.4 employs **Vehicle Diagnostic Protection (Schutz Fahrzeug Diagnose or SFD)**, Volkswagen's security system that restricts advanced diagnostic access to protect against unauthorized modifications and fraud.
-
-#### What this means for owners:
-
-**Limited Access with Standard OBD2 Scanners:**
-- Basic OBD2 parameters like speed and standard diagnostic trouble codes (DTCs) are accessible
-- Advanced vehicle-specific parameters (battery state of charge, cell voltages, motor temperatures, regenerative braking data) are often restricted or encrypted
-- Many aftermarket OBD2 adapters report successful ELM connection but fail to establish ECU communication for proprietary data
-
-**Protected Control Units:**
-SFD restricts access to multiple control units including:
-- Engine/Motor Electronics
-- Battery Management System
-- Central Electronics Gateway
-- Instrument Cluster
-- Multimedia Unit
-
-**Recommended Solutions for Enhanced Access:**
-- **VCDS (VAG-COM Diagnostic System)**: Professional-grade diagnostic tool providing deeper access to VW-specific systems
-- **OBDeleven**: Volkswagen-specific diagnostic adapter that handles VW proprietary codes and some advanced parameters
-- Basic monitoring apps may have limited functionality compared to gasoline vehicles
-
-**Impact on Sidecar Users:**
-The diagnostic protection may limit the depth of real-time vehicle data available through third-party monitoring applications compared to vehicles with more open OBD2 access. Standard diagnostic functions remain available, but advanced electric vehicle parameters may be restricted.
-
-This protection applies to all MEB platform vehicles (VW ID.3, ID.4, Škoda Enyaq, Audi Q4 e-tron) manufactured from 2020 onward.
 
 ### Is the Volkswagen ID.4 eligible for the federal EV tax credit?
 

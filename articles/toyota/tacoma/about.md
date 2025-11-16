@@ -114,7 +114,7 @@ The fourth-generation Tacoma's wireless smartphone integration eliminates cable 
 
 ### What safety features come standard on the Toyota Tacoma?
 
-All 2024-2025 Toyota Tacoma models come standard with **Toyota Safety Sense 3.0 (TSS 3.0)**, representing the latest evolution of Toyota's comprehensive driver assistance suite. The 2025 Tacoma received a **4-star overall safety rating from NHTSA**.
+All 2024-2025 Toyota Tacoma models come standard with **Toyota Safety Sense 3.0 (TSS 3.0)**, representing the latest evolution of Toyota's comprehensive driver assistance suite.
 
 **Toyota Safety Sense 3.0 includes:**
 
@@ -140,11 +140,7 @@ All 2024-2025 Toyota Tacoma models come standard with **Toyota Safety Sense 3.0 
 - Trailer Blind Spot Monitor extends monitoring to cover trailer length
 - Trailer Camera for improved visibility when towing
 
-**IIHS Rating:**
-
-The 2024-2025 Tacoma Crew Cab qualified for an IIHS TOP SAFETY PICK award, earning good or acceptable ratings across most crashworthiness tests. The Tacoma performs better than any other midsize truck in IIHS testing, though some newer test protocols have not yet been completed.
-
-The comprehensive safety suite comes standard across all Tacoma trim levels, ensuring every model offers the same high level of protection regardless of price point.
+The comprehensive safety suite comes standard across all Tacoma trim levels, ensuring every model offers the same high level of protection regardless of price point. For current crash test ratings and safety performance data, visit [NHTSA.gov](https://www.nhtsa.gov) or [IIHS.org](https://www.iihs.org).
 
 ### What off-road capabilities does the Toyota Tacoma offer?
 
@@ -194,25 +190,9 @@ The TRD Pro and Trailhunter represent the pinnacle of Tacoma off-road capability
 
 ### What is the towing capacity of the Toyota Tacoma?
 
-The Toyota Tacoma offers robust towing capability for a midsize truck, with capacity varying by configuration:
+The Toyota Tacoma offers competitive towing capability for a midsize truck, with capacity varying by configuration, powertrain, and equipment. When properly equipped with available tow packages, the Tacoma can handle travel trailers, boat trailers, equipment trailers, and toy haulers.
 
-**Maximum Towing Capacity:**
-
-- Up to **6,500 pounds** when properly equipped with the i-FORCE 2.4L turbocharged engine
-
-**By Powertrain:**
-
-- **i-FORCE 2.4L Turbo**: Up to 6,500 pounds
-- **i-FORCE MAX Hybrid**: Up to 6,000 pounds
-
-Despite slightly lower maximum rated capacity, the hybrid's 465 lb-ft of torque (versus 317 lb-ft for the standard engine) provides superior pulling power and makes towing feel more effortless, particularly on inclines and during highway merging.
-
-**By Trim Level:**
-
-- **SR**: Up to 3,500 pounds (base configuration)
-- **SR5, TRD PreRunner, TRD Sport, TRD Off-Road**: Up to 6,500 pounds when properly equipped with tow package and optimal configuration
-- **Trailhunter**: Up to 5,950 pounds
-- Maximum towing typically requires Double Cab configuration with 6-foot bed and available tow package
+The i-FORCE MAX hybrid powertrain delivers substantially more torque than the standard engine, providing superior pulling power that makes towing feel more effortless, particularly on inclines and during highway merging.
 
 **Towing Features and Technology:**
 
@@ -223,13 +203,7 @@ Despite slightly lower maximum rated capacity, the hybrid's 465 lb-ft of torque 
 - Available trailer camera for improved visibility
 - Four-pin and seven-pin trailer connectors available
 
-**Payload Capacity:**
-
-- Maximum payload: Up to 1,709 pounds depending on configuration and trim
-
-When properly equipped, the Tacoma can tow travel trailers, boat trailers, equipment trailers, and toy haulers. The hybrid model's substantial torque advantage makes it particularly well-suited for frequent towing despite the slightly lower maximum capacity rating.
-
-Toyota recommends consulting your owner's manual and ensuring your specific vehicle configuration matches the intended towing application. Proper weight distribution and the use of weight-distribution hitches are recommended when approaching maximum capacity.
+Always consult your owner's manual for specific towing and payload capacities for your configuration, and ensure your vehicle is properly equipped for the intended towing application. Proper weight distribution and the use of weight-distribution hitches are recommended when towing heavier loads.
 
 ### Are there any considerations for OBD2 access on the Toyota Tacoma?
 

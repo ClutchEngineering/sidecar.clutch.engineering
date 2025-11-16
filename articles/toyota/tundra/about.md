@@ -57,17 +57,7 @@ The i-FORCE MAX hybrid system delivers more power and significantly more torque 
 
 ### What is the towing capacity of the Toyota Tundra?
 
-The Toyota Tundra offers impressive towing capability that positions it competitively in the full-size truck segment:
-
-**Maximum Towing Capacity:**
-
-- **i-FORCE V6 (Non-hybrid)**: Up to **12,000 pounds** when properly equipped with the right configuration and available Max Tow Package
-- **i-FORCE MAX Hybrid**: Up to **11,450 pounds** when properly equipped
-
-**Maximum Payload Capacity:**
-
-- **i-FORCE V6 (Non-hybrid)**: Up to **1,940 pounds**
-- **i-FORCE MAX Hybrid**: Up to **1,680 pounds**
+The Toyota Tundra offers competitive towing capability for the full-size truck segment. Actual towing and payload capacity varies significantly based on cab style, drivetrain (2WD vs. 4WD), trim level, and optional equipment like the Max Tow Package.
 
 **Key Towing Features:**
 
@@ -79,9 +69,7 @@ The Tundra includes several advanced technologies to make towing easier and safe
 - **Available Tow Mirrors**: Power-folding, heated mirrors with integrated turn signals extend for better visibility when towing
 - **Multi-Terrain Monitor**: Provides surround-view camera coverage to navigate tight spaces with a trailer attached (available on higher trims)
 
-**Important Note**: Actual towing capacity depends on your specific configuration, including cab style, drivetrain (2WD vs. 4WD), trim level, and optional equipment. Always consult your owner's manual and ensure your vehicle is properly equipped with appropriate hitches, wiring, and the available Max Tow Package when maximum towing capacity is needed.
-
-The Tundra's combination of powerful engines and robust construction makes it a capable towing platform, though it falls slightly short of segment leaders like the Ford F-150 (up to 14,000 pounds) and RAM 1500 (up to 12,750 pounds).
+Always consult your owner's manual for specific towing and payload capacities for your configuration, and ensure your vehicle is properly equipped with appropriate hitches and wiring for your intended towing application.
 
 ### What kind of fuel economy does the Toyota Tundra get?
 
@@ -147,8 +135,6 @@ The Toyota Tundra has historically been known for exceptional reliability, thoug
 
 **Consumer Reports:** Consumer Reports expects that the 2025 Tundra will be **less reliable than the average new car**, with this prediction based on data from 2022, 2023, and 2024 models. The redesigned third-generation Tundra has experienced more initial quality issues than Toyota's typical standards, with some owners reporting concerns about engine problems, transmission issues, and electrical systems.
 
-**Recalls:** The 2025 Toyota Tundra has been recalled 2 times by NHTSA, including one recall involving a software error that may cause the rearview image not to display when the vehicle is placed in reverse.
-
 **Important Context:** The second-generation Tundra (2007-2021) earned an outstanding reputation for reliability, with many owners reporting trouble-free operation well beyond 200,000 miles. The current third-generation model (2022-present) represents a complete redesign with new engines, hybrid technology, and electronics. As with any all-new vehicle platform, reliability typically improves as Toyota addresses early issues through software updates and manufacturing refinements.
 
 Toyota's strong dealer network, comprehensive warranty coverage (3-year/36,000-mile basic, 5-year/60,000-mile powertrain), and history of long-term durability continue to make the Tundra a competitive choice for buyers prioritizing dependability.
@@ -157,7 +143,7 @@ Toyota's strong dealer network, comprehensive warranty coverage (3-year/36,000-m
 
 ### What safety features come standard on the Toyota Tundra?
 
-The 2025 Toyota Tundra comes standard with **Toyota Safety Sense 2.5 (TSS 2.5)**, Toyota's comprehensive suite of advanced driver assistance systems. The Tundra has earned exceptional safety ratings, including the prestigious **IIHS Top Safety Pick+ award** for 2025 and a **5-Star Overall Safety Rating from NHTSA**.
+The Toyota Tundra comes standard with **Toyota Safety Sense 2.5 (TSS 2.5)**, Toyota's comprehensive suite of advanced driver assistance systems.
 
 **Toyota Safety Sense 2.5 Standard Features:**
 
@@ -182,22 +168,6 @@ The 2025 Toyota Tundra comes standard with **Toyota Safety Sense 2.5 (TSS 2.5)**
 - Blind Spot Monitor with Rear Cross-Traffic Alert (standard on most trims)
 - Rearview camera with dynamic guidelines
 
-**IIHS Top Safety Pick+ Rating (2025):**
-
-The 2025 Tundra CrewMax is the **only pickup truck** to win the 2025 IIHS Top Safety Pick+ award, Toyota's highest safety honor. Key achievements include:
-
-- **"Good" ratings** (highest) in updated moderate overlap front crash test, small overlap front test, and updated side impact test
-- **Improved rear seat belt design** for 2025 models enhances occupant protection in frontal crashes
-- **"Good" or "Acceptable" headlight ratings** depending on trim level (projector-style LEDs on Limited with Premium Package and higher trims earn "Good" ratings)
-
-**Note:** Lower anchors for child seats are located deep in the seat, which IIHS noted can make it more difficult to properly secure a child seat.
-
-**NHTSA Safety Ratings (2025):**
-- Overall: 5 stars
-- Frontal Crash: 5 stars
-- Side Crash: 5 stars
-- Rollover (4WD models): 4 stars
-
-The Tundra's comprehensive safety suite comes standard across all trim levels, ensuring every model offers the same high level of protection regardless of price point.
+The Tundra's comprehensive safety suite comes standard across all trim levels, ensuring every model offers the same high level of protection regardless of price point. For current crash test ratings and safety performance data, visit [NHTSA.gov](https://www.nhtsa.gov) or [IIHS.org](https://www.iihs.org).
 
 [Learn more about Toyota Safety Sense](https://www.toyota.com/safety-sense/)
