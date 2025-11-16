@@ -25,7 +25,7 @@ Every piece of content should answer the question: **"How does this help someone
 - Write for real people, not search engines
 - Anticipate follow-up questions and answer them preemptively
 - Use clear, accessible language without being condescending
-- Include specific details (model years, trim levels, specifications)
+- Include specific details (model years, specifications) - **avoid trim levels as they change frequently**
 
 ### 2. E-E-A-T Framework (Google's Quality Guidelines)
 
@@ -116,9 +116,9 @@ Target three primary search intents:
    - "What is the range?" (for EVs)
 
 3. **Capability & Performance**
-   - "What are the trim levels?"
    - "Does the [model] come with all-wheel drive?"
    - General capability discussions (avoid specific towing numbers - see Evergreen Content Requirements)
+   - **Note**: Avoid "What are the trim levels?" questions - trim configurations change frequently and become outdated quickly
 
 4. **Special Considerations**
    - "Are there limitations on OBD2 access?" (critical for Sidecar users - ONLY if verified)
@@ -142,8 +142,8 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 
 **Supporting details**:
 - Specifications, model year variations
-- Trim-level differences
 - Important caveats or limitations
+- **Avoid trim-level specifics** - these change frequently and become outdated
 
 **Context**: Additional helpful information, comparisons, or explanations.
 
@@ -160,6 +160,15 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 **CRITICAL**: Model articles must focus on **evergreen content** that attracts organic search traffic over time. Avoid ephemeral information that requires constant updates or becomes outdated within months.
 
 ### ❌ AVOID: High-Maintenance Ephemeral Content
+
+**Trim Level Details and Configurations**
+- ❌ "Available trim levels include Base, Sport, Premium, and Limited"
+- ❌ Detailed trim-by-trim feature breakdowns
+- ❌ "Available on [trim] and above" statements
+- ❌ Trim-specific pricing or package information
+- ❌ "What trim levels are available?" FAQ sections
+- **Why**: Trim configurations, names, and feature availability change frequently (often annually); manufacturers add/remove/rename trims regularly
+- **Impact**: CRITICAL - Content becomes outdated quickly, requiring constant maintenance; high risk of providing incorrect information
 
 **Year-Specific Crash Test Ratings**
 - ❌ "The 2025 Tacoma receives a 4-star overall safety rating from NHTSA"
@@ -226,7 +235,9 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 - ✅ "2024-2025 models feature wireless Apple CarPlay and Android Auto"
 - ✅ Model year breakdowns of wired vs. wireless support
 - ✅ Infotainment system information
-- **Why**: Core to Sidecar's connectivity value proposition; users actively search for this
+- ✅ General availability statements like "standard across most models" or "available on higher configurations"
+- ❌ Avoid specific trim-level requirements (e.g., "Available on XLE and above")
+- **Why**: Core to Sidecar's connectivity value proposition; users actively search for this; general statements stay accurate longer
 
 **General Capability Categories**
 - ✅ "The Tacoma offers competitive towing capability for the midsize truck segment"
@@ -235,11 +246,12 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 - **Why**: Provides helpful context without specific numbers that may be incorrect
 
 **Powertrain and Efficiency Information**
-- ✅ Engine specifications by model year and trim
+- ✅ Engine specifications by model year
 - ✅ "The fourth-generation Tacoma (2024+) introduced modern turbocharged powertrains"
 - ✅ EPA fuel economy ratings
 - ✅ Hybrid/PHEV/EV range specifications
-- **Why**: Factual specifications that help users understand their vehicle
+- ❌ Avoid engine-to-trim mappings (e.g., "V6 available on Sport trim only")
+- **Why**: Factual specifications that help users understand their vehicle; general availability stays accurate longer
 
 **OBD2 Information (verified only)**
 - ✅ "The Tacoma provides standard OBD2 port access for diagnostic tools like Sidecar"
@@ -250,6 +262,8 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 ### Content Review Checklist
 
 Before publishing, verify that content does NOT include:
+- [ ] ANY trim level details, configurations, or "What are the trim levels?" FAQs
+- [ ] Trim-specific feature availability (e.g., "Available on XLE and above")
 - [ ] ANY safety features, ADAS systems, or crash test ratings
 - [ ] ANY reliability ratings, RepairPal scores, or Consumer Reports predictions
 - [ ] ANY non-CarPlay technology features (hands-free driving, etc.)
@@ -263,9 +277,10 @@ Before publishing, verify that content does NOT include:
 
 Content SHOULD include:
 - [ ] Apple CarPlay / Android Auto support by model year (wired vs. wireless) - THIS IS THE PRIMARY FOCUS
+- [ ] General availability statements ("standard across most models", "available on higher configurations")
 - [ ] Engine specifications and fuel economy (factual specs only)
 - [ ] General capability descriptions without specific numbers
-- [ ] Links to manufacturer sites for current specifications
+- [ ] Links to manufacturer sites for current specifications and trim details
 - [ ] "Consult your owner's manual" for towing/payload specifics
 - [ ] Only verified, Sidecar-relevant OBD2 information
 
@@ -337,9 +352,11 @@ Content SHOULD include:
 
 Always provide:
 - **Model years** when features or specifications vary (especially for CarPlay support)
-- **Trim levels** when features are trim-specific
+- **General availability** instead of specific trim levels (e.g., "standard across most models" instead of "XLE and above")
 - **General capability descriptions** for towing/payload, not specific pound ratings (see Evergreen Content Requirements)
 - **EPA ratings** for fuel economy when discussing efficiency
+
+**Important**: Avoid trim-specific details as trim configurations change frequently and become outdated
 
 ### Common Phrases to Use
 
@@ -348,7 +365,7 @@ Always provide:
 - "Offers competitive towing capability for the [segment]" (for towing - avoid specific numbers)
 - "Consult your owner's manual for specific towing and payload capacities" (instead of citing numbers)
 - "EPA-estimated [X] miles of range" (for EVs)
-- "Available on [trim] and above" (for feature availability)
+- "Standard across most models" or "available on higher configurations" (for general feature availability - avoid specific trim names)
 
 ### Common Phrases to Avoid
 
@@ -377,12 +394,13 @@ Always provide:
 
 Before publishing, verify:
 - [ ] Model year accuracy for CarPlay/Android Auto support (wired vs. wireless)
-- [ ] Trim-level feature availability (especially for CarPlay)
+- [ ] General feature availability statements (avoid trim-specific details)
 - [ ] Engine specifications (HP, torque, displacement, fuel economy)
 - [ ] EPA fuel economy ratings cited correctly
 - [ ] General towing/capability descriptions (no specific pound ratings)
 - [ ] All external links are functional
 - [ ] Manufacturer terminology is correct for infotainment systems
+- [ ] NO trim level details or configurations included
 - [ ] NO reliability ratings included
 - [ ] NO safety features or ratings included
 - [ ] NO non-CarPlay technology features included
@@ -405,12 +423,7 @@ Before publishing, verify:
    - **CRITICAL**: Only mention OBD2 restrictions if explicitly verified; do not speculate
    - *Why it matters for Sidecar*: **Core value proposition** - directly impacts product functionality
 
-3. **Trim Level Guides**
-   - Feature comparison tables (focusing on connectivity, powertrain, capability - NOT safety or reliability)
-   - "Which trim is right for you?" frameworks focusing on CarPlay, powertrain options, and capability
-   - *Why it matters for Sidecar*: High-intent commercial searches
-
-4. **Electrification Content**
+3. **Electrification Content**
    - Hybrid vs. PHEV vs. EV
    - Charging speed and infrastructure
    - Range analysis
@@ -530,29 +543,30 @@ For models with only wired connectivity, aftermarket wireless adapters are avail
 [View current models on Manufacturer.com](URL)
 ```
 
-### Pattern 2: Specification Answer with Tiers
+### Pattern 2: Powertrain Options Answer
 
 ```markdown
-### What trim levels are available for the [Model]?
+### What engine options are available for the [Model]?
 
-The [Model] is offered in [X] trim levels, each catering to different needs:
+The [Model] offers several powertrain configurations to meet different needs:
 
-**Entry-Level Trims:**
-- **Base**: Essential features, [engine specs], starting MSRP $X
-- **Mid**: Enhanced comfort features, [key additions]
+**2024-2025 Model Years:**
+- **2.4L Turbocharged 4-Cylinder**: 275 HP, 317 lb-ft torque
+  - EPA-estimated 22/28 MPG (city/highway) with RWD
+  - Available in RWD or AWD configurations
+- **Hybrid Powertrain**: 2.4L turbo + electric motor, 326 HP combined
+  - EPA-estimated 25/27 MPG (city/highway)
+  - Standard AWD
 
-**Premium Trims:**
-- **Premium**: Luxury features including [list], starting MSRP $X
-- **Top**: Highest-end materials and technology
+**Pre-2024 Models:**
+- **3.5L V6**: 278 HP, 265 lb-ft torque
+  - EPA-estimated 19/24 MPG (city/highway)
+  - Available with RWD or AWD
 
-**Specialty Trims:**
-- **Sport**: Performance-oriented with [key features]
-- **Off-road**: Enhanced capability with [key features]
-
-[View current pricing on Manufacturer.com](URL)
+All powertrains are paired with an automatic transmission. For specific availability and current configurations, [visit Manufacturer.com](URL).
 ```
 
-**Note**: We do NOT create reliability FAQ sections. Focus exclusively on CarPlay/Android Auto connectivity, powertrain specs, and verified OBD2 information.
+**Note**: We do NOT create trim level comparisons or reliability FAQ sections. Focus exclusively on CarPlay/Android Auto connectivity, powertrain specs, and verified OBD2 information.
 
 ## When to Use This Skill
 
@@ -572,9 +586,8 @@ Use this skill when:
 ### Immediate Priorities
 
 1. **Fill content gaps**: Create articles for all supported vehicles
-2. **OBD2 deep dives**: Highlight encryption and access limitations where applicable
-3. **Connectivity guides**: Comprehensive CarPlay/Android Auto coverage
-4. **Reliability pages**: RepairPal and Consumer Reports analysis for all models
+2. **OBD2 deep dives**: Highlight encryption and access limitations where applicable (verified only)
+3. **Connectivity guides**: Comprehensive CarPlay/Android Auto coverage (PRIMARY FOCUS)
 
 ### Long-Term Opportunities
 

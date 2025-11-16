@@ -4,43 +4,6 @@ The Volkswagen ID.4 is an all-electric compact SUV that represents Volkswagen's 
 
 ## Frequently Asked Questions
 
-### What trim levels are available for the Volkswagen ID.4?
-
-The 2025 Volkswagen ID.4 is available in five trim configurations, all featuring the larger 82 kWh battery pack:
-
-**Pro (RWD):**
-- Entry-level trim with rear-wheel drive and a single motor producing 282 horsepower
-- EPA-estimated 291 miles of range
-- 12.9-inch touchscreen with wireless Apple CarPlay and Android Auto
-- Heated front seats and dual-zone climate control
-- Automatic headlights and rain-sensing wipers
-
-**AWD Pro:**
-- Adds all-wheel drive with dual motors producing 335 horsepower
-- EPA-estimated 263 miles of range
-- 0-60 mph in 4.9 seconds
-- Heated windshield and factory tow hitch
-
-**Pro S (RWD):**
-- Premium features including illuminated VW logos front and rear
-- Adaptive LED headlights with 30-color ambient interior lighting
-- Power-adjustable premium seats with massage and ventilation
-- Hands-free power tailgate
-- Harman Kardon premium audio system
-
-**AWD Pro S:**
-- Combines Pro S luxury features with all-wheel drive performance
-- 335 horsepower with dual motors
-- EPA-estimated 263 miles of range
-
-**AWD Pro S Plus:**
-- Top-tier trim with the most comprehensive feature set
-- All AWD Pro S features plus additional premium equipment
-
-Note: Volkswagen discontinued the lower-range 62 kWh battery option for 2025, standardizing on the 82 kWh battery across all trims.
-
-[View current ID.4 models on VW.com](https://www.vw.com/en/models/id-4.html)
-
 ### What is the range of the Volkswagen ID.4?
 
 The 2025 Volkswagen ID.4 offers different range capabilities depending on the drivetrain configuration:
@@ -93,10 +56,10 @@ Yes, the Volkswagen ID.4 has supported wireless smartphone integration since its
 **All Model Years (2021-2025):**
 - **Wireless** Apple CarPlay
 - **Wireless** Android Auto
-- Standard across all trim levels
-- 12.9-inch touchscreen infotainment system on 2025 models (earlier models featured 10-inch or 12-inch screens depending on trim)
+- Standard across all configurations
+- 12.9-inch touchscreen infotainment system on 2025 models (earlier models featured 10-inch or 12-inch screens depending on configuration)
 - Four USB-C ports: two charge-and-data ports in the center console (adjacent to wireless charging pad) and two charge-only ports for rear passengers
-- Wireless smartphone charging pad (standard on most trims)
+- Wireless smartphone charging pad (standard on most configurations)
 
 The ID.4's wireless connectivity eliminates the need for cables, allowing seamless integration with your smartphone. The system connects via Bluetooth initially and then automatically switches to WiFi for broader bandwidth, providing a smooth experience for navigation, music, and communication apps.
 
@@ -146,7 +109,7 @@ For buyers prioritizing vehicle-to-load capability for camping, emergency backup
 
 The Volkswagen ID.4's battery pack is built on the MEB (Modular Electric Drive Matrix) platform architecture, which uses a modular design that allows Volkswagen to configure different battery capacities by adding or removing modules. The battery is integrated into the vehicle floor in a lightweight aluminum housing that enhances structural rigidity while protecting the cells.
 
-**82 kWh Battery Pack (2025 Models, 2021-2024 Pro/AWD trims):**
+**82 kWh Battery Pack (2025 Models, 2021-2024 long-range configurations):**
 
 - **Total cells:** 288 lithium-ion pouch cells
 - **Configuration:** 96 cells in series, 3 cells in parallel (96s3p)
@@ -159,7 +122,7 @@ The Volkswagen ID.4's battery pack is built on the MEB (Modular Electric Drive M
 - **Chemistry:** NCM 712 (Nickel Cobalt Manganese with 70% nickel, 10% cobalt, 20% manganese)
 - **Cell suppliers:** LG Energy Solution and SK On (both produce batteries at facilities in Georgia)
 
-**62 kWh Battery Pack (2022-2024 Standard/S trims):**
+**62 kWh Battery Pack (2022-2024 standard-range configurations):**
 
 - **Total cells:** 216 lithium-ion pouch cells
 - **Configuration:** 108 cells in series, 2 cells in parallel (108s2p)

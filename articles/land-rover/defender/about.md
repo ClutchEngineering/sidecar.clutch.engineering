@@ -18,24 +18,6 @@ Additionally, the **Defender OCTA** was introduced as the most powerful Defender
 
 [View current Defender models](https://www.landrover.com/defender/defender/models-and-specifications.html)
 
-### What engine options and trim levels does the Defender offer?
-
-The Defender uses a "P" designation system that corresponds to horsepower and engine type:
-
-**Engine Options:**
-
-- **P300**: 296-horsepower 2.0L turbocharged 4-cylinder engine, providing efficient performance for daily driving and moderate off-roading.
-
-- **P400**: 395-horsepower 3.0L turbocharged inline 6-cylinder with 48-volt Mild Hybrid Electric Vehicle (MHEV) system, delivering enhanced performance and improved fuel efficiency.
-
-- **P500**: 493-horsepower 5.0L supercharged V8 engine, offering maximum performance for the most demanding driving scenarios.
-
-**Trim Levels:**
-
-The Defender lineup includes S, X-Dynamic SE, X, Outbound, and V8 trims, with pricing ranging from approximately $56,900 to over $167,800 depending on configuration. Each trim offers progressively more luxury features, technology, and capability enhancements.
-
-[Explore Defender specifications](https://www.landroverusa.com/vehicles/defender/specifications.html)
-
 ### What are the Defender's off-road capabilities?
 
 The Defender is engineered as one of the most capable off-road vehicles available, with impressive specifications:
@@ -81,7 +63,7 @@ Yes, the Defender supports both Apple CarPlay and Android Auto through its advan
 
 **2022+ Models:**
 - Wireless Apple CarPlay and Android Auto became available through over-the-air software updates
-- Wireless smartphone charging pad included on most trims
+- Wireless smartphone charging pad included on most configurations
 - Simultaneous Bluetooth pairing for two devices
 
 The Defender's Pivi Pro infotainment system displays smartphone integration on either the 10-inch or available 11.4-inch touchscreen, with the option to also view navigation directions in the 12.3-inch digital instrument cluster.

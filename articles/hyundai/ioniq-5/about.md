@@ -4,24 +4,6 @@ The Hyundai IONIQ 5 is an all-electric SUV that showcases Hyundai's innovative a
 
 ## Frequently Asked Questions
 
-### What trim levels are available for the IONIQ 5?
-
-The IONIQ 5 is available in several trim levels, each offering different features and capabilities:
-
-- **SE Standard Range**: The entry-level trim featuring a 63 kWh battery (58 kWh usable) with an EPA-estimated 245 miles of range. Available in RWD only with 225 horsepower.
-
-- **SE**: Steps up to the larger 84 kWh battery (77.4 kWh usable) offering 318 miles of range in RWD configuration or 290 miles with AWD. Includes battery heating system and preconditioning for improved cold-weather charging performance.
-
-- **SEL**: Adds premium features including imitation leather upholstery, tilt-and-telescoping steering column, and self-dimming mirror with HomeLink. Available with RWD (318-mile range) or AWD configurations.
-
-- **Limited**: The luxury-oriented trim with the most comprehensive feature set. AWD models achieve an EPA-estimated 269 miles of range.
-
-- **XRT**: New for 2025, this adventure-focused variant features increased ground clearance (by 0.8 inches), all-terrain tires, roof rails, and dual-motor AWD producing 320 hp with an EPA-estimated 259 miles of range.
-
-- **IONIQ 5 N**: The high-performance variant featuring AWD, over 600 horsepower, 21-inch forged wheels, track-ready features, and performance-tuned suspension, making it the most powerful Hyundai ever produced.
-
-[View current IONIQ 5 models](https://www.hyundaiusa.com/us/en/vehicles/ioniq-5)
-
 ### What is the range of the IONIQ 5?
 
 The IONIQ 5 offers two battery pack options with varying range capabilities depending on the model year:
@@ -33,8 +15,8 @@ The IONIQ 5 offers two battery pack options with varying range capabilities depe
 
 - **Extended Range Battery (84 kWh, 77.4 kWh usable):**
   - RWD: Up to 318 miles EPA-estimated range
-  - AWD: Up to 290 miles EPA-estimated range (SEL/Limited trims)
-  - AWD XRT: 259 miles EPA-estimated range
+  - AWD: Up to 290 miles EPA-estimated range (most configurations)
+  - AWD off-road configuration: 259 miles EPA-estimated range
 
 **2022-2024 Model Years:**
 
@@ -45,7 +27,7 @@ The IONIQ 5 offers two battery pack options with varying range capabilities depe
   - RWD: Up to 303 miles EPA-estimated range
   - AWD: Up to 256 miles EPA-estimated range
 
-Range varies based on driving conditions, temperature, driving style, vehicle configuration, and terrain. Performance-oriented models like the XRT and N variants achieve lower range due to their enhanced powertrains and larger wheels.
+Range varies based on driving conditions, temperature, driving style, vehicle configuration, and terrain. Performance-oriented and off-road configurations achieve lower range due to their enhanced powertrains and larger wheels.
 
 ### How fast can the IONIQ 5 charge?
 
@@ -74,9 +56,9 @@ Support for wireless smartphone integration varies by model year:
 **2025+ Model Year:**
 - **Wireless** Apple CarPlay
 - **Wireless** Android Auto
-- Standard across all trim levels
+- Standard across all configurations
 - Dual 12.3-inch displays (digital instrument cluster and touchscreen)
-- Wireless smartphone charging pad (standard on SEL and above)
+- Wireless smartphone charging pad (standard on higher configurations)
 
 **2022-2024 Model Years:**
 - **Wired-only** Apple CarPlay (USB-A connection required)

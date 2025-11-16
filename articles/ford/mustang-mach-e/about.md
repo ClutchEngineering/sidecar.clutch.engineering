@@ -20,20 +20,6 @@ This encryption is part of Ford's broader cybersecurity initiative to protect ve
 
 [Learn more on the Mach-E forums]([https://www.macheforum.com](https://www.macheforum.com/site/threads/mach-e-2025-and-obdii.50037/))
 
-### What trim levels are available for the Mustang Mach-E?
-
-The Mustang Mach-E is available in several trim levels, each offering different performance and feature combinations:
-
-- **Select**: The entry-level trim offering essential features with either Standard Range or Extended Range battery options in RWD or AWD configurations.
-
-- **Premium**: Adds premium comfort features including a panoramic fixed-glass roof, Bang & Olufsen premium audio system, and upgraded interior materials. Available with both battery ranges and drive configurations.
-
-- **GT**: A performance-focused variant featuring AWD, enhanced acceleration (0-60 mph in mid-3 seconds), sport-tuned suspension, and unique styling elements with 20-inch wheels.
-
-- **Rally**: Introduced for 2024, the Rally edition features rally-inspired styling, increased ground clearance, all-terrain capabilities, and unique MagneRide suspension tuning.
-
-[View current Mustang Mach-E models](https://www.ford.com/suvs/mach-e/)
-
 ### What is the range of the Mustang Mach-E?
 
 The Mustang Mach-E offers two battery pack options with varying range capabilities:
@@ -46,7 +32,7 @@ The Mustang Mach-E offers two battery pack options with varying range capabiliti
 - RWD: Up to 320 miles EPA-estimated range
 - AWD: Up to 290 miles EPA-estimated range
 
-Range varies based on driving conditions, temperature, driving style, and vehicle configuration. The GT and Rally models, despite having the larger battery pack, achieve slightly lower range due to their performance-oriented powertrains.
+Range varies based on driving conditions, temperature, driving style, and vehicle configuration. Performance-oriented configurations, despite having the larger battery pack, achieve slightly lower range due to their enhanced powertrains.
 
 ### How fast can the Mustang Mach-E charge?
 
@@ -66,7 +52,7 @@ The Mach-E includes access to the Ford BlueOval Charge Network and, starting in 
 
 ### Does the Mustang Mach-E support hands-free driving?
 
-Yes, the Mustang Mach-E offers **BlueCruise**, Ford's hands-free highway driving technology. BlueCruise is available on Premium trims and above.
+Yes, the Mustang Mach-E offers **BlueCruise**, Ford's hands-free highway driving technology. BlueCruise is available on higher configurations.
 
 **BlueCruise capabilities:**
 
@@ -90,7 +76,7 @@ Yes, all Mustang Mach-E model years support both Apple CarPlay and Android Auto:
 - Wireless Apple CarPlay
 - Wireless Android Auto
 - 15.5-inch portrait-oriented touchscreen (SYNC 4A system)
-- Wireless smartphone charging pad (standard on Premium and above, available on Select)
+- Wireless smartphone charging pad (standard on higher configurations, available on base configurations)
 
 The Mach-E's large vertical touchscreen provides an excellent interface for both smartphone integration systems, and the wireless connectivity eliminates the need for cables.
 

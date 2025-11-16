@@ -4,32 +4,6 @@ The Toyota Tundra is a full-size pickup truck that has been competing in the Ame
 
 ## Frequently Asked Questions
 
-### What trim levels are available for the Toyota Tundra?
-
-The 2025 Toyota Tundra offers seven distinct trim levels, each designed to meet different needs and preferences:
-
-**Work and Value Trims:**
-
-- **SR**: The base work truck starting at approximately $39,965 MSRP, featuring 18-inch steel wheels, LED headlights, an 8-inch touchscreen with Apple CarPlay and Android Auto, Toyota Safety Sense 2.5, and the 3.4L twin-turbo V6 engine producing 389 horsepower. Available in both Double Cab and CrewMax configurations.
-
-- **SR5**: Builds on the SR with upgraded alloy wheels, LED fog lights, a power-adjustable driver's seat, and a 60/40-split folding rear seat with center armrest. Available in both cab configurations.
-
-**Premium Trims:**
-
-- **Limited**: Features synthetic leather upholstery, a 14-inch touchscreen infotainment system, a 12.3-inch digital gauge cluster, heated and ventilated front seats, memory settings for the driver's seat, and a leather-wrapped steering wheel. The i-FORCE MAX hybrid powertrain is available as an option. CrewMax only.
-
-- **Platinum**: Upgrades to genuine leather upholstery, 10-way power-adjustable massaging front seats, heated and ventilated seats in both rows, a heated and power-adjustable steering wheel, wireless device charging, a premium 12-speaker JBL audio system, auto-dimming rearview mirror, and panoramic moonroof. i-FORCE MAX hybrid available. CrewMax only.
-
-- **1794 Edition**: Toyota's Western-inspired luxury trim featuring distinctive saddle tan leather upholstery, unique wood interior trim, massaging front seats, and all premium features from the Platinum trim. The name commemorates the ranch in Texas where Toyota's truck plant was built. i-FORCE MAX hybrid available. CrewMax only.
-
-**Specialty Trims:**
-
-- **TRD Pro**: The ultimate off-road Tundra, optimized for extreme terrain with lifted suspension, Fox Racing shocks, all-terrain tires, skid plates, and aggressive styling. Standard i-FORCE MAX hybrid powertrain delivering 437 horsepower. CrewMax only.
-
-- **Capstone**: The top-tier luxury model featuring 22-inch chrome and machined alloy wheels, power-deploying running boards, power cargo bed step, semi-aniline leather-trimmed seats, two-tone white-and-black interior with dark American walnut wood-grain trim, and standard i-FORCE MAX hybrid powertrain. CrewMax only.
-
-[View current Tundra models on Toyota.com](https://www.toyota.com/tundra/)
-
 ### What engine options are available for the Toyota Tundra?
 
 The 2025 Toyota Tundra offers two versions of Toyota's innovative twin-turbocharged 3.4L V6 engine, replacing the previous-generation V8 engines with more efficient and powerful forced-induction technology.
@@ -37,7 +11,7 @@ The 2025 Toyota Tundra offers two versions of Toyota's innovative twin-turbochar
 **i-FORCE 3.4L Twin-Turbo V6 (Standard):**
 - Output: 389 horsepower and 479 lb-ft of torque
 - 10-speed automatic transmission
-- Available on: SR, SR5, Limited, Platinum, 1794 Edition
+- Available on base and mid-level configurations
 - Maximum towing capacity: Up to 12,000 pounds when properly equipped
 - Maximum payload capacity: Up to 1,940 pounds
 
@@ -45,8 +19,8 @@ The 2025 Toyota Tundra offers two versions of Toyota's innovative twin-turbochar
 - Combined output: 437 horsepower and 583 lb-ft of torque
 - Pairs the 3.4L twin-turbo V6 with an electric motor integrated into the 10-speed automatic transmission
 - Nickel-metal hydride battery pack provides additional power and regenerative braking
-- Available on: Limited, Platinum, 1794 Edition (optional)
-- Standard on: TRD Pro and Capstone
+- Available on most configurations (optional)
+- Standard on highest configurations
 - Maximum towing capacity: Up to 11,450 pounds
 - Maximum payload capacity: Up to 1,680 pounds
 - Improved low-end torque delivery and better fuel economy in city driving
@@ -57,7 +31,7 @@ The i-FORCE MAX hybrid system delivers more power and significantly more torque 
 
 ### What is the towing capacity of the Toyota Tundra?
 
-The Toyota Tundra offers competitive towing capability for the full-size truck segment. Actual towing and payload capacity varies significantly based on cab style, drivetrain (2WD vs. 4WD), trim level, and optional equipment like the Max Tow Package.
+The Toyota Tundra offers competitive towing capability for the full-size truck segment. Actual towing and payload capacity varies significantly based on cab style, drivetrain (2WD vs. 4WD), configuration, and optional equipment like the Max Tow Package.
 
 **Key Towing Features:**
 
@@ -67,7 +41,7 @@ The Tundra includes several advanced technologies to make towing easier and safe
 - **Trailer Sway Control**: Detects trailer sway and applies braking to individual wheels to maintain stability
 - **Tow/Haul Mode**: Optimizes transmission shift points and throttle response for hauling heavy loads
 - **Available Tow Mirrors**: Power-folding, heated mirrors with integrated turn signals extend for better visibility when towing
-- **Multi-Terrain Monitor**: Provides surround-view camera coverage to navigate tight spaces with a trailer attached (available on higher trims)
+- **Multi-Terrain Monitor**: Provides surround-view camera coverage to navigate tight spaces with a trailer attached (available on higher configurations)
 
 Always consult your owner's manual for specific towing and payload capacities for your configuration, and ensure your vehicle is properly equipped with appropriate hitches and wiring for your intended towing application.
 
@@ -79,11 +53,11 @@ Fuel economy for the 2025 Toyota Tundra varies based on powertrain and drivetrai
 - 2WD: 18 city / 24 highway / 20 combined MPG
 - 4WD: 17 city / 22 highway / 19 combined MPG
 
-**i-FORCE MAX 3.4L Hybrid (Most Trims):**
+**i-FORCE MAX 3.4L Hybrid (Most Configurations):**
 - 2WD: 20 city / 24 highway / 22 combined MPG
-- 4WD Limited/Platinum/1794/Capstone: 19 city / 22 highway / 21 combined MPG
+- 4WD (most configurations): 19 city / 22 highway / 21 combined MPG
 
-**i-FORCE MAX Hybrid (TRD Pro):**
+**i-FORCE MAX Hybrid (Off-Road Configurations):**
 - 4WD: 18 city / 20 highway / 19 combined MPG (lower due to off-road-oriented gearing and all-terrain tires)
 
 The i-FORCE MAX hybrid powertrain provides the most significant fuel economy improvement in city driving, where the electric motor can assist the gasoline engine and recapture energy through regenerative braking. Highway fuel economy is similar between hybrid and non-hybrid versions, with the primary benefit of the hybrid being enhanced torque and power delivery rather than dramatic highway efficiency gains.
@@ -95,19 +69,19 @@ For comparison, the Tundra's fuel economy is competitive with other full-size tr
 Apple CarPlay and Android Auto support on the Toyota Tundra varies by model year:
 
 **2025 Tundra:**
-- **All trims**: Standard Apple CarPlay and Android Auto
-- **Base trims (SR, SR5)**: 8-inch touchscreen with **wired** connection (USB required)
-- **Premium trims (Limited and above)**: 14-inch touchscreen with **wired** connection standard, **wireless** Apple CarPlay and Android Auto available on select upper trims
+- **All configurations**: Standard Apple CarPlay and Android Auto
+- **Base configurations**: 8-inch touchscreen with **wired** connection (USB required)
+- **Higher configurations**: 14-inch touchscreen with **wired** connection standard, **wireless** Apple CarPlay and Android Auto available on select configurations
 
 **2022-2024 Tundra:**
-- All trims include Apple CarPlay and Android Auto as standard features
+- All configurations include Apple CarPlay and Android Auto as standard features
 - Most configurations require a **wired** USB connection
-- 8-inch touchscreen on lower trims, 14-inch touchscreen available on higher trims
+- 8-inch touchscreen on base configurations, 14-inch touchscreen available on higher configurations
 
 **2020-2021 Tundra (Second Generation):**
 - Apple CarPlay and Android Auto added as standard features starting with the 2020 model year
 - **Wired** connection required (USB cable)
-- Available across all trim levels with compatible infotainment system
+- Available across all configurations with compatible infotainment system
 
 **2014-2019 Tundra:**
 - Factory Apple CarPlay and Android Auto **not available**

@@ -4,28 +4,6 @@ The Nissan Patrol is a legendary full-size SUV with over 70 years of heritage da
 
 ## Frequently Asked Questions
 
-### What trim levels are available for the Nissan Patrol?
-
-The Nissan Patrol is available in a comprehensive lineup of trim levels that vary by market. The 2025 model year offers 11 distinct variants globally, each designed for different priorities ranging from rugged off-road capability to luxury and high performance.
-
-**Off-Road and Capability Trims:**
-
-- **PRO-4X**: Equipped with advanced off-road technology, enhanced suspension systems, and specialized features for serious trail work. Features Nissan's most advanced four-wheel drive systems and terrain management technologies.
-
-- **Warrior** (Australia): A performance-oriented off-road variant with lifted suspension, all-terrain tires, protective skid plates, and aggressive styling designed for the Australian outback.
-
-**Performance Trims:**
-
-- **NISMO**: The ultimate performance variant featuring an expertly tuned 3.5L V6 twin-turbo engine delivering 496 horsepower in Sport Mode. Includes NISMO-specific suspension tuning, aerodynamic enhancements, and premium performance features.
-
-**Luxury and Premium Trims:**
-
-Multiple luxury-focused variants are available with premium leather upholstery inspired by Japanese Kumiko wood craft, 12-speaker Klipsch Premium Audio systems, advanced climate control, and comprehensive technology packages.
-
-The extensive trim lineup ensures there's a Patrol configuration suited for everything from expedition work to luxury family transportation, maintaining the model's reputation for versatility.
-
-[Explore Patrol specifications on Nissan Australia](https://www.nissan.com.au/vehicles/browse-range/patrol.html)
-
 ### What engine options are available for the Nissan Patrol?
 
 The Nissan Patrol's powertrain options vary significantly between model years, with the 2025 model representing a major shift in engine technology:
@@ -38,7 +16,7 @@ The all-new 2025 Patrol introduces two turbocharged six-cylinder engines:
 
 - **3.8L Naturally Aspirated V6**: Generates 235 kW (315 horsepower) and 386 Nm (285 lb-ft) of torque. This engine option provides reliable performance for markets prioritizing simplicity and proven technology.
 
-- **NISMO Performance Variant**: A specially tuned version of the 3.5L twin-turbo V6 producing up to 496 horsepower in Sport Mode, representing the most powerful Patrol ever offered.
+- **Performance Variant**: A specially tuned version of the 3.5L twin-turbo V6 producing up to 496 horsepower in Sport Mode, representing the most powerful Patrol ever offered.
 
 **2010-2024 Model Years (Sixth Generation Y62):**
 
@@ -81,7 +59,7 @@ The Nissan Patrol is engineered for serious off-road performance, with comprehen
 
 - **Advanced 4WD system** with electronically controlled transfer case offering high-range and low-range gearing
 - Low-range gearing provides enhanced torque multiplication for steep climbs and technical terrain
-- Locking rear differential on off-road focused trims for maximum traction
+- Locking rear differential on off-road focused configurations for maximum traction
 - Hill Start Assist and Hill Descent Control for confident operation on steep grades
 
 **Terrain Management Technologies:**
@@ -100,7 +78,7 @@ The Nissan Patrol is engineered for serious off-road performance, with comprehen
 **Structural Advantages:**
 
 - **Body-on-frame construction**: Traditional truck-based architecture provides exceptional durability and resistance to frame flex during extreme articulation
-- Reinforced chassis members and underbody protection on off-road trims
+- Reinforced chassis members and underbody protection on off-road configurations
 - Approach, departure, and breakover angles optimized for obstacle clearance
 
 **Technology Aids:**
