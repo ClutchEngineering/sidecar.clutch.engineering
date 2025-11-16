@@ -105,32 +105,6 @@ Yes, the Volkswagen ID.4 has supported wireless smartphone integration since its
 
 The ID.4's wireless connectivity eliminates the need for cables, allowing seamless integration with your smartphone. The system connects via Bluetooth initially and then automatically switches to WiFi for broader bandwidth, providing a smooth experience for navigation, music, and communication apps.
 
-### What safety features come standard on the Volkswagen ID.4?
-
-All Volkswagen ID.4 models come standard with **IQ.DRIVE**, Volkswagen's comprehensive suite of advanced driver assistance systems. IQ.DRIVE is standard on all new Volkswagen vehicles equipped with an automatic transmission.
-
-**IQ.DRIVE Standard Features:**
-
-- **Travel Assist**: A Level 2 advanced driver assistance system that combines adaptive cruise control with lane-keeping assistance to help keep the vehicle centered in its lane while maintaining a safe following distance. Note: This is a hands-on system requiring continuous driver attention, unlike hands-free systems from some competitors.
-
-- **Front Assist with Autonomous Emergency Braking**: Detects vehicles, pedestrians, and cyclists ahead and provides automatic emergency braking to help prevent or mitigate collisions.
-
-- **Adaptive Cruise Control (ACC) with Stop & Go**: Maintains set speed and following distance from traffic ahead, with capability to bring vehicle to complete stop in traffic.
-
-- **Lane Assist**: Monitors lane markings and provides steering assistance to help keep the vehicle centered, with gentle corrections if the vehicle begins to drift.
-
-- **Blind Spot Monitor with Rear Traffic Alert**: Alerts drivers to vehicles in adjacent lanes during lane changes and detects cross-traffic when reversing.
-
-- **Driver Alert System**: Monitors driving patterns and warns of driver fatigue or inattention.
-
-**Additional Standard Safety Equipment:**
-- Swerve support and oncoming vehicle braking when turning
-- Acoustic parking assistant with Park Assist Plus
-- Multiple airbags including front, side, and curtain airbags
-- Electronic Stability Control (ESC)
-- Anti-lock Braking System (ABS)
-- Car2X communication technology (enables vehicle-to-vehicle and vehicle-to-infrastructure communication where supported)
-
 ### How reliable is the Volkswagen ID.4?
 
 The Volkswagen ID.4's reliability record has been mixed, with some notable concerns emerging as the vehicle has matured in the market:

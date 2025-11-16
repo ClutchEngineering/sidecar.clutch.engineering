@@ -112,36 +112,6 @@ For 2020-2023 models with wired connectivity, aftermarket wireless adapters can 
 
 The fourth-generation Tacoma's wireless smartphone integration eliminates cable clutter and provides seamless connectivity for navigation, music streaming, messaging, and app access while on or off the road.
 
-### What safety features come standard on the Toyota Tacoma?
-
-All 2024-2025 Toyota Tacoma models come standard with **Toyota Safety Sense 3.0 (TSS 3.0)**, representing the latest evolution of Toyota's comprehensive driver assistance suite.
-
-**Toyota Safety Sense 3.0 includes:**
-
-- **Pre-Collision System with Pedestrian Detection**: Detects vehicles, pedestrians, bicyclists, and motorcyclists using forward-facing sensors and cameras. Provides warnings and can automatically apply brakes if the driver doesn't react in time to avoid a collision.
-
-- **Full-Speed Range Dynamic Radar Cruise Control**: Maintains preset speed and following distance from vehicles ahead, working in stop-and-go traffic with four adjustable following distance settings.
-
-- **Lane Departure Alert with Steering Assist**: Monitors lane markings and warns drivers of unintentional lane drift, with active steering assistance to help keep the vehicle centered in its lane.
-
-- **Lane Tracing Assist**: Provides active steering assistance to help keep the Tacoma centered in its lane when Dynamic Radar Cruise Control is engaged, reducing driver fatigue on highway drives.
-
-- **Proactive Driving Assist**: Works in the background to gently brake or steer when approaching curves, passing cyclists, or navigating around parked vehicles for smoother, safer driving.
-
-- **Road Sign Assist**: Recognizes and displays important road signs including speed limits, stop signs, and yield signs on the instrument cluster.
-
-- **Automatic High Beams**: Automatically toggles between high and low beams based on surrounding traffic and lighting conditions.
-
-**Additional Safety Features (varies by trim):**
-
-- Blind Spot Monitor with Rear Cross-Traffic Alert (standard on SR5 and above)
-- Parking Assist with Automatic Braking (higher trims)
-- Trailer Backup Guide for easier maneuvering with trailers
-- Trailer Blind Spot Monitor extends monitoring to cover trailer length
-- Trailer Camera for improved visibility when towing
-
-The comprehensive safety suite comes standard across all Tacoma trim levels, ensuring every model offers the same high level of protection regardless of price point. For current crash test ratings and safety performance data, visit [NHTSA.gov](https://www.nhtsa.gov) or [IIHS.org](https://www.iihs.org).
-
 ### What off-road capabilities does the Toyota Tacoma offer?
 
 The Toyota Tacoma is engineered for serious off-road performance, with capabilities varying by trim level:

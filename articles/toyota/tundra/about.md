@@ -140,34 +140,3 @@ The Toyota Tundra has historically been known for exceptional reliability, thoug
 Toyota's strong dealer network, comprehensive warranty coverage (3-year/36,000-mile basic, 5-year/60,000-mile powertrain), and history of long-term durability continue to make the Tundra a competitive choice for buyers prioritizing dependability.
 
 [Read RepairPal's Tundra reliability ratings](https://repairpal.com/reliability/toyota/tundra)
-
-### What safety features come standard on the Toyota Tundra?
-
-The Toyota Tundra comes standard with **Toyota Safety Sense 2.5 (TSS 2.5)**, Toyota's comprehensive suite of advanced driver assistance systems.
-
-**Toyota Safety Sense 2.5 Standard Features:**
-
-- **Pre-Collision System with Pedestrian Detection**: Detects vehicles, pedestrians, and cyclists in your path, providing visual and audio alerts. Can automatically apply emergency braking if a collision is imminent and the driver doesn't react.
-
-- **Full-Speed Range Dynamic Radar Cruise Control**: Maintains a set speed and following distance from the vehicle ahead, working in stop-and-go traffic. Includes four adjustable following distance settings.
-
-- **Lane Departure Alert with Steering Assist**: Monitors lane markings and warns the driver when unintentionally drifting from the lane. Can provide gentle steering corrections to help keep the vehicle centered.
-
-- **Lane Tracing Assist**: Provides active steering assistance to help keep the truck centered in its lane when Dynamic Radar Cruise Control is active, reducing driver fatigue on long highway trips.
-
-- **Road Sign Assist**: Recognizes and displays important road signs including speed limits, stop signs, do not enter signs, and yield signs on the instrument cluster or head-up display.
-
-- **Automatic High Beams**: Automatically toggles between high and low beams based on surrounding traffic and driving conditions to maximize visibility without blinding other drivers.
-
-**Additional Standard Safety Equipment:**
-- Vehicle Stability Control and Traction Control
-- Anti-lock Braking System (ABS) with Electronic Brake-force Distribution (EBD)
-- Brake Assist
-- Smart Stop Technology (overrides throttle input if brake is applied)
-- 10 airbags including driver and front passenger knee airbags
-- Blind Spot Monitor with Rear Cross-Traffic Alert (standard on most trims)
-- Rearview camera with dynamic guidelines
-
-The Tundra's comprehensive safety suite comes standard across all trim levels, ensuring every model offers the same high level of protection regardless of price point. For current crash test ratings and safety performance data, visit [NHTSA.gov](https://www.nhtsa.gov) or [IIHS.org](https://www.iihs.org).
-
-[Learn more about Toyota Safety Sense](https://www.toyota.com/safety-sense/)

@@ -144,43 +144,6 @@ The Nissan Patrol is engineered for serious off-road performance, with comprehen
 
 The Patrol's combination of mechanical capability, electronic driver aids, and robust construction makes it one of the most capable factory off-road vehicles available, equally at home crossing deserts, climbing mountain trails, or navigating deep sand.
 
-### What safety features come standard on the Nissan Patrol?
-
-The Nissan Patrol comes equipped with Nissan's Intelligent Mobility suite of advanced safety and driver assistance technologies, with features varying by model year and market:
-
-**Core Nissan Intelligent Mobility Features:**
-
-- **ProPILOT Assist** (2025 models): An intuitive semi-autonomous driving system that controls steering, acceleration, and braking on highways, helping maintain lane position and a set following distance from vehicles ahead. This represents a first for the Patrol nameplate.
-
-- **Intelligent Emergency Braking with Pedestrian Detection**: Monitors the road ahead using radar and cameras, providing warnings and automatic emergency braking if a potential collision with a vehicle or pedestrian is detected.
-
-- **Intelligent Forward Collision Warning**: Alerts drivers to potential frontal collisions, monitoring two vehicles ahead to detect sudden braking earlier than traditional systems.
-
-- **Blind Spot Intervention**: Goes beyond basic blind spot monitoring by providing gentle steering assistance to help guide the vehicle back into its lane if the driver attempts to change lanes when a vehicle is detected in the blind spot.
-
-- **Rear Cross Traffic Alert**: Monitors approaching traffic when reversing out of parking spaces, providing warnings of vehicles crossing behind.
-
-**Additional Safety Technologies:**
-
-- **Lane Departure Warning and Prevention**: Monitors lane markings and alerts drivers to unintentional lane drift, with active intervention to help guide the vehicle back into its lane.
-
-- **Intelligent Cruise Control**: Adaptive cruise control that maintains a preset following distance from vehicles ahead, adjusting speed automatically in traffic.
-
-- **Driver Attention Alert**: Monitors driving patterns and provides warnings if signs of driver fatigue or distraction are detected.
-
-- **High Beam Assist**: Automatically switches between high and low beams based on surrounding traffic and lighting conditions.
-
-- **360-Degree Around View Monitor**: Four cameras provide a bird's-eye view of the vehicle's surroundings, invaluable for parking, off-road navigation, and tight maneuvering.
-
-**Structural Safety:**
-
-- Eight airbags including front, side, and curtain airbags protecting all three rows
-- Vehicle Dynamic Control (VDC) with traction control
-- Anti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)
-- Trailer Sway Control for enhanced stability when towing
-
-The Patrol's comprehensive safety suite demonstrates Nissan's commitment to protecting occupants both on highways and in off-road environments where emergency services may be distant.
-
 ### What is the towing capacity of the Nissan Patrol?
 
 The Nissan Patrol offers robust towing capability suitable for serious recreational and commercial applications. Actual towing capacity varies by market, configuration, and equipment.

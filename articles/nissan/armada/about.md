@@ -119,27 +119,6 @@ The all-new twin-turbo V6 engine and 9-speed transmission are new to the Armada,
 
 [Read RepairPal's detailed Armada reliability analysis](https://repairpal.com/reliability/nissan/armada)
 
-### What safety features does the Nissan Armada have?
-
-The Nissan Armada comes equipped with comprehensive safety features designed to protect all three rows of passengers.
-
-**Nissan Safety Shield 360 (standard on all trims):**
-- Automatic Emergency Braking with Pedestrian Detection
-- Blind Spot Warning
-- Rear Cross Traffic Alert
-- Lane Departure Warning
-- High Beam Assist
-- Rear Automatic Braking
-
-**Available advanced safety features:**
-- ProPILOT Assist 2.1 (Platinum Reserve): Hands-free highway driving on compatible roads
-- ProAround View Monitor with Moving Object Detection
-- Intelligent Forward Collision Warning
-- Traffic Sign Recognition
-- Rear Door Alert
-
-For current crash test ratings and safety performance data, visit [NHTSA.gov](https://www.nhtsa.gov) or [IIHS.org](https://www.iihs.org).
-
 ### Does the Nissan Armada offer hands-free highway driving?
 
 Yes, the 2025 Nissan Armada Platinum Reserve trim offers **ProPILOT Assist 2.1**, which provides hands-free highway driving capability on compatible roads. This is Nissan's most advanced driver assistance system and is one of the few true hands-free systems available in the full-size SUV segment.

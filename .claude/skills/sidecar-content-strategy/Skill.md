@@ -104,10 +104,11 @@ Target three primary search intents:
 
 **FAQ Question Types** (prioritized by search volume and user value):
 
-1. **Connectivity & Technology**
+1. **Connectivity & Technology** (PRIMARY FOCUS)
    - "Does the [model] support Apple CarPlay and Android Auto?"
    - "Is wireless CarPlay available?"
    - "What infotainment system does it use?"
+   - **Note**: This is the ONLY technology feature we discuss. No safety features, no ADAS systems.
 
 2. **Powertrain & Efficiency**
    - "What engine options are available?"
@@ -116,17 +117,16 @@ Target three primary search intents:
    - "What is the range?" (for EVs)
 
 3. **Capability & Performance**
-   - "What is the towing capacity?"
-   - "Does the [model] come with all-wheel drive?"
    - "What are the trim levels?"
+   - "Does the [model] come with all-wheel drive?"
+   - General capability discussions (avoid specific towing numbers - see Evergreen Content Requirements)
 
-4. **Reliability & Safety**
+4. **Reliability**
    - "How reliable is the [model]?"
-   - "What safety features come standard?"
-   - Note: Avoid creating dedicated "What are the safety ratings?" FAQs. Instead, include a link to NHTSA/IIHS in the safety features section
+   - RepairPal and Consumer Reports ratings only
 
 5. **Special Considerations**
-   - "Are there limitations on OBD2 access?" (critical for Sidecar users)
+   - "Are there limitations on OBD2 access?" (critical for Sidecar users - ONLY if verified)
    - Generation-specific information
    - Notable changes by model year
 
@@ -199,13 +199,22 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 - **Why**: Prices change frequently (sometimes mid-year)
 - **Impact**: Becomes outdated quickly, requires frequent updates
 
+**Safety Features and Ratings**
+- ❌ Any mention of safety features, ADAS systems, or crash test ratings
+- ❌ "All Tacoma models come standard with Toyota Safety Sense 3.0"
+- ❌ Lists of safety technologies (AEB, LKA, ACC, blind spot monitoring, etc.)
+- ❌ Links to NHTSA or IIHS ratings
+- ❌ Any discussion of airbags, stability control, etc.
+- **Why**: Not core to Sidecar's value proposition; high maintenance; liability concerns
+- **Impact**: CRITICAL - Avoid entirely to focus on connectivity and diagnostics
+
 ### ✅ INCLUDE: Evergreen, SEO-Friendly Content
 
-**Standard Safety Features (not ratings)**
-- ✅ "All Tacoma models come standard with Toyota Safety Sense 3.0"
-- ✅ List of included safety technologies (AEB, LKA, ACC, etc.)
-- ✅ "For current crash test ratings, visit [NHTSA.gov](https://www.nhtsa.gov) or [IIHS.org](https://www.iihs.org)"
-- **Why**: Feature lists are relatively stable; links direct users to current information
+**Apple CarPlay / Android Auto** (PRIMARY CONTENT FOCUS)
+- ✅ "2024-2025 models feature wireless Apple CarPlay and Android Auto"
+- ✅ Model year breakdowns of wired vs. wireless support
+- ✅ Infotainment system information
+- **Why**: Core to Sidecar's connectivity value proposition; users actively search for this
 
 **General Capability Categories**
 - ✅ "The Tacoma offers competitive towing capability for the midsize truck segment"
@@ -234,15 +243,16 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 ### Content Review Checklist
 
 Before publishing, verify that content does NOT include:
+- [ ] ANY safety features, ADAS systems, or crash test ratings
 - [ ] Year-specific crash test star ratings or IIHS award mentions
 - [ ] Specific towing/payload pound ratings
 - [ ] Current-year recall counts
 - [ ] Unverified OBD2 restrictions or recommendations for competitor tools
 - [ ] Specific MSRP pricing
-- [ ] Phrases like "for 2025" when describing safety ratings or test results
+- [ ] Safety-related links (NHTSA, IIHS, etc.)
 
 Content SHOULD include:
-- [ ] Links to NHTSA/IIHS for users to check current safety ratings
+- [ ] Apple CarPlay / Android Auto support by model year (wired vs. wireless)
 - [ ] General capability descriptions without specific numbers
 - [ ] Links to manufacturer sites for current specifications
 - [ ] "Consult your owner's manual" for towing/payload specifics
@@ -371,11 +381,11 @@ Before publishing, verify:
 
 ### High-Value Content Types
 
-1. **Connectivity Deep Dives**
+1. **Connectivity Deep Dives** (PRIMARY FOCUS)
    - CarPlay/Android Auto availability by model year
    - Wireless vs. wired connectivity
    - Infotainment system generations
-   - *Why it matters for Sidecar*: Vehicle connectivity is a primary user concern
+   - *Why it matters for Sidecar*: **CORE value proposition** - vehicle connectivity is directly relevant to Sidecar users
 
 2. **Reliability & Ownership**
    - RepairPal ratings and analysis
@@ -384,13 +394,7 @@ Before publishing, verify:
    - Long-term ownership costs
    - *Why it matters for Sidecar*: Builds trust and helps users make informed decisions
 
-3. **Technology & Features**
-   - Advanced driver assistance systems (ADAS)
-   - Hands-free driving capabilities (e.g., BlueCruise, Super Cruise)
-   - Infotainment systems and smartphone integration
-   - *Why it matters for Sidecar*: Demonstrates expertise in vehicle technology while staying focused on features users actively search for
-
-4. **OBD2 & Diagnostic Considerations**
+3. **OBD2 & Diagnostic Considerations**
    - ECU encryption limitations (ONLY if explicitly verified - e.g., 2025+ Mustang Mach-E)
    - Parameter access by model year (verified information only)
    - Diagnostic capabilities and restrictions (verified only)
@@ -398,13 +402,13 @@ Before publishing, verify:
    - **CRITICAL**: Only mention OBD2 restrictions if explicitly verified; do not speculate
    - *Why it matters for Sidecar*: **Core value proposition** - directly impacts product functionality
 
-5. **Trim Level Guides**
-   - Feature comparison tables
+4. **Trim Level Guides**
+   - Feature comparison tables (focusing on connectivity, powertrain, capability - NOT safety)
    - Value analysis
    - "Which trim is right for you?" frameworks
    - *Why it matters for Sidecar*: High-intent commercial searches
 
-6. **Electrification Content**
+5. **Electrification Content**
    - Hybrid vs. PHEV vs. EV
    - Charging speed and infrastructure
    - Range analysis
