@@ -4,31 +4,6 @@ The Hyundai IONIQ 5 is an all-electric SUV that showcases Hyundai's innovative a
 
 ## Frequently Asked Questions
 
-### What is the range of the IONIQ 5?
-
-The IONIQ 5 offers two battery pack options with varying range capabilities depending on the model year:
-
-**2025+ Model Year (Refreshed):**
-
-- **Standard Range Battery (63 kWh, 58 kWh usable):**
-  - RWD: Up to 245 miles EPA-estimated range
-
-- **Extended Range Battery (84 kWh, 77.4 kWh usable):**
-  - RWD: Up to 318 miles EPA-estimated range
-  - AWD: Up to 290 miles EPA-estimated range (most configurations)
-  - AWD off-road configuration: 259 miles EPA-estimated range
-
-**2022-2024 Model Years:**
-
-- **Standard Range Battery (58 kWh usable):**
-  - RWD: 220 miles EPA-estimated range
-
-- **Long Range Battery (77.4 kWh usable):**
-  - RWD: Up to 303 miles EPA-estimated range
-  - AWD: Up to 256 miles EPA-estimated range
-
-Range varies based on driving conditions, temperature, driving style, vehicle configuration, and terrain. Performance-oriented and off-road configurations achieve lower range due to their enhanced powertrains and larger wheels.
-
 ### How fast can the IONIQ 5 charge?
 
 The IONIQ 5 is one of the fastest-charging electric vehicles available, thanks to its innovative 800-volt electrical architecture:

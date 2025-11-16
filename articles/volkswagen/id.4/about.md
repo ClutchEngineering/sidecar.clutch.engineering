@@ -4,25 +4,6 @@ The Volkswagen ID.4 is an all-electric compact SUV that represents Volkswagen's 
 
 ## Frequently Asked Questions
 
-### What is the range of the Volkswagen ID.4?
-
-The 2025 Volkswagen ID.4 offers different range capabilities depending on the drivetrain configuration:
-
-**Rear-Wheel Drive Models:**
-- Battery: 82 kWh (77 kWh usable)
-- Range: Up to 291 miles EPA-estimated
-- Motor: Single rear-mounted motor producing 282 horsepower
-- Efficiency: 122 MPGe combined
-
-**All-Wheel Drive Models:**
-- Battery: 82 kWh (77 kWh usable)
-- Range: Up to 263 miles EPA-estimated
-- Motors: Dual motors (front and rear) producing 335 horsepower
-- Efficiency: 107 MPGe combined
-- Performance: 0-60 mph in 4.9 seconds
-
-The reduced range on AWD models is due to the additional front motor and increased power output. Real-world range varies based on driving conditions, temperature, driving style, terrain, and use of climate control systems. Cold weather can significantly impact range, as with all electric vehicles.
-
 ### How fast can the Volkswagen ID.4 charge?
 
 The Volkswagen ID.4 supports both AC and DC fast charging with competitive charging speeds:

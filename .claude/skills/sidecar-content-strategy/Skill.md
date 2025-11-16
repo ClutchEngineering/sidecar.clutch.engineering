@@ -113,7 +113,7 @@ Target three primary search intents:
    - "What engine options are available?"
    - "What kind of fuel economy does the [model] get?"
    - "Is the [model] available as a hybrid?"
-   - "What is the range?" (for EVs)
+   - **Note**: Avoid "What is the range?" questions for EVs - range varies significantly based on many factors and EPA estimates are often misleading
 
 3. **Capability & Performance**
    - "Does the [model] come with all-wheel drive?"
@@ -169,6 +169,14 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 - ❌ "What trim levels are available?" FAQ sections
 - **Why**: Trim configurations, names, and feature availability change frequently (often annually); manufacturers add/remove/rename trims regularly
 - **Impact**: CRITICAL - Content becomes outdated quickly, requiring constant maintenance; high risk of providing incorrect information
+
+**Specific Vehicle Range Information**
+- ❌ "EPA-estimated 291 miles of range" or specific range numbers
+- ❌ "What is the range of the [EV model]?" FAQ sections with detailed breakdowns
+- ❌ Range comparisons between configurations (RWD vs AWD, different battery sizes)
+- ❌ Detailed range specifications by drivetrain or battery configuration
+- **Why**: Range varies significantly based on driving conditions, temperature, driving style, terrain, climate control use, and other factors; EPA estimates often don't reflect real-world conditions
+- **Impact**: CRITICAL - Misleading information that becomes outdated; creates unrealistic expectations; high maintenance burden as EPA ratings change
 
 **Year-Specific Crash Test Ratings**
 - ❌ "The 2025 Tacoma receives a 4-star overall safety rating from NHTSA"
@@ -264,6 +272,8 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 Before publishing, verify that content does NOT include:
 - [ ] ANY trim level details, configurations, or "What are the trim levels?" FAQs
 - [ ] Trim-specific feature availability (e.g., "Available on XLE and above")
+- [ ] Specific vehicle range numbers or "What is the range?" FAQs for EVs
+- [ ] EPA range estimates or range comparisons between configurations
 - [ ] ANY safety features, ADAS systems, or crash test ratings
 - [ ] ANY reliability ratings, RepairPal scores, or Consumer Reports predictions
 - [ ] ANY non-CarPlay technology features (hands-free driving, etc.)
@@ -401,6 +411,7 @@ Before publishing, verify:
 - [ ] All external links are functional
 - [ ] Manufacturer terminology is correct for infotainment systems
 - [ ] NO trim level details or configurations included
+- [ ] NO specific vehicle range numbers or range FAQs for EVs
 - [ ] NO reliability ratings included
 - [ ] NO safety features or ratings included
 - [ ] NO non-CarPlay technology features included
