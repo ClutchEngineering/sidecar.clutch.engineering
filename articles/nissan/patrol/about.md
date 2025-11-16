@@ -73,39 +73,6 @@ The addition of wireless smartphone integration in 2024 brought the Patrol in li
 
 [View current Patrol technology features](https://www.nissan.com.au/vehicles/browse-range/patrol.html)
 
-### How reliable is the Nissan Patrol?
-
-The Nissan Patrol's reliability reputation varies significantly between generations, with a complex history that potential buyers should understand:
-
-**Overall Reliability Profile:**
-
-The Patrol has historically been known for exceptional durability, particularly in commercial and expedition use across Australia, the Middle East, and Africa. Many older Patrol models have exceeded 500,000 kilometers with proper maintenance, earning legendary status among off-road enthusiasts and professionals operating in remote areas.
-
-**Generation-Specific Considerations:**
-
-**Earlier Generations (Y60, Y61 - pre-2010):**
-These models, including the GQ and GU series, have earned outstanding reputations for mechanical reliability and longevity. Simple, proven diesel and petrol engines combined with robust construction made these Patrols nearly indestructible when properly maintained.
-
-**Y62 Generation (2010-2024):**
-The Y62 Patrol introduced more complex technology and experienced some reliability challenges:
-
-- **Timing chain tensioner issues**: Some Y62 models, particularly earlier production years, experienced timing chain problems that could lead to engine damage if not addressed
-- **Air suspension failures**: The adaptive air suspension system proved prone to leaks and component failures, with repairs often being costly
-- **Transmission concerns**: Some owners reported transmission hesitation and overheating under heavy loads or in hot climates
-
-Despite these issues, many Y62 Patrols have provided reliable service, particularly when maintained according to Nissan's schedule and when known issues are proactively addressed.
-
-**Y63 Generation (2025+):**
-The all-new seventh generation is too recent to have established a reliability track record. The new twin-turbo V6 engine and 9-speed transmission represent unproven technology in the Patrol platform.
-
-**Maintenance Considerations:**
-
-The Patrol requires regular maintenance due to its size, complexity, and intended use in demanding conditions. Prospective buyers should budget for higher-than-average maintenance costs compared to smaller SUVs, particularly for air suspension-equipped models.
-
-**Note:** Unlike some competitors, the Nissan Patrol is not currently rated by RepairPal, as the model is not sold in the United States where RepairPal conducts its analysis. Similarly, Consumer Reports does not provide specific reliability ratings for the Patrol.
-
-For reliability insights, the Nissan Armada—the U.S.-market equivalent of the Patrol sharing the same platform and powertrain—may provide relevant data, though specifications and features can differ between markets.
-
 ### What off-road capabilities does the Nissan Patrol offer?
 
 The Nissan Patrol is engineered for serious off-road performance, with comprehensive capability features that have established its reputation in demanding environments:
@@ -144,67 +111,13 @@ The Nissan Patrol is engineered for serious off-road performance, with comprehen
 
 The Patrol's combination of mechanical capability, electronic driver aids, and robust construction makes it one of the most capable factory off-road vehicles available, equally at home crossing deserts, climbing mountain trails, or navigating deep sand.
 
-### What safety features come standard on the Nissan Patrol?
-
-The Nissan Patrol comes equipped with Nissan's Intelligent Mobility suite of advanced safety and driver assistance technologies, with features varying by model year and market:
-
-**Core Nissan Intelligent Mobility Features:**
-
-- **ProPILOT Assist** (2025 models): An intuitive semi-autonomous driving system that controls steering, acceleration, and braking on highways, helping maintain lane position and a set following distance from vehicles ahead. This represents a first for the Patrol nameplate.
-
-- **Intelligent Emergency Braking with Pedestrian Detection**: Monitors the road ahead using radar and cameras, providing warnings and automatic emergency braking if a potential collision with a vehicle or pedestrian is detected.
-
-- **Intelligent Forward Collision Warning**: Alerts drivers to potential frontal collisions, monitoring two vehicles ahead to detect sudden braking earlier than traditional systems.
-
-- **Blind Spot Intervention**: Goes beyond basic blind spot monitoring by providing gentle steering assistance to help guide the vehicle back into its lane if the driver attempts to change lanes when a vehicle is detected in the blind spot.
-
-- **Rear Cross Traffic Alert**: Monitors approaching traffic when reversing out of parking spaces, providing warnings of vehicles crossing behind.
-
-**Additional Safety Technologies:**
-
-- **Lane Departure Warning and Prevention**: Monitors lane markings and alerts drivers to unintentional lane drift, with active intervention to help guide the vehicle back into its lane.
-
-- **Intelligent Cruise Control**: Adaptive cruise control that maintains a preset following distance from vehicles ahead, adjusting speed automatically in traffic.
-
-- **Driver Attention Alert**: Monitors driving patterns and provides warnings if signs of driver fatigue or distraction are detected.
-
-- **High Beam Assist**: Automatically switches between high and low beams based on surrounding traffic and lighting conditions.
-
-- **360-Degree Around View Monitor**: Four cameras provide a bird's-eye view of the vehicle's surroundings, invaluable for parking, off-road navigation, and tight maneuvering.
-
-**Structural Safety:**
-
-- Eight airbags including front, side, and curtain airbags protecting all three rows
-- Vehicle Dynamic Control (VDC) with traction control
-- Anti-lock Braking System (ABS) with Electronic Brakeforce Distribution (EBD)
-- Trailer Sway Control for enhanced stability when towing
-
-**Safety Ratings:**
-
-The Nissan Patrol is not rated by NHTSA or IIHS, as these organizations primarily test vehicles sold in the United States market. However, the closely related Nissan Armada—which shares the Patrol's platform and many structural components—earned the IIHS TOP SAFETY PICK+ designation for 2025, achieving "Good" ratings in updated crash tests including protection for second-row passengers.
-
-The Patrol's comprehensive safety suite demonstrates Nissan's commitment to protecting occupants both on highways and in off-road environments where emergency services may be distant.
-
 ### What is the towing capacity of the Nissan Patrol?
 
-The Nissan Patrol offers robust towing capability suitable for serious recreational and commercial applications:
+The Nissan Patrol offers robust towing capability suitable for serious recreational and commercial applications. Actual towing capacity varies by market, configuration, and equipment.
 
-**Maximum Towing Capacity:**
+**Important Considerations:**
 
-- **3,500 kg (7,716 pounds)** braked towing capacity across most configurations
-- **750 kg (1,653 pounds)** unbraked towing capacity
-- **350 kg (772 pounds)** maximum towball download (the weight the trailer tongue can place on the hitch)
-
-**Important Payload Considerations:**
-
-When towing at maximum capacity, payload is significantly reduced. For example:
-
-- Gross Vehicle Mass (GVM): 3,500 kg
-- Kerb weight: Approximately 2,650-2,860 kg depending on trim and options
-- Available payload: 640-850 kg when not towing
-- **Payload when towing 3,500 kg**: Approximately 289-500 kg remaining for occupants, luggage, and cargo
-
-This reduced payload when towing at maximum capacity is an important consideration for families or those carrying equipment, as the combined weight of passengers and gear can quickly consume available payload capacity.
+When towing at or near maximum capacity, available payload for occupants and cargo is significantly reduced. The combined weight of passengers, luggage, and equipment can quickly consume available payload capacity, so careful planning is essential when towing heavy trailers with a fully loaded vehicle.
 
 **Towing Features and Equipment:**
 
@@ -213,22 +126,9 @@ This reduced payload when towing at maximum capacity is an important considerati
 - **Tow/Haul mode**: Adjusts transmission shift patterns and throttle response for optimal performance when towing heavy loads
 - **Reversing camera with trajectory lines**: Helps align the vehicle with trailers during hitching
 
-**2025 Model Year Considerations:**
+The Patrol's substantial torque output from its turbocharged engines, combined with body-on-frame construction and comprehensive towing features, makes it well-suited for towing large travel trailers, boat trailers, horse floats, and equipment trailers.
 
-The new 3.5L twin-turbo V6 engine produces 700 Nm (516 lb-ft) of torque, providing strong pulling power throughout the rev range. The massive torque output and 9-speed automatic transmission are well-suited for towing heavy trailers, boats, and caravans.
-
-**Towing Best Practices:**
-
-For optimal towing performance and safety:
-- Distribute trailer weight properly with 10-15% of trailer weight on the towball
-- Use a weight-distribution hitch when approaching maximum capacity
-- Consider aftermarket upgrades like transmission coolers for frequent heavy towing, particularly in hot climates
-- Ensure proper tire pressures for both vehicle and trailer
-- Allow increased braking distances when fully loaded
-
-The Patrol's body-on-frame construction, powerful engines, and comprehensive towing features make it well-suited for towing large travel trailers, boat trailers, horse floats, and equipment trailers regularly.
-
-[View detailed Patrol towing specifications](https://www.nissan.com.au/vehicles/browse-range/patrol-my25/towing.html)
+Always consult your owner's manual for specific towing and payload capacities for your market and configuration.
 
 ### What kind of fuel economy does the Nissan Patrol get?
 

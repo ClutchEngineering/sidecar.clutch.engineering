@@ -35,7 +35,7 @@ The turbocharged powerplant provides strong low-end torque that's particularly b
 
 ### What is the towing capacity of the Nissan Armada?
 
-The 2025 Nissan Armada has a maximum towing capacity of **8,500 pounds when properly equipped**, making it one of the most capable vehicles in the full-size SUV segment for hauling boats, trailers, and recreational vehicles.
+The Nissan Armada offers competitive towing capability for the full-size SUV segment, making it well-suited for hauling boats, trailers, and recreational vehicles. Actual capacity varies by configuration and equipment.
 
 **Standard towing equipment includes:**
 - Class IV tow hitch
@@ -46,9 +46,9 @@ The 2025 Nissan Armada has a maximum towing capacity of **8,500 pounds when prop
 - Integrated trailer brake controller for improved braking control when towing
 - Tow/Haul mode for optimized transmission shift patterns
 
-The combination of 516 lb-ft of torque from the twin-turbo V6, body-on-frame construction, and available four-wheel drive makes the Armada well-suited for towing heavy loads. The available Intelligent 4x4 system with seven drive modes (including a dedicated Tow mode) helps maintain stability and control while hauling trailers.
+The combination of substantial torque from the twin-turbo V6, body-on-frame construction, and available four-wheel drive makes the Armada well-suited for towing heavy loads. The available Intelligent 4x4 system with seven drive modes (including a dedicated Tow mode) helps maintain stability and control while hauling trailers.
 
-For comparison, this towing capacity puts the Armada in line with competitors like the Chevrolet Tahoe (8,400 lbs) and Ford Expedition (9,300 lbs), though slightly below the Toyota Sequoia (9,520 lbs).
+Consult your owner's manual for specific towing capacities for your configuration.
 
 ### Does the Nissan Armada support Apple CarPlay and Android Auto?
 
@@ -97,99 +97,6 @@ The PRO-4X trim comes exclusively with four-wheel drive and cannot be ordered wi
 The Intelligent 4x4 system can send up to 50% of available torque to the front wheels when needed, while maintaining a rear-biased setup for improved handling and fuel economy during normal driving. The PRO-4X adds Bilstein off-road shocks, skid plates, and all-terrain tires for enhanced off-road capability.
 
 For buyers who primarily drive on paved roads and don't frequently encounter snow or off-road conditions, the rear-wheel drive configuration offers slightly better fuel economy (1 MPG improvement on the highway). However, families in areas with winter weather or those who tow frequently should strongly consider the 4WD option.
-
-### How reliable is the Nissan Armada?
-
-The Nissan Armada has above-average reliability, earning a **3.5 out of 5.0 rating from RepairPal** and ranking **2nd out of 14** in the full-size SUV category.
-
-**Key reliability metrics:**
-- Average annual repair cost: $550 (compared to $784 segment average)
-- Lower than average repair frequency
-- Lower than average severity of repairs
-
-Consumer Reports rates the Armada with about average predicted reliability based on Nissan's overall brand performance and data from previous model years. The 2025 model's all-new design means long-term reliability data is not yet available, but the underlying platform (shared with the Nissan Patrol sold globally) has a proven track record.
-
-**Historical reliability strengths:**
-- The second-generation Armada (2017-2024) based on the Nissan Patrol platform has generally demonstrated solid reliability
-- The 5.6-liter V8 used from 2017-2024 was a proven, durable engine
-- Body-on-frame construction tends to be more robust and easier to repair than unibody designs
-
-**2025 considerations:**
-The all-new twin-turbo V6 engine and 9-speed transmission are new to the Armada, so first-year ownership experiences are still emerging. Nissan's standard warranty coverage includes 3 years/36,000 miles basic and 5 years/60,000 miles powertrain protection.
-
-[Read RepairPal's detailed Armada reliability analysis](https://repairpal.com/reliability/nissan/armada)
-
-### What safety features and ratings does the Nissan Armada have?
-
-The 2025 Nissan Armada has earned the **IIHS TOP SAFETY PICK+ award**, the highest safety honor from the Insurance Institute for Highway Safety. This represents a significant achievement, as the Armada achieved "Good" ratings (the highest) in all crash test categories.
-
-**IIHS crash test results:**
-- Small overlap front (driver-side): Good
-- Small overlap front (passenger-side): Good
-- Moderate overlap front: Good (including second-row passenger protection)
-- Side impact: Good
-- Roof strength: Good
-- Head restraints: Good
-
-**Headlight ratings:**
-- Standard headlights: Acceptable or Good (varies by trim)
-- Required for TOP SAFETY PICK+ award
-
-**Front crash prevention:**
-- Vehicle-to-vehicle: Superior
-- Vehicle-to-pedestrian: Superior
-
-**NHTSA crash test ratings** for the 2025 model have not yet been published. Historically, the Armada has performed well in federal crash tests, typically earning 4-5 stars in most categories.
-
-**Nissan Safety Shield 360 (standard on all trims):**
-- Automatic Emergency Braking with Pedestrian Detection
-- Blind Spot Warning
-- Rear Cross Traffic Alert
-- Lane Departure Warning
-- High Beam Assist
-- Rear Automatic Braking
-
-**Available advanced safety features:**
-- ProPILOT Assist 2.1 (Platinum Reserve): Hands-free highway driving on compatible roads
-- ProAround View Monitor with Moving Object Detection
-- Intelligent Forward Collision Warning
-- Traffic Sign Recognition
-- Rear Door Alert
-
-[View 2025 Armada IIHS safety ratings](https://www.iihs.org/ratings/vehicle/nissan/armada-4-door-suv/2025)
-
-### Does the Nissan Armada offer hands-free highway driving?
-
-Yes, the 2025 Nissan Armada Platinum Reserve trim offers **ProPILOT Assist 2.1**, which provides hands-free highway driving capability on compatible roads. This is Nissan's most advanced driver assistance system and is one of the few true hands-free systems available in the full-size SUV segment.
-
-**ProPILOT Assist 2.1 capabilities:**
-
-**Hands-free driving:**
-- Allows hands-off operation on pre-mapped highways when conditions permit
-- Driver monitoring system uses infrared camera to ensure driver attentiveness
-- System will alert driver to resume control when necessary
-- Only functions on highways that have been mapped by Nissan
-
-**Active lane management:**
-- Lane centering and adaptive cruise control in all conditions
-- Can suggest lane changes to help drivers avoid camping in the passing lane
-- Executes lane changes with a tap of the turn signal (driver must keep hands on wheel during lane changes)
-
-**Traffic jam assist:**
-- Handles stop-and-go traffic autonomously
-- Maintains safe following distance
-- Can bring vehicle to complete stop and resume automatically
-
-**Important requirements and limitations:**
-- Requires active NissanConnect Services subscription (trial period included with purchase)
-- Only available on Platinum Reserve trim
-- Hands-free operation limited to compatible highways (expanding coverage)
-- Driver must remain attentive and ready to take control at any time
-- Not a fully autonomous system
-
-Lower trim levels come with standard ProPILOT Assist (hands-on system), which provides adaptive cruise control and lane centering but requires continuous steering wheel contact. The SV, SL, Platinum, and PRO-4X trims can be upgraded to ProPILOT Assist 1.1, which adds more sophisticated features but still requires hands on the wheel.
-
-For buyers seeking true hands-free highway driving capability similar to GM's Super Cruise or Ford's BlueCruise, the Platinum Reserve with ProPILOT Assist 2.1 is the only Armada option that delivers this functionality.
 
 ### What is the seating capacity of the Nissan Armada?
 

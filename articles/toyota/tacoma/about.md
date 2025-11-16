@@ -63,26 +63,6 @@ The hybrid powertrain delivers significantly more torque than the standard engin
 
 Earlier Tacomas came with a 3.5L V6 producing 278 horsepower and 265 lb-ft of torque. The fourth-generation turbocharged engines offer improved efficiency and torque while maintaining similar or better horsepower figures.
 
-### How reliable is the Toyota Tacoma?
-
-The Toyota Tacoma has a solid reliability record, earning a **3.5 out of 5.0 rating from RepairPal**, ranking **7th out of 7** in the midsize truck category. While the ranking appears concerning, the Tacoma's ownership costs remain competitive.
-
-**Key Reliability Metrics:**
-
-- Average annual repair cost: $478 (lower than the midsize truck average and competitive overall)
-- Unscheduled repairs: Infrequent, with repairs tending to be more severe when they occur but happening less often than typical vehicles
-- Strong long-term durability: Many Tacoma owners report trouble-free operation beyond 200,000 miles with proper maintenance
-
-**Consumer Reports:** The 2025 Tacoma receives below-average predicted reliability based on data from 2024 models. This represents a departure from the Tacoma's historically strong reliability reputation, likely reflecting the all-new fourth-generation redesign introduced in 2024. First-year redesigns often experience initial issues that are resolved in subsequent model years.
-
-**Resale Value:** Despite reliability concerns with the newest generation, Tacomas are known for exceptional resale value, consistently ranking among the best in the automotive industry. This reflects buyer confidence in long-term durability and the truck's strong reputation built over decades.
-
-**Brand Reputation:** Toyota as a manufacturer ranks 3rd out of 22 brands for reliability according to Consumer Reports, reinforcing the Tacoma's position within a brand known for dependability.
-
-The Tacoma's body-on-frame construction and proven Toyota engineering contribute to its ability to withstand demanding use. Prospective buyers of the redesigned 2024-2025 models should monitor reliability data as it matures, while earlier third-generation models (2016-2023) have established strong reliability records.
-
-[Read RepairPal's Tacoma reliability ratings](https://repairpal.com/reliability/toyota/tacoma)
-
 ### Does the Toyota Tacoma support Apple CarPlay and Android Auto?
 
 Apple CarPlay and Android Auto support varies significantly by model year:
@@ -111,40 +91,6 @@ Apple CarPlay and Android Auto support varies significantly by model year:
 For 2020-2023 models with wired connectivity, aftermarket wireless adapters can be added by plugging into the existing USB port, converting the system to wireless operation without modification to the vehicle.
 
 The fourth-generation Tacoma's wireless smartphone integration eliminates cable clutter and provides seamless connectivity for navigation, music streaming, messaging, and app access while on or off the road.
-
-### What safety features come standard on the Toyota Tacoma?
-
-All 2024-2025 Toyota Tacoma models come standard with **Toyota Safety Sense 3.0 (TSS 3.0)**, representing the latest evolution of Toyota's comprehensive driver assistance suite. The 2025 Tacoma received a **4-star overall safety rating from NHTSA**.
-
-**Toyota Safety Sense 3.0 includes:**
-
-- **Pre-Collision System with Pedestrian Detection**: Detects vehicles, pedestrians, bicyclists, and motorcyclists using forward-facing sensors and cameras. Provides warnings and can automatically apply brakes if the driver doesn't react in time to avoid a collision.
-
-- **Full-Speed Range Dynamic Radar Cruise Control**: Maintains preset speed and following distance from vehicles ahead, working in stop-and-go traffic with four adjustable following distance settings.
-
-- **Lane Departure Alert with Steering Assist**: Monitors lane markings and warns drivers of unintentional lane drift, with active steering assistance to help keep the vehicle centered in its lane.
-
-- **Lane Tracing Assist**: Provides active steering assistance to help keep the Tacoma centered in its lane when Dynamic Radar Cruise Control is engaged, reducing driver fatigue on highway drives.
-
-- **Proactive Driving Assist**: Works in the background to gently brake or steer when approaching curves, passing cyclists, or navigating around parked vehicles for smoother, safer driving.
-
-- **Road Sign Assist**: Recognizes and displays important road signs including speed limits, stop signs, and yield signs on the instrument cluster.
-
-- **Automatic High Beams**: Automatically toggles between high and low beams based on surrounding traffic and lighting conditions.
-
-**Additional Safety Features (varies by trim):**
-
-- Blind Spot Monitor with Rear Cross-Traffic Alert (standard on SR5 and above)
-- Parking Assist with Automatic Braking (higher trims)
-- Trailer Backup Guide for easier maneuvering with trailers
-- Trailer Blind Spot Monitor extends monitoring to cover trailer length
-- Trailer Camera for improved visibility when towing
-
-**IIHS Rating:**
-
-The 2024-2025 Tacoma Crew Cab qualified for an IIHS TOP SAFETY PICK award, earning good or acceptable ratings across most crashworthiness tests. The Tacoma performs better than any other midsize truck in IIHS testing, though some newer test protocols have not yet been completed.
-
-The comprehensive safety suite comes standard across all Tacoma trim levels, ensuring every model offers the same high level of protection regardless of price point.
 
 ### What off-road capabilities does the Toyota Tacoma offer?
 
@@ -194,25 +140,9 @@ The TRD Pro and Trailhunter represent the pinnacle of Tacoma off-road capability
 
 ### What is the towing capacity of the Toyota Tacoma?
 
-The Toyota Tacoma offers robust towing capability for a midsize truck, with capacity varying by configuration:
+The Toyota Tacoma offers competitive towing capability for a midsize truck, with capacity varying by configuration, powertrain, and equipment. When properly equipped with available tow packages, the Tacoma can handle travel trailers, boat trailers, equipment trailers, and toy haulers.
 
-**Maximum Towing Capacity:**
-
-- Up to **6,500 pounds** when properly equipped with the i-FORCE 2.4L turbocharged engine
-
-**By Powertrain:**
-
-- **i-FORCE 2.4L Turbo**: Up to 6,500 pounds
-- **i-FORCE MAX Hybrid**: Up to 6,000 pounds
-
-Despite slightly lower maximum rated capacity, the hybrid's 465 lb-ft of torque (versus 317 lb-ft for the standard engine) provides superior pulling power and makes towing feel more effortless, particularly on inclines and during highway merging.
-
-**By Trim Level:**
-
-- **SR**: Up to 3,500 pounds (base configuration)
-- **SR5, TRD PreRunner, TRD Sport, TRD Off-Road**: Up to 6,500 pounds when properly equipped with tow package and optimal configuration
-- **Trailhunter**: Up to 5,950 pounds
-- Maximum towing typically requires Double Cab configuration with 6-foot bed and available tow package
+The i-FORCE MAX hybrid powertrain delivers substantially more torque than the standard engine, providing superior pulling power that makes towing feel more effortless, particularly on inclines and during highway merging.
 
 **Towing Features and Technology:**
 
@@ -223,13 +153,7 @@ Despite slightly lower maximum rated capacity, the hybrid's 465 lb-ft of torque 
 - Available trailer camera for improved visibility
 - Four-pin and seven-pin trailer connectors available
 
-**Payload Capacity:**
-
-- Maximum payload: Up to 1,709 pounds depending on configuration and trim
-
-When properly equipped, the Tacoma can tow travel trailers, boat trailers, equipment trailers, and toy haulers. The hybrid model's substantial torque advantage makes it particularly well-suited for frequent towing despite the slightly lower maximum capacity rating.
-
-Toyota recommends consulting your owner's manual and ensuring your specific vehicle configuration matches the intended towing application. Proper weight distribution and the use of weight-distribution hitches are recommended when approaching maximum capacity.
+Always consult your owner's manual for specific towing and payload capacities for your configuration, and ensure your vehicle is properly equipped for the intended towing application. Proper weight distribution and the use of weight-distribution hitches are recommended when towing heavier loads.
 
 ### Are there any considerations for OBD2 access on the Toyota Tacoma?
 
