@@ -1,6 +1,6 @@
 # About the Volkswagen ID.4
 
-The Volkswagen ID.4 is an all-electric compact SUV that represents Volkswagen's commitment to electric mobility and sustainable transportation. Launched in 2021 as VW's first long-range electric vehicle for the U.S. market, the ID.4 is built on Volkswagen's dedicated MEB (Modular Electric Drive Matrix) platform and assembled at the Chattanooga, Tennessee manufacturing facility. The ID.4 has earned significant recognition including the 2021 World Car of the Year award and IIHS Top Safety Pick designation, establishing itself as a practical and well-rounded electric SUV option for families and environmentally conscious drivers.
+The Volkswagen ID.4 is an all-electric compact SUV that represents Volkswagen's commitment to electric mobility and sustainable transportation. Launched in 2021 as VW's first long-range electric vehicle for the U.S. market, the ID.4 is built on Volkswagen's dedicated MEB (Modular Electric Drive Matrix) platform and assembled at the Chattanooga, Tennessee manufacturing facility. The ID.4 earned the prestigious 2021 World Car of the Year award, establishing itself as a practical and well-rounded electric SUV option for families and environmentally conscious drivers.
 
 ## Frequently Asked Questions
 
@@ -14,14 +14,12 @@ The 2025 Volkswagen ID.4 is available in five trim configurations, all featuring
 - 12.9-inch touchscreen with wireless Apple CarPlay and Android Auto
 - Heated front seats and dual-zone climate control
 - Automatic headlights and rain-sensing wipers
-- Starting MSRP: $46,520
 
 **AWD Pro:**
 - Adds all-wheel drive with dual motors producing 335 horsepower
 - EPA-estimated 263 miles of range
 - 0-60 mph in 4.9 seconds
 - Heated windshield and factory tow hitch
-- Starting MSRP: $50,420
 
 **Pro S (RWD):**
 - Premium features including illuminated VW logos front and rear
@@ -29,18 +27,15 @@ The 2025 Volkswagen ID.4 is available in five trim configurations, all featuring
 - Power-adjustable premium seats with massage and ventilation
 - Hands-free power tailgate
 - Harman Kardon premium audio system
-- Starting MSRP: $51,620
 
 **AWD Pro S:**
 - Combines Pro S luxury features with all-wheel drive performance
 - 335 horsepower with dual motors
 - EPA-estimated 263 miles of range
-- Starting MSRP: $55,520
 
 **AWD Pro S Plus:**
 - Top-tier trim with the most comprehensive feature set
 - All AWD Pro S features plus additional premium equipment
-- Starting MSRP: $58,720
 
 Note: Volkswagen discontinued the lower-range 62 kWh battery option for 2025, standardizing on the 82 kWh battery across all trims.
 
@@ -146,3 +141,50 @@ While the ID.4 cannot power external equipment like some competitors, it does fe
 - Standard 12V power outlet
 
 For buyers prioritizing vehicle-to-load capability for camping, emergency backup power, or other applications, vehicles like the Hyundai IONIQ 5, Ford F-150 Lightning, or Rivian R1T/R1S may be more suitable alternatives.
+
+### What are the technical specifications of the ID.4 battery pack?
+
+The Volkswagen ID.4's battery pack is built on the MEB (Modular Electric Drive Matrix) platform architecture, which uses a modular design that allows Volkswagen to configure different battery capacities by adding or removing modules. The battery is integrated into the vehicle floor in a lightweight aluminum housing that enhances structural rigidity while protecting the cells.
+
+**82 kWh Battery Pack (2025 Models, 2021-2024 Pro/AWD trims):**
+
+- **Total cells:** 288 lithium-ion pouch cells
+- **Configuration:** 96 cells in series, 3 cells in parallel (96s3p)
+- **Modules:** 12 modules, each containing 24 cells in an 8s3p configuration
+- **Module capacity:** 6.85 kWh per module
+- **Nominal voltage:** 350.4V (operating range: 240V to 403.2V)
+- **Nominal capacity:** 234 Ah
+- **Usable energy:** 77 kWh (82 kWh gross capacity)
+- **Pack weight:** 489 kg (1,078 lbs)
+- **Chemistry:** NCM 712 (Nickel Cobalt Manganese with 70% nickel, 10% cobalt, 20% manganese)
+- **Cell suppliers:** LG Energy Solution and SK On (both produce batteries at facilities in Georgia)
+
+**62 kWh Battery Pack (2022-2024 Standard/S trims):**
+
+- **Total cells:** 216 lithium-ion pouch cells
+- **Configuration:** 108 cells in series, 2 cells in parallel (108s2p)
+- **Modules:** 9 modules, each containing 24 cells in a 12s2p configuration
+- **Module capacity:** 6.85 kWh per module
+- **Nominal voltage:** 350V
+- **Usable energy:** 58 kWh (62 kWh gross capacity)
+- **Pack weight:** Approximately 376 kg (829 lbs)
+- **Chemistry:** NCM 712
+- **Cell supplier:** SK On exclusively
+- **EPA range:** 209 miles
+
+**Battery Supplier Differences:**
+
+For the 82 kWh pack, Volkswagen sources from two suppliers, with notable charging performance differences:
+
+- **SK On batteries:** Support up to 170-200 kW DC fast charging, achieving 10-80% charge in approximately 29 minutes
+- **LG Energy Solution batteries:** Support up to 135 kW DC fast charging, achieving 10-80% charge in approximately 36 minutes
+
+Both suppliers use NCM 712 chemistry with 78 Ah pouch cells, but the SK On batteries have optimized thermal management and cell configuration that enables higher charging rates.
+
+**Thermal Management:**
+
+All ID.4 battery packs feature integrated liquid cooling systems that circulate coolant through channels in the battery modules. This active thermal management system maintains optimal operating temperatures during charging and driving, which is critical for maximizing battery life, performance, and charging speeds.
+
+**Model Year Changes:**
+
+Volkswagen discontinued the 62 kWh battery option for 2025, standardizing the entire lineup on the larger 82 kWh pack. This simplification improves manufacturing efficiency while ensuring all customers benefit from the extended range and faster charging capabilities of the larger battery.
