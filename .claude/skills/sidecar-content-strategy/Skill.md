@@ -25,7 +25,7 @@ Every piece of content should answer the question: **"How does this help someone
 - Write for real people, not search engines
 - Anticipate follow-up questions and answer them preemptively
 - Use clear, accessible language without being condescending
-- Include specific details (model years, trim levels, specifications)
+- Include specific details (model years, specifications) - **avoid trim levels as they change frequently**
 
 ### 2. E-E-A-T Framework (Google's Quality Guidelines)
 
@@ -96,507 +96,146 @@ Target three primary search intents:
 
 ### Model Page Content (`{make}/{model}/about.md`)
 
-**Purpose**: Provide comprehensive, FAQ-based information that answers common search queries about the specific vehicle model.
+**Purpose**: Provide focused, evergreen information about CarPlay connectivity and verified OBD2 diagnostic compatibility for Sidecar users.
 
 **Structure**:
-1. **Opening paragraph**: Model introduction, positioning, key characteristics, generation information
-2. **FAQ sections**: 5-10 questions addressing the most common searches and owner concerns
+1. **Opening paragraph**: Brief model introduction (1-2 sentences)
+2. **FAQ sections**: ONLY the following two topics
 
-**FAQ Question Types** (prioritized by search volume and user value):
+**ALLOWED FAQ Topics** (NOTHING ELSE):
 
-1. **Connectivity & Technology** (PRIMARY AND ONLY FOCUS)
+1. **Apple CarPlay / Android Auto** (REQUIRED FOR ALL MODELS)
    - "Does the [model] support Apple CarPlay and Android Auto?"
-   - "Is wireless CarPlay available?"
-   - **Note**: This is the ONLY technology feature we discuss. No safety features, no ADAS systems, no hands-free driving, no other tech.
+   - Include model year breakdowns (when wireless vs wired became available)
+   - Include screen size information
+   - Include USB port types (USB-A vs USB-C)
+   - **This is our PRIMARY content focus**
 
-2. **Powertrain & Efficiency**
-   - "What engine options are available?"
-   - "What kind of fuel economy does the [model] get?"
-   - "Is the [model] available as a hybrid?"
-   - "What is the range?" (for EVs)
+2. **OBD2 Diagnostic Access** (ONLY if verified restrictions exist)
+   - "Are there limitations on OBD2 access for the [model]?"
+   - ONLY include if there are confirmed, sourced restrictions (e.g., Mustang Mach-E 2025+ ECU encryption)
+   - Must cite specific sources (forums, manufacturer documentation, verified user reports)
+   - NEVER speculate or include unverified claims
+   - NEVER recommend competitor diagnostic products
 
-3. **Capability & Performance**
-   - "What are the trim levels?"
-   - "Does the [model] come with all-wheel drive?"
-   - General capability discussions (avoid specific towing numbers - see Evergreen Content Requirements)
+**What to EXCLUDE from model articles:**
+- ❌ Engine/powertrain specifications
+- ❌ Fuel economy information
+- ❌ Towing capacity or payload
+- ❌ Off-road capabilities
+- ❌ Safety features or crash test ratings
+- ❌ Reliability ratings
+- ❌ Trim level information
+- ❌ Vehicle range (for EVs)
+- ❌ Charging information
+- ❌ Battery specifications
+- ❌ AWD/4WD information
+- ❌ Any other features not directly related to CarPlay or verified OBD2 restrictions
 
-4. **Special Considerations**
-   - "Are there limitations on OBD2 access?" (critical for Sidecar users - ONLY if verified)
-   - Generation-specific information
-   - Notable changes by model year
-
-**Note**: Avoid creating FAQs about brand-specific connected services (e.g., "What is AcuraLink?", "What is FordPass?", "What is Toyota Remote Connect?"). These services:
-- Change frequently (features, pricing, subscription terms)
-- Are documented in detail on manufacturer websites
-- Are not core to Sidecar's diagnostic value proposition
-- Create high maintenance burden for low SEO value
-
-For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Polestar), this should be communicated on Sidecar's platform documentation, not in individual vehicle articles.
+**Length**:
+- Opening paragraph: 1-2 sentences
+- CarPlay FAQ: 100-200 words
+- OBD2 FAQ (if applicable): 100-200 words
+- Total article: 200-500 words maximum
 
 **FAQ Answer Structure**:
 
 ```markdown
-### [Question as users would search for it]
+### Does the [Model] support Apple CarPlay and Android Auto?
 
-**Lead answer**: Direct, concise answer in the first sentence or two.
+**Lead answer**: Direct answer in the first sentence stating yes/no and wireless vs wired.
 
-**Supporting details**:
-- Specifications, model year variations
-- Trim-level differences
-- Important caveats or limitations
+**Model year breakdown**:
+- **202X-202Y Models**: Wireless/Wired Apple CarPlay and Android Auto
+- Include screen size (e.g., "12.3-inch touchscreen")
+- Include USB port types if relevant
 
-**Context**: Additional helpful information, comparisons, or explanations.
+**Earlier models**: Brief mention of older model years and their support
 
-**Source attribution**: [Link to manufacturer page or authoritative source]
+[Link to manufacturer page for current specifications]
 ```
 
-**Length**:
-- Opening paragraph: 100-150 words
-- Each FAQ answer: 100-300 words
-- Total article: 1,500-3,000 words
+## Content Focus: CarPlay and OBD2 ONLY
 
-## Evergreen Content Requirements
+**CRITICAL**: Model articles must contain ONLY information about Apple CarPlay/Android Auto connectivity and verified OBD2 diagnostic restrictions. Everything else creates maintenance burden and dates quickly.
 
-**CRITICAL**: Model articles must focus on **evergreen content** that attracts organic search traffic over time. Avoid ephemeral information that requires constant updates or becomes outdated within months.
+### ❌ DO NOT INCLUDE (Everything except CarPlay and verified OBD2):
 
-### ❌ AVOID: High-Maintenance Ephemeral Content
+- ❌ Engine/powertrain specifications, horsepower, torque
+- ❌ Fuel economy, MPG ratings, EPA estimates
+- ❌ Vehicle range (for EVs)
+- ❌ Charging information, charging speeds, battery specifications
+- ❌ Towing capacity, payload ratings
+- ❌ Off-road capabilities, ground clearance, approach angles
+- ❌ Trim levels, configurations, packages
+- ❌ Safety features, ADAS systems, crash test ratings
+- ❌ Reliability ratings, RepairPal scores, Consumer Reports
+- ❌ AWD/4WD information
+- ❌ Pricing information
+- ❌ Recall information
+- ❌ Any technology features beyond CarPlay (BlueCruise, ProPILOT, etc.)
+- ❌ Unverified OBD2 claims or speculation
+- ❌ Recommendations for competitor diagnostic products
 
-**Year-Specific Crash Test Ratings**
-- ❌ "The 2025 Tacoma receives a 4-star overall safety rating from NHTSA"
-- ❌ "Earned IIHS TOP SAFETY PICK+ award for 2025"
-- ❌ Detailed crash test results with star ratings or Good/Acceptable/Poor scores
-- **Why**: These change annually and become outdated, requiring constant updates
-- **Impact**: Hurts SEO as content becomes inaccurate within 12 months
+**Why avoid all this**: Creates high maintenance burden, dates quickly, not core to Sidecar's value proposition, risk of inaccurate information
 
-**Specific Towing/Payload Ratings**
-- ❌ "Up to 6,500 pounds when properly equipped"
-- ❌ "Maximum payload: 1,709 pounds depending on configuration"
-- ❌ Detailed towing capacity breakdowns by trim level
-- **Why**: These vary by configuration, model year, and equipment; difficult to verify and keep accurate
-- **Impact**: Risk of providing incorrect information that could have safety implications
+### ✅ INCLUDE: Only These Two Topics
 
-**Year-Specific Recall Information**
-- ❌ "The 2025 Tundra has been recalled 2 times by NHTSA"
-- ❌ Listing specific recall counts by model year
-- **Why**: Recall counts change throughout the model year as new recalls are issued
-- **Impact**: Information is immediately outdated and requires constant monitoring
-
-**Unverified OBD2/Diagnostic Claims**
-- ❌ "The ID.4 has significant restrictions on diagnostic parameter access"
-- ❌ Recommending specific competitor products (VCDS, OBDeleven, etc.)
-- ❌ Making technical claims about ECU encryption without explicit verification
-- **Why**: Can be inaccurate, recommends competitors, and harms Sidecar's value proposition
-- **Impact**: CRITICAL - Undermines product positioning and may provide false information
-
-**Specific Pricing**
-- ❌ "Starting at $31,590 MSRP"
-- ❌ Detailed pricing by trim level
-- **Why**: Prices change frequently (sometimes mid-year)
-- **Impact**: Becomes outdated quickly, requires frequent updates
-
-**Safety Features and Ratings**
-- ❌ Any mention of safety features, ADAS systems, or crash test ratings
-- ❌ "All Tacoma models come standard with Toyota Safety Sense 3.0"
-- ❌ Lists of safety technologies (AEB, LKA, ACC, blind spot monitoring, etc.)
-- ❌ Links to NHTSA or IIHS ratings
-- ❌ Any discussion of airbags, stability control, etc.
-- **Why**: Not core to Sidecar's value proposition; high maintenance; liability concerns
-- **Impact**: CRITICAL - Avoid entirely to focus on connectivity and diagnostics
-
-**Reliability Information**
-- ❌ RepairPal ratings and scores
-- ❌ Consumer Reports reliability predictions
-- ❌ "How reliable is the [model]?" FAQ sections
-- ❌ Historical reliability trends or generation-specific reliability discussions
-- ❌ Links to RepairPal or reliability-focused content
-- **Why**: Not core to Sidecar's diagnostic value proposition; creates maintenance burden
-- **Impact**: Avoid entirely - focus on CarPlay connectivity only
-
-**Non-CarPlay Technology Features**
-- ❌ Hands-free driving systems (ProPILOT, BlueCruise, Super Cruise, etc.)
-- ❌ Advanced driver assistance features beyond CarPlay
-- ❌ Infotainment features not directly related to CarPlay/Android Auto
-- ❌ Other vehicle technology systems
-- **Why**: Only CarPlay/Android Auto is relevant to Sidecar's connectivity proposition
-- **Impact**: CRITICAL - Focus exclusively on CarPlay; eliminate all other tech discussion
-
-### ✅ INCLUDE: Evergreen, SEO-Friendly Content
-
-**Apple CarPlay / Android Auto** (PRIMARY CONTENT FOCUS)
+**1. Apple CarPlay / Android Auto** (REQUIRED FOR ALL MODELS)
+- ✅ Model year breakdown of wireless vs wired support
 - ✅ "2024-2025 models feature wireless Apple CarPlay and Android Auto"
-- ✅ Model year breakdowns of wired vs. wireless support
-- ✅ Infotainment system information
-- **Why**: Core to Sidecar's connectivity value proposition; users actively search for this
+- ✅ Screen size information (e.g., "12.3-inch touchscreen")
+- ✅ USB port types (USB-A vs USB-C) if relevant
+- ✅ Infotainment system name (e.g., "SYNC 4", "Toyota Audio Multimedia")
+- ❌ Do NOT mention trim-level availability - use "standard across all models" or "available on most configurations"
+- **Why**: This is Sidecar's PRIMARY value proposition for connectivity
 
-**General Capability Categories**
-- ✅ "The Tacoma offers competitive towing capability for the midsize truck segment"
-- ✅ "When properly equipped with available tow packages, the Tacoma can handle travel trailers, boat trailers, and equipment"
-- ✅ "Consult your owner's manual for specific towing and payload capacities for your configuration"
-- **Why**: Provides helpful context without specific numbers that may be incorrect
-
-**Powertrain and Efficiency Information**
-- ✅ Engine specifications by model year and trim
-- ✅ "The fourth-generation Tacoma (2024+) introduced modern turbocharged powertrains"
-- ✅ EPA fuel economy ratings
-- ✅ Hybrid/PHEV/EV range specifications
-- **Why**: Factual specifications that help users understand their vehicle
-
-**OBD2 Information (verified only)**
-- ✅ "The Tacoma provides standard OBD2 port access for diagnostic tools like Sidecar"
-- ✅ Only mention verified restrictions with explicit evidence
-- ✅ NEVER recommend competitor products as alternatives
-- **Why**: Supports Sidecar's value proposition without making unverified claims
+**2. OBD2 Diagnostic Access** (ONLY IF VERIFIED RESTRICTIONS EXIST)
+- ✅ Only include if there are confirmed, sourced restrictions
+- ✅ Example: "2025+ Mustang Mach-E has ECU encryption limiting diagnostic parameter access"
+- ✅ Must cite specific sources (forums, documentation, verified reports)
+- ✅ Link to source material
+- ❌ NEVER speculate or include unverified claims
+- ❌ NEVER recommend competitor diagnostic products
+- **Why**: Critical information for Sidecar users, but only if verified
 
 ### Content Review Checklist
 
-Before publishing, verify that content does NOT include:
-- [ ] ANY safety features, ADAS systems, or crash test ratings
-- [ ] ANY reliability ratings, RepairPal scores, or Consumer Reports predictions
-- [ ] ANY non-CarPlay technology features (hands-free driving, etc.)
-- [ ] Year-specific crash test star ratings or IIHS award mentions
-- [ ] Specific towing/payload pound ratings
-- [ ] Current-year recall counts
-- [ ] Unverified OBD2 restrictions or recommendations for competitor tools
-- [ ] Specific MSRP pricing
-- [ ] Safety-related links (NHTSA, IIHS, etc.)
-- [ ] Reliability-related links (RepairPal, etc.)
+Before publishing, verify that content ONLY includes:
+- [ ] Apple CarPlay / Android Auto information (model year breakdown, wireless vs wired, screen size)
+- [ ] OBD2 restrictions (ONLY if verified with sources)
+- [ ] Brief 1-2 sentence introduction
+- [ ] Links to manufacturer pages
+- [ ] Total length: 200-500 words maximum
+
+Content must NOT include:
+- [ ] Engine/powertrain information
+- [ ] Fuel economy or range
+- [ ] Towing/payload capacity
+- [ ] Off-road capabilities
+- [ ] Trim levels or configurations
+- [ ] Safety features or ratings
+- [ ] Reliability information
+- [ ] Charging information
+- [ ] Battery specifications
+- [ ] Any other vehicle features
+
+## Writing Guidelines
+
+**Tone**: Helpful, informative, factual. Never salesy.
+
+**Structure**:
+- H1: "About the [Make] [Model]"
+- H2: FAQ questions
+- Use bullet points for model year breakdowns
+- Keep paragraphs brief (2-3 sentences)
+
+**Sources**:
+- Link to manufacturer websites for current specifications
+- For OBD2 restrictions, cite forums, documentation, or verified user reports
+
+**Common Phrases**:
+- "Starting with the [year] model year..."
+- "2024-2025 models feature wireless Apple CarPlay and Android Auto"
+- "Standard across all models" or "available on most configurations"
 
-Content SHOULD include:
-- [ ] Apple CarPlay / Android Auto support by model year (wired vs. wireless) - THIS IS THE PRIMARY FOCUS
-- [ ] Engine specifications and fuel economy (factual specs only)
-- [ ] General capability descriptions without specific numbers
-- [ ] Links to manufacturer sites for current specifications
-- [ ] "Consult your owner's manual" for towing/payload specifics
-- [ ] Only verified, Sidecar-relevant OBD2 information
-
-## SEO Optimization Guidelines
-
-### Keyword Strategy
-
-**Primary Keywords** (Target in H1/H2):
-- "[Make] [Model]"
-- "[Model] [feature]" (e.g., "RAV4 hybrid", "F-150 towing capacity")
-- "[Model] [year]" when applicable
-
-**Secondary Keywords** (Natural integration):
-- Feature-specific terms ("Apple CarPlay", "all-wheel drive", "fuel economy")
-- Comparison terms ("vs", "difference between", "compared to")
-- Intent modifiers ("best", "reliable", "problems", "review")
-
-**Long-tail Keywords** (FAQ questions):
-- Full question phrases as they appear in Google autocomplete
-- "Does the [model] have..."
-- "What is the [feature] on [model]..."
-
-### On-Page SEO Best Practices
-
-1. **Headings Hierarchy**:
-   - Use H1 for page title: "About the [Make] [Model]"
-   - Use H2 for main sections and FAQ questions
-   - Use H3 for sub-sections within answers
-
-2. **Content Formatting**:
-   - Use bullet points for lists (features, specs, options)
-   - Use bold for emphasis on key terms and specifications
-   - Keep paragraphs to 3-4 sentences maximum
-   - Use tables for complex comparisons (trim levels, specifications)
-
-3. **Internal Linking**:
-   - Link to related model pages within the same make
-   - Link to manufacturer pages for current specifications
-   - Link to authoritative third parties (RepairPal, Consumer Reports, NHTSA, IIHS)
-
-4. **External Linking**:
-   - Always link to manufacturer sources for specifications
-   - Link to third-party reviews and ratings
-   - Use descriptive anchor text, not "click here"
-   - Format: `[Descriptive text](URL)`
-
-5. **Entity Optimization**:
-   - Use full model names on first mention
-   - Include model years when relevant
-   - Mention specific trim levels, engine types, feature names
-   - Use manufacturer-specific terminology correctly
-
-## Writing Style Guide
-
-### Tone
-
-- **Helpful and informative**, never salesy
-- **Conversational but professional**, like an knowledgeable friend
-- **Objective and balanced**, acknowledge both strengths and limitations
-- **Confident but humble**, admit when information may vary or is subject to change
-
-### Voice
-
-- **Active voice preferred**: "The F-150 offers six powertrain options" (not "Six powertrain options are offered")
-- **Direct address when appropriate**: "If you have a 2025 model..."
-- **Clear and concise**: Eliminate unnecessary words
-
-### Specificity Standards
-
-Always provide:
-- **Model years** when features or specifications vary (especially for CarPlay support)
-- **Trim levels** when features are trim-specific
-- **General capability descriptions** for towing/payload, not specific pound ratings (see Evergreen Content Requirements)
-- **EPA ratings** for fuel economy when discussing efficiency
-
-### Common Phrases to Use
-
-- "Starting with the [year] model year..." (for feature introductions)
-- "2024-2025 models feature wireless Apple CarPlay and Android Auto" (CarPlay focus)
-- "Offers competitive towing capability for the [segment]" (for towing - avoid specific numbers)
-- "Consult your owner's manual for specific towing and payload capacities" (instead of citing numbers)
-- "EPA-estimated [X] miles of range" (for EVs)
-- "Available on [trim] and above" (for feature availability)
-
-### Common Phrases to Avoid
-
-- Superlatives without attribution: "best", "most advanced" (unless quoting awards)
-- Vague claims: "great", "excellent", "amazing"
-- Marketing speak: "revolutionary", "game-changing", "industry-leading"
-- Assumptions: "you'll love", "perfect for families"
-
-## Research and Fact-Checking
-
-### Primary Sources (Always Preferred)
-
-1. **Manufacturer websites**: Official specifications, features, pricing
-2. **Owner's manuals**: Technical specifications, capabilities
-3. **Manufacturer press releases**: New features, changes by model year
-
-### Secondary Sources (Reference Only)
-
-1. **EPA**: Official fuel economy ratings (fueleconomy.gov)
-2. **Manufacturer forums**: User experiences with CarPlay/connectivity issues
-3. **Professional automotive reviews**: For general vehicle context only (MotorTrend, Car and Driver)
-
-**Note**: We do NOT use RepairPal, Consumer Reports, NHTSA, or IIHS as sources since we avoid reliability and safety content.
-
-### Verification Checklist
-
-Before publishing, verify:
-- [ ] Model year accuracy for CarPlay/Android Auto support (wired vs. wireless)
-- [ ] Trim-level feature availability (especially for CarPlay)
-- [ ] Engine specifications (HP, torque, displacement, fuel economy)
-- [ ] EPA fuel economy ratings cited correctly
-- [ ] General towing/capability descriptions (no specific pound ratings)
-- [ ] All external links are functional
-- [ ] Manufacturer terminology is correct for infotainment systems
-- [ ] NO reliability ratings included
-- [ ] NO safety features or ratings included
-- [ ] NO non-CarPlay technology features included
-
-## Content Opportunities for SEO
-
-### High-Value Content Types
-
-1. **Connectivity Deep Dives** (PRIMARY AND ONLY FOCUS)
-   - CarPlay/Android Auto availability by model year
-   - Wireless vs. wired connectivity
-   - Infotainment system information (only as it relates to CarPlay)
-   - *Why it matters for Sidecar*: **CORE value proposition** - vehicle connectivity is directly relevant to Sidecar users
-
-2. **OBD2 & Diagnostic Considerations**
-   - ECU encryption limitations (ONLY if explicitly verified - e.g., 2025+ Mustang Mach-E)
-   - Parameter access by model year (verified information only)
-   - Diagnostic capabilities and restrictions (verified only)
-   - **CRITICAL**: NEVER recommend competitor diagnostic products (VCDS, OBDeleven, etc.)
-   - **CRITICAL**: Only mention OBD2 restrictions if explicitly verified; do not speculate
-   - *Why it matters for Sidecar*: **Core value proposition** - directly impacts product functionality
-
-3. **Trim Level Guides**
-   - Feature comparison tables (focusing on connectivity, powertrain, capability - NOT safety or reliability)
-   - "Which trim is right for you?" frameworks focusing on CarPlay, powertrain options, and capability
-   - *Why it matters for Sidecar*: High-intent commercial searches
-
-4. **Electrification Content**
-   - Hybrid vs. PHEV vs. EV
-   - Charging speed and infrastructure
-   - Range analysis
-   - Federal tax credit eligibility
-   - *Why it matters for Sidecar*: Growing segment, high search volume
-
-## Content Calendar Strategy
-
-### Prioritization Framework
-
-Rank content opportunities by:
-
-1. **Search Volume**: Use Google Trends, keyword tools, autocomplete
-2. **User Intent**: Prioritize high-intent informational and transactional queries
-3. **Sidecar Relevance**: Does it help users understand compatibility or capabilities?
-4. **Content Gap**: Is this information hard to find elsewhere?
-5. **Competitive Advantage**: Can we provide more comprehensive or accurate information?
-
-### Update Cadence
-
-- **New model year releases**: Update within 1-2 weeks of official announcement (focus on CarPlay changes)
-- **Mid-cycle refreshes**: Update within 1 month
-- **Feature changes**: Update immediately for connectivity or OBD2 access changes
-- **Infotainment updates**: When manufacturers add/change wireless CarPlay support
-
-## Sidecar-Specific Content Angles
-
-### Critical Information for Sidecar Users
-
-1. **OBD2 Parameter Access**
-   - ECU encryption status (ONLY if explicitly verified)
-   - Accessible vs. restricted parameters (verified information only)
-   - Model year changes affecting diagnostics (verified only)
-   - **NEVER** recommend competitor diagnostic tools as alternatives
-   - **NEVER** make unverified claims about OBD2 restrictions
-   - Example: "The Tacoma provides standard OBD2 port access for diagnostic tools like Sidecar"
-   - Only create "Are there limitations on OBD2 parameter access?" FAQs if restrictions are verified
-
-2. **Connected Services Compatibility**
-   - Factory telemetry systems
-   - Remote access features
-   - Mobile app capabilities
-   - Data sharing and privacy
-
-3. **Smartphone Integration**
-   - CarPlay/Android Auto for contextual app usage
-   - Wireless connectivity for convenience
-   - Infotainment system compatibility
-
-### Brand Positioning Through Content
-
-Content should subtly reinforce that Sidecar is:
-- **Knowledgeable**: Deep understanding of automotive technology
-- **Trustworthy**: Accurate, well-sourced information
-- **User-focused**: Genuinely helpful, not just SEO-optimized
-- **Comprehensive**: Covering topics others miss (especially OBD2 considerations)
-
-## Quality Control Checklist
-
-Before publishing any content:
-
-### Accuracy
-- [ ] All specifications verified against manufacturer sources
-- [ ] Model years are correct and clearly stated
-- [ ] Third-party ratings are current and properly cited
-- [ ] Links are functional and point to authoritative sources
-
-### SEO
-- [ ] Target keywords included in H1/H2 headings
-- [ ] Natural keyword integration (not stuffed)
-- [ ] Questions match search queries (check Google autocomplete)
-- [ ] Internal and external links are relevant and valuable
-
-### Readability
-- [ ] Paragraphs are 3-4 sentences maximum
-- [ ] Complex information uses bullet points or tables
-- [ ] Technical terms are explained when first introduced
-- [ ] Scannable with clear headings and formatting
-
-### User Value
-- [ ] Answers the question directly and completely
-- [ ] Provides context beyond the basic answer
-- [ ] Includes actionable information
-- [ ] Helps users make informed decisions
-
-### Brand Alignment
-- [ ] Tone is helpful and authoritative
-- [ ] No marketing fluff or unsupported claims
-- [ ] Positions Sidecar as a knowledgeable resource
-- [ ] Includes Sidecar-relevant angles (OBD2, connectivity)
-
-## Example Content Patterns
-
-### Pattern 1: Model Year Variation Answer
-
-```markdown
-### Does the [Model] support Apple CarPlay and Android Auto?
-
-Apple CarPlay and Android Auto support varies by model year:
-
-**2025+ Models:**
-- **Wireless** Apple CarPlay and Android Auto
-- Standard across all trim levels
-- 12-inch touchscreen with enhanced interface
-
-**2020-2024 Models:**
-- **Wired** Apple CarPlay and Android Auto (USB connection required)
-- Available on XLE trim and above
-- 8-inch or 9-inch touchscreen depending on trim
-
-**Pre-2020 Models:**
-- Limited or no smartphone integration support
-- Aftermarket solutions available for 2016-2019 models
-
-For models with only wired connectivity, aftermarket wireless adapters are available to add wireless functionality.
-
-[View current models on Manufacturer.com](URL)
-```
-
-### Pattern 2: Specification Answer with Tiers
-
-```markdown
-### What trim levels are available for the [Model]?
-
-The [Model] is offered in [X] trim levels, each catering to different needs:
-
-**Entry-Level Trims:**
-- **Base**: Essential features, [engine specs], starting MSRP $X
-- **Mid**: Enhanced comfort features, [key additions]
-
-**Premium Trims:**
-- **Premium**: Luxury features including [list], starting MSRP $X
-- **Top**: Highest-end materials and technology
-
-**Specialty Trims:**
-- **Sport**: Performance-oriented with [key features]
-- **Off-road**: Enhanced capability with [key features]
-
-[View current pricing on Manufacturer.com](URL)
-```
-
-**Note**: We do NOT create reliability FAQ sections. Focus exclusively on CarPlay/Android Auto connectivity, powertrain specs, and verified OBD2 information.
-
-## When to Use This Skill
-
-Use this skill when:
-- Writing new make or model articles
-- Reviewing existing content for quality and SEO
-- Proposing content strategy for the Sidecar website
-- Creating editorial guidelines for content contributors
-- Auditing content for accuracy and brand alignment
-- Developing content calendars and prioritization frameworks
-- Answering questions about automotive content best practices
-- Analyzing competitor content and identifying gaps
-- Optimizing existing articles for search performance
-
-## Content Strategy Recommendations
-
-### Immediate Priorities
-
-1. **Fill content gaps**: Create articles for all supported vehicles
-2. **OBD2 deep dives**: Highlight encryption and access limitations where applicable
-3. **Connectivity guides**: Comprehensive CarPlay/Android Auto coverage
-4. **Reliability pages**: RepairPal and Consumer Reports analysis for all models
-
-### Long-Term Opportunities
-
-1. **Comparison content**: "X vs Y" articles for similar models
-2. **Buying guides**: "Which [model] should I buy?" by use case
-3. **Generation guides**: Detailed breakdowns of model generations
-4. **Technology explainers**: Deep dives on specific automotive technologies
-5. **Owner resources**: Maintenance schedules, common issues, tips and tricks
-
-### Measurement & Iteration
-
-Track and optimize for:
-- **Organic search traffic** to make and model pages
-- **Click-through rates** from search results
-- **Time on page** and scroll depth
-- **Conversion to Sidecar app downloads** or sign-ups
-- **Keyword rankings** for target search terms
-- **Featured snippet** captures for FAQ questions
-
-Continuously refine content based on:
-- Search Console data (queries, impressions, clicks)
-- User feedback and questions
-- New model year releases and updates
-- Competitive content analysis
-- Algorithm updates and ranking changes
