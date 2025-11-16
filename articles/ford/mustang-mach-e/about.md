@@ -20,22 +20,6 @@ This encryption is part of Ford's broader cybersecurity initiative to protect ve
 
 [Learn more on the Mach-E forums]([https://www.macheforum.com](https://www.macheforum.com/site/threads/mach-e-2025-and-obdii.50037/))
 
-### How fast can the Mustang Mach-E charge?
-
-The Mustang Mach-E supports both AC and DC fast charging:
-
-**DC Fast Charging:**
-- Maximum rate: Up to 150 kW on Extended Range models
-- 10-80% charge time: Approximately 38 minutes at peak charging rates
-- Uses CCS1 (Combined Charging System) connector
-
-**AC Level 2 Charging:**
-- Onboard charger: 11.5 kW (48A)
-- 0-100% charge time: Approximately 8-10 hours depending on battery size
-- Compatible with standard J1772 connector
-
-The Mach-E includes access to the Ford BlueOval Charge Network and, starting in 2024, Ford provided adapters allowing access to the Tesla Supercharger network for even more convenient charging options.
-
 ### Is the Mustang Mach-E compatible with Apple CarPlay and Android Auto?
 
 Yes, all Mustang Mach-E model years support both Apple CarPlay and Android Auto:

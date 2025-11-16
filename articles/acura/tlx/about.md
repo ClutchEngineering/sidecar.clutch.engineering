@@ -1,14 +1,8 @@
 # About the Acura TLX
 
-The Acura TLX is a mid-size luxury sedan that combines sophisticated styling, advanced technology, and engaging performance in a practical package. Introduced in 2014 as a replacement for both the TL and TSX sedans, the TLX represents Acura's vision of the modern sports sedan.
+The Acura TLX is a mid-size luxury sedan that combines sophisticated styling, advanced technology, and engaging performance. Introduced in 2014 as a replacement for both the TL and TSX sedans, the TLX represents Acura's vision of the modern sports sedan.
 
 ## Frequently Asked Questions
-
-### Does the Acura TLX come with all-wheel drive?
-
-Yes, Super Handling All-Wheel Drive (SH-AWD) is available as an option on most configurations. The SH-AWD system is more advanced than conventional AWD, featuring torque vectoring that can distribute power between individual rear wheels for enhanced handling and cornering performance.
-
-[Learn more about SH-AWD technology](https://www.acura.com/performance/modals/super-handling-all-wheel-drive)
 
 ### Does the TLX support Apple CarPlay and Android Auto?
 
