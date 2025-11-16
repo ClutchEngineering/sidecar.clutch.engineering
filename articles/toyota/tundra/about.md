@@ -121,22 +121,3 @@ Apple CarPlay and Android Auto support on the Toyota Tundra varies by model year
 For Tundra models with only wired connectivity, aftermarket wireless adapters are available that plug into the existing USB port and enable wireless Apple CarPlay and Android Auto functionality without vehicle modification.
 
 [Learn more about Toyota Audio Multimedia](https://www.toyota.com/tundra/)
-
-### How reliable is the Toyota Tundra?
-
-The Toyota Tundra has historically been known for exceptional reliability, though the current third-generation model (2022-2025) is still establishing its long-term reliability track record.
-
-**RepairPal Rating:** The Tundra earns a **3.5 out of 5.0 rating from RepairPal**, ranking **6th out of 17** in the full-size truck category, which RepairPal describes as "Above Average."
-
-**Key Reliability Metrics:**
-- Average annual repair cost: $606 (below the full-size truck average of $936 and close to the all-vehicle average of $652)
-- Unscheduled repair frequency: 0.8 times per year (better than the full-size truck average of 0.9 times and significantly better than the all-vehicle average of 1.3 times)
-- Probability of major repair: Lower than segment average, though specific percentage varies by model year
-
-**Consumer Reports:** Consumer Reports expects that the 2025 Tundra will be **less reliable than the average new car**, with this prediction based on data from 2022, 2023, and 2024 models. The redesigned third-generation Tundra has experienced more initial quality issues than Toyota's typical standards, with some owners reporting concerns about engine problems, transmission issues, and electrical systems.
-
-**Important Context:** The second-generation Tundra (2007-2021) earned an outstanding reputation for reliability, with many owners reporting trouble-free operation well beyond 200,000 miles. The current third-generation model (2022-present) represents a complete redesign with new engines, hybrid technology, and electronics. As with any all-new vehicle platform, reliability typically improves as Toyota addresses early issues through software updates and manufacturing refinements.
-
-Toyota's strong dealer network, comprehensive warranty coverage (3-year/36,000-mile basic, 5-year/60,000-mile powertrain), and history of long-term durability continue to make the Tundra a competitive choice for buyers prioritizing dependability.
-
-[Read RepairPal's Tundra reliability ratings](https://repairpal.com/reliability/toyota/tundra)

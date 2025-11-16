@@ -105,28 +105,6 @@ Yes, the Volkswagen ID.4 has supported wireless smartphone integration since its
 
 The ID.4's wireless connectivity eliminates the need for cables, allowing seamless integration with your smartphone. The system connects via Bluetooth initially and then automatically switches to WiFi for broader bandwidth, providing a smooth experience for navigation, music, and communication apps.
 
-### How reliable is the Volkswagen ID.4?
-
-The Volkswagen ID.4's reliability record has been mixed, with some notable concerns emerging as the vehicle has matured in the market:
-
-**Consumer Reports Reliability Rating:**
-Consumer Reports expects the 2025 ID.4 to be **less reliable than the average new car**, assigning it a **below-average predicted reliability score of 2 out of 5**. This prediction is based on data collected from 2022 and 2023 model owners.
-
-In December 2024, Consumer Reports ranked the ID.4 as having the lowest reliability among vehicles they track, citing issues with:
-- Electric vehicle battery and drive system
-- Braking system components
-- Charging problems related to the onboard inverter
-
-**RepairPal Rating:**
-RepairPal does not currently have a specific reliability rating for the Volkswagen ID.4 due to insufficient repair history data. As a relatively new model introduced in 2021, there isn't yet enough long-term repair data to generate comprehensive ratings.
-
-For reference, Volkswagen as a brand receives a 3.5 out of 5.0 reliability rating from RepairPal, ranking 12th out of 32 automotive brands with an average annual repair cost of $676.
-
-[Read more about VW reliability on RepairPal](https://repairpal.com/volkswagen/id-4)
-
-**Important Context:**
-Electric vehicles generally have fewer moving parts than gasoline vehicles and require less routine maintenance. Many early ID.4 issues were related to software and electrical systems rather than mechanical failures. Volkswagen has addressed many early problems through over-the-air software updates and technical service bulletins. However, prospective buyers should be aware of the vehicle's reliability track record and consider extended warranty coverage.
-
 ### Is the Volkswagen ID.4 eligible for the federal EV tax credit?
 
 **No, the 2025 Volkswagen ID.4 is NOT currently eligible for the $7,500 federal EV tax credit.**

@@ -98,60 +98,6 @@ The Intelligent 4x4 system can send up to 50% of available torque to the front w
 
 For buyers who primarily drive on paved roads and don't frequently encounter snow or off-road conditions, the rear-wheel drive configuration offers slightly better fuel economy (1 MPG improvement on the highway). However, families in areas with winter weather or those who tow frequently should strongly consider the 4WD option.
 
-### How reliable is the Nissan Armada?
-
-The Nissan Armada has above-average reliability, earning a **3.5 out of 5.0 rating from RepairPal** and ranking **2nd out of 14** in the full-size SUV category.
-
-**Key reliability metrics:**
-- Average annual repair cost: $550 (compared to $784 segment average)
-- Lower than average repair frequency
-- Lower than average severity of repairs
-
-Consumer Reports rates the Armada with about average predicted reliability based on Nissan's overall brand performance and data from previous model years. The 2025 model's all-new design means long-term reliability data is not yet available, but the underlying platform (shared with the Nissan Patrol sold globally) has a proven track record.
-
-**Historical reliability strengths:**
-- The second-generation Armada (2017-2024) based on the Nissan Patrol platform has generally demonstrated solid reliability
-- The 5.6-liter V8 used from 2017-2024 was a proven, durable engine
-- Body-on-frame construction tends to be more robust and easier to repair than unibody designs
-
-**2025 considerations:**
-The all-new twin-turbo V6 engine and 9-speed transmission are new to the Armada, so first-year ownership experiences are still emerging. Nissan's standard warranty coverage includes 3 years/36,000 miles basic and 5 years/60,000 miles powertrain protection.
-
-[Read RepairPal's detailed Armada reliability analysis](https://repairpal.com/reliability/nissan/armada)
-
-### Does the Nissan Armada offer hands-free highway driving?
-
-Yes, the 2025 Nissan Armada Platinum Reserve trim offers **ProPILOT Assist 2.1**, which provides hands-free highway driving capability on compatible roads. This is Nissan's most advanced driver assistance system and is one of the few true hands-free systems available in the full-size SUV segment.
-
-**ProPILOT Assist 2.1 capabilities:**
-
-**Hands-free driving:**
-- Allows hands-off operation on pre-mapped highways when conditions permit
-- Driver monitoring system uses infrared camera to ensure driver attentiveness
-- System will alert driver to resume control when necessary
-- Only functions on highways that have been mapped by Nissan
-
-**Active lane management:**
-- Lane centering and adaptive cruise control in all conditions
-- Can suggest lane changes to help drivers avoid camping in the passing lane
-- Executes lane changes with a tap of the turn signal (driver must keep hands on wheel during lane changes)
-
-**Traffic jam assist:**
-- Handles stop-and-go traffic autonomously
-- Maintains safe following distance
-- Can bring vehicle to complete stop and resume automatically
-
-**Important requirements and limitations:**
-- Requires active NissanConnect Services subscription (trial period included with purchase)
-- Only available on Platinum Reserve trim
-- Hands-free operation limited to compatible highways (expanding coverage)
-- Driver must remain attentive and ready to take control at any time
-- Not a fully autonomous system
-
-Lower trim levels come with standard ProPILOT Assist (hands-on system), which provides adaptive cruise control and lane centering but requires continuous steering wheel contact. The SV, SL, Platinum, and PRO-4X trims can be upgraded to ProPILOT Assist 1.1, which adds more sophisticated features but still requires hands on the wheel.
-
-For buyers seeking true hands-free highway driving capability similar to GM's Super Cruise or Ford's BlueCruise, the Platinum Reserve with ProPILOT Assist 2.1 is the only Armada option that delivers this functionality.
-
 ### What is the seating capacity of the Nissan Armada?
 
 The Nissan Armada seats **seven or eight passengers** depending on the second-row configuration:

@@ -104,11 +104,10 @@ Target three primary search intents:
 
 **FAQ Question Types** (prioritized by search volume and user value):
 
-1. **Connectivity & Technology** (PRIMARY FOCUS)
+1. **Connectivity & Technology** (PRIMARY AND ONLY FOCUS)
    - "Does the [model] support Apple CarPlay and Android Auto?"
    - "Is wireless CarPlay available?"
-   - "What infotainment system does it use?"
-   - **Note**: This is the ONLY technology feature we discuss. No safety features, no ADAS systems.
+   - **Note**: This is the ONLY technology feature we discuss. No safety features, no ADAS systems, no hands-free driving, no other tech.
 
 2. **Powertrain & Efficiency**
    - "What engine options are available?"
@@ -121,11 +120,7 @@ Target three primary search intents:
    - "Does the [model] come with all-wheel drive?"
    - General capability discussions (avoid specific towing numbers - see Evergreen Content Requirements)
 
-4. **Reliability**
-   - "How reliable is the [model]?"
-   - RepairPal and Consumer Reports ratings only
-
-5. **Special Considerations**
+4. **Special Considerations**
    - "Are there limitations on OBD2 access?" (critical for Sidecar users - ONLY if verified)
    - Generation-specific information
    - Notable changes by model year
@@ -208,6 +203,23 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 - **Why**: Not core to Sidecar's value proposition; high maintenance; liability concerns
 - **Impact**: CRITICAL - Avoid entirely to focus on connectivity and diagnostics
 
+**Reliability Information**
+- ❌ RepairPal ratings and scores
+- ❌ Consumer Reports reliability predictions
+- ❌ "How reliable is the [model]?" FAQ sections
+- ❌ Historical reliability trends or generation-specific reliability discussions
+- ❌ Links to RepairPal or reliability-focused content
+- **Why**: Not core to Sidecar's diagnostic value proposition; creates maintenance burden
+- **Impact**: Avoid entirely - focus on CarPlay connectivity only
+
+**Non-CarPlay Technology Features**
+- ❌ Hands-free driving systems (ProPILOT, BlueCruise, Super Cruise, etc.)
+- ❌ Advanced driver assistance features beyond CarPlay
+- ❌ Infotainment features not directly related to CarPlay/Android Auto
+- ❌ Other vehicle technology systems
+- **Why**: Only CarPlay/Android Auto is relevant to Sidecar's connectivity proposition
+- **Impact**: CRITICAL - Focus exclusively on CarPlay; eliminate all other tech discussion
+
 ### ✅ INCLUDE: Evergreen, SEO-Friendly Content
 
 **Apple CarPlay / Android Auto** (PRIMARY CONTENT FOCUS)
@@ -222,17 +234,12 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 - ✅ "Consult your owner's manual for specific towing and payload capacities for your configuration"
 - **Why**: Provides helpful context without specific numbers that may be incorrect
 
-**Reliability Trends (not year-specific predictions)**
-- ✅ "RepairPal rates the Armada with a 3.5 out of 5.0 rating, ranking 2nd in the full-size SUV category"
-- ✅ "The second-generation Tundra (2007-2021) earned an outstanding reputation for reliability"
-- ✅ Link to RepairPal and Consumer Reports for current ratings
-- **Why**: Historical patterns are evergreen; links provide current data
-
-**Technology Features (by generation/model year)**
-- ✅ "2024-2025 models feature wireless Apple CarPlay and Android Auto"
-- ✅ "Pre-2020 models did not include factory smartphone integration"
+**Powertrain and Efficiency Information**
+- ✅ Engine specifications by model year and trim
 - ✅ "The fourth-generation Tacoma (2024+) introduced modern turbocharged powertrains"
-- **Why**: Helps users understand what their specific model year offers
+- ✅ EPA fuel economy ratings
+- ✅ Hybrid/PHEV/EV range specifications
+- **Why**: Factual specifications that help users understand their vehicle
 
 **OBD2 Information (verified only)**
 - ✅ "The Tacoma provides standard OBD2 port access for diagnostic tools like Sidecar"
@@ -244,15 +251,19 @@ For vehicles with Sidecar connected account support (Tesla, Volvo, Porsche, Pole
 
 Before publishing, verify that content does NOT include:
 - [ ] ANY safety features, ADAS systems, or crash test ratings
+- [ ] ANY reliability ratings, RepairPal scores, or Consumer Reports predictions
+- [ ] ANY non-CarPlay technology features (hands-free driving, etc.)
 - [ ] Year-specific crash test star ratings or IIHS award mentions
 - [ ] Specific towing/payload pound ratings
 - [ ] Current-year recall counts
 - [ ] Unverified OBD2 restrictions or recommendations for competitor tools
 - [ ] Specific MSRP pricing
 - [ ] Safety-related links (NHTSA, IIHS, etc.)
+- [ ] Reliability-related links (RepairPal, etc.)
 
 Content SHOULD include:
-- [ ] Apple CarPlay / Android Auto support by model year (wired vs. wireless)
+- [ ] Apple CarPlay / Android Auto support by model year (wired vs. wireless) - THIS IS THE PRIMARY FOCUS
+- [ ] Engine specifications and fuel economy (factual specs only)
 - [ ] General capability descriptions without specific numbers
 - [ ] Links to manufacturer sites for current specifications
 - [ ] "Consult your owner's manual" for towing/payload specifics
@@ -325,20 +336,19 @@ Content SHOULD include:
 ### Specificity Standards
 
 Always provide:
-- **Model years** when features or specifications vary
+- **Model years** when features or specifications vary (especially for CarPlay support)
 - **Trim levels** when features are trim-specific
 - **General capability descriptions** for towing/payload, not specific pound ratings (see Evergreen Content Requirements)
 - **EPA ratings** for fuel economy when discussing efficiency
-- **Links to current safety ratings** from NHTSA and IIHS, not year-specific scores (see Evergreen Content Requirements)
 
 ### Common Phrases to Use
 
 - "Starting with the [year] model year..." (for feature introductions)
+- "2024-2025 models feature wireless Apple CarPlay and Android Auto" (CarPlay focus)
 - "Offers competitive towing capability for the [segment]" (for towing - avoid specific numbers)
 - "Consult your owner's manual for specific towing and payload capacities" (instead of citing numbers)
 - "EPA-estimated [X] miles of range" (for EVs)
 - "Available on [trim] and above" (for feature availability)
-- "For current crash test ratings and safety performance data, visit NHTSA.gov or IIHS.org" (instead of citing specific ratings)
 
 ### Common Phrases to Avoid
 
@@ -355,46 +365,39 @@ Always provide:
 2. **Owner's manuals**: Technical specifications, capabilities
 3. **Manufacturer press releases**: New features, changes by model year
 
-### Secondary Sources (For Validation)
+### Secondary Sources (Reference Only)
 
-1. **RepairPal**: Reliability ratings, repair costs, owner feedback
-2. **Consumer Reports**: Predicted reliability, owner satisfaction, test results
-3. **NHTSA**: Safety ratings, recalls, crash test data
-4. **IIHS**: Crashworthiness ratings, safety awards
-5. **Kelley Blue Book**: Awards, owner satisfaction, pricing
-6. **MotorTrend, Car and Driver**: Professional reviews, performance testing
+1. **EPA**: Official fuel economy ratings (fueleconomy.gov)
+2. **Manufacturer forums**: User experiences with CarPlay/connectivity issues
+3. **Professional automotive reviews**: For general vehicle context only (MotorTrend, Car and Driver)
+
+**Note**: We do NOT use RepairPal, Consumer Reports, NHTSA, or IIHS as sources since we avoid reliability and safety content.
 
 ### Verification Checklist
 
 Before publishing, verify:
-- [ ] Model year accuracy for all specifications
-- [ ] Trim-level feature availability
-- [ ] Current MSRP (note: prices change frequently, include year)
-- [ ] Engine specifications (HP, torque, displacement)
-- [ ] Fuel economy ratings (cite EPA)
-- [ ] Towing/payload capacities (note "when properly equipped")
-- [ ] Safety ratings (cite source and year)
+- [ ] Model year accuracy for CarPlay/Android Auto support (wired vs. wireless)
+- [ ] Trim-level feature availability (especially for CarPlay)
+- [ ] Engine specifications (HP, torque, displacement, fuel economy)
+- [ ] EPA fuel economy ratings cited correctly
+- [ ] General towing/capability descriptions (no specific pound ratings)
 - [ ] All external links are functional
-- [ ] Manufacturer terminology is correct (e.g., "Super Handling All-Wheel Drive" not "SH-AWD system")
+- [ ] Manufacturer terminology is correct for infotainment systems
+- [ ] NO reliability ratings included
+- [ ] NO safety features or ratings included
+- [ ] NO non-CarPlay technology features included
 
 ## Content Opportunities for SEO
 
 ### High-Value Content Types
 
-1. **Connectivity Deep Dives** (PRIMARY FOCUS)
+1. **Connectivity Deep Dives** (PRIMARY AND ONLY FOCUS)
    - CarPlay/Android Auto availability by model year
    - Wireless vs. wired connectivity
-   - Infotainment system generations
+   - Infotainment system information (only as it relates to CarPlay)
    - *Why it matters for Sidecar*: **CORE value proposition** - vehicle connectivity is directly relevant to Sidecar users
 
-2. **Reliability & Ownership**
-   - RepairPal ratings and analysis
-   - Consumer Reports reliability scores
-   - Common issues by generation
-   - Long-term ownership costs
-   - *Why it matters for Sidecar*: Builds trust and helps users make informed decisions
-
-3. **OBD2 & Diagnostic Considerations**
+2. **OBD2 & Diagnostic Considerations**
    - ECU encryption limitations (ONLY if explicitly verified - e.g., 2025+ Mustang Mach-E)
    - Parameter access by model year (verified information only)
    - Diagnostic capabilities and restrictions (verified only)
@@ -402,13 +405,12 @@ Before publishing, verify:
    - **CRITICAL**: Only mention OBD2 restrictions if explicitly verified; do not speculate
    - *Why it matters for Sidecar*: **Core value proposition** - directly impacts product functionality
 
-4. **Trim Level Guides**
-   - Feature comparison tables (focusing on connectivity, powertrain, capability - NOT safety)
-   - Value analysis
-   - "Which trim is right for you?" frameworks
+3. **Trim Level Guides**
+   - Feature comparison tables (focusing on connectivity, powertrain, capability - NOT safety or reliability)
+   - "Which trim is right for you?" frameworks focusing on CarPlay, powertrain options, and capability
    - *Why it matters for Sidecar*: High-intent commercial searches
 
-5. **Electrification Content**
+4. **Electrification Content**
    - Hybrid vs. PHEV vs. EV
    - Charging speed and infrastructure
    - Range analysis
@@ -429,11 +431,10 @@ Rank content opportunities by:
 
 ### Update Cadence
 
-- **New model year releases**: Update within 1-2 weeks of official announcement
+- **New model year releases**: Update within 1-2 weeks of official announcement (focus on CarPlay changes)
 - **Mid-cycle refreshes**: Update within 1 month
 - **Feature changes**: Update immediately for connectivity or OBD2 access changes
-- **Pricing updates**: Annually or when major changes occur
-- **Safety ratings**: When new IIHS or NHTSA ratings are published
+- **Infotainment updates**: When manufacturers add/change wireless CarPlay support
 
 ## Sidecar-Specific Content Angles
 
@@ -551,26 +552,7 @@ The [Model] is offered in [X] trim levels, each catering to different needs:
 [View current pricing on Manufacturer.com](URL)
 ```
 
-### Pattern 3: Third-Party Rating Answer
-
-```markdown
-### How reliable is the [Model]?
-
-The [Model] has [excellent/solid/average] reliability, earning a **[X] out of 5.0 rating from RepairPal** and ranking **[#X] out of [Y]** in the [segment] category.
-
-**Key Reliability Metrics:**
-- Average annual repair cost: $X (compared to $Y segment average)
-- Unscheduled repair frequency: X times per year
-- Lower/Higher than segment average probability of major repair
-
-**Consumer Reports** rates the [Model Year] [Model] with [above-average/average/below-average] predicted reliability based on data from recent model years.
-
-The [Model] is known for [specific reliability strengths], with many owners reporting trouble-free operation beyond [mileage] with proper maintenance.
-
-[Read RepairPal's detailed reliability ratings](URL)
-
-**Note**: RepairPal and Consumer Reports ratings are evergreen and change slowly. Avoid citing year-specific predictions that become outdated quickly.
-```
+**Note**: We do NOT create reliability FAQ sections. Focus exclusively on CarPlay/Android Auto connectivity, powertrain specs, and verified OBD2 information.
 
 ## When to Use This Skill
 

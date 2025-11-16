@@ -63,26 +63,6 @@ The hybrid powertrain delivers significantly more torque than the standard engin
 
 Earlier Tacomas came with a 3.5L V6 producing 278 horsepower and 265 lb-ft of torque. The fourth-generation turbocharged engines offer improved efficiency and torque while maintaining similar or better horsepower figures.
 
-### How reliable is the Toyota Tacoma?
-
-The Toyota Tacoma has a solid reliability record, earning a **3.5 out of 5.0 rating from RepairPal**, ranking **7th out of 7** in the midsize truck category. While the ranking appears concerning, the Tacoma's ownership costs remain competitive.
-
-**Key Reliability Metrics:**
-
-- Average annual repair cost: $478 (lower than the midsize truck average and competitive overall)
-- Unscheduled repairs: Infrequent, with repairs tending to be more severe when they occur but happening less often than typical vehicles
-- Strong long-term durability: Many Tacoma owners report trouble-free operation beyond 200,000 miles with proper maintenance
-
-**Consumer Reports:** The 2025 Tacoma receives below-average predicted reliability based on data from 2024 models. This represents a departure from the Tacoma's historically strong reliability reputation, likely reflecting the all-new fourth-generation redesign introduced in 2024. First-year redesigns often experience initial issues that are resolved in subsequent model years.
-
-**Resale Value:** Despite reliability concerns with the newest generation, Tacomas are known for exceptional resale value, consistently ranking among the best in the automotive industry. This reflects buyer confidence in long-term durability and the truck's strong reputation built over decades.
-
-**Brand Reputation:** Toyota as a manufacturer ranks 3rd out of 22 brands for reliability according to Consumer Reports, reinforcing the Tacoma's position within a brand known for dependability.
-
-The Tacoma's body-on-frame construction and proven Toyota engineering contribute to its ability to withstand demanding use. Prospective buyers of the redesigned 2024-2025 models should monitor reliability data as it matures, while earlier third-generation models (2016-2023) have established strong reliability records.
-
-[Read RepairPal's Tacoma reliability ratings](https://repairpal.com/reliability/toyota/tacoma)
-
 ### Does the Toyota Tacoma support Apple CarPlay and Android Auto?
 
 Apple CarPlay and Android Auto support varies significantly by model year:

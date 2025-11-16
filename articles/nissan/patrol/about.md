@@ -73,39 +73,6 @@ The addition of wireless smartphone integration in 2024 brought the Patrol in li
 
 [View current Patrol technology features](https://www.nissan.com.au/vehicles/browse-range/patrol.html)
 
-### How reliable is the Nissan Patrol?
-
-The Nissan Patrol's reliability reputation varies significantly between generations, with a complex history that potential buyers should understand:
-
-**Overall Reliability Profile:**
-
-The Patrol has historically been known for exceptional durability, particularly in commercial and expedition use across Australia, the Middle East, and Africa. Many older Patrol models have exceeded 500,000 kilometers with proper maintenance, earning legendary status among off-road enthusiasts and professionals operating in remote areas.
-
-**Generation-Specific Considerations:**
-
-**Earlier Generations (Y60, Y61 - pre-2010):**
-These models, including the GQ and GU series, have earned outstanding reputations for mechanical reliability and longevity. Simple, proven diesel and petrol engines combined with robust construction made these Patrols nearly indestructible when properly maintained.
-
-**Y62 Generation (2010-2024):**
-The Y62 Patrol introduced more complex technology and experienced some reliability challenges:
-
-- **Timing chain tensioner issues**: Some Y62 models, particularly earlier production years, experienced timing chain problems that could lead to engine damage if not addressed
-- **Air suspension failures**: The adaptive air suspension system proved prone to leaks and component failures, with repairs often being costly
-- **Transmission concerns**: Some owners reported transmission hesitation and overheating under heavy loads or in hot climates
-
-Despite these issues, many Y62 Patrols have provided reliable service, particularly when maintained according to Nissan's schedule and when known issues are proactively addressed.
-
-**Y63 Generation (2025+):**
-The all-new seventh generation is too recent to have established a reliability track record. The new twin-turbo V6 engine and 9-speed transmission represent unproven technology in the Patrol platform.
-
-**Maintenance Considerations:**
-
-The Patrol requires regular maintenance due to its size, complexity, and intended use in demanding conditions. Prospective buyers should budget for higher-than-average maintenance costs compared to smaller SUVs, particularly for air suspension-equipped models.
-
-**Note:** Unlike some competitors, the Nissan Patrol is not currently rated by RepairPal, as the model is not sold in the United States where RepairPal conducts its analysis. Similarly, Consumer Reports does not provide specific reliability ratings for the Patrol.
-
-For reliability insights, the Nissan Armada—the U.S.-market equivalent of the Patrol sharing the same platform and powertrain—may provide relevant data, though specifications and features can differ between markets.
-
 ### What off-road capabilities does the Nissan Patrol offer?
 
 The Nissan Patrol is engineered for serious off-road performance, with comprehensive capability features that have established its reputation in demanding environments:
