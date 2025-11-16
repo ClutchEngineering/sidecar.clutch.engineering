@@ -35,6 +35,12 @@ struct Gensite: AsyncParsableCommand {
   @ArgumentParser.Flag(name: .long, help: "Only generate supported cars pages")
   var supportedCars = false
 
+  @ArgumentParser.Option(name: .long, help: "Filter supported cars by make (e.g., volkswagen)")
+  var make: String?
+
+  @ArgumentParser.Option(name: .long, help: "Filter supported cars by model (e.g., id.4)")
+  var model: String?
+
   @ArgumentParser.Flag(name: .long, help: "Only generate leaderboard pages")
   var leaderboard = false
 
@@ -240,13 +246,36 @@ struct Gensite: AsyncParsableCommand {
 
       if buildAll || supportedCars {
         print("Generating supported cars pages...")
-        sitemap["supported-cars/index.html"] = MakeGridPage(supportMatrix: supportMatrix, outputURL: outputURL)
 
-        for make in supportMatrix.getAllMakes() {
+        // Filter makes if --make option is specified
+        let allMakes = supportMatrix.getAllMakes()
+        let makesToGenerate: [String]
+        if let makeFilter = make {
+          let filteredMakes = allMakes.filter { $0.lowercased() == makeFilter.lowercased() }
+          if filteredMakes.isEmpty {
+            FileHandle.standardError.write("Warning: No makes found matching '\(makeFilter)'\n".data(using: .utf8)!)
+            FileHandle.standardError.write("Available makes: \(allMakes.joined(separator: ", "))\n".data(using: .utf8)!)
+          }
+          makesToGenerate = filteredMakes
+        } else {
+          makesToGenerate = allMakes
+        }
+
+        // Only generate the make grid page if not filtering by make or model
+        if make == nil,
+           model == nil {
+          sitemap["supported-cars/index.html"] = MakeGridPage(supportMatrix: supportMatrix, outputURL: outputURL)
+        }
+
+        for make in makesToGenerate {
           guard let url = MakeLink.url(for: make) else {
             continue
           }
-          sitemap[url.appending(component: "index.html").path()] = MakePage(supportMatrix: supportMatrix, make: make, projectRoot: projectRoot)
+
+          // Only generate the make page if not filtering by model
+          if model == nil {
+            sitemap[url.appending(component: "index.html").path()] = MakePage(supportMatrix: supportMatrix, make: make, projectRoot: projectRoot)
+          }
 
           // Generate individual model pages
           for obdbID in supportMatrix.getOBDbIDs(for: make) {
@@ -254,6 +283,15 @@ struct Gensite: AsyncParsableCommand {
                   let modelURL = ModelLink.url(for: make, model: modelSupport.model) else {
               continue
             }
+
+            // Filter by model if specified
+            if let modelFilter = model {
+              let modelName = modelSupport.model.lowercased()
+              if !modelName.contains(modelFilter.lowercased()) {
+                continue
+              }
+            }
+
             sitemap[modelURL.appending(component: "index.html").path()] = ModelPage(
               supportMatrix: supportMatrix,
               make: make,
