@@ -90,7 +90,7 @@ For buyers prioritizing vehicle-to-load capability for camping, emergency backup
 
 The Volkswagen ID.4's battery pack is built on the MEB (Modular Electric Drive Matrix) platform architecture, which uses a modular design that allows Volkswagen to configure different battery capacities by adding or removing modules. The battery is integrated into the vehicle floor in a lightweight aluminum housing that enhances structural rigidity while protecting the cells.
 
-**82 kWh Battery Pack (2025 Models, 2021-2024 Pro/AWD trims):**
+**82 kWh Battery Pack (2025 Models, 2021-2024 long-range configurations):**
 
 - **Total cells:** 288 lithium-ion pouch cells
 - **Configuration:** 96 cells in series, 3 cells in parallel (96s3p)
@@ -103,7 +103,7 @@ The Volkswagen ID.4's battery pack is built on the MEB (Modular Electric Drive M
 - **Chemistry:** NCM 712 (Nickel Cobalt Manganese with 70% nickel, 10% cobalt, 20% manganese)
 - **Cell suppliers:** LG Energy Solution and SK On (both produce batteries at facilities in Georgia)
 
-**62 kWh Battery Pack (2022-2024 Standard/S trims):**
+**62 kWh Battery Pack (2022-2024 standard-range configurations):**
 
 - **Total cells:** 216 lithium-ion pouch cells
 - **Configuration:** 108 cells in series, 2 cells in parallel (108s2p)
