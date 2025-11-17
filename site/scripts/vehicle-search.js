@@ -1,7 +1,6 @@
-(function() {
-  'use strict';
-
-  console.log('[Vehicle Search] Script initializing...');
+// Wait for DOM to be ready before initializing search
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('[Vehicle Search] DOM loaded, initializing search...');
 
   let searchIndex = null;
   let selectedIndex = -1;
@@ -201,4 +200,4 @@
   });
 
   console.log('[Vehicle Search] Initialization complete');
-})();
+});
