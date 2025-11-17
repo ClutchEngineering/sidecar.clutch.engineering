@@ -8,10 +8,13 @@ The Honda Accord is a midsize sedan known for its reliability, refinement, and b
 
 Yes, the Honda Accord supports both Apple CarPlay and Android Auto, with support introduced starting in 2016.
 
-**2023-2025 Models:**
-- **Wireless** Apple CarPlay and Android Auto available on most configurations
-- **Wired** Apple CarPlay and Android Auto on base configurations
-- 7-inch touchscreen on base models, 12.3-inch touchscreen on higher configurations
+**2024-2025 Models:**
+- **LX and SE/EX trims**: **Wired** Apple CarPlay and Android Auto with 7-inch touchscreen (requires USB-C cable connection)
+- **Sport Hybrid and higher trims**: **Wireless** Apple CarPlay and Android Auto with 12.3-inch touchscreen
+
+**2023 Models:**
+- **LX and EX trims**: **Wired** Apple CarPlay and Android Auto with 7-inch touchscreen (requires USB-C cable connection)
+- **Sport Hybrid and higher trims**: **Wireless** Apple CarPlay and Android Auto with 12.3-inch touchscreen
 
 **2018-2022 Models:**
 - Originally equipped with **wired** Apple CarPlay and Android Auto
@@ -30,3 +33,5 @@ Yes, the Honda Accord supports both Apple CarPlay and Android Auto, with support
 For models with only wired connectivity, aftermarket wireless adapters are available that plug into the existing USB port and enable wireless functionality without any modification to the vehicle.
 
 For the latest specifications and features on current Accord models, visit the [official Honda Accord page](https://automobiles.honda.com/accord-sedan).
+
+For information about the wireless CarPlay and Android Auto upgrade for 2018-2022 models, visit your local Honda dealership or see the [official Honda announcement](https://hondanews.com/en-US/honda-automobiles/releases/release-97d09069e73c229822892485de000817-honda-enhances-ownership-experience-with-upgrade-to-wireless-apple-carplay-and-android-auto-for-2018-2022-accord-models).
