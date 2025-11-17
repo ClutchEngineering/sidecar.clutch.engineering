@@ -101,15 +101,15 @@ document.addEventListener('DOMContentLoaded', function() {
           href="${url}"
           class="vehicle-search-result cursor-pointer flex items-center gap-3 px-4 py-3 transition-colors ${
             isSelected
-              ? 'bg-blue-500 text-white'
-              : 'hover:bg-zinc-100 dark:hover:bg-zinc-700 text-zinc-900 dark:text-zinc-100'
+              ? 'bg-zinc-200 dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100'
+              : 'hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100'
           }"
           data-index="${index}"
         >
           <img
             src="${iconPath}"
             alt="${make.n} ${vehicle.n}"
-            class="w-8 ${isPlaceholder ? 'p-2' : ''} ${isSelected ? 'invert brightness-0' : 'dark:invert'}"
+            class="w-8 ${isPlaceholder ? 'p-2' : ''} ${isSelected ? '' : 'dark:invert'}"
           />
           <div class="flex-1 min-w-0">
             <div class="font-bold text-base truncate">

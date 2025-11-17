@@ -36,7 +36,7 @@ struct VehicleSearchBar: View {
     try input.attr("id", "vehicle-search-input")
     try input.attr("placeholder", "Search makes and models...")
     try input.attr("autocomplete", "off")
-    try input.addClass("w-full pl-12 pr-4 py-3 text-base md:text-lg rounded-2xl border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all")
+    try input.addClass("w-full pl-12 pr-4 py-3 text-base md:text-lg rounded-2xl border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-600 focus:border-transparent transition-all")
 
     // Dropdown results container (hidden by default)
     let resultsDiv = try mainDiv.appendElement("div")
