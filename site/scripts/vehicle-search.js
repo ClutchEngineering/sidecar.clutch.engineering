@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('[Vehicle Search] DOM loaded, initializing search...');
 
   let searchIndex = null;
+  let makesArray = null;
   let selectedIndex = -1;
   let filteredResults = [];
 
@@ -27,8 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
       return response.json();
     })
     .then(data => {
-      searchIndex = data.vehicles;
-      console.log('[Vehicle Search] Index loaded successfully:', searchIndex.length, 'entries');
+      makesArray = data.m;
+      searchIndex = data.v;
+      console.log('[Vehicle Search] Index loaded successfully:', makesArray.length, 'makes,', searchIndex.length, 'entries');
       console.log('[Vehicle Search] First 3 entries:', searchIndex.slice(0, 3));
     })
     .catch(error => {
@@ -51,9 +53,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Filter vehicles - search in make and model
     filteredResults = searchIndex.filter(vehicle => {
-      const makeMatch = vehicle.make.toLowerCase().includes(lowerQuery);
-      const modelMatch = vehicle.model.toLowerCase().includes(lowerQuery);
-      const combinedMatch = `${vehicle.make} ${vehicle.model}`.toLowerCase().includes(lowerQuery);
+      const make = makesArray[vehicle.m];
+      const makeMatch = make.n.toLowerCase().includes(lowerQuery);
+      const modelMatch = vehicle.n.toLowerCase().includes(lowerQuery);
+      const combinedMatch = `${make.n} ${vehicle.n}`.toLowerCase().includes(lowerQuery);
       return makeMatch || modelMatch || combinedMatch;
     });
 
@@ -81,12 +84,21 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('[Vehicle Search] Rendering results dropdown');
     resultsContainer.innerHTML = filteredResults.map((vehicle, index) => {
       const isSelected = index === selectedIndex;
-      const isMakeOnly = !vehicle.model;
-      const isPlaceholder = vehicle.iconPath.includes('placeholder-car.png');
+      const make = makesArray[vehicle.m];
+      const isMakeOnly = !vehicle.n;
+      const isPlaceholder = !vehicle.i;
+
+      // Reconstruct full paths from compact format
+      const iconPath = vehicle.t === 'm' ? `/gfx/make/${make.i}` :
+                       vehicle.t === 'v' ? `/gfx/vehicle/${vehicle.i}` :
+                       `/gfx/placeholder-car.png`;
+      const url = vehicle.s
+        ? `/supported-cars/${make.s}/${vehicle.s}/`
+        : `/supported-cars/${make.s}/`;
 
       return `
         <a
-          href="${vehicle.url}"
+          href="${url}"
           class="vehicle-search-result cursor-pointer flex items-center gap-3 px-4 py-3 transition-colors ${
             isSelected
               ? 'bg-blue-500 text-white'
@@ -95,13 +107,13 @@ document.addEventListener('DOMContentLoaded', function() {
           data-index="${index}"
         >
           <img
-            src="${vehicle.iconPath}"
-            alt="${vehicle.make} ${vehicle.model}"
+            src="${iconPath}"
+            alt="${make.n} ${vehicle.n}"
             class="w-8 ${isPlaceholder ? 'p-2' : ''} ${isSelected ? 'invert brightness-0' : 'dark:invert'}"
           />
           <div class="flex-1 min-w-0">
             <div class="font-bold text-base truncate">
-              ${vehicle.make}${vehicle.model ? ` ${vehicle.model}` : ''}
+              ${make.n}${vehicle.n ? ` ${vehicle.n}` : ''}
             </div>
             ${isMakeOnly ? '<div class="text-sm opacity-80">View all models</div>' : ''}
           </div>
@@ -148,7 +160,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Navigate to selected result
   function navigateToSelected(index = selectedIndex) {
     if (index >= 0 && index < filteredResults.length) {
-      window.location.href = filteredResults[index].url;
+      const vehicle = filteredResults[index];
+      const make = makesArray[vehicle.m];
+      const url = vehicle.s
+        ? `/supported-cars/${make.s}/${vehicle.s}/`
+        : `/supported-cars/${make.s}/`;
+      window.location.href = url;
     }
   }
 
