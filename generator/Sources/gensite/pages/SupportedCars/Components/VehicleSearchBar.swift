@@ -25,7 +25,7 @@ struct VehicleSearchBar: View {
     try svg.attr("stroke", "currentColor")
     try svg.addClass("w-5 h-5")
 
-    let path = try svg.appendslement("path")
+    let path = try svg.appendElement("path")
     try path.attr("stroke-linecap", "round")
     try path.attr("stroke-linejoin", "round")
     try path.attr("d", "m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z")
