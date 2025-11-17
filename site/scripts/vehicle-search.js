@@ -35,19 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('[Vehicle Search] Failed to load search index:', error);
     });
 
-  // Debounce function to limit search frequency
-  function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-      const later = () => {
-        clearTimeout(timeout);
-        func(...args);
-      };
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-    };
-  }
-
   // Search and filter vehicles
   function searchVehicles(query) {
     console.log('[Vehicle Search] searchVehicles called with query:', query);
@@ -195,10 +182,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Event listeners
   console.log('[Vehicle Search] Setting up event listeners');
 
-  searchInput.addEventListener('input', debounce((e) => {
+  searchInput.addEventListener('input', (e) => {
     console.log('[Vehicle Search] Input event fired, value:', e.target.value);
     searchVehicles(e.target.value);
-  }, 200));
+  });
 
   searchInput.addEventListener('keydown', handleKeyDown);
 
