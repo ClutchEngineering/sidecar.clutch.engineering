@@ -9,7 +9,8 @@ struct VehicleSearchIndex {
     let i: String? // icon (relative path) - omitted for placeholder
     let t: String? // icon type (m=make, v=vehicle) - omitted for placeholder
     let d: Int?    // number of drivers (omitted if 0)
-    let k: Int?    // number of miles driven in thousands (omitted if 0)
+    let k: Int?    // number of miles (omitted if 0)
+    let u: String? // unit for miles: "k" for thousands, "1" for exact (omitted if no miles)
   }
 
   struct Make: Codable {
@@ -17,7 +18,8 @@ struct VehicleSearchIndex {
     let s: String // makeSlug
     let i: String // icon filename
     let d: Int?   // total number of drivers across all models (omitted if 0)
-    let k: Int?   // total miles driven across all models in thousands (omitted if 0)
+    let k: Int?   // total miles (omitted if 0)
+    let u: String? // unit for miles: "k" for thousands, "1" for exact (omitted if no miles)
   }
 
   struct SearchIndex: Codable {
@@ -56,12 +58,23 @@ struct VehicleSearchIndex {
       let iconName = makeNameForIcon(makeName)
       let totals = makeTotals[makeName] ?? (0, 0)
 
+      let (milesValue, milesUnit): (Int?, String?) = {
+        if totals.miles == 0 {
+          return (nil, nil)
+        } else if totals.miles < 1000 {
+          return (totals.miles, "1")
+        } else {
+          return (totals.miles / 1000, "k")
+        }
+      }()
+
       makesArray.append(Make(
         n: makeName,
         s: makeSlug,
         i: iconName + ".svg",
         d: totals.drivers > 0 ? totals.drivers : nil,
-        k: totals.miles > 0 ? totals.miles / 1000 : nil
+        k: milesValue,
+        u: milesUnit
       ))
       makeIndexMap[makeName] = index
     }
@@ -75,6 +88,17 @@ struct VehicleSearchIndex {
 
       let totals = makeTotals[makeName] ?? (0, 0)
 
+      // Calculate make-level miles
+      let (makeMilesValue, makeMilesUnit): (Int?, String?) = {
+        if totals.miles == 0 {
+          return (nil, nil)
+        } else if totals.miles < 1000 {
+          return (totals.miles, "1")
+        } else {
+          return (totals.miles / 1000, "k")
+        }
+      }()
+
       // Add entry for the make itself (empty model name and slug)
       vehicles.append(VehicleEntry(
         m: makeIndex,
@@ -83,7 +107,8 @@ struct VehicleSearchIndex {
         i: nil,
         t: "m",
         d: totals.drivers > 0 ? totals.drivers : nil,
-        k: totals.miles > 0 ? totals.miles / 1000 : nil
+        k: makeMilesValue,
+        u: makeMilesUnit
       ))
 
       // Add entries for each model
@@ -99,6 +124,18 @@ struct VehicleSearchIndex {
           ? (modelSupport.modelSVGs[0], "v")
           : (nil, nil)
 
+        // Calculate model-level miles
+        let (modelMilesValue, modelMilesUnit): (Int?, String?) = {
+          let miles = modelSupport.numberOfMilesDriven
+          if miles == 0 {
+            return (nil, nil)
+          } else if miles < 1000 {
+            return (miles, "1")
+          } else {
+            return (miles / 1000, "k")
+          }
+        }()
+
         vehicles.append(VehicleEntry(
           m: makeIndex,
           n: modelSupport.model,
@@ -106,7 +143,8 @@ struct VehicleSearchIndex {
           i: icon,
           t: iconType,
           d: modelSupport.numberOfDrivers > 0 ? modelSupport.numberOfDrivers : nil,
-          k: modelSupport.numberOfMilesDriven > 0 ? modelSupport.numberOfMilesDriven / 1000 : nil
+          k: modelMilesValue,
+          u: modelMilesUnit
         ))
       }
     }

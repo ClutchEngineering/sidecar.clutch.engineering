@@ -126,14 +126,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 const hasDrivers = vehicle.d != null && vehicle.d > 0;
                 const hasMiles = vehicle.k != null && vehicle.k > 0;
 
+                // Format miles based on unit
+                const formatMiles = (miles, unit) => {
+                  if (unit === '1') {
+                    return `${miles.toLocaleString()} mile${miles !== 1 ? 's' : ''}`;
+                  } else {
+                    return `${miles.toLocaleString()}k miles`;
+                  }
+                };
+
                 if (!hasDrivers && !hasMiles) {
                   return 'No drivers yet';
                 } else if (hasDrivers && !hasMiles) {
                   return `${vehicle.d.toLocaleString()} driver${vehicle.d !== 1 ? 's' : ''} · No miles driven yet`;
                 } else if (!hasDrivers && hasMiles) {
-                  return `No drivers · ${vehicle.k.toLocaleString()}k miles`;
+                  return `No drivers · ${formatMiles(vehicle.k, vehicle.u)}`;
                 } else {
-                  return `${vehicle.d.toLocaleString()} driver${vehicle.d !== 1 ? 's' : ''} · ${vehicle.k.toLocaleString()}k miles`;
+                  return `${vehicle.d.toLocaleString()} driver${vehicle.d !== 1 ? 's' : ''} · ${formatMiles(vehicle.k, vehicle.u)}`;
                 }
               })()}
             </div>
