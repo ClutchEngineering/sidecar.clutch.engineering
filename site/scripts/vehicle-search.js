@@ -1,7 +1,5 @@
 // Wait for DOM to be ready before initializing search
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('[Vehicle Search] DOM loaded, initializing search...');
-
   let searchIndex = null;
   let makesArray = null;
   let selectedIndex = -1;
@@ -10,28 +8,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('vehicle-search-input');
   const resultsContainer = document.getElementById('vehicle-search-results');
 
-  console.log('[Vehicle Search] DOM elements:', {
-    searchInput: searchInput ? 'Found' : 'Not found',
-    resultsContainer: resultsContainer ? 'Found' : 'Not found'
-  });
-
   if (!searchInput || !resultsContainer) {
-    console.warn('[Vehicle Search] Required DOM elements not found, exiting');
     return; // Search components not present on this page
   }
 
   // Load the search index
-  console.log('[Vehicle Search] Fetching search index from /vehicle-search-index.json');
   fetch('/vehicle-search-index.json')
-    .then(response => {
-      console.log('[Vehicle Search] Fetch response:', response.status, response.statusText);
-      return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
       makesArray = data.m;
       searchIndex = data.v;
-      console.log('[Vehicle Search] Index loaded successfully:', makesArray.length, 'makes,', searchIndex.length, 'entries');
-      console.log('[Vehicle Search] First 3 entries:', searchIndex.slice(0, 3));
     })
     .catch(error => {
       console.error('[Vehicle Search] Failed to load search index:', error);
