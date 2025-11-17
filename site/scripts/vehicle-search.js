@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <img
             src="${vehicle.iconPath}"
             alt="${vehicle.make} ${vehicle.model}"
-            class="w-8 ${isPlaceholder ? 'p-2' : ''} ${isSelected ? 'invert' : 'dark:invert'}"
+            class="w-8 ${isPlaceholder ? 'p-2' : ''} ${isSelected ? 'invert brightness-0' : 'dark:invert'}"
           />
           <div class="flex-1 min-w-0">
             <div class="font-bold text-base truncate">
