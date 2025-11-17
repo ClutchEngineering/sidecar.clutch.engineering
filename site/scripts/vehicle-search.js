@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <img
             src="${vehicle.iconPath}"
             alt="${vehicle.make} ${vehicle.model}"
-            class="w-8 ${isPlaceholder ? 'p-2' : ''} ${isSelected ? '' : 'dark:invert'}"
+            class="w-8 ${isPlaceholder ? 'p-2' : ''} ${isSelected ? 'invert' : 'dark:invert'}"
           />
           <div class="flex-1 min-w-0">
             <div class="font-bold text-base truncate">
@@ -132,10 +132,12 @@ document.addEventListener('DOMContentLoaded', function() {
         navigateToSelected(index);
       });
 
-      // Update selection on hover
+      // Update selection on hover (only if it actually changed to prevent re-render loops)
       element.addEventListener('mouseenter', () => {
-        selectedIndex = index;
-        displayResults();
+        if (selectedIndex !== index) {
+          selectedIndex = index;
+          displayResults();
+        }
       });
     });
 
