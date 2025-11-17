@@ -91,13 +91,13 @@ struct MakeLink: View {
   }
 
   static func url(for make: Make) -> URL? {
-    URL(string: "/supported-cars/\(makeNameForSorting(make))")
+    URL(string: "/cars/\(makeNameForSorting(make))")
   }
 }
 
 struct ModelLink {
   static func url(for make: Make, model: String) -> URL? {
-    URL(string: "/supported-cars/\(makeNameForSorting(make))/\(modelNameForURL(model))")
+    URL(string: "/cars/\(makeNameForSorting(make))/\(modelNameForURL(model))")
   }
 }
 

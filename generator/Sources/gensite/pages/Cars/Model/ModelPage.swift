@@ -76,7 +76,7 @@ struct ModelPage: View {
     if let modelSupport = modelSupport {
       Page(
         "OBD pids for the \(make) \(modelSupport.model)",
-        path: "/supported-cars/\(makeNameForSorting(make))/\(modelNameForURL(modelSupport.model))/",
+        path: "/cars/\(makeNameForSorting(make))/\(modelNameForURL(modelSupport.model))/",
         description: "OBD pids for the \(make) \(modelSupport.model).",
         keywords: [
           make,
@@ -104,12 +104,14 @@ struct ModelPage: View {
         ContentContainer {
           VStack(alignment: .center) {
             HStack(spacing: 32) {
-              Link(URL(string: "/supported-cars/")) {
+              Link(URL(string: "/cars/")) {
                 HeroIconPuck(url: URL(string: "/gfx/supported-vehicle.png")!)
               }
-              Link(URL(string: "/supported-cars/\(makeNameForSorting(make))/")) {
+              .pointerStyle(.pointer)
+              Link(URL(string: "/cars/\(makeNameForSorting(make))/")) {
                 MakeHeroIconPuck(make: make)
               }
+              .pointerStyle(.pointer)
               ModelHeroIconPuck(modelSVGs: modelSupport.modelSVGs)
             }
 
@@ -256,7 +258,7 @@ struct ModelPage: View {
     } else {
       Page(
         "Model not found",
-        path: "/supported-cars/\(makeNameForSorting(make))/\(obdbID.lowercased())/",
+        path: "/cars/\(makeNameForSorting(make))/\(obdbID.lowercased())/",
         description: "Model not found.",
         keywords: []
       ) {

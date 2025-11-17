@@ -26,7 +26,7 @@ struct MakeGridPage: View {
   var body: some View {
     Page(
       "Supported Cars",
-      path: "/supported-cars/",
+      path: "/cars/",
       description: "Sidecar supports a wide range of makes and models.",
       keywords: [
         "OBD-II",

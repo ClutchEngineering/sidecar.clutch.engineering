@@ -36,7 +36,7 @@ struct NavigationBar: View {
             NavigationLink(URL(string: "/news"), text: "News")
             NavigationLink(URL(string: "/features"), text: "Features", matchPaths: ["/shortcuts", "/scanning", "/leaderboard", "/beta"])
             NavigationLink(URL(string: "/help"), text: "Help")
-            NavigationLink(URL(string: "/supported-cars"), text: "Supported Cars")
+            NavigationLink(URL(string: "/cars"), text: "Cars")
             AppStoreLink()
               .hidden()
               .display(.block, condition: .desktop)

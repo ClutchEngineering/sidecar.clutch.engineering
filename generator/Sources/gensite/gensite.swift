@@ -270,7 +270,9 @@ struct Gensite: AsyncParsableCommand {
         // Only generate the make grid page if not filtering by make or model
         if make == nil,
            model == nil {
-          sitemap["supported-cars/index.html"] = MakeGridPage(supportMatrix: supportMatrix, outputURL: outputURL)
+          sitemap["cars/index.html"] = MakeGridPage(supportMatrix: supportMatrix, outputURL: outputURL)
+          // Redirect old URL to new URL
+          sitemap["supported-cars/index.html"] = Redirect(URL(string: "/cars"))
         }
 
         for make in makesToGenerate {
@@ -281,6 +283,11 @@ struct Gensite: AsyncParsableCommand {
           // Only generate the make page if not filtering by model
           if model == nil {
             sitemap[url.appending(component: "index.html").path()] = MakePage(supportMatrix: supportMatrix, make: make, projectRoot: projectRoot)
+            // Redirect old make URL to new URL
+            let oldMakeURL = URL(string: "/supported-cars/\(makeNameForSorting(make))")
+            if let oldMakeURL {
+              sitemap[oldMakeURL.appending(component: "index.html").path()] = Redirect(url)
+            }
           }
 
           // Generate individual model pages
@@ -304,6 +311,11 @@ struct Gensite: AsyncParsableCommand {
               obdbID: obdbID,
               projectRoot: projectRoot
             )
+            // Redirect old model URL to new URL
+            let oldModelURL = URL(string: "/supported-cars/\(makeNameForSorting(make))/\(modelNameForURL(modelSupport.model))")
+            if let oldModelURL {
+              sitemap[oldModelURL.appending(component: "index.html").path()] = Redirect(modelURL)
+            }
           }
         }
       }

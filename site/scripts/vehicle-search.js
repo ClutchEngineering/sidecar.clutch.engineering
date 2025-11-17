@@ -25,11 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Search and filter vehicles
   function searchVehicles(query) {
-    console.log('[Vehicle Search] searchVehicles called with query:', query);
-    console.log('[Vehicle Search] Search index loaded?', searchIndex !== null);
-
     if (!searchIndex || !query.trim()) {
-      console.log('[Vehicle Search] Hiding results - no index or empty query');
       hideResults();
       return;
     }
@@ -38,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const normalizeForSearch = (text) => text.toLowerCase().replace(/[\s\-]/g, '');
 
     const normalizedQuery = normalizeForSearch(query);
-    console.log('[Vehicle Search] Searching for:', query, '(normalized:', normalizedQuery + ')');
 
     // Filter vehicles - search in make and model
     filteredResults = searchIndex.filter(vehicle => {
@@ -52,32 +47,24 @@ document.addEventListener('DOMContentLoaded', function() {
              normalizedCombined.includes(normalizedQuery);
     });
 
-    console.log('[Vehicle Search] Found', filteredResults.length, 'results before limiting');
-
     // Limit to top 10 results
     filteredResults = filteredResults.slice(0, 10);
 
-    console.log('[Vehicle Search] Showing', filteredResults.length, 'results');
     selectedIndex = filteredResults.length > 0 ? 0 : -1;
     displayResults();
   }
 
   // Display search results
   function displayResults() {
-    console.log('[Vehicle Search] displayResults called with', filteredResults.length, 'results');
-
     if (filteredResults.length === 0) {
-      console.log('[Vehicle Search] No results, showing "No vehicles found" message');
       resultsContainer.innerHTML = '<div class="px-4 py-3 text-zinc-500 dark:text-zinc-400">No vehicles found</div>';
       resultsContainer.classList.remove('hidden');
       return;
     }
 
-    console.log('[Vehicle Search] Rendering results dropdown');
     resultsContainer.innerHTML = filteredResults.map((vehicle, index) => {
       const isSelected = index === selectedIndex;
       const make = makesArray[vehicle.m];
-      const isMakeOnly = !vehicle.n;
       const isPlaceholder = !vehicle.i;
 
       // Reconstruct full paths from compact format
@@ -85,8 +72,8 @@ document.addEventListener('DOMContentLoaded', function() {
                        vehicle.t === 'v' ? `/gfx/vehicle/${vehicle.i}` :
                        `/gfx/placeholder-car.png`;
       const url = vehicle.s
-        ? `/supported-cars/${make.s}/${vehicle.s}/`
-        : `/supported-cars/${make.s}/`;
+        ? `/cars/${make.s}/${vehicle.s}/`
+        : `/cars/${make.s}/`;
 
       return `
         <a
@@ -179,8 +166,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const vehicle = filteredResults[index];
       const make = makesArray[vehicle.m];
       const url = vehicle.s
-        ? `/supported-cars/${make.s}/${vehicle.s}/`
-        : `/supported-cars/${make.s}/`;
+        ? `/cars/${make.s}/${vehicle.s}/`
+        : `/cars/${make.s}/`;
       window.location.href = url;
     }
   }
@@ -213,16 +200,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Event listeners
-  console.log('[Vehicle Search] Setting up event listeners');
-
   searchInput.addEventListener('input', (e) => {
-    console.log('[Vehicle Search] Input event fired, value:', e.target.value);
     searchVehicles(e.target.value);
   });
 
   searchInput.addEventListener('keydown', handleKeyDown);
-
-  console.log('[Vehicle Search] Event listeners attached successfully');
 
   // Close results when clicking outside
   document.addEventListener('click', (e) => {
@@ -235,6 +217,4 @@ document.addEventListener('DOMContentLoaded', function() {
   resultsContainer.addEventListener('mousedown', (e) => {
     e.preventDefault(); // Prevent input from losing focus
   });
-
-  console.log('[Vehicle Search] Initialization complete');
 });

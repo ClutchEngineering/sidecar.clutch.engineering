@@ -67,7 +67,7 @@ As a thank you for your participation, approved beta testers will receive a free
 Conditions
 ----------
 
-*   A finite number of beta testers are allowed per vehicle make, model, and year, and only [when a tester is needed](/supported-cars/). If your car is not listed in the supported cars list at all, it probably needs a tester :)
+*   A finite number of beta testers are allowed per vehicle make, model, and year, and only [when a tester is needed](/cars/). If your car is not listed in the supported cars list at all, it probably needs a tester :)
 
 *   Registration operates on a first-come, first-served basis.
 

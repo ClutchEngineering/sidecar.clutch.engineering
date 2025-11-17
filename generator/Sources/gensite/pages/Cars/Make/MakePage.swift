@@ -48,7 +48,7 @@ struct MakePage: View {
   var body: some View {
     Page(
       "\(make) OBD support",
-      path: "/supported-cars/\(make.lowercased())/",
+      path: "/cars/\(make.lowercased())/",
       description: "Check which Sidecar features work with your \(make).",
       keywords: [
         make,
@@ -73,9 +73,10 @@ struct MakePage: View {
       ContentContainer {
         VStack(alignment: .center) {
           HStack(spacing: 32) {
-            Link(URL(string: "/supported-cars/")) {
+            Link(URL(string: "/cars/")) {
               HeroIconPuck(url: URL(string: "/gfx/supported-vehicle.png")!)
             }
+            .pointerStyle(.pointer)
             MakeHeroIconPuck(make: make)
           }
 
