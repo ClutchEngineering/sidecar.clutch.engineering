@@ -68,8 +68,6 @@ struct MakePage: View {
         .padding(.vertical, 16)
         .position(.sticky)
         .classNames(["top-0", "z-40"])
-        .border(.init(.zinc, darkness: 200), width: 1, edges: .bottom)
-        .border(.init(.zinc, darkness: 800), width: 1, edges: .bottom, condition: .dark)
       }
 
       ContentContainer {
