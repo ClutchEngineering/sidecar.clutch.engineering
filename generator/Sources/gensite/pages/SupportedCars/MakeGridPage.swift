@@ -64,8 +64,8 @@ struct MakeGridPage: View {
         .background(.zinc, darkness: 950, condition: .dark)
         .position(.sticky)
         .classNames(["top-0", "z-40"])
-        .border(.init(.zinc, darkness: 200), edges: .bottom, width: 1)
-        .border(.init(.zinc, darkness: 800), edges: .bottom, width: 1, condition: .dark)
+        .border(.init(.zinc, darkness: 200), width: 1, edges: .bottom)
+        .border(.init(.zinc, darkness: 800), width: 1, edges: .bottom, condition: .dark)
       }
 
       Section {

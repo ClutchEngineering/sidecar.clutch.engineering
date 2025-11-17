@@ -37,7 +37,7 @@ struct VehicleSearchBar: View {
       Div {
         // Results will be populated by JavaScript
       }
-      .identifier("vehicle-search-results")
+      .id("vehicle-search-results")
       .classNames([
         "absolute", "z-50", "w-full", "mt-2", "max-h-96", "overflow-y-auto",
         "bg-white", "dark:bg-zinc-800",
