@@ -131,6 +131,14 @@ document.addEventListener('DOMContentLoaded', function() {
         navigateToSelected(index);
       });
     });
+
+    // Scroll selected item into view
+    if (selectedIndex >= 0 && resultElements[selectedIndex]) {
+      resultElements[selectedIndex].scrollIntoView({
+        block: 'nearest',
+        behavior: 'smooth'
+      });
+    }
   }
 
   // Hide results
