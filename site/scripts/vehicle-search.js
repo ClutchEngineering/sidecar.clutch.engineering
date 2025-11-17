@@ -48,16 +48,22 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    const lowerQuery = query.toLowerCase();
-    console.log('[Vehicle Search] Searching for:', lowerQuery);
+    // Normalize text for searching (remove spaces, hyphens, and lowercase)
+    const normalizeForSearch = (text) => text.toLowerCase().replace(/[\s\-]/g, '');
+
+    const normalizedQuery = normalizeForSearch(query);
+    console.log('[Vehicle Search] Searching for:', query, '(normalized:', normalizedQuery + ')');
 
     // Filter vehicles - search in make and model
     filteredResults = searchIndex.filter(vehicle => {
       const make = makesArray[vehicle.m];
-      const makeMatch = make.n.toLowerCase().includes(lowerQuery);
-      const modelMatch = vehicle.n.toLowerCase().includes(lowerQuery);
-      const combinedMatch = `${make.n} ${vehicle.n}`.toLowerCase().includes(lowerQuery);
-      return makeMatch || modelMatch || combinedMatch;
+      const normalizedMake = normalizeForSearch(make.n);
+      const normalizedModel = normalizeForSearch(vehicle.n);
+      const normalizedCombined = normalizeForSearch(`${make.n} ${vehicle.n}`);
+
+      return normalizedMake.includes(normalizedQuery) ||
+             normalizedModel.includes(normalizedQuery) ||
+             normalizedCombined.includes(normalizedQuery);
     });
 
     console.log('[Vehicle Search] Found', filteredResults.length, 'results before limiting');
@@ -115,7 +121,22 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="font-bold text-base truncate">
               ${make.n}${vehicle.n ? ` ${vehicle.n}` : ''}
             </div>
-            ${isMakeOnly ? '<div class="text-sm opacity-80">View all models</div>' : ''}
+            <div class="text-sm opacity-70">
+              ${(() => {
+                const hasDrivers = vehicle.d != null && vehicle.d > 0;
+                const hasMiles = vehicle.k != null && vehicle.k > 0;
+
+                if (!hasDrivers && !hasMiles) {
+                  return 'No drivers yet';
+                } else if (hasDrivers && !hasMiles) {
+                  return `${vehicle.d.toLocaleString()} driver${vehicle.d !== 1 ? 's' : ''} · No miles driven yet`;
+                } else if (!hasDrivers && hasMiles) {
+                  return `No drivers · ${vehicle.k.toLocaleString()}k miles`;
+                } else {
+                  return `${vehicle.d.toLocaleString()} driver${vehicle.d !== 1 ? 's' : ''} · ${vehicle.k.toLocaleString()}k miles`;
+                }
+              })()}
+            </div>
           </div>
         </a>
       `;
