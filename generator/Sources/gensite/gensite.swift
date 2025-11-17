@@ -261,6 +261,12 @@ struct Gensite: AsyncParsableCommand {
           makesToGenerate = allMakes
         }
 
+        // Generate vehicle search index (only when not filtering)
+        if make == nil,
+           model == nil {
+          try VehicleSearchIndex.generate(supportMatrix: supportMatrix, outputURL: outputURL)
+        }
+
         // Only generate the make grid page if not filtering by make or model
         if make == nil,
            model == nil {

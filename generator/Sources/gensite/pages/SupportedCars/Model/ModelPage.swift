@@ -88,7 +88,8 @@ struct ModelPage: View {
           "trip logger",
           "vehicle diagnostics",
           "vehicle connectivity",
-        ]
+        ],
+        scripts: [URL(string: "/scripts/vehicle-search.js")]
       ) {
         ContentContainer {
           VStack(alignment: .center) {
@@ -122,6 +123,20 @@ struct ModelPage: View {
             .textAlignment(.center)
           }
           .padding(.vertical, 16)
+        }
+
+        // Search bar - always visible, sticky below header
+        Section {
+          ContentContainer {
+            VehicleSearchBar()
+          }
+          .padding(.vertical, 16)
+          .background(.white)
+          .background(.zinc, darkness: 950, condition: .dark)
+          .position(.sticky)
+          .classNames(["top-0", "z-40"])
+          .border(.init(.zinc, darkness: 200), edges: .bottom, width: 1)
+          .border(.init(.zinc, darkness: 800), edges: .bottom, width: 1, condition: .dark)
         }
 
         // Feature Support Table - Above the fold for better SEO
