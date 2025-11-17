@@ -1,6 +1,8 @@
 (function() {
   'use strict';
 
+  console.log('[Vehicle Search] Script initializing...');
+
   let searchIndex = null;
   let selectedIndex = -1;
   let filteredResults = [];
@@ -8,19 +10,30 @@
   const searchInput = document.getElementById('vehicle-search-input');
   const resultsContainer = document.getElementById('vehicle-search-results');
 
+  console.log('[Vehicle Search] DOM elements:', {
+    searchInput: searchInput ? 'Found' : 'Not found',
+    resultsContainer: resultsContainer ? 'Found' : 'Not found'
+  });
+
   if (!searchInput || !resultsContainer) {
+    console.warn('[Vehicle Search] Required DOM elements not found, exiting');
     return; // Search components not present on this page
   }
 
   // Load the search index
+  console.log('[Vehicle Search] Fetching search index from /vehicle-search-index.json');
   fetch('/vehicle-search-index.json')
-    .then(response => response.json())
+    .then(response => {
+      console.log('[Vehicle Search] Fetch response:', response.status, response.statusText);
+      return response.json();
+    })
     .then(data => {
       searchIndex = data.vehicles;
-      console.log('Vehicle search index loaded:', searchIndex.length, 'entries');
+      console.log('[Vehicle Search] Index loaded successfully:', searchIndex.length, 'entries');
+      console.log('[Vehicle Search] First 3 entries:', searchIndex.slice(0, 3));
     })
     .catch(error => {
-      console.error('Failed to load vehicle search index:', error);
+      console.error('[Vehicle Search] Failed to load search index:', error);
     });
 
   // Debounce function to limit search frequency
@@ -38,12 +51,17 @@
 
   // Search and filter vehicles
   function searchVehicles(query) {
+    console.log('[Vehicle Search] searchVehicles called with query:', query);
+    console.log('[Vehicle Search] Search index loaded?', searchIndex !== null);
+
     if (!searchIndex || !query.trim()) {
+      console.log('[Vehicle Search] Hiding results - no index or empty query');
       hideResults();
       return;
     }
 
     const lowerQuery = query.toLowerCase();
+    console.log('[Vehicle Search] Searching for:', lowerQuery);
 
     // Filter vehicles - search in make and model
     filteredResults = searchIndex.filter(vehicle => {
@@ -53,21 +71,28 @@
       return makeMatch || modelMatch || combinedMatch;
     });
 
+    console.log('[Vehicle Search] Found', filteredResults.length, 'results before limiting');
+
     // Limit to top 10 results
     filteredResults = filteredResults.slice(0, 10);
 
+    console.log('[Vehicle Search] Showing', filteredResults.length, 'results');
     selectedIndex = filteredResults.length > 0 ? 0 : -1;
     displayResults();
   }
 
   // Display search results
   function displayResults() {
+    console.log('[Vehicle Search] displayResults called with', filteredResults.length, 'results');
+
     if (filteredResults.length === 0) {
+      console.log('[Vehicle Search] No results, showing "No vehicles found" message');
       resultsContainer.innerHTML = '<div class="px-4 py-3 text-zinc-500 dark:text-zinc-400">No vehicles found</div>';
       resultsContainer.classList.remove('hidden');
       return;
     }
 
+    console.log('[Vehicle Search] Rendering results dropdown');
     resultsContainer.innerHTML = filteredResults.map((vehicle, index) => {
       const isSelected = index === selectedIndex;
       const isMakeOnly = !vehicle.model;
@@ -152,11 +177,16 @@
   }
 
   // Event listeners
+  console.log('[Vehicle Search] Setting up event listeners');
+
   searchInput.addEventListener('input', debounce((e) => {
+    console.log('[Vehicle Search] Input event fired, value:', e.target.value);
     searchVehicles(e.target.value);
   }, 200));
 
   searchInput.addEventListener('keydown', handleKeyDown);
+
+  console.log('[Vehicle Search] Event listeners attached successfully');
 
   // Close results when clicking outside
   document.addEventListener('click', (e) => {
@@ -169,4 +199,6 @@
   resultsContainer.addEventListener('mousedown', (e) => {
     e.preventDefault(); // Prevent input from losing focus
   });
+
+  console.log('[Vehicle Search] Initialization complete');
 })();
