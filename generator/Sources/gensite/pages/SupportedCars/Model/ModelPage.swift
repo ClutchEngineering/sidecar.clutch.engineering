@@ -88,8 +88,19 @@ struct ModelPage: View {
           "trip logger",
           "vehicle diagnostics",
           "vehicle connectivity",
-        ]
+        ],
+        scripts: [URL(string: "/scripts/vehicle-search.js")]
       ) {
+        // Search bar - always visible, sticky at top
+        Section {
+          ContentContainer {
+            VehicleSearchBar()
+          }
+          .padding(.vertical, 16)
+          .position(.sticky)
+          .classNames(["top-0", "z-40"])
+        }
+
         ContentContainer {
           VStack(alignment: .center) {
             HStack(spacing: 32) {
