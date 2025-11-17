@@ -1,6 +1,6 @@
 # About the Nissan Armada
 
-The Nissan Armada is a full-size SUV that combines powerful capability, spacious seating for up to eight passengers, and advanced technology. The completely redesigned third-generation 2025 Armada represents a significant evolution, transitioning from the traditional V8 engine to a more powerful and efficient twin-turbocharged V6.
+The Nissan Armada is a full-size SUV that serves as Nissan's flagship passenger vehicle. The third-generation 2025 model represents a complete redesign with enhanced technology features.
 
 ## Frequently Asked Questions
 
@@ -30,4 +30,4 @@ Apple CarPlay and Android Auto support varies by generation and model year:
 
 The addition of wireless smartphone integration for 2025 is a significant upgrade, eliminating the need to connect cables every time you enter the vehicle. Combined with the available wireless charging pad, it creates a truly cable-free experience.
 
-[Learn more about Armada technology features](https://www.nissanusa.com/vehicles/suvs-crossovers/armada.html)
+[Learn more about Armada technology features](https://www.nissanusa.com/vehicles/crossovers-suvs/armada.html)
