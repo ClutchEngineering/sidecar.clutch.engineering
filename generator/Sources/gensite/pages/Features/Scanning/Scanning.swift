@@ -441,6 +441,28 @@ Tested Scanners
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  MeatPi WICAN Pro<br />
+  <a class="text-blue-500 underline"
+   href="https://www.meatpi.com/products/wican-pro">MeatPi</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">Wi-Fi</td>
+ <td class="pl-2 md:pl-4 py-2">Up to 153/s</td>
+ <td class="pl-2 md:pl-4 py-2">$97.00</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  MeatPi WICAN Pro<br />
+  <a class="text-blue-500 underline"
+   href="https://www.meatpi.com/products/wican-pro">MeatPi</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Up to 17/s</td>
+ <td class="pl-2 md:pl-4 py-2">$97.00</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   OBDeleven<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.com/dp/B08K94L4JS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
