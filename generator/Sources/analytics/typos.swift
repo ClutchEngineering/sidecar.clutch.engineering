@@ -1,6 +1,6 @@
 import Foundation
 
-let anonymousName = "The Stig"
+let anonymousName = "The stig"
 
 // Typo corrections dictionary for vehicle series names
 let typoCorrections: [String: String] = [
