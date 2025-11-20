@@ -34,7 +34,7 @@ struct CarPlaySupportTable: View {
                     .background(.zinc, darkness: 950, condition: .dark)
 
                     TableBody {
-                        EnvironmentAwareRow(isLastRow: support.supportsCarkey != true) {
+                        EnvironmentAwareRow(isLastRow: true) {
                             Bordered {
                                 TableCell {
                                     Text(support.yearRangeString)
@@ -45,9 +45,16 @@ struct CarPlaySupportTable: View {
 
                             Bordered {
                                 TableCell {
-                                    Text("✓ Supported")
-                                        .bold()
-                                        .textColor(.green, darkness: 600)
+                                    VStack(alignment: .center, spacing: 4) {
+                                        Text("✓ Supported")
+                                            .bold()
+                                            .textColor(.green, darkness: 600)
+                                        if support.supportsCarkey == true {
+                                            Text("🔑 Car Key")
+                                                .fontSize(.extraSmall)
+                                                .textColor(.blue, darkness: 600)
+                                        }
+                                    }
                                 }
                             }
                             .padding(.horizontal, 8)
@@ -61,27 +68,11 @@ struct CarPlaySupportTable: View {
                             .padding(.horizontal, 8)
                             .padding(.vertical, 12)
                         }
-
-                        if support.supportsCarkey == true {
-                            EnvironmentAwareRow(isLastRow: true) {
-                                Borderless {
-                                    TableCell {
-                                        Text("🔑 Supports digital car keys")
-                                            .bold()
-                                            .textColor(.blue, darkness: 600)
-                                    }
-                                }
-                                .padding(.horizontal, 8)
-                                .padding(.vertical, 12)
-                                .background(.blue, darkness: 50)
-                                .columnSpan(3)
-                            }
-                        }
                     }
                 }
-                .border(.zinc, darkness: 300, width: 1)
-                .border(.zinc, darkness: 700, width: 1, condition: .dark)
-                .modifier(RoundedRectangleModifier())
+                .border(.init(.zinc, darkness: 400), width: 1)
+                .border(.init(.zinc, darkness: 600), width: 1, condition: .dark)
+                .cornerRadius(.large)
 
                 Paragraph {
                     Text("Note: CarPlay support information is based on Apple's official compatibility list. Actual availability may vary by trim level and region.")
@@ -127,8 +118,8 @@ struct CarPlayBadge: View {
             .textColor(.green, darkness: 700)
             .fontSize(.small)
             .bold()
-            .border(.green, darkness: 300, width: 1)
-            .modifier(RoundedRectangleModifier(radius: .small))
+            .border(.init(.green, darkness: 300), width: 1)
+            .cornerRadius(.small)
         }
     }
 }
