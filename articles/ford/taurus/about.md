@@ -2,7 +2,7 @@
 
 The Ford Taurus is a full-size sedan that was produced by Ford from 1986 to 2019. Originally introduced as a revolutionary aerodynamic design that helped revitalize Ford in the 1980s, the Taurus became one of America's best-selling sedans before production ended in March 2019.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Ford Taurus support Apple CarPlay and Android Auto?
 

@@ -2,7 +2,7 @@
 
 The Toyota Tacoma is a midsize pickup truck that has built an exceptional reputation for reliability and off-road capability since 1995. The 2024 model year brought a complete fourth-generation redesign with modern turbocharged powertrains, including Toyota's first hybrid option in the Tacoma.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Toyota Tacoma support Apple CarPlay and Android Auto?
 

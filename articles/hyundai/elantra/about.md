@@ -2,7 +2,7 @@
 
 The Hyundai Elantra is a compact sedan known for its value, fuel efficiency, and modern technology features. First introduced in 1990, the Elantra has evolved into one of Hyundai's best-selling models worldwide.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Hyundai Elantra support Apple CarPlay and Android Auto?
 

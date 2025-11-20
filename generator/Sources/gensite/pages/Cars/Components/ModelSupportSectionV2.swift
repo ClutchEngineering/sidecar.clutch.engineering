@@ -49,11 +49,15 @@ struct ModelSupportSectionV2: View {
           TableHeader {
             HeaderCell { Text("Year") }.frame(width: 108)
             HeaderCell { Text("Overall") }
-            HeaderCell { ParameterHeader(icon: "bolt", name: "SoC", secondary: !modelSupport.engineType.hasBattery) }
-            HeaderCell { ParameterHeader(icon: "health", name: "SoH", secondary: !modelSupport.engineType.hasBattery) }
-            HeaderCell { ParameterHeader(icon: "plug", name: "State", secondary: !modelSupport.engineType.hasBattery) }
-            HeaderCell { ParameterHeader(icon: "battery", name: "Cells", secondary: !modelSupport.engineType.hasBattery) }
-            HeaderCell { ParameterHeader(icon: "fuel", name: "Fuel", secondary: !modelSupport.engineType.hasFuel) }
+            if modelSupport.engineType.hasBattery {
+              HeaderCell { ParameterHeader(icon: "bolt", name: "SoC", secondary: !modelSupport.engineType.hasBattery) }
+              HeaderCell { ParameterHeader(icon: "health", name: "SoH", secondary: !modelSupport.engineType.hasBattery) }
+              HeaderCell { ParameterHeader(icon: "plug", name: "State", secondary: !modelSupport.engineType.hasBattery) }
+              HeaderCell { ParameterHeader(icon: "battery", name: "Cells", secondary: !modelSupport.engineType.hasBattery) }
+            }
+            if modelSupport.engineType.hasFuel {
+              HeaderCell { ParameterHeader(icon: "fuel", name: "Fuel", secondary: !modelSupport.engineType.hasFuel) }
+            }
             HeaderCell { ParameterHeader(icon: "speed", name: "Speed", secondary: false) }
             HeaderCell { ParameterHeader(icon: "length", name: "Range", secondary: false) }
             HeaderCell { ParameterHeader(icon: "length", name: "Odom", secondary: false) }
@@ -92,16 +96,9 @@ struct ModelSupportSectionV2: View {
                     SupportStatusV2(support: support, connectables: [.stateOfHealth], make: make, isLast: false)
                     SupportStatusV2(support: support, connectables: [.isCharging, .pluggedIn], make: make, isLast: false)
                     SupportStatusV2(support: support, connectables: [.batteryModulesStateOfCharge], make: make, isLast: false)
-                  } else {
-                    NotApplicableCell(isLast: false)
-                    NotApplicableCell(isLast: false)
-                    NotApplicableCell(isLast: false)
-                    NotApplicableCell(isLast: false)
                   }
                   if modelSupport.engineType.hasFuel {
                     SupportStatusV2(support: support, connectables: [.fuelTankLevel], make: make, isLast: false)
-                  } else {
-                    NotApplicableCell(isLast: false)
                   }
                   SupportStatusV2(support: support, connectables: [.speed], make: make, isLast: false)
                   RangeSupportStatus(support: support, connectables: [.electricRange, .fuelRange], estimatingConnectables: [.fuelTankLevel, .stateOfCharge], make: make, isLast: false)

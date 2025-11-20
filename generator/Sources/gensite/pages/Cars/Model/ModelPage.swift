@@ -75,15 +75,13 @@ struct ModelPage: View {
   var body: some View {
     if let modelSupport = modelSupport {
       Page(
-        "OBD pids for the \(make) \(modelSupport.model)",
+        "Sidecar for \(make) \(modelSupport.model) - OBD2 Scanner & Dashboard",
         path: "/cars/\(makeNameForSorting(make))/\(modelNameForURL(modelSupport.model))/",
-        description: "OBD pids for the \(make) \(modelSupport.model).",
+        description: "Check OBD2 compatibility for \(make) \(modelSupport.model). See supported parameters, sensors, and features for your vehicle with Sidecar app.",
         keywords: [
           make,
           modelSupport.model,
           "OBD-II",
-          "OBD pids",
-          "OBD pid database",
           "car scanner",
           "trip logger",
           "vehicle diagnostics",
@@ -91,6 +89,8 @@ struct ModelPage: View {
         ],
         scripts: [URL(string: "/scripts/vehicle-search.js")]
       ) {
+        SoftwareApplicationSchema()
+
         // Search bar - always visible, sticky at top
         Section {
           ContentContainer {
@@ -124,7 +124,7 @@ struct ModelPage: View {
               Slipstream.Text("OBD pids for the \(make) \(modelSupport.model)")
 
               Link(URL(string: "https://github.com/OBDb/\(modelSupport.obdbID)")) {
-                Text("OBDb")
+                Slipstream.Text("OBDb")
                   .bold()
                   .fontDesign("rounded")
                   .textColor(.link, darkness: 700)
@@ -136,6 +136,17 @@ struct ModelPage: View {
           }
           .padding(.vertical, 16)
         }
+
+        // Intro Text
+        Section {
+          ContentContainer {
+             VStack(alignment: .leading, spacing: 16) {
+               Slipstream.Text("Explore the comprehensive list of OBD-II parameters supported for the \(make) \(modelSupport.model). This includes real-time data for engine performance, fuel efficiency, and diagnostic trouble codes. Sidecar provides access to these PIDs to help you monitor your vehicle's health.")
+             }
+             .padding(.vertical, 16)
+          }
+        }
+        .margin(.bottom, 16)
 
         // Feature Support Table - Above the fold for better SEO
         Section {
@@ -155,15 +166,15 @@ struct ModelPage: View {
         Section {
           ContentContainer {
             VStack(alignment: .leading, spacing: 16) {
-              H1("Legend")
-                .fontSize(.extraLarge)
-                .fontSize(.fourXLarge, condition: .desktop)
+              H2("Legend")
+                .fontSize(.large)
+                .fontSize(.extraExtraLarge, condition: .desktop)
                 .bold()
                 .fontDesign("rounded")
 
               HStack(spacing: 16) {
                 SupportedSeal()
-                Slipstream.Text("Vehicle is fully onboarded and does not currently need new beta testers.")
+                Slipstream.Text("Vehicle is fully onboarded.")
               }
               HStack(spacing: 16) {
                 OBDStamp()
@@ -179,17 +190,6 @@ struct ModelPage: View {
               HStack(spacing: 16) {
                 OTAStamp()
                 Slipstream.Text("Feature is supported via Connected Accounts (Beta).")
-              }
-              HStack(spacing: 16) {
-                NotApplicableStamp()
-                Slipstream.Text("Not applicable to this vehicle.")
-              }
-              HStack(spacing: 16) {
-                Slipstream.Text {
-                  Span("PID?")
-                    .bold()
-                  DOMString(" The OBD parameter identifier (PID) is unknown.")
-                }
               }
             }
             .alignItems(.center, condition: .desktop)
@@ -209,13 +209,13 @@ struct ModelPage: View {
                   .display(.inlineBlock)
                   .frame(width: 36)
 
-                H1("General support")
-                  .fontSize(.extraLarge)
-                  .fontSize(.fourXLarge, condition: .desktop)
+                H2("General support")
+                  .fontSize(.large)
+                  .fontSize(.extraExtraLarge, condition: .desktop)
                   .bold()
                   .fontDesign("rounded")
               }
-              Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996 and vehicles worldwide in the 2000's. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Sidecar for free.")
+              Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996 and vehicles worldwide in the 2000's. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters.")
             }
             .padding([.top, .horizontal], 16)
             .background(.zinc, darkness: 0)
@@ -223,6 +223,30 @@ struct ModelPage: View {
             .cornerRadius(.extraExtraLarge)
             .margin(.horizontal, .auto, condition: .desktop)
             .frame(width: 0.5, condition: .desktop)
+          }
+        }
+        .margin(.bottom, 32)
+
+        // Scanner Compatibility Section
+        Section {
+          ContentContainer {
+            VStack(alignment: .leading, spacing: 16) {
+              H2("What OBD scanner works with this car?")
+                .fontSize(.large)
+                .fontSize(.extraExtraLarge, condition: .desktop)
+                .bold()
+                .fontDesign("rounded")
+
+              Slipstream.Text {
+                DOMString("Most standard OBD-II scanners are compatible with most vehicles. Sidecar works with a wide range of WiFi and Bluetooth ELM327-based adapters. ")
+                Link("View list of tested scanners", destination: URL(string: "/scanning/"))
+                  .textColor(.link, darkness: 700)
+                  .textColor(.link, darkness: 400, condition: .dark)
+                  .fontWeight(600)
+                  .underline(condition: .hover)
+              }
+            }
+            .padding(.vertical, 16)
           }
         }
         .margin(.bottom, 32)

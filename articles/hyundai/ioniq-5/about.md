@@ -2,7 +2,7 @@
 
 The Hyundai IONIQ 5 is an all-electric SUV that showcases Hyundai's innovative approach to electric vehicle design and technology. Launched in 2021, the IONIQ 5 is built on Hyundai's dedicated Electric-Global Modular Platform (E-GMP) and features distinctive retro-futuristic styling inspired by the classic Hyundai Pony.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the IONIQ 5 support wireless Apple CarPlay and Android Auto?
 

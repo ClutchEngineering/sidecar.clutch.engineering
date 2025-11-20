@@ -7,7 +7,7 @@ The Toyota Camry is a midsize sedan renowned for its exceptional reliability, co
 - `700`: Engine control module (ECM)
 - `701`: Transmission control module (TCM)
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Toyota Camry support Apple CarPlay and Android Auto?
 

@@ -2,7 +2,7 @@
 
 The Toyota Tundra is a full-size pickup truck that has been a cornerstone of Toyota's truck lineup since 1999, known for its durability and reliability.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Toyota Tundra support Apple CarPlay and Android Auto?
 

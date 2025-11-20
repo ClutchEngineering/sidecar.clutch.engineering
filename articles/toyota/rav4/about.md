@@ -2,7 +2,7 @@
 
 The Toyota RAV4 is a compact SUV that has been a pioneer in the crossover segment since 1994. Starting with the 2026 model year, Toyota is making the RAV4 exclusively hybrid-powered across all trim levels, reinforcing Toyota's commitment to electrification.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Toyota RAV4 support Apple CarPlay and Android Auto?
 

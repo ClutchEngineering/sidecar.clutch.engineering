@@ -2,7 +2,7 @@
 
 The Lexus LS is the flagship luxury sedan of the Lexus brand. First introduced in 1989 as the LS 400, the LS established Lexus as a serious competitor in the luxury sedan market and has represented the pinnacle of the brand's commitment to quality, refinement, and innovation across five generations.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Lexus LS support Apple CarPlay and Android Auto?
 

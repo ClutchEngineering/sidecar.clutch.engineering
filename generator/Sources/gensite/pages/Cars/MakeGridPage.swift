@@ -52,7 +52,7 @@ struct MakeGridPage: View {
           HeroIconPuck(url: URL(string: "/gfx/supported-vehicle.png")!)
 
           Div {
-            H1("Supported Cars")
+            H1("Supported cars")
               .fontSize(.extraLarge)
               .fontSize(.fourXLarge, condition: .desktop)
               .bold()

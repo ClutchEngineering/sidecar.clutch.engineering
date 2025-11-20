@@ -2,7 +2,7 @@
 
 The Ford Mustang Mach-E is an all-electric SUV that combines the iconic Mustang heritage with modern electric vehicle technology. Launched in 2021, the Mach-E is Ford's entry into the electric vehicle market.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Are there limitations on OBD2 parameter access for 2025+ model years?
 

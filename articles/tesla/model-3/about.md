@@ -2,7 +2,7 @@
 
 The Tesla Model 3 is an all-electric sedan that has been Tesla's most popular and affordable vehicle since its launch in 2017. Known for its minimalist interior design centered around a 15-inch touchscreen, the Model 3 uses Tesla's proprietary infotainment system rather than standard smartphone integration platforms.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Tesla Model 3 support Apple CarPlay and Android Auto?
 

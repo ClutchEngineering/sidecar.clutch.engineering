@@ -2,7 +2,7 @@
 
 The Ford F-150 Lightning is an all-electric version of America's best-selling pickup truck. Introduced for the 2022 model year, the Lightning combines the F-150's legendary capability with electric vehicle technology, offering impressive power, innovative features, and advanced connectivity.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Ford F-150 Lightning support Apple CarPlay and Android Auto?
 

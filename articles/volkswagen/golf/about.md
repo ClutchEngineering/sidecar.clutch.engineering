@@ -2,7 +2,7 @@
 
 The Volkswagen Golf is an iconic compact hatchback that has been a cornerstone of the automotive world since 1974. In the United States market, the Golf is currently represented by its performance-oriented variants: the sporty Golf GTI and the high-performance Golf R.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Volkswagen Golf support Apple CarPlay and Android Auto?
 

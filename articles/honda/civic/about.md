@@ -2,7 +2,7 @@
 
 The Honda Civic is one of the most iconic and enduring compact cars in automotive history. First introduced in 1972, the Civic has evolved through eleven generations to become synonymous with reliability, fuel efficiency, and practicality.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Honda Civic support Apple CarPlay and Android Auto?
 

@@ -9,9 +9,9 @@ struct ParameterSupportTable: View {
 
   var body: some View {
     VStack(alignment: .leading, spacing: 24) {
-      H2("All Parameters by Model Year")
+      H2("Parameter support by model year")
         .fontSize(.large)
-        .fontSize(.extraLarge, condition: .desktop)
+        .fontSize(.extraExtraLarge, condition: .desktop)
         .bold()
         .fontDesign("rounded")
         .margin(.bottom, 16)
@@ -31,11 +31,6 @@ struct ParameterSupportTable: View {
 
             ParameterTable(section: section)
           }
-          .padding(16)
-          .background(.zinc, darkness: 50)
-          .background(.zinc, darkness: 900, condition: .dark)
-          .cornerRadius(.large)
-          .margin(.bottom, 16)
         }
       }
     }
@@ -73,7 +68,7 @@ struct ParameterTable: View {
       if index % 2 == 0 {
         try yearHeader.addClass("bg-zinc-100 dark:bg-zinc-800")
       } else {
-        try yearHeader.addClass("bg-zinc-50 dark:bg-zinc-850")
+        try yearHeader.addClass("bg-zinc-50 dark:bg-zinc-900")
       }
     }
 
@@ -95,18 +90,19 @@ struct ParameterTable: View {
 
       let nameSpan = try nameDiv.appendElement("span")
       try nameSpan.text(row.parameter.name)
+
+      if let unit = row.parameter.unit {
+        let unitSpan = try nameSpan.appendElement("span")
+        try unitSpan.text(" (\(unit))")
+        try unitSpan.addClass("text-xs text-zinc-600 dark:text-zinc-400")
+      }
+
       try nameSpan.addClass("font-medium")
 
       // Signal ID in smaller, secondary color
       let idSpan = try nameDiv.appendElement("span")
       try idSpan.text(row.parameter.id)
       try idSpan.addClass("text-xs text-zinc-500 dark:text-zinc-500 font-mono")
-
-      if let unit = row.parameter.unit {
-        let unitSpan = try nameDiv.appendElement("span")
-        try unitSpan.text("(\(unit))")
-        try unitSpan.addClass("text-xs text-zinc-600 dark:text-zinc-400")
-      }
 
       // Year support cells - use the first year in each column since they're all the same
       for (index, yearColumn) in section.yearColumns.enumerated() {
@@ -115,9 +111,9 @@ struct ParameterTable: View {
 
         // Add alternating background colors
         if index % 2 == 0 {
-          try cell.addClass("bg-zinc-50 dark:bg-zinc-900")
+          try cell.addClass("bg-zinc-50 dark:bg-zinc-800")
         } else {
-          try cell.addClass("bg-white dark:bg-zinc-950")
+          try cell.addClass("bg-white dark:bg-zinc-900")
         }
 
         // Get support level from the first year in this column (all years in the range have the same level)

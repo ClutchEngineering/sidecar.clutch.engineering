@@ -2,7 +2,7 @@
 
 The Nissan Armada is a full-size SUV that serves as Nissan's flagship passenger vehicle. The third-generation 2025 model represents a complete redesign with enhanced technology features.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Nissan Armada support Apple CarPlay and Android Auto?
 

@@ -2,7 +2,7 @@
 
 The Nissan Rogue is a compact crossover SUV that has been Nissan's best-selling vehicle in the United States since its introduction in 2007. The current third generation, launched in 2021, features modern connectivity options including wireless smartphone integration on higher trim levels.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Nissan Rogue support Apple CarPlay and Android Auto?
 

@@ -2,7 +2,7 @@
 
 The Volvo V90 is a midsize luxury wagon that combines Scandinavian design with practicality and premium features. Introduced in 2017, the V90 represents Volvo's commitment to the station wagon format, offering both standard and Cross Country variants.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Volvo V90 support Apple CarPlay and Android Auto?
 

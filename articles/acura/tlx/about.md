@@ -2,7 +2,7 @@
 
 The Acura TLX is a mid-size luxury sedan that combines sophisticated styling, advanced technology, and engaging performance. Introduced in 2014 as a replacement for both the TL and TSX sedans, the TLX represents Acura's vision of the modern sports sedan.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the TLX support Apple CarPlay and Android Auto?
 

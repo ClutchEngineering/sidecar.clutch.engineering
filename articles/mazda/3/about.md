@@ -2,7 +2,7 @@
 
 The Mazda 3 is a compact sedan and hatchback known for its sporty handling, refined design, and driver-focused features. First introduced in 2003, the Mazda 3 has become one of the brand's most popular models worldwide.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Mazda 3 support Apple CarPlay and Android Auto?
 

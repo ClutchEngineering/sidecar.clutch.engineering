@@ -2,7 +2,7 @@
 
 The Ford F-150 is America's best-selling truck and has been the top-selling vehicle in the United States for over four decades. Known for its capability, durability, and innovation, the F-150 offers a wide range of configurations including multiple cab sizes, bed lengths, and powertrains to suit virtually any need.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Ford F-150 support Apple CarPlay and Android Auto?
 

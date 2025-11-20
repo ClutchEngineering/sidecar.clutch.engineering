@@ -2,7 +2,7 @@
 
 The Mazda CX-9 is a three-row midsize SUV that combines refined design, engaging driving dynamics, and premium features. Introduced in 2007 and fully redesigned for the 2016 model year, the CX-9 served as Mazda's flagship SUV through the 2023 model year, when it was discontinued and replaced by the CX-90.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Mazda CX-9 support Apple CarPlay and Android Auto?
 

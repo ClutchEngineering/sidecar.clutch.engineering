@@ -2,7 +2,7 @@
 
 The Ram 1500 is a full-size pickup truck that has been a cornerstone of the American truck market since 1981. Known for its blend of capability, comfort, and advanced technology, the Ram 1500 offers a range of configurations to meet diverse needs.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Ram 1500 support Apple CarPlay and Android Auto?
 
