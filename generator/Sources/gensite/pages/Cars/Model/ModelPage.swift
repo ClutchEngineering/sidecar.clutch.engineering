@@ -231,7 +231,7 @@ struct ModelPage: View {
         Section {
           ContentContainer {
             VStack(alignment: .leading, spacing: 16) {
-              H2("What OBD scanner works with this car?")
+              H2("Which OBD scanners work with the \(make)?")
                 .fontSize(.large)
                 .fontSize(.extraExtraLarge, condition: .desktop)
                 .bold()
