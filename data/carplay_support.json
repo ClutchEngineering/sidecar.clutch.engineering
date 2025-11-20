@@ -125,6 +125,3533 @@
       "end_year": 2024
     }
   ],
+  "Alfa Romeo": [
+    {
+      "model": "Giulia",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Stelvio",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Tonale",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Milano",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Alpine": [
+    {
+      "model": "A110",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    }
+  ],
+  "Aston Martin": [
+    {
+      "model": "DB9 Volante",
+      "years": [
+        2017
+      ],
+      "start_year": 2017,
+      "end_year": 2017
+    },
+    {
+      "model": "V8 Vantage",
+      "years": [
+        2017
+      ],
+      "start_year": 2017,
+      "end_year": 2017
+    },
+    {
+      "model": "V12 Vantage",
+      "years": [
+        2017
+      ],
+      "start_year": 2017,
+      "end_year": 2017
+    },
+    {
+      "model": "Vanquish",
+      "years": [
+        2017,
+        2018
+      ],
+      "start_year": 2017,
+      "end_year": 2018
+    },
+    {
+      "model": "Rapide",
+      "years": [
+        2017,
+        2018
+      ],
+      "start_year": 2017,
+      "end_year": 2018
+    },
+    {
+      "model": "DBX",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "DB12",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    },
+    {
+      "model": "Vantage",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Audi": [
+    {
+      "model": "A3",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "A4",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "A5",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "A6",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "A7",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Q2",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Q7",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "R8",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "TT",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Q5",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "A1",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "A8",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "e-tron",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2019,
+      "end_year": 2023
+    },
+    {
+      "model": "Q8",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Q3",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "e-tron Sportback",
+      "years": [
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2021,
+      "end_year": 2023
+    },
+    {
+      "model": "e-tron GT",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Q4 e-tron",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Q4 Sportback e-tron",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Q8 e-tron",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Q8 Sportback e-tron",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Baojun": [
+    {
+      "model": "310",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "310W",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "510",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "730",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2020,
+      "end_year": 2023
+    },
+    {
+      "model": "310C",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "530",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "start_year": 2022,
+      "end_year": 2025
+    }
+  ],
+  "Bentley": [
+    {
+      "model": "Bentayga",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Continental",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Flying Spur",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    }
+  ],
+  "Bmw": [
+    {
+      "model": "1 Series",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "6 Series",
+      "years": [
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2017,
+      "end_year": 2019
+    },
+    {
+      "model": "2 Series",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "4 Series",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "5 Series",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "7 Series",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "8 Series",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "X3",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "X4",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "X5",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "X6",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "X7",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "3 Series",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "X1",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "X2",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "i3",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2018,
+      "end_year": 2023
+    },
+    {
+      "model": "i8",
+      "years": [
+        2019,
+        2020
+      ],
+      "start_year": 2019,
+      "end_year": 2020
+    },
+    {
+      "model": "Z4",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "1 Series",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "2 Series",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "3 Series",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "4 Series",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "5 Series",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "6 Series",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "8 Series",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "X5",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "X6",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "X7",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "X5 M",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "X6 M",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "Z4",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "i4",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "iX",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "iX1",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "iX3",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "i3",
+      "years": [
+        2023
+      ],
+      "start_year": 2023,
+      "end_year": 2023
+    },
+    {
+      "model": "i7",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "i5",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Borgward": [
+    {
+      "model": "BX3",
+      "years": [
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2018,
+      "end_year": 2020
+    },
+    {
+      "model": "BX4",
+      "years": [
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2018,
+      "end_year": 2020
+    },
+    {
+      "model": "BX5",
+      "years": [
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2018,
+      "end_year": 2020
+    },
+    {
+      "model": "BX6",
+      "years": [
+        2020
+      ],
+      "start_year": 2020,
+      "end_year": 2020
+    }
+  ],
+  "Buick": [
+    {
+      "model": "Excelle",
+      "years": [
+        2016,
+        2017
+      ],
+      "start_year": 2016,
+      "end_year": 2017
+    },
+    {
+      "model": "LaCrosse",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "Regal",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "Encore",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Envision",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Enclave",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "GT",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "GT-MPV",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "GL6",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "VELITE 6",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "GL8 Avenir",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "GL8 ES",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "GL8 Business Travel Edition",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "Encore GX",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Envista",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Byd": [
+    {
+      "model": "SEAL U",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "SONG PLUS",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "ATTO3",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "TANG",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "YUAN PLUS",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "CHAZOR",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "DOLPHIN",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "HALO6",
+      "years": [
+        2023
+      ],
+      "start_year": 2023,
+      "end_year": 2023
+    },
+    {
+      "model": "QIN PLUS",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "SEAGULL",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "SEAL",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "HAN",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "YUAN UP",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    },
+    {
+      "model": "SONG MAX EV",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Cadillac": [
+    {
+      "model": "ELR",
+      "years": [
+        2016
+      ],
+      "start_year": 2016,
+      "end_year": 2016
+    },
+    {
+      "model": "ATS",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2016,
+      "end_year": 2019
+    },
+    {
+      "model": "ATS-V",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2016,
+      "end_year": 2019
+    },
+    {
+      "model": "CTS",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2016,
+      "end_year": 2019
+    },
+    {
+      "model": "CTS-V",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2016,
+      "end_year": 2019
+    },
+    {
+      "model": "CT6",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "CT6-V",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "XTS",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2016,
+      "end_year": 2019
+    },
+    {
+      "model": "XT5",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "XT4",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "CT4",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "CT4-V",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "CT5",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "CT5-V",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "XT6",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Escalade / ESV",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "CT4-V Blackwing",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "CT5-V Blackwing",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Escalade-V",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "LYRIQ",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Chery": [
+    {
+      "model": "Arrizo 5",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Arrizo 7",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Tiggo 3",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Tiggo 3X",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Tiggo 5X",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Tiggo 2",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "Tiggo 4",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "Tiggo 8",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "Arrizo 6",
+      "years": [
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2020,
+      "end_year": 2022
+    }
+  ],
+  "Chevrolet": [
+    {
+      "model": "Cavalier",
+      "years": [
+        2016,
+        2017
+      ],
+      "start_year": 2016,
+      "end_year": 2017
+    },
+    {
+      "model": "Volt",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2016,
+      "end_year": 2019
+    },
+    {
+      "model": "Camaro",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2016,
+      "end_year": 2023
+    },
+    {
+      "model": "Camaro Convertible",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2016,
+      "end_year": 2023
+    },
+    {
+      "model": "Colorado",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Corvette",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Corvette Convertible",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Cruze",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "Impala",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2016,
+      "end_year": 2020
+    },
+    {
+      "model": "Malibu",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Sail LOVA",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Silverado",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Silverado HD",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Spark",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "Suburban",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Tahoe",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Aveo",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2017,
+      "end_year": 2020
+    },
+    {
+      "model": "Bolt EV",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2017,
+      "end_year": 2023
+    },
+    {
+      "model": "Prisma",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "S10",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Sonic",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Tracker",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Trax",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Equinox",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Traverse",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Blazer",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Monza",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Captiva",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Trailblazer",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Bolt EUV",
+      "years": [
+        2022,
+        2023
+      ],
+      "start_year": 2022,
+      "end_year": 2023
+    }
+  ],
+  "Chrysler": [
+    {
+      "model": "300",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2017,
+      "end_year": 2023
+    },
+    {
+      "model": "Pacifica",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Voyager",
+      "years": [
+        2020,
+        2021
+      ],
+      "start_year": 2020,
+      "end_year": 2021
+    }
+  ],
+  "Citroen": [
+    {
+      "model": "Aircross",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Berlingo Multispace",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2016,
+      "end_year": 2023
+    },
+    {
+      "model": "C3",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "C4",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "C4 Picasso",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "C5",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "C5 Break",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "C6",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "Jumper",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "Jumpy",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "Spacetourer",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "C3-AirCross",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "C3-XR",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "C4 Cactus",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "C4-L",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "C4-Lounge",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "C4 Spacetourer",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "C-Elysée",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "C-Quatre",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Berlingo",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "C5 Aircross",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    }
+  ],
+  "Cowin": [
+    {
+      "model": "E3",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "start_year": 2017,
+      "end_year": 2021
+    }
+  ],
+  "Cupra": [
+    {
+      "model": "Ateca",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Born",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Leon",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Formentor",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Leon Sportstourer",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    },
+    {
+      "model": "Tavascan",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Dacia": [
+    {
+      "model": "Spring",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Logan",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Sandero",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Sandero Stepway",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Duster",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "Jogger",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    }
+  ],
+  "Datsun": [
+    {
+      "model": "GO",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2019,
+      "end_year": 2022
+    },
+    {
+      "model": "GO+",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2019,
+      "end_year": 2022
+    }
+  ],
+  "Dodge": [
+    {
+      "model": "Challenger",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2017,
+      "end_year": 2023
+    },
+    {
+      "model": "Charger",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2017,
+      "end_year": 2023
+    },
+    {
+      "model": "Durango",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Journey",
+      "years": [
+        2019,
+        2020,
+        2021
+      ],
+      "start_year": 2019,
+      "end_year": 2021
+    },
+    {
+      "model": "Hornet",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Dongfeng": [
+    {
+      "model": "景逸S50",
+      "years": [
+        2016
+      ],
+      "start_year": 2016,
+      "end_year": 2016
+    },
+    {
+      "model": "风行50",
+      "years": [
+        2016,
+        2017
+      ],
+      "start_year": 2016,
+      "end_year": 2017
+    },
+    {
+      "model": "风行X5",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "景逸X5",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "景逸X6",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "风行SX7",
+      "years": [
+        2017
+      ],
+      "start_year": 2017,
+      "end_year": 2017
+    },
+    {
+      "model": "风行S50EV",
+      "years": [
+        2017
+      ],
+      "start_year": 2017,
+      "end_year": 2017
+    },
+    {
+      "model": "景逸X5L",
+      "years": [
+        2017
+      ],
+      "start_year": 2017,
+      "end_year": 2017
+    },
+    {
+      "model": "景逸S50EV",
+      "years": [
+        2017
+      ],
+      "start_year": 2017,
+      "end_year": 2017
+    },
+    {
+      "model": "风行X6",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "风行X7",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "风行SX6",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "风行F600",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "风行M6",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "风行F6",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "风行V6",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "风行M5",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "风行F5",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "风行V5",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "景逸X7",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "风行X3",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "风行X7L",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "风行X7S",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "风行S500EV",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "景逸X3",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "景逸X7S",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "景逸X7L",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    }
+  ],
+  "Ds": [
+    {
+      "model": "3",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "3 Cabrio",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "3 Crossback",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "4",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "5",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "4S",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "5LS",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "6",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "7",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "DS9",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    }
+  ],
+  "Exeed": [
+    {
+      "model": "VX",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "TXL",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "LX",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "RX",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Ferrari": [
+    {
+      "model": "FF",
+      "years": [
+        2016
+      ],
+      "start_year": 2016,
+      "end_year": 2016
+    },
+    {
+      "model": "F12 tdf",
+      "years": [
+        2016
+      ],
+      "start_year": 2016,
+      "end_year": 2016
+    },
+    {
+      "model": "California T",
+      "years": [
+        2016,
+        2017
+      ],
+      "start_year": 2016,
+      "end_year": 2017
+    },
+    {
+      "model": "F12 Berlinetta",
+      "years": [
+        2016,
+        2017
+      ],
+      "start_year": 2016,
+      "end_year": 2017
+    },
+    {
+      "model": "488 GTB",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2016,
+      "end_year": 2020
+    },
+    {
+      "model": "488 Spider",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2016,
+      "end_year": 2020
+    },
+    {
+      "model": "GTC4Lusso",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2017,
+      "end_year": 2020
+    },
+    {
+      "model": "812 Superfast",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "start_year": 2018,
+      "end_year": 2021
+    },
+    {
+      "model": "Portofino",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2018,
+      "end_year": 2023
+    },
+    {
+      "model": "Monza SP1",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Monza SP2",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "F8 Spider",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2020,
+      "end_year": 2023
+    },
+    {
+      "model": "F8 Tributo",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2020,
+      "end_year": 2023
+    },
+    {
+      "model": "SF90 Stradale",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "812 GTS",
+      "years": [
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2021,
+      "end_year": 2023
+    },
+    {
+      "model": "Roma",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "SF90 Spider",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "296 GTB",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "296 GTS",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Daytona SP3",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Purosangue",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "12Cilindri",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    },
+    {
+      "model": "12Cilindri Spider",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Fiat": [
+    {
+      "model": "500",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "500L",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Tipo",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "500X",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Argo",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2018,
+      "end_year": 2023
+    },
+    {
+      "model": "Panda",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "E-Doblò",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "600e",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
   "Ford": [
     {
       "model": "C-MAX",
@@ -333,7 +3860,7 @@
       "end_year": 2022
     },
     {
-      "model": "Ford GT",
+      "model": "GT",
       "years": [
         2018,
         2019,
@@ -406,6 +3933,533 @@
       ],
       "start_year": 2023,
       "end_year": 2024
+    }
+  ],
+  "Genesis": [
+    {
+      "model": "G80",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "G70",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "G90",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "GV80",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "start_year": 2021,
+      "end_year": 2025
+    },
+    {
+      "model": "GV70",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "start_year": 2022,
+      "end_year": 2025
+    },
+    {
+      "model": "GV60",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "GV60",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "G90",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "G70",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Gmc": [
+    {
+      "model": "Canyon",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Sierra",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Sierra HD",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Yukon",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Yukon XL",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Acadia",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Terrain",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "HUMMER EV Pickup",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "HUMMER EV SUV",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Haima": [
+    {
+      "model": "F7",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "S5",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "S5 young",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "S7",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "F5",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    }
+  ],
+  "Haval": [
+    {
+      "model": "H1 Blue-Brand",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "H2 Blue-Brand",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "H2 Red-Brand",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "H6 Blue-Brand",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "H6 Red-Brand",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "F7",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "H6N",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "DARGO",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    }
+  ],
+  "Holden": [
+    {
+      "model": "Captiva",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2016,
+      "end_year": 2020
+    },
+    {
+      "model": "Insignia",
+      "years": [
+        2016,
+        2017,
+        2018
+      ],
+      "start_year": 2016,
+      "end_year": 2018
+    },
+    {
+      "model": "Spark",
+      "years": [
+        2016,
+        2017,
+        2018
+      ],
+      "start_year": 2016,
+      "end_year": 2018
+    },
+    {
+      "model": "Colorado",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2016,
+      "end_year": 2020
+    },
+    {
+      "model": "Astra",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2017,
+      "end_year": 2020
+    },
+    {
+      "model": "Barina",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2017,
+      "end_year": 2020
+    },
+    {
+      "model": "Trailblazer",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2017,
+      "end_year": 2020
+    },
+    {
+      "model": "Commodore",
+      "years": [
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2018,
+      "end_year": 2020
+    },
+    {
+      "model": "Equinox",
+      "years": [
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2018,
+      "end_year": 2020
+    },
+    {
+      "model": "Trax",
+      "years": [
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2018,
+      "end_year": 2020
+    },
+    {
+      "model": "Acadia",
+      "years": [
+        2019,
+        2020
+      ],
+      "start_year": 2019,
+      "end_year": 2020
     }
   ],
   "Honda": [
@@ -567,7 +4621,55 @@
       "end_year": 2024
     }
   ],
+  "Honda Motor": [
+    {
+      "model": "Gold Wing",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Africa Twin",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    }
+  ],
   "Hyundai": [
+    {
+      "model": "Genesis Sedan",
+      "years": [
+        2015,
+        2016
+      ],
+      "start_year": 2015,
+      "end_year": 2016
+    },
+    {
+      "model": "Azera",
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018
+      ],
+      "start_year": 2015,
+      "end_year": 2018
+    },
     {
       "model": "Sonata",
       "years": [
@@ -586,6 +4688,64 @@
       "end_year": 2024
     },
     {
+      "model": "i10",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "i30",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "i40",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "Elantra GT",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2016,
+      "end_year": 2020
+    },
+    {
       "model": "Tucson",
       "years": [
         2016,
@@ -600,6 +4760,20 @@
       ],
       "start_year": 2016,
       "end_year": 2024
+    },
+    {
+      "model": "Veloster",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
     },
     {
       "model": "Santa Fe",
@@ -617,6 +4791,17 @@
       "end_year": 2024
     },
     {
+      "model": "Ioniq",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2017,
+      "end_year": 2020
+    },
+    {
       "model": "Kona",
       "years": [
         2017,
@@ -632,6 +4817,16 @@
       "end_year": 2024
     },
     {
+      "model": "Santa Fe Sport",
+      "years": [
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2017,
+      "end_year": 2019
+    },
+    {
       "model": "Elantra",
       "years": [
         2017,
@@ -644,6 +4839,39 @@
         2024
       ],
       "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Santa Fe XL",
+      "years": [
+        2019
+      ],
+      "start_year": 2019,
+      "end_year": 2019
+    },
+    {
+      "model": "Accent",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Nexo",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
       "end_year": 2024
     },
     {
@@ -671,6 +4899,27 @@
       "end_year": 2024
     },
     {
+      "model": "Bayon",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "Casper",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
       "model": "Ioniq 5",
       "years": [
         2022,
@@ -691,14 +4940,1724 @@
       "end_year": 2024
     },
     {
+      "model": "Palisade",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
       "model": "IONIQ 6",
       "years": [
         2023,
         2024
       ],
       "start_year": 2023,
-      "end_year": 2024,
-      "supports_carkey": true
+      "end_year": 2024
+    }
+  ],
+  "Indian Motorcycle": [
+    {
+      "model": "Challenger",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Chieftain",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Roadmaster",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    }
+  ],
+  "Infiniti": [
+    {
+      "model": "Q50",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Q60",
+      "years": [
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2020,
+      "end_year": 2022
+    },
+    {
+      "model": "QX50",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "QX80",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "QX55",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "QX60",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    }
+  ],
+  "Jaguar": [
+    {
+      "model": "E-Pace",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "F-Pace",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "I-Pace",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "XE",
+      "years": [
+        2019,
+        2020
+      ],
+      "start_year": 2019,
+      "end_year": 2020
+    },
+    {
+      "model": "XF",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "XJ",
+      "years": [
+        2019,
+        2020
+      ],
+      "start_year": 2019,
+      "end_year": 2020
+    },
+    {
+      "model": "F-Type",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    }
+  ],
+  "Jeep": [
+    {
+      "model": "Compass",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Grand Cherokee",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Renegade",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2018,
+      "end_year": 2023
+    },
+    {
+      "model": "Wrangler",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Cherokee",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Gladiator",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Grand Wagoneer",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Wagoneer",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Wagoneer S",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Kia": [
+    {
+      "model": "Soul",
+      "years": [
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2014,
+      "end_year": 2024
+    },
+    {
+      "model": "Optima",
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2015,
+      "end_year": 2020
+    },
+    {
+      "model": "Optima Hybrid",
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2015,
+      "end_year": 2020
+    },
+    {
+      "model": "Sedona",
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "start_year": 2015,
+      "end_year": 2021
+    },
+    {
+      "model": "Soul EV",
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "start_year": 2015,
+      "end_year": 2021
+    },
+    {
+      "model": "Cadenza",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2017,
+      "end_year": 2020
+    },
+    {
+      "model": "Sorento",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Sportage",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Forte",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Niro",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Optima Plug-In Hybrid",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2017,
+      "end_year": 2020
+    },
+    {
+      "model": "Niro Plug-In Hybrid",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Rio",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2018,
+      "end_year": 2023
+    },
+    {
+      "model": "Stinger",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2018,
+      "end_year": 2023
+    },
+    {
+      "model": "K900",
+      "years": [
+        2019,
+        2020
+      ],
+      "start_year": 2019,
+      "end_year": 2020
+    },
+    {
+      "model": "Telluride",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Seltos",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "K5",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "K8",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "Carnival",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "EV6",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Telluride",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Niro",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Seltos",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    },
+    {
+      "model": "EV9",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Lada": [
+    {
+      "model": "Vesta",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "XRAY",
+      "years": [
+        2021,
+        2022
+      ],
+      "start_year": 2021,
+      "end_year": 2022
+    },
+    {
+      "model": "Granta",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "Largus",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    }
+  ],
+  "Lamborghini": [
+    {
+      "model": "Centenario",
+      "years": [
+        2017
+      ],
+      "start_year": 2017,
+      "end_year": 2017
+    },
+    {
+      "model": "Aventador",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2018,
+      "end_year": 2023
+    },
+    {
+      "model": "Huracán",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Urus",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Revuelto",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Land Rover": [
+    {
+      "model": "Discovery",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Discovery Sport",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Range Rover",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Range Rover Evoque",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Range Rover Sport",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Range Rover Velar",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Defender",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    }
+  ],
+  "Lexus": [
+    {
+      "model": "ES",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "LC",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "LS",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "NX",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "start_year": 2019,
+      "end_year": 2025
+    },
+    {
+      "model": "RC",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "RC F",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "UX",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "start_year": 2019,
+      "end_year": 2025
+    },
+    {
+      "model": "RX",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "ES Hybrid",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "IS",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "LC Convertible",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "LC Hybrid",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "LS Hybrid",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "NX Hybrid",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "start_year": 2021,
+      "end_year": 2025
+    },
+    {
+      "model": "RX Hybrid",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "UX Hybrid",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "start_year": 2021,
+      "end_year": 2025
+    },
+    {
+      "model": "GX",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "IS 500",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "NX Plug-in Hybrid EV",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "RZ 450e",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "RX 500h",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "TX",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Ldv": [
+    {
+      "model": "G10",
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2015,
+      "end_year": 2024
+    },
+    {
+      "model": "EV80",
+      "years": [
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2017,
+      "end_year": 2019
+    },
+    {
+      "model": "D90",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "T60",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "V80",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "DELIVER 9",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "eDELIVER 9",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    }
+  ],
+  "Lifan": [
+    {
+      "model": "迈威",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "轩朗",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "X70",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "X80",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    }
+  ],
+  "Lincoln": [
+    {
+      "model": "MKS",
+      "years": [
+        2017,
+        2018
+      ],
+      "start_year": 2017,
+      "end_year": 2018
+    },
+    {
+      "model": "MKX",
+      "years": [
+        2017,
+        2018
+      ],
+      "start_year": 2017,
+      "end_year": 2018
+    },
+    {
+      "model": "MKC",
+      "years": [
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2017,
+      "end_year": 2019
+    },
+    {
+      "model": "MKT",
+      "years": [
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2017,
+      "end_year": 2019
+    },
+    {
+      "model": "MKZ",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2017,
+      "end_year": 2020
+    },
+    {
+      "model": "Navigator",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Continental",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2017,
+      "end_year": 2020
+    },
+    {
+      "model": "Nautilus",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "start_year": 2018,
+      "end_year": 2025
+    },
+    {
+      "model": "Aviator",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "start_year": 2020,
+      "end_year": 2025
+    },
+    {
+      "model": "Corsair",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    }
+  ],
+  "Lotus": [
+    {
+      "model": "Emira",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Eletre",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    },
+    {
+      "model": "Emeya",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Lucid": [
+    {
+      "model": "Air",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Lynk Co": [
+    {
+      "model": "& Co 01",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    }
+  ],
+  "Mahindra": [
+    {
+      "model": "Alturas G4",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "Marazzo",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Scorpio",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "XUV300",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "XUV500",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2019,
+      "end_year": 2022
+    },
+    {
+      "model": "Thar",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "XUV400",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "XUV700",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Maserati": [
+    {
+      "model": "Ghibli",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Levante",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Quattroporte",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "GT Convertible",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "start_year": 2018,
+      "end_year": 2021
+    },
+    {
+      "model": "GranTurismo",
+      "years": [
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2018,
+      "end_year": 2020
+    },
+    {
+      "model": "MC20",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "GranTurismo",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Grecale",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Maxus": [
+    {
+      "model": "G10",
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2015,
+      "end_year": 2024
+    },
+    {
+      "model": "EV80",
+      "years": [
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2017,
+      "end_year": 2019
+    },
+    {
+      "model": "D90",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "T60",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "V80",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "DELIVER 9",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "eDELIVER 9",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "DELIVER 7",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "eDELIVER 7",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "EV70",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "FIDATO",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "V70",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
     }
   ],
   "Mazda": [
@@ -728,7 +6687,33 @@
       "end_year": 2024
     },
     {
+      "model": "CX-8",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
       "model": "CX-9",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "MX-5",
       "years": [
         2019,
         2020,
@@ -754,7 +6739,7 @@
       "end_year": 2024
     },
     {
-      "model": "CX-30",
+      "model": "CX-3",
       "years": [
         2020,
         2021,
@@ -766,6 +6751,41 @@
       "end_year": 2024
     },
     {
+      "model": "CX30",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Mazda2",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "MX-30",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
       "model": "CX-50",
       "years": [
         2022,
@@ -773,6 +6793,2567 @@
         2024
       ],
       "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "CX-60",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "CX-90",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    },
+    {
+      "model": "CX-70",
+      "years": [
+        2025
+      ],
+      "start_year": 2025,
+      "end_year": 2025
+    }
+  ],
+  "Mercedes": [
+    {
+      "model": "A-Class",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "B-Class",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "CLA-Class",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "CLS-Class",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "E-Class Cabriolet",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "E-Class Coupe",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "GLA-Class",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "GLE-Class",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "X-Class",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2017,
+      "end_year": 2020
+    },
+    {
+      "model": "E-Class",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2017,
+      "end_year": 2023
+    },
+    {
+      "model": "GLS-Class",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "SL-Class",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Sprinter",
+      "years": [
+        2018
+      ],
+      "start_year": 2018,
+      "end_year": 2018
+    },
+    {
+      "model": "Vito",
+      "years": [
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2018,
+      "end_year": 2020
+    },
+    {
+      "model": "GLC-Class",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "S-Class",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "C-Class",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Metris",
+      "years": [
+        2020
+      ],
+      "start_year": 2020,
+      "end_year": 2020
+    },
+    {
+      "model": "V-Class",
+      "years": [
+        2020
+      ],
+      "start_year": 2020,
+      "end_year": 2020
+    },
+    {
+      "model": "GLB-Class",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "GLS-Class",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Citan",
+      "years": [
+        2021
+      ],
+      "start_year": 2021,
+      "end_year": 2021
+    },
+    {
+      "model": "EQA-Class",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "EQC-Class",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "EQB-Class",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "EQS-Class",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "EQE-Class",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "CLE-Class",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    },
+    {
+      "model": "E-Class",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Mg": [
+    {
+      "model": "GT",
+      "years": [
+        2016
+      ],
+      "start_year": 2016,
+      "end_year": 2016
+    },
+    {
+      "model": "MG5",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "RX5",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "GS",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "ZP",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "ZS",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Hector",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "MG",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2019,
+      "end_year": 2022
+    },
+    {
+      "model": "Ei5",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "HS",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2019,
+      "end_year": 2022
+    },
+    {
+      "model": "ZS EV",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "eHS",
+      "years": [
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2020,
+      "end_year": 2022
+    },
+    {
+      "model": "Gloster",
+      "years": [
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2020,
+      "end_year": 2022
+    },
+    {
+      "model": "MG3",
+      "years": [
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2020,
+      "end_year": 2022
+    },
+    {
+      "model": "MG4",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Marvel R",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "Astor",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    }
+  ],
+  "Mini": [
+    {
+      "model": "Clubman",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Countryman",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Convertible",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Hardtop 2 Door",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Hardtop 4 Door",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    }
+  ],
+  "Mitsubishi": [
+    {
+      "model": "i-MiEV",
+      "years": [
+        2017
+      ],
+      "start_year": 2017,
+      "end_year": 2017
+    },
+    {
+      "model": "Pajero",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Pajero Sport",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Mirage",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Mirage G4",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Outlander",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Outlander PHEV",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "ASX",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Triton",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Delica D:2",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Delica D:2 Custom",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Eclipse Cross",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Xpander",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Neta": [
+    {
+      "model": "AYA",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    },
+    {
+      "model": "V-II",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Nissan": [
+    {
+      "model": "Maxima",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Micra",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "GT-R",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Kicks",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Leaf",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Rogue",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Altima",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Qashqai",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Rogue Sport",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2019,
+      "end_year": 2022
+    },
+    {
+      "model": "Sentra",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Terrano",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Titan",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Versa",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "X-Trail",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Patrol",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Armada",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "Frontier",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Pathfinder",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Ariya",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Opel": [
+    {
+      "model": "ADAM",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2016,
+      "end_year": 2020
+    },
+    {
+      "model": "Astra",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Corsa",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Insignia",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "KARL",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2016,
+      "end_year": 2020
+    },
+    {
+      "model": "Ampera-e",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Crossland X",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Mokka",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Zafira",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Combo Life",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Grandland",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    }
+  ],
+  "Peugeot": [
+    {
+      "model": "208",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "2008",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "308S",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "3008",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "4008",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "408",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "301",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "308",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "308 SW",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "508",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "5008",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Expert",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Partner Tepee",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Traveller",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Rifter",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    }
+  ],
+  "Polaris Slingshot": [
+    {
+      "model": "Slingshot",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    }
+  ],
+  "Polestar": [
+    {
+      "model": "1",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "start_year": 2020,
+      "end_year": 2023
+    },
+    {
+      "model": "2",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    }
+  ],
+  "Porsche": [
+    {
+      "model": "718",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Panamera",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Macan",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Cayenne",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "911",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Taycan",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    }
+  ],
+  "Qoros": [
+    {
+      "model": "Young",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    }
+  ],
+  "Ram": [
+    {
+      "model": "1500",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "2500",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "3500",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "4500",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "RAMPAGE",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    },
+    {
+      "model": "1500",
+      "years": [
+        2025
+      ],
+      "start_year": 2025,
+      "end_year": 2025
+    }
+  ],
+  "Renault": [
+    {
+      "model": "Twingo",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2017,
+      "end_year": 2020
+    },
+    {
+      "model": "Duster",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "start_year": 2017,
+      "end_year": 2021
+    },
+    {
+      "model": "Espace",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Fluence",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Kadjar",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Talisman",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Talisman Estate",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Captur",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Clio",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Kid",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Kangoo",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Koleos",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Master",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Mégane",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Mégane Estate",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Oroch",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Sandero",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Scénic",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Grand Scénic",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Traffic",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Zoe",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Arkana",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Alaskan",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Triber",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Kaptur",
+      "years": [
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2020,
+      "end_year": 2022
+    },
+    {
+      "model": "Kiger",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "Austral",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Kwid E-Tech",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Kangoo E-Tech",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Megane E-Tech",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Twingo E-Tech",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Roewe": [
+    {
+      "model": "RX5",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "eRX5",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "RX3",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "i6",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "i5",
+      "years": [
+        2019,
+        2020,
+        2021
+      ],
+      "start_year": 2019,
+      "end_year": 2021
+    }
+  ],
+  "Rolls Royce": [
+    {
+      "model": "Cullinan",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Dawn",
+      "years": [
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2020,
+      "end_year": 2022
+    },
+    {
+      "model": "Ghost",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Phantom",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Wraith",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Spectre",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Rox": [
+    {
+      "model": "01",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Seat": [
+    {
+      "model": "Alhambra",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Ibiza",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Leon",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Toledo",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Ateca",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Arona",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Tarraco",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    }
+  ],
+  "Skoda": [
+    {
+      "model": "Yeti",
+      "years": [
+        2016,
+        2017
+      ],
+      "start_year": 2016,
+      "end_year": 2017
+    },
+    {
+      "model": "Fabia",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Octavia",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Rapid",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "Superb",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Karoq",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Kodiaq",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Scala",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Kamiq",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Enyaq iV",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Enyaq Coupé iV",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Fabia",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Smart": [
+    {
+      "model": "smart#1",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "smart#3",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
       "end_year": 2024
     }
   ],
@@ -888,6 +9469,17 @@
       "end_year": 2024
     },
     {
+      "model": "WRX STI",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2019,
+      "end_year": 2022
+    },
+    {
       "model": "Solterra",
       "years": [
         2023,
@@ -897,9 +9489,278 @@
       "end_year": 2024
     }
   ],
-  "Toyota": [
+  "Suzuki": [
     {
-      "model": "Camry",
+      "model": "Baleno",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Ciaz",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Hustler",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Ignis",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Lapin",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Solio",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Solio Bandit",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Spacia",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Spacia Custom",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "SX4 S-CROSS",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Vitara",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Dzire",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Jimny",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Swift",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "S-Cross",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Tank": [
+    {
+      "model": "300",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    }
+  ],
+  "Tata": [
+    {
+      "model": "Nexon",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Hexa",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2019,
+      "end_year": 2022
+    },
+    {
+      "model": "Tiago",
       "years": [
         2019,
         2020,
@@ -912,7 +9773,20 @@
       "end_year": 2024
     },
     {
-      "model": "Corolla",
+      "model": "Tigor",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "Altroz",
       "years": [
         2020,
         2021,
@@ -921,6 +9795,106 @@
         2024
       ],
       "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Harrier",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Punch",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "Safari",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    }
+  ],
+  "Toyota": [
+    {
+      "model": "Aygo",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2018,
+      "end_year": 2022
+    },
+    {
+      "model": "Avalon",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2019,
+      "end_year": 2022
+    },
+    {
+      "model": "Corolla Hatchback",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "start_year": 2019,
+      "end_year": 2025
+    },
+    {
+      "model": "Camry",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "start_year": 2019,
+      "end_year": 2025
+    },
+    {
+      "model": "C-HR",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
       "end_year": 2024
     },
     {
@@ -937,6 +9911,52 @@
       "end_year": 2024
     },
     {
+      "model": "Sienna",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "86",
+      "years": [
+        2020,
+        2021
+      ],
+      "start_year": 2020,
+      "end_year": 2021
+    },
+    {
+      "model": "4Runner",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Corolla",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
       "model": "Highlander",
       "years": [
         2020,
@@ -949,7 +9969,43 @@
       "end_year": 2024
     },
     {
-      "model": "4Runner",
+      "model": "Prius",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Prius Prime",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "Sequoia",
+      "years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2020,
+      "end_year": 2024
+    },
+    {
+      "model": "GR Supra",
       "years": [
         2020,
         2021,
@@ -985,20 +10041,7 @@
       "end_year": 2024
     },
     {
-      "model": "Sienna",
-      "years": [
-        2019,
-        2020,
-        2021,
-        2022,
-        2023,
-        2024
-      ],
-      "start_year": 2019,
-      "end_year": 2024
-    },
-    {
-      "model": "Prius",
+      "model": "Yaris",
       "years": [
         2020,
         2021,
@@ -1010,57 +10053,1133 @@
       "end_year": 2024
     },
     {
-      "model": "Corolla Hatchback",
+      "model": "Avanza",
       "years": [
-        2019,
-        2020,
         2021,
         2022,
         2023,
         2024
       ],
-      "start_year": 2019,
+      "start_year": 2021,
       "end_year": 2024
     },
     {
-      "model": "C-HR",
+      "model": "Mirai",
       "years": [
-        2019,
-        2020,
         2021,
         2022,
         2023,
         2024
       ],
-      "start_year": 2019,
+      "start_year": 2021,
       "end_year": 2024
     },
     {
-      "model": "GR Supra",
+      "model": "Venza",
       "years": [
-        2020,
         2021,
         2022,
         2023,
         2024
       ],
-      "start_year": 2020,
+      "start_year": 2021,
       "end_year": 2024
     },
     {
-      "model": "Sequoia",
+      "model": "Corolla Cross",
       "years": [
-        2020,
-        2021,
         2022,
         2023,
         2024
       ],
-      "start_year": 2020,
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "GR86",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Voxy",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Aygo X",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
       "end_year": 2024
     },
     {
       "model": "bZ4X",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Crown",
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "start_year": 2023,
+      "end_year": 2025
+    },
+    {
+      "model": "GR Corolla",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "Grand Highlander",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Vauxhall": [
+    {
+      "model": "ADAM",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020
+      ],
+      "start_year": 2016,
+      "end_year": 2020
+    },
+    {
+      "model": "Astra",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Corsa",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Insignia",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Viva",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "Ampera-e",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2017,
+      "end_year": 2022
+    },
+    {
+      "model": "Crossland-x",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Grandland",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Mokka",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Zafira",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    }
+  ],
+  "Vinfast": [
+    {
+      "model": "VF6",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "VF7",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "VF8",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "VF9",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    }
+  ],
+  "Vw": [
+    {
+      "model": "Spacefox",
+      "years": [
+        2016
+      ],
+      "start_year": 2016,
+      "end_year": 2016
+    },
+    {
+      "model": "CC",
+      "years": [
+        2016,
+        2017,
+        2018
+      ],
+      "start_year": 2016,
+      "end_year": 2018
+    },
+    {
+      "model": "Scirocco",
+      "years": [
+        2016,
+        2017,
+        2018
+      ],
+      "start_year": 2016,
+      "end_year": 2018
+    },
+    {
+      "model": "Amarok",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Beetle",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2016,
+      "end_year": 2019
+    },
+    {
+      "model": "Beetle Cabriolet",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019
+      ],
+      "start_year": 2016,
+      "end_year": 2019
+    },
+    {
+      "model": "Golf R",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Caddy",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "California",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Caravelle",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "e-Golf",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "start_year": 2016,
+      "end_year": 2021
+    },
+    {
+      "model": "Fox",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "start_year": 2016,
+      "end_year": 2021
+    },
+    {
+      "model": "Golf",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Golf Cabriolet",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Golf SportsVan",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Golf Variant",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Golf SportWagen",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "GTI",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Jetta",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Lamando",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Multivan",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Passat Variant",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "Polo",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Sharan",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "Tiguan",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Touran",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Transporter",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "Passat",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022
+      ],
+      "start_year": 2016,
+      "end_year": 2022
+    },
+    {
+      "model": "Atlas",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Crafter",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "CrossFox",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Gol",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Saveiro",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Voyage",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "Arteon",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Bora",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Magotan",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "Sagitar",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "T-Roc",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "ID.3",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "ID.4",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2021,
+      "end_year": 2024
+    },
+    {
+      "model": "Taos",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "ID.5",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "ID.6",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "Talagon",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "ID.Buzz",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "ID.7",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Volvo": [
+    {
+      "model": "XC90",
+      "years": [
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2016,
+      "end_year": 2024
+    },
+    {
+      "model": "S90",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "V90",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "XC60",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    },
+    {
+      "model": "S60",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "V60",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "XC40",
+      "years": [
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2019,
+      "end_year": 2024
+    },
+    {
+      "model": "C40 Recharge",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2022,
+      "end_year": 2024
+    },
+    {
+      "model": "EX30",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    },
+    {
+      "model": "EX90",
+      "years": [
+        2024
+      ],
+      "start_year": 2024,
+      "end_year": 2024
+    }
+  ],
+  "Wey": [
+    {
+      "model": "VV5",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "VV7",
+      "years": [
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2017,
+      "end_year": 2024
+    },
+    {
+      "model": "VV6",
+      "years": [
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "start_year": 2018,
+      "end_year": 2024
+    }
+  ],
+  "Zeekr": [
+    {
+      "model": "X",
+      "years": [
+        2023,
+        2024
+      ],
+      "start_year": 2023,
+      "end_year": 2024
+    },
+    {
+      "model": "001",
       "years": [
         2023,
         2024

@@ -1,24 +1,133 @@
 #!/usr/bin/env python3
 """
-Extract CarPlay data directly from the HTML provided by the user.
+Extract CarPlay data from Apple's official CarPlay page.
 This creates a comprehensive JSON file with make/model/year information.
 """
 
 import json
 import re
+import sys
+from urllib.request import urlopen, Request
+from html.parser import HTMLParser
 
-# This is the complete models data extracted from Apple's page
-CARPLAY_DATA_HTML = """
-The HTML content is embedded in the script - parsing inline
-"""
+CARPLAY_URL = "https://www.apple.com/ios/carplay/available-models/"
 
-def parse_carplay_data():
-    """Parse the CarPlay supported models data."""
+class CarPlayHTMLParser(HTMLParser):
+    """Parser to extract CarPlay model data from Apple's page."""
 
-    # Manual extraction based on the HTML structure provided
-    # This data was extracted from: https://www.apple.com/ios/carplay/available-models/
+    def __init__(self):
+        super().__init__()
+        self.carplay_data = {}
+        self.current_manufacturer = None
+        self.in_manufacturer_span = False
+        self.in_model_list = False
+        self.in_list_item = False
+        self.current_attrs = []
 
-    carplay_data = {
+    def handle_starttag(self, tag, attrs):
+        attrs_dict = dict(attrs)
+
+        # Check for manufacturer name span
+        if tag == 'span' and attrs_dict.get('class') == 'image-logo-text':
+            self.in_manufacturer_span = True
+
+        # Check for models list container
+        elif tag == 'div' and 'models-list-container' in attrs_dict.get('class', ''):
+            self.in_model_list = True
+
+        # Check for list items within the models list
+        elif tag == 'li' and self.in_model_list:
+            self.in_list_item = True
+
+    def handle_endtag(self, tag):
+        if tag == 'span':
+            self.in_manufacturer_span = False
+        elif tag == 'div':
+            self.in_model_list = False
+        elif tag == 'li':
+            self.in_list_item = False
+
+    def handle_data(self, data):
+        data = data.strip()
+        if not data:
+            return
+
+        # Capture manufacturer name
+        if self.in_manufacturer_span:
+            # Convert kebab-case to title case (e.g., "alfa-romeo" -> "Alfa Romeo")
+            manufacturer = data.replace('-', ' ').title()
+            self.current_manufacturer = manufacturer
+            if manufacturer not in self.carplay_data:
+                self.carplay_data[manufacturer] = []
+
+        # Capture model data from list items
+        elif self.in_list_item and self.current_manufacturer:
+            # Pattern: "YYYY - YYYY Model Name" or "YYYY Model Name"
+            # Also handle HTML entities like &#x2011; (non-breaking hyphen)
+            data = data.replace('\u2011', '-')  # Replace non-breaking hyphen
+
+            model_match = re.match(r'(\d{4})(?:\s*-\s*(\d{4}))?\s+(.+)', data)
+            if model_match:
+                start_year = int(model_match.group(1))
+                end_year = int(model_match.group(2)) if model_match.group(2) else start_year
+                model_name = model_match.group(3).strip()
+
+                # Strip manufacturer prefix from model name if present
+                # e.g., "Abarth 595" -> "595", "Ford GT" -> "GT"
+                manufacturer_words = self.current_manufacturer.lower().split()
+                model_words = model_name.split()
+
+                # Check if model starts with manufacturer name
+                if model_words and model_words[0].lower() in manufacturer_words:
+                    # Remove the first word (manufacturer prefix)
+                    model_name = ' '.join(model_words[1:]) if len(model_words) > 1 else model_name
+
+                model_data = {
+                    "model": model_name,
+                    "years": list(range(start_year, end_year + 1)),
+                    "start_year": start_year,
+                    "end_year": end_year
+                }
+
+                # Avoid duplicates
+                if not any(m["model"] == model_name and m["start_year"] == start_year
+                          for m in self.carplay_data[self.current_manufacturer]):
+                    self.carplay_data[self.current_manufacturer].append(model_data)
+
+
+def fetch_carplay_data():
+    """Fetch and parse CarPlay data from Apple's website."""
+    print(f"Fetching data from {CARPLAY_URL}...")
+
+    try:
+        # Create request with user agent to avoid blocking
+        req = Request(
+            CARPLAY_URL,
+            headers={'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)'}
+        )
+
+        with urlopen(req, timeout=30) as response:
+            html_content = response.read().decode('utf-8')
+
+        parser = CarPlayHTMLParser()
+        parser.feed(html_content)
+
+        if not parser.carplay_data:
+            print("Warning: No data was extracted. The page structure may have changed.")
+            print("Falling back to manual data...")
+            return get_fallback_data()
+
+        return parser.carplay_data
+
+    except Exception as e:
+        print(f"Error fetching data: {e}")
+        print("Falling back to manual data...")
+        return get_fallback_data()
+
+
+def get_fallback_data():
+    """Fallback data in case web scraping fails."""
+    return {
         "Abarth": [
             {"model": "595", "years": list(range(2017, 2025)), "start_year": 2017, "end_year": 2024},
             {"model": "695", "years": list(range(2017, 2025)), "start_year": 2017, "end_year": 2024},
@@ -126,9 +235,9 @@ def parse_carplay_data():
 
 def main():
     """Generate the CarPlay support JSON file."""
-    data = parse_carplay_data()
+    data = fetch_carplay_data()
 
-    output_file = '/home/user/sidecar.clutch.engineering/data/carplay_support.json'
+    output_file = 'data/carplay_support.json'
 
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)

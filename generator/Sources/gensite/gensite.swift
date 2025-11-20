@@ -5,6 +5,7 @@ import AirtableAPI
 import DotEnvAPI
 import Markdown
 import VehicleSupportMatrix
+import VehicleSupport
 
 import Slipstream
 
@@ -244,6 +245,20 @@ struct Gensite: AsyncParsableCommand {
       let makes = supportMatrix.getAllMakes()
       print("Support matrix loaded, contains \(makes.count) makes")
 
+      // Load CarPlay support database
+      print("Loading CarPlay support database...")
+      let carPlayDB: CarPlaySupportDatabase?
+      do {
+        carPlayDB = try CarPlaySupportDatabase(
+          jsonURL: projectRoot.appending(path: "data/carplay_support.json")
+        )
+        let manufacturerCount = carPlayDB?.manufacturers.count ?? 0
+        print("CarPlay database loaded with \(manufacturerCount) manufacturers")
+      } catch {
+        print("Warning: Failed to load CarPlay database: \(error)")
+        carPlayDB = nil
+      }
+
       if buildAll || supportedCars {
         print("Generating supported cars pages...")
 
@@ -309,7 +324,8 @@ struct Gensite: AsyncParsableCommand {
               supportMatrix: supportMatrix,
               make: make,
               obdbID: obdbID,
-              projectRoot: projectRoot
+              projectRoot: projectRoot,
+              carPlayDB: carPlayDB
             )
             // Redirect old model URL to new URL
             let oldModelURL = URL(string: "/supported-cars/\(makeNameForSorting(make))/\(modelNameForURL(modelSupport.model))")

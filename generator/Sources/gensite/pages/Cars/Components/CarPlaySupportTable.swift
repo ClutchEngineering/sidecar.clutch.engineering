@@ -11,7 +11,7 @@ struct CarPlaySupportTable: View {
     var body: some View {
         if let support = carPlaySupport {
             VStack(alignment: .leading, spacing: 16) {
-                H3("Apple CarPlay Support")
+                H3("Apple CarPlay support")
                     .fontSize(.large)
                     .fontSize(.extraExtraLarge, condition: .desktop)
                     .bold()
@@ -21,13 +21,10 @@ struct CarPlaySupportTable: View {
                 Table {
                     TableHeader {
                         HeaderCell {
-                            Text("Model Years")
-                        }
-                        HeaderCell {
-                            Text("CarPlay Support")
+                            Text("Model years")
                         }
                         HeaderCell(isLast: true) {
-                            Text("Connection Type")
+                            Text("CarPlay support")
                         }
                     }
                     .background(.gray, darkness: 100)
@@ -43,26 +40,11 @@ struct CarPlaySupportTable: View {
                             .padding(.horizontal, 8)
                             .padding(.vertical, 12)
 
-                            Bordered {
-                                TableCell {
-                                    VStack(alignment: .center, spacing: 4) {
-                                        Text("✓ Supported")
-                                            .bold()
-                                            .textColor(.green, darkness: 600)
-                                        if support.supportsCarkey == true {
-                                            Text("🔑 Car Key")
-                                                .fontSize(.extraSmall)
-                                                .textColor(.blue, darkness: 600)
-                                        }
-                                    }
-                                }
-                            }
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 12)
-
                             Bordered(showTrailingBorder: false) {
                                 TableCell {
-                                    connectionTypeText(support: support)
+                                    Text("✓ Supported")
+                                        .bold()
+                                        .textColor(.green, darkness: 600)
                                 }
                             }
                             .padding(.horizontal, 8)
@@ -75,30 +57,15 @@ struct CarPlaySupportTable: View {
                 .cornerRadius(.large)
 
                 Paragraph {
-                    Text("Note: CarPlay support information is based on Apple's official compatibility list. Actual availability may vary by trim level and region.")
+                    Text("* From Apple's CarPlay support site: CarPlay support is either standard or available as an option on many new 2016 cars and later, with some manufacturers offering software updates for earlier models. Some models may support CarPlay or car keys only in certain configurations, and not all models are available in all areas. CarPlay support is subject to change. See your dealer for details.")
+                      .italic()
                 }
-                .fontSize(.small)
-                .textColor(.zinc, darkness: 600)
-                .textColor(.zinc, darkness: 400, condition: .dark)
+                .fontSize(.extraSmall)
+                .textColor(.zinc, darkness: 700)
+                .textColor(.zinc, darkness: 300, condition: .dark)
                 .italic()
             }
             .margin(.bottom, 32)
-        }
-    }
-
-    @ViewBuilder
-    private func connectionTypeText(support: CarPlayModelSupport) -> some View {
-        if let wireless = support.wireless, wireless {
-            Text("Wireless")
-        } else if let wired = support.wired, wired {
-            Text("Wired (USB)")
-        } else {
-            // Default assumption based on year
-            if support.startYear >= 2020 {
-                Text("Wired/Wireless (varies by trim)")
-            } else {
-                Text("Wired (USB)")
-            }
         }
     }
 }
