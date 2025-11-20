@@ -29,7 +29,7 @@ Comprehensive database of vehicles that support Apple CarPlay, organized by manu
 https://www.apple.com/ios/carplay/available-models/
 
 **Last Updated:**
-2025-01-20
+2025-11-19
 
 ## Usage
 
