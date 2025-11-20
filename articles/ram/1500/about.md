@@ -35,3 +35,26 @@ Yes, the Ram 1500 supports both Apple CarPlay and Android Auto, with availabilit
 For 2018-2021 models with wired connectivity, aftermarket wireless adapters can be added by plugging into the existing USB port, converting the system to wireless operation without vehicle modification.
 
 [Learn more about Ram 1500](https://www.ramtrucks.com/ram-1500.html)
+
+### Are there limitations on OBD2 access for the Ram 1500?
+
+Yes, Ram 1500 trucks from 2018 onward have a Security Gateway Module (SGW) that restricts certain types of OBD2 diagnostic access.
+
+**What's Restricted:**
+- The Security Gateway Module was introduced in 2018 to protect the vehicle's network from unauthorized access through the 4G cellular connection in the infotainment system
+- Basic OBD2 scan tools can still read standard diagnostic trouble codes and engine parameters
+- Advanced diagnostic tools that write to or reprogram the vehicle's ECU are blocked without authorization
+
+**Why It Exists:**
+- The SGW creates a security barrier to prevent unauthorized access to the vehicle's computer systems
+- Protects the vehicle's CAN network in case the cellular-connected infotainment system is compromised
+- Maintains vehicle security while still allowing basic diagnostic access
+
+**Working with the Restriction:**
+- Standard OBD2 readers for checking engine codes work normally
+- Professional diagnostic tools authorized by Stellantis (Ram's parent company) can access all systems
+- Aftermarket bypass modules are available for enthusiasts and independent repair shops, though installing them reduces the vehicle's network security
+
+This security feature is standard across Stellantis vehicles from 2018 forward, including all Ram trucks, and represents the industry's response to increasing vehicle connectivity and cybersecurity concerns.
+
+[More information about Ram OBD2 security](https://5thgenrams.com/community/threads/obd-2-port.51152/)
