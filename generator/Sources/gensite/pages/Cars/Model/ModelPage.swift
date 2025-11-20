@@ -1,6 +1,7 @@
 import Foundation
 import Slipstream
 import VehicleSupportMatrix
+import VehicleSupport
 import Markdown
 import SupportMatrix
 
@@ -43,9 +44,18 @@ struct ModelPage: View {
   let make: String
   let obdbID: MergedSupportMatrix.OBDbID
   let projectRoot: URL
+  let carPlayDB: CarPlaySupportDatabase?
 
   var modelSupport: MergedSupportMatrix.ModelSupport? {
     supportMatrix.getModel(id: obdbID)
+  }
+
+  var carPlaySupport: CarPlayModelSupport? {
+    guard let modelSupport,
+          let carPlayDB else {
+      return nil
+    }
+    return carPlayDB.support(for: make, model: modelSupport.model)
   }
 
   /// Helper function to read markdown content from articles directory
@@ -266,6 +276,17 @@ struct ModelPage: View {
           }
         }
         .margin(.bottom, 32)
+
+        // CarPlay Support Section
+        Section {
+          ContentContainer {
+            CarPlaySupportTable(
+              make: make,
+              modelName: modelSupport.model,
+              carPlaySupport: carPlaySupport
+            )
+          }
+        }
 
         if let aboutContent = modelAboutMarkdown {
           Section {

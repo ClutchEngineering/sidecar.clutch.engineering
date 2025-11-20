@@ -5,7 +5,10 @@
       "Bash(swift run:*)",
       "Skill(frontend-design)",
       "Skill(sidecar-content-strategy)",
-      "Skill(slipstream)"
+      "Skill(slipstream)",
+      "Bash(python3:*)",
+      "Bash(curl:*)",
+      "Bash(generator/.build/debug/gensite:*)"
     ],
     "deny": [],
     "ask": []
