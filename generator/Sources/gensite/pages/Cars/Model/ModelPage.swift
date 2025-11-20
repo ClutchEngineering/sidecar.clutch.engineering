@@ -75,9 +75,9 @@ struct ModelPage: View {
   var body: some View {
     if let modelSupport = modelSupport {
       Page(
-        "Sidecar for \(make) \(modelSupport.model) - OBD2 Scanner & Dashboard",
+        "OBD-II support for \(make) \(modelSupport.model)",
         path: "/cars/\(makeNameForSorting(make))/\(modelNameForURL(modelSupport.model))/",
-        description: "Check OBD2 compatibility for \(make) \(modelSupport.model). See supported parameters, sensors, and features for your vehicle with Sidecar app.",
+        description: "Sidecar enables drivers to connect to \(make) vehicles with OBD-II. Access the data hidden within your car.",
         keywords: [
           make,
           modelSupport.model,
