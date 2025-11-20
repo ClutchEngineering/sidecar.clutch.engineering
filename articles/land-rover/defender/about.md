@@ -2,7 +2,7 @@
 
 The Land Rover Defender is an iconic off-road SUV that combines legendary capability with modern technology and premium comfort. In 2020, Land Rover relaunched the Defender as an all-new model, bringing cutting-edge technology while honoring its rugged heritage and uncompromising off-road DNA.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Defender support Apple CarPlay and Android Auto?
 

@@ -47,9 +47,9 @@ struct MakePage: View {
 
   var body: some View {
     Page(
-      "\(make) OBD support",
+      "\(make) OBD-II Codes & Diagnostics",
       path: "/cars/\(make.lowercased())/",
-      description: "Check which Sidecar features work with your \(make).",
+      description: "Complete list of \(make) OBD-II PIDs, supported features, and diagnostics available with Sidecar.",
       keywords: [
         make,
         "OBD-II",
@@ -60,6 +60,8 @@ struct MakePage: View {
       ],
       scripts: [URL(string: "/scripts/vehicle-search.js")]
     ) {
+      SoftwareApplicationSchema()
+
       // Search bar - always visible, sticky at top
       Section {
         ContentContainer {
@@ -98,7 +100,7 @@ struct MakePage: View {
           VStack(alignment: .center, spacing: 8) {
             Link(becomeBetaURL) {
               VStack(alignment: .center, spacing: 4) {
-                H1("Don't see your car?")
+                H2("Don't see your car?")
                   .fontSize(.large)
                   .fontSize(.extraLarge, condition: .desktop)
                   .bold()
@@ -146,6 +148,30 @@ struct MakePage: View {
         }
       }
       .margin(.vertical, 32)
+
+      // Scanner Compatibility Section
+      Section {
+        ContentContainer {
+          VStack(alignment: .leading, spacing: 16) {
+            H2("OBD scanners that work with the \(make)")
+              .fontSize(.large)
+              .fontSize(.extraExtraLarge, condition: .desktop)
+              .bold()
+              .fontDesign("rounded")
+
+            Slipstream.Text {
+              DOMString("Most standard OBD-II scanners are compatible with most vehicles. Sidecar works with a wide range of WiFi and Bluetooth ELM327-based adapters. ")
+              Link("View list of tested scanners", destination: URL(string: "/scanning/"))
+                .textColor(.link, darkness: 700)
+                .textColor(.link, darkness: 400, condition: .dark)
+                .fontWeight(600)
+                .underline(condition: .hover)
+            }
+          }
+          .padding(.vertical, 16)
+        }
+      }
+      .margin(.bottom, 32)
 
       // Make About Section - Only show if markdown file exists
       if let makeContent = makeAboutMarkdown {

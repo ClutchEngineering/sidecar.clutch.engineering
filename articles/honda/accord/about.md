@@ -2,7 +2,7 @@
 
 The Honda Accord is a midsize sedan known for its reliability, refinement, and balanced blend of performance and efficiency. First introduced in 1976, the Accord has become one of the best-selling vehicles in North America and remains a benchmark in the midsize sedan segment.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Honda Accord support Apple CarPlay and Android Auto?
 

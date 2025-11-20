@@ -2,7 +2,7 @@
 
 The Nissan Patrol is a legendary full-size SUV with over 70 years of heritage dating back to 1951. Built on a rugged body-on-frame platform, the Patrol has earned a global reputation as one of the most capable and durable off-road vehicles ever produced.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Nissan Patrol support Apple CarPlay and Android Auto?
 

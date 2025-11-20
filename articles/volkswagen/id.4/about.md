@@ -2,7 +2,7 @@
 
 The Volkswagen ID.4 is an all-electric compact SUV representing Volkswagen's commitment to electric mobility. Launched in 2021 as VW's first long-range electric vehicle for the U.S. market, the ID.4 is built on Volkswagen's dedicated MEB platform and assembled at the Chattanooga, Tennessee manufacturing facility.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Volkswagen ID.4 support wireless Apple CarPlay and Android Auto?
 

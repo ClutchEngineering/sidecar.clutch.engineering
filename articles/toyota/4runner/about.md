@@ -2,7 +2,7 @@
 
 The Toyota 4Runner is a body-on-frame midsize SUV that has earned a reputation as one of the most capable and reliable off-road vehicles available. The 2025 model year brings a complete redesign with updated powertrains and modern technology while maintaining the 4Runner's legendary off-road prowess.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the 4Runner support Apple CarPlay and Android Auto?
 

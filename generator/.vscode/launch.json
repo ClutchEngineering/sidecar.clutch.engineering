@@ -1,0 +1,84 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:generator}",
+            "name": "Debug supportmatrix-cli",
+            "target": "supportmatrix-cli",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug supportmatrix-cli"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:generator}",
+            "name": "Release supportmatrix-cli",
+            "target": "supportmatrix-cli",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release supportmatrix-cli"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:generator}",
+            "name": "Debug modellist",
+            "target": "modellist",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug modellist"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:generator}",
+            "name": "Release modellist",
+            "target": "modellist",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release modellist"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:generator}",
+            "name": "Debug gensite",
+            "target": "gensite",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug gensite"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:generator}",
+            "name": "Release gensite",
+            "target": "gensite",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release gensite"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:generator}",
+            "name": "Debug analytics",
+            "target": "analytics",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug analytics"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:generator}",
+            "name": "Release analytics",
+            "target": "analytics",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release analytics"
+        }
+    ]
+}

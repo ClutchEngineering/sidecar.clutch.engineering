@@ -2,7 +2,7 @@
 
 The Toyota Corolla Hybrid is a compact sedan that combines the reliability and practicality of the iconic Corolla with an efficient hybrid powertrain. First introduced in 2020, the Corolla Hybrid delivers up to 50 combined mpg while maintaining the accessible pricing and everyday usability that has made the Corolla one of the best-selling vehicles worldwide.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Toyota Corolla Hybrid support Apple CarPlay and Android Auto?
 

@@ -1,5 +1,5 @@
 // Wait for DOM to be ready before initializing search
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   let searchIndex = null;
   let makesArray = null;
   let selectedIndex = -1;
@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
       const normalizedCombined = normalizeForSearch(`${make.n} ${vehicle.n}`);
 
       return normalizedMake.includes(normalizedQuery) ||
-             normalizedModel.includes(normalizedQuery) ||
-             normalizedCombined.includes(normalizedQuery);
+        normalizedModel.includes(normalizedQuery) ||
+        normalizedCombined.includes(normalizedQuery);
     });
 
     // Limit to top 10 results
@@ -69,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Reconstruct full paths from compact format
       const iconPath = vehicle.t === 'm' ? `/gfx/make/${make.i}` :
-                       vehicle.t === 'v' ? `/gfx/vehicle/${vehicle.i}` :
-                       `/gfx/placeholder-car.png`;
+        vehicle.t === 'v' ? `/gfx/vehicle/${vehicle.i}` :
+          `/gfx/placeholder-car.png`;
       const url = vehicle.s
         ? `/cars/${make.s}/${vehicle.s}/`
         : `/cars/${make.s}/`;
@@ -78,17 +78,16 @@ document.addEventListener('DOMContentLoaded', function() {
       return `
         <a
           href="${url}"
-          class="vehicle-search-result cursor-pointer flex items-center gap-3 px-4 py-3 transition-colors ${
-            isSelected
-              ? 'bg-zinc-200 dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100'
-              : 'hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100'
-          }"
+          class="vehicle-search-result cursor-pointer flex items-center gap-3 px-4 py-3 transition-colors ${isSelected
+          ? 'bg-zinc-200 dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100'
+          : 'hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-900 dark:text-zinc-100'
+        }"
           data-index="${index}"
         >
           <img
             src="${iconPath}"
             alt="${make.n} ${vehicle.n}"
-            class="w-8 ${isPlaceholder ? 'p-2' : ''} ${isSelected ? '' : 'dark:invert'}"
+            class="w-8 ${isPlaceholder ? 'p-2' : ''} dark:invert"
           />
           <div class="flex-1 min-w-0">
             <div class="font-bold text-base truncate">
@@ -96,28 +95,28 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="text-sm opacity-70">
               ${(() => {
-                const hasDrivers = vehicle.d != null && vehicle.d > 0;
-                const hasMiles = vehicle.k != null && vehicle.k > 0;
+          const hasDrivers = vehicle.d != null && vehicle.d > 0;
+          const hasMiles = vehicle.k != null && vehicle.k > 0;
 
-                // Format miles based on unit
-                const formatMiles = (miles, unit) => {
-                  if (unit === '1') {
-                    return `${miles.toLocaleString()} mile${miles !== 1 ? 's' : ''}`;
-                  } else {
-                    return `${miles.toLocaleString()}k miles`;
-                  }
-                };
+          // Format miles based on unit
+          const formatMiles = (miles, unit) => {
+            if (unit === '1') {
+              return `${miles.toLocaleString()} mile${miles !== 1 ? 's' : ''}`;
+            } else {
+              return `${miles.toLocaleString()}k miles`;
+            }
+          };
 
-                if (!hasDrivers && !hasMiles) {
-                  return 'No drivers yet';
-                } else if (hasDrivers && !hasMiles) {
-                  return `${vehicle.d.toLocaleString()} driver${vehicle.d !== 1 ? 's' : ''} · No miles driven yet`;
-                } else if (!hasDrivers && hasMiles) {
-                  return `No drivers · ${formatMiles(vehicle.k, vehicle.u)}`;
-                } else {
-                  return `${vehicle.d.toLocaleString()} driver${vehicle.d !== 1 ? 's' : ''} · ${formatMiles(vehicle.k, vehicle.u)}`;
-                }
-              })()}
+          if (!hasDrivers && !hasMiles) {
+            return 'No drivers yet';
+          } else if (hasDrivers && !hasMiles) {
+            return `${vehicle.d.toLocaleString()} driver${vehicle.d !== 1 ? 's' : ''} · No miles driven yet`;
+          } else if (!hasDrivers && hasMiles) {
+            return `No drivers · ${formatMiles(vehicle.k, vehicle.u)}`;
+          } else {
+            return `${vehicle.d.toLocaleString()} driver${vehicle.d !== 1 ? 's' : ''} · ${formatMiles(vehicle.k, vehicle.u)}`;
+          }
+        })()}
             </div>
           </div>
         </a>
@@ -175,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Handle keyboard navigation
   function handleKeyDown(e) {
     if (!resultsContainer.classList.contains('hidden') && filteredResults.length > 0) {
-      switch(e.key) {
+      switch (e.key) {
         case 'ArrowDown':
           e.preventDefault();
           selectedIndex = (selectedIndex + 1) % filteredResults.length;

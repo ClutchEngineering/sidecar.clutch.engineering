@@ -30,6 +30,7 @@ struct Page<Content: View>: View {
   let scripts: Set<URL?>
   let additionalStylesheets: Set<URL?>
   let socialBannerPath: String?
+
   @ViewBuilder
   let content: @Sendable () -> Content
 

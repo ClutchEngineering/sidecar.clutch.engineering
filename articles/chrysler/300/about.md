@@ -2,7 +2,7 @@
 
 The Chrysler 300 is a full-size sedan known for its bold, distinctive styling and powerful performance. Production of the Chrysler 300 ended in December 2023, with 2023 being the final model year.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ### Does the Chrysler 300 support Apple CarPlay and Android Auto?
 
