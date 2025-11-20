@@ -53,7 +53,7 @@ public struct CarPlayModelSupport: Codable, Sendable {
 }
 
 /// CarPlay support database loaded from JSON
-public class CarPlaySupportDatabase: Sendable {
+public final class CarPlaySupportDatabase: Sendable {
     private let data: [String: [CarPlayModelSupport]]
 
     public init(jsonURL: URL) throws {
@@ -118,7 +118,7 @@ public class CarPlaySupportDatabase: Sendable {
             }
         }
 
-        return result.sorted { $0.make < $1.make }
+        return result.sorted(by: { $0.0 < $1.0 })
     }
 
     /// Check if a make/model/year supports CarPlay
