@@ -18,7 +18,7 @@ Starting with the 2025 model year, Ford added security measures to many of the M
 
 This encryption is part of Ford's broader cybersecurity initiative to protect vehicle systems from unauthorized access, but it does limit the depth of vehicle data available to third-party diagnostic tools and monitoring applications.
 
-[Learn more on the Mach-E forums]([https://www.macheforum.com](https://www.macheforum.com/site/threads/mach-e-2025-and-obdii.50037/))
+[Learn more on the Mach-E forums](https://www.macheforum.com/site/threads/mach-e-2025-and-obdii.50037/)
 
 ### Is the Mustang Mach-E compatible with Apple CarPlay and Android Auto?
 
