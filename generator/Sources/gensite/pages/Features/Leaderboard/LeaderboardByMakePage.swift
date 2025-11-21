@@ -321,44 +321,44 @@ struct LeaderboardByMakePage: View {
         }
         .margin(.bottom, 32)
         .textAlignment(.center)
+      }
 
-        // Table showing the leaderboard
-        Table {
-          TableHeader {
-            HeaderCell { Text("Rank") }
-            HeaderCell { Text("Make") }
-            HeaderCell { Text("Models") }
-            HeaderCell { Text("Stigs") }
-            HeaderCell { Text("Miles driven") }
-          }
-          .background(.gray, darkness: 100)
-          .background(.zinc, darkness: 950, condition: .dark)
+      // Table showing the leaderboard
+      Table {
+        TableHeader {
+          HeaderCell { Text("Rank") }
+          HeaderCell { Text("Make") }
+          HeaderCell { Text("Models") }
+          HeaderCell { Text("Stigs") }
+          HeaderCell { Text("Miles driven") }
+        }
+        .background(.gray, darkness: 100)
+        .background(.zinc, darkness: 950, condition: .dark)
 
-          TableBody {
-            for (index, entry) in leaderboardData.leaderboard.enumerated() {
-              MakeRow(
-                rank: index + 1,
-                make: entry.standardizedMake,
-                count: entry.count,
-                driverCount: entry.driverCount,
-                modelCount: entry.modelCount,
-                rankChange: entry.rankChange,
-                mileageChange: entry.mileageChange,
-                logoURL: entry.logoURL
-              )
-            }
+        TableBody {
+          for (index, entry) in leaderboardData.leaderboard.enumerated() {
+            MakeRow(
+              rank: index + 1,
+              make: entry.standardizedMake,
+              count: entry.count,
+              driverCount: entry.driverCount,
+              modelCount: entry.modelCount,
+              rankChange: entry.rankChange,
+              mileageChange: entry.mileageChange,
+              logoURL: entry.logoURL
+            )
           }
         }
-        .margin(.bottom, 32)
-        .border(.init(.zinc, darkness: 400), width: 1)
-        .border(.init(.zinc, darkness: 600), width: 1, condition: .dark)
-        .cornerRadius(.large)
-        .fontSize(.extraSmall, condition: .mobileOnly)
-        .margin(.horizontal, .auto)
-        .frame(width: 0.8)
-        .frame(width: 0.6, condition: .desktop)
+      }
+      .margin(.bottom, 32)
+      .border(.init(.zinc, darkness: 400), width: 1)
+      .border(.init(.zinc, darkness: 600), width: 1, condition: .dark)
+      .cornerRadius(.large, condition: .desktop)
+      .fontSize(.extraSmall, condition: .mobileOnly)
+      .margin(.horizontal, .auto)
 
-        // Navigation links
+      // Navigation links
+      ContentContainer {
         HStack(spacing: 16) {
           Link(URL(string: "/leaderboard/")) {
             Text("← Model Leaderboard")

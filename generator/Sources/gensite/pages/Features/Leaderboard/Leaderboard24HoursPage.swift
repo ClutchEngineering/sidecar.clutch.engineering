@@ -94,46 +94,46 @@ struct Leaderboard24HoursPage: View {
         }
         .margin(.bottom, 32)
         .textAlignment(.center)
+      }
 
-        // Table showing the leaderboard
-        Table {
-          TableHeader {
-            HeaderCell { Text("Rank") }
-            HeaderCell { Text("Vehicle") }
-            HeaderCell { Text("Miles in 24h") }
-          }
-          .background(.gray, darkness: 100)
-          .background(.zinc, darkness: 950, condition: .dark)
+      // Table showing the leaderboard
+      Table {
+        TableHeader {
+          HeaderCell { Text("Rank") }
+          HeaderCell { Text("Vehicle") }
+          HeaderCell { Text("Miles in 24h") }
+        }
+        .background(.gray, darkness: 100)
+        .background(.zinc, darkness: 950, condition: .dark)
 
-          TableBody {
-            // Show all entries with non-zero changes
-            for (index, entry) in leaderboardData.filter({ $0.series != anonymousDriverName }).enumerated() {
-              let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: supportMatrix)
-              if vehicleInfo.vehicleName != "/",
-                 (entry.mileageChange ?? 0) > 0 {
-                LeaderboardRow(
-                  rank: index + 1,
-                  symbolName: vehicleInfo.symbolName,
-                  vehicleName: vehicleInfo.vehicleName,
-                  vehicleURL: vehicleInfo.vehicleURL,
-                  count: entry.mileageChange ?? 0,  // Show the delta instead of total
-                  driverCount: entry.driverCount,
-                  showDriverCount: false
-                )
-              }
+        TableBody {
+          // Show all entries with non-zero changes
+          for (index, entry) in leaderboardData.filter({ $0.series != anonymousDriverName }).enumerated() {
+            let vehicleInfo = LeaderboardUtils.findVehicleInfo(series: entry.series, in: supportMatrix)
+            if vehicleInfo.vehicleName != "/",
+               (entry.mileageChange ?? 0) > 0 {
+              LeaderboardRow(
+                rank: index + 1,
+                symbolName: vehicleInfo.symbolName,
+                vehicleName: vehicleInfo.vehicleName,
+                vehicleURL: vehicleInfo.vehicleURL,
+                count: entry.mileageChange ?? 0,  // Show the delta instead of total
+                driverCount: entry.driverCount,
+                showDriverCount: false
+              )
             }
           }
         }
-        .margin(.bottom, 32)
-        .border(.init(.zinc, darkness: 400), width: 1)
-        .border(.init(.zinc, darkness: 600), width: 1, condition: .dark)
-        .cornerRadius(.large)
-        .fontSize(.extraSmall, condition: .mobileOnly)
-        .margin(.horizontal, .auto)
-        .frame(width: 0.8)
-        .frame(width: 0.6, condition: .desktop)
+      }
+      .margin(.bottom, 32)
+      .border(.init(.zinc, darkness: 400), width: 1)
+      .border(.init(.zinc, darkness: 600), width: 1, condition: .dark)
+      .cornerRadius(.large, condition: .desktop)
+      .fontSize(.extraSmall, condition: .mobileOnly)
+      .margin(.horizontal, .auto)
 
-        // Navigation links
+      // Navigation links
+      ContentContainer {
         HStack(spacing: 16) {
           Link(URL(string: "/leaderboard/")) {
             Text("← By Model")
