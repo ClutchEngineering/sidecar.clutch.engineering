@@ -8,7 +8,8 @@
       "Skill(slipstream)",
       "Bash(python3:*)",
       "Bash(curl:*)",
-      "Bash(generator/.build/debug/gensite:*)"
+      "Bash(generator/.build/debug/gensite:*)",
+      "Bash(.build/debug/gensite:*)"
     ],
     "deny": [],
     "ask": []
