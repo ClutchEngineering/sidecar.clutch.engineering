@@ -115,6 +115,7 @@ struct Leaderboard24HoursPage: View {
                   rank: index + 1,
                   symbolName: vehicleInfo.symbolName,
                   vehicleName: vehicleInfo.vehicleName,
+                  vehicleURL: vehicleInfo.vehicleURL,
                   count: entry.mileageChange ?? 0,  // Show the delta instead of total
                   driverCount: entry.driverCount,
                   showDriverCount: false

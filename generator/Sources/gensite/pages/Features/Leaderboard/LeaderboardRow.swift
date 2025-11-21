@@ -5,6 +5,7 @@ struct LeaderboardRow: View {
   let rank: Int
   let symbolName: String?
   let vehicleName: String
+  let vehicleURL: String?
   let count: Float
   let driverCount: Int
   let rankChange: Int?
@@ -15,6 +16,7 @@ struct LeaderboardRow: View {
     rank: Int,
     symbolName: String?,
     vehicleName: String,
+    vehicleURL: String? = nil,
     count: Float,
     driverCount: Int,
     rankChange: Int? = nil,
@@ -24,6 +26,7 @@ struct LeaderboardRow: View {
     self.rank = rank
     self.symbolName = symbolName
     self.vehicleName = vehicleName
+    self.vehicleURL = vehicleURL
     self.count = count
     self.driverCount = driverCount
     self.rankChange = rankChange
@@ -58,17 +61,36 @@ struct LeaderboardRow: View {
       // Vehicle column with icon
       Bordered {
         TableCell {
-          HStack {
-            Text(vehicleName)
-            if let symbolName = symbolName {
-              Image(URL(string: "/gfx/vehicle/\(symbolName)")!)
-                .colorInvert(condition: .dark)
-                .frame(width: 48)
-                .margin(.right, 8)
+          if let vehicleURL {
+            Link(URL(string: vehicleURL)) {
+              HStack {
+                Text(vehicleName)
+                if let symbolName {
+                  Image(URL(string: "/gfx/vehicle/\(symbolName)")!)
+                    .colorInvert(condition: .dark)
+                    .frame(width: 48)
+                    .margin(.right, 8)
+                }
+              }
+              .justifyContent(.between)
+              .frame(height: 48)
             }
+            .textColor(.link, darkness: 700)
+            .textColor(.link, darkness: 300, condition: .dark)
+            .underline(condition: .hover)
+          } else {
+            HStack {
+              Text(vehicleName)
+              if let symbolName {
+                Image(URL(string: "/gfx/vehicle/\(symbolName)")!)
+                  .colorInvert(condition: .dark)
+                  .frame(width: 48)
+                  .margin(.right, 8)
+              }
+            }
+            .justifyContent(.between)
+            .frame(height: 48)
           }
-          .justifyContent(.between)
-          .frame(height: 48)
         }
       }
       .padding(.horizontal, 8)

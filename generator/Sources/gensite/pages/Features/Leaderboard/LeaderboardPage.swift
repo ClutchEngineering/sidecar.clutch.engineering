@@ -117,6 +117,7 @@ struct LeaderboardPage: View {
                   rank: index + 1,
                   symbolName: vehicleInfo.symbolName,
                   vehicleName: vehicleInfo.vehicleName,
+                  vehicleURL: vehicleInfo.vehicleURL,
                   count: entry.milesDriven,
                   driverCount: entry.driverCount,
                   rankChange: entry.rankChange,

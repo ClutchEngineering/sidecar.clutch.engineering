@@ -38,12 +38,12 @@ struct LeaderboardUtils {
     return formatter.string(from: NSNumber(value: value)) ?? "0"
   }
 
-  static func findVehicleInfo(series: String, in supportMatrix: MergedSupportMatrix) -> (symbolName: String?, vehicleName: String) {
+  static func findVehicleInfo(series: String, in supportMatrix: MergedSupportMatrix) -> (symbolName: String?, vehicleName: String, vehicleURL: String?) {
     let components = series
       .replacingOccurrences(of: "BMW ", with: "BMW/")
       .components(separatedBy: "/")
     guard components.count >= 2 else {
-      return (nil, series)
+      return (nil, series, nil)
     }
 
     var seriesMake: String
@@ -57,7 +57,7 @@ struct LeaderboardUtils {
       seriesModel = components.dropFirst().joined(separator: "/").lowercased()
     }
     if seriesModel.isEmpty {
-      return (nil, anonymousDriverName)
+      return (nil, anonymousDriverName, nil)
     }
     seriesMake = standardizeMake(seriesMake)
 
@@ -71,14 +71,15 @@ struct LeaderboardUtils {
           let normalizedModel = vehicle.model.lowercased()
           if normalizedModel == seriesModel {
             let vehicleName = "\(localizedNameForStandardizedMake(normalizedMake)) \(vehicle.model)"
-            return (vehicle.modelSVGs.first, vehicleName)
+            let vehicleURL = "/cars/\(makeNameForSorting(make))/\(modelNameForURL(vehicle.model))/"
+            return (vehicle.modelSVGs.first, vehicleName, vehicleURL)
           }
         }
       }
     }
     let make = components[0]
     let vehicleName = "\(localizedNameForStandardizedMake(standardizeMake(make))) \(String(components.dropFirst().joined(separator: "/")))"
-    return (nil, vehicleName)
+    return (nil, vehicleName, nil)
   }
 
   static func getCSVModificationDate(resourceName: String) -> String {
