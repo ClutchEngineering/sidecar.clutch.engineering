@@ -1,0 +1,20 @@
+name: PNG optimization check
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  png-optimization:
+    name: Check PNG Optimization
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install optipng
+        run: sudo apt-get update && sudo apt-get install -y optipng
+
+      - name: Check PNG optimization
+        run: bash ./scripts/check_png_optimization.sh site

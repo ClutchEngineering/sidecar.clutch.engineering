@@ -10,7 +10,20 @@
       "Bash(curl:*)",
       "Bash(generator/.build/debug/gensite:*)",
       "Bash(.build/debug/gensite:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(optipng:*)",
+      "Bash(time optipng:*)",
+      "Bash(chmod:*)",
+      "Bash(time bash:*)",
+      "Bash(bash -x scripts/check_png_optimization.sh:*)",
+      "Bash(\"site/gfx/survey/pid-detector.png\" )",
+      "Bash(\"site/gfx/survey/scan-sessions.png\" )",
+      "Bash(\"site/gfx/shortcuts.png\" )",
+      "Bash(\"site/gfx/elmcheck.png\" )",
+      "Bash(\"site/gfx/help/refresh-vehicle-parameters.png\" )",
+      "Bash(\"site/gfx/help/export-specific-scan-sessions.png\" )",
+      "Bash(\"site/gfx/garage.png\" )",
+      "Bash(\"site/gfx/supported-vehicle.png\")"
     ],
     "deny": [],
     "ask": []
