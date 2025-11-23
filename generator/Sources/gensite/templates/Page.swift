@@ -54,14 +54,19 @@ struct Page<Content: View>: View {
         if let socialBannerPath,
            let socialBannerURL = URL(string: socialBannerPath, relativeTo: rootURL) {
           Meta("og:image", content: socialBannerURL.absoluteString)
+          Meta("twitter:card", content: "summary_large_image")
+          Meta("twitter:image", content: socialBannerURL.absoluteString)
+        } else {
+          Meta("og:image", content: URL(string: "/gfx/appicon.png", relativeTo: rootURL)!.absoluteString)
+          Meta("twitter:card", content: "summary")
         }
+        Meta("twitter:title", content: title)
+        Meta("twitter:description", content: description)
         if let canonicalURL {
           Meta("og:url", content: canonicalURL.absoluteString)
         }
         Meta("og:type", content: "website")
         Meta("og:site_name", content: "Sidecar — Your personal automotive assistant")
-
-        Meta("og:image", content: "/gfx/appicon.png")
         Stylesheet(URL(string: "/css/main.css"))
         for stylesheet in additionalStylesheets.compactMap({ $0 }).sorted(by: { $0.absoluteString < $1.absoluteString }) {
           Stylesheet(stylesheet)

@@ -9,7 +9,8 @@
       "Bash(python3:*)",
       "Bash(curl:*)",
       "Bash(generator/.build/debug/gensite:*)",
-      "Bash(.build/debug/gensite:*)"
+      "Bash(.build/debug/gensite:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

@@ -2,6 +2,10 @@ import Foundation
 
 @preconcurrency import Markdown
 
+struct BlogPostFrontmatter: Decodable {
+  let thumbnail: String?
+}
+
 struct BlogPost: Sendable {
   // Locations
   let fileURL: URL
@@ -12,6 +16,7 @@ struct BlogPost: Sendable {
   // Metadata
   let date: Date
   let draft: Bool
+  let thumbnail: URL?
 
   // Article structure
   let title: String?
