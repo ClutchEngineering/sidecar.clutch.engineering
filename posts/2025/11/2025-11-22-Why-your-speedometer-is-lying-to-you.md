@@ -66,6 +66,12 @@ Tire wear actually reinforces this buffer over time. As your tires wear down, th
 
 Manufacturers account for this by calibrating toward the edge of the legal tolerance when the car is new, knowing the safety margin will grow as the tires wear.
 
+## How police measure your speed
+
+Police vehicle speedometers are often calibration-certified, typically accurate to within 1-2 mph, and must be recalibrated every six months or whenever tires, gears, or related components are changed.
+
+When police use radar or lidar, those devices are also subject to strict calibration requirements. For example, [Virginia Code § 46.2-882](https://law.lis.virginia.gov/vacode/title46.2/chapter8/section46.2-882/) requires that calibration certificates for radar devices and tuning forks be presented as evidence in court, and no calibration is valid for longer than six months. Many other states have similar requirements.
+
 ## The takeaway
 
 When you use OBD or GPS to determine your car's speed, you'll often get a value that doesn't match what's shown on your car's speedometer. This is working as intended, and **you should prefer your car's speedometer over an OBD or GPS speedometer while driving**. After the drive, you can use direct OBD readings from an app like [Sidecar](https://sidecar.clutch.engineering) to better understand your "true" trip details.
