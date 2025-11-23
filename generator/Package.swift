@@ -36,6 +36,7 @@ let package = Package(
       "DotEnvAPI",
       .product(name: "Slipstream", package: "slipstream"),
       .product(name: "ArgumentParser", package: "swift-argument-parser"),
+      .product(name: "Yams", package: "Yams"),
       "VehicleSupport",
       "VehicleSupportMatrix",
     ], resources: [

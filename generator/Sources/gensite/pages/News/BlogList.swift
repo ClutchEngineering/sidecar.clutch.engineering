@@ -7,6 +7,21 @@ private struct BlogPostCard: View {
   var body: some View {
     Link(post.url) {
       Div {
+        if let thumbnail = post.thumbnail {
+          Div {
+            Image(thumbnail)
+              .accessibilityLabel(post.title ?? post.slug)
+              .className("object-cover")
+              .className("w-full")
+              .className("h-40")
+              .className("rounded-t-lg")
+          }
+          .className("overflow-hidden")
+          .margin(.horizontal, -24)
+          .margin(.top, -24)
+          .margin(.bottom, 16)
+        }
+
         if post.draft {
           Div {
             Span("DRAFT")

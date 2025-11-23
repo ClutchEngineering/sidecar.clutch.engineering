@@ -21,7 +21,8 @@ struct BlogPostView: View {
         "trip logger",
         "vehicle diagnostics",
         "vehicle connectivity",
-      ]
+      ],
+      socialBannerPath: post.thumbnail?.path()
     ) {
       Div {
         let headings = post.tableOfContents.filter({ $0.level == 2 })

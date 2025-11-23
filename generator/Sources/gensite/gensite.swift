@@ -6,12 +6,36 @@ import DotEnvAPI
 import Markdown
 import VehicleSupportMatrix
 import VehicleSupport
+import Yams
 
 import Slipstream
 
 extension Condition {
   static var mobileOnly: Condition { Condition.within(Breakpoint.small..<Breakpoint.medium) }
   static var desktop: Condition { Condition.startingAt(.medium) }
+}
+
+private struct AtomEntry {
+  let title: String?
+  let url: URL
+  let date: Date
+  let html: String
+
+  static let site = "https://sidecar.clutch.engineering"
+
+  var toString: String {
+    let dateFormatter = ISO8601DateFormatter()
+    return """
+<entry>
+  <title>\(title ?? "No title")</title>
+  <link rel="alternate" type="text/html" href="\(Self.site)\(url.path())"/>
+  <id>\(Self.site)\(url.path())</id>
+  <published>\(dateFormatter.string(from: date))</published>
+  <updated>\(dateFormatter.string(from: date))</updated>
+  <content type="html"><![CDATA[\(html)]]></content>
+</entry>
+"""
+  }
 }
 
 @main
@@ -171,7 +195,21 @@ struct Gensite: AsyncParsableCommand {
       let slug = parts.joined(separator: "-")
 
       let postContent = try String(contentsOf: file, encoding: .utf8)
-      let document = Document(parsing: postContent)
+
+      // Parse YAML frontmatter if present
+      var contentWithoutFrontmatter = postContent
+      var frontmatter: BlogPostFrontmatter?
+      if postContent.hasPrefix("---") {
+        let lines = postContent.components(separatedBy: "\n")
+        if let endIndex = lines.dropFirst().firstIndex(where: { $0 == "---" }) {
+          let yamlLines = lines[1..<endIndex]
+          let yamlString = yamlLines.joined(separator: "\n")
+          frontmatter = try? YAMLDecoder().decode(BlogPostFrontmatter.self, from: yamlString)
+          contentWithoutFrontmatter = lines[(endIndex + 1)...].joined(separator: "\n")
+        }
+      }
+
+      let document = Document(parsing: contentWithoutFrontmatter)
 
       let documentHeading = (document.children.first { node in
         if let heading = node as? Markdown.Heading,
@@ -190,6 +228,14 @@ struct Gensite: AsyncParsableCommand {
         .appending(path: slug)
         .appending(path: "index")
         .appendingPathExtension("html")
+
+      let thumbnailURL: URL?
+      if let thumbnailPath = frontmatter?.thumbnail {
+        thumbnailURL = URL(string: thumbnailPath)
+      } else {
+        thumbnailURL = nil
+      }
+
       return BlogPost(
         fileURL: file,
         slug: slug,
@@ -197,9 +243,10 @@ struct Gensite: AsyncParsableCommand {
         url: postOutputURL.deletingLastPathComponent(),
         date: date,
         draft: file.deletingLastPathComponent().lastPathComponent == "Drafts",
+        thumbnail: thumbnailURL,
         title: documentHeading,
         tableOfContents: tableOfContents,
-        content: postContent,
+        content: contentWithoutFrontmatter,
         document: document
       )
     }
@@ -219,6 +266,47 @@ struct Gensite: AsyncParsableCommand {
       }
 
       sitemap["news/index.html"] = BlogList(posts: posts)
+
+      // Generate Atom feed
+      func generateAtomFeed(from posts: [BlogPost], to outputURL: URL) throws {
+        let site = AtomEntry.site
+        let dateFormatter = ISO8601DateFormatter()
+
+        // Filter out drafts and sort by date (newest first)
+        let publishedPosts = posts
+          .filter { !$0.draft }
+          .sorted { $0.date > $1.date }
+
+        let entries = try publishedPosts.map { post in
+          AtomEntry(
+            title: post.title,
+            url: post.url,
+            date: post.date,
+            html: try renderHTML(Article(post.document))
+          )
+        }
+
+        let atomFeed = """
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sidecar News</title>
+  <link href="\(site)/feed.atom" rel="self" type="application/atom+xml"/>
+  <link href="\(site)/news/" rel="alternate" type="text/html"/>
+  <id>\(site)/</id>
+  <updated>\(dateFormatter.string(from: .now))</updated>
+  <author>
+    <name>Sidecar</name>
+  </author>
+\(entries.map(\.toString).joined(separator: "\n"))
+</feed>
+"""
+
+        let feedURL = outputURL.appending(path: "feed.atom")
+        try atomFeed.write(to: feedURL, atomically: true, encoding: .utf8)
+        print("Generated feed.atom")
+      }
+
+      try generateAtomFeed(from: posts, to: outputURL)
     }
 
     // Supported cars and leaderboard pages (require Airtable data)

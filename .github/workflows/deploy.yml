@@ -49,6 +49,10 @@ jobs:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
           AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
           AIRTABLE_MODELS_TABLE_ID: ${{ secrets.AIRTABLE_MODELS_TABLE_ID }}
+      - name: Install OptiPNG
+        run: sudo apt-get install -y optipng
+      - name: Optimize PNGs
+        run: find ./site -name "*.png" -exec optipng -o5 {} \;
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

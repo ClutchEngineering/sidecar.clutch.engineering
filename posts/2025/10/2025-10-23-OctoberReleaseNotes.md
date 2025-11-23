@@ -1,4 +1,8 @@
-# Sidecar trip report
+---
+thumbnail: /gfx/news/2025/10/infographic.png
+---
+
+# Sidecar trip report: Halloween edition
 
 Sidecar's biggest release yet is here, and it's a spoooooky one! 👻
 
@@ -13,29 +17,6 @@ Here's a quick overview of everything that launched today:
 ```
 #insert:News_2025_10_23_FeatureTable
 ```
-
-## Navigation widgets
-
-No matter what size of CarPlay screen you have, CarPlay's navigation panels eats up a ton of space. This means less space for the map, less space for widgets, and zero ability to customize the layout to your liking.
-
-So I'm hella excited to introduce the launch of **navigation widgets**.
-
-```
-#insert:News_2025_10_23_NavigationWidgetsComparison
-```
-
-Navigation widgets let you replace the standard CarPlay navigation panels with custom widgets that you can place **anywhere on the screen**. Even nowhere, if you want an ultra-minimal navigation experience.
-
-This unlocks a massive amount of real estate on your CarPlay screen to play with and I think you're going to love it.
-
-![100%](/gfx/news/2025/10/carplay-navigation.gif)
-
-> Note: the trade-off here is that heads up displays and instrument cluster panels won't show navigation instructions anymore.
-> This won't matter if your car doesn't have these components, but if your car does just keep this in mind.
-
-*Navigation widgets are a Sidecar+ benefit.*
-
----
 
 ## Navigation instructions on the phone
 
@@ -53,7 +34,9 @@ The navigation widgets can be used in landscape mode on the phone as well, thoug
 
 Volvo drivers can now log in to Sidecar!
 
-![](/gfx/news/2025/10/volvo.png)
+<div style="background-color: white" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto">
+<img src="/gfx/news/2025/10/volvo.png">
+</div>
 
 Many thanks to the Sidecar Volvo beta drivers who provided feedback and bug reports as we got this built out. This is hot off the press, so please continue emailing bugs to [support@clutch.engineering](mailto:support@clutch.engineering).
 

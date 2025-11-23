@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sidecar News</title>
+  <link href="https://sidecar.clutch.engineering/feed.atom" rel="self" type="application/atom+xml"/>
+  <link href="https://sidecar.clutch.engineering/news/" rel="alternate" type="text/html"/>
+  <id>https://sidecar.clutch.engineering/</id>
+  <updated>2025-11-23T02:45:14Z</updated>
+  <author>
+    <name>Sidecar</name>
+  </author>
+<entry>
+  <title>Why your speedometer is lying to you (in a good way)</title>
+  <link rel="alternate" type="text/html" href="https://sidecar.clutch.engineering/news/2025/11/22/TheCuriousCaseOfSuspiciousSpeedometers/"/>
+  <id>https://sidecar.clutch.engineering/news/2025/11/22/TheCuriousCaseOfSuspiciousSpeedometers/</id>
+  <published>2025-11-22T05:00:00Z</published>
+  <updated>2025-11-22T05:00:00Z</updated>
+  <content type="html"><![CDATA[<h1 class="text-lg md:text-3xl leading-snug font-bold mb-1 font-rounded">Why your speedometer is lying to you (in a good way)</h1>
+<p class="mb-4">If you’ve ever connected an OBD scanner to your car and watched its speed readout, you may have noticed something odd: your dashboard doesn’t match the scanner’s speed. Your speedometer might say 70 mph while the OBD data shows 67. Which one’s the truth?</p>
+<p class="mb-4">Well, turns out the answer’s a bit more complicated than you might expect, and I lost myself down a rabbit hole of worldwide automotive regulations tonight to get to the bottom of it.</p>
+<h2 class="group relative md:text-2xl font-bold mb-1" id="the-legal-framework"><a href="#the-legal-framework" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>The legal framework</h2>
+<p class="mb-4">In most of the world, vehicle speedometers are legally required to <span class="italic">never</span> display a speed that is <span class="italic">lower</span> than your actual speed.</p>
+<p class="mb-4">The reasoning boils down to this: if your speedometer shows a number that <span class="italic">is</span> too low, you might break the speed limit while believing you’re driving legally.</p>
+<p class="mb-4">And nobody wants a ticket for going 72 in a 70 zone when their dashboard clearly showed 70.</p>
+<p class="mb-4">From the European standard, <a href="https://unece.org/fileadmin/DAM/trans/main/wp29/wp29regs/2018/R039r2e.pdf" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">UNECE Regulation 39</a>, Section 5.4:</p>
+<blockquote class="border-l border-l-zinc-300 dark:border-l dark:border-l-zinc-500 px-4 md:px-6 mb-4 italic">
+ <p class="mb-4">The speed indicated shall not be less than the true speed of the vehicle. At the test speeds specified in paragraph 5.3.5. above, there shall be the following relationship between the speed displayed (V<sub>1</sub>) and the true speed (V<sub>2</sub>).</p>
+ <p class="mb-4">0 ≤ (V<sub>1</sub> - V<sub>2</sub>) ≤ 0.1 V<sub>2</sub> + 4 km/h</p>
+</blockquote>
+<p class="mb-4">If we rewrite the standard’s formula in terms of the displayed speed:</p>
+<blockquote class="border-l border-l-zinc-300 dark:border-l dark:border-l-zinc-500 px-4 md:px-6 mb-4 italic">
+ <p class="mb-4">V<sub>actual</sub> ≤ V<sub>displayed</sub> ≤ 1.1 × V<sub>actual</sub> + 4 km/h</p>
+</blockquote>
+<p class="mb-4">This creates two rules:</p>
+<ol class="list-decimal pl-8 mb-4">
+ <li><p class="mb-0">The displayed speed can never be <span class="font-bold">below</span> your actual speed.</p></li>
+ <li><p class="mb-0">The displayed speed can be up to 110% <span class="font-bold">above</span> your true speed, plus 4 km/h.</p></li>
+</ol>
+<p class="mb-4"><span class="font-bold">A concrete example:</span> if you’re actually traveling at 100 km/h (about 62 mph), your speedometer could legally display anywhere from 100 to 114 km/h (62 to 71 mph), but never 99 km/h. That’s a potential 14 km/h (9 mph) buffer at highway speeds.</p>
+<h3 class="group relative mb-1 font-bold" id="who-follows-this-regulation"><a href="#who-follows-this-regulation" class="hidden group-hover:flex absolute -left-4 h-4 w-4"><p>#</p></a>Who follows this regulation?</h3>
+<p class="mb-4">
+ <div class="px-4 mb-4">
+  <img src="/gfx/news/2025/11/World_Forum_for_Harmonization_of_Vehicle_Regulations.png" alt="Countries participating in the World Forum for Harmonization of Vehicle Regulations" class="mx-auto max-h-96" />
+ </div></p>
+<blockquote class="border-l border-l-zinc-300 dark:border-l dark:border-l-zinc-500 px-4 md:px-6 mb-4 italic">
+ <p class="mb-4">Image from Wikipedia’s <a href="https://en.wikipedia.org/wiki/World_Forum_for_Harmonization_of_Vehicle_Regulations#Participating_countries" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">“World Forum for Harmonization of Vehicle Regulations”</a></p>
+</blockquote>
+<p class="mb-4">UNECE Regulation 39 is part of the <a href="https://en.wikipedia.org/wiki/World_Forum_for_Harmonization_of_Vehicle_Regulations#Participating_countries" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">1958 Agreement</a> on vehicle technical harmonization. As of 2023, there are 68 contracting parties, including:</p>
+<ul class="list-disc pl-5 mb-4">
+ <li><p class="mb-0">The European Union and all its member states</p></li>
+ <li><p class="mb-0">United Kingdom, Norway, Switzerland, Andorra, San Marino</p></li>
+ <li><p class="mb-0">Russia, Ukraine, Belarus, Turkey, Azerbaijan, Georgia, Armenia, Kazakhstan, Kyrgyzstan</p></li>
+ <li><p class="mb-0">Japan, South Korea, Thailand, Malaysia, Vietnam, Philippines, Pakistan</p></li>
+ <li><p class="mb-0">Australia, New Zealand</p></li>
+ <li><p class="mb-0">South Africa, Egypt, Tunisia, Nigeria, Uganda</p></li>
+</ul>
+<p class="mb-4">Australia explicitly adopts UNECE R39 through <a href="https://www.legislation.gov.au/Details/F2006L01392" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">ADR 18/03</a> for vehicles manufactured after July 2007.</p>
+<p class="mb-4"><span class="font-bold">Notable exceptions:</span> The United States and Canada are not signatories to the 1958 Agreement. The US has its own <a href="https://www.nhtsa.gov/laws-regulations" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Federal Motor Vehicle Safety Standards</a> (FMVSS), and Canada’s Transport Canada does not regulate speedometer accuracy at the federal level.</p>
+<h2 class="group relative md:text-2xl font-bold mb-1" id="why-this-is-good-for-you"><a href="#why-this-is-good-for-you" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>Why this is good for you</h2>
+<p class="mb-4">When you glance at your speedometer and see a higher number, you instinctively ease off the gas. That’s the point. The inflated reading encourages you to drive a bit slower than you otherwise might, creating a real-world safety margin without you having to think about it.</p>
+<p class="mb-4">It also protects you from the small, unconscious speed creep that happens on long drives. A momentary lapse in attention won’t push you over the limit because there’s already a buffer built in. Yes, the speedometer is lying to you, but it’s a lie that complements driver tendencies to reduce tickets and improve road safety.</p>
+<h2 class="group relative md:text-2xl font-bold mb-1" id="how-tire-wear-impacts-your-speedometer"><a href="#how-tire-wear-impacts-your-speedometer" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>How tire wear impacts your speedometer</h2>
+<p class="mb-4">Tire wear actually reinforces this buffer over time. As your tires wear down, their diameter shrinks, which means the wheels have to rotate more times to cover the same distance. Since your car’s speed sensors count wheel rotations, worn tires cause both the dashboard and OBD to read <span class="italic">higher</span> than your true ground speed. GPS, which measures your actual position via satellite, isn’t affected by tire size.</p>
+<p class="mb-4">Manufacturers account for this by calibrating toward the edge of the legal tolerance when the car is new, knowing the safety margin will grow as the tires wear.</p>
+<h2 class="group relative md:text-2xl font-bold mb-1" id="the-takeaway"><a href="#the-takeaway" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>The takeaway</h2>
+<p class="mb-4">When you use OBD or GPS to determine your car’s speed, you’ll often get a value that doesn’t match what’s shown on your car’s speedometer. This is working as intended, and <span class="font-bold">you should prefer your car’s speedometer over an OBD or GPS speedometer while driving</span>. After the drive, you can use direct OBD readings from an app like <a href="https://sidecar.clutch.engineering" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Sidecar</a> to better understand your “true” trip details.</p>
+<p class="mb-4">
+ <div class="px-4 mb-4">
+  <img src="/gfx/news/2025/11/speedometer-regulation.png" alt="" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto" />
+ </div></p>
+<p class="mb-4">Drive safe,</p>
+<p class="mb-4">– Jeff</p>]]></content>
+</entry>
+<entry>
+  <title>Sidecar trip report: Halloween edition</title>
+  <link rel="alternate" type="text/html" href="https://sidecar.clutch.engineering/news/2025/10/23/OctoberReleaseNotes/"/>
+  <id>https://sidecar.clutch.engineering/news/2025/10/23/OctoberReleaseNotes/</id>
+  <published>2025-10-23T04:00:00Z</published>
+  <updated>2025-10-23T04:00:00Z</updated>
+  <content type="html"><![CDATA[<h1 class="text-lg md:text-3xl leading-snug font-bold mb-1 font-rounded">Sidecar trip report: Halloween edition</h1>
+<p class="mb-4">Sidecar’s biggest release yet is here, and it’s a spoooooky one! 👻</p>
+<p class="mb-4">
+ <div class="px-4 mb-4">
+  <img src="/gfx/news/2025/10/october-2025-updates.gif" alt="" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto" />
+ </div></p>
+<p class="mb-4">A <span class="font-bold">lot</span> landed in this Sidecar release. But first off: a huge thank you to the entire Sidecar beta testing community and everyone who has provided feedback along the way. If you aren’t already signed up for the newsletter, you can join the beta crew <a href="/beta" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">here</a>.</p>
+<h2 class="group relative md:text-2xl font-bold mb-1" id="october-2025-release-notes"><a href="#october-2025-release-notes" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>October 2025 release notes</h2>
+<p class="mb-4">Here’s a quick overview of everything that launched today:</p>
+<div class="flex flex-row items-start gap-x-2 pb-4">
+ <ul class="pl-4 list-disc">
+  <li><a href="#navigation-instructions-on-the-phone" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Navigation instructions on the phone</a></li>
+  <li><a href="#volvo-connected-accounts" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Volvo Connected Accounts</a></li>
+  <li><a href="#pinnable-locations" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Pinnable locations</a></li>
+  <li><a href="#custom-place-labels" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Custom place labels (Home/Work)</a></li>
+  <li><a href="#intelligent-quick-destinations" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Intelligent Quick Destinations</a></li>
+  <li><a href="#personalized-search-engine" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Personalized search engine</a></li>
+ </ul>
+ <ul class="pl-4 list-disc">
+  <li><a href="#icloud-backup-status" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">iCloud backup status</a></li>
+  <li><a href="#improved-onboarding-notifications" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Improved onboarding notifications</a></li>
+  <li><a href="#photos-in-the-place-sheet" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Photos in the place sheet</a></li>
+  <li><a href="#pid-detector-can-now-scan-11-bit-can-networks" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">PID Detector can now scan 11-bit CAN networks</a></li>
+  <li><a href="#spooky-holiday-decorations" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Spooky holiday decorations</a></li>
+ </ul>
+</div>
+<h2 class="group relative md:text-2xl font-bold mb-1" id="navigation-instructions-on-the-phone"><a href="#navigation-instructions-on-the-phone" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>Navigation instructions on the phone</h2>
+<p class="mb-4">iPhone navigators, this one’s for you!</p>
+<p class="mb-4">One of the side-effects of building the new navigation widgets is that the widgets can now be used on the phone, too! This works even without a Sidecar+ subscription and is a big improvement to the baseline navigation experience for those using a mounted phone.</p>
+<p class="mb-4">The navigation widgets can be used in landscape mode on the phone as well, though there’s a few rough edges there that still need to be ironed out.</p>
+<p class="mb-4">
+ <div class="px-4 mb-4">
+  <img src="/gfx/news/2025/10/mapnav.png" alt="" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto" />
+ </div></p>
+<hr class="mb-4 border-t border-t-gray-200 border-b border-b-white dark:border-t dark:border-t-gray-500 dark:border-b dark:border-b-black" />
+<h2 class="group relative md:text-2xl font-bold mb-1" id="volvo-connected-accounts"><a href="#volvo-connected-accounts" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>Volvo Connected Accounts</h2>
+<p class="mb-4">Volvo drivers can now log in to Sidecar!</p>
+<div class="mb-4"><div style="background-color: white" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto">
+<img src="/gfx/news/2025/10/volvo.png">
+</div>
+
+</div>
+<p class="mb-4">Many thanks to the Sidecar Volvo beta drivers who provided feedback and bug reports as we got this built out. This is hot off the press, so please continue emailing bugs to <a href="mailto:support@clutch.engineering" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">support@clutch.engineering</a>.</p>
+<p class="mb-4">Volvo connected accounts allow you to check in on the state of your vehicle without being in the car and lock your car using Sidecar’s widgets and Shortcuts. Add your account in Settings &gt; Vehicles &amp; accounts.</p>
+<p class="mb-4"><span class="italic">Volvo Connected accounts are a Sidecar+ benefit.</span></p>
+<hr class="mb-4 border-t border-t-gray-200 border-b border-b-white dark:border-t dark:border-t-gray-500 dark:border-b dark:border-b-black" />
+<h2 class="group relative md:text-2xl font-bold mb-1" id="pinnable-locations"><a href="#pinnable-locations" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>Pinnable locations</h2>
+<p class="mb-4">You can finally pin your favorite destinations on the map 😄</p>
+<p class="mb-4">Whether it’s home, work, or your favorite haunts 👻 Sidecar can now be your personal address book. All pins stay local on your device and can be backed up to iCloud through your Journeys database.</p>
+<p class="mb-4">
+ <div class="px-4 mb-4">
+  <img src="/gfx/news/2025/10/pins.png" alt="" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto" />
+ </div></p>
+<p class="mb-4">To pin locations, open the place sheet and tap the pin button in the bottom corner. You can also drop a pin anywhere and pin it with a long-tap on the map.</p>
+<hr class="mb-4 border-t border-t-gray-200 border-b border-b-white dark:border-t dark:border-t-gray-500 dark:border-b dark:border-b-black" />
+<h2 class="group relative md:text-2xl font-bold mb-1" id="custom-place-labels"><a href="#custom-place-labels" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>Custom place labels</h2>
+<p class="mb-4">Tired of typing your home address to get home all the time? Me too! You can now rename locations and pins so that you can find them more easily. We call our local pharmacy “Frog world”, which is a much more fun way to load up directions 😄</p>
+<p class="mb-4">
+ <div class="px-4 mb-4">
+  <img src="/gfx/news/2025/10/renames.png" alt="" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto" />
+ </div></p>
+<p class="mb-4">To rename a location, open its place sheet and tap the three-dot menu button in the bottom corner. If you want to see the custom name on the map you’ll have to pin the location.</p>
+<hr class="mb-4 border-t border-t-gray-200 border-b border-b-white dark:border-t dark:border-t-gray-500 dark:border-b dark:border-b-black" />
+<h2 class="group relative md:text-2xl font-bold mb-1" id="intelligent-quick-destinations"><a href="#intelligent-quick-destinations" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>Intelligent Quick Destinations</h2>
+<p class="mb-4">
+ <div class="px-4 mb-4">
+  <img src="/gfx/news/2025/10/quick-destinations.gif" alt="" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto" />
+ </div></p>
+<p class="mb-4">Sidecar+ subscribers using trip logging now have a dramatically improved Quick Destinations algorithm that fuses your favorite places with your weekly routines. Your entire trip logging history is provided to Sidecar’s on-device intelligence to provide uncannily accurate suggestions that are just a tap away in CarPlay.</p>
+<p class="mb-4">It’s a really cool experience to hop in the car and see suggestions for exactly where you want to go.</p>
+<hr class="mb-4 border-t border-t-gray-200 border-b border-b-white dark:border-t dark:border-t-gray-500 dark:border-b dark:border-b-black" />
+<h2 class="group relative md:text-2xl font-bold mb-1" id="personalized-search-engine"><a href="#personalized-search-engine" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>Personalized search engine</h2>
+<p class="mb-4">
+ <div class="px-4 mb-4">
+  <img src="/gfx/news/2025/10/search.png" alt="" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto" />
+ </div></p>
+<p class="mb-4">The Sidecar search engine is now personalized based on your pinned locations, weekly patterns, and travel times. Sidecar’s on-device intelligence gets smarter the more you drive with Sidecar (especially with Sidecar+).</p>
+<hr class="mb-4 border-t border-t-gray-200 border-b border-b-white dark:border-t dark:border-t-gray-500 dark:border-b dark:border-b-black" />
+<h2 class="group relative md:text-2xl font-bold mb-1" id="icloud-backup-status"><a href="#icloud-backup-status" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>iCloud backup status</h2>
+<p class="mb-4">
+ <div class="px-4 mb-4">
+  <img src="/gfx/news/2025/10/icloud.png" alt="" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto" />
+ </div></p>
+<p class="mb-4">Keep an eye on your iCloud backups with the new progress indicator. You can tap it to collapse it if it’s getting in the way 😄</p>
+<hr class="mb-4 border-t border-t-gray-200 border-b border-b-white dark:border-t dark:border-t-gray-500 dark:border-b dark:border-b-black" />
+<h2 class="group relative md:text-2xl font-bold mb-1" id="improved-onboarding-notifications"><a href="#improved-onboarding-notifications" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>Improved onboarding notifications</h2>
+<p class="mb-4">
+ <div class="px-4 mb-4">
+  <img src="/gfx/news/2025/10/newobd.png" alt="" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto" />
+ </div></p>
+<p class="mb-4">Over the past few weeks we’ve been trialing a new automatic-onboarding process that may have caused you to get more onboarding notifications than you would have preferred. In this new release, you’ll now only get notifications when <span class="font-bold">new parameters</span> are available, and if you tap the notification you can get a preview of exactly which parameters were added to your vehicle.</p>
+<hr class="mb-4 border-t border-t-gray-200 border-b border-b-white dark:border-t dark:border-t-gray-500 dark:border-b dark:border-b-black" />
+<h2 class="group relative md:text-2xl font-bold mb-1" id="photos-in-the-place-sheet"><a href="#photos-in-the-place-sheet" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>Photos in the place sheet</h2>
+<p class="mb-4">Place sheets now include photography from the location if available! You can tap a photo to view it in full-screen.</p>
+<hr class="mb-4 border-t border-t-gray-200 border-b border-b-white dark:border-t dark:border-t-gray-500 dark:border-b dark:border-b-black" />
+<h2 class="group relative md:text-2xl font-bold mb-1" id="pid-detector-can-now-scan-11-bit-can-networks"><a href="#pid-detector-can-now-scan-11-bit-can-networks" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>PID Detector can now scan 11-bit CAN networks</h2>
+<p class="mb-4">A new PID Detector strategy is now available for scanning 11-bit CAN networks. Please use this feature with care and caution!</p>
+<hr class="mb-4 border-t border-t-gray-200 border-b border-b-white dark:border-t dark:border-t-gray-500 dark:border-b dark:border-b-black" />
+<h2 class="group relative md:text-2xl font-bold mb-1" id="spooky-holiday-decorations"><a href="#spooky-holiday-decorations" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>Spooky holiday decorations</h2>
+<p class="mb-4">Make sure to turn on Sidecar’s holiday decorations in the Settings tab 👻</p>
+<hr class="mb-4 border-t border-t-gray-200 border-b border-b-white dark:border-t dark:border-t-gray-500 dark:border-b dark:border-b-black" />
+<p class="mb-4">Phew, that was a huge release. Hope you enjoy the new features and improvements to Sidecar; onto the next one and as Monomeeth always says,</p>
+<p class="mb-4"><a href="https://discord.gg/kvbD7xeXgg" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">“Happy Sidecar’ing.”</a></p>
+<p class="mb-4">– Jeff</p>]]></content>
+</entry>
+</feed>
