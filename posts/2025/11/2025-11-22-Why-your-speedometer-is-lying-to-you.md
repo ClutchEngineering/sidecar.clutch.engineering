@@ -31,7 +31,7 @@ If we rewrite the standard's formula in terms of the displayed speed:
 This creates two rules:
 
 1. The displayed speed can never be **below** your actual speed.
-2. The displayed speed can be up to 110% **above** your true speed, plus 4 km/h.
+2. The displayed speed can be up to 10% **above** your true speed, plus 4 km/h.
 
 **A concrete example:** if you're actually traveling at 100 km/h (about 62 mph), your speedometer could legally display anywhere from 100 to 114 km/h (62 to 71 mph), but never 99 km/h. That's a potential 14 km/h (9 mph) buffer at highway speeds.
 
