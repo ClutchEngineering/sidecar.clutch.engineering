@@ -27,6 +27,14 @@ public enum Connectable: String, CaseIterable, Decodable, Sendable {
   case shortTermFuelTrim
   case engineLoad
   case throttlePosition
+  case tractionBatteryCurrent
+  case tractionBatteryVoltage
+  case tractionBatteryCapacity
+  case tractionBatteryEfficiency
+  case frontLeftTireTemperature
+  case frontRightTireTemperature
+  case rearLeftTireTemperature
+  case rearRightTireTemperature
 
   // Signal groups
   case batteryModulesStateOfCharge
@@ -40,7 +48,11 @@ public enum Connectable: String, CaseIterable, Decodable, Sendable {
         .batteryModulesStateOfCharge,
         .batteryModulesVoltage,
         .electricRange,
-        .pluggedIn:
+        .pluggedIn,
+        .tractionBatteryCurrent,
+        .tractionBatteryVoltage,
+        .tractionBatteryCapacity,
+        .tractionBatteryEfficiency:
       return true
     default:
       return false
@@ -76,7 +88,11 @@ public enum Connectable: String, CaseIterable, Decodable, Sendable {
         .o2Lambda,
         .shortTermFuelTrim,
         .engineLoad,
-        .throttlePosition:
+        .throttlePosition,
+        .frontLeftTireTemperature,
+        .frontRightTireTemperature,
+        .rearLeftTireTemperature,
+        .rearRightTireTemperature:
       return false
     default:
       return true
