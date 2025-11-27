@@ -42,7 +42,7 @@ I set up a simple A/B test: 50% of drivers would see the release notes as a half
 
 The question I wanted to answer was "Are drivers more likely to read the release notes to the end if the sheet is presented full-screen?"
 
-I created a simple ratio metric that measures the % of drivers who scroll to the bottom of the content and have been running the experiment ran for about a week now.
+I created a simple ratio metric that measures the % of drivers who scroll to the bottom of the content and ran the experiment for about a week.
 
 ---
 
