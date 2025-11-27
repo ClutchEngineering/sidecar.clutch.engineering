@@ -4,6 +4,7 @@ import Foundation
 
 struct BlogPostFrontmatter: Decodable {
   let thumbnail: String?
+  let summary: String?
 }
 
 struct BlogPost: Sendable {
@@ -17,6 +18,7 @@ struct BlogPost: Sendable {
   let date: Date
   let draft: Bool
   let thumbnail: URL?
+  let summary: String?
 
   // Article structure
   let title: String?

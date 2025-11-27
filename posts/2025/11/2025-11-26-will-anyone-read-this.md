@@ -1,5 +1,6 @@
 ---
-thumbnail: /gfx/news/2025/11/release-notes-experiment.png
+thumbnail: /gfx/news/2025/11/release-notes-thumbnail.png
+summary: A lesson in experimentation and UX design.
 ---
 
 # Will anyone read this?

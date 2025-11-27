@@ -69,8 +69,10 @@ struct Gensite: AsyncParsableCommand {
   @ArgumentParser.Flag(name: .long, help: "Only generate leaderboard pages")
   var leaderboard = false
 
+#if os(macOS)
   @ArgumentParser.Flag(name: .long, help: "Watch for file changes and regenerate")
   var watch = false
+#endif
 
   mutating func run() async throws {
     // Assumes this file is located in a Sources/gensite sub-directory of a Swift package.
@@ -247,6 +249,7 @@ struct Gensite: AsyncParsableCommand {
         date: date,
         draft: file.deletingLastPathComponent().lastPathComponent == "Drafts",
         thumbnail: thumbnailURL,
+        summary: frontmatter?.summary,
         title: documentHeading,
         tableOfContents: tableOfContents,
         content: contentWithoutFrontmatter,
@@ -519,6 +522,7 @@ struct Gensite: AsyncParsableCommand {
 
     print("Done")
 
+#if os(macOS)
     // Watch mode: monitor for file changes and regenerate
     if watch {
       print("\nWatching for changes...")
@@ -644,5 +648,6 @@ struct Gensite: AsyncParsableCommand {
         }
       }
     }
+#endif
   }
 }

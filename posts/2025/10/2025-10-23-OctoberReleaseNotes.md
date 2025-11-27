@@ -1,5 +1,6 @@
 ---
 thumbnail: /gfx/news/2025/10/infographic.png
+summary: Volvo connected accounts, pinnable locations, intelligent quick destinations, and a whole lot more.
 ---
 
 # Sidecar trip report: Halloween edition

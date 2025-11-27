@@ -43,9 +43,10 @@ struct BlogPostView: View {
           .hidden()
           .display(.block, condition: .desktop)
           .padding(.horizontal, 16)
+          .padding(.top, 32)
           .className("w-[calc((100vw-796px)/2)]")
           .position(.sticky)
-          .placement(top: 16)
+          .placement(top: 32)
         }
 
         NarrowContainer {
@@ -72,7 +73,7 @@ struct BlogPostView: View {
         .textColor(.text, darkness: 950)
         .textColor(.text, darkness: 200, condition: .dark)
         .padding(.horizontal, 4)
-        .padding(.top, 8)
+        .padding(.top, 32)
         .padding(.bottom, 32)
 
         TakeItForASpin()
@@ -124,6 +125,6 @@ struct BlogPostView: View {
       .textAlignment(.right)
     }
     .justifyContent(.between)
-    .margin(.bottom, 16)
+    .margin(.bottom, 32)
   }
 }

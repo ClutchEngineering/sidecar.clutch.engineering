@@ -48,7 +48,15 @@ private struct BlogPostCard: View {
         .fontWeight(700)
         .textColor(.text, darkness: 900)
         .textColor(.text, darkness: 100, condition: .dark)
-        .margin(.bottom, 12)
+        .margin(.bottom, 8)
+
+        if let summary = post.summary {
+          Slipstream.Paragraph(summary)
+            .fontSize(.small)
+            .textColor(.text, darkness: 600)
+            .textColor(.text, darkness: 300, condition: .dark)
+            .margin(.bottom, 12)
+        }
 
         Div {
           Text(formatDate(post.date))
