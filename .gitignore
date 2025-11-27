@@ -3,6 +3,7 @@ site/**/*.html
 site/sitemap.xml
 site/css/main.css
 site/vehicle-search-index.json
+site/feed.atom
 discord_message.txt
 
 .swiftpm/

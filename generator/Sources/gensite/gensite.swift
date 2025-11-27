@@ -69,6 +69,9 @@ struct Gensite: AsyncParsableCommand {
   @ArgumentParser.Flag(name: .long, help: "Only generate leaderboard pages")
   var leaderboard = false
 
+  @ArgumentParser.Flag(name: .long, help: "Watch for file changes and regenerate")
+  var watch = false
+
   mutating func run() async throws {
     // Assumes this file is located in a Sources/gensite sub-directory of a Swift package.
     let projectRoot = URL(filePath: #filePath)
@@ -515,5 +518,131 @@ struct Gensite: AsyncParsableCommand {
     try generateSitemapXML(from: sitemap)
 
     print("Done")
+
+    // Watch mode: monitor for file changes and regenerate
+    if watch {
+      print("\nWatching for changes...")
+
+      // Determine which directories to watch based on flags
+      var watchPaths: [URL] = []
+      if blog || buildAll {
+        watchPaths.append(postsURL)
+      }
+      if staticPages || buildAll {
+        watchPaths.append(projectRoot.appending(path: "generator/Sources/gensite"))
+      }
+
+      guard !watchPaths.isEmpty else {
+        print("No paths to watch. Use --blog, --static-pages, or no filter flags.")
+        return
+      }
+
+      let fileDescriptors = watchPaths.compactMap { url -> Int32? in
+        let fd = open(url.path(percentEncoded: false), O_EVTONLY)
+        if fd == -1 {
+          print("Warning: Could not watch \(url.path())")
+          return nil
+        }
+        return fd
+      }
+
+      guard !fileDescriptors.isEmpty else {
+        print("Error: Could not watch any directories")
+        return
+      }
+
+      // Use a simple polling approach for recursive directory watching
+      var lastModificationDates: [String: Date] = [:]
+
+      func getModificationDates(in directory: URL) -> [String: Date] {
+        var dates: [String: Date] = [:]
+        guard let enumerator = FileManager.default.enumerator(
+          at: directory,
+          includingPropertiesForKeys: [.contentModificationDateKey],
+          options: [.skipsHiddenFiles]
+        ) else {
+          return dates
+        }
+        for case let fileURL as URL in enumerator {
+          if let values = try? fileURL.resourceValues(forKeys: [.contentModificationDateKey]),
+             let modDate = values.contentModificationDate {
+            dates[fileURL.path()] = modDate
+          }
+        }
+        return dates
+      }
+
+      // Initialize with current state
+      for watchPath in watchPaths {
+        lastModificationDates.merge(getModificationDates(in: watchPath)) { _, new in new }
+      }
+
+      print("Watching \(watchPaths.map { $0.lastPathComponent }.joined(separator: ", ")) for changes. Press Ctrl+C to stop.")
+
+      // Poll for changes
+      while true {
+        try? await Task.sleep(for: .seconds(1))
+
+        var currentDates: [String: Date] = [:]
+        for watchPath in watchPaths {
+          currentDates.merge(getModificationDates(in: watchPath)) { _, new in new }
+        }
+
+        // Check for changes
+        var hasChanges = false
+        var changedFiles: [String] = []
+
+        for (path, date) in currentDates {
+          if let lastDate = lastModificationDates[path] {
+            if date > lastDate {
+              hasChanges = true
+              changedFiles.append(URL(filePath: path).lastPathComponent)
+            }
+          } else {
+            // New file
+            hasChanges = true
+            changedFiles.append(URL(filePath: path).lastPathComponent)
+          }
+        }
+
+        // Check for deleted files
+        for path in lastModificationDates.keys where currentDates[path] == nil {
+          hasChanges = true
+          changedFiles.append("\(URL(filePath: path).lastPathComponent) (deleted)")
+        }
+
+        if hasChanges {
+          print("\n[\(Date().formatted(date: .omitted, time: .standard))] Changes detected: \(changedFiles.joined(separator: ", "))")
+          print("Regenerating...")
+
+          lastModificationDates = currentDates
+
+          // Re-run the generation (simplified - just regenerate what was requested)
+          do {
+            // For blog mode, regenerate blog pages
+            if blog || buildAll {
+              var blogSitemap: Sitemap = [:]
+              let posts = try allBlogFiles(in: postsURL).compactMap { try postURL(filePath: $0) }
+              for (index, post) in posts.enumerated() {
+                let previous = index > 0 ? posts[index - 1] : nil
+                let next = (index < posts.count - 1) ? posts[index + 1] : nil
+
+                blogSitemap[post.outputURL.path()] = BlogPostView(
+                  post: post,
+                  next: next,
+                  previous: previous
+                )
+              }
+
+              blogSitemap["news/index.html"] = BlogList(posts: posts)
+              try await renderSitemapWithLogs(blogSitemap, to: outputURL)
+            }
+            print("Done")
+          } catch {
+            print("Error during regeneration: \(error)")
+          }
+        }
+      }
+    }
   }
 }

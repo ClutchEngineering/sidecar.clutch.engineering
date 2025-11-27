@@ -4,10 +4,66 @@
   <link href="https://sidecar.clutch.engineering/feed.atom" rel="self" type="application/atom+xml"/>
   <link href="https://sidecar.clutch.engineering/news/" rel="alternate" type="text/html"/>
   <id>https://sidecar.clutch.engineering/</id>
-  <updated>2025-11-23T03:04:12Z</updated>
+  <updated>2025-11-27T03:34:47Z</updated>
   <author>
     <name>Sidecar</name>
   </author>
+<entry>
+  <title>Will anyone read this?</title>
+  <link rel="alternate" type="text/html" href="https://sidecar.clutch.engineering/news/2025/11/26/will-anyone-read-this/"/>
+  <id>https://sidecar.clutch.engineering/news/2025/11/26/will-anyone-read-this/</id>
+  <published>2025-11-26T05:00:00Z</published>
+  <updated>2025-11-26T05:00:00Z</updated>
+  <content type="html"><![CDATA[<h1 class="text-lg md:text-3xl leading-snug font-bold mb-1 font-rounded">Will anyone read this?</h1>
+<p class="mb-4"><span class="italic">A lesson in experimentation and UX design.</span></p>
+<div class="mb-4"><img src="/gfx/news/2025/11/release-notes-partial.png" class="float-right-md" />
+
+</div>
+<p class="mb-4">I recently watched a driver use Sidecar for the first time.</p>
+<p class="mb-4">For context, when Sidecar first runs, or when a new major release launches, Sidecar shows release notes. With the iOS 26 update, I made the release notes appear as a half sheet by default, taking advantage of the new glass effect.</p>
+<p class="mb-4">Back to the new driver though. They installed and launched Sidecar, the release notes appeared…and they immediately swiped them away 😭 I had an immediate flashback to the <a href="https://www.tiktok.com/@tired_actor/video/6912855387788102918" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">“Devs watching QA test the product”</a> video.</p>
+<div class="mb-4"><iframe width="320" src="https://www.youtube.com/embed/baY3SaIhfl0?si=HU_cimuYjZ9PYXU7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
+<p class="mb-4">To be fair, it’s well understood that people rarely read documentation, much less release notes. But it got me thinking: was the half-sheet presentation part of the problem?</p>
+<p class="mb-4">Turns out it was.</p>
+<hr class="mb-4 border-t border-t-gray-200 border-b border-b-white dark:border-t dark:border-t-gray-500 dark:border-b dark:border-b-black" />
+<h2 class="group relative md:text-2xl font-bold mb-1" id="the-experiment"><a href="#the-experiment" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>The experiment</h2>
+<p class="mb-4">I recently started using <a href="https://statsig.com" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Statsig</a>, which has been an awesome tool for this.</p>
+<p class="mb-4">I set up a simple A/B test: 50% of drivers would see the release notes as a half-sheet (the control), and 50% would see them full-screen (the test).</p>
+<div class="mb-4"><div style="display: flex; gap: 1rem;">
+  <figure style="margin: 0; text-align: center; flex: 1;">
+    <figcaption style="margin-bottom: 0.5rem;">Half-sheet (control)</figcaption>
+    <img src="/gfx/news/2025/11/release-notes-partial.png" style="width: 100%;" />
+  </figure>
+  <figure style="margin: 0; text-align: center; flex: 1;">
+    <figcaption style="margin-bottom: 0.5rem;">Full-screen (test)</figcaption>
+    <img src="/gfx/news/2025/11/release-notes-fullscreen.png" style="width: 100%;" />
+  </figure>
+</div>
+
+</div>
+<p class="mb-4">The question I wanted to answer was “Are drivers more likely to read the release notes to the end if the sheet is presented full-screen?”</p>
+<p class="mb-4">I created a simple ratio metric that measures the % of drivers&nbsp;who scroll to the bottom of the content and have been running the experiment ran for about a week now.</p>
+<hr class="mb-4 border-t border-t-gray-200 border-b border-b-white dark:border-t dark:border-t-gray-500 dark:border-b dark:border-b-black" />
+<h2 class="group relative md:text-2xl font-bold mb-1" id="the-results"><a href="#the-results" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>The results</h2>
+<p class="mb-4"><span class="font-bold">Drivers are 39.7% more likely to read everything when the notes are presented full-screen.</span></p>
+<p class="mb-4">The half-sheet group had a ~5.5% completion rate while the full-screen group hit ~8%. This confirms both that very few people read the release notes, but also that the experiment caused more people to read them than otherwise would have.</p>
+<p class="mb-4">
+ <div class="px-4 mb-4">
+  <img src="/gfx/news/2025/11/release-notes-statsig-results.png" alt="" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto" />
+ </div></p>
+<p class="mb-4">Digging into the results a bit more it’s also interesting to see that the effect is strongest among non-members, with ~48% of non-members being more likely to read the full notes vs only ~6.5% of members.</p>
+<p class="mb-4">
+ <div class="px-4 mb-4">
+  <img src="/gfx/news/2025/11/release-notes-statsig-members.png" alt="" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto" />
+ </div></p>
+<h2 class="group relative md:text-2xl font-bold mb-1" id="my-takeaway"><a href="#my-takeaway" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>My takeaway</h2>
+<p class="mb-4">The “less intrusive” choice was also less effective, and people who might have otherwise read the release notes were bouncing off before they had a chance to read them. I’ll very likely be promoting the full-screen variant for release notes as a result.</p>
+<p class="mb-4">This is one of those changes I didn’t give a ton of thought to when I made it originally, but as I start to ramp up focus on the new user experience I’m excited to keep trying different experiments like this.</p>
+<p class="mb-4">Drive safe, and happy thanksgiving to those in the states!</p>
+<p class="mb-4">– Jeff</p>]]></content>
+</entry>
 <entry>
   <title>Why your speedometer is lying to you (in a good way)</title>
   <link rel="alternate" type="text/html" href="https://sidecar.clutch.engineering/news/2025/11/22/Why-your-speedometer-is-lying-to-you/"/>
@@ -33,7 +89,7 @@
 <p class="mb-4">This creates two rules:</p>
 <ol class="list-decimal pl-8 mb-4">
  <li><p class="mb-0">The displayed speed can never be <span class="font-bold">below</span> your actual speed.</p></li>
- <li><p class="mb-0">The displayed speed can be up to 110% <span class="font-bold">above</span> your true speed, plus 4 km/h.</p></li>
+ <li><p class="mb-0">The displayed speed can be up to 10% <span class="font-bold">above</span> your true speed, plus 4 km/h.</p></li>
 </ol>
 <p class="mb-4"><span class="font-bold">A concrete example:</span> if you’re actually traveling at 100 km/h (about 62 mph), your speedometer could legally display anywhere from 100 to 114 km/h (62 to 71 mph), but never 99 km/h. That’s a potential 14 km/h (9 mph) buffer at highway speeds.</p>
 <h3 class="group relative mb-1 font-bold" id="who-follows-this-regulation"><a href="#who-follows-this-regulation" class="hidden group-hover:flex absolute -left-4 h-4 w-4"><p>#</p></a>Who follows this regulation?</h3>
@@ -61,6 +117,9 @@
 <h2 class="group relative md:text-2xl font-bold mb-1" id="how-tire-wear-impacts-your-speedometer"><a href="#how-tire-wear-impacts-your-speedometer" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>How tire wear impacts your speedometer</h2>
 <p class="mb-4">Tire wear actually reinforces this buffer over time. As your tires wear down, their diameter shrinks, which means the wheels have to rotate more times to cover the same distance. Since your car’s speed sensors count wheel rotations, worn tires cause both the dashboard and OBD to read <span class="italic">higher</span> than your true ground speed. GPS, which measures your actual position via satellite, isn’t affected by tire size.</p>
 <p class="mb-4">Manufacturers account for this by calibrating toward the edge of the legal tolerance when the car is new, knowing the safety margin will grow as the tires wear.</p>
+<h2 class="group relative md:text-2xl font-bold mb-1" id="how-police-measure-your-speed"><a href="#how-police-measure-your-speed" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>How police measure your speed</h2>
+<p class="mb-4">Police vehicle speedometers are often calibration-certified, typically accurate to within 1-2 mph, and must be recalibrated every six months or whenever tires, gears, or related components are changed.</p>
+<p class="mb-4">When police use radar or lidar, those devices are also subject to strict calibration requirements. For example, <a href="https://law.lis.virginia.gov/vacode/title46.2/chapter8/section46.2-882/" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Virginia Code § 46.2-882</a> requires that calibration certificates for radar devices and tuning forks be presented as evidence in court, and no calibration is valid for longer than six months. Many other states have similar requirements.</p>
 <h2 class="group relative md:text-2xl font-bold mb-1" id="the-takeaway"><a href="#the-takeaway" class="hidden group-hover:flex absolute -left-5 h-5 w-5"><p>#</p></a>The takeaway</h2>
 <p class="mb-4">When you use OBD or GPS to determine your car’s speed, you’ll often get a value that doesn’t match what’s shown on your car’s speedometer. This is working as intended, and <span class="font-bold">you should prefer your car’s speedometer over an OBD or GPS speedometer while driving</span>. After the drive, you can use direct OBD readings from an app like <a href="https://sidecar.clutch.engineering" class="text-blue-700 dark:text-blue-400 font-semibold hover:underline">Sidecar</a> to better understand your “true” trip details.</p>
 <p class="mb-4">

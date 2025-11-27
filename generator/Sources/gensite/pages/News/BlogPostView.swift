@@ -74,6 +74,8 @@ struct BlogPostView: View {
         .padding(.horizontal, 4)
         .padding(.top, 8)
         .padding(.bottom, 32)
+
+        TakeItForASpin()
       }
       .position(.relative)
     }
