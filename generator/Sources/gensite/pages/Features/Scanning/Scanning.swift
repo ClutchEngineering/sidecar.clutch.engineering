@@ -120,6 +120,8 @@ Tested Scanners
 <div>
 <input type="radio" name="country" id="us" class="mr-2" checked>
 <label class="mr-4" for="us">United States 🇺🇸</label>
+<input type="radio" name="country" id="be" class="mr-2">
+<label class="mr-4" for="be">Belgium 🇧🇪</label>
 <input type="radio" name="country" id="br" class="mr-2">
 <label class="mr-4" for="br">Brazil 🇧🇷</label>
 <input type="radio" name="country" id="canada" class="mr-2">
