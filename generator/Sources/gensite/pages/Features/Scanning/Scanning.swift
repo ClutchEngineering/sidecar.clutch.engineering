@@ -522,6 +522,233 @@ Tested Scanners
 </tbody>
 </table>
 </div>
+<div id="be-products">
+<table class="table-auto border-collapse border border-gray-800 mt-4">
+ <thead>
+  <tr class="bg-gray-800 text-xs md:text-base text-white text-left">
+   <th class="pl-2 md:pl-4 py-2">Product</th>
+   <th class="pl-2 md:pl-4 py-2">Supported</th>
+   <th class="pl-2 md:pl-4 py-2">Type</th>
+   <th class="pl-2 md:pl-4 py-2">PIDs / second</th>
+   <th class="px-2 md:px-4 py-2">Price (USD)</th>
+  </tr>
+ </thead>
+<tbody class="text-xs md:text-base">
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Vgate iCar Pro Bluetooth 3.0<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B06XGBKG8X?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">€20.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Vgate iCar Pro Wi-Fi<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B06XGB4QL7?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">Wi-Fi</td>
+ <td class="pl-2 md:pl-4 py-2">up to 29/s</td>
+ <td class="pl-2 md:pl-4 py-2">€25.49</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Vgate iCar Pro Bluetooth 4.0<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B06XGB4873?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
+ <td class="pl-2 md:pl-4 py-2">€30.79</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Carista<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B0BBS73F6J?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
+ <td class="pl-2 md:pl-4 py-2">€33.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Veepeak OBDCheck BLE+<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B076XVQMVS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
+ <td class="pl-2 md:pl-4 py-2">€47.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Vgate vLinker MC+<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B088LW211V?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
+ <td class="pl-2 md:pl-4 py-2">€54.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  AUTOPHIX<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B07WT82MT4?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">€71.52</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  OBDeleven<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B08K94L4JS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">€76.42</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  UniCarScan<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B09WVJPF2F?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
+ <td class="pl-2 md:pl-4 py-2">€79.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  TopScan<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B0C3QQYQ1B?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">€79.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Vgate iCar Pro 2S<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B0CYZRMCK9?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 34/s</td>
+ <td class="pl-2 md:pl-4 py-2">€83.39</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  FIXD<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B013RIQMEO?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">€87.22</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  LELink^2<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B0755N61PW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 17/s</td>
+ <td class="pl-2 md:pl-4 py-2">€90.54</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  OBDLink LX<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B00H9S71LW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">€109.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  BlueDriver<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B00652G4TS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">€142.48</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  vLinker MS<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B0D6YQX4R8?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 62/s</td>
+ <td class="pl-2 md:pl-4 py-2">€148.07</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  vLinker FS<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B0BZTXV6MZ?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2 font-bold">up to 58/s</td>
+ <td class="pl-2 md:pl-4 py-2">€164.62</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Bouncie<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B07H8NS5MS?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">€184.04</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  DND ECHO<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.be/dp/B0CZ8X334R?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+  &middot;
+  <a class="text-blue-500 underline"
+   href="https://obd.ai/products/dnd-echo-professional-obdil-diagnostic-tool">obd.ai</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center"><span class="text-red-500">✘</span></td>
+ <td class="pl-2 md:pl-4 py-2">Classic Bluetooth</td>
+ <td class="pl-2 md:pl-4 py-2">Unknown</td>
+ <td class="pl-2 md:pl-4 py-2">€238.15</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="br-products">
 <table class="table-auto border-collapse border border-gray-800 mt-4">
  <thead>

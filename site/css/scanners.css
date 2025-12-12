@@ -1,4 +1,5 @@
 #us-products,
+#be-products,
 #br-products,
 #ca-products,
 #de-products,
@@ -8,6 +9,10 @@
 }
 
 #us:checked ~ #us-products {
+  display: block;
+}
+
+#be:checked ~ #be-products {
   display: block;
 }
 
