@@ -294,7 +294,6 @@ let typoCorrections: [String: String] = [
   "Ford/everest": "Ford/Everest",
   "Ford/EVEREST": "Ford/Everest",
   "Ford/expdition": "Ford/Expedition",
-  "Ford/F-150 Lightning": "Ford/F-150",
   "Ford/Focus RS": "Ford/Focus",
   "Ford/Kuga 2019 (2024)": "Ford/Kuga",
   "Ford/Mach E": "Ford/Mustang Mach-E",
