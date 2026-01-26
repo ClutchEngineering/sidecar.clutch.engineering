@@ -212,6 +212,17 @@ Tested Scanners
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  Bluetooth 5.4 OBD2 Scanner<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com/dp/B0D44C1F7Y?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 13/s</td>
+ <td class="pl-2 md:pl-4 py-2">$29.99</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   Vgate iCar Pro Bluetooth 4.0<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.com/dp/B06XGB4873?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
@@ -776,6 +787,17 @@ Tested Scanners
 </tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
+  Bluetooth 5.4 OBD2 Scanner<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.com.br/dp/B0D44C1F7Y?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 13/s</td>
+ <td class="pl-2 md:pl-4 py-2">R$207,48</td>
+</tr>
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
   LELink^2<br />
   <a class="text-blue-500 underline"
    href="https://www.amazon.com.br/dp/B0755N61PW?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
@@ -844,6 +866,17 @@ Tested Scanners
   </tr>
  </thead>
 <tbody class="text-xs md:text-base">
+<tr>
+ <td class="pl-2 md:pl-4 py-2">
+  Bluetooth 5.4 OBD2 Scanner<br />
+  <a class="text-blue-500 underline"
+   href="https://www.amazon.ca/dp/B0D44C1F7Y?&_encoding=UTF8&tag=electricsidecar-20&linkCode=ur2&linkId=website-scanning&camp=1789&creative=9325">Amazon</a>
+ </td>
+ <td class="pl-2 md:pl-4 py-2 text-center">✔</td>
+ <td class="pl-2 md:pl-4 py-2">BTLE</td>
+ <td class="pl-2 md:pl-4 py-2">up to 13/s</td>
+ <td class="pl-2 md:pl-4 py-2">$22.94</td>
+</tr>
 <tr>
  <td class="pl-2 md:pl-4 py-2">
   Vgate iCar Pro Bluetooth 3.0<br />

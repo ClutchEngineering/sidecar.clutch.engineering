@@ -23,7 +23,8 @@
       "Bash(\"site/gfx/help/refresh-vehicle-parameters.png\" )",
       "Bash(\"site/gfx/help/export-specific-scan-sessions.png\" )",
       "Bash(\"site/gfx/garage.png\" )",
-      "Bash(\"site/gfx/supported-vehicle.png\")"
+      "Bash(\"site/gfx/supported-vehicle.png\")",
+      "WebFetch(domain:www.amazon.com)"
     ],
     "deny": [],
     "ask": []
