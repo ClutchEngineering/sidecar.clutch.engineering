@@ -8,7 +8,7 @@ public enum PostHogError: Error {
   case networkError(Error)
   case invalidResponse
   case exportNotReady
-  case exportFailed
+  case exportFailed(String)
 }
 
 public struct PostHogExportResponse: Codable {
@@ -94,8 +94,26 @@ public actor PostHogExportClient {
     var request = URLRequest(url: url)
     request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
 
-    var (data, _) = try await session.data(for: request)
+    var (data, response) = try await session.data(for: request)
+
+    // On Linux (FoundationNetworking), redirects are not followed automatically.
+    // PostHog redirects the content download to S3, so we must follow it manually.
+    if let httpResponse = response as? HTTPURLResponse,
+       (301...303).contains(httpResponse.statusCode),
+       let location = httpResponse.value(forHTTPHeaderField: "Location"),
+       let redirectURL = URL(string: location) {
+      let redirectRequest = URLRequest(url: redirectURL)
+      (data, response) = try await session.data(for: redirectRequest)
+    }
+
+    if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200 {
+      let body = String(data: data, encoding: .utf8) ?? "<non-UTF8 response>"
+      throw PostHogError.exportFailed("HTTP \(httpResponse.statusCode): \(body)")
+    }
     if let string = String(data: data, encoding: .utf8) {
+      if string.hasPrefix("<?xml") || string.hasPrefix("<Error") {
+        throw PostHogError.exportFailed(string)
+      }
       let filteredData = string
         .components(separatedBy: .newlines)
         .map { $0.trimmingCharacters(in: .whitespaces) }
