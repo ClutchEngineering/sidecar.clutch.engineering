@@ -13,7 +13,7 @@ let package = Package(
     .library(name: "Slipstream", targets: ["Slipstream"]),
   ],
   dependencies: [
-    .package(url: "https://github.com/apple/swift-markdown.git", branch: "main"),
+    .package(name: "slipstream", path: "../swift-markdown"),
     .package(url: "https://github.com/scinfu/SwiftSoup.git", from: "2.8.8"),
     .package(url: "https://github.com/swiftlang/swift-docc-plugin", from: "1.4.4"),
   ],
