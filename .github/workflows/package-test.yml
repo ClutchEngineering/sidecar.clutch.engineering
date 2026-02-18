@@ -1,0 +1,32 @@
+name: Swift
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test_beta:
+    runs-on: macos-15
+    steps:
+      - name: Select Xcode
+        run: sudo xcode-select -s "/Applications/Xcode_16.4.app"
+      - name: Get swift version
+        run: swift --version
+      - uses: actions/checkout@v4
+      - name: Build
+        run: swift build -v
+      - name: Run tests
+        run: swift test -v
+
+  test_latest:
+    runs-on: macos-15
+    steps:
+      - name: Select Xcode
+        run: sudo xcode-select -s "/Applications/Xcode_16.4.app"
+      - name: Get swift version
+        run: swift --version
+      - uses: actions/checkout@v4
+      - name: Build
+        run: swift build -v
