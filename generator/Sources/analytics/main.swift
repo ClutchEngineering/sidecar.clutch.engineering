@@ -145,8 +145,9 @@ do {
 //  print("Updating driver counts in Airtable Models table...")
 //  try await airtableClient.updateDriverCounts(csvData, in: modelsTableID)
 } catch let error {
+  dump(error)
   print(error)
-  fatalError(error.localizedDescription)
+  exit(1)
 }
 
 print("Copying today's stats to yesterday...")
@@ -158,8 +159,9 @@ do {
   try FileManager.default.removeItem(at: yesterdayURL)
   try FileManager.default.copyItem(at: todayURL, to: yesterdayURL)
 } catch let error {
+  dump(error)
   print(error)
-  fatalError(error.localizedDescription)
+  exit(1)
 }
 
 print("Fetching today's stats...")
@@ -186,8 +188,9 @@ do {
   //  print("Updating miles driven in Airtable Models table...")
   //  try await airtableClient.updateMilesDriven(csvData, in: modelsTableID)
 } catch let error {
+  dump(error)
   print(error)
-  fatalError(error.localizedDescription)
+  exit(1)
 }
 
 print("Done.")
