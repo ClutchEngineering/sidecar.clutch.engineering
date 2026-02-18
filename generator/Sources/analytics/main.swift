@@ -144,6 +144,9 @@ do {
 //  // Update Models table in Airtable
 //  print("Updating driver counts in Airtable Models table...")
 //  try await airtableClient.updateDriverCounts(csvData, in: modelsTableID)
+} catch let error {
+  print(error)
+  fatalError(error.localizedDescription)
 }
 
 print("Copying today's stats to yesterday...")
@@ -154,6 +157,9 @@ let todayURL = exportsURL.appending(path: "export-carplay-distance-traveled-by-m
 do {
   try FileManager.default.removeItem(at: yesterdayURL)
   try FileManager.default.copyItem(at: todayURL, to: yesterdayURL)
+} catch let error {
+  print(error)
+  fatalError(error.localizedDescription)
 }
 
 print("Fetching today's stats...")
@@ -163,22 +169,25 @@ do {
   let rawCSVData = try await client.fetchExportedCSV(query: milesTraveledQuery())
   let csvData = try sanitizeCSVData(rawCSVData, vestigialColumnName: "Miles traveled", typoCorrections: typoCorrections)
 
-// Example output:
-// ```
-// series,custom name,total count
-// Porsche/Taycan,Miles traveled,222204.81054912304
-// Toyota/Camry,Miles traveled,211605.4127345223
-// /,Miles traveled,138731.3786228466
-// Ford/F-150,Miles traveled,103014.43439880807
-// Toyota/4Runner,Miles traveled,91293.81221820317
-// ...
-// ```
+  // Example output:
+  // ```
+  // series,custom name,total count
+  // Porsche/Taycan,Miles traveled,222204.81054912304
+  // Toyota/Camry,Miles traveled,211605.4127345223
+  // /,Miles traveled,138731.3786228466
+  // Ford/F-150,Miles traveled,103014.43439880807
+  // Toyota/4Runner,Miles traveled,91293.81221820317
+  // ...
+  // ```
 
   try csvData.write(to: todayURL)
 
-//  // Update Models table in Airtable with miles driven
-//  print("Updating miles driven in Airtable Models table...")
-//  try await airtableClient.updateMilesDriven(csvData, in: modelsTableID)
+  //  // Update Models table in Airtable with miles driven
+  //  print("Updating miles driven in Airtable Models table...")
+  //  try await airtableClient.updateMilesDriven(csvData, in: modelsTableID)
+} catch let error {
+  print(error)
+  fatalError(error.localizedDescription)
 }
 
 print("Done.")
