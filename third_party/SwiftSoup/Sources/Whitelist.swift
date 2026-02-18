@@ -1,0 +1,657 @@
+//
+//  Whitelist.swift
+//  SwiftSoup
+//
+//  Created by Nabil Chatbi on 14/10/16.
+//
+
+/*
+ Thank you to Ryan Grove (wonko.com) for the Ruby HTML cleaner http://github.com/rgrove/sanitize/, which inspired
+ this whitelist configuration, and the initial defaults.
+ */
+
+
+import Foundation
+
+/**
+ Whitelists define what HTML (elements and attributes) to allow through the cleaner. Everything else is removed.
+ 
+ Start with one of the defaults:
+ 
+ * ``none()``
+ * ``simpleText()``
+ * ``basic()``
+ * ``basicWithImages()``
+ * ``relaxed()``
+ 
+ If you need to allow more through (please be careful!), tweak a base whitelist with:
+ 
+ * ``addTags(_:)``
+ * ``addAttributes(_:_:)``
+ * ``addEnforcedAttribute(_:_:_:)``
+ * ``addProtocols(_:_:_:)``
+ 
+ You can remove any setting from an existing whitelist with:
+ 
+ * ``removeTags(_:)``
+ * ``removeAttributes(_:_:)``
+ * ``removeEnforcedAttribute(_:_:)``
+ * ``removeProtocols(_:_:_:)``
+ 
+ The cleaner and these whitelists assume that you want to clean a `body` fragment of HTML (to add user
+ supplied HTML into a templated page), and not to clean a full HTML document. If the latter is the case, either wrap the
+ document HTML around the cleaned body HTML, or create a whitelist that allows `html` and `head`
+ elements as appropriate.
+ 
+ If you are going to extend a whitelist, please be very careful. Make sure you understand what attributes may lead to
+ XSS attack vectors. URL attributes are particularly vulnerable and require careful validation. See
+ http://ha.ckers.org/xss.html for some XSS attack examples.
+ */
+ public class Whitelist {
+    private var tagNames: Set<TagName> // tags allowed, lower case. e.g. [p, br, span]
+    private var attributes: Dictionary<TagName, Set<AttributeKey>> // tag -> attribute[]. allowed attributes [href] for a tag.
+    private var enforcedAttributes: Dictionary<TagName, Dictionary<AttributeKey, AttributeValue>> // always set these attribute values
+    private var protocols: Dictionary<TagName, Dictionary<AttributeKey, Set<Protocol>>> // allowed URL protocols for attributes
+    private var preserveRelativeLinks: Bool  // option to preserve relative links
+
+    /**
+     This whitelist allows only text nodes: all HTML will be stripped.
+     
+     - returns: whitelist
+     */
+    public static func none() -> Whitelist {
+        return Whitelist()
+    }
+
+    /**
+     This whitelist allows only simple text formatting: `b, em, i, strong, u`. All other HTML (tags and
+     attributes) will be removed.
+     
+     - returns: whitelist
+     */
+    public static func simpleText()throws ->Whitelist {
+        return try Whitelist().addTags("b", "em", "i", "strong", "u")
+    }
+
+    /**
+     This whitelist allows a fuller range of text nodes: `a, b, blockquote, br, cite, code, dd, dl, dt, em, i, li,
+     ol, p, pre, q, small, span, strike, strong, sub, sup, u, ul`, and appropriate attributes.
+     
+     Links (`a` elements) can point to `http, https, ftp, mailto`, and have an enforced
+     `rel=nofollow` attribute.
+     
+     Does not allow images.
+     
+     - returns: whitelist
+     */
+    public static func basic()throws->Whitelist {
+        return try Whitelist()
+            .addTags(
+                "a", "b", "blockquote", "br", "cite", "code", "dd", "dl", "dt", "em",
+                "i", "li", "ol", "p", "pre", "q", "small", "span", "strike", "strong", "sub",
+                "sup", "u", "ul")
+
+            .addAttributes("a", "href")
+            .addAttributes("blockquote", "cite")
+            .addAttributes("q", "cite")
+
+            .addProtocols("a", "href", "ftp", "http", "https", "mailto")
+            .addProtocols("blockquote", "cite", "http", "https")
+            .addProtocols("cite", "cite", "http", "https")
+
+            .addEnforcedAttribute("a", "rel", "nofollow")
+    }
+
+    /**
+     This whitelist allows the same text tags as ``basic()``, and also allows `img` tags, with appropriate
+     attributes, with `src` pointing to `http` or `https`.
+     
+     - returns: whitelist
+     */
+    public static func basicWithImages()throws->Whitelist {
+        return try basic()
+            .addTags("img")
+            .addAttributes("img", "align", "alt", "height", "src", "title", "width")
+            .addProtocols("img", "src", "http", "https")
+
+    }
+
+    /**
+     This whitelist allows a full range of text and structural body HTML: `a, b, blockquote, br, caption, cite,
+     code, col, colgroup, dd, div, dl, dt, em, h1, h2, h3, h4, h5, h6, i, img, li, ol, p, pre, q, small, span, strike, strong, sub,
+     sup, table, tbody, td, tfoot, th, thead, tr, u, ul`
+     
+     Links do not have an enforced `rel=nofollow` attribute, but you can add that if desired.
+     
+     - returns: whitelist
+     */
+    public static func relaxed()throws->Whitelist {
+        return try Whitelist()
+            .addTags(
+                "a", "b", "blockquote", "br", "caption", "cite", "code", "col",
+                "colgroup", "dd", "div", "dl", "dt", "em", "h1", "h2", "h3", "h4", "h5", "h6",
+                "i", "img", "li", "ol", "p", "pre", "q", "small", "span", "strike", "strong",
+                "sub", "sup", "table", "tbody", "td", "tfoot", "th", "thead", "tr", "u",
+                "ul")
+
+            .addAttributes("a", "href", "title")
+            .addAttributes("blockquote", "cite")
+            .addAttributes("col", "span", "width")
+            .addAttributes("colgroup", "span", "width")
+            .addAttributes("img", "align", "alt", "height", "src", "title", "width")
+            .addAttributes("ol", "start", "type")
+            .addAttributes("q", "cite")
+            .addAttributes("table", "summary", "width")
+            .addAttributes("td", "abbr", "axis", "colspan", "rowspan", "width")
+            .addAttributes(
+                "th", "abbr", "axis", "colspan", "rowspan", "scope",
+                "width")
+            .addAttributes("ul", "type")
+
+            .addProtocols("a", "href", "ftp", "http", "https", "mailto")
+            .addProtocols("blockquote", "cite", "http", "https")
+            .addProtocols("cite", "cite", "http", "https")
+            .addProtocols("img", "src", "http", "https")
+            .addProtocols("q", "cite", "http", "https")
+    }
+
+    /**
+     Create a new, empty whitelist. Generally it will be better to start with a default prepared whitelist instead.
+     
+     - seealso: ``basic()``, ``basicWithImages()``, ``simpleText()``, ``relaxed()``
+     */
+    init() {
+        tagNames = Set<TagName>()
+        attributes = Dictionary<TagName, Set<AttributeKey>>()
+        enforcedAttributes = Dictionary<TagName, Dictionary<AttributeKey, AttributeValue>>()
+        protocols = Dictionary<TagName, Dictionary<AttributeKey, Set<Protocol>>>()
+        preserveRelativeLinks = false
+    }
+
+    /**
+     Add a list of allowed elements to a whitelist. (If a tag is not allowed, it will be removed from the HTML.)
+     
+     - parameter tags: tag names to allow
+     - returns: this (for chaining)
+     */
+    @discardableResult
+    open func addTags(_ tags: String...) throws -> Whitelist {
+        for tagName in tags {
+            try Validate.notEmpty(string: tagName)
+            tagNames.insert(TagName.valueOf(tagName))
+        }
+        return self
+    }
+
+    /**
+     Remove a list of allowed elements from a whitelist. (If a tag is not allowed, it will be removed from the HTML.)
+     
+     - parameter tags: tag names to disallow
+     - returns: this (for chaining)
+     */
+    @discardableResult
+    open func removeTags(_ tags: String...) throws -> Whitelist {
+        try Validate.notNull(obj: tags)
+
+        for tag in tags {
+            try Validate.notEmpty(string: tag)
+            let tagName: TagName = TagName.valueOf(tag)
+
+            if(tagNames.contains(tagName)) { // Only look in sub-maps if tag was allowed
+                tagNames.remove(tagName)
+                attributes.removeValue(forKey: tagName)
+                enforcedAttributes.removeValue(forKey: tagName)
+                protocols.removeValue(forKey: tagName)
+            }
+        }
+        return self
+    }
+
+    /**
+     Add a list of allowed attributes to a tag. (If an attribute is not allowed on an element, it will be removed.)
+     
+     E.g.: `addAttributes("a", "href", "class")` allows `href` and `class` attributes
+     on `a` tags.
+     
+     To make an attribute valid for <b>all tags</b>, use the pseudo tag `:all`, e.g.
+     `addAttributes(":all", "class")`.
+     
+     - parameter tag:  The tag the attributes are for. The tag will be added to the allowed tag list if necessary.
+     - parameter keys: List of valid attributes for the tag
+     - returns: this (for chaining)
+     */
+    @discardableResult
+    open func addAttributes(_ tag: String, _ keys: String...)throws->Whitelist {
+        try Validate.notEmpty(string: tag)
+        try Validate.isTrue(val: !keys.isEmpty, msg: "No attributes supplied.")
+
+        let tagName = TagName.valueOf(tag)
+        if (!tagNames.contains(tagName)) {
+            tagNames.insert(tagName)
+        }
+        var attributeSet = Set<AttributeKey>()
+        for key in keys {
+            try Validate.notEmpty(string: key)
+            attributeSet.insert(AttributeKey.valueOf(key))
+        }
+
+        if var currentSet = attributes[tagName] {
+            for at in attributeSet {
+                currentSet.insert(at)
+            }
+            attributes[tagName] = currentSet
+        } else {
+            attributes[tagName] = attributeSet
+        }
+
+        return self
+    }
+
+    /**
+     Remove a list of allowed attributes from a tag. (If an attribute is not allowed on an element, it will be removed.)
+     
+     E.g.: `removeAttributes("a", "href", "class")` disallows `href` and `class`
+     attributes on `a` tags.
+     
+     To make an attribute invalid for <b>all tags</b>, use the pseudo tag `:all`, e.g.
+     `removeAttributes(":all", "class")`.
+     
+     - parameter tag:  The tag the attributes are for.
+     - parameter keys: List of invalid attributes for the tag
+     - returns: this (for chaining)
+     */
+    @discardableResult
+    open func removeAttributes(_ tag: String, _ keys: String...)throws->Whitelist {
+        try Validate.notEmpty(string: tag)
+        try Validate.isTrue(val: !keys.isEmpty, msg: "No attributes supplied.")
+
+        let tagName: TagName = TagName.valueOf(tag)
+        var attributeSet = Set<AttributeKey>()
+        for key in keys {
+            try Validate.notEmpty(string: key)
+            attributeSet.insert(AttributeKey.valueOf(key))
+        }
+
+        if(tagNames.contains(tagName)) { // Only look in sub-maps if tag was allowed
+            if var currentSet = attributes[tagName] {
+                for l in attributeSet {
+                    currentSet.remove(l)
+                }
+                attributes[tagName] = currentSet
+                if(currentSet.isEmpty) { // Remove tag from attribute map if no attributes are allowed for tag
+                    attributes.removeValue(forKey: tagName)
+                }
+            }
+
+        }
+
+        if(tag == ":all") { // Attribute needs to be removed from all individually set tags
+            for name in attributes.keys {
+                var currentSet: Set<AttributeKey> = attributes[name]!
+                for l in attributeSet {
+                    currentSet.remove(l)
+                }
+                attributes[name] = currentSet
+                if(currentSet.isEmpty) { // Remove tag from attribute map if no attributes are allowed for tag
+                    attributes.removeValue(forKey: name)
+                }
+            }
+        }
+        return self
+    }
+
+    /**
+     Add an enforced attribute to a tag. An enforced attribute will always be added to the element. If the element
+     already has the attribute set, it will be overridden.
+     
+     E.g.: `addEnforcedAttribute("a", "rel", "nofollow")` will make all `a` tags output as
+     `<a href="..." rel="nofollow">`
+     
+     - parameter tag:   The tag the enforced attribute is for. The tag will be added to the allowed tag list if necessary.
+     - parameter key:   The attribute key
+     - parameter value: The enforced attribute value
+     - returns: this (for chaining)
+     */
+    @discardableResult
+    open func addEnforcedAttribute(_ tag: String, _ key: String, _ value: String)throws->Whitelist {
+        try Validate.notEmpty(string: tag)
+        try Validate.notEmpty(string: key)
+        try Validate.notEmpty(string: value)
+
+        let tagName: TagName = TagName.valueOf(tag)
+        if (!tagNames.contains(tagName)) {
+            tagNames.insert(tagName)
+        }
+        let attrKey: AttributeKey = AttributeKey.valueOf(key)
+        let attrVal: AttributeValue = AttributeValue.valueOf(value)
+
+        if (enforcedAttributes[tagName] != nil) {
+            enforcedAttributes[tagName]?[attrKey] = attrVal
+        } else {
+            var attrMap: Dictionary<AttributeKey, AttributeValue> = Dictionary<AttributeKey, AttributeValue>()
+            attrMap[attrKey] = attrVal
+            enforcedAttributes[tagName] = attrMap
+        }
+        return self
+    }
+
+    /**
+     Remove a previously configured enforced attribute from a tag.
+     
+     - parameter tag:   The tag the enforced attribute is for.
+     - parameter key:   The attribute key
+     - returns: this (for chaining)
+     */
+    @discardableResult
+    open func removeEnforcedAttribute(_ tag: String, _ key: String)throws->Whitelist {
+        try Validate.notEmpty(string: tag)
+        try Validate.notEmpty(string: key)
+
+        let tagName: TagName = TagName.valueOf(tag)
+        if(tagNames.contains(tagName) && (enforcedAttributes[tagName] != nil)) {
+            let attrKey: AttributeKey = AttributeKey.valueOf(key)
+            var attrMap: Dictionary<AttributeKey, AttributeValue> = enforcedAttributes[tagName]!
+            attrMap.removeValue(forKey: attrKey)
+            enforcedAttributes[tagName] = attrMap
+
+            if(attrMap.isEmpty) { // Remove tag from enforced attribute map if no enforced attributes are present
+                enforcedAttributes.removeValue(forKey: tagName)
+            }
+        }
+        return self
+    }
+
+    /**
+     Configure this Whitelist to preserve relative links in an element's URL attribute, or convert them to absolute
+     links. By default, this is _false_: URLs will be  made absolute (e.g. start with an allowed protocol, like
+     e.g. `http://`.
+     
+     Note that when handling relative links, the input document must have an appropriate `base URI` set when
+     parsing, so that the link's protocol can be confirmed. Regardless of the setting of the `preserve relative
+     links` option, the link must be resolvable against the base URI to an allowed protocol; otherwise the attribute
+     will be removed.
+     
+     - parameter preserve: `true` to allow relative links, `false` (default) to deny
+     - returns: this Whitelist, for chaining.
+     - seealso: ``addProtocols(_:_:_:)``
+     */
+    @discardableResult
+    open func preserveRelativeLinks(_ preserve: Bool) -> Whitelist {
+        preserveRelativeLinks = preserve
+        return self
+    }
+
+    /**
+     Add allowed URL protocols for an element's URL attribute. This restricts the possible values of the attribute to
+     URLs with the defined protocol.
+     
+     E.g.: `addProtocols("a", "href", "ftp", "http", "https")`
+     
+     To allow a link to an in-page URL anchor (i.e. `<a href="#anchor">`, add a `#`:
+     E.g.: `addProtocols("a", "href", "#")`
+     
+     - parameter tag:       Tag the URL protocol is for
+     - parameter key:       Attribute key
+     - parameter protocols: List of valid protocols
+     - returns: this, for chaining
+     */
+    @discardableResult
+    open func addProtocols(_ tag: String, _ key: String, _ protocols: String...)throws->Whitelist {
+        try Validate.notEmpty(string: tag)
+        try Validate.notEmpty(string: key)
+
+        let tagName: TagName = TagName.valueOf(tag)
+        let attrKey: AttributeKey = AttributeKey.valueOf(key)
+        var attrMap: Dictionary<AttributeKey, Set<Protocol>>
+        var protSet: Set<Protocol>
+
+        if (self.protocols[tagName] != nil) {
+            attrMap = self.protocols[tagName]!
+        } else {
+            attrMap =  Dictionary<AttributeKey, Set<Protocol>>()
+            self.protocols[tagName] = attrMap
+        }
+
+        if (attrMap[attrKey] != nil) {
+            protSet = attrMap[attrKey]!
+        } else {
+            protSet = Set<Protocol>()
+            attrMap[attrKey] = protSet
+            self.protocols[tagName] = attrMap
+        }
+        for ptl in protocols {
+            try Validate.notEmpty(string: ptl)
+            let prot: Protocol = Protocol.valueOf(ptl)
+            protSet.insert(prot)
+        }
+        attrMap[attrKey] = protSet
+        self.protocols[tagName] = attrMap
+
+        return self
+    }
+
+    /**
+     Remove allowed URL protocols for an element's URL attribute.
+     
+     E.g.: `removeProtocols("a", "href", "ftp")`
+     
+     - parameter tag:       Tag the URL protocol is for
+     - parameter key:       Attribute key
+     - parameter protocols: List of invalid protocols
+     - returns: this, for chaining
+     */
+    @discardableResult
+    open func removeProtocols(_ tag: String, _ key: String, _ protocols: String...)throws->Whitelist {
+        try Validate.notEmpty(string: tag)
+        try Validate.notEmpty(string: key)
+
+        let tagName: TagName = TagName.valueOf(tag)
+        let attrKey: AttributeKey = AttributeKey.valueOf(key)
+
+        if(self.protocols[tagName] != nil) {
+            var attrMap: Dictionary<AttributeKey, Set<Protocol>> = self.protocols[tagName]!
+            if(attrMap[attrKey] != nil) {
+                var protSet: Set<Protocol> = attrMap[attrKey]!
+                for ptl in protocols {
+                    try Validate.notEmpty(string: ptl)
+                    let prot: Protocol = Protocol.valueOf(ptl)
+                    protSet.remove(prot)
+                }
+                attrMap[attrKey] = protSet
+
+                if(protSet.isEmpty) { // Remove protocol set if empty
+                    attrMap.removeValue(forKey: attrKey)
+                    if(attrMap.isEmpty) { // Remove entry for tag if empty
+                        self.protocols.removeValue(forKey: tagName)
+                    }
+
+                }
+            }
+            self.protocols[tagName] = attrMap
+        }
+        return self
+    }
+
+    /**
+     Test if the supplied tag is allowed by this whitelist
+     - parameter tag: test tag
+     - returns: true if allowed
+     */
+    public func isSafeTag(_ tag: [UInt8]) -> Bool {
+        return tagNames.contains(TagName.valueOf(tag))
+    }
+
+    /**
+     Test if the supplied attribute is allowed by this whitelist for this tag
+     - parameter tagName: tag to consider allowing the attribute in
+     - parameter el: element under test, to confirm protocol
+     - parameter attr: attribute under test
+     - returns: true if allowed
+     */
+    public func isSafeAttribute(_ tagName: String, _ el: Element, _ attr: Attribute)throws -> Bool {
+        let tag: TagName = TagName.valueOf(tagName)
+        let key: AttributeKey = AttributeKey.valueOf(attr.getKey())
+
+        if attributes[tag]?.contains(key) ?? false {
+            if let attrProts = protocols[tag] {
+                if let protocols = attrProts[key] {
+                    // test
+                    return try testValidProtocol(el, attr, protocols)
+                } else {
+                    // ok if not defined protocol
+                    return true
+                }
+            } else { // attribute found, no protocols defined, so OK
+                return true
+            }
+        }
+        // no attributes defined for tag, try :all tag
+        return try (tagName != ":all") && isSafeAttribute(":all", el, attr)
+    }
+    
+    /**
+     Test if the supplied attribute is allowed by this whitelist for this tag
+     - parameter tagName: tag to consider allowing the attribute in
+     - parameter el: element under test, to confirm protocol
+     - parameter attr: attribute under test
+     - returns: A clone of the passed attribute if it's allowed. The clone may have its value altered depending
+       on whitelist settings like ``preserveRelativeLinks(_:)``.
+     */
+    public func safeAttribute(_ tagName: String, _ el: Element, _ attr: Attribute)throws -> Attribute? {
+        guard try isSafeAttribute(tagName, el, attr) else {
+            return nil
+        }
+        
+        let clonedAttr = attr.clone()
+        if !preserveRelativeLinks {
+            let value: [UInt8] = try el.absUrl(attr.getKeyUTF8())
+            if !value.isEmpty {
+                clonedAttr.setValue(value: value)
+            }
+        }
+        return clonedAttr
+    }
+
+    private func testValidProtocol(_ el: Element, _ attr: Attribute, _ protocols: Set<Protocol>) throws -> Bool {
+        // try to resolve relative urls to abs, and optionally update the attribute so output html has abs.
+        // rels without a baseuri get removed
+        var value: [UInt8] = try el.absUrl(attr.getKeyUTF8())
+        if value.isEmpty {
+            value = attr.getValueUTF8()
+        }// if it could not be made abs, run as-is to allow custom unknown protocols
+
+        for ptl in protocols {
+            var prot: String = ptl.toString()
+
+            if prot == "#" { // allows anchor links
+                if isValidAnchor(value) {
+                    return true
+                } else {
+                    continue
+                }
+            }
+
+            prot += ":"
+
+            if value.lowercased().hasPrefix(prot.utf8Array) {
+                return true
+            }
+
+        }
+
+        return false
+    }
+
+    private func isValidAnchor(_ value: [UInt8]) -> Bool {
+        return value.starts(with: "#".utf8Array) && Pattern(".*\\s.*").matcher(in: String(decoding: value, as: UTF8.self)).count == 0
+    }
+
+    public func getEnforcedAttributes(_ tagName: String)throws->Attributes {
+        let attrs: Attributes = Attributes()
+        let tag: TagName = TagName.valueOf(tagName)
+        if let keyVals: Dictionary<AttributeKey, AttributeValue> = enforcedAttributes[tag] {
+            for entry in keyVals {
+                try attrs.put(entry.key.toString(), entry.value.toString())
+            }
+        }
+        return attrs
+    }
+
+}
+
+// named types for config. All just hold strings, but here for my sanity.
+
+open class TagName: TypedValue {
+    override init(_ value: String) {
+        super.init(value)
+    }
+    
+    init(_ value: [UInt8]) {
+        super.init(String(decoding: value.lowercased(), as: UTF8.self))
+    }
+
+    static func valueOf(_ value: String) -> TagName {
+        return TagName(value)
+    }
+    
+    static func valueOf(_ value: [UInt8]) -> TagName {
+        return TagName(value)
+    }
+}
+
+open class  AttributeKey: TypedValue {
+    override init(_ value: String) {
+        super.init(value)
+    }
+
+    static func valueOf(_ value: String) -> AttributeKey {
+        return AttributeKey(value)
+    }
+    
+    static func valueOf(_ value: [UInt8]) -> AttributeKey {
+        return AttributeKey(String(decoding: value, as: UTF8.self))
+    }
+}
+
+open class AttributeValue: TypedValue {
+    override init(_ value: String) {
+        super.init(value)
+    }
+
+    static func valueOf(_ value: String) -> AttributeValue {
+        return AttributeValue(value)
+    }
+}
+
+open class Protocol: TypedValue {
+    override init(_ value: String) {
+        super.init(value)
+    }
+
+    static func valueOf(_ value: String) -> Protocol {
+        return Protocol(value)
+    }
+}
+
+open class TypedValue {
+    fileprivate let value: String
+
+    init(_ value: String) {
+        self.value = value
+    }
+
+    public func toString() -> String {
+        return value
+    }
+}
+
+extension TypedValue: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(value)
+    }
+}
+
+public func == (lhs: TypedValue, rhs: TypedValue) -> Bool {
+    if(lhs === rhs) {return true}
+    return lhs.value == rhs.value
+}
