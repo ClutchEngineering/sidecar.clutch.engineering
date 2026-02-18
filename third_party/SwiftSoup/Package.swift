@@ -9,8 +9,8 @@ let package = Package(
         .library(name: "SwiftSoup", targets: ["SwiftSoup"])
     ],
     dependencies: [
-        .package(url: "https://github.com/nicklockwood/LRUCache.git", from: "1.1.2"),
-        .package(url: "https://github.com/apple/swift-atomics.git", from: "1.3.0"),
+        .package(name: "LRUCache", path: "../LRUCache"),
+        .package(name: "swift-atomics", path: "../swift-atomics"),
     ],
     targets: [
         .target(
