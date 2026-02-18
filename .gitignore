@@ -1,0 +1,8 @@
+# OS X
+.DS_Store
+
+# Swift Package Manager
+.build
+
+# Xcode user settings
+xcuserdata/
