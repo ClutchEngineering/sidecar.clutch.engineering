@@ -30,6 +30,8 @@ public actor PostHogExportClient {
     self.baseURL = "https://eu.posthog.com/api/environments/\(projectID)"
     self.apiKey = apiKey
     let config = URLSessionConfiguration.default
+    config.timeoutIntervalForRequest = 300
+    config.timeoutIntervalForResource = 600
     self.session = URLSession(configuration: config)
   }
 
