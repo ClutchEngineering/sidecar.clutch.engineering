@@ -4,6 +4,8 @@ import AirtableAPI
 import DotEnvAPI
 import PostHogAPI
 
+print("Fetching analytics...")
+
 let projectRoot = URL(filePath: #filePath)
   .deletingLastPathComponent()
   .deletingLastPathComponent()
@@ -38,6 +40,8 @@ let exportsURL = URL(filePath: #filePath)
   .deletingLastPathComponent()
   .deletingLastPathComponent()
   .appending(path: "gensite")
+
+print("Environment ok.")
 
 // Data sanitization function
 func sanitizeCSVData(_ csvData: Data, vestigialColumnName: String, typoCorrections: [String: String]) throws -> Data {
