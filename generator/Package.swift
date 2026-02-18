@@ -9,9 +9,9 @@ let package = Package(
     .macOS(.v15)
   ],
   dependencies: [
-    .package(url: "https://github.com/jverkoey/slipstream.git", branch: "main"),
-    .package(url: "https://github.com/jpsim/Yams.git", from: "5.1.3"),
-    .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.5.0"),
+    .package(name: "slipstream", path: "../third_party/slipstream"),
+    .package(name: "Yams", path: "../third_party/Yams"),
+    .package(name: "swift-argument-parser", path: "../third_party/swift-argument-parser"),
   ],
   targets: [
     .executableTarget(name: "analytics", dependencies: [
