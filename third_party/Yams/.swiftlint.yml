@@ -1,0 +1,18 @@
+included:
+  - Sources
+  - Tests
+disabled_rules:
+  - blanket_disable_command
+  - todo
+analyzer_rules:
+  - unused_import
+  - unused_declaration
+line_length: 120
+identifier_name:
+  excluded:
+    - cr
+    - ln
+    - no
+nesting:
+  type_level: 2
+large_tuple: 3

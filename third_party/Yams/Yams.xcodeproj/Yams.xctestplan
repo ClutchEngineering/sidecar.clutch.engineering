@@ -1,0 +1,42 @@
+{
+  "configurations" : [
+    {
+      "id" : "31BD53C3-DF26-457B-B8F0-68B6819351E5",
+      "name" : "UTF16",
+      "options" : {
+        "environmentVariableEntries" : [
+          {
+            "key" : "YAMS_DEFAULT_ENCODING",
+            "value" : "UTF16"
+          }
+        ]
+      }
+    },
+    {
+      "id" : "D9E2FAEF-259D-447B-B5D6-88979EA2AEC6",
+      "name" : "UTF8",
+      "options" : {
+        "environmentVariableEntries" : [
+          {
+            "key" : "YAMS_DEFAULT_ENCODING",
+            "value" : "UTF8"
+          }
+        ]
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Yams.xcodeproj",
+        "identifier" : "OBJ_54",
+        "name" : "YamsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
