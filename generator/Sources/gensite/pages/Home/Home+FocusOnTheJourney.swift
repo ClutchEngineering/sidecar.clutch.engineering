@@ -11,7 +11,7 @@ extension Home {
           ResponsiveStack {
             Div {
               Image(URL(string: "/gfx/hero.png")!)
-                .accessibilityLabel("Sidecar running on an iPhone with features like battery history and trip efficiency statistics")
+                .accessibilityLabel("Pelican running on an iPhone with features like battery history and trip efficiency statistics")
             }
             .padding(.horizontal, 16)
             .margin(.bottom, 32)
@@ -24,13 +24,13 @@ extension Home {
                 .bold()
                 .fontDesign("rounded")
                 .margin(.bottom, 8)
-              H3("Let Sidecar do the rest")
+              H3("Let Pelican do the rest")
                 .fontSize(.extraLarge)
                 .fontSize(.extraExtraLarge, condition: .desktop)
                 .fontDesign("rounded")
                 .margin(.bottom, 24)
               Image(URL(string: "/gfx/journey.png")!)
-                .accessibilityLabel("Sidecar's vehicle screen, Porsche Taycan with 88% charge, battery history widget and recent trip details")
+                .accessibilityLabel("Pelican's vehicle screen, Porsche Taycan with 88% charge, battery history widget and recent trip details")
                 .margin(.bottom, 32)
                 .margin(.top, -80)
                 .margin(.top, -96, condition: .desktop)
@@ -63,7 +63,7 @@ extension Home {
 //        .flex(direction: .row, condition: .desktop)
         .padding(.vertical, 48)
       }
-      .background("sidecar-gray")
+      .background("pelican-gray")
       .textColor(.white)
     }
   }

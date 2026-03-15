@@ -5,9 +5,9 @@ import Slipstream
 struct RedeemBetaCode: View {
   var body: some View {
     Page(
-      "Redeem your Sidecar beta code",
+      "Redeem your Pelican beta code",
       path: "/beta/redeem/",
-      description: "Redeem a Sidecar beta code.",
+      description: "Redeem a Pelican beta code.",
       keywords: [
         "OBD-II",
         "beta testing",
@@ -26,12 +26,12 @@ struct RedeemBetaCode: View {
 
           VStack(alignment: .center, spacing: 16) {
             Div {
-              H2("Your Sidecar beta code")
+              H2("Your Pelican beta code")
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")
 
-              Text("Thank you for testing Sidecar!")
+              Text("Thank you for testing Pelican!")
                 .fontSize(.large)
             }
             .textAlignment(.center)

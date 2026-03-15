@@ -56,7 +56,7 @@ struct ComparisonTable: View {
           try td.addClass("text-center")
         }
 
-        // Add light background to Sidecar column (last column)
+        // Add light background to Pelican column (last column)
         if colIndex == lastColumnIndex {
           try td.addClass("bg-green-50/60 dark:bg-green-950/60")
         }
@@ -65,7 +65,7 @@ struct ComparisonTable: View {
         if cellData == "✓" {
           let span = try td.appendElement("span")
           try span.text("✓")
-          // Add shadow and thicker styling for Sidecar column (last column)
+          // Add shadow and thicker styling for Pelican column (last column)
           if colIndex == lastColumnIndex {
             try span.addClass("inline-flex items-center justify-center w-7 h-7 text-green-600 dark:text-green-400 bg-green-600/10 dark:bg-green-400/10 border-2 border-green-600/40 dark:border-green-400/40 rounded font-black shadow-lg")
           } else {

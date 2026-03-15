@@ -14,7 +14,7 @@ struct MakeHeroIconPuck: View {
           .colorInvert(condition: .dark)
       }
       .background(.white)
-      .background("sidecar-gray", condition: .dark)
+      .background("pelican-gray", condition: .dark)
       .margin(.horizontal, .auto)
       .margin(.top, 8)
       .margin(.bottom, 24)
@@ -49,7 +49,7 @@ struct MakePage: View {
     Page(
       "\(make) OBD-II Codes & Diagnostics",
       path: "/cars/\(make.lowercased())/",
-      description: "Complete list of \(make) OBD-II PIDs, supported features, and diagnostics available with Sidecar.",
+      description: "Complete list of \(make) OBD-II PIDs, supported features, and diagnostics available with Pelican.",
       keywords: [
         make,
         "OBD-II",
@@ -88,7 +88,7 @@ struct MakePage: View {
               .fontSize(.fourXLarge, condition: .desktop)
               .bold()
               .fontDesign("rounded")
-            Slipstream.Text("Check which Sidecar features work with your \(make)")
+            Slipstream.Text("Check which Pelican features work with your \(make)")
           }
           .textAlignment(.center)
         }
@@ -105,7 +105,7 @@ struct MakePage: View {
                   .fontSize(.extraLarge, condition: .desktop)
                   .bold()
                   .fontDesign("rounded")
-                Slipstream.Text("Become a Sidecar beta tester, get \(betaSubscriptionLength) months free")
+                Slipstream.Text("Become a Pelican beta tester, get \(betaSubscriptionLength) months free")
                   .fontSize(.small)
                   .fontSize(.base, condition: .desktop)
                   .fontWeight(.medium)
@@ -160,7 +160,7 @@ struct MakePage: View {
               .fontDesign("rounded")
 
             Slipstream.Text {
-              DOMString("Most standard OBD-II scanners are compatible with most vehicles. Sidecar works with a wide range of WiFi and Bluetooth ELM327-based adapters. ")
+              DOMString("Most standard OBD-II scanners are compatible with most vehicles. Pelican works with a wide range of WiFi and Bluetooth ELM327-based adapters. ")
               Link("View list of tested scanners", destination: URL(string: "/scanning/"))
                 .textColor(.link, darkness: 700)
                 .textColor(.link, darkness: 400, condition: .dark)

@@ -6,7 +6,7 @@ struct News_2025_10_23_NavigationWidgetsComparison: View {
   var body: some View {
     HStack(spacing: 8) {
       VStack(alignment: .center) {
-        Text("Without Sidecar navigation widgets")
+        Text("Without Pelican navigation widgets")
           .bold()
         Text("Teeeny tiny map area")
           .fontSize(.small)
@@ -16,7 +16,7 @@ struct News_2025_10_23_NavigationWidgetsComparison: View {
         Image(URL(string: "/gfx/news/2025/10/carplay-navigation-before.png"))
       }
       VStack(alignment: .center) {
-        Text("With Sidecar navigation widgets")
+        Text("With Pelican navigation widgets")
           .bold()
         Text("The canvas is fully yours")
           .fontSize(.small)

@@ -41,7 +41,7 @@ struct Leaderboard24HoursPage: View {
     Page(
       "Last 24 Hours",
       path: "/leaderboard/24h/",
-      description: "See which vehicles covered the most ground in Sidecar in the last 24 hours.",
+      description: "See which vehicles covered the most ground in Pelican in the last 24 hours.",
       keywords: [
         "OBD-II",
         "beta testing",

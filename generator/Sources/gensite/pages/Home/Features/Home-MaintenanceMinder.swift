@@ -9,7 +9,7 @@ extension Home {
       FeatureRow(imageOnLeft: false) {
         FeatureScreenshot(
           URL(string: "/gfx/maintenance-minder.png")!,
-          accessibilityLabel: "Sidecar delivers full recall notices to your phone"
+          accessibilityLabel: "Pelican delivers full recall notices to your phone"
         )
       } explanation: {
         Div {

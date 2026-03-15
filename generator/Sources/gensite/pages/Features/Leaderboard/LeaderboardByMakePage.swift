@@ -234,7 +234,7 @@ struct LeaderboardByMakePage: View {
     Page(
       "Leaderboard by Make",
       path: "/leaderboard/makes/",
-      description: "See which vehicle manufacturers are being driven the most in Sidecar.",
+      description: "See which vehicle manufacturers are being driven the most in Pelican.",
       keywords: [
         "OBD-II",
         "car manufacturers",

@@ -1,6 +1,6 @@
 # Articles Directory
 
-This directory contains markdown content that is dynamically injected into vehicle make and model pages on the Sidecar website.
+This directory contains markdown content that is dynamically injected into vehicle make and model pages on the Pelican website.
 
 ## Directory Structure
 

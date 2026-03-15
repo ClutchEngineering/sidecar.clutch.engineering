@@ -9,7 +9,7 @@ struct BetaTesterHandbook: View {
     Page(
       "Beta tester handbook",
       path: "/beta/",
-      description: "How to become a Sidecar beta tester.",
+      description: "How to become a Pelican beta tester.",
       keywords: [
         "OBD-II",
         "beta testing",
@@ -26,7 +26,7 @@ struct BetaTesterHandbook: View {
           HeroIconPuck(url: URL(string: "/gfx/supported-vehicle.png")!)
 
           Div {
-            H1("Become a Sidecar beta tester")
+            H1("Become a Pelican beta tester")
               .fontSize(.fourXLarge)
               .bold()
               .fontDesign("rounded")
@@ -43,12 +43,12 @@ struct BetaTesterHandbook: View {
 About the Beta Tester Program
 -----------------------------
 
-As a beta tester, your feedback is critical to improving the Sidecar experience. This guide explains the requirements to become a beta tester, the benefits of participating, and how to get started.
+As a beta tester, your feedback is critical to improving the Pelican experience. This guide explains the requirements to become a beta tester, the benefits of participating, and how to get started.
 
 Beta Tester Requirements
 ------------------------
 
-To become a Sidecar beta tester, you’ll need:
+To become a Pelican beta tester, you’ll need:
 
 1.  **Access to a car**: Ideally, you’ll test with your daily driver, but infrequent drivers (even [garage queens](https://en.wiktionary.org/wiki/garage_queen)) are welcome.
 
@@ -62,7 +62,7 @@ is available in the [OBD-II Scanning guide](/scanning/).
 Beta Tester Benefits
 --------------------
 
-As a thank you for your participation, approved beta testers will receive a free, **\(betaSubscriptionLength)-month** Sidecar subscription. This gives you access to all of Sidecar’s features to aid in testing the app.
+As a thank you for your participation, approved beta testers will receive a free, **\(betaSubscriptionLength)-month** Pelican subscription. This gives you access to all of Pelican’s features to aid in testing the app.
 
 Conditions
 ----------
@@ -78,14 +78,14 @@ Please register your interest by filling in the form below:
 
 <iframe class="airtable-embed" src="https://airtable.com/embed/appqtcCtdikk37lX9/pagNEk4vaHhLGgfwl/form" frameborder="0" onmousewheel="" width="100%" height="700" style="background: transparent; border: 1px solid #ccc;"></iframe>
 
-We're onboarding cars in the order shown in [the leaderboard](http://sidecar.clutch.engineering/leaderboard/).
+We're onboarding cars in the order shown in [the leaderboard](http://pelican.clutch.engineering/leaderboard/).
 
 Once we start onboarding your model, you will receive your subscription promo code after you have:
 
-1. [installed Sidecar](https://apps.apple.com/us/app/electric-sidecar/id1663683832) and connected
-it to your car either with a Connected Account or via [OBD-II](https://sidecar.clutch.engineering/scanning/)
+1. [installed Pelican](https://apps.apple.com/us/app/electric-sidecar/id1663683832) and connected
+it to your car either with a Connected Account or via [OBD-II](https://pelican.clutch.engineering/scanning/)
 (you can connect your car without a subscription),
-3. emailed an [export of your OBD logs](https://sidecar.clutch.engineering/help/#how-to-export-obd-scan-logs) to onboarding@clutch.engineering.
+3. emailed an [export of your OBD logs](https://pelican.clutch.engineering/help/#how-to-export-obd-scan-logs) to onboarding@clutch.engineering.
 """)
       .padding(.bottom, 16)
 

@@ -7,8 +7,8 @@ struct HeroIconPuck: View {
   var body: some View {
     Puck {
       Image(url)
-        .accessibilityLabel("Sidecar app icon")
-        .background("sidecar-gray")
+        .accessibilityLabel("Pelican app icon")
+        .background("pelican-gray")
         .frame(width: 112, height: 112)
         .margin(.horizontal, .auto)
         .margin(.top, 8)

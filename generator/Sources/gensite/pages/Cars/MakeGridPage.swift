@@ -27,7 +27,7 @@ struct MakeGridPage: View {
     Page(
       "Supported Cars",
       path: "/cars/",
-      description: "Sidecar supports a wide range of makes and models.",
+      description: "Pelican supports a wide range of makes and models.",
       keywords: [
         "OBD-II",
         "car scanner",
@@ -57,7 +57,7 @@ struct MakeGridPage: View {
               .fontSize(.fourXLarge, condition: .desktop)
               .bold()
               .fontDesign("rounded")
-            Text("Check which Sidecar features work with your car")
+            Text("Check which Pelican features work with your car")
           }
           .textAlignment(.center)
         }
@@ -74,7 +74,7 @@ struct MakeGridPage: View {
                   .fontSize(.fourXLarge, condition: .desktop)
                   .bold()
                   .fontDesign("rounded")
-                Text("Become a Sidecar beta tester, get \(betaSubscriptionLength) months free")
+                Text("Become a Pelican beta tester, get \(betaSubscriptionLength) months free")
                   .fontSize(.large)
                   .fontSize(.extraLarge, condition: .desktop)
                   .fontWeight(.medium)
@@ -120,7 +120,7 @@ struct MakeGridPage: View {
                 .bold()
                 .fontDesign("rounded")
             }
-            Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996 and vehicles worldwide in the 2000's. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Sidecar for free.")
+            Article("Pelican supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996 and vehicles worldwide in the 2000's. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters. You can test your vehicle's OBD-II support with Pelican for free.")
           }
           .padding([.top, .horizontal], 16)
           .background(.zinc, darkness: 0)

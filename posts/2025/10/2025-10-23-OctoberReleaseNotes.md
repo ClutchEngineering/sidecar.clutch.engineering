@@ -3,13 +3,13 @@ thumbnail: /gfx/news/2025/10/infographic.png
 summary: Volvo connected accounts, pinnable locations, intelligent quick destinations, and a whole lot more.
 ---
 
-# Sidecar trip report: Halloween edition
+# Pelican trip report: Halloween edition
 
-Sidecar's biggest release yet is here, and it's a spoooooky one! 👻
+Pelican's biggest release yet is here, and it's a spoooooky one! 👻
 
 ![100%](/gfx/news/2025/10/october-2025-updates.gif)
 
-A **lot** landed in this Sidecar release. But first off: a huge thank you to the entire Sidecar beta testing community and everyone who has provided feedback along the way. If you aren't already signed up for the newsletter, you can join the beta crew [here](/beta).
+A **lot** landed in this Pelican release. But first off: a huge thank you to the entire Pelican beta testing community and everyone who has provided feedback along the way. If you aren't already signed up for the newsletter, you can join the beta crew [here](/beta).
 
 ## October 2025 release notes
 
@@ -23,7 +23,7 @@ Here's a quick overview of everything that launched today:
 
 iPhone navigators, this one's for you!
 
-One of the side-effects of building the new navigation widgets is that the widgets can now be used on the phone, too! This works even without a Sidecar+ subscription and is a big improvement to the baseline navigation experience for those using a mounted phone.
+One of the side-effects of building the new navigation widgets is that the widgets can now be used on the phone, too! This works even without a Pelican+ subscription and is a big improvement to the baseline navigation experience for those using a mounted phone.
 
 The navigation widgets can be used in landscape mode on the phone as well, though there's a few rough edges there that still need to be ironed out.
 
@@ -33,17 +33,17 @@ The navigation widgets can be used in landscape mode on the phone as well, thoug
 
 ## Volvo Connected Accounts
 
-Volvo drivers can now log in to Sidecar!
+Volvo drivers can now log in to Pelican!
 
 <div style="background-color: white" class="border-4 border-white dark:border-4 dark:border-zinc-700 rounded-2xl shadow-puck mx-auto">
 <img src="/gfx/news/2025/10/volvo.png">
 </div>
 
-Many thanks to the Sidecar Volvo beta drivers who provided feedback and bug reports as we got this built out. This is hot off the press, so please continue emailing bugs to [support@clutch.engineering](mailto:support@clutch.engineering).
+Many thanks to the Pelican Volvo beta drivers who provided feedback and bug reports as we got this built out. This is hot off the press, so please continue emailing bugs to [support@clutch.engineering](mailto:support@clutch.engineering).
 
-Volvo connected accounts allow you to check in on the state of your vehicle without being in the car and lock your car using Sidecar's widgets and Shortcuts. Add your account in Settings > Vehicles & accounts.
+Volvo connected accounts allow you to check in on the state of your vehicle without being in the car and lock your car using Pelican's widgets and Shortcuts. Add your account in Settings > Vehicles & accounts.
 
-*Volvo Connected accounts are a Sidecar+ benefit.*
+*Volvo Connected accounts are a Pelican+ benefit.*
 
 ---
 
@@ -51,7 +51,7 @@ Volvo connected accounts allow you to check in on the state of your vehicle with
 
 You can finally pin your favorite destinations on the map 😄
 
-Whether it's home, work, or your favorite haunts 👻 Sidecar can now be your personal address book. All pins stay local on your device and can be backed up to iCloud through your Journeys database.
+Whether it's home, work, or your favorite haunts 👻 Pelican can now be your personal address book. All pins stay local on your device and can be backed up to iCloud through your Journeys database.
 
 ![100%](/gfx/news/2025/10/pins.png)
 
@@ -73,7 +73,7 @@ To rename a location, open its place sheet and tap the three-dot menu button in 
 
 ![100%](/gfx/news/2025/10/quick-destinations.gif)
 
-Sidecar+ subscribers using trip logging now have a dramatically improved Quick Destinations algorithm that fuses your favorite places with your weekly routines. Your entire trip logging history is provided to Sidecar's on-device intelligence to provide uncannily accurate suggestions that are just a tap away in CarPlay.
+Pelican+ subscribers using trip logging now have a dramatically improved Quick Destinations algorithm that fuses your favorite places with your weekly routines. Your entire trip logging history is provided to Pelican's on-device intelligence to provide uncannily accurate suggestions that are just a tap away in CarPlay.
 
 It's a really cool experience to hop in the car and see suggestions for exactly where you want to go.
 
@@ -83,7 +83,7 @@ It's a really cool experience to hop in the car and see suggestions for exactly 
 
 ![100%](/gfx/news/2025/10/search.png)
 
-The Sidecar search engine is now personalized based on your pinned locations, weekly patterns, and travel times. Sidecar's on-device intelligence gets smarter the more you drive with Sidecar (especially with Sidecar+).
+The Pelican search engine is now personalized based on your pinned locations, weekly patterns, and travel times. Pelican's on-device intelligence gets smarter the more you drive with Pelican (especially with Pelican+).
 
 ---
 
@@ -117,12 +117,12 @@ A new PID Detector strategy is now available for scanning 11-bit CAN networks. P
 
 ## Spooky holiday decorations
 
-Make sure to turn on Sidecar's holiday decorations in the Settings tab 👻
+Make sure to turn on Pelican's holiday decorations in the Settings tab 👻
 
 ---
 
-Phew, that was a huge release. Hope you enjoy the new features and improvements to Sidecar; onto the next one and as Monomeeth always says,
+Phew, that was a huge release. Hope you enjoy the new features and improvements to Pelican; onto the next one and as Monomeeth always says,
 
-["Happy Sidecar'ing."](https://discord.gg/kvbD7xeXgg)
+["Happy Pelican'ing."](https://discord.gg/kvbD7xeXgg)
 
 -- Jeff

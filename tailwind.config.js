@@ -7,7 +7,7 @@ module.exports = {
         'puck': '0 0 3px 0 #0003,0 2px 0 0 #0000001a'
       },
       colors: {
-        'sidecar-gray': '#262625',
+        'pelican-gray': '#262625',
       },
       fontFamily: {
         'rounded': ['ui-rounded', '-apple-system', 'system-ui', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],

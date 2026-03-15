@@ -37,8 +37,8 @@ struct Page<Content: View>: View {
   var body: some View {
     HTML {
       Head {
-        let title = "\(title) - Sidecar"
-        let rootURL = URL(string: "https://sidecar.clutch.engineering/")!
+        let title = "\(title) - Pelican"
+        let rootURL = URL(string: "https://pelican.clutch.engineering/")!
         let canonicalURL = URL(string: path, relativeTo: rootURL)
         Title(title)
         Charset(.utf8)
@@ -66,7 +66,7 @@ struct Page<Content: View>: View {
           Meta("og:url", content: canonicalURL.absoluteString)
         }
         Meta("og:type", content: "website")
-        Meta("og:site_name", content: "Sidecar — Your personal automotive assistant")
+        Meta("og:site_name", content: "Pelican — Your personal automotive assistant")
         Stylesheet(URL(string: "/css/main.css"))
         for stylesheet in additionalStylesheets.compactMap({ $0 }).sorted(by: { $0.absoluteString < $1.absoluteString }) {
           Stylesheet(stylesheet)
@@ -94,7 +94,7 @@ gtag('config', 'G-TDB4CTWESJ');
       }
       .background(.gray, darkness: 100)
       .background(.zinc, darkness: 950, condition: .dark)
-      .textColor("sidecar-gray")
+      .textColor("pelican-gray")
       .textColor(.white, condition: .dark)
       .antialiased()
     }

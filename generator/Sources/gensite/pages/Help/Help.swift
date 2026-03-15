@@ -5,9 +5,9 @@ import Slipstream
 struct Help: View {
   var body: some View {
     Page(
-      "Sidecar help",
+      "Pelican help",
       path: "/help/",
-      description: "Stuck? Get guidance in the Sidecar help guide.",
+      description: "Stuck? Get guidance in the Pelican help guide.",
       keywords: [
         "OBD-II",
         "beta testing",
@@ -36,24 +36,24 @@ struct Help: View {
       .margin(.bottom, 16)
 
       PostView("""
-I don't see my scanner in Sidecar
+I don't see my scanner in Pelican
 ---------------------------------
 
 This could be happening for two reasons.
 
-The most common reason is that you have another OBD scanner app running on your phone that is connected to your scanner. iOS only allows one app to be connected to a scanner at a time, so if another app is connected other than Sidecar, Sidecar won't see your scanner at all.
+The most common reason is that you have another OBD scanner app running on your phone that is connected to your scanner. iOS only allows one app to be connected to a scanner at a time, so if another app is connected other than Pelican, Pelican won't see your scanner at all.
 
-The fix in this case is to first make sure that no other app is connected to your scanner, either by manually disconnecting from those apps or force closing them. You can then try refreshing the list of scanners in Sidecar.
+The fix in this case is to first make sure that no other app is connected to your scanner, either by manually disconnecting from those apps or force closing them. You can then try refreshing the list of scanners in Pelican.
 
-Another reason your scanner might not be appearing is if it's using non-standard communication protocols. If you've tried the above and are otherwise able to connect to your scanner with other apps, then it's likely that Sidecar doesn't support your scanner yet. In this case, send an email with your scanner and a link to where you bought it from to support@clutch.engineering.
+Another reason your scanner might not be appearing is if it's using non-standard communication protocols. If you've tried the above and are otherwise able to connect to your scanner with other apps, then it's likely that Pelican doesn't support your scanner yet. In this case, send an email with your scanner and a link to where you bought it from to support@clutch.engineering.
 
 How to export OBD scan logs
 ---------------------------
 
-Sidecar logs all OBD commands sent to and received from your vehicle when scanning is active. This
+Pelican logs all OBD commands sent to and received from your vehicle when scanning is active. This
 log is stored privately on your phone.
 
-To export the logs from your phone, follow these steps from within the Sidecar app:
+To export the logs from your phone, follow these steps from within the Pelican app:
 
 1. Tap the Logbook tab.
 2. Tap "Scan sessions".
@@ -79,14 +79,14 @@ Note: your OBD scan logs will typically contain your vehicle identification numb
 How to export vehicle data
 --------------------------
 
-Connected Account (Beta) vehicle data can be exported from Sidecar, which can be a helpful way to fix bugs and identify new data that can be incorporated into the Sidecar user interface.
+Connected Account (Beta) vehicle data can be exported from Pelican, which can be a helpful way to fix bugs and identify new data that can be incorporated into the Pelican user interface.
 
-To export your vehicle data, follow these steps from within the Sidecar app:
+To export your vehicle data, follow these steps from within the Pelican app:
 
 1. Tap your vehicle tab. If you have more than one vehicle, tap the Garage tab and then tap your vehicle.
 2. Scroll down to and tap the "Export this vehicle's data" button.
 3. Keep "Redact identifying data" enabled if you're sharing this data with someone else.
-4. Tap "Export cached data" to export the most recent data that Sidecar has available. If you want to ensure all data is as fresh as possible, tap "Export fresh data" instead.
+4. Tap "Export cached data" to export the most recent data that Pelican has available. If you want to ensure all data is as fresh as possible, tap "Export fresh data" instead.
 5. Tap the data export.
 6. Tap "Share all documents", or share individual documents.
 7. A share sheet will appear. You can now airdrop the file, send it via email, or perform any other share action with the data.
@@ -96,7 +96,7 @@ To export your vehicle data, follow these steps from within the Sidecar app:
 How to refresh your vehicle parameters
 --------------------------------------
 
-Sidecar hosts its OBD parameters at [github.com/obdb](https://github.com/obdb/) under a Creative Commons license. Sidecar automatically checks for any changes to these parameters once a day, but if you need to refresh your parameters sooner (e.g. if you know some changes have been recently made), you can force a refresh by following these steps from within the Sidecar app:
+Pelican hosts its OBD parameters at [github.com/obdb](https://github.com/obdb/) under a Creative Commons license. Pelican automatically checks for any changes to these parameters once a day, but if you need to refresh your parameters sooner (e.g. if you know some changes have been recently made), you can force a refresh by following these steps from within the Pelican app:
 
 1. Tap your vehicle tab. If you have more than one vehicle, tap the Garage tab and then tap your vehicle.
 2. Scroll down to and tap the "Vehicle parameters" button.
@@ -110,14 +110,14 @@ Sidecar hosts its OBD parameters at [github.com/obdb](https://github.com/obdb/) 
 How to email crash logs
 -----------------------
 
-If Sidecar crashed recently then it's possible that your phone captured a crash log that could help identify the cause of the crash. To email a crash log, please follow these steps from within the iOS Settings app:
+If Pelican crashed recently then it's possible that your phone captured a crash log that could help identify the cause of the crash. To email a crash log, please follow these steps from within the iOS Settings app:
 
 1. Tap Privacy & Security > Analytics & Improvements > Analytics Data.
 2. Scroll down to the last "ElectricSidecar" file you see. The crashes are in chronological order for a given app, getting newer as you scroll further down.
 3. Note that the file should look like `ElectricSidecar-2025-01-09-175552.ips`. Some files here have other text in the name like `cpu_resource`; these are not crash logs.
 4. Tap the file to open it.
 5. Tap the Share button.
-6. Email the file to support@clutch.engineering. If you remember how you were using Sidecar at the time, please include that information in the email.
+6. Email the file to support@clutch.engineering. If you remember how you were using Pelican at the time, please include that information in the email.
 """)
       .padding(.bottom, 16)
     }

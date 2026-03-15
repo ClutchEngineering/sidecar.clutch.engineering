@@ -7,7 +7,7 @@ struct LifetimeSurvey: View {
     Page(
       "Lifetime Survey",
       path: "/lifetime-survey/",
-      description: "Gathering feedback about a potential lifetime purchase for Sidecar.",
+      description: "Gathering feedback about a potential lifetime purchase for Pelican.",
       keywords: [
         "OBD-II",
         "pricing",
@@ -23,7 +23,7 @@ struct LifetimeSurvey: View {
             HeroIconPuck(url: URL(string: "/gfx/lifetime.png"))
 
             Div {
-              H1("Sidecar lifetime")
+              H1("Pelican lifetime")
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")
@@ -38,9 +38,9 @@ struct LifetimeSurvey: View {
       VStack(alignment: .leading, spacing: 32) {
         NarrowContainer {
           Article("""
-          > I've heard the feedback loud and clear: many of you love Sidecar but want to avoid adding
-          > yet another subscription to your life. Totally fair, and to make Sidecar more approachable
-          > for everyone I'm exploring offering a lifetime unlock of Sidecar's core features.
+          > I've heard the feedback loud and clear: many of you love Pelican but want to avoid adding
+          > yet another subscription to your life. Totally fair, and to make Pelican more approachable
+          > for everyone I'm exploring offering a lifetime unlock of Pelican's core features.
           >
           > — Jeff
           """)
@@ -50,7 +50,7 @@ struct LifetimeSurvey: View {
           Article("""
           ## Product comparison
 
-          Sidecar is most comparable to an OBD scanner app at its heart, so it's perhaps helpful to compare the features Sidecar provides to some other products in the App Store.
+          Pelican is most comparable to an OBD scanner app at its heart, so it's perhaps helpful to compare the features Pelican provides to some other products in the App Store.
           """)
         }
 
@@ -70,7 +70,7 @@ struct LifetimeSurvey: View {
               .bold()
 
             ComparisonTable(
-              headers: ["Feature", "OBD Fusion", "Car Scanner", "Sidecar"],
+              headers: ["Feature", "OBD Fusion", "Car Scanner", "Pelican"],
               rows: [
                 ["Unlimited OBD Scanning", "✓", "✓", "✓"],
                 ["Standard PIDs (70+)", "✓", "✓", "✓"],
@@ -168,7 +168,7 @@ struct LifetimeSurvey: View {
             Article("""
             ## What lifetime would not unlock
 
-            Sidecar is increasingly relying on compute-intensive backend services to power the Sidecar experience, and some of these features would still require an ongoing subscription (but at a lower price).
+            Pelican is increasingly relying on compute-intensive backend services to power the Pelican experience, and some of these features would still require an ongoing subscription (but at a lower price).
             """)
 
             List {
@@ -247,7 +247,7 @@ struct LifetimeSurvey: View {
 
                 // Question 5: OBD features usage frequency
                 VStack(alignment: .leading, spacing: 8) {
-                  RequiredLabel("How often do you use Sidecar's OBD features?")
+                  RequiredLabel("How often do you use Pelican's OBD features?")
 
                   VStack(alignment: .leading, spacing: 8) {
                     RadioOption(id: "obd-daily", name: "obd-frequency", value: "Daily", label: "Daily")
@@ -261,7 +261,7 @@ struct LifetimeSurvey: View {
 
                 // Question 6: Trip logger usage frequency
                 VStack(alignment: .leading, spacing: 8) {
-                  RequiredLabel("How often do you use Sidecar's trip logger?")
+                  RequiredLabel("How often do you use Pelican's trip logger?")
 
                   VStack(alignment: .leading, spacing: 8) {
                     RadioOption(id: "trip-daily", name: "trip-frequency", value: "Daily", label: "Daily")
@@ -274,7 +274,7 @@ struct LifetimeSurvey: View {
 
                 // Question 7: CarPlay widgets usage frequency
                 VStack(alignment: .leading, spacing: 8) {
-                  RequiredLabel("How often do you use Sidecar's CarPlay widgets?")
+                  RequiredLabel("How often do you use Pelican's CarPlay widgets?")
 
                   VStack(alignment: .leading, spacing: 8) {
                     RadioOption(id: "carplay-daily", name: "carplay-frequency", value: "Daily", label: "Daily")
@@ -291,7 +291,7 @@ struct LifetimeSurvey: View {
                   RequiredLabel("What's your current subscription status?")
 
                   VStack(alignment: .leading, spacing: 8) {
-                    RadioOption(id: "plan-sidecar-plus", name: "subscription-plan", value: "Sidecar+", label: "Sidecar+ (active)")
+                    RadioOption(id: "plan-pelican-plus", name: "subscription-plan", value: "Pelican+", label: "Pelican+ (active)")
                     RadioOption(id: "plan-scanplan", name: "subscription-plan", value: "ScanPlan", label: "ScanPlan (active)")
                     RadioOption(id: "plan-cancelled", name: "subscription-plan", value: "Cancelled", label: "Cancelled subscription")
                     RadioOption(id: "plan-none", name: "subscription-plan", value: "None", label: "Never subscribed")
@@ -661,7 +661,7 @@ private struct NeverSubscribedReasonField: View {
 
     let labelElement = try fieldWrapper.appendElement("label")
     try labelElement.attr("for", "never-subscribed-reason")
-    try labelElement.text("What has kept you from subscribing to Sidecar? (Optional)")
+    try labelElement.text("What has kept you from subscribing to Pelican? (Optional)")
     try labelElement.addClass("block font-bold text-lg")
 
     let textarea = try fieldWrapper.appendElement("textarea")

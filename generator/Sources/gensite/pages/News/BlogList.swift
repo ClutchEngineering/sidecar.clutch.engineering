@@ -95,7 +95,7 @@ struct BlogList: View {
     Page(
       "News",
       path: "/news/",
-      description: "The latest in Sidecar.",
+      description: "The latest in Pelican.",
       keywords: [
         "OBD-II",
         "beta testing",
@@ -114,7 +114,7 @@ struct BlogList: View {
               .fontSize(.fourXLarge)
               .bold()
               .fontDesign("rounded")
-            Text("Stay up to date with the latest Sidecar news and updates.")
+            Text("Stay up to date with the latest Pelican news and updates.")
               .fontSize(.large)
           }
           .textAlignment(.center)

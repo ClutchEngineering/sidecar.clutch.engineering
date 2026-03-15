@@ -7,7 +7,7 @@ struct Features: View {
     Page(
       "Features",
       path: "/features",
-      description: "Explore Sidecar's powerful features for automation and vehicle diagnostics.",
+      description: "Explore Pelican's powerful features for automation and vehicle diagnostics.",
       keywords: [
         "Apple Shortcuts",
         "automation",
@@ -30,7 +30,7 @@ struct Features: View {
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")
-              Text("Discover how Sidecar helps you understand and control your vehicle")
+              Text("Discover how Pelican helps you understand and control your vehicle")
                 .fontSize(.large)
             }
             .textAlignment(.center)
@@ -41,7 +41,7 @@ struct Features: View {
       }
 
       PostView("""
-Sidecar Shortcuts
+Pelican Shortcuts
 -----------------
 
 Build powerful workflows that react to and control your vehicle using Apple's Shortcuts app.
@@ -57,7 +57,7 @@ Build powerful workflows that react to and control your vehicle using Apple's Sh
   }
 })
 
-Sidecar provides a comprehensive set of actions for Apple's Shortcuts app, allowing you to automate climate control, read vehicle parameters, and build custom workflows.
+Pelican provides a comprehensive set of actions for Apple's Shortcuts app, allowing you to automate climate control, read vehicle parameters, and build custom workflows.
 
 [Learn more about Shortcuts →](/shortcuts)
 
@@ -79,7 +79,7 @@ Connect to your vehicle using an OBD-II scanner and unlock diagnostic capabiliti
     .border(.init(.zinc, darkness: 700), condition: .dark)
 })
 
-Sidecar includes a powerful, built-in OBD-II scanner designed for the everyday car owner. Read diagnostic trouble codes, monitor real-time parameters, and log your trips.
+Pelican includes a powerful, built-in OBD-II scanner designed for the everyday car owner. Read diagnostic trouble codes, monitor real-time parameters, and log your trips.
 
 [Learn more about Scanning →](/scanning)
 
@@ -88,7 +88,7 @@ Sidecar includes a powerful, built-in OBD-II scanner designed for the everyday c
 Leaderboard
 -----------
 
-Every mile driven with Sidecar contributes to the global leaderboard. See where your model stacks up and join the competition.
+Every mile driven with Pelican contributes to the global leaderboard. See where your model stacks up and join the competition.
 
 [Check out the leaderboard →](/leaderboard)
 
@@ -97,9 +97,9 @@ Every mile driven with Sidecar contributes to the global leaderboard. See where 
 Beta program
 ------------
 
-Join the Sidecar beta program and get early access to new features.
+Join the Pelican beta program and get early access to new features.
 
-Beta testers help shape Sidecar by testing new features, providing feedback, and contributing to the community. You'll get access to upcoming functionality before it's released to everyone.
+Beta testers help shape Pelican by testing new features, providing feedback, and contributing to the community. You'll get access to upcoming functionality before it's released to everyone.
 
 [Join the Beta →](/beta)
 """)

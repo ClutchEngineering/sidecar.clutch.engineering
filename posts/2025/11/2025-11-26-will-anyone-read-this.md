@@ -9,11 +9,11 @@ summary: A lesson in experimentation and UX design.
 
 <img src="/gfx/news/2025/11/release-notes-partial.png" class="float-right-md" />
 
-I recently watched a driver use Sidecar for the first time.
+I recently watched a driver use Pelican for the first time.
 
-For context, when Sidecar first runs, or when a new major release launches, Sidecar shows release notes. With the iOS 26 update, I made the release notes appear as a half sheet by default, taking advantage of the new glass effect.
+For context, when Pelican first runs, or when a new major release launches, Pelican shows release notes. With the iOS 26 update, I made the release notes appear as a half sheet by default, taking advantage of the new glass effect.
 
-Back to the new driver though. They installed and launched Sidecar, the release notes appeared...and they immediately swiped them away 😭 I had an immediate flashback to the ["Devs watching QA test the product"](https://www.tiktok.com/@tired_actor/video/6912855387788102918) video.
+Back to the new driver though. They installed and launched Pelican, the release notes appeared...and they immediately swiped them away 😭 I had an immediate flashback to the ["Devs watching QA test the product"](https://www.tiktok.com/@tired_actor/video/6912855387788102918) video.
 
 <iframe width="320" src="https://www.youtube.com/embed/baY3SaIhfl0?si=HU_cimuYjZ9PYXU7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

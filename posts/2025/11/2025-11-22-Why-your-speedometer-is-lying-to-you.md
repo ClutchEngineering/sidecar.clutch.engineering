@@ -74,7 +74,7 @@ When police use radar or lidar, those devices are also subject to strict calibra
 
 ## The takeaway
 
-When you use OBD or GPS to determine your car's speed, you'll often get a value that doesn't match what's shown on your car's speedometer. This is working as intended, and **you should prefer your car's speedometer over an OBD or GPS speedometer while driving**. After the drive, you can use direct OBD readings from an app like [Sidecar](https://sidecar.clutch.engineering) to better understand your "true" trip details.
+When you use OBD or GPS to determine your car's speed, you'll often get a value that doesn't match what's shown on your car's speedometer. This is working as intended, and **you should prefer your car's speedometer over an OBD or GPS speedometer while driving**. After the drive, you can use direct OBD readings from an app like [Pelican](https://pelican.clutch.engineering) to better understand your "true" trip details.
 
 ![100%](/gfx/news/2025/11/speedometer-regulation.png)
 

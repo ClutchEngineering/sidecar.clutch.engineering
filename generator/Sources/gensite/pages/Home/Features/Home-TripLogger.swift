@@ -18,7 +18,7 @@ extension Home {
         ResponsiveStack {
           FeatureScreenshot(
             URL(string: "/gfx/triplogger.png")!,
-            accessibilityLabel: "Sidecar's trip logger shows historical trip information"
+            accessibilityLabel: "Pelican's trip logger shows historical trip information"
           )
 
           Feature {

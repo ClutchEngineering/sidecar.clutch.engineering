@@ -25,7 +25,7 @@ struct FeatureRow<ImageContent: View, ExplanationContent: View>: View {
         }
       }
     }
-    .textColor("sidecar-gray")
+    .textColor("pelican-gray")
     .textColor(.white, condition: .dark)
     .padding(.vertical, 48)
   }

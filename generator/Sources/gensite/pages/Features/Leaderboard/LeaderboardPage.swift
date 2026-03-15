@@ -30,7 +30,7 @@ struct LeaderboardPage: View {
     Page(
       "Leaderboard",
       path: "/leaderboard/",
-      description: "See which vehicles are being driven the most in Sidecar.",
+      description: "See which vehicles are being driven the most in Pelican.",
       keywords: [
         "OBD-II",
         "beta testing",
@@ -55,7 +55,7 @@ struct LeaderboardPage: View {
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")
-              Text("Most-driven Sidecar vehicles")
+              Text("Most-driven Pelican vehicles")
                 .fontSize(.large)
             }
             .textAlignment(.center)
@@ -181,7 +181,7 @@ extension LeaderboardPage {
 
   private func exportStatsForDiscord() {
     // Build the message content
-    var message = "🏁 **Daily Leaderboard Update**\n\n• Main leaderboard: https://sidecar.clutch.engineering/leaderboard/\n• Last 24 hours: https://sidecar.clutch.engineering/leaderboard/last24hours/\n• By make: https://sidecar.clutch.engineering/leaderboard/makes/\n\n"
+    var message = "🏁 **Daily Leaderboard Update**\n\n• Main leaderboard: https://pelican.clutch.engineering/leaderboard/\n• Last 24 hours: https://pelican.clutch.engineering/leaderboard/last24hours/\n• By make: https://pelican.clutch.engineering/leaderboard/makes/\n\n"
 
     // Overall stats section
     let totalMiles = leaderboardData.reduce(0) { $0 + $1.milesDriven }

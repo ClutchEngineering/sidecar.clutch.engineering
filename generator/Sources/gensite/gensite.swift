@@ -21,7 +21,7 @@ private struct AtomEntry {
   let date: Date
   let html: String
 
-  static let site = "https://sidecar.clutch.engineering"
+  static let site = "https://pelican.clutch.engineering"
 
   var toString: String {
     let dateFormatter = ISO8601DateFormatter()
@@ -42,7 +42,7 @@ private struct AtomEntry {
 struct Gensite: AsyncParsableCommand {
   static let configuration = CommandConfiguration(
     commandName: "gensite",
-    abstract: "Generate the Sidecar website"
+    abstract: "Generate the Pelican website"
   )
 
   @ArgumentParser.Option(name: .long, help: "Path to workspace directory")
@@ -128,8 +128,8 @@ struct Gensite: AsyncParsableCommand {
       sitemap = [
         "index.html": Home(),
         "privacy-policy/index.html": PrivacyPolicy(
-          appName: "Sidecar",
-          introText: "Sidecar is delighted to be our users' choice for understanding the state of their garage.",
+          appName: "Pelican",
+          introText: "Pelican is delighted to be our users' choice for understanding the state of their garage.",
           publicationDate: "November 10, 2025"
         ),
         "privacy-policy/canstudio/index.html": PrivacyPolicy(
@@ -295,13 +295,13 @@ struct Gensite: AsyncParsableCommand {
         let atomFeed = """
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Sidecar News</title>
+  <title>Pelican News</title>
   <link href="\(site)/feed.atom" rel="self" type="application/atom+xml"/>
   <link href="\(site)/news/" rel="alternate" type="text/html"/>
   <id>\(site)/</id>
   <updated>\(dateFormatter.string(from: .now))</updated>
   <author>
-    <name>Sidecar</name>
+    <name>Pelican</name>
   </author>
 \(entries.map(\.toString).joined(separator: "\n"))
 </feed>
@@ -465,7 +465,7 @@ struct Gensite: AsyncParsableCommand {
     try await renderSitemapWithLogs(sitemap, to: outputURL)
 
     // Generate and write sitemap.xml
-    func generateSitemapXML(from sitemap: Sitemap, baseURL: String = "https://sidecar.clutch.engineering") throws {
+    func generateSitemapXML(from sitemap: Sitemap, baseURL: String = "https://pelican.clutch.engineering") throws {
       let dateFormatter = ISO8601DateFormatter()
       dateFormatter.formatOptions = [.withFullDate]
 

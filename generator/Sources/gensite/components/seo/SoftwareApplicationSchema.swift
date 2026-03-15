@@ -7,7 +7,7 @@ struct SoftwareApplicationSchema: View {
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "Sidecar",
+      "name": "Pelican",
       "operatingSystem": "iOS",
       "applicationCategory": "NavigationApplication"
     }

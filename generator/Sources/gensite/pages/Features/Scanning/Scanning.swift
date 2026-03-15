@@ -7,7 +7,7 @@ struct Scanning: View {
     Page(
       "Scanning",
       path: "/scanning",
-      description: "Getting started with OBD-II scanning in Sidecar.",
+      description: "Getting started with OBD-II scanning in Pelican.",
       keywords: [
         "OBD-II",
         "car scanner",
@@ -46,7 +46,7 @@ struct Scanning: View {
 The basics
 ----------
 
-Sidecar includes a powerful, built-in OBD-II scanner that's designed for the everyday car owner.
+Pelican includes a powerful, built-in OBD-II scanner that's designed for the everyday car owner.
 
 ### What is OBD-II?
 
@@ -77,9 +77,9 @@ In addition to DTCs, cars can also define **parameter** ids (PIDs). PIDs allow s
 Getting started
 ---------------
 
-Sidecar aims to make OBD-II scanning intuitive and simple. Follow these steps to get started.
+Pelican aims to make OBD-II scanning intuitive and simple. Follow these steps to get started.
 
-Note: OBD-II scanning in Sidecar for longer than 5 minutes requires a subscription or a ScanPass.
+Note: OBD-II scanning in Pelican for longer than 5 minutes requires a subscription or a ScanPass.
 
 \(inlineHTML {
   Image(URL(string: "/gfx/scanners.png"))
@@ -100,7 +100,7 @@ The OBD-II port is located inside the cabin, under the dashboard, beneath the st
 
 ### Step 2: Buy a scanner
 
-Sidecar supports Bluetooth Low Energy (BTLE), Wi-Fi, and classic Bluetooth scanners.
+Pelican supports Bluetooth Low Energy (BTLE), Wi-Fi, and classic Bluetooth scanners.
 
 **BTLE scanners work best** because they connect automatically when powered on and near your phone. Wi-Fi and classic Bluetooth scanners require you to manually connect them each time you want to use them, which can be a hassle if you intend to use the scanner for daily trip logging. BTLE scanners also work best with wireless CarPlay; WiFi scanners can't be used simultaneously with wireless CarPlay.
 
@@ -109,7 +109,7 @@ There are countless variations of OBD-II scanners on the market. A table of opti
 Discouraged Scanners
 --------------------
 
-The following scanner hardware is known to use proprietary protocols that will not work with any general purpose scanning software, including Sidecar.
+The following scanner hardware is known to use proprietary protocols that will not work with any general purpose scanning software, including Pelican.
 
 - Any BLCKTEC model (the 410 and 430 models, specifically).
 - Any OBDEleven model.
@@ -123,7 +123,7 @@ Tested Scanners
   }
 })
 
-Performance tests to determine commands/second were ran by [ELMCheck](https://apps.apple.com/us/app/elmcheck/id6479630442), a companion app to Sidecar.
+Performance tests to determine commands/second were ran by [ELMCheck](https://apps.apple.com/us/app/elmcheck/id6479630442), a companion app to Pelican.
 
 \(inlineHTML {
 VStack(alignment: .center) {
@@ -153,11 +153,11 @@ VStack(alignment: .center) {
 
 In summary: Vgate iCar Pro Bluetooth 4.0 is the best value, while OBDLink offers higher quality scanners with higher command speeds and support for a wider range of vehicles.
 
-### Step 3: Connect Sidecar to your scanner
+### Step 3: Connect Pelican to your scanner
 
 To connect to your scanner for the first time, follow these steps:
 
-1.  Open Sidecar's Settings tab.
+1.  Open Pelican's Settings tab.
 
 2.  Enable "Vehicle scanning".
 
@@ -173,7 +173,7 @@ If using a BTLE scanner:
 If using a classic Bluetooth scanner:
 
 1.  Pair your phone to your scanner using the system settings app.
-2.  Once paired, you may need to refresh the vehicle scanners list in Sidecar for the scanner to appear.
+2.  Once paired, you may need to refresh the vehicle scanners list in Pelican for the scanner to appear.
 3.  Tap your scanner in the list of vehicle scanners to connect to it.
 
 If using a Wi-Fi scanner:
@@ -183,14 +183,14 @@ If using a Wi-Fi scanner:
 
 \(inlineHTML {
   Image(URL(string: "/gfx/vehicle-scanning.png"))
-    .accessibilityLabel("Vehicle scanning can be enabled in Sidecar's Settings")
+    .accessibilityLabel("Vehicle scanning can be enabled in Pelican's Settings")
     .frame(width: 0.4, condition: .desktop)
     .margin(.horizontal, .auto)
 })
 
 ### Auto-connect mode
 
-If "Auto-connect known scanners" is enabled then Sidecar will automatically scan for and connect to your scanner whenever the app opens or a trip begins.
+If "Auto-connect known scanners" is enabled then Pelican will automatically scan for and connect to your scanner whenever the app opens or a trip begins.
 
 ### Daily use
 

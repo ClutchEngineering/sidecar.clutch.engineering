@@ -9,7 +9,7 @@ extension Home {
       FeatureRow(imageOnLeft: false) {
         FeatureScreenshot(
           URL(string: "/gfx/community.png")!,
-          accessibilityLabel: "Sidecar's community is open to the public"
+          accessibilityLabel: "Pelican's community is open to the public"
         )
       } explanation: {
         Div {

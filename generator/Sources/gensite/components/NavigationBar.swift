@@ -11,12 +11,12 @@ struct NavigationBar: View {
           HStack {
             Image(URL(string: "/gfx/site-logo.png")!)
               .colorInvert(condition: .dark)
-              .accessibilityLabel("Sidecar logo")
+              .accessibilityLabel("Pelican logo")
               .frame(height: 24)
               .frame(height: 32, condition: .desktop)
               .margin(.right, 4)
               .margin(.right, 8, condition: .desktop)
-            Text("Sidecar")
+            Text("Pelican")
               .fontDesign("rounded")
               .fontSize(.small)
               .fontSize(.base, condition: .desktop)
@@ -53,7 +53,7 @@ struct NavigationBar: View {
       .alignItems(.center, condition: .desktop)
       .flexGap(.y, width: 4, condition: .mobileOnly)
       .justifyContent(.between)
-      .textColor("sidecar-gray")
+      .textColor("pelican-gray")
       .textColor(.white, condition: .dark)
     }
   }

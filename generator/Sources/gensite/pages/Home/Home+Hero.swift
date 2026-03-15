@@ -12,7 +12,7 @@ extension Home {
 
           VStack(alignment: .center, spacing: 16) {
             VStack(alignment: .center) {
-              H1("Sidecar")
+              H1("Pelican")
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")

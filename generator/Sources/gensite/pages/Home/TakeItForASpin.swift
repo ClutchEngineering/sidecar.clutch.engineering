@@ -16,7 +16,7 @@ struct TakeItForASpin: View {
 
         VStack(alignment: .center, spacing: 16) {
           Div {
-            H2("Sidecar")
+            H2("Pelican")
               .fontSize(.fourXLarge)
               .bold()
               .fontDesign("rounded")

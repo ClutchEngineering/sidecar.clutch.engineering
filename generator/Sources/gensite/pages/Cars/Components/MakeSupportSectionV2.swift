@@ -23,7 +23,7 @@ struct MakeSupportSectionV2: View {
                 .fontSize(.extraLarge, condition: .desktop)
                 .bold()
                 .fontDesign("rounded")
-              Text("Become a Sidecar beta tester, get \(betaSubscriptionLength) months free")
+              Text("Become a Pelican beta tester, get \(betaSubscriptionLength) months free")
                 .fontSize(.small)
                 .fontSize(.base, condition: .desktop)
                 .fontWeight(.medium)

@@ -17,7 +17,7 @@ struct NavigationFooter: View {
           .margin(.bottom, 8)
 
           Text("Apple Watch, watchOS and iPhone are trademarks of Apple Inc., registered in the U.S. and other countries and regions.")
-          Text("Third party logos and brand names are used for information purposes only and do not necessarily indicate affiliation with Sidecar or Clutch Engineering.")
+          Text("Third party logos and brand names are used for information purposes only and do not necessarily indicate affiliation with Pelican or Clutch Engineering.")
           Text {
             DOMString("Copyright © \(Calendar.current.component(.year, from: Date())) ")
             Link("Clutch Engineering", destination: URL(string: "https://clutch.engineering"))
@@ -29,7 +29,7 @@ struct NavigationFooter: View {
         }
       }
     }
-    .background("sidecar-gray")
+    .background("pelican-gray")
     .textColor(.white)
     .padding(.vertical, 32)
   }

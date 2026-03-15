@@ -28,7 +28,7 @@ struct ModelHeroIconPuck: View {
         }
       }
       .background(.white)
-      .background("sidecar-gray", condition: .dark)
+      .background("pelican-gray", condition: .dark)
       .margin(.horizontal, .auto)
       .margin(.top, 8)
       .margin(.bottom, 24)
@@ -87,7 +87,7 @@ struct ModelPage: View {
       Page(
         "OBD-II support for \(make) \(modelSupport.model)",
         path: "/cars/\(makeNameForSorting(make))/\(modelNameForURL(modelSupport.model))/",
-        description: "Sidecar enables drivers to connect to \(make) vehicles with OBD-II. Access the data hidden within your car.",
+        description: "Pelican enables drivers to connect to \(make) vehicles with OBD-II. Access the data hidden within your car.",
         keywords: [
           make,
           modelSupport.model,
@@ -151,7 +151,7 @@ struct ModelPage: View {
         Section {
           ContentContainer {
              VStack(alignment: .leading, spacing: 16) {
-               Slipstream.Text("Explore the comprehensive list of OBD-II parameters supported for the \(make) \(modelSupport.model). This includes real-time data for engine performance, fuel efficiency, and diagnostic trouble codes. Sidecar provides access to these PIDs to help you monitor your vehicle's health.")
+               Slipstream.Text("Explore the comprehensive list of OBD-II parameters supported for the \(make) \(modelSupport.model). This includes real-time data for engine performance, fuel efficiency, and diagnostic trouble codes. Pelican provides access to these PIDs to help you monitor your vehicle's health.")
              }
              .padding(.vertical, 16)
           }
@@ -225,7 +225,7 @@ struct ModelPage: View {
                   .bold()
                   .fontDesign("rounded")
               }
-              Article("Sidecar supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996 and vehicles worldwide in the 2000's. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters.")
+              Article("Pelican supports the [SAEJ1979 OBD-II standard](https://en.wikipedia.org/wiki/OBD-II_PIDs) for vehicles produced in the USA since 1996 and vehicles worldwide in the 2000's. For vehicles that support OBD-II — typically combustion and hybrid vehicles — this enables out-of-the-box support for odometer, speed, fuel tank levels, and 100s of other parameters.")
             }
             .padding([.top, .horizontal], 16)
             .background(.zinc, darkness: 0)
@@ -248,7 +248,7 @@ struct ModelPage: View {
                 .fontDesign("rounded")
 
               Slipstream.Text {
-                DOMString("Most standard OBD-II scanners are compatible with most vehicles. Sidecar works with a wide range of WiFi and Bluetooth ELM327-based adapters. ")
+                DOMString("Most standard OBD-II scanners are compatible with most vehicles. Pelican works with a wide range of WiFi and Bluetooth ELM327-based adapters. ")
                 Link("View list of tested scanners", destination: URL(string: "/scanning/"))
                   .textColor(.link, darkness: 700)
                   .textColor(.link, darkness: 400, condition: .dark)

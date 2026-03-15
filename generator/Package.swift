@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "sidecar.clutch.engineering",
+  name: "pelican.clutch.engineering",
   platforms: [
     .macOS(.v15)
   ],

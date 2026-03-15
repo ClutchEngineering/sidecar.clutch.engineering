@@ -9,7 +9,7 @@ extension Home {
       FeatureRow(imageOnLeft: true) {
         FeatureScreenshot(
           URL(string: "/gfx/integrated.png")!,
-          accessibilityLabel: "Sidecar is deeply integrated with iOS features"
+          accessibilityLabel: "Pelican is deeply integrated with iOS features"
         )
       } explanation: {
         Div {

@@ -68,7 +68,7 @@ struct Shortcuts: View {
     Page(
       "Shortcuts",
       path: "/shortcuts",
-      description: "A technical guide to using Shortcuts with Sidecar.",
+      description: "A technical guide to using Shortcuts with Pelican.",
       keywords: [
         "Apple Shortcuts",
         "automation",
@@ -88,7 +88,7 @@ struct Shortcuts: View {
             HeroIconPuck(url: URL(string: "/gfx/automation.png")!)
 
             Div {
-              H1("Sidecar Shortcuts")
+              H1("Pelican Shortcuts")
                 .fontSize(.fourXLarge)
                 .bold()
                 .fontDesign("rounded")
@@ -110,14 +110,14 @@ struct Shortcuts: View {
       PostView("""
 ## Overview
 
-Sidecar makes it possible to build workflows that react to, and in some cases change, the state of your vehicle. If you're new to Shortcuts, [Apple's introductory article for iPhone and iPad](https://support.apple.com/en-ca/guide/shortcuts/welcome/ios) is a good place to learn the basics.
+Pelican makes it possible to build workflows that react to, and in some cases change, the state of your vehicle. If you're new to Shortcuts, [Apple's introductory article for iPhone and iPad](https://support.apple.com/en-ca/guide/shortcuts/welcome/ios) is a good place to learn the basics.
 
 ---
 
 Vehicles
 --------
 
-Every action provided by Sidecar requires a Vehicle. This custom type represents one of the vehicles in your garage.
+Every action provided by Pelican requires a Vehicle. This custom type represents one of the vehicles in your garage.
 
 \(inlineHTML {
   Picture {
@@ -137,7 +137,7 @@ Tip: it's common to need to refer to the same Vehicle several times in a workflo
 Actions
 -------
 
-Sidecar's actions come in two flavors: Commands and Parameters. **Commands** require a Connected Account (Beta) and tell your vehicle to perform some kind of action. **Parameters** allow you to read information from your vehicle. Parameters are typically read by Sidecar from a Connected Account (Beta) or from an OBD-II scanner.
+Pelican's actions come in two flavors: Commands and Parameters. **Commands** require a Connected Account (Beta) and tell your vehicle to perform some kind of action. **Parameters** allow you to read information from your vehicle. Parameters are typically read by Pelican from a Connected Account (Beta) or from an OBD-II scanner.
 
 ### Commands
 
