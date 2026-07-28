@@ -262,6 +262,8 @@ let testedScanners: [Scanner] = [
   Scanner(name: "FIXD", asin: "B013RIQMEO", isSupported: false, connectionType: .btle, prices: [
     .us: .usd(39.99), .be: .eur(87.22), .br: .brl(400.95), .ca: .cad(66.99),
   ]),
+  Scanner(name: "Hyper Tough HT500", isSupported: true, connectionType: .btle, pidsPerSecond: "up to 6.7/s", prices: [.us: .usd(55.12)],
+    alternateVendorURL: URL(string: "https://www.walmart.com/ip/Hyper-Tough-HT500-Bluetooth-Scan-Tool-1996-Newer-OBD2-Vehicles-Free-Fix-Part-Recommendations/409856222"), alternateVendorName: "Walmart"),
   Scanner(name: "nonda", isSupported: true, connectionType: .btle, pidsPerSecond: "up to 6.7/s", prices: [.us: .usd(59.99)],
     alternateVendorURL: URL(string: "https://www.nonda.co/products/smart-vehicle-health-monitor-mini"), alternateVendorName: "nonda.co"),
   Scanner(name: "vLinker FS", asin: "B0BZTXV6MZ", isSupported: true, connectionType: .classicBluetooth, pidsPerSecond: "up to 58/s", isFastScanner: true, prices: [
