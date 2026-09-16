@@ -147,6 +147,9 @@ struct Gensite: AsyncParsableCommand {
           introText: "Scout is the map we build together.",
           publicationDate: "November 10, 2025"
         ),
+        "privacy-policy/watchmen/index.html": WatchmenPrivacyPolicy(
+          publicationDate: "September 16, 2026"
+        ),
         "features/index.html": Features(),
         "shortcuts/index.html": Shortcuts(),
         "scanning/index.html": Scanning(),
