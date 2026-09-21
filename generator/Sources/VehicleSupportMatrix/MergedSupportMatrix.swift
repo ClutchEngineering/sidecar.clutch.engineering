@@ -211,7 +211,12 @@ public class MergedSupportMatrix: @unchecked Sendable {
     print("Decoding connectables JSON (\(data.count) bytes)...")
     let decoder = JSONDecoder()
     do {
-      self.rawConnectables = try decoder.decode(ConnectableMap.self, from: data)
+      // Metrics are decoded as strings and unknown ones dropped, so a metric
+      // OBDb adopts before this enum does costs one signal, not the whole file.
+      let rawMetrics = try decoder.decode([Path: [Filters: [SignalID: String]]].self, from: data)
+      self.rawConnectables = rawMetrics.mapValues { filters in
+        filters.mapValues { signals in signals.compactMapValues { Connectable(rawValue: $0) } }
+      }
       print("Decoded \(rawConnectables.count) connectable entries")
     } catch {
       FileHandle.standardError.write("Error decoding connectables JSON: \(error)\n".data(using: .utf8)!)
