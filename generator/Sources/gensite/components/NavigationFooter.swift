@@ -13,6 +13,7 @@ struct NavigationFooter: View {
               .textColor(.link, darkness: 300)
               .fontWeight(.medium)
               .underline(condition: .hover)
+            AnalyticsToggle()
           }
           .margin(.bottom, 8)
 

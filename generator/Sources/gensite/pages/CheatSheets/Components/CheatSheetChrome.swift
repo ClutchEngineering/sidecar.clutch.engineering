@@ -80,6 +80,7 @@ struct CheatSheetPage<Lede: View, Content: View, Rail: View>: View {
         }
 
         SiteAnalytics()
+        SiteTelemetry()
       }
       Body {
         Div {
