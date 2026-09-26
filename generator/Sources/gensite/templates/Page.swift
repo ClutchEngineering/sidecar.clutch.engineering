@@ -76,6 +76,7 @@ struct Page<Content: View>: View {
         }
 
         SiteAnalytics()
+        SiteTelemetry()
       }
       Body {
         DocumentMain {

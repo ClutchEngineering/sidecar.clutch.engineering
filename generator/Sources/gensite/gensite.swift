@@ -130,22 +130,22 @@ struct Gensite: AsyncParsableCommand {
         "privacy-policy/index.html": PrivacyPolicy(
           appName: "Pelican",
           introText: "Pelican is delighted to be our users' choice for understanding the state of their garage.",
-          publicationDate: "November 10, 2025"
+          publicationDate: "September 25, 2026"
         ),
         "privacy-policy/canstudio/index.html": PrivacyPolicy(
           appName: "CANStudio",
           introText: "CANStudio is a powerful CAN OBD workbench.",
-          publicationDate: "November 10, 2025"
+          publicationDate: "September 25, 2026"
         ),
         "privacy-policy/elmcheck/index.html": PrivacyPolicy(
           appName: "ELMCheck",
           introText: "ELMCheck is the easiest way to check the authenticity of your OBD scanner.",
-          publicationDate: "November 10, 2025"
+          publicationDate: "September 25, 2026"
         ),
         "privacy-policy/scout/index.html": PrivacyPolicy(
           appName: "Scout",
           introText: "Scout is the map we build together.",
-          publicationDate: "November 10, 2025"
+          publicationDate: "September 25, 2026"
         ),
         "privacy-policy/watchmen/index.html": WatchmenPrivacyPolicy(
           publicationDate: "September 16, 2026"
